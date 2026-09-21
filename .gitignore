@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Data and model artifacts
+data/
+datasets/
+checkpoints/
+weights/
+pretrained_models/
+outputs/
+wandb/
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+*.h5
+*.hdf5
+*.tfrecord
+
+# Generated experiment files
+logs/*
+!logs/.gitkeep
+results/*
+!results/.gitkeep
+thesis_tables/*
+!thesis_tables/.gitkeep
+!thesis_tables/README.md

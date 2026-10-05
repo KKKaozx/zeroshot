@@ -1,0 +1,9 @@
+@experiments/bridge_fixed_fit_constant_lr.args
+--output-dir=results/bridge_gripper_coverage_fit_v1
+--bridge-gripper-fit-report=results/bridge_fixed_fit_constant_lr_v1/gripper_candidate_check_v1.json
+--overfit-samples=14
+--overfit-trajectories=6
+--overfit-manifest=results/bridge_gripper_coverage_prepare_v1/overfit_manifest.json
+--batch-size=2
+--metric-batches=7
+--metric-samples=2

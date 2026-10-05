@@ -1,0 +1,12 @@
+--prepare-only
+--dataset-dir=training_cache/oxe_core/bc_z
+--output-dir=results/bcz_first_command_protocol_v1
+--bcz-target=first_command
+--decoder-type=regression
+--chunk-size=1
+--stride=4
+--min-trajectory-steps=10
+--max-tfrecord-episodes-per-schema=512
+--max-samples-per-schema=6000
+--tfrecord-splits=train
+--seed=42

@@ -1,0 +1,5 @@
+@experiments/bcz_native_pool_baseline.args
+--output-dir=results/bcz_native_pool_adapter_v1
+--native-adapter-comparison
+--fusion-type=cross_attention
+--adapter-pooling=cls_patch_mean

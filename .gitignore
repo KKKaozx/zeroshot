@@ -1,51 +1,46 @@
-# Python
+# Python, editor and local environments
 __pycache__/
 *.py[cod]
-*.so
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Environments
-.venv/
-venv/
-env/
-.conda/
-
-# Editors and operating systems
 .vscode/
 .idea/
-.DS_Store
-Thumbs.db
-
-# Secrets and local settings
+.venv/
+venv/
+envs/
+.pytest_cache/
+# Secrets
 .env
 .env.*
 !.env.example
 *.pem
 *.key
-
-# Data and model artifacts
+# Data, weights and generated runs
 data/
 datasets/
+training_cache/
+hf_cache/
 checkpoints/
-weights/
-pretrained_models/
 outputs/
 wandb/
-*.ckpt
-*.pth
+.tmp/
 *.pt
+*.pth
+*.ckpt
 *.safetensors
+*.npz
+*.npy
+*.zip
+*.tfrecord*
 *.h5
 *.hdf5
-*.tfrecord
-
-# Generated experiment files
-logs/*
-!logs/.gitkeep
 results/*
 !results/.gitkeep
-thesis_tables/*
-!thesis_tables/.gitkeep
-!thesis_tables/README.md
+logs/*
+!logs/.gitkeep
+# Private/local document and publication workspaces
+docx_qa*/
+tools/
+.github_publish/
+*.docx
+*.pdf
+Thumbs.db
+.DS_Store

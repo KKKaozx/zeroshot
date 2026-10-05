@@ -1,12 +1,7 @@
-"""Evaluation entry point for the dissertation project.
+"""Main offline evaluation entry; see docs/RUNNING.md for split precautions."""
 
-The first target is checkpoint evaluation on the LIBERO-Spatial suite.
-"""
-
-
-def main() -> None:
-    raise NotImplementedError("Integrate LIBERO checkpoint evaluation.")
+from evaluate_offline import evaluate, parse_args
 
 
 if __name__ == "__main__":
-    main()
+    evaluate(parse_args())

@@ -1,0 +1,7 @@
+@experiments/bcz_common.args
+--decoder-type=diffusion
+--diffusion-prediction-type=sample
+--beta-schedule=squaredcos_cap_v2
+--diffusion-steps=100
+--split-manifest=results/bcz_generalization_regression_v1/split_manifest.json
+--output-dir=results/bcz_generalization_x0_v1

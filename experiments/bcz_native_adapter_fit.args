@@ -1,0 +1,6 @@
+@experiments/bcz_native_sequence_fit.args
+--output-dir=results/bcz_native_adapter_fit_v1
+--fusion-type=cross_attention
+--adapter-pooling=cls_patch_mean
+--gripper-head-type=mlp2
+--audit-first-update

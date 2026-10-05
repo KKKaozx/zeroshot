@@ -1,0 +1,14 @@
+@experiments/bcz_native_sequence_fit.args
+--output-dir=results/bcz_pool_seen_probe_fit_v1
+--overfit-manifest=
+--pool-fit-from=results/bcz_native_pool_adapter_lr_split_v1/latest.pt
+--overfit-samples=52
+--fusion-type=cross_attention
+--adapter-pooling=cls_patch_mean
+--gripper-head-type=mlp2
+--learning-rate=0.00003
+--gripper-learning-rate=0.0003
+--dropout=0.1
+--weight-decay=0.0001
+--max-validation-batches=13
+--metric-batches=13

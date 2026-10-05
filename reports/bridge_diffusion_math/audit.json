@@ -1,0 +1,249 @@
+{
+  "purpose": "diffusion_math_and_current_separate_state_contract_audit_not_learned_success",
+  "arguments": {
+    "checkpoint": "results/bridge_single_task_full_validation_v1/latest.pt",
+    "data_cache": "results/bridge_pooling_readout_v1/pooling_context_cache.pt",
+    "output_dir": "results/bridge_diffusion_fit_current_audit_v1",
+    "cache_dir": "D:/ntu_related/dissertation/hf_cache"
+  },
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "openai/clip-vit-large-patch14",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "epsilon",
+      "num_adapter_layers": 2,
+      "attention_dim": 256,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 128,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.0,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false
+    }
+  },
+  "source_checkpoint_sha256": "42abdbc1dac5959cf893b5a8ac4de475fe2261a456e886aa8d480f9b97482af5",
+  "source_code_sha256": {
+    "D:\\ntu_related\\dissertation\\Zero_shot\\code\\models.py": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+    "D:\\ntu_related\\dissertation\\Zero_shot\\code\\diffusion_decoder.py": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+    "D:\\ntu_related\\dissertation\\Zero_shot\\code\\train.py": "8e7fe62f49d5dc0522fd88a7c7997006d3cf324da6828084ece44db93da37d87"
+  },
+  "dataset_identity": "44f67606c0258079b34b49cd4610ebdb8f34a89c4b00d5313c5a0f41aba98f82",
+  "trained": false,
+  "optimizer_steps": 0,
+  "test_targets_used": false,
+  "current_path_passed": true,
+  "checks": {
+    "cosine_schedule_and_posterior": {
+      "passed": true,
+      "max_abs_errors": {
+        "betas": 1.7517688855051006e-08,
+        "alphas": 3.207537946359196e-08,
+        "alpha_bars": 1.0187585708365532e-07,
+        "posterior_variance": 7.298646931275243e-08,
+        "posterior_mean_x0": 1.3947486877441406e-05,
+        "posterior_mean_xt": 2.6964487398473125e-06
+      },
+      "tolerance": 0.0003,
+      "terminal_alpha_bar": 2.4285722793500615e-07
+    },
+    "schedule_helper_independent_reference": {
+      "passed": true,
+      "schedules": {
+        "linear": {
+          "alpha_bar_terminal": 0.3635632480554922,
+          "retained_signal_amplitude": 0.6029620618708048
+        },
+        "squaredcos_cap_v2": {
+          "alpha_bar_terminal": 2.4285722793500615e-07,
+          "retained_signal_amplitude": 0.0004928054666245152
+        }
+      }
+    },
+    "forward_epsilon": {
+      "passed": true,
+      "max_noisy_input_error": 2.836077415135918e-07,
+      "tolerance": 3e-06,
+      "timesteps": [
+        50,
+        36,
+        6,
+        42
+      ],
+      "teacher_pose_exact": true
+    },
+    "teacher_gripper_epsilon": {
+      "passed": true
+    },
+    "forward_sample": {
+      "passed": true,
+      "max_noisy_input_error": 2.836077415135918e-07,
+      "tolerance": 3e-06,
+      "timesteps": [
+        50,
+        36,
+        6,
+        42
+      ],
+      "teacher_pose_exact": true
+    },
+    "teacher_gripper_sample": {
+      "passed": true
+    },
+    "independent_x0_and_mean_identity": {
+      "passed": true,
+      "x0_max_error": 1.4135914661039806e-13,
+      "mean_max_error": 2.7977620220553945e-14
+    },
+    "oracle_epsilon_clip_False": {
+      "passed": true,
+      "reference_max_error": 9.087864460965989e-08,
+      "target_max_error": 1.1920928955078125e-07,
+      "tolerance": 0.003,
+      "steps": 100
+    },
+    "sample_gripper_pose_oracle_epsilon_clip_False": {
+      "passed": true
+    },
+    "oracle_epsilon_clip_True": {
+      "passed": true,
+      "reference_max_error": 3.218650817871094e-05,
+      "target_max_error": 3.218650817871094e-05,
+      "tolerance": 0.003,
+      "steps": 100
+    },
+    "sample_gripper_pose_oracle_epsilon_clip_True": {
+      "passed": true
+    },
+    "oracle_sample_clip_False": {
+      "passed": true,
+      "reference_max_error": 9.087864460965989e-08,
+      "target_max_error": 1.1920928955078125e-07,
+      "tolerance": 0.003,
+      "steps": 100
+    },
+    "sample_gripper_pose_oracle_sample_clip_False": {
+      "passed": true
+    },
+    "oracle_sample_clip_True": {
+      "passed": true,
+      "reference_max_error": 3.218650817871094e-05,
+      "target_max_error": 3.218650817871094e-05,
+      "tolerance": 0.003,
+      "steps": 100
+    },
+    "sample_gripper_pose_oracle_sample_clip_True": {
+      "passed": true
+    },
+    "position_clip_and_zero_quaternion_fallback": {
+      "passed": true,
+      "max_position": 3.0,
+      "position_min": 3.0,
+      "quaternion_identity_exact": true
+    },
+    "state_gripper_threshold_and_range": {
+      "passed": true,
+      "states": [
+        -1.0,
+        1.0
+      ]
+    },
+    "separate_pose_and_gripper_masks": {
+      "passed": true,
+      "masked_pose_loss": 1.7921701669692993,
+      "reference_loss": 1.792170055132626,
+      "masked_gripper_loss": 0.0
+    },
+    "unet_shape_condition_and_time_connectivity": {
+      "passed": true,
+      "output_shape": [
+        2,
+        16,
+        7
+      ],
+      "max_context_gradient": 0.0006545199430547655,
+      "max_context_effect": 0.0266263484954834,
+      "max_time_effect": 0.19708767533302307
+    },
+    "real_unet_sampling_seed_and_valid_output": {
+      "passed": true,
+      "same_seed_max_error": 0.0,
+      "different_seed_max_change": 6.0,
+      "output_shape": [
+        2,
+        16,
+        8
+      ]
+    }
+  },
+  "confirmed_issues": [
+    {
+      "kind": "confirmed_compatibility_bug",
+      "current_separate_gripper_path_affected": false,
+      "location": "code/train.py policy_loss diffusion mask uses :7 for an 8-dimensional output",
+      "detail": "The size of tensor a (8) must match the size of tensor b (7) at non-singleton dimension 2"
+    }
+  ],
+  "compatibility": {
+    "eight_dim_masked_loss_works": false,
+    "exception": "The size of tensor a (8) must match the size of tensor b (7) at non-singleton dimension 2",
+    "eight_dim_without_mask_loss": 1.0,
+    "none_position_limit_with_clip_denoised_observed_max": 3.000041961669922
+  },
+  "real_target_clipping_floor": {
+    "train": {
+      "position_components_outside_range": 20,
+      "position_targets_outside_range": 20,
+      "windows_outside_range": 10,
+      "minimum_possible_mean_position_error_cm": 0.00472843788469894
+    },
+    "validation": {
+      "position_components_outside_range": 0,
+      "position_targets_outside_range": 0,
+      "windows_outside_range": 0,
+      "minimum_possible_mean_position_error_cm": 0.0
+    }
+  },
+  "scope": "100-step cosine schedule, 7D diffusion + separate state gripper, original Bridge contract, float32",
+  "oracle_windows": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "reference_sources": [
+    "https://arxiv.org/html/2006.11239v2",
+    "https://arxiv.org/html/2102.09672v1"
+  ],
+  "limits": [
+    "Oracle receives the true target; it only tests mathematics and cannot demonstrate learned performance.",
+    "Random U-Net connectivity and seeded output checks do not demonstrate learning or semantic alignment.",
+    "Masks ignore invalid loss entries, not information in invalid input dimensions; heterogeneous sources need separate contracts.",
+    "No diffusion-trained checkpoint was evaluated; original source uses a regression head."
+  ],
+  "verification": {
+    "original_checkpoint_unchanged": true,
+    "model_parameters_unchanged": true,
+    "diagnostic_only_decoder_substitutions_restored": true
+  }
+}

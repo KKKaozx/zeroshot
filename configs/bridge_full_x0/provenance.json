@@ -1,0 +1,48 @@
+{
+  "dataset_identity": "44f67606c0258079b34b49cd4610ebdb8f34a89c4b00d5313c5a0f41aba98f82",
+  "steps": 9875,
+  "batch_size": 64,
+  "draws_per_train_window": 2000,
+  "learning_rate": 0.0003,
+  "weight_decay": 0,
+  "gradient_clip_norm": 1.0,
+  "seed": 42,
+  "prediction_type": "sample",
+  "eval_interval": 1000,
+  "sample_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "train_windows": 316,
+  "train_action_targets": 5056,
+  "validation_windows": 55,
+  "validation_action_targets": 880,
+  "validation_role": "Repeatedly inspected development episodes; not a fresh independent test.",
+  "frozen_context_and_gripper": true,
+  "validation_used_for_optimizer": false,
+  "test_targets_used": false,
+  "checkpoint_selection": "Fixed final update 9875; no validation checkpoint selection.",
+  "initial_state_sha256": "90632bdadd356d49de3eeefb22375624123e765ab76fb612cb674450626080fe",
+  "initial_file_sha256": "bf58a165f0e0d4a53106e85493f594b15d394c333f59078e1d01d126ef998a8f",
+  "source_hashes": {
+    "results\\bridge_single_task_full_validation_v1\\latest.pt": "42abdbc1dac5959cf893b5a8ac4de475fe2261a456e886aa8d480f9b97482af5",
+    "results\\bridge_pooling_readout_v1\\pooling_context_cache.pt": "852c638e8fa5c52182bb755f03571231bbce677bfff1edcef3b23af4a16cb936",
+    "results\\bridge_head_isolation_v1\\frozen_context_diagnostic.pt": "6d21f15d5398f3cf776ae2777a98f27b029ea2f16034e4ea1e69bf3daeb6969d",
+    "results\\bridge_module_diagnostic_v3\\data_contract_audit.json": "5630a297d83e86e86676d0147139041aa23060ee156721fcce2ca8e74415e028"
+  },
+  "scope": "Frozen-context x0 head fit and development evaluation; not joint training or robot success.",
+  "criteria": {
+    "train_position_cm_max": 0.5,
+    "train_rotation_deg_max": 5.0,
+    "train_open_recall_min": 0.95,
+    "train_closed_recall_min": 0.95,
+    "train_all_transition_pairs_correct": true,
+    "validation_pose": "Strictly better than static baseline overall and in each of 3 episodes for every sample seed.",
+    "validation_open_recall_min": 0.95,
+    "validation_closed_recall_min": 0.95,
+    "validation_all_transition_pairs_correct": true
+  },
+  "known_limit": "CUDA linear interpolation backward may be nondeterministic.",
+  "changed_from_small_fit": "Train-set size, batch size, and optimizer-update count; per-window exposure remains 2000."
+}

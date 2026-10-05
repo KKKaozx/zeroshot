@@ -1,0 +1,69 @@
+{
+  "smoke_only": false,
+  "checkpoint_step": 9875,
+  "train_pose_fit_passed": true,
+  "train_chain_passed": true,
+  "development_passed": false,
+  "samples": [
+    {
+      "seed": 1101,
+      "train_checks": {
+        "position": true,
+        "rotation": true,
+        "open_recall": true,
+        "closed_recall": true,
+        "open_to_closed": true,
+        "closed_to_open": true
+      },
+      "development_checks": {
+        "overall_pose": false,
+        "all_three_episode_poses": false,
+        "open_recall": false,
+        "closed_recall": true,
+        "open_to_closed": false,
+        "closed_to_open": false
+      }
+    },
+    {
+      "seed": 1102,
+      "train_checks": {
+        "position": true,
+        "rotation": true,
+        "open_recall": true,
+        "closed_recall": true,
+        "open_to_closed": true,
+        "closed_to_open": true
+      },
+      "development_checks": {
+        "overall_pose": false,
+        "all_three_episode_poses": false,
+        "open_recall": false,
+        "closed_recall": true,
+        "open_to_closed": false,
+        "closed_to_open": false
+      }
+    },
+    {
+      "seed": 1103,
+      "train_checks": {
+        "position": true,
+        "rotation": true,
+        "open_recall": true,
+        "closed_recall": true,
+        "open_to_closed": true,
+        "closed_to_open": true
+      },
+      "development_checks": {
+        "overall_pose": false,
+        "all_three_episode_poses": false,
+        "open_recall": false,
+        "closed_recall": true,
+        "open_to_closed": false,
+        "closed_to_open": false
+      }
+    }
+  ],
+  "frozen_gripper": true,
+  "test_targets_used": false,
+  "scope": "Frozen-context x0 head fit and development evaluation; not joint training or robot success."
+}

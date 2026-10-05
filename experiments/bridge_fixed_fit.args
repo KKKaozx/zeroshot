@@ -1,0 +1,12 @@
+@experiments/bridge_single_task_pilot.args
+--output-dir=results/bridge_fixed_fit_v1
+--overfit-samples=8
+--overfit-trajectories=8
+--overfit-manifest=results/bridge_fixed_fit_prepare_v1/overfit_manifest.json
+--batch-size=1
+--dropout=0
+--weight-decay=0
+--epochs=50
+--metric-batches=8
+--metric-samples=1
+--audit-first-update

@@ -1,13 +1,8 @@
-name: vla-zero-shot-manipulation
+name: zeroshot
 channels:
-  - pytorch
-  - nvidia
   - conda-forge
 dependencies:
   - python=3.10
   - pip
   - git
-  - pip:
-      # Pin project dependencies after confirming the GPU server CUDA version.
-      - pyyaml
-      - numpy
+# Install an appropriate PyTorch build, then requirements.txt; see docs/RUNNING.md.

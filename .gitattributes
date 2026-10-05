@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.args text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+# Preserve exact bytes of copied numerical evidence and its checksum manifest.
+reports/** -text

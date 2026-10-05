@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-06",
+  "python_syntax_files": 38,
+  "json_parsing": true,
+  "documentation_links": true,
+  "evidence_checksums": true,
+  "entry_checks": [
+    {
+      "command": [
+        "code/train.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "seconds": 6.36,
+      "output_tail": "ode {cumulative,single_switch}\n                        transition 推理方式；默认逐步累计，single_switch 仅保留作消融。\n  --gripper-switch-threshold GRIPPER_SWITCH_THRESHOLD\n                        切换 logit 阈值；0 等价于概率0.5。\n  --workers WORKERS\n  --seed SEED\n  --split-manifest SPLIT_MANIFEST\n                        从头训练时精确复用另一组训练的 split_manifest.json；校验数据身份与轨迹隔离。\n  --prepare-only        只扫描数据、校验并保存划分清单，不加载模型或启动训练。\n  --log-interval LOG_INTERVAL\n  --max-validation-batches MAX_VALIDATION_BATCHES\n                        每轮最多验证多少个 batch；设为 0 表示完整验证集。\n  --metric-interval METRIC_INTERVAL\n                        每隔多少个 epoch 运行一次较慢的动作抽样指标；epoch 1 和最后一轮也会运行。\n  --metric-batches METRIC_BATCHES\n                        每次动作指标最多使用多少个验证 batch；设为 0 可关闭。\n  --metric-samples METRIC_SAMPLES\n                        每个指标 batch 最多抽样多少条轨迹，数值越小越省计算。\n  --balanced-sampling, --no-balanced-sampling\n                        默认按 schema 均衡抽样；使用 --no-balanced-sampling 可关闭。\n                        (default: True)\n  --resume RESUME       从 train.py 生成的 latest.pt 继续训练；epochs 表示最终总轮数。\n  --init-from INIT_FROM\n                        只载入已有模型权重并重置优化器和数据划分；适合扩充数据集后增量训练。\n  --max-samples MAX_SAMPLES\n  --max-samples-per-schema MAX_SAMPLES_PER_SCHEMA\n                        每种兼容 schema 的样本上限；适合先做低成本冒烟训练。\n  --max-tfrecord-episodes MAX_TFRECORD_EPISODES\n  --max-tfrecord-episodes-per-schema MAX_TFRECORD_EPISODES_PER_SCHEMA\n                        每种 TFRecord schema 最多扫描多少个 episode；适合在大规模 OXE\n                        数据上做低成本训练，同时仍覆盖每一种已识别 schema。\n  --min-trajectory-steps MIN_TRAJECTORY_STEPS\n                        只保留至少包含这么多时间步的完整演示；导师要求默认10。\n  --bridge-current-gripper {binary,continuous}\n                        Bridge输入测量编码；连续观测2*opening-1，不等价于上一控制命令\n  --bridge-task-plan BRIDGE_TASK_PLAN\n                        固定Bridge单任务演示计划；不可与旧模型/拟合诊断混用\n"
+    },
+    {
+      "command": [
+        "code/test.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "seconds": 5.88,
+      "output_tail": "SON]\n               [--max-windows-per-episode MAX_WINDOWS_PER_EPISODE]\n               [--condition-diagnostic CONDITION_DIAGNOSTIC]\n               [--diagnostic-samples DIAGNOSTIC_SAMPLES]\n               [--trajectory-dir TRAJECTORY_DIR]\n               [--trajectory-samples TRAJECTORY_SAMPLES]\n               [--trajectory-draws TRAJECTORY_DRAWS]\n               [--transition-decode {cumulative,single_switch}]\n               [--switch-threshold SWITCH_THRESHOLD]\n\noptions:\n  -h, --help            show this help message and exit\n  --checkpoint CHECKPOINT\n  --dataset-dir DATASET_DIR\n                        可选外部数据根目录；不填时使用 checkpoint 保存的测试划分。\n  --split {train,seen-train,validation,test}\n                        未指定外部目录时评估哪个划分；seen-train仅评估有访问记录的实际已见窗口；默认test。\n  --cache-dir CACHE_DIR\n  --batch-size BATCH_SIZE\n  --max-batches MAX_BATCHES\n                        每个总体/schema 最多评估多少个 batch；CPU 下完整扩散较慢。\n  --samples-per-batch SAMPLES_PER_BATCH\n                        每个 batch 实际进行完整扩散抽样的轨迹数。\n  --seed SEED\n  --output-json OUTPUT_JSON\n                        可选：保存指标与评估范围，避免只留下终端日志。\n  --max-windows-per-episode MAX_WINDOWS_PER_EPISODE\n                        每条演示最多固定随机抽取多少窗口；0保持原窗口分布，1用于等演示权重低成本评估。\n  --condition-diagnostic CONDITION_DIAGNOSTIC\n                        仅运行训练/验证分区的匹配输入条件诊断，并保存JSON；不训练。\n  --diagnostic-samples DIAGNOSTIC_SAMPLES\n                        条件诊断每个分区抽取的窗口数。\n  --trajectory-dir TRAJECTORY_DIR\n                        可选：保存逐窗口真实/预测轨迹图及预测数值。\n  --trajectory-samples TRAJECTORY_SAMPLES\n  --trajectory-draws TRAJECTORY_DRAWS\n                        扩散每窗口独立采样次数；回归自动为1。\n  --transition-decode {cumulative,single_switch}\n                        可覆盖 checkpoint 的 transition 解码方式，用于不重训的受控比较。\n  --switch-threshold SWITCH_THRESHOLD\n                        可覆盖 checkpoint 的切换 logit 阈值。\n"
+    },
+    {
+      "command": [
+        "code/test_loader.py",
+        "--model-math-only"
+      ],
+      "exit_code": 0,
+      "seconds": 8.19,
+      "output_tail": "[图像检查] 通过：暗uint8缩放正确；非有限、负值和未声明整数格式拒绝\n[Bridge夹爪检查] 通过：双向过渡跟随后续端点，尾部中间值保留，非法输入拒绝\n[Bridge版本检查] 通过：旧默认指纹兼容，新监督策略具有不同数据身份\n[Bridge拟合选择检查] 通过：仅训练演示均匀抽样、每演示中间1窗口、不读取目标选样\n[Bridge边界检查] 通过：空末帧/首末标记/时序候选统计可定位；不自动移帧\n[视觉通路检查] 通过：旧CLS输出兼容；新patch影响输出=2.017528，patch梯度=1.766031\n[BC-Z控制目标检查] 通过：原生残差相加、8维转换往返、绝对夹爪命令；不假定物理时长\n[BC-Z原生序列检查] 通过：同索引10×8目标、不累加残差、连续观测保真；默认训练未改变\n[加载兼容检查] 通过：原生10步不补齐/混帧，连续输入有效，第一目标旧二值输入不变\n[Bridge输入/末步检查] 通过：连续测量保真、目标仍8维命令，末步不传播，非法测量/transition混用拒绝\n[原始邻域检查] 通过：短轨迹不越界，10个字段原样保留；近邻不当作时间标定\n[夹爪结构检查] 通过：旧头兼容、两种头前向反向、确定性重置及异构权重拒绝\n[仅夹爪隔离检查] 通过：头部可更新，图文/位姿无梯度且不变，意外位姿变更能检测\n[Adapter实验隔离] 通过：显式patch读出合法；隐式融合切换/目标变更/旧权重混用被拒绝\n[原生模式隔离] 通过：完整池与旧拟合入口合法；混用诊断、迁移、语义与重采样被拒绝\n[划分检查] 通过：完整轨迹隔离；跨集合泄漏、遗漏与重复会被拒绝\n[验证探针隔离] 通过：固定诊断拒绝测试、跨分区、重复或空窗口\n[输入目标检查] 候选=6，精确输入冲突=0；已选打开/关闭各2个，只用于拟合诊断\n[平衡拟合检查] 通过：训练样本各类数量固定，冲突输入不会被静默删除\n[覆盖检查] 通过：按实际batch抽样记录窗口与独立演示，不将重叠窗口当独立样本\n[数学检查] 通过：线性终点=0.363563，余弦终点=0.000000243；理想去噪/位姿往返/回归确定性/四元数符号不变损失/梯度通过\n"
+    }
+  ],
+  "scope": "Local source/CLI/mathematical checks; no training, clean installation or rollout."
+}

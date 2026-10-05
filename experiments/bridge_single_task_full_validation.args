@@ -1,0 +1,9 @@
+@experiments/bridge_single_task_pilot.args
+--output-dir=results/bridge_single_task_full_validation_v1
+--bridge-validation-scope=all_windows
+--lr-schedule=constant
+--epochs=25
+--dropout=0
+--weight-decay=0
+--metric-batches=7
+--metric-samples=8

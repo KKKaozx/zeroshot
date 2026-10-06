@@ -1,6 +1,8 @@
 # Octo 最小官方复现
 
-2026-10-07。目标是运行已发布完整策略的官方第一项推理示例，作为正对照。暂停继续调整 CLIPort 专家回放或旧动作头。**预检完成；安装与推理包已准备，尚未运行安装或模型。**
+2026-10-07。目标是运行已发布完整策略的官方第一项推理示例，作为正对照。暂停继续调整 CLIPort 专家回放或旧动作头。**安装188861与GPU推理188862均COMPLETED/0:0，用户提供日志包含OFFICIAL_SINGLE_IMAGE_INFERENCE PASSED。原生动作及版本JSON尚待取回。**
+
+此次脚本成功条件包括JAX GPU后端、官方模型加载、动作采样、输出[1,4,7]且全部有限；这些由成功日志结合已保存脚本得出，尚未直接读取集群JSON中的动作数值。环境du -sh约5.7GB、项目约26GB；不是实际配额查询。TensorFlow GPU提示、Transformers缓存警告、缺少可选腕部观测提示未阻止该官方单图示例完成，不据此增加安装或观测修补。没有机器人执行、动作正确性参考或独立泛化评价，也没有用本项目CLIP/Adapter/动作头。
 
 用户提供的集群作业 188824 报告确认 x86_64、RTX A6000 可见，项目 apparent use 23.18GiB，inventory_passed=true；octo_inference_ready=false。旧环境 JAX0.4.13/Flax0.7.0/TF2.13 与官方依赖不同，另建 `/projects/Zeroshot/envs/octo-small-v1`。200GB 配额按 200,000,000,000 bytes 做规划；原预检用 200GiB，余量略高估，新脚本已纠正。仍未读取实际配额。
 

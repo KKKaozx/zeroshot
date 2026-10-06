@@ -143,3 +143,22 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 因此，原固定周期工程轨迹把“作者阻塞调用的最终命令目标”当成“0.2s 后应到达的位姿”，这个时间分配没有来源依据。它仍是未通过的工程对照，不能由此推断学习模型或 Bridge 目标有问题，也不能通过改快电机、延长周期或忽略这行误差宣称通过。
 
 后续对照将采集实际到达的 tool_tip link 位姿与实际物理时钟，再按声明的采样时刻构造轨迹；请求吸盘开关及发生时刻单独记录，不用测量开度推造命令。采样时序与事件时序仍需验收，正式模型仍未接入。25 项合同测试保持通过。证据：[抬升预算核查](../reports/cliport_lift_deadline_audit.json)。
+
+## 实际时钟采集与位姿跟踪对照（同日后续）
+
+使用同一作者演示和原生 primitive 执行整条任务，新增只读观测器统计实际 step_simulation 调用，采集 tool_tip link 到达位姿、吸盘请求时刻和激活/附着变化。记录了 5,371 个实际物理步、56 个规则采样时刻（每 96 步），另保留 tick=5371 的非规则末尾样本，未补齐周期。任务奖励仍为 1，逐 primitive 的物体位置与原记录一致。原始工程轨迹约 19KB，仅保存在忽略的缓存目录，未上传数据集或模型。
+
+14 次吸盘请求全部发生在规则采样区间内部。到达姿态记录与请求/实际附着事件分开，不能把采样时刻的测量状态当作此前控制命令，也不能把事件自动推到周期起点/终点。精确事件时刻是本次工程观测提供的信息，当前 8 维动作头没有输出这样的额外时刻。
+
+完整 16 点位姿回放先因现有几何范围被拒绝。实际采集到的 tool_tip 最低约 −0.06444m：作者失败尝试不仅命令目标低于零，实际虚拟 TCP 也可能低于零；此前“负高度只是未到达命令”的可能性不能当作事实。tool_tip 与独立吸盘碰撞头的几何对应仍需区分，不能直接用物体工作空间当作任意 TCP 可行域。
+
+未放宽默认 ±3 或正高度界限，改做**从初始时刻开始、连续且全部合法的前 15 个目标**，第 16 个仍拒绝；不跳过失败目标、不按跟踪表现选择窗口。吸盘保持打开，单独检查位姿跟踪，无预定位、物体/关节状态恢复或任务评分。每行仍为 96 个实际物理步，共仿真时间 3.0s。15/15 通过 1cm/5° 门槛，最大位置误差 0.2338cm、旋转 0.1511°。这只支持该有界前缀的运动执行，不能叫完整 16 点、吸盘事件、整条任务或模型泛化通过。
+
+时钟、位姿有限值/单位四元数、事件顺序、原生奖励和记录位置一致性均核验；25 项合同测试仍通过。下一项独立检查吸盘事件在区间内的时刻如何影响执行，再确定可由模型输出驱动的协议。证据：[时钟与运动前缀](../reports/cliport_reached_clock_control.json)。
+
+复现需新的文件路径，原始轨迹保留在 Git 忽略目录：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-clock-capture.json --capture-reached-trace training_cache/new-reached-trace.json
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-motion-prefix.json --replay-reached-trace training_cache/new-reached-trace.json
+```

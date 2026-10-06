@@ -42,6 +42,10 @@ def main():
                         help="Synthetic trajectory fixture from author poses; no learned model")
     parser.add_argument("--capture-tcp-trace", type=Path,
                         help="Record author low-level pose/suction commands for engineering replay")
+    parser.add_argument("--capture-reached-trace", type=Path,
+                        help="Sample measured TCP at actual physics ticks; keep suction events separate")
+    parser.add_argument("--replay-reached-trace", type=Path,
+                        help="Initial admissible timed prefix of <=16 targets, suction held open")
     parser.add_argument("--replay-tcp-trace", type=Path,
                         help="Execute a captured expert trace through the continuous controller")
     parser.add_argument("--absolute-trace-control", action="store_true",
@@ -51,6 +55,13 @@ def main():
     parser.add_argument("--fixed-period-grasp-control", action="store_true",
                         help="16-slot author-target pickup/hold/release fixture; not task evaluation")
     args = parser.parse_args()
+    if args.replay_reached_trace and (args.max_episodes != 1 or args.capture_reached_trace
+            or args.capture_tcp_trace or args.replay_tcp_trace or args.oracle_smoke
+            or args.restore_recorded_reset or args.save_oracle_dir or args.event_adapter_control):
+        raise ValueError("Reached-window replay requires one separate strict seeded engineering control")
+    if args.capture_reached_trace and (args.capture_reached_trace.exists() or args.max_episodes != 1
+            or args.replay_tcp_trace or args.restore_recorded_reset or args.oracle_smoke or args.event_adapter_control):
+        raise ValueError("Reached trace needs a new path and one strict seeded native episode")
     if args.fixed_period_grasp_control and (not args.replay_tcp_trace or args.trace_ablation or args.absolute_trace_control):
         raise ValueError("Fixed-period fixture requires its own trace replay mode")
     if args.trace_ablation and (not args.replay_tcp_trace or args.absolute_trace_control):
@@ -101,6 +112,7 @@ def main():
                   test_targets_used=False, hz=480, simulation_executed=True,
                   package_facade_skipped=True, author_source_hashes=source_hashes,
                   action_source=("synthetic_author_endpoint_event_fixture" if args.event_adapter_control
+                                 else "measured_expert_tcp_motion_prefix" if args.replay_reached_trace
                                  else "author_low_level_command_trace" if args.replay_tcp_trace
                                  else "author_oracle" if args.oracle_smoke else "stored_training_primitives"),
                   restore_recorded_reset=args.restore_recorded_reset,
@@ -110,10 +122,11 @@ def main():
                   absolute_trace_control=args.absolute_trace_control,
                   trace_ablation=args.trace_ablation,
                   fixed_period_grasp_control=args.fixed_period_grasp_control,
+                  reached_motion_control=bool(args.replay_reached_trace),
                   controller_tcp_frame='URDF tool_tip link; native IK goals transformed using local inertial pose',
                   trace_only_normalized_position_bound=100. if args.trace_ablation == "relative-only" else 3.,
                   continuous_trace_workspace_override=bool(args.replay_tcp_trace and not args.absolute_trace_control and not args.fixed_period_grasp_control),
-                  primitive_return_observed=not bool(args.replay_tcp_trace),
+                  primitive_return_observed=not bool(args.replay_tcp_trace or args.replay_reached_trace),
                   grasp_return_observed=not args.absolute_trace_control,
                   versions={n: importlib.metadata.version(n) for n in
                             ("numpy", "pybullet", "gym", "torch", "opencv-python")}, episodes=[])
@@ -133,6 +146,9 @@ def main():
             task.mode = "train"
             env.set_task(task)
             current_obs = env.reset()
+            if (args.capture_reached_trace or args.replay_reached_trace) and not np.isclose(
+                    p.getPhysicsEngineParameters()['fixedTimeStep'],1/480,rtol=0,atol=1e-12):
+                raise ValueError("Actual physics timestep differs from reached-trace clock")
             current_reward = 0.
             fresh_records = []
             position, rotation = pose_errors(episode["info"][0], env.info)
@@ -167,6 +183,50 @@ def main():
             if not args.oracle_smoke and (position > .001 or rotation > 1. or not language_match):
                 row["stopped"] = "Initial scene mismatch; stored actions were not executed"
                 print(file.name, row["stopped"], flush=True)
+                continue
+            if args.replay_reached_trace:
+                captured = json.loads(args.replay_reached_trace.read_text())
+                if (captured['seed'] != seed or captured['task'] != task_name
+                        or captured['frame'] != 'URDF tool_tip link'
+                        or captured['physics_tick_seconds'] != 1/480
+                        or captured['sampling_stride_ticks'] != 96):
+                    raise ValueError("Reached trace scene/frame/clock contract differs")
+                samples = [s for s in captured['samples'] if s['regular_sample']]
+                controller = ContinuousTCPController(env)
+                rejected = []; admitted = []; selected = 0; reference = samples[0]
+                future = samples[1:17]
+                if [x['tick']-reference['tick'] for x in future] != list(range(96,17*96,96)):
+                    raise ValueError("Missing or reordered timed samples")
+                for offset, sample in enumerate(future, 1):
+                    candidate = relative_pose_action(reference['position'],reference['quaternion'],
+                        sample['position'],sample['quaternion'],1.)
+                    try:
+                        controller._prepare_targets(candidate[None],reference['position'],reference['quaternion'])
+                        admitted.append(candidate)
+                    except ValueError as error:
+                        rejected.append(dict(target_offset=offset,tick=sample['tick'],reason=str(error)))
+                        break
+                if not admitted:
+                    raise ValueError("No admissible initial motion target; no range expansion")
+                fixture = np.stack(admitted)
+                if reference['tick'] != 0:
+                    raise ValueError("Initial motion control must start at the captured reset")
+                tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                q_actual,q_saved = np.asarray(tcp[5]),np.asarray(reference['quaternion'])
+                if (not np.allclose(tcp[4],reference['position'],rtol=0,atol=1e-6)
+                        or not np.isclose(abs(q_actual@q_saved)/(np.linalg.norm(q_actual)*np.linalg.norm(q_saved)),1.,rtol=0,atol=1e-8)):
+                    raise ValueError("Prefix TCP differs; recorded targets not executed")
+                controller.command_suction(True)
+                timed = controller.execute_fixed_period(fixture,tcp[4],tcp[5])
+                row['reached_motion_fixture'] = dict(selected_window=selected, start_tick=reference['tick'],
+                    rejected_next_targets=rejected, target_count=len(fixture),full_16_target_window=len(fixture)==16,
+                    selection='initial contiguous admissible prefix before tracking; no skipped targets',
+                    initial_scene_recreated_without_state_restoration=True, warmup=False,
+                    suction_mode='held open; source events not replayed',
+                    task_reward_evaluated=False, targets=timed,
+                    tracking_passed=all(t['position_error_m']<=.01 and t['rotation_error_deg']<=5 for t in timed))
+                row['success'],row['total_reward']=None,None
+                print('Reached motion window',selected,'tracking',row['reached_motion_fixture']['tracking_passed'],flush=True)
                 continue
             agent = task.oracle(env) if args.oracle_smoke else None
             trace = dict(seed=seed, task=task_name, model_used=False, primitive_commands=[])
@@ -217,7 +277,42 @@ def main():
             tcp_events = []
             last_pose = None
             command_open = True
-            if args.capture_tcp_trace:
+            reached = dict(seed=seed, task=task_name, model_used=False,
+                frame='URDF tool_tip link', physics_tick_seconds=1/480,
+                sampling_stride_ticks=96, samples=[], suction_requests=[], state_events=[], primitive_boundaries=[])
+            counted_ticks = 0
+            last_suction_state = (bool(env.ee.activated), bool(env.ee.check_grasp()))
+            native_grasp_for_clock = env.ee.check_grasp
+
+            def reached_sample():
+                tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                return dict(tick=counted_ticks, time_seconds=counted_ticks/480,
+                    position=list(tcp[4]), quaternion=list(tcp[5]), requested_open=command_open,
+                    activated=bool(env.ee.activated), attached=bool(native_grasp_for_clock()),
+                    regular_sample=counted_ticks % 96 == 0)
+
+            def reached_state_event():
+                nonlocal last_suction_state
+                state = (bool(env.ee.activated), bool(native_grasp_for_clock()))
+                if state != last_suction_state:
+                    reached['state_events'].append(dict(tick=counted_ticks,
+                        activated=state[0], attached=state[1]))
+                    last_suction_state = state
+
+            if args.capture_reached_trace:
+                native_sim_step = env.step_simulation
+                reached['samples'].append(reached_sample())
+
+                def counted_sim_step():
+                    nonlocal counted_ticks
+                    native_sim_step()
+                    counted_ticks += 1
+                    reached_state_event()
+                    if counted_ticks % 96 == 0:
+                        reached['samples'].append(reached_sample())
+
+                env.step_simulation = counted_sim_step
+            if args.capture_tcp_trace or args.capture_reached_trace:
                 native_move, native_activate, native_release = env.movep, env.ee.activate, env.ee.release
 
                 def capture_move(pose, speed=.01):
@@ -231,6 +326,9 @@ def main():
                     nonlocal command_open
                     result = native_activate()
                     command_open = False
+                    if args.capture_reached_trace:
+                        reached['suction_requests'].append(dict(tick=counted_ticks, open=False))
+                        reached_state_event()
                     tcp_events.append(dict(kind="suction", pose=last_pose, open=False, speed=.01))
                     return result
 
@@ -238,6 +336,9 @@ def main():
                     nonlocal command_open
                     result = native_release()
                     command_open = True
+                    if args.capture_reached_trace:
+                        reached['suction_requests'].append(dict(tick=counted_ticks, open=True))
+                        reached_state_event()
                     tcp_events.append(dict(kind="suction", pose=last_pose, open=True, speed=.01))
                     return result
 
@@ -378,6 +479,8 @@ def main():
                 if args.capture_tcp_trace:
                     trace['primitive_commands'].append(list(tcp_events))
                 current_obs, current_reward = obs, reward
+                if args.capture_reached_trace:
+                    reached['primitive_boundaries'].append(dict(index=step, tick=counted_ticks, reward=float(reward)))
                 row["total_reward"] += float(reward)
                 row["steps"].append(dict(index=step, reward=float(reward), done=bool(done),
                     empty_observation=len(obs["color"]) == 0, **observation))
@@ -400,6 +503,17 @@ def main():
                 if done:
                     break
             row["success"] = row["total_reward"] > .99
+            if args.capture_reached_trace:
+                if not row['success']:
+                    raise ValueError("Native expert incomplete; do not export reached trace as successful")
+                if reached['samples'][-1]['tick'] != counted_ticks:
+                    reached['samples'].append(reached_sample())
+                reached['total_physics_ticks'] = counted_ticks
+                args.capture_reached_trace.parent.mkdir(parents=True, exist_ok=True)
+                args.capture_reached_trace.write_text(json.dumps(reached), encoding='utf-8')
+                row['reached_trace'] = dict(path=str(args.capture_reached_trace),
+                    total_physics_ticks=counted_ticks, samples=len(reached['samples']),
+                    suction_requests=len(reached['suction_requests']), state_events=len(reached['state_events']))
             if args.capture_tcp_trace:
                 args.capture_tcp_trace.parent.mkdir(parents=True, exist_ok=True)
                 args.capture_tcp_trace.write_text(json.dumps(trace), encoding='utf-8')
@@ -416,11 +530,13 @@ def main():
                 checked = UnifiedRobotDataset.read_cliport_native_episode(saved_path)
                 row["exported_primitives"] = len(checked["executable_step_indices"])
                 row["exported_dataset_dir"] = str(args.save_oracle_dir)
-        report["successful_episodes"] = (None if args.fixed_period_grasp_control else
+        report["successful_episodes"] = (None if args.fixed_period_grasp_control or args.replay_reached_trace else
                                          sum(row["success"] for row in report["episodes"]))
         report["executed_episodes"] = sum(bool(row["steps"]) for row in report["episodes"])
         if args.fixed_period_grasp_control:
             report['executed_fixed_period_fixtures'] = sum('fixed_period_fixture' in row for row in report['episodes'])
+        if args.replay_reached_trace:
+            report['executed_motion_fixtures'] = sum('reached_motion_fixture' in row for row in report['episodes'])
     except Exception as error:
         report["error"] = repr(error)
         raise
@@ -428,7 +544,7 @@ def main():
         p.disconnect()
         args.output_json.parent.mkdir(parents=True, exist_ok=True)
         args.output_json.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    if args.fixed_period_grasp_control:
+    if args.fixed_period_grasp_control or args.replay_reached_trace:
         print('Fixed-period fixture complete; task success not evaluated', flush=True)
     else:
         print(report["action_source"], report["successful_episodes"], "/", len(files), flush=True)

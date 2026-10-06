@@ -1,0 +1,782 @@
+{
+  "purpose": "Counted-time native expert collection and initial motion-only prefix tracking; not a learned or whole-task replay",
+  "model_used": false,
+  "training_performed": false,
+  "clock_and_pose_invariants_passed": true,
+  "tests_passed": 25,
+  "source_hashes": {
+    "training_cache\\cliport_fresh_control\\reached_clock_trace.json": "ee4b18d9d7a2cb8451c3f246f15e1f625d352f19060778f0ea5b492fbd00cb4c",
+    "results\\cliport_reached_clock_capture.json": "f72ac34327e6297ed3d140694b36c7f619f012875bf86cb6e6bf6b0dae2a9807",
+    "results\\cliport_reached_motion_prefix_verified.json": "042777461d6f71f7d6b972e15168210c6a26e11dc7a575cb2cb1a4a4d78ca574",
+    "diagnostics\\replay_cliport_native.py": "40061888bad3126d758b04caceab631a316ba22d976d24673b34b5016f236feb"
+  },
+  "capture": {
+    "raw_trace_path": "training_cache\\cliport_fresh_control\\reached_clock_trace.json",
+    "size_bytes": 19170,
+    "actual_physics_ticks": 5371,
+    "physics_dt": 0.0020833333333333333,
+    "regular_samples": 56,
+    "regular_stride_ticks": 96,
+    "tail_tick": 5371,
+    "tail_is_regular": false,
+    "suction_requests": [
+      {
+        "tick": 143,
+        "open": false
+      },
+      {
+        "tick": 517,
+        "open": true
+      },
+      {
+        "tick": 877,
+        "open": false
+      },
+      {
+        "tick": 1194,
+        "open": true
+      },
+      {
+        "tick": 1544,
+        "open": false
+      },
+      {
+        "tick": 1945,
+        "open": true
+      },
+      {
+        "tick": 2340,
+        "open": false
+      },
+      {
+        "tick": 2596,
+        "open": true
+      },
+      {
+        "tick": 2946,
+        "open": false
+      },
+      {
+        "tick": 3495,
+        "open": true
+      },
+      {
+        "tick": 4027,
+        "open": false
+      },
+      {
+        "tick": 4467,
+        "open": true
+      },
+      {
+        "tick": 4835,
+        "open": false
+      },
+      {
+        "tick": 5243,
+        "open": true
+      }
+    ],
+    "suction_state_events": [
+      {
+        "tick": 143,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 517,
+        "activated": false,
+        "attached": false
+      },
+      {
+        "tick": 877,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 1194,
+        "activated": false,
+        "attached": false
+      },
+      {
+        "tick": 1544,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 1945,
+        "activated": false,
+        "attached": false
+      },
+      {
+        "tick": 2340,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 2596,
+        "activated": false,
+        "attached": false
+      },
+      {
+        "tick": 2946,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 3495,
+        "activated": false,
+        "attached": false
+      },
+      {
+        "tick": 4027,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 4467,
+        "activated": false,
+        "attached": false
+      },
+      {
+        "tick": 4835,
+        "activated": true,
+        "attached": true
+      },
+      {
+        "tick": 5243,
+        "activated": false,
+        "attached": false
+      }
+    ],
+    "requests_inside_sampling_intervals": 14,
+    "minimum_observed_tcp_z_m": -0.0644366666674614,
+    "native_total_reward": 0.9999999999999999,
+    "native_object_positions_match_recording": true
+  },
+  "motion_control": {
+    "selected_window": 0,
+    "start_tick": 0,
+    "rejected_next_targets": [
+      {
+        "target_offset": 16,
+        "tick": 1536,
+        "reason": "Relative position exceeds declared bound; no clipping"
+      }
+    ],
+    "target_count": 15,
+    "full_16_target_window": false,
+    "selection": "initial contiguous admissible prefix before tracking; no skipped targets",
+    "initial_scene_recreated_without_state_restoration": true,
+    "warmup": false,
+    "suction_mode": "held open; source events not replayed",
+    "task_reward_evaluated": false,
+    "targets": [
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.6587326734227275,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 66,
+        "actual_joint_path_length_rad": 0.663277544445829,
+        "final_joint_distance_rad": 6.166666343554785e-06,
+        "first_tracking_tick": 63,
+        "position_error_m": 0.0008600021471940527,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40406593680381775,
+          0.09720519185066223,
+          0.16159847378730774
+        ],
+        "actual_quaternion": [
+          -0.7070991396903992,
+          0.7071143388748169,
+          0.0001951405720319599,
+          -0.00023913965560495853
+        ],
+        "target_position": [
+          0.40359923243522644,
+          0.09704047441482544,
+          0.16089515388011932
+        ],
+        "target_quaternion": [
+          0.7071030139923096,
+          -0.7071106433868408,
+          -9.838995174504817e-05,
+          0.00012110201350878924
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.1237156697023224,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 13,
+        "actual_joint_path_length_rad": 0.12577590686061116,
+        "final_joint_distance_rad": 5.770718793147629e-06,
+        "first_tracking_tick": 9,
+        "position_error_m": 0.0007575788515663756,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.4403737783432007,
+          0.09523423761129379,
+          0.1669658124446869
+        ],
+        "actual_quaternion": [
+          0.7071211934089661,
+          -0.7070887684822083,
+          0.0008823598618619144,
+          0.002067733323201537
+        ],
+        "target_position": [
+          0.4399976432323456,
+          0.095100998878479,
+          0.16632184386253357
+        ],
+        "target_quaternion": [
+          0.7071252465248108,
+          -0.7070849537849426,
+          0.0009745247079990804,
+          0.001963681075721979
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.7334346941351204,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 74,
+        "actual_joint_path_length_rad": 0.7373412640401081,
+        "final_joint_distance_rad": 6.514528858487864e-05,
+        "first_tracking_tick": 71,
+        "position_error_m": 0.0005453711218169034,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.38576164841651917,
+          0.08062820881605148,
+          0.3625624179840088
+        ],
+        "actual_quaternion": [
+          0.7896019816398621,
+          -0.6136080026626587,
+          -0.0023737179581075907,
+          -0.0028768349438905716
+        ],
+        "target_position": [
+          0.385434091091156,
+          0.08019302785396576,
+          0.36258986592292786
+        ],
+        "target_quaternion": [
+          -0.7896379828453064,
+          0.61356121301651,
+          0.0024173331912606955,
+          0.002945847576484084
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.9538758520806772,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 96,
+        "actual_joint_path_length_rad": 0.9549737825529475,
+        "final_joint_distance_rad": 0.0014953232456651375,
+        "first_tracking_tick": 85,
+        "position_error_m": 0.001680512894954651,
+        "rotation_error_deg": 0.10984420117574986,
+        "actual_position": [
+          0.3234989047050476,
+          0.03680216148495674,
+          0.37136101722717285
+        ],
+        "actual_quaternion": [
+          0.9626272320747375,
+          -0.2708270251750946,
+          -0.0002840690722223371,
+          0.0012192144058644772
+        ],
+        "target_position": [
+          0.32267317175865173,
+          0.03533899039030075,
+          0.3713233470916748
+        ],
+        "target_quaternion": [
+          0.9626888632774353,
+          -0.2706104815006256,
+          -0.00024320965167135,
+          0.0002791372244246304
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.8899475999199435,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 89,
+        "actual_joint_path_length_rad": 0.8910691408591198,
+        "final_joint_distance_rad": 0.00011834607004914867,
+        "first_tracking_tick": 86,
+        "position_error_m": 0.0023380406867429438,
+        "rotation_error_deg": 0.046562597783817286,
+        "actual_position": [
+          0.3202246427536011,
+          0.035215288400650024,
+          0.1291283816099167
+        ],
+        "actual_quaternion": [
+          0.9687054753303528,
+          -0.24821238219738007,
+          -0.00038444731035269797,
+          0.0005012810579501092
+        ],
+        "target_position": [
+          0.3190701901912689,
+          0.033380232751369476,
+          0.1282530277967453
+        ],
+        "target_quaternion": [
+          0.9687638282775879,
+          -0.24798497557640076,
+          -0.00020303345809224993,
+          0.0002293033612659201
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.26874019746793987,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 27,
+        "actual_joint_path_length_rad": 0.2709357946873333,
+        "final_joint_distance_rad": 8.660028280852037e-06,
+        "first_tracking_tick": 24,
+        "position_error_m": 0.001979661365631242,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.36089223623275757,
+          0.025026757270097733,
+          0.1949402540922165
+        ],
+        "actual_quaternion": [
+          0.9687048196792603,
+          -0.24821530282497406,
+          -0.00039259527693502605,
+          -3.739540989045054e-05
+        ],
+        "target_position": [
+          0.3599132299423218,
+          0.023420773446559906,
+          0.19432266056537628
+        ],
+        "target_quaternion": [
+          -0.9687632322311401,
+          0.2479875385761261,
+          0.0002603724133223295,
+          0.00022389482182916254
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.7527650089410861,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 76,
+        "actual_joint_path_length_rad": 0.7547826521727604,
+        "final_joint_distance_rad": 3.3962259914785655e-05,
+        "first_tracking_tick": 72,
+        "position_error_m": 0.0014141737022946347,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.3884054124355316,
+          0.0070144059136509895,
+          0.3865360915660858
+        ],
+        "actual_quaternion": [
+          0.9290144443511963,
+          -0.37002766132354736,
+          -0.00047080140211619437,
+          -0.0033938558772206306
+        ],
+        "target_position": [
+          0.387777179479599,
+          0.005754120647907257,
+          0.38666605949401855
+        ],
+        "target_quaternion": [
+          -0.9290860891342163,
+          0.36984628438949585,
+          0.0005053377826698124,
+          0.0035494607873260975
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.9533973522157173,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 96,
+        "actual_joint_path_length_rad": 0.95534584875012,
+        "final_joint_distance_rad": 0.0026564315107058473,
+        "first_tracking_tick": 92,
+        "position_error_m": 0.0009623547949399159,
+        "rotation_error_deg": 0.15111619010917265,
+        "actual_position": [
+          0.5881123542785645,
+          -0.1102057695388794,
+          0.36216259002685547
+        ],
+        "actual_quaternion": [
+          0.7223331332206726,
+          -0.6915448904037476,
+          0.0006347170565277338,
+          0.0002929574984591454
+        ],
+        "target_position": [
+          0.5888272523880005,
+          -0.1102704331278801,
+          0.36280357837677
+        ],
+        "target_quaternion": [
+          -0.7223852276802063,
+          0.6914904713630676,
+          0.00020091203623451293,
+          0.0008172093657776713
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.8776832066399877,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 88,
+        "actual_joint_path_length_rad": 0.8789912958982609,
+        "final_joint_distance_rad": 9.42574630320047e-05,
+        "first_tracking_tick": 85,
+        "position_error_m": 0.0007881256122141343,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.6003565192222595,
+          -0.11794610321521759,
+          0.08318439871072769
+        ],
+        "actual_quaternion": [
+          -0.7070117592811584,
+          0.7072017788887024,
+          0.00017854025645647198,
+          -0.0002348333364352584
+        ],
+        "target_position": [
+          0.6001846790313721,
+          -0.11834079772233963,
+          0.08252422511577606
+        ],
+        "target_quaternion": [
+          0.7070592641830444,
+          -0.707154393196106,
+          -9.844834130490199e-05,
+          9.8827040346805e-05
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.7025776507375154,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 71,
+        "actual_joint_path_length_rad": 0.7045933392554683,
+        "final_joint_distance_rad": 1.5573990217411568e-05,
+        "first_tracking_tick": 68,
+        "position_error_m": 0.0008310080050533401,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.6159605979919434,
+          -0.12439095973968506,
+          0.297963947057724
+        ],
+        "actual_quaternion": [
+          0.7071100473403931,
+          -0.7071029543876648,
+          0.0008607666823081672,
+          -0.00017344779917038977
+        ],
+        "target_position": [
+          0.616492748260498,
+          -0.12493234127759933,
+          0.29830202460289
+        ],
+        "target_quaternion": [
+          -0.7071576714515686,
+          0.7070555090904236,
+          -0.0007659102557227015,
+          0.00017441475938539952
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.758926381739543,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 76,
+        "actual_joint_path_length_rad": 0.7853909212998053,
+        "final_joint_distance_rad": 0.00012748241356471833,
+        "first_tracking_tick": 74,
+        "position_error_m": 0.0010235525111595282,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.39068031311035156,
+          0.00722014345228672,
+          0.378711462020874
+        ],
+        "actual_quaternion": [
+          0.8270344734191895,
+          -0.5621485114097595,
+          -4.943447493133135e-05,
+          -0.001747113885357976
+        ],
+        "target_position": [
+          0.3901549279689789,
+          0.006346672773361206,
+          0.37880462408065796
+        ],
+        "target_quaternion": [
+          -0.8270995616912842,
+          0.5620527267456055,
+          7.315078255487606e-05,
+          0.0017742670606821775
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.8718489768109191,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 88,
+        "actual_joint_path_length_rad": 0.8738108677191285,
+        "final_joint_distance_rad": 0.0003269065102973507,
+        "first_tracking_tick": 84,
+        "position_error_m": 0.0015023238877115846,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.3574237525463104,
+          0.021629270166158676,
+          0.1438847929239273
+        ],
+        "actual_quaternion": [
+          0.8430735468864441,
+          -0.5377980470657349,
+          -0.00020607892656698823,
+          0.00041536736534908414
+        ],
+        "target_position": [
+          0.35656481981277466,
+          0.020700372755527496,
+          0.143074631690979
+        ],
+        "target_quaternion": [
+          0.8431400060653687,
+          -0.5376942157745361,
+          -0.000129913620185107,
+          9.264351683668792e-05
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.1862349875727778,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 19,
+        "actual_joint_path_length_rad": 0.19193502883477379,
+        "final_joint_distance_rad": 6.4223915507965275e-06,
+        "first_tracking_tick": 15,
+        "position_error_m": 0.001305503349709873,
+        "rotation_error_deg": 0.004734948282977364,
+        "actual_position": [
+          0.3968956470489502,
+          0.01064554788172245,
+          0.180336132645607
+        ],
+        "actual_quaternion": [
+          0.8430588245391846,
+          -0.5378183126449585,
+          0.00024864895385690033,
+          0.0017990549094974995
+        ],
+        "target_position": [
+          0.3961676061153412,
+          0.009776584804058075,
+          0.17968867719173431
+        ],
+        "target_quaternion": [
+          0.8431254029273987,
+          -0.5377143621444702,
+          0.00034909884561784565,
+          0.0016558782663196325
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.7490021437259252,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 75,
+        "actual_joint_path_length_rad": 0.7583289176245325,
+        "final_joint_distance_rad": 0.00013128484726623432,
+        "first_tracking_tick": 72,
+        "position_error_m": 0.0007910729017369137,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.43417784571647644,
+          -0.026968292891979218,
+          0.37383711338043213
+        ],
+        "actual_quaternion": [
+          0.7850911021232605,
+          -0.6193262934684753,
+          -0.0026837307959795,
+          -0.007728113792836666
+        ],
+        "target_position": [
+          0.4338182806968689,
+          -0.027654029428958893,
+          0.3739992082118988
+        ],
+        "target_quaternion": [
+          -0.7851525545120239,
+          0.6192464232444763,
+          0.0027552112005650997,
+          0.00785994715988636
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "start_joint_distance_rad": 0.6348556864321764,
+        "joint_command_step_limit_rad": 0.01,
+        "ideal_joint_command_budget_rad": 0.96,
+        "ideal_zero_lag_steps_to_ik_target": 64,
+        "actual_joint_path_length_rad": 0.6633247834942635,
+        "final_joint_distance_rad": 0.0001780945987302338,
+        "first_tracking_tick": 61,
+        "position_error_m": 0.0007510815705836271,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.5163456201553345,
+          -0.10529322177171707,
+          0.18217849731445312
+        ],
+        "actual_quaternion": [
+          -0.7070023417472839,
+          0.7072111964225769,
+          0.0001051427170750685,
+          -0.00027652803692035377
+        ],
+        "target_position": [
+          0.5159969329833984,
+          -0.10575754195451736,
+          0.18170210719108582
+        ],
+        "target_quaternion": [
+          0.7070544958114624,
+          -0.707159161567688,
+          -6.74369657645002e-05,
+          0.00010070110147353262
+        ]
+      }
+    ],
+    "tracking_passed": true
+  },
+  "summary": {
+    "target_count": 15,
+    "simulated_seconds": 3.0000000000000004,
+    "position_error_max_cm": 0.23380406867429437,
+    "rotation_error_max_deg": 0.15111619010917265,
+    "tracking_passed": true,
+    "full_16_target_window": false,
+    "task_reward_evaluated": false,
+    "suction_events_replayed": false,
+    "model_predictions_used": false
+  },
+  "limits": [
+    "Native capture preserves task completion; the separate motion test holds suction open and does not reproduce object manipulation",
+    "The initial 16th sample is rejected by the existing geometry contract; no skipping/clipping/range expansion, only initial 15-target prefix evaluated",
+    "Observed native tool_tip drops below zero in a failed attempt; negative command height cannot be assumed merely unrealized",
+    "All 14 suction requests occur between regular samples; their exact timestamps are engineering side information, not outputs of the current eight-dimensional head",
+    "Sample clock is measured simulation time in this scene, not a recovery of original Bridge timestamps"
+  ],
+  "next_action": "Independently test suction-event timing with explicitly recorded within-interval timestamps before deciding a deployable command protocol. Keep full-window failure and partial motion pass separate."
+}

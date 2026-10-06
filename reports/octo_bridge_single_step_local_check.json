@@ -1,0 +1,105 @@
+{
+  "stage": "local_read_and_metric_check_only",
+  "model_loaded": false,
+  "gpu_inference_executed": false,
+  "official_source_sha256": "883cdba7267c3b67f52fee12071403defedc25efa7604478914439f988f457d5",
+  "partitions": {
+    "train": {
+      "windows": 316,
+      "episodes": 17,
+      "official_relabel_match_count": 316,
+      "perfect_prediction": {
+        "windows": 316,
+        "position_cm": 7.48751016743654e-09,
+        "rotation_deg": 1.5182571644345444e-08,
+        "gripper_accuracy": 1.0,
+        "open_recall": 1.0,
+        "closed_recall": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion": {
+          "true_open_pred_open": 43,
+          "true_open_pred_closed": 0,
+          "true_closed_pred_open": 0,
+          "true_closed_pred_closed": 273
+        },
+        "true_open_count": 43,
+        "predicted_open_count": 43
+      },
+      "zero_motion_always_closed": {
+        "windows": 316,
+        "position_cm": 1.9203360080718994,
+        "rotation_deg": 2.7019505500793457,
+        "gripper_accuracy": 0.8639240506329114,
+        "open_recall": 0.0,
+        "closed_recall": 1.0,
+        "balanced_accuracy": 0.5,
+        "confusion": {
+          "true_open_pred_open": 0,
+          "true_open_pred_closed": 43,
+          "true_closed_pred_open": 0,
+          "true_closed_pred_closed": 273
+        },
+        "true_open_count": 43,
+        "predicted_open_count": 0
+      },
+      "image_shape": [
+        316,
+        256,
+        256,
+        3
+      ]
+    },
+    "validation": {
+      "windows": 55,
+      "episodes": 3,
+      "official_relabel_match_count": 55,
+      "perfect_prediction": {
+        "windows": 55,
+        "position_cm": 8.466569112464128e-10,
+        "rotation_deg": 1.6509682509990853e-08,
+        "gripper_accuracy": 1.0,
+        "open_recall": 1.0,
+        "closed_recall": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion": {
+          "true_open_pred_open": 9,
+          "true_open_pred_closed": 0,
+          "true_closed_pred_open": 0,
+          "true_closed_pred_closed": 46
+        },
+        "true_open_count": 9,
+        "predicted_open_count": 9
+      },
+      "zero_motion_always_closed": {
+        "windows": 55,
+        "position_cm": 1.8196828365325928,
+        "rotation_deg": 2.445775270462036,
+        "gripper_accuracy": 0.8363636363636363,
+        "open_recall": 0.0,
+        "closed_recall": 1.0,
+        "balanced_accuracy": 0.5,
+        "confusion": {
+          "true_open_pred_open": 0,
+          "true_open_pred_closed": 9,
+          "true_closed_pred_open": 0,
+          "true_closed_pred_closed": 46
+        },
+        "true_open_count": 9,
+        "predicted_open_count": 0
+      },
+      "image_shape": [
+        55,
+        256,
+        256,
+        3
+      ]
+    }
+  },
+  "euler_branch_crossing_check_passed": true,
+  "passed": true,
+  "independent_scipy_rotation_check": {
+    "cases": 100,
+    "absolute_mean_difference_deg": 0.0,
+    "passed": true
+  }
+}

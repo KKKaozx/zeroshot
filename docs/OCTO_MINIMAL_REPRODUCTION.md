@@ -6,6 +6,33 @@
 
 下一步使用现有Bridge子集建立原生单步离线对照：先核对固定Octo代码对Bridge动作的变换语义、图像/语言、坐标及夹爪开关约定，再评估316个训练分区窗口和55个开发分区窗口，并按演示拆分。该导出是稀疏相邻状态对，不是连续轨迹，不能将相邻记录拼成4步历史或4步动作真值；仅比较预测第一步与同一源时间的单步标签。保留Octo checkpoint动作统计，不用子集统计替换它，也不将7维Euler增量直接与项目16步8维四元数轨迹混比。未启动该评估，无需再安装/下载/训练；Bridge可能参与预训练，结果不作为未见数据泛化证据。
 
+## Bridge 单步离线评估包
+
+已准备 `scripts/cluster/octo_bridge_single_step.py` 和 `.sh`，上传包 `results/octo_preparation/octo_bridge_single_step_v1.zip`。本地实际读取现有两个TFRecord、验证文件SHA256和17/3条演示的316/55个窗口；逐窗口运行固定官方源文件中的原始 `relabel_actions` 函数，371项完全一致。该本地检查仅提取该函数执行，不冒充完整Octo环境或GPU模型运行。原夹爪标签来自此前完整有效序列的作者扫描核验，不在稀疏样本上重新扫描；没有重读完整原始序列证明所有末尾处理一致。RGB已是256×256×3 uint8，原样输入，使用真实语言 `sweep into pile`。运行无增强、历史长度1、不拼接稀疏记录，保留checkpoint动作统计，评价4步输出中的第0步。
+
+姿态评价是把预测Euler分量增量加到当前实测Euler，再计算与下一实测姿态的SO(3)角误差；不用Euler分量差绝对值当旋转角。真实标签代替预测时误差接近零、夹爪准确率1；±π分支跨越检查和100例独立SciPy姿态核对通过。详细结果见[本地检查](../reports/octo_bridge_single_step_local_check.json)。单步开发静止基线1.81968cm/2.44578°；一直关闭夹爪46/55=83.636%，平衡准确率50%。不能与先前16步9.61cm/12.94°/91.9%混比。
+
+集群只提交一次GPU作业，无安装或权重/数据下载。批大小8，尾批重复最后样本仅用于固定编译形状；统计仅保留真实样本，覆盖计数仍316/55。采样seed0/1/2，各种子RNG再按分区编号及批起点fold_in；这不是三次训练。逐采样种子和逐演示计算指标，再平均指标，不平均动作。输出小JSON及仅第一步预测的压缩NPZ，不保存图片、权重或4步真值。30分钟是Slurm时间上限，尚未测得实际运行时长。
+
+固定Octo的[Bridge标准化代码](https://github.com/octo-models/octo/blob/241fb3514b7c40957a86d869fecb7c7fc353f540/octo/data/oxe/oxe_standardization_transforms.py)说明其 `bridge_dataset` 实际使用更近期自有Bridge发布，当前子集来自较早OXE Bridge V2。因此此次是原生动作语义下的诊断参照，不是同分布论文复现；输出好坏均不能单独定位Adapter或证明未见演示泛化。当前只证明源标签计算一致，没有实际机器人坐标/单位物理标定或控制执行验收。
+
+本地上传：
+
+```powershell
+scp "D:/ntu_related/dissertation/Zero_shot/results/octo_preparation/octo_bridge_single_step_v1.zip" "D:/ntu_related/dissertation/Zero_shot/results/octo_preparation/octo_bridge_single_step_v1.sha256" zixiao005@10.97.216.128:/projects/Zeroshot/
+```
+
+集群提交：
+
+```bash
+cd /projects/Zeroshot
+sha256sum -c octo_bridge_single_step_v1.sha256 && unzip -n octo_bridge_single_step_v1.zip &&
+OCTO_BRIDGE_JOB=$(sbatch --parsable octo_bridge_single_step_v1/octo_bridge_single_step.sh) &&
+printf '单步评估作业：%s\n' "$OCTO_BRIDGE_JOB"
+```
+
+随后查 `sacct -j "$OCTO_BRIDGE_JOB" --format=JobID,State,ExitCode`，日志位于 `logs/octo-bridge-step-JOBID.out`，完整报告位于 `runs/octo-bridge-step-JOBID/report.json`。`passed`仅表示覆盖/有限值/流程检查通过，模型是否优于基线由报告实际误差判断。子集GPU评估尚未运行。
+
 用户提供的集群作业 188824 报告确认 x86_64、RTX A6000 可见，项目 apparent use 23.18GiB，inventory_passed=true；octo_inference_ready=false。旧环境 JAX0.4.13/Flax0.7.0/TF2.13 与官方依赖不同，另建 `/projects/Zeroshot/envs/octo-small-v1`。200GB 配额按 200,000,000,000 bytes 做规划；原预检用 200GiB，余量略高估，新脚本已纠正。仍未读取实际配额。
 
 安装作业 188827 在 pip 依赖解析阶段失败：未锁定的新版 wandb 要求 protobuf≥5，与 TF2.15/protobuf4.23.4 冲突；尚未进入模型下载或推理。修复为 wandb==0.16.6，其 PyPI 元数据支持 Linux/Python3.10 下 protobuf≥3.19,<5。补锁后仍需集群安装验证，不能称修复已运行通过。旧依赖等待任务 188828 应取消，再按 afterok 重新提交安装和推理；复用已创建的独立环境。

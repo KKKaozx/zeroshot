@@ -1,0 +1,181 @@
+{
+  "experiment_type": "Single generated expert episode: serialization and unassisted native replay control",
+  "author_commit": "2be5c47b5bb9bb7040ad90693288b87b1e18e7ad",
+  "model_used": false,
+  "neural_training_performed": false,
+  "generalization_experiment": false,
+  "train_test_model_evaluation": false,
+  "task_mode": "train",
+  "seed": 0,
+  "generated_by": "Author task.oracle",
+  "saved_by": "Author RavensDataset.add",
+  "loaded_by": "UnifiedRobotDataset.read_cliport_native_episode",
+  "unified_oxe_loader_validated": false,
+  "unified_oxe_action_conversion_validated": false,
+  "clip_adapter_decoder_validated": false,
+  "versions": {
+    "numpy": "1.26.4",
+    "pybullet": "3.2.7",
+    "gym": "0.17.3",
+    "torch": "2.11.0+cu128",
+    "opencv-python": "4.10.0.84"
+  },
+  "episode_count": 1,
+  "primitive_actions": 7,
+  "unassisted_replay": true,
+  "state_intervention": false,
+  "initial_pose_exact": true,
+  "all_post_action_poses_exact": true,
+  "all_rewards_match": true,
+  "all_rgb_arrays_exact": true,
+  "depth_exact_at_author_float32_storage_precision": true,
+  "raw_render_depth_exact": false,
+  "generation_reward": 0.9999999999999999,
+  "replay_reward": 0.9999999999999999,
+  "replay_done": true,
+  "saved_dataset_MiB": 49.226616859436035,
+  "files": [
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000000-0.pkl",
+      "bytes": 1764,
+      "sha256": "ca4d412c8caa68907a67390e9253686022505474191117d23742b8313db286e7"
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\color\\000000-0.pkl",
+      "bytes": 22118570,
+      "sha256": "00737fad522c25919b03c6995b1e06104bc76af1453b1f9ba7e1359ce9ea41f3"
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\depth\\000000-0.pkl",
+      "bytes": 29491368,
+      "sha256": "7294b253e2203ceeb3525a6a5fc02cc3f2c9ebf6779e57da8d3da4a18630bdfc"
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\info\\000000-0.pkl",
+      "bytes": 6059,
+      "sha256": "f77fbb7c664054452bea33bcf10ef7c188393115fb67a9abcd401279525eb5d5"
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\reward\\000000-0.pkl",
+      "bytes": 88,
+      "sha256": "0ebe1aeb87c8bc7cf778cb50a776089165e0353c19511e4500c310864a6201a0"
+    }
+  ],
+  "replay_steps": [
+    {
+      "index": 0,
+      "reward": 0.16666666666666666,
+      "done": false,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.16666666666666666,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    },
+    {
+      "index": 1,
+      "reward": 0.16666666666666666,
+      "done": false,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.16666666666666666,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    },
+    {
+      "index": 2,
+      "reward": 0.0,
+      "done": false,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.0,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    },
+    {
+      "index": 3,
+      "reward": 0.16666666666666669,
+      "done": false,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.16666666666666669,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    },
+    {
+      "index": 4,
+      "reward": 0.16666666666666663,
+      "done": false,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.16666666666666663,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    },
+    {
+      "index": 5,
+      "reward": 0.16666666666666663,
+      "done": false,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.16666666666666663,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    },
+    {
+      "index": 6,
+      "reward": 0.16666666666666663,
+      "done": true,
+      "empty_observation": false,
+      "grasp_checks": [
+        true
+      ],
+      "primitive_timeout": false,
+      "stored_next_reward": 0.16666666666666663,
+      "object_position_max_m_vs_recording": 0.0,
+      "object_rotation_max_deg_vs_recording": 0.0,
+      "color_exact_match": true,
+      "depth_exact_match": false,
+      "depth_matches_author_storage_precision": true
+    }
+  ],
+  "raw_generation_report_sha256": "4af1a8e5e70451c1d41ed8e0ae5f554713adaaa4b92bf7956fc0e17ac8d0baaf",
+  "raw_replay_report_sha256": "3e6f2da2a15d104c51e1f142046877fd1c6c54f809d28fbfcad22bb44849b6cd",
+  "limitation": "One seed and one task only. No learned model predictions; no test-set task success rate. Historical data reproduction gap remains unresolved."
+}

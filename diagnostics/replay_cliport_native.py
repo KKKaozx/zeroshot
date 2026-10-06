@@ -36,6 +36,8 @@ def main():
                         help="Restore recorded rigid-object initial poses after fixed-scene checks")
     parser.add_argument("--restore-before-step", type=int,
                         help="Diagnostic intervention: restore recorded rigid poses before one action")
+    parser.add_argument("--save-oracle-dir", type=Path,
+                        help="Save one fresh expert engineering episode using the author writer")
     args = parser.parse_args()
     if args.output_json.exists() or args.max_episodes < 1:
         raise ValueError("Choose a new report path and positive episode count")
@@ -44,6 +46,9 @@ def main():
     if args.restore_before_step is not None and (
             not args.restore_recorded_reset or args.restore_before_step < 0):
         raise ValueError("Single-step intervention requires restored recorded initial state")
+    if args.save_oracle_dir is not None and (
+            not args.oracle_smoke or args.max_episodes != 1 or args.save_oracle_dir.exists()):
+        raise ValueError("Expert export requires oracle mode, one episode and a new directory")
     author = args.author_root.resolve()
     # Skip ONLY the package facade that eagerly imports learned agents/models.
     # Environment, task, primitive, rendering and reward source remain unchanged.
@@ -89,11 +94,17 @@ def main():
             task = tasks.names[task_name]()
             task.mode = "train"
             env.set_task(task)
-            env.reset()
+            current_obs = env.reset()
+            current_reward = 0.
+            fresh_records = []
             position, rotation = pose_errors(episode["info"][0], env.info)
             language_match = episode["info"][0]["lang_goal"] == env.info["lang_goal"]
             row = dict(file=file.name, seed=seed, reset_position_max_m=position,
                        reset_rotation_max_deg=rotation, reset_language_matches=language_match,
+                       reset_color_exact_match=np.array_equal(current_obs["color"], episode["color"][0]),
+                       reset_depth_exact_match=np.array_equal(current_obs["depth"], episode["depth"][0]),
+                       reset_depth_matches_author_storage_precision=np.array_equal(
+                           np.float32(current_obs["depth"]), episode["depth"][0]),
                        steps=[], total_reward=0., success=False)
             row["reset_objects"] = {str(k): dict(stored_xyz=list(v[0]),
                 recreated_xyz=list(env.info[k][0])) for k, v in episode["info"][0].items()
@@ -155,11 +166,15 @@ def main():
                 if not args.oracle_smoke and not language_match:
                     row["stopped"] = "Language goal diverged; remaining stored actions not executed"
                     break
-                action = agent.act(None, env.info) if agent else episode["action"][step]
+                current_info = env.info
+                action = agent.act(current_obs, current_info) if agent else episode["action"][step]
                 if action is None:
                     row["stopped"] = "Oracle returned no action"
                     break
+                if args.save_oracle_dir is not None:
+                    fresh_records.append((current_obs, action, current_reward, current_info))
                 obs, reward, done, _ = env.step(action)
+                current_obs, current_reward = obs, reward
                 row["total_reward"] += float(reward)
                 row["steps"].append(dict(index=step, reward=float(reward), done=bool(done),
                     empty_observation=len(obs["color"]) == 0, **observation))
@@ -170,10 +185,27 @@ def main():
                     pos_error, rot_error = pose_errors(episode["info"][step+1], env.info)
                     row["steps"][-1]["object_position_max_m_vs_recording"] = pos_error
                     row["steps"][-1]["object_rotation_max_deg_vs_recording"] = rot_error
+                    row["steps"][-1]["color_exact_match"] = np.array_equal(obs["color"], episode["color"][step+1])
+                    row["steps"][-1]["depth_exact_match"] = np.array_equal(obs["depth"], episode["depth"][step+1])
+                    row["steps"][-1]["depth_matches_author_storage_precision"] = np.array_equal(
+                        np.float32(obs["depth"]), episode["depth"][step+1])
                 print(file.name, "step", step, "reward", round(float(reward), 4), flush=True)
                 if done:
                     break
             row["success"] = row["total_reward"] > .99
+            if args.save_oracle_dir is not None:
+                if not row["success"]:
+                    raise ValueError("Expert episode incomplete; do not export as successful demonstration")
+                from cliport.dataset import RavensDataset
+                fresh_records.append((current_obs, None, current_reward, env.info))
+                output = args.save_oracle_dir / "data" / (task_name + "-train")
+                writer = RavensDataset(str(output), {"dataset": {"images": True, "cache": False}},
+                                       n_demos=0, augment=False)
+                writer.add(seed, fresh_records)
+                saved_path = output / "action" / f"000000-{seed}.pkl"
+                checked = UnifiedRobotDataset.read_cliport_native_episode(saved_path)
+                row["exported_primitives"] = len(checked["executable_step_indices"])
+                row["exported_dataset_dir"] = str(args.save_oracle_dir)
         report["successful_episodes"] = sum(row["success"] for row in report["episodes"])
         report["executed_episodes"] = sum(bool(row["steps"]) for row in report["episodes"])
     except Exception as error:

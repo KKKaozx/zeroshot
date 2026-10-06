@@ -94,3 +94,5 @@ Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL
 固定作者提交后，仅检查训练 seed 0。作者专家在当前场景完成任务（奖励 1）；旧演示按 seed 重建时最大物体位置差 33.13 cm，未执行旧动作。恢复记录初始物体位姿后，前 6 个动作奖励一致，最后堆叠未完成（总奖励 5/6）。这是环境复现缺口，不涉及学习模型，也不能解释 Bridge 离线泛化失败。见 [CLIPORT_NATIVE_EXECUTION.md](CLIPORT_NATIVE_EXECUTION.md)。
 
 后续受控检查：原生抓取均成功且无 primitive 超时。只在最后动作前恢复记录位姿并清零物体速度，总奖励从 5/6 变为 1。说明累积物体状态参与该次回放失败，但干预成功不能计作无辅助成功率；没有确认具体依赖或数值根因。旧版本清单未找到，避免继续盲试版本。见 [干预证据](../reports/cliport_native_state_intervention.json)。
+
+固定当前版本生成的一条作者专家演示（训练模式 seed=0、7 个动作）已通过保存→原生读取→同 seed 无辅助连续回放：奖励 1，初始与逐步物体位姿相同，RGB 及作者 float32 保存精度的深度一致。新增数据 49.23 MiB。**此项没有学习模型，不是泛化实验，也不验证 OpenX 统一加载/动作转换。** [证据](../reports/cliport_fresh_expert_roundtrip.json)。

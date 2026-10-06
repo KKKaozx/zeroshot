@@ -75,3 +75,20 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 证据：[cliport_native_state_intervention.json](../reports/cliport_native_state_intervention.json)。本轮没有下载或更换依赖，没有训练模型。
 
 当前可以确认单场景中的原生动作读取、抓取和执行接口具有运行证据；不能把这个结论推广为统一 OXE 动作转换、学习模型泛化或全部任务可靠。旧版本追查先限定在可找到的备份；若缺少备份，后续采用固定当前版本新生成的作者专家训练场景做独立工程对照，旧演示保持历史记录。不要持续试版本或放宽奖励来追求旧回放的表面通过。
+
+## 固定当前版本的新演示读写与回放（同日）
+
+**类型：无学习模型的单演示工程检查，不是泛化实验，也没有训练集/测试集模型预测比较。** 作者脚本专家在训练模式 seed=0 场景生成 7 个动作，使用作者 `RavensDataset.add` 保存一条完整演示；项目原生读取器加载后，在同一固定软件组合下从 seed 重建场景、连续执行记录动作，没有恢复初始物体位姿或中间状态。
+
+结果：初始与各步物体位姿完全相同，7 个动作奖励与记录一致，最终奖励 1 且 `done=True`。8 个观测的 RGB 数组完全一致；深度按作者保存时的 `float32` 精度完全一致。原始渲染深度与保存深度并非逐位相同，属于作者显式精度转换，不能宣称所有原始浮点数无损保存。
+
+新增数据约 49.23 MiB，仅保留于 Git 忽略目录 `training_cache/cliport_fresh_control`，带文件哈希及工程用途说明，没有覆盖旧数据。证据：[cliport_fresh_expert_roundtrip.json](../reports/cliport_fresh_expert_roundtrip.json)。未下载新依赖或模型权重。
+
+生成命令要求新输出目录；专家未完成任务时不会将其保存为成功演示：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir D:/ntu_related/dissertation/dataset/cliport --output-json results/new-expert-export.json --oracle-smoke --save-oracle-dir training_cache/new-cliport-control
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/new-cliport-control --output-json results/new-unassisted-replay.json
+```
+
+这只确认一个当前版本场景中的原生读写/相机记录/执行链路。CLIP、Adapter、动作头未参与，不构成其有效性的证据；OpenX 统一加载器与 OXE→CLIPort 动作转换也没有被验证。旧版本差异未确定根因，不再盲试依赖；后续工作回到模型输入/动作合同。

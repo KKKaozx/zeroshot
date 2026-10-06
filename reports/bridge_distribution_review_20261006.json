@@ -1,0 +1,298 @@
+{
+  "scope": "Read-only ranges and predetermined image sheets; overlapping windows are not independent episodes; ranges do not establish cause.",
+  "dataset_identity": "44f67606c0258079b34b49cd4610ebdb8f34a89c4b00d5313c5a0f41aba98f82",
+  "trained": false,
+  "test_targets_used": false,
+  "all_371_prior_numeric_contract_passed": true,
+  "full_context_sha256": "ac2f8bda06a2b85259eab774fcbce84c0c35f8fd8b56441f17f5907042edb5fe",
+  "partitions": {
+    "train": {
+      "windows": 316,
+      "xyz_min_cm": [
+        -23.510879516601562,
+        -31.40411376953125,
+        -18.921443939208984
+      ],
+      "xyz_max_cm": [
+        17.947101593017578,
+        32.84484100341797,
+        12.882637023925781
+      ],
+      "xyz_mean_cm": [
+        -0.43255698680877686,
+        0.8830306529998779,
+        -0.08799827843904495
+      ],
+      "displacement_norm_quantiles_cm": [
+        0.0,
+        8.620874881744385,
+        23.386123657226562,
+        33.81010055541992
+      ],
+      "rotation_quantiles_deg": [
+        0.0,
+        10.285627365112305,
+        39.31794834136963,
+        85.23004913330078
+      ],
+      "target_actions_outside_train_axis_ranges": 0,
+      "target_action_count": 5056,
+      "input_position_min_m": [
+        0.2390984743833542,
+        -0.1979316622018814,
+        -0.02232123166322708
+      ],
+      "input_position_max_m": [
+        0.4597286581993103,
+        0.3113400340080261,
+        0.24723286926746368
+      ],
+      "input_positions_outside_train_axis_ranges": 0,
+      "nearest_train_input_position_gap_quantiles_cm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "measured_gripper_input_min": -0.3527749180793762,
+      "measured_gripper_input_max": 1.0016322135925293,
+      "open_target_rate": 0.07140031645569621,
+      "output_clip_lower_bound": {
+        "affected_actions": 20,
+        "affected_windows": 10,
+        "mean_error_lower_bound_cm": 0.0047284378670156,
+        "max_error_lower_bound_cm": 2.844841480255127,
+        "affected_window_indices": [
+          90,
+          193,
+          194,
+          196,
+          201,
+          202,
+          213,
+          235,
+          241,
+          386
+        ]
+      }
+    },
+    "validation": {
+      "windows": 55,
+      "xyz_min_cm": [
+        -17.241403579711914,
+        -27.08925437927246,
+        -19.88947868347168
+      ],
+      "xyz_max_cm": [
+        10.88443374633789,
+        27.915077209472656,
+        10.100508689880371
+      ],
+      "xyz_mean_cm": [
+        -0.2300538867712021,
+        2.5153419971466064,
+        -0.3922974765300751
+      ],
+      "displacement_norm_quantiles_cm": [
+        0.0,
+        8.07049036026001,
+        23.16475954055786,
+        28.972116470336914
+      ],
+      "rotation_quantiles_deg": [
+        0.0,
+        9.997854232788086,
+        35.618753623962384,
+        57.921531677246094
+      ],
+      "target_actions_outside_train_axis_ranges": 4,
+      "target_action_count": 880,
+      "input_position_min_m": [
+        0.28331083059310913,
+        -0.25757262110710144,
+        0.015775054693222046
+      ],
+      "input_position_max_m": [
+        0.4343425929546356,
+        0.11222973465919495,
+        0.2598433196544647
+      ],
+      "input_positions_outside_train_axis_ranges": 6,
+      "nearest_train_input_position_gap_quantiles_cm": [
+        0.6420976649513063,
+        2.2183338267047303,
+        6.57566887874836,
+        7.954940111759353
+      ],
+      "measured_gripper_input_min": -0.32559001445770264,
+      "measured_gripper_input_max": 1.0003063678741455,
+      "open_target_rate": 0.08068181818181819,
+      "output_clip_lower_bound": {
+        "affected_actions": 0,
+        "affected_windows": 0,
+        "mean_error_lower_bound_cm": 0.0,
+        "max_error_lower_bound_cm": 0.0,
+        "affected_window_indices": []
+      }
+    }
+  },
+  "validation_episodes": {
+    "bridge_data_v2-train.tfrecord-00003-of-01024::14": {
+      "windows": 21,
+      "xyz_min_cm": [
+        -15.563680648803711,
+        -27.08925437927246,
+        -8.1991605758667
+      ],
+      "xyz_max_cm": [
+        10.88443374633789,
+        27.915077209472656,
+        9.672350883483887
+      ],
+      "xyz_mean_cm": [
+        -0.8453407287597656,
+        2.69923734664917,
+        -0.29801592230796814
+      ],
+      "displacement_norm_quantiles_cm": [
+        0.0,
+        9.162681102752686,
+        23.638020515441895,
+        28.174510955810547
+      ],
+      "rotation_quantiles_deg": [
+        0.0,
+        9.530789852142334,
+        41.249667167663574,
+        57.921531677246094
+      ],
+      "target_actions_outside_train_axis_ranges": 0,
+      "target_action_count": 336,
+      "input_position_min_m": [
+        0.28331083059310913,
+        -0.25757262110710144,
+        0.07023672014474869
+      ],
+      "input_position_max_m": [
+        0.39292946457862854,
+        0.06318248808383942,
+        0.142026886343956
+      ],
+      "input_positions_outside_train_axis_ranges": 5,
+      "nearest_train_input_position_gap_quantiles_cm": [
+        1.2032417762687124,
+        3.1270572437588893,
+        7.68413228973107,
+        7.954940111759353
+      ],
+      "measured_gripper_input_min": -0.008697152137756348,
+      "measured_gripper_input_max": 1.0003063678741455,
+      "open_target_rate": 0.09523809523809523
+    },
+    "bridge_data_v2-train.tfrecord-00015-of-01024::31": {
+      "windows": 16,
+      "xyz_min_cm": [
+        -13.1007661819458,
+        -25.367908477783203,
+        -19.88947868347168
+      ],
+      "xyz_max_cm": [
+        6.922624588012695,
+        27.615238189697266,
+        10.100508689880371
+      ],
+      "xyz_mean_cm": [
+        0.8465596437454224,
+        2.1281819343566895,
+        -0.41335755586624146
+      ],
+      "displacement_norm_quantiles_cm": [
+        0.02335151471197605,
+        9.617644786834717,
+        25.273880004882812,
+        28.972116470336914
+      ],
+      "rotation_quantiles_deg": [
+        0.13705608248710632,
+        10.103544235229492,
+        25.609944343566895,
+        29.56170654296875
+      ],
+      "target_actions_outside_train_axis_ranges": 4,
+      "target_action_count": 256,
+      "input_position_min_m": [
+        0.29367947578430176,
+        -0.18300548195838928,
+        0.08984092622995377
+      ],
+      "input_position_max_m": [
+        0.4343425929546356,
+        0.08537270128726959,
+        0.2598433196544647
+      ],
+      "input_positions_outside_train_axis_ranges": 1,
+      "nearest_train_input_position_gap_quantiles_cm": [
+        1.3189565718539467,
+        2.5820761448413796,
+        6.301488075361919,
+        7.378980177023799
+      ],
+      "measured_gripper_input_min": -0.32559001445770264,
+      "measured_gripper_input_max": 1.0003063678741455,
+      "open_target_rate": 0.1171875
+    },
+    "bridge_data_v2-train.tfrecord-00019-of-01024::5": {
+      "windows": 18,
+      "xyz_min_cm": [
+        -17.241403579711914,
+        -15.979705810546875,
+        -7.767319202423096
+      ],
+      "xyz_max_cm": [
+        7.476470947265625,
+        19.70462417602539,
+        7.759407043457031
+      ],
+      "xyz_mean_cm": [
+        -0.46920931339263916,
+        2.6449432373046875,
+        -0.4835726320743561
+      ],
+      "displacement_norm_quantiles_cm": [
+        0.024323737248778343,
+        7.075528860092163,
+        15.431923913955682,
+        19.95941162109375
+      ],
+      "rotation_quantiles_deg": [
+        0.07912936061620712,
+        10.519092082977295,
+        36.379560470581055,
+        48.9468994140625
+      ],
+      "target_actions_outside_train_axis_ranges": 0,
+      "target_action_count": 288,
+      "input_position_min_m": [
+        0.2879011631011963,
+        -0.0920155942440033,
+        0.015775054693222046
+      ],
+      "input_position_max_m": [
+        0.3980894684791565,
+        0.11222973465919495,
+        0.09354397654533386
+      ],
+      "input_positions_outside_train_axis_ranges": 0,
+      "nearest_train_input_position_gap_quantiles_cm": [
+        0.6420976649513063,
+        1.4985286242512852,
+        2.2505431784535266,
+        2.4330628383633734
+      ],
+      "measured_gripper_input_min": -0.24223005771636963,
+      "measured_gripper_input_max": 0.9976447820663452,
+      "open_target_rate": 0.03125
+    }
+  },
+  "image_selection": "First, middle, last legal input window per episode; no ranking by error or target."
+}

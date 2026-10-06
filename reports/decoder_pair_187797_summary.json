@@ -1,0 +1,139 @@
+{
+  "job_id": 187797,
+  "source_file_sha256": "47048437141269c8ddef7895450294236afd9ca809faac2e54fcba2d07b9aaa3",
+  "protocol": {
+    "steps": 9875,
+    "effective_batch": 64,
+    "microbatch": 16,
+    "eval_batch": 16,
+    "initialization_seed": 42,
+    "training_noise_seed": 901,
+    "sample_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "walltime_seconds": 21600,
+    "train_windows": 316,
+    "validation_windows": 55,
+    "draws_per_training_window": 2000,
+    "learning_rate": 0.0003,
+    "optimizer": "Adam; betas=(0.9,0.999), eps=1e-8, weight_decay=0",
+    "gradient_clip_norm": 1.0,
+    "prediction_target": "sample/x0",
+    "diffusion_steps": 100,
+    "beta_schedule": "squaredcos_cap_v2",
+    "xyz_clip": 3.0,
+    "quaternion_component_clip": 1.0,
+    "context_and_gripper": "Frozen and byte-identical between arms",
+    "checkpoints": "Final update only; no development selection, no Adam-state copies",
+    "evaluation": "All train/validation windows; per-episode metrics; no test targets",
+    "training_seeds": 1,
+    "scope": "Paired decoder architecture diagnostic, not full Diffusion Policy reproduction or formal multi-seed benchmark",
+    "changed_from_prior_full_fit": "Both arms rerun with explicit paired CPU noise stream, gradient accumulation and eval batch 16; compare new arms, not old results as matched control"
+  },
+  "identical_training_inputs": true,
+  "identical_frozen_gripper": true,
+  "independent_training_runs": 1,
+  "arms": [
+    {
+      "arm": "project",
+      "parameters": 1602055,
+      "updates": 9875,
+      "min_draws": 2000,
+      "max_draws": 2000,
+      "frozen_parameters_unchanged": true,
+      "paired_inputs_sha256": "a069b050fba9afa78c98befc24c42e16956aecc03fe70b8d96c01d3a4f0040c2",
+      "mean_over_sampling_seeds": {
+        "validation": {
+          "position_error_cm": 10.4222884912086,
+          "rotation_error_deg": 17.010878686657325,
+          "gripper_accuracy": 0.9102272727272728,
+          "balanced_accuracy": 0.674933407615035
+        },
+        "train": {
+          "position_error_cm": 0.2611139002134774,
+          "rotation_error_deg": 0.9786018125258087,
+          "gripper_accuracy": 1.0,
+          "balanced_accuracy": 1.0
+        }
+      },
+      "validation_by_episode_seed_1101": [
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::14",
+          "windows": 21,
+          "position_error_cm": 11.09966853622765,
+          "zero_motion_position_error_cm": 10.154419259894068,
+          "rotation_error_deg": 15.565402723026446,
+          "identity_rotation_error_deg": 12.682852589740438
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::31",
+          "windows": 16,
+          "position_error_cm": 12.770287618806023,
+          "zero_motion_position_error_cm": 11.230821214298283,
+          "rotation_error_deg": 15.228665800353443,
+          "identity_rotation_error_deg": 11.87090963593846
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::5",
+          "windows": 18,
+          "position_error_cm": 7.5448814211982995,
+          "zero_motion_position_error_cm": 7.528840420488539,
+          "rotation_error_deg": 20.281720568038494,
+          "identity_rotation_error_deg": 14.196041911415
+        }
+      ]
+    },
+    {
+      "arm": "author",
+      "parameters": 277105287,
+      "updates": 9875,
+      "min_draws": 2000,
+      "max_draws": 2000,
+      "frozen_parameters_unchanged": true,
+      "paired_inputs_sha256": "a069b050fba9afa78c98befc24c42e16956aecc03fe70b8d96c01d3a4f0040c2",
+      "mean_over_sampling_seeds": {
+        "validation": {
+          "position_error_cm": 10.77408769124203,
+          "rotation_error_deg": 14.632358510803963,
+          "gripper_accuracy": 0.9060606060606061,
+          "balanced_accuracy": 0.6726672353859456
+        },
+        "train": {
+          "position_error_cm": 4.685351526992538,
+          "rotation_error_deg": 12.838933575781141,
+          "gripper_accuracy": 0.9966376582278481,
+          "balanced_accuracy": 0.9879612011363536
+        }
+      },
+      "validation_by_episode_seed_1101": [
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::14",
+          "windows": 21,
+          "position_error_cm": 11.799770149137617,
+          "zero_motion_position_error_cm": 10.154419259894068,
+          "rotation_error_deg": 14.450762194386865,
+          "identity_rotation_error_deg": 12.682852589740438
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::31",
+          "windows": 16,
+          "position_error_cm": 13.329890027688567,
+          "zero_motion_position_error_cm": 11.230821214298283,
+          "rotation_error_deg": 14.612701490178026,
+          "identity_rotation_error_deg": 11.87090963593846
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::5",
+          "windows": 18,
+          "position_error_cm": 7.37420570410414,
+          "zero_motion_position_error_cm": 7.528840420488539,
+          "rotation_error_deg": 14.818867934639137,
+          "identity_rotation_error_deg": 14.196041911415
+        }
+      ]
+    }
+  ],
+  "scope": "Matched decoder-architecture diagnostic; not full author-policy reproduction or zero-shot success."
+}

@@ -10,6 +10,7 @@ zero-shot task-success result is claimed.**
 ## Start here
 
 - [Current progress and module evidence (中文)](docs/PROGRESS.md)
+- [Minimal execution protocol and readiness checks (中文)](docs/MINIMAL_EXECUTION_PROTOCOL.md)
 - [Architecture, action contract, and code map](docs/ARCHITECTURE.md)
 - [Comparison with the original Diffusion Policy implementation (中文)](docs/DIFFUSION_POLICY_COMPARISON.md)
 - [Executed DDPM/U-Net numerical and gradient comparison (中文)](docs/DDPM_RUNTIME_COMPARISON.md)
@@ -93,10 +94,12 @@ be treated as a portable, complete reproduction package.
 
 ## Next milestone
 
-Document the formal dataset/action contracts and evaluation splits, then compare
-the existing implementation with published robot diffusion-policy code. Agree on
-the baseline and evaluation scope before additional training. The current single-
-instruction diagnostic cannot establish language, task, or cross-robot transfer.
+Complete the remaining observation, gripper-state, timing and execution contracts
+in the [minimal protocol](docs/MINIMAL_EXECUTION_PROTOCOL.md), then validate a bounded
+fixed-period contact control before model integration. Source and numerical
+comparisons with published diffusion-policy code are documented above; they did
+not resolve held-out Bridge generalization. Formal dataset splits and fair baseline
+protocols remain required before additional training or benchmark claims.
 
 LIBERO/CLIPort rollouts, four augmentation conditions, independently trained seeds,
 RT-1/CLIPort comparisons, adapter-depth ablations, and cross-embodiment results

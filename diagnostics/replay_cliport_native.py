@@ -34,11 +34,16 @@ def main():
                         help="Execute fresh author oracle actions, not recorded actions")
     parser.add_argument("--restore-recorded-reset", action="store_true",
                         help="Restore recorded rigid-object initial poses after fixed-scene checks")
+    parser.add_argument("--restore-before-step", type=int,
+                        help="Diagnostic intervention: restore recorded rigid poses before one action")
     args = parser.parse_args()
     if args.output_json.exists() or args.max_episodes < 1:
         raise ValueError("Choose a new report path and positive episode count")
     if args.oracle_smoke and args.restore_recorded_reset:
         raise ValueError("Oracle smoke and recorded state replay are separate checks")
+    if args.restore_before_step is not None and (
+            not args.restore_recorded_reset or args.restore_before_step < 0):
+        raise ValueError("Single-step intervention requires restored recorded initial state")
     author = args.author_root.resolve()
     # Skip ONLY the package facade that eagerly imports learned agents/models.
     # Environment, task, primitive, rendering and reward source remain unchanged.
@@ -65,7 +70,8 @@ def main():
                   package_facade_skipped=True, author_source_hashes=source_hashes,
                   action_source="author_oracle" if args.oracle_smoke else "stored_training_primitives",
                   restore_recorded_reset=args.restore_recorded_reset,
-                  primitive_timeout_directly_observable=False,
+                  restore_before_step=args.restore_before_step,
+                  primitive_return_observed=True, grasp_return_observed=True,
                   versions={n: importlib.metadata.version(n) for n in
                             ("numpy", "pybullet", "gym", "torch", "opencv-python")}, episodes=[])
     env = Environment(str(author / "cliport/environments/assets"), disp=False, hz=480)
@@ -75,6 +81,9 @@ def main():
             episode = UnifiedRobotDataset.read_cliport_native_episode(file)
             if episode["action"][-1] is not None:
                 raise ValueError("Replay requires the author's terminal observation record")
+            if (args.restore_before_step is not None
+                    and args.restore_before_step not in episode["executable_step_indices"]):
+                raise ValueError("Requested intervention step is outside the recorded actions")
             np.random.seed(seed)
             random.seed(seed)
             task = tasks.names[task_name]()
@@ -112,7 +121,36 @@ def main():
                 continue
             agent = task.oracle(env) if args.oracle_smoke else None
             steps = range(task.max_steps) if args.oracle_smoke else episode["executable_step_indices"]
+            native_primitive, native_grasp = task.primitive, env.ee.check_grasp
+            observation = {}
+
+            def observe_primitive(*values):
+                result = native_primitive(*values)
+                observation["primitive_timeout"] = bool(result)
+                return result
+
+            def observe_grasp():
+                result = native_grasp()
+                observation["grasp_checks"].append(bool(result))
+                return result
+
+            # Observers preserve arguments and native return values; no controller changes.
+            task.primitive, env.ee.check_grasp = observe_primitive, observe_grasp
             for step in steps:
+                observation.clear()
+                observation["grasp_checks"] = []
+                intervention = None
+                if step == args.restore_before_step:
+                    saved = episode["info"][step]
+                    before_pos, before_rot = pose_errors(saved, env.info)
+                    for key in env.obj_ids["rigid"]:
+                        p.resetBasePositionAndOrientation(key, saved[key][0], saved[key][1])
+                        p.resetBaseVelocity(key, [0, 0, 0], [0, 0, 0])
+                    p.performCollisionDetection()
+                    after_pos, after_rot = pose_errors(saved, env.info)
+                    intervention = dict(before_position_max_m=before_pos,
+                        before_rotation_max_deg=before_rot, after_position_max_m=after_pos,
+                        after_rotation_max_deg=after_rot, velocities_set_to_zero=True)
                 language_match = args.oracle_smoke or episode["info"][step]["lang_goal"] == env.info["lang_goal"]
                 if not args.oracle_smoke and not language_match:
                     row["stopped"] = "Language goal diverged; remaining stored actions not executed"
@@ -124,7 +162,9 @@ def main():
                 obs, reward, done, _ = env.step(action)
                 row["total_reward"] += float(reward)
                 row["steps"].append(dict(index=step, reward=float(reward), done=bool(done),
-                    empty_observation=len(obs["color"]) == 0))
+                    empty_observation=len(obs["color"]) == 0, **observation))
+                if intervention is not None:
+                    row["steps"][-1]["state_intervention"] = intervention
                 if not args.oracle_smoke:
                     row["steps"][-1]["stored_next_reward"] = float(episode["reward"][step+1])
                     pos_error, rot_error = pose_errors(episode["info"][step+1], env.info)

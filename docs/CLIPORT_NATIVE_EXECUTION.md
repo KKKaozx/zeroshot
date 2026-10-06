@@ -15,7 +15,7 @@
 
 前四个执行后物体位置差约 0.0003 mm，第五个约 0.1 mm，第六个约 2.8 mm；最后约 12.7 mm、26.2°。最后一步是第一次奖励与旧记录不一致。尚未确定具体原因；源码、依赖、渲染及接触仿真差异仍需要区分，不能凭此确认某一项为根因。
 
-证据：[cliport_native_execution_check.json](../reports/cliport_native_execution_check.json)。作者原始 `env.step` 不直接暴露 primitive 超时标志；脚本仅记录空观测，不能将它解释为可靠超时检测。
+证据：[cliport_native_execution_check.json](../reports/cliport_native_execution_check.json)。作者原始 `env.step` 不直接暴露 primitive 超时标志；初轮只记录空观测。后续检查通过观察包装器记录原生 primitive 返回值与 `check_grasp` 返回值，保持参数及返回值不变，得到可靠的该次调用日志；没有修改作者函数体。
 
 ## 使用的环境与限制
 
@@ -52,3 +52,26 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 当前已确认的是原生读取和一个当前场景的作者专家执行链路。下一步先核对旧演示生成时的作者提交和依赖记录；如果无法恢复旧环境，应把固定当前版本的专家场景作为独立工程对照，并保留旧回放失败记录。不要通过改奖励或放宽成功标准让旧回放“通过”。
 
 这仍不等于 Bridge 相对连续动作能够转换成 CLIPort 世界坐标拾取/放置，也不说明学习模型已泛化。正式 OXE→CLIPort 的观测/动作合同尚待解决，不应接入失败的 Bridge 模型或直接开始完整训练。
+
+## 最后一步的受控检查（同日后续）
+
+没有在检查到的项目、数据及集群产物目录找到旧 Git 提交或完整依赖清单。`.hydra/hydra.yaml` 留下 Hydra 1.3.6 和旧工程路径；`demos.log` 为零字节，旧工程路径不存在。当前 Conda 环境元数据不能证明旧生成环境版本。上述搜索不等于全盘穷尽；若存在备份，可继续核对。
+
+| 条件 | 最后一步抓取 | 原生 primitive 超时 | 最后一步奖励 | 总奖励 |
+| --- | --- | --- | --- | --- |
+| 恢复初始场景后连续执行旧记录动作 | 成功 | 否 | 0 | 5/6 |
+| 前 6 个动作相同，仅在最后动作前恢复记录物体位姿并清零速度 | 成功 | 否 | 1/6 | 1 |
+
+干预前物体位置最大偏差 2.814 mm、旋转最大偏差 2.298°；干预后均为零。两次都沿用同一个最后动作、作者任务目标、控制器和奖励。普通回放 7 个动作均记录到抓取成功且无 primitive 超时。
+
+这支持“累积物体状态偏差参与了最后一次放置失败”，不是仅凭日志猜测。干预同时恢复位置、姿态并清零速度，不能把结果归因于某一种状态，也没有证明具体的依赖或数值根因。成功的干预结果不算无辅助任务成功率；完整连续旧演示回放仍未通过。
+
+检查命令（仅工程诊断）：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir D:/ntu_related/dissertation/dataset/cliport --output-json results/new-intervention.json --restore-recorded-reset --restore-before-step 6
+```
+
+证据：[cliport_native_state_intervention.json](../reports/cliport_native_state_intervention.json)。本轮没有下载或更换依赖，没有训练模型。
+
+当前可以确认单场景中的原生动作读取、抓取和执行接口具有运行证据；不能把这个结论推广为统一 OXE 动作转换、学习模型泛化或全部任务可靠。旧版本追查先限定在可找到的备份；若缺少备份，后续采用固定当前版本新生成的作者专家训练场景做独立工程对照，旧演示保持历史记录。不要持续试版本或放宽奖励来追求旧回放的表面通过。

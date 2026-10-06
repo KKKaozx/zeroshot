@@ -74,12 +74,14 @@ def main():
                         help='Hold requested state; retry unactivated close once per physics tick')
     parser.add_argument('--exact-release', action='store_true',
                         help='Timing ablation: retain recorded release ticks while shifting close')
+    parser.add_argument('--observe-suction-objects', action='store_true',
+                        help='Read-only contact/constraint/rigid-pose observations for timing controls')
     parser.add_argument("--trace-ablation", choices=("relative-only", "absolute-subdivided"),
                         help="Engineering only: isolate conversion or waypoint subdivision")
     parser.add_argument("--fixed-period-grasp-control", action="store_true",
                         help="16-slot author-target pickup/hold/release fixture; not task evaluation")
     args = parser.parse_args()
-    if (args.hold_suction or args.exact_release) and not args.suction_clock:
+    if (args.hold_suction or args.exact_release or args.observe_suction_objects) and not args.suction_clock:
         raise ValueError('Held suction/release ablation requires a suction clock')
     if bool(args.suction_clock) != bool(args.suction_timing) or (args.suction_clock and (
             not args.absolute_trace_control or args.capture_reached_trace or args.max_episodes != 1
@@ -298,6 +300,28 @@ def main():
                 requested_open = True
                 previous_state = (bool(env.ee.activated), bool(original_grasp_check()))
 
+                def suction_object_snapshot():
+                    constraint = env.ee.contact_constraint
+                    attached_id = None if constraint is None else int(p.getConstraintInfo(constraint)[2])
+                    contacts = p.getContactPoints(bodyA=env.ee.body, linkIndexA=0)
+                    return dict(attached_object_id=attached_id,
+                        goal_object_ids=[int(o[0]) for o in task.goals[0][0]] if task.goals else [],
+                        suction_contacts=[dict(object_id=int(c[2]), object_link=int(c[4]),
+                            distance_m=float(c[8]), normal_force=float(c[9])) for c in contacts],
+                        rigid_poses={str(k): [list(v) for v in p.getBasePositionAndOrientation(k)]
+                                     for k in env.obj_ids['rigid']})
+
+                def apply_timing_command(open_command):
+                    if args.observe_suction_objects and not open_command and not env.ee.activated:
+                        snapshot = suction_object_snapshot()
+                        if snapshot['suction_contacts']:
+                            timing_log.setdefault('contact_activation_attempts', []).append(
+                                dict(tick=timing_tick, before=snapshot))
+                    if args.hold_suction:
+                        held_controller.command_suction(open_command)
+                    else:
+                        (env.ee.release if open_command else env.ee.activate)()
+
                 def observe_timing_state():
                     nonlocal previous_state
                     state = (bool(env.ee.activated), bool(original_grasp_check()))
@@ -305,6 +329,8 @@ def main():
                         tcp_now = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
                         timing_log['state_events'].append(dict(tick=timing_tick,
                             activated=state[0], attached=state[1], tcp_position=list(tcp_now[4])))
+                        if args.observe_suction_objects:
+                            timing_log['state_events'][-1]['objects'] = suction_object_snapshot()
                         previous_state = state
 
                 def dispatch_suction():
@@ -313,20 +339,21 @@ def main():
                     while timing_next < len(schedule) and schedule[timing_next]['scheduled_tick'] <= timing_tick:
                         event = schedule[timing_next]
                         requested_open = event['open']
-                        if args.hold_suction:
-                            held_controller.command_suction(requested_open)
-                        else:
-                            (env.ee.release if event['open'] else env.ee.activate)()
+                        before_objects = suction_object_snapshot() if args.observe_suction_objects else None
+                        apply_timing_command(requested_open)
                         tcp_now = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
                         timing_log['executed'].append(dict(**event, actual_tick=timing_tick,
                             activated=bool(env.ee.activated), attached=bool(original_grasp_check()),
                             tcp_position=list(tcp_now[4])))
+                        if args.observe_suction_objects:
+                            timing_log['executed'][-1]['objects_before'] = before_objects
+                            timing_log['executed'][-1]['objects_after'] = suction_object_snapshot()
                         timing_next += 1
                         dispatched = True
                         observe_timing_state()
                     if args.hold_suction and not dispatched and not requested_open and not env.ee.activated:
                         timing_log['retry_attempts'] += 1
-                        held_controller.command_suction(False)
+                        apply_timing_command(False)
                     observe_timing_state()
 
                 def timed_simulation_step():
@@ -484,6 +511,7 @@ def main():
                     row["stopped"] = "Language goal diverged; remaining stored actions not executed"
                     break
                 current_info = env.info
+                objects_before_primitive = suction_object_snapshot() if args.observe_suction_objects else None
                 action = agent.act(current_obs, current_info) if agent else episode["action"][step]
                 if action is None:
                     row["stopped"] = "Oracle returned no action"
@@ -589,6 +617,9 @@ def main():
                 row["total_reward"] += float(reward)
                 row["steps"].append(dict(index=step, reward=float(reward), done=bool(done),
                     empty_observation=len(obs["color"]) == 0, **observation))
+                if args.observe_suction_objects:
+                    row['steps'][-1]['objects_before_primitive'] = objects_before_primitive
+                    row['steps'][-1]['objects_after_primitive'] = suction_object_snapshot()
                 if intervention is not None:
                     row["steps"][-1]["state_intervention"] = intervention
                 if adapter_control is not None:

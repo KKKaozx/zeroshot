@@ -1,0 +1,163 @@
+{
+  "device": "cpu",
+  "dtype": "float32",
+  "torch": "2.11.0+cu128",
+  "diffusers": "0.11.1",
+  "author_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "isolated_dependencies": {
+    "transformers": "4.25.1",
+    "tokenizers": "0.13.3",
+    "huggingface-hub": "0.11.1",
+    "einops": "0.8.2"
+  },
+  "seed": 20261006,
+  "date": "2026-10-06",
+  "batch": 2,
+  "horizon": 16,
+  "action_dim": 7,
+  "context_dim": 1024,
+  "forward": {
+    "beta_max_abs_error": 0.0,
+    "noise_addition_max_abs_error": 0.0,
+    "cases": [
+      {
+        "prediction_type": "epsilon",
+        "timesteps_compared": 100,
+        "noise_addition_max_abs_error": 0.0,
+        "training_target_exact": true,
+        "passed": true
+      },
+      {
+        "prediction_type": "sample",
+        "timesteps_compared": 100,
+        "noise_addition_max_abs_error": 0.0,
+        "training_target_exact": true,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "reverse_cases": [
+    {
+      "prediction_type": "epsilon",
+      "clipping": false,
+      "project_xyz_limit": 3,
+      "steps_compared": 100,
+      "native_max_abs_error": 9.417533874511719e-06,
+      "aligned_range_max_abs_error": 9.417533874511719e-06,
+      "tolerance_abs": 0.0002,
+      "passed": true,
+      "native_difference_expected": false
+    },
+    {
+      "prediction_type": "epsilon",
+      "clipping": true,
+      "project_xyz_limit": 1,
+      "steps_compared": 100,
+      "native_max_abs_error": 2.384185791015625e-07,
+      "aligned_range_max_abs_error": 2.384185791015625e-07,
+      "tolerance_abs": 0.0002,
+      "passed": true,
+      "native_difference_expected": false
+    },
+    {
+      "prediction_type": "epsilon",
+      "clipping": true,
+      "project_xyz_limit": 3,
+      "steps_compared": 100,
+      "native_max_abs_error": 1.0000139474868774,
+      "aligned_range_max_abs_error": 2.384185791015625e-07,
+      "tolerance_abs": 0.0002,
+      "passed": true,
+      "native_difference_expected": true
+    },
+    {
+      "prediction_type": "sample",
+      "clipping": false,
+      "project_xyz_limit": 3,
+      "steps_compared": 100,
+      "native_max_abs_error": 9.417533874511719e-06,
+      "aligned_range_max_abs_error": 9.417533874511719e-06,
+      "tolerance_abs": 0.0002,
+      "passed": true,
+      "native_difference_expected": false
+    },
+    {
+      "prediction_type": "sample",
+      "clipping": true,
+      "project_xyz_limit": 1,
+      "steps_compared": 100,
+      "native_max_abs_error": 2.9206275939941406e-06,
+      "aligned_range_max_abs_error": 2.9206275939941406e-06,
+      "tolerance_abs": 0.0002,
+      "passed": true,
+      "native_difference_expected": false
+    },
+    {
+      "prediction_type": "sample",
+      "clipping": true,
+      "project_xyz_limit": 3,
+      "steps_compared": 100,
+      "native_max_abs_error": 1.0000139474868774,
+      "aligned_range_max_abs_error": 2.9206275939941406e-06,
+      "tolerance_abs": 0.0002,
+      "passed": true,
+      "native_difference_expected": true
+    }
+  ],
+  "networks": [
+    {
+      "name": "project",
+      "parameters": 1602055,
+      "input_shape": [
+        2,
+        16,
+        7
+      ],
+      "output_shape": [
+        2,
+        16,
+        7
+      ],
+      "condition_change_max_abs": 0.03718680143356323,
+      "timestep_change_max_abs": 0.18672609329223633,
+      "context_gradient_l1": 0.3324567377567291,
+      "input_gradient_l1": 0.21481144428253174,
+      "all_trainable_parameter_gradients_present_and_finite": true,
+      "weights_unchanged": true,
+      "seconds": 0.028308699998888187,
+      "passed": true
+    },
+    {
+      "name": "author",
+      "parameters": 277105287,
+      "input_shape": [
+        2,
+        16,
+        7
+      ],
+      "output_shape": [
+        2,
+        16,
+        7
+      ],
+      "condition_change_max_abs": 0.10203993320465088,
+      "timestep_change_max_abs": 0.10444900393486023,
+      "context_gradient_l1": 1.5117876529693604,
+      "input_gradient_l1": 0.0616767443716526,
+      "all_trainable_parameter_gradients_present_and_finite": true,
+      "weights_unchanged": true,
+      "seconds": 1.5213890000013635,
+      "passed": true
+    }
+  ],
+  "optimizer_steps": 0,
+  "passed": true,
+  "source_hashes": {
+    "D:\\ntu_related\\dissertation\\Zero_shot\\code\\models.py": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+    "D:\\ntu_related\\dissertation\\Zero_shot\\code\\diffusion_decoder.py": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+    "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\references\\ddpm-runtime-env\\lib\\site-packages\\diffusers\\schedulers\\scheduling_ddpm.py": "238d19cbe8f105106121f67abfca507bb208a72b14c6595daba4829bb2001ca5",
+    "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\references\\diffusion_policy\\diffusion_policy\\model\\diffusion\\conditional_unet1d.py": "1e020288d07f187a13b1e7a23324540fcf1db307c200e43a177e72d9208d1c33"
+  },
+  "scope": "Executed production diffusion_loss/sample and unchanged author U-Net/DDPMScheduler. Synthetic inputs and oracle denoiser test arithmetic; random U-Net weights test connectivity only. No learned performance or GPU check."
+}

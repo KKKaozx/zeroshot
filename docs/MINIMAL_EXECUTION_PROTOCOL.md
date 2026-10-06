@@ -77,3 +77,22 @@
 ```powershell
 training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --replay-reached-trace training_cache/cliport_fresh_control/reached_clock_trace.json --reached-contact-prefix --output-json results/new-front-contact-prefix.json
 ```
+
+## 未来到达位姿与原生动作的对应核查（2026-10-07）
+
+对照固定作者提交 bc60a35b701a12021c8c95e9d8601274d3acd928 的 [BridgeDataset._process_actions](https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/jaxrl_m/data/bridge_dataset.py)。本地之前保存的源文件 SHA256 与历史报告一致，网页也核对了固定版本；没有将 main 分支当作已运行版本。作者在 relabel_actions=True 时同样使用实测状态生成标签，不能把“使用到达状态”直接判断为错误。
+
+| 表示 | 位置与旋转 | 夹爪与时间 |
+| --- | --- | --- |
+| RLDS 原始 action[t] | 记录的 6 维运动命令，不能当成绝对目标；原控制器单位/缩放仍需核对 | 第 7 维记录命令；逐步 dt 未标定 |
+| 作者重标记 | state[t+1,:6]−state[t,:6]，其中旋转是 Euler 分量差 | 同一步 action[t,6] 反向扫描二值化；归一化由训练统计指定 |
+| 当前项目标签 | 初始工具系中未来 state[t+k] 的位置及相对四元数，位置除以 0.1m；16 行共享 state[t] 锚点 | 第 k 行配 action[t+k−1,6]；当前输入另用实测开度 |
+| 当前 UR5 工程执行 | 将目标变为 tool_tip link 世界位姿，再变换到原生 IK inertial/COM 目标；固定时间追踪 | 吸盘请求区间起点生效、关闭保持重试；不是原 Bridge 机器人控制器 |
+
+第一行的几何关系可以对应：作者位置差经当前工具旋转逆变换并除以 0.1m，得到项目局部位置；作者 Euler 差需先与当前 Euler 相加恢复下一姿态，再转四元数计算相对旋转，不能把三个 Euler 差直接当四元数。第 k 行由当前状态到未来状态，作者逐步位置差需要逐段相加后再变换；四元数需要组合，不能简单加旋转分量。这个关系恢复的是观测目标，不恢复采样点之间的运动或接触事件。
+
+只读取固定划分中训练分区、现有本地缓存可用的演示，按 record_index/分片名选择，不依据误差或抓取结果：分片 00002、记录 22、98 步。未读取留出测试目标。实际执行 1,432 对未来位姿的项目编码/解码检查，位置最大误差 3.72994×10⁻⁸m、考虑 q/−q 等价的四元数向量误差最大 1.23118×10⁻⁷。原始六维动作与状态差数值不相同；未标定原动作缩放/坐标，不能把这个差解释成数据错误或控制滞后。该记录没有查到 timestamp/time_step/duration/frequency 字段，也不能据此推广所有记录。作者表达式以 NumPy 在这些原始字段上计算，没有重跑完整 TensorFlow/JAX 作者加载器。
+
+**本轮结论：现行未来位姿标签有一致的几何含义，但“标签可还原”不等于“控制过程等价”。** 不修改现有标签或权重；此前 CLIPort 接触遗漏不能据此推断 Bridge 数据也丢失抓取、未来位姿监督无效，或 DDPM/CLIP 是根因。当前任务仍是离线到达位姿预测，尚不是验收后的机器人命令策略。
+
+下一项应核对作者实际部署的动作消费端：重标记状态差如何反归一化、以哪个参考系/单位发送、控制周期及夹爪输入是什么。先得到“学习目标→原生命令”的依据，再决定保留当前未来位姿目标并配套控制器，还是建立独立版本的原生命令目标。两条路线不能通过改名字或把原始 action 填入 8 维数组完成转换；未形成依据前，不改数据、不重训、不再调这条 CLIPort 回放。证据：[训练记录目标核查](../reports/bridge_target_execution_audit.json)。

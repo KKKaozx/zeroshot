@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-07",
+  "model_used": false,
+  "trained": false,
+  "test_targets_used": false,
+  "scope": "One predeclared train episode available in existing cache, selected by record index then shard; author expression evaluated in NumPy, full TF/JAX reader not rerun",
+  "selected_episode": {
+    "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+    "record_index": 22,
+    "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_folding_table_white_tray/sweep_granular/07/train/out.npy",
+    "episode_id": 40,
+    "steps": 98,
+    "partition": "train",
+    "instruction": "sweep into pile"
+  },
+  "steps": 98,
+  "record_payload_sha256": "2105e71116f0e30e1163d76b722616fdc07c6797dbb7e85806a28f8b6e4f9e24",
+  "source_sha256": {
+    "results\\bridge_official_comparison_v1\\official_reference\\jaxrl_m\\data\\bridge_dataset.py": "289012216f59a1cbfeedb3507fbfc80badad8d8edd53193287ff4f2dcf446d4f",
+    "code\\dataset.py": "8004cb44f23505429d4da1592993c1dae0b22c60b6a3658344821d6402db1a20",
+    "configs\\bridge_full_x0\\episode_split.json": "216ce6c2a73aa13794d457880f38586aef8e5379f6666a060af769a2e5aa0700"
+  },
+  "author_source_url": "https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/jaxrl_m/data/bridge_dataset.py",
+  "target_pairs_checked": 1432,
+  "roundtrip_position_max_m": 3.729943998109775e-08,
+  "roundtrip_quaternion_sign_invariant_l2_max": 1.2311788566421455e-07,
+  "raw_motion_equals_reached_delta": false,
+  "raw_vs_reached_component_abs_mean": [
+    0.0037177957128733397,
+    0.0065560173243284225,
+    0.00551153440028429,
+    0.012212395668029785,
+    0.014950552955269814,
+    0.01774188131093979
+  ],
+  "raw_vs_reached_comparison_limit": "Raw actuator scaling/frame not calibrated; difference is not evidence of a loader error or control lag",
+  "time_fields": [],
+  "observations_vs_commands_equivalent_for_execution": false,
+  "labels_modified": false,
+  "first_pair": {
+    "current_state": [
+      0.38673606514930725,
+      0.1039072722196579,
+      0.09421329200267792,
+      0.08991054445505142,
+      -0.2474495768547058,
+      0.01849769428372383,
+      0.9981546401977539
+    ],
+    "next_state": [
+      0.3865070044994354,
+      0.10385429114103317,
+      0.0941508486866951,
+      0.0891844779253006,
+      -0.246089905500412,
+      0.02021186053752899,
+      0.9981546401977539
+    ],
+    "raw_action": [
+      -1.6837781169343202e-10,
+      7.761363773894914e-11,
+      6.18197826263156e-10,
+      1.1301663107587956e-06,
+      -3.2381973369410844e-07,
+      -6.57459438002661e-08,
+      1.0
+    ],
+    "author_relabel_six": [
+      -0.00022906064987182617,
+      -5.298107862472534e-05,
+      -6.24433159828186e-05,
+      -0.000726066529750824,
+      0.0013596713542938232,
+      0.0017141662538051605
+    ],
+    "project_first_target": [
+      -0.002382900333032012,
+      -0.0004891601856797934,
+      1.8630953491083346e-06,
+      -0.00015367509331554174,
+      0.0007514324970543385,
+      0.0007669935002923012,
+      0.999999463558197,
+      1.0
+    ]
+  }
+}

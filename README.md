@@ -1,7 +1,7 @@
 # Zero-shot robotic manipulation with vision-language models
 
 Dissertation implementation using a frozen CLIP backbone, cross-attention adapter,
-and conditional diffusion action decoder. Last progress update: **2026-10-06**.
+and conditional diffusion action decoder. Last progress update: **2026-10-07**.
 
 **Current status: training-set action fitting is supported by diagnostic results;
 generalization to held-out demonstrations has not passed. No benchmark rollout or

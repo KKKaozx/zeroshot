@@ -10,6 +10,7 @@ zero-shot task-success result is claimed.**
 ## Start here
 
 - [Current progress and module evidence (中文)](docs/PROGRESS.md)
+- [Next research step: minimal official Octo reproduction (中文)](docs/OCTO_MINIMAL_REPRODUCTION.md)
 - [Minimal execution protocol and readiness checks (中文)](docs/MINIMAL_EXECUTION_PROTOCOL.md)
 - [Architecture, action contract, and code map](docs/ARCHITECTURE.md)
 - [Comparison with the original Diffusion Policy implementation (中文)](docs/DIFFUSION_POLICY_COMPARISON.md)

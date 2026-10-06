@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-07",
+  "stage": "cluster_preflight_only",
+  "purpose": "Official pretrained inference positive control; not independent generalization or full paper reproduction",
+  "code_repository": "https://github.com/octo-models/octo",
+  "code_commit": "241fb3514b7c40957a86d869fecb7c7fc353f540",
+  "model_repository": "rail-berkeley/octo-small-1.5",
+  "model_revision": "dc9aa3019f764726c770814b27e4ab0fc6e32a58",
+  "model_checkpoint_bytes": 546696551,
+  "official_example": "examples/01_inference_pretrained.ipynb",
+  "inference_case": "First official notebook case: Bridge example image, pick up the fork, history length 1 with valid mask, seed 0, bridge_dataset action statistics",
+  "expected_action_shape": [1, 4, 7],
+  "official_dependency_pins": {
+    "python": "3.10",
+    "numpy": "1.24.3",
+    "jax": "0.4.20",
+    "ml_dtypes": "0.2.0",
+    "flax": "0.7.5",
+    "optax": "0.1.5",
+    "chex": "0.1.85",
+    "tensorflow": "2.15.0"
+  },
+  "environment_policy": "New isolated project environment after preflight; preserve zeroshot, bridge-reader and bridge-diffusion environments",
+  "project_quota_gib_planning_limit": 200,
+  "minimum_project_headroom_gib": 15,
+  "local_artifact_limit_mib": 100,
+  "preflight_installs_packages": false,
+  "preflight_downloads_weights": false,
+  "preflight_trains_model": false,
+  "notes": [
+    "Reported quota is a planning limit, not a live quota query; du apparent bytes conservatively estimates current use.",
+    "The HF AutoModel snippet is generic; use official OctoModel and the official notebook.",
+    "Pretraining includes Bridge, BC-Z, Fractal and Language Table: local Bridge performance cannot establish unseen-data generalization.",
+    "Official requirements contain open-ended dependencies; resolve and pin compatible transitive packages before installing.",
+    "JAX GPU wheel availability and driver compatibility still require cluster verification.",
+    "Inference success means loading and producing finite native actions, not robotic task success."
+  ]
+}

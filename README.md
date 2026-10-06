@@ -13,6 +13,7 @@ zero-shot task-success result is claimed.**
 - [Architecture, action contract, and code map](docs/ARCHITECTURE.md)
 - [Comparison with the original Diffusion Policy implementation (中文)](docs/DIFFUSION_POLICY_COMPARISON.md)
 - [Executed DDPM/U-Net numerical and gradient comparison (中文)](docs/DDPM_RUNTIME_COMPARISON.md)
+- [Storage snapshot and next-experiment budget](docs/STORAGE_BUDGET.md)
 - [Environment and execution instructions](docs/RUNNING.md)
 - [Supervisor requirements and completion status](docs/REQUIREMENTS.md)
 - [Dataset versions and diagnostic split](docs/DATASETS.md)

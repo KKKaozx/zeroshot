@@ -4,6 +4,8 @@
 
 用户提供的集群作业 188824 报告确认 x86_64、RTX A6000 可见，项目 apparent use 23.18GiB，inventory_passed=true；octo_inference_ready=false。旧环境 JAX0.4.13/Flax0.7.0/TF2.13 与官方依赖不同，另建 `/projects/Zeroshot/envs/octo-small-v1`。200GB 配额按 200,000,000,000 bytes 做规划；原预检用 200GiB，余量略高估，新脚本已纠正。仍未读取实际配额。
 
+安装作业 188827 在 pip 依赖解析阶段失败：未锁定的新版 wandb 要求 protobuf≥5，与 TF2.15/protobuf4.23.4 冲突；尚未进入模型下载或推理。修复为 wandb==0.16.6，其 PyPI 元数据支持 Linux/Python3.10 下 protobuf≥3.19,<5。补锁后仍需集群安装验证，不能称修复已运行通过。旧依赖等待任务 188828 应取消，再按 afterok 重新提交安装和推理；复用已创建的独立环境。
+
 固定代码 `241fb3514b7c40957a86d869fecb7c7fc353f540`，模型 `rail-berkeley/octo-small-1.5` revision `dc9aa3019f764726c770814b27e4ab0fc6e32a58`，T5 资源 revision `a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1`。checkpoint 546,696,551 bytes。模型和环境只在集群下载；T5 只下载配置及 tokenizer，语言编码器参数来自 Octo checkpoint。官方代码未替换为本项目网络。
 
 CPU 安装作业使用官方 requirements 加关键兼容约束，固定 JAX0.4.20 CUDA11 GPU wheel、NumPy1.24.3/Flax0.7.5/TF2.15；记录 pip freeze 并执行 pip check。其余传递依赖仍由 pip 解析，不能称所有依赖均已锁定或安装验证通过。安装前要求 15GiB 规划余量，安装后检查新增占用不超过 15GiB；此检查不限制安装期间的峰值占用。保留原有环境，不下载完整 OXE 数据。本地包只有脚本和配置。

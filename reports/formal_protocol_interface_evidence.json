@@ -1,0 +1,105 @@
+{
+  "scope": "Metadata and a training CLIPort primitive only; no model, training or rollout; no test target metrics",
+  "cliport_example": {
+    "relative_path": "cliport\\data\\stack-block-pyramid-seq-seen-colors-train\\action\\000000-0.pkl",
+    "primitive_count": 7,
+    "action_keys": [
+      "pose0",
+      "pose1"
+    ],
+    "pose0_xyz_m": [
+      0.41875,
+      0.09687500000000004,
+      0.03997802734375
+    ],
+    "pose1_xyz_m": [
+      0.31488803029060364,
+      0.026024727150797844,
+      0.05247802659869194
+    ],
+    "loader_output_is_absolute_xyz_without_position_scaling": true,
+    "source_reference": "code/dataset.py::_cliport_pose_action and _get_cliport"
+  },
+  "libero_example": {
+    "relative_path": "LIBERO\\libero_90\\KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it_demo.hdf5",
+    "action_shape": [
+      197,
+      7
+    ],
+    "observation_shapes": {
+      "agentview_rgb": [
+        197,
+        128,
+        128,
+        3
+      ],
+      "ee_ori": [
+        197,
+        3
+      ],
+      "ee_pos": [
+        197,
+        3
+      ],
+      "ee_states": [
+        197,
+        6
+      ],
+      "eye_in_hand_rgb": [
+        197,
+        128,
+        128,
+        3
+      ],
+      "gripper_states": [
+        197,
+        2
+      ],
+      "joint_states": [
+        197,
+        7
+      ]
+    },
+    "controller_config": {
+      "type": "OSC_POSE",
+      "input_max": 1,
+      "input_min": -1,
+      "output_max": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "output_min": [
+        -0.05,
+        -0.05,
+        -0.05,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "kp": 150,
+      "damping_ratio": 1,
+      "impedance_mode": "fixed",
+      "kp_limits": [
+        0,
+        300
+      ],
+      "damping_ratio_limits": [
+        0,
+        10
+      ],
+      "position_limits": null,
+      "orientation_limits": null,
+      "uncouple_pos_ori": true,
+      "control_delta": true,
+      "interpolation": null,
+      "ramp_ratio": 0.2
+    },
+    "robots": [
+      "Panda"
+    ]
+  }
+}

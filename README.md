@@ -14,6 +14,7 @@ zero-shot task-success result is claimed.**
 - [Comparison with the original Diffusion Policy implementation (中文)](docs/DIFFUSION_POLICY_COMPARISON.md)
 - [Executed DDPM/U-Net numerical and gradient comparison (中文)](docs/DDPM_RUNTIME_COMPARISON.md)
 - [Storage snapshot and next-experiment budget](docs/STORAGE_BUDGET.md)
+- [Next paired decoder experiment: upload and GPU preflight](docs/CLUSTER_DECODER_PAIR.md)
 - [Environment and execution instructions](docs/RUNNING.md)
 - [Supervisor requirements and completion status](docs/REQUIREMENTS.md)
 - [Dataset versions and diagnostic split](docs/DATASETS.md)

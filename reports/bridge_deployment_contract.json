@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-07",
+  "model_used": false,
+  "robot_connected": false,
+  "trained": false,
+  "policy_commit": "bc60a35b701a12021c8c95e9d8601274d3acd928",
+  "robot_commit": "b841131ecd512bafb303075bd8f8b677e0bf9f1f",
+  "robot_version_limit": "Robot repository pinned at lookup time, not verified as the historical environment used by the policy commit",
+  "files": {
+    "eval_lc.py": {
+      "sha256": "0cfad375b974a119760e770b58e36230d2d0b4743ff703281c9daa9c1c8d3d04",
+      "bytes": 10257
+    },
+    "robot_base_env.py": {
+      "sha256": "5ced59de2623e4ab17d2704ed574cbd8cf30c167019ed770b86032087820a7a9",
+      "bytes": 20018
+    },
+    "transformation_utils.py": {
+      "sha256": "862469704c20d9f4d9b8ed582b23b2e270727a2d365dc0f92419092047c6e62d",
+      "bytes": 6047
+    },
+    "widowx_env.py": {
+      "sha256": "674e3b39e7bee355b44e6e8a466420e45718516eee42c59b94ead40700697eac",
+      "bytes": 23221
+    }
+  },
+  "scope": "Static deployment source review plus actual pure transformation functions and _next_qpos via AST with fake pose provider; no ROS or hardware execution",
+  "deployment": {
+    "denormalization": "action * action_std + action_mean",
+    "step_duration": 0.2,
+    "act_exec_horizon_default": 1,
+    "gripper_open": 1.0,
+    "gripper_closed": 0.0,
+    "sticky_steps": 1,
+    "blocking_default": false,
+    "reference": "previous commanded target; delta rotation about measured end-effector position with world-aligned axes",
+    "resetqpos_after_every_step_default": false,
+    "action_bounds_low": [
+      -0.05,
+      -0.05,
+      -0.05,
+      -0.25,
+      -0.25,
+      -0.25,
+      0.0
+    ],
+    "action_bounds_high": [
+      0.05,
+      0.05,
+      0.05,
+      0.25,
+      0.25,
+      0.25,
+      1.0
+    ],
+    "execution_limit": "Nominal cadence uses wall clock and controller move_duration; no verified strict deadline or tracking guarantee"
+  },
+  "lag_example": {
+    "measured_xyz": [
+      0.3,
+      0.0,
+      0.15
+    ],
+    "previous_target_xyz": [
+      0.35,
+      0.0,
+      0.15
+    ],
+    "action": [
+      0.01,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "next_commanded_xyz": [
+      0.36,
+      0.0,
+      0.15
+    ],
+    "measured_anchor_plus_delta_xyz": [
+      0.31,
+      0.0,
+      0.15
+    ],
+    "difference_m": 0.05
+  },
+  "desired_world_target_to_native_transform_checks": [
+    {
+      "yaw": 0.0,
+      "native_command": [
+        -0.029977501687449337,
+        0.020000000000000004,
+        0.008500224989875238,
+        0.04,
+        -0.03,
+        0.0,
+        1.0
+      ],
+      "matrix_error_max": 3.469446951953614e-18
+    },
+    {
+      "yaw": 0.1,
+      "native_command": [
+        -0.029727822349201682,
+        0.015010575251069313,
+        0.008500224989875238,
+        0.04,
+        -0.029999999999999995,
+        0.1,
+        1.0
+      ],
+      "matrix_error_max": 3.469446951953614e-18
+    },
+    {
+      "yaw": -0.1,
+      "native_command": [
+        -0.029727822349201682,
+        0.024989424748930684,
+        0.008500224989875238,
+        0.04,
+        -0.029999999999999995,
+        -0.1,
+        1.0
+      ],
+      "matrix_error_max": 3.469446951953614e-18
+    }
+  ],
+  "production_conversion_added": false,
+  "limits": [
+    "No calibration of historical RLDS raw action scaling",
+    "No UR5 suction gripper mapping",
+    "No model generalization conclusion"
+  ]
+}

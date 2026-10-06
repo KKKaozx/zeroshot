@@ -96,3 +96,19 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 **本轮结论：现行未来位姿标签有一致的几何含义，但“标签可还原”不等于“控制过程等价”。** 不修改现有标签或权重；此前 CLIPort 接触遗漏不能据此推断 Bridge 数据也丢失抓取、未来位姿监督无效，或 DDPM/CLIP 是根因。当前任务仍是离线到达位姿预测，尚不是验收后的机器人命令策略。
 
 下一项应核对作者实际部署的动作消费端：重标记状态差如何反归一化、以哪个参考系/单位发送、控制周期及夹爪输入是什么。先得到“学习目标→原生命令”的依据，再决定保留当前未来位姿目标并配套控制器，还是建立独立版本的原生命令目标。两条路线不能通过改名字或把原始 action 填入 8 维数组完成转换；未形成依据前，不改数据、不重训、不再调这条 CLIPort 回放。证据：[训练记录目标核查](../reports/bridge_target_execution_audit.json)。
+
+## 作者动作消费端核查（2026-10-07）
+
+已查 [固定策略版本 eval_lc.py](https://github.com/rail-berkeley/bridge_data_v2/blob/bc60a35b701a12021c8c95e9d8601274d3acd928/experiments/eval_lc.py)：预测按训练配置的 mean/std 反归一化，默认每次执行一行，标称间隔与 move_duration 为 0.2s，blocking 默认关闭。夹爪阈值 0.5，输出整理为关闭 0、打开 1；sticky 计数为 1。0.2s 是该部署脚本的请求周期，不是到达精度、严格截止或全部原始演示时序的保证。当前工程方法默认 ±1 开合以及 xyz/0.1 不能原样送进它。
+
+机器人消费端另属 bridge_data_robot，本次固定提交 b841131ecd512bafb303075bd8f8b677e0bf9f1f。**未确认这个提交就是策略历史使用的机器人版本**，只能报告当前固定源码合同，不能称为完整原实验复现。源文件合计约 59.5KB，缓存于忽略目录，没有安装 ROS、机器人驱动或模型，也没有连接机器人。
+
+[RobotBaseEnv](https://github.com/rail-berkeley/bridge_data_robot/blob/b841131ecd512bafb303075bd8f8b677e0bf9f1f/widowx_envs/widowx_envs/base/robot_base_env.py) 将动作按自身范围裁剪，构造增量变换后左乘**上一命令目标**，再按工作空间裁剪位置。默认 resetqpos_after_every_step=False；它没有每步自动把命令锚点重设为实测 TCP。夹爪先发送，再调用 move_to_eep。三维位移分量上限 0.05、Euler 分量 0.25、夹爪 [0,1]，不是当前 16 个固定输入锚点未来位姿的 ±3 界限，也不能作为 UR5 的合适界限照搬。
+
+[action2transform_local](https://github.com/rail-berkeley/bridge_data_robot/blob/b841131ecd512bafb303075bd8f8b677e0bf9f1f/widowx_envs/widowx_envs/utils/transformation_utils.py) 的名字含 local，但其旋转轴与世界坐标轴一致、旋转中心为当前实测末端位置。旋转来自 radian Euler 的旋转矩阵，增量变换作用于旧命令目标。不能依据函数名把它当作项目工具系局部增量，也不能把 Euler 分量加法重标记与一般三维旋转合成说成完全一致。
+
+隔离执行作者实际纯变换函数及 `_next_qpos`（AST 提取，提供假的位姿读取器，不导入 ROS、不调用硬件）：实测 x=0.30m、旧命令目标 x=0.35m、dx=0.01m，得到新目标 x=0.36m，而实测锚点加 dx 会得到 0.31m。另对三个非零三维旋转目标使用作者逆变换生成原生动作，再送 `_next_qpos`，世界目标矩阵最大误差 3.47e−18。它验证该源码数学关系，未验证实际 step 的电机运动、动作裁剪后的可达性、通信延迟或接触。
+
+如果要将一个期望世界目标 T_goal 送到该作者控制器，数学上必须取得 T_previous_command 与当前实测末端位置：先计算 D=T_goal×inverse(T_previous_command)，再按作者 transform2action_local 对 D 求动作。还需检查输出范围及实际配置；只减当前实测状态可能得到不同的命令。当前 UR5 固定周期控制器直接消费世界目标，没有这个旧目标累积合同，因此本次不向它添加 WidowX 行为。
+
+本轮决定：**保留当前离线未来位姿任务和原标签，禁止将输出冒充作者原生增量命令。** 部署适配器必须显式区分目标类型（未来到达位姿/原生增量命令）、锚点（观测/上一命令）、坐标系、单位、时间和夹爪编码；未知配置应拒绝接入。先补这个兼容性检查，随后才决定独立版本的可执行学习目标及正式训练清单。无需再调专家轨迹，也不凭作者脚本宣布当前泛化已解决。证据：[部署合同及源码函数执行](../reports/bridge_deployment_contract.json)。

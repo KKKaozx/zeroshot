@@ -39,7 +39,7 @@ def main():
     used = int(report['project_usage']['stdout'].split()[0]) if report['project_usage']['returncode'] == 0 else None
     report['project_apparent_used_gib'] = None if used is None else used / 2**30
     report['live_quota_verified'] = False
-    report['planning_headroom_gib'] = None if used is None else plan['project_quota_gib_planning_limit'] - used / 2**30
+    report['planning_headroom_gib'] = None if used is None else (plan['project_quota_bytes_planning_limit'] - used) / 2**30
     report['inventory_passed'] = (report['architecture'] == 'x86_64'
         and report['gpu_inventory']['returncode'] == 0
         and bool(report['gpu_inventory']['stdout']) and used is not None

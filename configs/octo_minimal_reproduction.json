@@ -1,11 +1,12 @@
 {
   "date": "2026-10-07",
-  "stage": "cluster_preflight_only",
+  "stage": "cpu_setup_then_gpu_official_inference",
   "purpose": "Official pretrained inference positive control; not independent generalization or full paper reproduction",
   "code_repository": "https://github.com/octo-models/octo",
   "code_commit": "241fb3514b7c40957a86d869fecb7c7fc353f540",
   "model_repository": "rail-berkeley/octo-small-1.5",
   "model_revision": "dc9aa3019f764726c770814b27e4ab0fc6e32a58",
+  "t5_revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
   "model_checkpoint_bytes": 546696551,
   "official_example": "examples/01_inference_pretrained.ipynb",
   "inference_case": "First official notebook case: Bridge example image, pick up the fork, history length 1 with valid mask, seed 0, bridge_dataset action statistics",
@@ -21,7 +22,8 @@
     "tensorflow": "2.15.0"
   },
   "environment_policy": "New isolated project environment after preflight; preserve zeroshot, bridge-reader and bridge-diffusion environments",
-  "project_quota_gib_planning_limit": 200,
+  "project_quota_bytes_planning_limit": 200000000000,
+  "new_installation_budget_gib": 15,
   "minimum_project_headroom_gib": 15,
   "local_artifact_limit_mib": 100,
   "preflight_installs_packages": false,

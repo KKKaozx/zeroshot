@@ -1,37 +1,40 @@
 # Octo 最小官方复现
 
-2026-10-07。目标是建立一个完整已发布策略的正对照，停止继续改同一条 CLIPort 专家回放。当前只完成版本固定与预检脚本准备，**未运行 Octo，未安装依赖或下载权重**。本地非交互 SSH 连接集群地址超时，需在用户已有 VS Code 远程终端提交。
+2026-10-07。目标是运行已发布完整策略的官方第一项推理示例，作为正对照。暂停继续调整 CLIPort 专家回放或旧动作头。**预检完成；安装与推理包已准备，尚未运行安装或模型。**
 
-固定代码提交 `241fb3514b7c40957a86d869fecb7c7fc353f540`，模型 `rail-berkeley/octo-small-1.5` 的 revision 为 `dc9aa3019f764726c770814b27e4ab0fc6e32a58`。权重 checkpoint 文件 546,696,551 bytes，不能用“27M 参数”推断所有保存文件大小。模型、语言资源、独立环境与缓存全部放集群项目 SSD；本地仅小型脚本和报告，不下载完整 OXE 数据。
+用户提供的集群作业 188824 报告确认 x86_64、RTX A6000 可见，项目 apparent use 23.18GiB，inventory_passed=true；octo_inference_ready=false。旧环境 JAX0.4.13/Flax0.7.0/TF2.13 与官方依赖不同，另建 `/projects/Zeroshot/envs/octo-small-v1`。200GB 配额按 200,000,000,000 bytes 做规划；原预检用 200GiB，余量略高估，新脚本已纠正。仍未读取实际配额。
 
-第一阶段复现 [官方 notebook](https://github.com/octo-models/octo/blob/241fb3514b7c40957a86d869fecb7c7fc353f540/examples/01_inference_pretrained.ipynb) 的第一张 Bridge 示例图与 `pick up the fork`：历史长度 1、有效时间掩码、seed=0，使用 `bridge_dataset` 的动作统计反归一化，期望输出 `[1,4,7]`。不运行 notebook 中下载整条远程数据的第二段，不沿用项目 `[16,8]` 或 CLIP 图像预处理。先检查可加载、GPU 实际执行、输出有限值、动作统计及形状，再进行现有 Bridge 训练分区的原生合同核查。
+固定代码 `241fb3514b7c40957a86d869fecb7c7fc353f540`，模型 `rail-berkeley/octo-small-1.5` revision `dc9aa3019f764726c770814b27e4ab0fc6e32a58`，T5 资源 revision `a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1`。checkpoint 546,696,551 bytes。模型和环境只在集群下载；T5 只下载配置及 tokenizer，语言编码器参数来自 Octo checkpoint。官方代码未替换为本项目网络。
 
-官方 requirements 固定 NumPy1.24.3/JAX0.4.20/Flax0.7.5/TF2.15，与旧环境不能假定兼容；部分依赖没有上界。预检先查 x86_64、分配 GPU、现有环境版本及项目空间，之后另建独立环境，固定兼容的传递依赖和 GPU wheel，保留旧环境。预检通过不等于依赖安装或 Octo 推理通过。
+CPU 安装作业使用官方 requirements 加关键兼容约束，固定 JAX0.4.20 CUDA11 GPU wheel、NumPy1.24.3/Flax0.7.5/TF2.15；记录 pip freeze 并执行 pip check。其余传递依赖仍由 pip 解析，不能称所有依赖均已锁定或安装验证通过。安装前要求 15GiB 规划余量，安装后检查新增占用不超过 15GiB；此检查不限制安装期间的峰值占用。保留原有环境，不下载完整 OXE 数据。本地包只有脚本和配置。
 
-约束：用户报告项目配额 200GB，预检以 du apparent bytes 做保守规划并要求至少 15GiB 余量；它不读取实际配额，TB 级文件系统余量不能当作项目余量。完整环境的最终大小、语言资源和 GPU 依赖预算在安装前核查。预检本身不安装、不下载、不训练，申请 A6000 一张卡仅读取 GPU 信息，最多 10 分钟。
-
-本地小包：`results/octo_preparation/octo_minimal_preflight_v1.zip`（约 3KB）及同名 `.sha256`。包含本仓库三份文件：`scripts/cluster/octo_preflight.py`、`scripts/cluster/octo_preflight.sh`、`configs/octo_minimal_reproduction.json`。Python AST、JSON 解析与 Bash 语法检查通过；未执行集群作业。
+GPU 作业复现 [官方 notebook 第一项](https://github.com/octo-models/octo/blob/241fb3514b7c40957a86d869fecb7c7fc353f540/examples/01_inference_pretrained.ipynb)：Bridge 示例 JPEG、RGB256×256、`pick up the fork`、历史长度1、有效时间掩码、seed0，使用 `bridge_dataset` 动作统计反归一化。GPU 阶段离线读取缓存；JAX 回退 CPU 则失败。检查输出 `[1,4,7]` 且全部有限，保存原生动作和统计。未运行 notebook 下载整条远程数据的第二项，不使用项目 `[16,8]` 或 CLIP 预处理。
 
 在本地 PowerShell 上传：
 
 ```powershell
-scp "D:/ntu_related/dissertation/Zero_shot/results/octo_preparation/octo_minimal_preflight_v1.zip" "D:/ntu_related/dissertation/Zero_shot/results/octo_preparation/octo_minimal_preflight_v1.sha256" zixiao005@10.97.216.128:/projects/Zeroshot/
+scp "D:/ntu_related/dissertation/Zero_shot/results/octo_preparation/octo_official_smoke_v1.zip" "D:/ntu_related/dissertation/Zero_shot/results/octo_preparation/octo_official_smoke_v1.sha256" zixiao005@10.97.216.128:/projects/Zeroshot/
 ```
 
-在 VS Code 集群终端校验、解压并提交；解压不覆盖已有同名文件：
+在 VS Code 集群终端执行；安装成功后 GPU 推理才具备运行条件：
 
 ```bash
 cd /projects/Zeroshot
 mkdir -p logs baseline_setup
-sha256sum -c octo_minimal_preflight_v1.sha256 && unzip -n octo_minimal_preflight_v1.zip && sbatch octo_minimal_preflight/octo_preflight.sh
+sha256sum -c octo_official_smoke_v1.sha256 && unzip -n octo_official_smoke_v1.zip &&
+OCTO_SETUP=$(sbatch --parsable octo_official_smoke_v1/octo_setup.sh) &&
+OCTO_RUN=$(sbatch --parsable --dependency=afterok:"$OCTO_SETUP" octo_official_smoke_v1/octo_inference.sh) &&
+printf '安装作业：%s\n推理作业：%s\n' "$OCTO_SETUP" "$OCTO_RUN"
 ```
 
-随后用返回的数字 JOBID 查状态和日志：
+在同一终端查询：
 
 ```bash
-sacct -j JOBID --format=JobID,State,ExitCode
-cat /projects/Zeroshot/logs/octo-preflight-JOBID.out
-cat /projects/Zeroshot/baseline_setup/octo-preflight-JOBID.json
+sacct -j "$OCTO_SETUP,$OCTO_RUN" --format=JobID,State,ExitCode
+tail -n 60 "/projects/Zeroshot/logs/octo-setup-$OCTO_SETUP.out"
+tail -n 60 "/projects/Zeroshot/logs/octo-inference-$OCTO_RUN.out"
 ```
 
-这次只需贴回 JSON 小报告；未运行推理前，不依据纸面配置宣称复现通过。官方预训练包含 Bridge 等目标来源，在本地 Bridge 数据上预测好也不能证明独立新数据泛化。后续受控训练比较须统一划分、动作目标与评价协议，完整机器人论文成功率仍需对应硬件或正式基准。官方来源：[代码](https://github.com/octo-models/octo)、[权重](https://huggingface.co/rail-berkeley/octo-small-1.5)、[论文项目](https://octo-models.github.io/)。
+排队时日志可能不存在，正常。安装失败时推理可能保持依赖等待，先检查安装日志；不要重复提交。完成后取回 `baseline_setup/octo-inference-JOBID.json` 小报告，无需下载权重。CPU 下载成功与 GPU 加载成功分别验收，运行前不宣称复现通过。
+
+推理通过仅证明官方模型加载、GPU执行和有限值动作输出，没有动作数值参考对照，也没有机器人任务成功率。Octo 预训练包含 Bridge、BC-Z、Fractal、Language Table，在本地 Bridge 上表现好不能证明未见数据泛化。后续比较需统一划分、动作合同和评价指标。来源：[官方代码](https://github.com/octo-models/octo)、[权重](https://huggingface.co/rail-berkeley/octo-small-1.5)、[论文项目](https://octo-models.github.io/)。

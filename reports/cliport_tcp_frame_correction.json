@@ -1,0 +1,693 @@
+{
+  "purpose": "UR5 tool-tip link/inertial frame audit and corrected fixed-period fixture; no model or generalization",
+  "model_used": false,
+  "task_reward_evaluated": false,
+  "tests_passed": 25,
+  "source_report": "results\\cliport_fixed_period_frame_corrected.json",
+  "source_sha256": "4b802bbaabc429e0fd40f0f38fb4f380c313bb5e6588a93d848e0a68f215c80b",
+  "native_frame_audit": {
+    "purpose": "Native IK request versus COM/link orientation audit; no model or task score",
+    "model_used": false,
+    "task_reward_evaluated": false,
+    "pybullet_version": "3.2.7",
+    "link_name": "tool_tip",
+    "urdf_sha256": "1f1b181c75c5448aca9f1f3e035a3f9ce269baecdfe07f4252185dbf1bcfa79d",
+    "results": [
+      {
+        "yaw": 0.0,
+        "timeout": false,
+        "goal_quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "actual_com_quaternion": [
+          -6.314832506872774e-05,
+          0.00013242715397554326,
+          -5.409980290582706e-06,
+          0.9999999892230349
+        ],
+        "actual_link_quaternion": [
+          -0.7071029543876648,
+          0.707110583782196,
+          4.8987534682964906e-05,
+          -0.00013829274394083768
+        ],
+        "com_angle_error_deg": 0.016823481008872678,
+        "link_angle_error_deg": 179.98415281871888,
+        "local_inertial_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_inertial_quaternion": [
+          0.7071067811882787,
+          -0.7071067811848163,
+          7.31230107716731e-14,
+          -7.312301077203115e-14
+        ],
+        "reconstructed_com_angle_error_deg": 0.0
+      },
+      {
+        "yaw": 0.3,
+        "timeout": false,
+        "goal_quaternion": [
+          0.0,
+          0.0,
+          0.14943813247359924,
+          0.9887710779360424
+        ],
+        "actual_com_quaternion": [
+          -8.517783943917407e-05,
+          0.0001702531101072394,
+          0.14470216312285988,
+          0.9894752385715265
+        ],
+        "actual_link_quaternion": [
+          0.8019845485687256,
+          -0.597344696521759,
+          -6.015730832586996e-05,
+          0.00018061694572679698
+        ],
+        "com_angle_error_deg": 0.5491020562279149,
+        "link_angle_error_deg": 179.98056538362445,
+        "local_inertial_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_inertial_quaternion": [
+          0.7071067811882787,
+          -0.7071067811848163,
+          7.31230107716731e-14,
+          -7.312301077203115e-14
+        ],
+        "reconstructed_com_angle_error_deg": 8.365239156607494e-06
+      },
+      {
+        "yaw": -0.3,
+        "timeout": false,
+        "goal_quaternion": [
+          0.0,
+          0.0,
+          -0.14943813247359924,
+          0.9887710779360424
+        ],
+        "actual_com_quaternion": [
+          -1.177519468657509e-05,
+          0.00014589663842836962,
+          -0.14495352888107058,
+          0.9894384533867887
+        ],
+        "actual_link_quaternion": [
+          -0.5971410274505615,
+          0.8021363019943237,
+          9.483819303568453e-05,
+          -0.00011149082274641842
+        ],
+        "com_angle_error_deg": 0.5198280228430052,
+        "link_angle_error_deg": 179.98574351069283,
+        "local_inertial_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_inertial_quaternion": [
+          0.7071067811882787,
+          -0.7071067811848163,
+          7.31230107716731e-14,
+          -7.312301077203115e-14
+        ],
+        "reconstructed_com_angle_error_deg": 3.4150945850063755e-06
+      }
+    ]
+  },
+  "transform": "world_COM = world_link * link_inertial; inverse transform converts author native commands to link targets",
+  "transformation_source": "Runtime getDynamicsInfo local inertial pose, matching URDF tool_tip inertial origin",
+  "position_offset_zero_in_this_urdf": true,
+  "code_sha256": {
+    "code/cliport_controller.py": "cfbee8976711e6b052517968b34f4aa6312a58e7823bfd60afc4c5e7e38c559f",
+    "diagnostics/replay_cliport_native.py": "6d7222b2e847a35583a709d094d895e77d9d057f667a5377fa44dbab1d6aad49"
+  },
+  "corrected_fixture": {
+    "period_seconds": 0.2,
+    "fixed_steps_per_target": 96,
+    "simulated_duration_seconds": 3.2000000000000006,
+    "warmup_outside_timed_budget": true,
+    "source_targets_with_subsampling_and_holds": true,
+    "native_blocking_warmup_rotation_error_deg": 0.016820671293684697,
+    "native_blocking_warmup_actual_quaternion": [
+      -6.319180302541377e-05,
+      0.0001323743485945316,
+      -5.528005883881361e-06,
+      0.9999999892266345
+    ],
+    "task_reward_evaluated": false,
+    "normalized_xyz_absmax": 1.7849476337432861,
+    "tracking_threshold_position_m": 0.01,
+    "tracking_threshold_rotation_deg": 5.0,
+    "tracking_passed": false,
+    "pickup_then_release": true,
+    "targets": [
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0007931973119500945,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.4035762846469879,
+          0.09703714400529861,
+          0.18061110377311707
+        ],
+        "actual_quaternion": [
+          -0.7071029543876648,
+          0.707110583782196,
+          8.690200047567487e-05,
+          -0.00010754188406281173
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.17997927963733673
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0008650864239216993,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.4035938084125519,
+          0.0970413014292717,
+          0.16068701446056366
+        ],
+        "actual_quaternion": [
+          -0.7071029543876648,
+          0.707110583782196,
+          9.777653031051159e-05,
+          -0.0001184274151455611
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.15997925400733948
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0009449872459499654,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.4036126136779785,
+          0.09704577922821045,
+          0.13977043330669403
+        ],
+        "actual_quaternion": [
+          -0.7071029543876648,
+          0.707110583782196,
+          0.00010973819007631391,
+          -0.00013041119382251054
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.13897919654846191
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0010266683217556895,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40363192558288574,
+          0.09705043584108353,
+          0.11985453963279724
+        ],
+        "actual_quaternion": [
+          -0.7071029543876648,
+          0.707110583782196,
+          0.00012165585212642327,
+          -0.00014234715490601957
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.11897916346788406
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0011202015243652456,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40365540981292725,
+          0.09705609083175659,
+          0.09894902259111404
+        ],
+        "actual_quaternion": [
+          -0.7071029543876648,
+          0.707110583782196,
+          0.00013461736671160907,
+          -0.00015533907571807504
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.0979791209101677
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0012172967610069416,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40368223190307617,
+          0.09706246107816696,
+          0.07904498279094696
+        ],
+        "actual_quaternion": [
+          -0.70710289478302,
+          0.707110583782196,
+          0.00014775668387301266,
+          -0.00016865677025634795
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.07797908037900925
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.0013288601280171228,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40371716022491455,
+          0.09707088023424149,
+          0.05815243721008301
+        ],
+        "actual_quaternion": [
+          -0.70710289478302,
+          0.707110583782196,
+          0.00016238017997238785,
+          -0.00018369231838732958
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.05697905272245407
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 8,
+        "position_error_m": 0.0015243496732066286,
+        "rotation_error_deg": 0.05854732802324096,
+        "actual_position": [
+          0.40379104018211365,
+          0.09732992947101593,
+          0.038272544741630554
+        ],
+        "actual_quaternion": [
+          -0.7070894837379456,
+          0.7071238160133362,
+          0.0005567162297666073,
+          0.00029133757925592363
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.036979079246520996
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.06074158564399814,
+        "rotation_error_deg": 0.01712373992288852,
+        "actual_position": [
+          0.42491427063941956,
+          0.09640266746282578,
+          0.3032810389995575
+        ],
+        "actual_quaternion": [
+          0.7071393132209778,
+          -0.7070741057395935,
+          -0.0003530225367285311,
+          0.00017302620108239353
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.000254621814545949,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40334707498550415,
+          0.09698660671710968,
+          0.35992273688316345
+        ],
+        "actual_quaternion": [
+          -0.7071043252944946,
+          0.7071092128753662,
+          2.5800429739319952e-06,
+          -9.27692872210173e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.0002546185487824717,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40334707498550415,
+          0.09698659926652908,
+          0.35992273688316345
+        ],
+        "actual_quaternion": [
+          -0.7071042060852051,
+          0.7071093320846558,
+          2.578324938440346e-06,
+          -9.275766387872864e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.0002546185487824717,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40334707498550415,
+          0.09698659926652908,
+          0.35992273688316345
+        ],
+        "actual_quaternion": [
+          -0.7071042060852051,
+          0.7071093320846558,
+          2.5782708235055907e-06,
+          -9.275700904254336e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.0002546185487824717,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40334707498550415,
+          0.09698659926652908,
+          0.35992273688316345
+        ],
+        "actual_quaternion": [
+          -0.7071042060852051,
+          0.7071093320846558,
+          2.5782687771425117e-06,
+          -9.275699085264932e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.0002546185487824717,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40334707498550415,
+          0.09698659926652908,
+          0.35992273688316345
+        ],
+        "actual_quaternion": [
+          -0.7071042060852051,
+          0.7071093320846558,
+          2.578268322395161e-06,
+          -9.27569817577023e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": false,
+        "suction_activated": true,
+        "grasp_attached": true,
+        "first_attached_tick": 1,
+        "position_error_m": 0.0002546185487824717,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.40334707498550415,
+          0.09698659926652908,
+          0.35992273688316345
+        ],
+        "actual_quaternion": [
+          -0.7071042060852051,
+          0.7071093320846558,
+          2.578268322395161e-06,
+          -9.27569817577023e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      },
+      {
+        "physics_steps": 96,
+        "duration_seconds": 0.2,
+        "command_open": true,
+        "suction_activated": false,
+        "grasp_attached": false,
+        "first_attached_tick": null,
+        "position_error_m": 0.00025675403938073645,
+        "rotation_error_deg": 0.0,
+        "actual_position": [
+          0.4033516049385071,
+          0.09698338061571121,
+          0.35992488265037537
+        ],
+        "actual_quaternion": [
+          -0.7071028351783752,
+          0.7071107029914856,
+          -1.0962179658235982e-05,
+          -6.991391728661256e-06
+        ],
+        "target_position": [
+          0.40312498807907104,
+          0.09687499701976776,
+          0.35997799038887024
+        ],
+        "target_quaternion": [
+          -0.7071068286895752,
+          0.7071068286895752,
+          -7.275958481545164e-12,
+          1.57776031822765e-11
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "position_error_max_cm": 6.074158564399814,
+    "rotation_error_max_deg": 0.05854732802324096,
+    "position_passed_targets": 15,
+    "rotation_passed_targets": 16,
+    "tracking_passed": false,
+    "pickup_then_release": true
+  },
+  "correction_to_previous_interpretation": "Native blocking goal was compared against the wrong orientation frame. The approximately 180-degree error was not demonstrated IK tracking failure. Historical report retained; current frame-correct measurements supersede that interpretation.",
+  "limits": [
+    "Runtime interpretation verified on this PyBullet/UR5 combination at yaw 0,+0.3,-0.3 only; not universal robot calibration",
+    "Nonzero inertial translation is covered by synthetic transform test, not physical calibration of another robot",
+    "Fixed-period fixture still misses lift deadline by 6.074cm; full tracking protocol not accepted",
+    "Previous larger-bound relative-only expert regression remains engineering control, not production deployment",
+    "Bridge labels, geometry encoding, model clipping and weights unchanged"
+  ],
+  "next_action": "Investigate deadline motion feasibility using declared joint-space budget and desired trajectory; do not ignore errors, enlarge duration or increase speed without a separately stated protocol.",
+  "corrected_expert_command_regression": {
+    "report": "results\\cliport_relative_frame_corrected_regression.json",
+    "sha256": "0cf2ac4ee512a0460c942878efbdaba84a702b6bbe4accfeb6d021026fcbb3fa",
+    "total_reward": 0.9999999999999999,
+    "success": true,
+    "bound": 100,
+    "production_bound_changed": false,
+    "model_used": false
+  }
+}

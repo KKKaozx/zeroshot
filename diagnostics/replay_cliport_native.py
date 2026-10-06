@@ -88,7 +88,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(root / "code"))
     from dataset import UnifiedRobotDataset, relative_pose_action, decode_relative_pose, trajectory_to_cliport_primitive
-    from cliport_controller import ContinuousTCPController
+    from cliport_controller import ContinuousTCPController, native_ik_to_tcp_link
     task_name = "stack-block-pyramid-seq-seen-colors"
     action_dir = args.dataset_dir / "data" / (task_name + "-train") / "action"
     files = sorted(action_dir.glob("*.pkl"))[:args.max_episodes]
@@ -110,6 +110,7 @@ def main():
                   absolute_trace_control=args.absolute_trace_control,
                   trace_ablation=args.trace_ablation,
                   fixed_period_grasp_control=args.fixed_period_grasp_control,
+                  controller_tcp_frame='URDF tool_tip link; native IK goals transformed using local inertial pose',
                   trace_only_normalized_position_bound=100. if args.trace_ablation == "relative-only" else 3.,
                   continuous_trace_workspace_override=bool(args.replay_tcp_trace and not args.absolute_trace_control and not args.fixed_period_grasp_control),
                   primitive_return_observed=not bool(args.replay_tcp_trace),
@@ -170,6 +171,7 @@ def main():
             agent = task.oracle(env) if args.oracle_smoke else None
             trace = dict(seed=seed, task=task_name, model_used=False, primitive_commands=[])
             replay_trace = json.loads(args.replay_tcp_trace.read_text()) if args.replay_tcp_trace else None
+            inertial_pose = p.getDynamicsInfo(env.ur5, env.ee_tip)[3:5]
             if replay_trace and (replay_trace['seed'] != seed or replay_trace['task'] != task_name):
                 raise ValueError("Trace scene metadata differs")
             # Native expert has below-plane IK command targets in a failed pick.
@@ -189,20 +191,20 @@ def main():
                     raise RuntimeError("Fixture warm-up positioning timed out")
                 tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
                 native_goal = np.asarray(selected[0]['pose'][1])
-                native_actual = np.asarray(tcp[5])
+                native_actual = np.asarray(tcp[1])
                 native_rotation_error = float(np.degrees(2*np.arccos(np.clip(abs(
                     float(native_actual@native_goal))/(np.linalg.norm(native_actual)*np.linalg.norm(native_goal)), 0, 1))))
                 postpick = block[close_index+1]['pose']
-                fixture = np.stack([relative_pose_action(tcp[4], tcp[5], *e['pose'],
+                fixture = np.stack([relative_pose_action(tcp[4], tcp[5], *native_ik_to_tcp_link(e['pose'], inertial_pose),
                     1. if i < 6 else -1.) for i, e in enumerate(selected)] +
-                    [relative_pose_action(tcp[4], tcp[5], *postpick, -1.) for _ in range(7)] +
-                    [relative_pose_action(tcp[4], tcp[5], *postpick, 1.)])
+                    [relative_pose_action(tcp[4], tcp[5], *native_ik_to_tcp_link(postpick, inertial_pose), -1.) for _ in range(7)] +
+                    [relative_pose_action(tcp[4], tcp[5], *native_ik_to_tcp_link(postpick, inertial_pose), 1.)])
                 timed = ContinuousTCPController(env).execute_fixed_period(fixture, tcp[4], tcp[5])
                 row['fixed_period_fixture'] = dict(period_seconds=.2, fixed_steps_per_target=96,
                     simulated_duration_seconds=sum(r['duration_seconds'] for r in timed),
                     warmup_outside_timed_budget=True, source_targets_with_subsampling_and_holds=True,
                     native_blocking_warmup_rotation_error_deg=native_rotation_error,
-                    native_blocking_warmup_actual_quaternion=list(tcp[5]),
+                    native_blocking_warmup_actual_quaternion=list(tcp[1]),
                     task_reward_evaluated=False, normalized_xyz_absmax=float(abs(fixture[:,:3]).max()),
                     tracking_threshold_position_m=.01, tracking_threshold_rotation_deg=5.,
                     tracking_passed=all(r['position_error_m'] <= .01 and r['rotation_error_deg'] <= 5. for r in timed),
@@ -332,7 +334,7 @@ def main():
                             continue
                         if event.get('kind') != 'move':
                             raise ValueError("Typed move/suction trace required; recapture legacy trace")
-                        goal_pos, goal_quat = map(np.asarray, event['pose'])
+                        goal_pos, goal_quat = native_ik_to_tcp_link(event['pose'], inertial_pose)
                         for subdivision in range(16):
                             tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
                             encoded = relative_pose_action(tcp[4], tcp[5], goal_pos, goal_quat,
@@ -351,7 +353,7 @@ def main():
                                     np.linalg.norm(decoded_quat-goal_quat), np.linalg.norm(decoded_quat+goal_quat))))
                             if args.trace_ablation == "absolute-subdivided":
                                 before = env.step_counter
-                                timeout = env.movep((waypoint, goal_quat), speed=event['speed'])
+                                timeout = env.movep(controller._native_ik_pose((waypoint, goal_quat)), speed=event['speed'])
                                 outcome = dict(timeout=bool(timeout), physics_steps=env.step_counter-before)
                             else:
                                 outcome = controller.execute(encoded[None], tcp[4], tcp[5], speed=event['speed'])[0]

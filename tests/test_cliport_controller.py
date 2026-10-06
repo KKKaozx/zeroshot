@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'code'))
-from cliport_controller import ContinuousTCPController
+from cliport_controller import ContinuousTCPController, tcp_link_to_native_ik, native_ik_to_tcp_link
 from dataset import ACTION_REPRESENTATION
 
 
@@ -52,6 +52,7 @@ class ContinuousTests(unittest.TestCase):
         physics = SimpleNamespace(POSITION_CONTROL=0,
             getPhysicsEngineParameters=lambda: {'fixedTimeStep': 1/480},
             getJointState=lambda body, joint: (0.,),
+            getDynamicsInfo=lambda body, link: (None,None,None,[0,0,0],[0,0,0,1]),
             setJointMotorControlArray=lambda *args, **kwargs: motor_calls.append(kwargs['targetPositions']),
             getLinkState=lambda *args, **kwargs: (None,None,None,None,[.4,0,.2],[0,0,0,1]))
         a = self.actions([0,0]); a[:,7] = [-1,1]
@@ -108,7 +109,18 @@ class ContinuousTests(unittest.TestCase):
         return a
 
     def run_actions(self, env, a):
-        return ContinuousTCPController(env).execute(a, [.4, 0, .2], [0, 0, 0, 1])
+        with patch.object(ContinuousTCPController, '_native_ik_pose', side_effect=lambda pose: pose):
+            return ContinuousTCPController(env).execute(a, [.4, 0, .2], [0, 0, 0, 1])
+
+    def test_inertial_transform_uses_rotated_nonzero_offset_and_is_invertible(self):
+        s = np.sqrt(.5)
+        link = (np.array([.4, .1, .2]), np.array([0,0,s,s]))
+        inertial = (np.array([.01,0,0]), np.array([1,0,0,0]))
+        com = tcp_link_to_native_ik(link, inertial)
+        np.testing.assert_allclose(com[0], [.4,.11,.2], atol=1e-7)
+        recovered = native_ik_to_tcp_link(com, inertial)
+        np.testing.assert_allclose(recovered[0], link[0], atol=1e-7)
+        self.assertAlmostEqual(abs(float(np.dot(recovered[1], link[1]))), 1., places=6)
 
     def test_fixed_reference_for_entire_block(self):
         env = Environment()

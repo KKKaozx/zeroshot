@@ -1,11 +1,32 @@
 """Experimental continuous TCP execution, distinct from native pick/place primitives."""
 import numpy as np
 
-from dataset import ACTION_REPRESENTATION, POSITION_SCALE_METERS, decode_relative_pose
+from dataset import (ACTION_REPRESENTATION, POSITION_SCALE_METERS, decode_relative_pose,
+                     quaternion_multiply, quaternion_conjugate, rotate_vector)
+
+
+def tcp_link_to_native_ik(pose, inertial_pose):
+    """URDF link goal -> inertial/COM goal used by native IK in this environment."""
+    position, quaternion = map(np.asarray, pose)
+    offset, rotation = inertial_pose
+    return position + rotate_vector(offset, quaternion), quaternion_multiply(quaternion, rotation)
+
+
+def native_ik_to_tcp_link(pose, inertial_pose):
+    """Inverse frame transform for author command fixtures; no fitted offset."""
+    position, quaternion = map(np.asarray, pose)
+    offset, rotation = inertial_pose
+    link_quaternion = quaternion_multiply(quaternion, quaternion_conjugate(rotation))
+    return position-rotate_vector(offset, link_quaternion), link_quaternion
 
 
 class ContinuousTCPController:
     contract = "cliport_continuous_tcp_open_positive_v1"
+
+    def _native_ik_pose(self, link_pose):
+        import pybullet as physics
+        dynamics = physics.getDynamicsInfo(self.env.ur5, self.env.ee_tip)
+        return tcp_link_to_native_ik(link_pose, dynamics[3:5])
 
     @classmethod
     def from_action_config(cls, env, action_config, *, workspace=None):
@@ -77,7 +98,7 @@ class ContinuousTCPController:
         results = []
         for row, pose in zip(a, targets):
             before = self.env.step_counter
-            timeout = bool(self.env.movep(pose, speed=speed))
+            timeout = bool(self.env.movep(self._native_ik_pose(pose), speed=speed))
             if timeout:
                 results.append(dict(timeout=True, physics_steps=self.env.step_counter-before))
                 break
@@ -107,7 +128,7 @@ class ContinuousTCPController:
             raise ValueError("Period must be an exact positive number of physics steps")
         results = []
         for row, pose in zip(a, targets):
-            target_joints = np.asarray(self.env.solve_ik(pose))
+            target_joints = np.asarray(self.env.solve_ik(self._native_ik_pose(pose)))
             if (target_joints.shape != (len(self.env.joints),)
                     or not np.isfinite(target_joints).all()):
                 raise ValueError("Native IK returned invalid joint targets")

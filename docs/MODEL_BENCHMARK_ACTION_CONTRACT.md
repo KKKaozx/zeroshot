@@ -121,3 +121,15 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 ```powershell
 training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-fixed-period.json --replay-tcp-trace training_cache/cliport_fresh_control/expert_tcp_trace_typed.json --fixed-period-grasp-control
 ```
+
+## 180° 偏差的定位与修正（同日后续）
+
+**修正上述历史解释：接近 180° 的读数是坐标系混用，不能据此认定作者 IK 未跟踪请求姿态。** UR5 `tool_tip` 的 URDF link 坐标系与 inertial/COM 坐标系不同；其 inertial origin 明确包含 `rpy=(π,0,−π/2)`，本例平移为零。此前读取 `getLinkState()[5]` 的 link 世界姿态，却与当前原生 IK 的惯性系请求直接比较。
+
+实际做了 yaw=0、+0.3、−0.3 三个原生阻塞目标对照：目标与 COM 世界姿态的角误差分别约 0.017°、0.549°、0.520°，与未转换的 link 姿态比较则约 180°。按 runtime local inertial transform 从 link 重建 COM，角误差不超过约 8.4e-6°。变换由 URDF/runtime 给定，未拟合或手工补角度。仅验证当前 PyBullet/UR5 组合，不据此推断所有机器人或软件版本的 IK 约定。
+
+控制端明确以 URDF tool_tip link 为 TCP：模型世界目标经 `T_world_COM = T_world_link × T_link_inertial` 转为当前原生 IK 请求；作者命令工程对照则先使用逆变换得到 link 目标，再编码为相对动作。位姿误差始终在相同 link 坐标系比较。Bridge 数据编码、尺度、范围和权重均未改动。这也不构成 WidowX 到 UR5 的完整 TCP 标定。
+
+修正后同一固定周期抓取对照，最大旋转误差 0.05855°，16/16 姿态通过 5° 门槛；15/16 位置通过 1cm 门槛，抬升截止误差仍为 6.074cm，整体跟踪仍失败。吸附与释放正常；不拆分作者命令回归对照仍完成任务、奖励 1（仍是诊断范围，不是生产模型）。新增含非零惯性偏移的可逆变换单元测试，共 25 项合同测试通过；非零偏移测试是合成几何测试，不是另一台机器人的物理标定。
+
+旧报告保留以追踪错误解释，当前 [坐标系修正证据](../reports/cliport_tcp_frame_correction.json) 取代其旋转失败归因。下一项只查截止跟踪：当前关节步幅与请求轨迹是否能在 0.2s 内达到；不忽略这一个位置失败，不直接加速或增加时长来宣称通过。没有学习模型或泛化实验。

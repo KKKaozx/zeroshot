@@ -210,6 +210,39 @@ def decode_relative_pose(
     return target_position, target_quaternion
 
 
+def trajectory_to_cliport_primitive(reference_position, reference_quaternion, actions, *, current_open):
+    """Experimental event contract: one complete open/close/open cycle only.
+
+    Event target poses must mean suction contact/release poses. This is not
+    established for arbitrary Bridge reached-pose labels or partial horizons.
+    No action, quaternion, workspace position or missing phase is repaired.
+    """
+    trajectory = np.asarray(actions, dtype=np.float32)
+    reference_position = np.asarray(reference_position, dtype=np.float32)
+    reference_quaternion = np.asarray(reference_quaternion, dtype=np.float32)
+    if (trajectory.ndim != 2 or trajectory.shape[1] != ACTION_DIM or len(trajectory) < 2
+            or not np.isfinite(trajectory).all() or reference_position.shape != (3,)
+            or reference_quaternion.shape != (4,) or not np.isfinite(reference_position).all()
+            or not np.isfinite(reference_quaternion).all()):
+        raise ValueError("Expected finite [T,8] trajectory and a measured reference pose")
+    if (abs(np.linalg.norm(reference_quaternion)-1) > 1e-3
+            or np.any(abs(np.linalg.norm(trajectory[:, 3:7], axis=1)-1) > 1e-3)):
+        raise ValueError("Unit xyzw quaternions required; no implicit repair")
+    if not isinstance(current_open, (bool, np.bool_)) or not current_open:
+        raise ValueError("Complete primitive requires an initially open suction command")
+    if not np.all(np.isclose(np.abs(trajectory[:, 7]), 1., atol=1e-6, rtol=0)):
+        raise ValueError("Explicit binary open-positive commands required")
+    states = np.r_[True, trajectory[:, 7] > 0]
+    closing = np.flatnonzero(states[:-1] & ~states[1:])
+    opening = np.flatnonzero(~states[:-1] & states[1:])
+    if len(closing) != 1 or len(opening) != 1 or closing[0] >= opening[0]:
+        raise ValueError("Need exactly one complete closing then opening event; partial/multiple cycles rejected")
+    pick, place = int(closing[0]), int(opening[0])
+    primitive = {key: decode_relative_pose(reference_position, reference_quaternion, trajectory[index])
+                 for key, index in (("pose0", pick), ("pose1", place))}
+    return primitive, dict(contract="cliport_event_primitive_v1", pick_index=pick, place_index=place)
+
+
 def rotation_vector_to_quaternion(rotation_vector: np.ndarray) -> np.ndarray:
     """Convert an axis-angle rotation vector to an ``xyzw`` quaternion."""
     rotation_vector = np.asarray(rotation_vector, dtype=np.float32).reshape(-1)

@@ -38,6 +38,8 @@ def main():
                         help="Diagnostic intervention: restore recorded rigid poses before one action")
     parser.add_argument("--save-oracle-dir", type=Path,
                         help="Save one fresh expert engineering episode using the author writer")
+    parser.add_argument("--event-adapter-control", action="store_true",
+                        help="Synthetic trajectory fixture from author poses; no learned model")
     args = parser.parse_args()
     if args.output_json.exists() or args.max_episodes < 1:
         raise ValueError("Choose a new report path and positive episode count")
@@ -49,6 +51,8 @@ def main():
     if args.save_oracle_dir is not None and (
             not args.oracle_smoke or args.max_episodes != 1 or args.save_oracle_dir.exists()):
         raise ValueError("Expert export requires oracle mode, one episode and a new directory")
+    if args.event_adapter_control and (args.oracle_smoke or args.restore_recorded_reset):
+        raise ValueError("Event adapter control uses a strict seeded recorded scene")
     author = args.author_root.resolve()
     # Skip ONLY the package facade that eagerly imports learned agents/models.
     # Environment, task, primitive, rendering and reward source remain unchanged.
@@ -61,7 +65,7 @@ def main():
 
     root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(root / "code"))
-    from dataset import UnifiedRobotDataset
+    from dataset import UnifiedRobotDataset, relative_pose_action, trajectory_to_cliport_primitive
     task_name = "stack-block-pyramid-seq-seen-colors"
     action_dir = args.dataset_dir / "data" / (task_name + "-train") / "action"
     files = sorted(action_dir.glob("*.pkl"))[:args.max_episodes]
@@ -73,9 +77,11 @@ def main():
     report = dict(task=task_name, mode="train", model_used=False, trained=False,
                   test_targets_used=False, hz=480, simulation_executed=True,
                   package_facade_skipped=True, author_source_hashes=source_hashes,
-                  action_source="author_oracle" if args.oracle_smoke else "stored_training_primitives",
+                  action_source=("synthetic_author_endpoint_event_fixture" if args.event_adapter_control
+                                 else "author_oracle" if args.oracle_smoke else "stored_training_primitives"),
                   restore_recorded_reset=args.restore_recorded_reset,
                   restore_before_step=args.restore_before_step,
+                  event_adapter_control=args.event_adapter_control,
                   primitive_return_observed=True, grasp_return_observed=True,
                   versions={n: importlib.metadata.version(n) for n in
                             ("numpy", "pybullet", "gym", "torch", "opencv-python")}, episodes=[])
@@ -171,6 +177,27 @@ def main():
                 if action is None:
                     row["stopped"] = "Oracle returned no action"
                     break
+                adapter_control = None
+                if args.event_adapter_control:
+                    # Structural fixture ONLY: author endpoints and supplied phase labels.
+                    # This does not infer pick/place phases from Bridge or model predictions.
+                    tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                    reference_position, reference_quaternion = np.asarray(tcp[4]), np.asarray(tcp[5])
+                    fixture = np.stack([relative_pose_action(reference_position, reference_quaternion,
+                        *action["pose0" if i < 11 else "pose1"],
+                        1. if i < 3 or i >= 11 else -1.) for i in range(16)])
+                    original = action
+                    action, adapter_control = trajectory_to_cliport_primitive(
+                        reference_position, reference_quaternion, fixture, current_open=True)
+                    if env.ee.activated:
+                        raise ValueError("Fixture requires an actually released suction command")
+                    adapter_control["synthetic_author_endpoints"] = True
+                    adapter_control["normalized_xyz_absmax"] = float(np.abs(fixture[:, :3]).max())
+                    adapter_control["fits_existing_clip_3"] = adapter_control["normalized_xyz_absmax"] <= 3.
+                    adapter_control["world_position_max_error_m"] = max(float(np.linalg.norm(action[k][0]-original[k][0])) for k in action)
+                    for pose in action.values():
+                        if np.any(pose[0] < env.position_bounds.low) or np.any(pose[0] > env.position_bounds.high):
+                            raise ValueError("Adapter endpoint outside author workspace; no clipping")
                 if args.save_oracle_dir is not None:
                     fresh_records.append((current_obs, action, current_reward, current_info))
                 obs, reward, done, _ = env.step(action)
@@ -180,6 +207,8 @@ def main():
                     empty_observation=len(obs["color"]) == 0, **observation))
                 if intervention is not None:
                     row["steps"][-1]["state_intervention"] = intervention
+                if adapter_control is not None:
+                    row["steps"][-1]["event_adapter_control"] = adapter_control
                 if not args.oracle_smoke:
                     row["steps"][-1]["stored_next_reward"] = float(episode["reward"][step+1])
                     pos_error, rot_error = pose_errors(episode["info"][step+1], env.info)

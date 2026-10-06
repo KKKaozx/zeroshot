@@ -1,0 +1,113 @@
+{
+  "scope": "Experimental native event mapper plus synthetic author endpoint execution; no model predictions",
+  "decision": "Retain native mapper as a bounded control; choose continuous TCP controller for future 16-step rollout integration",
+  "mapper_contract": "cliport_event_primitive_v1",
+  "model_used": false,
+  "trained": false,
+  "generalization_tested": false,
+  "test_targets_used": false,
+  "author_endpoint_fixture_is_synthetic": true,
+  "grasp_release_phase_labels_supplied": true,
+  "unit_tests_passed": 12,
+  "existing_dataset_top_level_definitions_unchanged": 15,
+  "author_commit": "2be5c47b5bb9bb7040ad90693288b87b1e18e7ad",
+  "scene_seed": 0,
+  "episode_count": 1,
+  "fixture_count": 7,
+  "total_reward": 0.9999999999999999,
+  "done": true,
+  "geometry_world_error_max_m": 2.215843254024245e-07,
+  "fixtures_outside_existing_xyz_clip_3": 6,
+  "event_controls": [
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 2.7188103199005127,
+      "fits_existing_clip_3": true,
+      "world_position_max_error_m": 2.215843254024245e-07
+    },
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 3.320335626602173,
+      "fits_existing_clip_3": false,
+      "world_position_max_error_m": 8.94263676118687e-08
+    },
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 3.3236052989959717,
+      "fits_existing_clip_3": false,
+      "world_position_max_error_m": 1.4904141128211592e-07
+    },
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 3.322350263595581,
+      "fits_existing_clip_3": false,
+      "world_position_max_error_m": 1.9002632416571453e-07
+    },
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 3.995107412338257,
+      "fits_existing_clip_3": false,
+      "world_position_max_error_m": 2.149076032706161e-08
+    },
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 4.238111972808838,
+      "fits_existing_clip_3": false,
+      "world_position_max_error_m": 1.2054293402730733e-07
+    },
+    {
+      "contract": "cliport_event_primitive_v1",
+      "pick_index": 3,
+      "place_index": 11,
+      "synthetic_author_endpoints": true,
+      "normalized_xyz_absmax": 3.822340965270996,
+      "fits_existing_clip_3": false,
+      "world_position_max_error_m": 2.9802322387695312e-08
+    }
+  ],
+  "bridge_ground_truth_syntax_coverage": {
+    "scope": "Ground-truth target syntax only, not model predictions or physical grasp validity",
+    "current_command_unknown": true,
+    "initial_open_assumption_is_not_bridge_measurement_calibration": true,
+    "counts": {
+      "train": {
+        "windows": 316,
+        "complete_cycles_assuming_initial_open": 16,
+        "open_close_open_inside_targets": 0
+      },
+      "validation": {
+        "windows": 55,
+        "complete_cycles_assuming_initial_open": 2,
+        "open_close_open_inside_targets": 0
+      }
+    },
+    "source_cache_sha256": "ac2f8bda06a2b85259eab774fcbce84c0c35f8fd8b56441f17f5907042edb5fe"
+  },
+  "raw_native_report_sha256": "d00741102d6be1a36fd19dc52bc151ee3f8c02e55a0aab3ed699c324a3d7c233",
+  "limitations": [
+    "No trajectory predicted by a learned model was tested",
+    "Event poses must actually represent suction contact/release; this is unverified for Bridge reached-pose labels",
+    "Single complete cycle required; absent/multiple events rejected",
+    "Suction command and Bridge continuous gripper measurement are not interchangeable",
+    "Fixture was not clipped to current model xyz bounds",
+    "Continuous evaluation protocol and baseline controls remain to be implemented"
+  ]
+}

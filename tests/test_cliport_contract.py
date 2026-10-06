@@ -10,7 +10,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "code"))
-from dataset import UnifiedRobotDataset
+from dataset import UnifiedRobotDataset, trajectory_to_cliport_primitive
 
 
 class NativeContractTests(unittest.TestCase):
@@ -68,6 +68,54 @@ class NativeContractTests(unittest.TestCase):
         self.assertEqual(dataset.samples, [])
         with self.assertRaisesRegex(ValueError, "world-frame primitives"):
             dataset._get_cliport({"source": "cliport"})
+
+
+class EventAdapterTests(unittest.TestCase):
+    def fixture(self, commands):
+        actions = np.zeros((len(commands), 8), dtype=np.float32)
+        actions[:, 6] = 1.
+        actions[:, 7] = commands
+        return actions
+
+    def convert(self, actions, current_open=True):
+        return trajectory_to_cliport_primitive([.4, -.1, .2], [0, 0, 0, 1],
+                                               actions, current_open=current_open)
+
+    def test_event_indices_and_rotated_frame_not_first_last(self):
+        actions = self.fixture([1, 1, -1, -1, 1, 1])
+        actions[2, :3] = [.2, .1, 0]
+        actions[4, :3] = [-.3, .2, .1]
+        primitive, meta = trajectory_to_cliport_primitive([.4, -.1, .2],
+            [0, 0, np.sqrt(.5), np.sqrt(.5)], actions, current_open=True)
+        self.assertEqual((meta['pick_index'], meta['place_index']), (2, 4))
+        np.testing.assert_allclose(primitive['pose0'][0], [.39, -.08, .2], atol=1e-6)
+        np.testing.assert_allclose(primitive['pose1'][0], [.38, -.13, .21], atol=1e-6)
+
+    def test_missing_release_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'complete'):
+            self.convert(self.fixture([1, -1, -1]))
+
+    def test_no_grasp_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'complete'):
+            self.convert(self.fixture([1, 1, 1]))
+
+    def test_multiple_cycles_are_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'multiple'):
+            self.convert(self.fixture([-1, 1, -1, 1]))
+
+    def test_already_closed_reference_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'initially open'):
+            self.convert(self.fixture([-1, 1]), current_open=False)
+
+    def test_uncertain_command_is_not_rounded(self):
+        with self.assertRaisesRegex(ValueError, 'binary'):
+            self.convert(self.fixture([.1, -1, 1]))
+
+    def test_zero_quaternion_is_not_repaired(self):
+        actions = self.fixture([-1, 1])
+        actions[0, 3:7] = 0
+        with self.assertRaisesRegex(ValueError, 'quaternions'):
+            self.convert(actions)
 
 
 if __name__ == "__main__":

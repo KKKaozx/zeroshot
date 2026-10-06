@@ -1,11 +1,28 @@
 """Experimental continuous TCP execution, distinct from native pick/place primitives."""
 import numpy as np
 
-from dataset import decode_relative_pose
+from dataset import ACTION_REPRESENTATION, POSITION_SCALE_METERS, decode_relative_pose
 
 
 class ContinuousTCPController:
     contract = "cliport_continuous_tcp_open_positive_v1"
+
+    @classmethod
+    def from_action_config(cls, env, action_config, *, workspace=None):
+        """Check checkpoint geometry and use its declared bound without fallback.
+
+        This checks geometry only, not timing, TCP calibration or gripper transfer.
+        """
+        if action_config.get("representation") != ACTION_REPRESENTATION:
+            raise ValueError("Checkpoint must declare the supported relative pose representation")
+        try:
+            scale = float(action_config["position_scale_meters"])
+            bound = float(action_config["max_normalized_position"])
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError("Checkpoint must declare numeric position scale and bound") from error
+        if not np.isclose(scale, POSITION_SCALE_METERS, rtol=0, atol=1e-12):
+            raise ValueError("Checkpoint position scale differs from the geometric decoder")
+        return cls(env, max_normalized_position=bound, workspace=workspace)
 
     def __init__(self, env, *, max_normalized_position=3., workspace=None):
         self.env = env

@@ -1,0 +1,150 @@
+{
+  "purpose": "Training-label, sampling-bound and controller geometry agreement; no training or learned rollout",
+  "previous_range_report": "reports/bridge_distribution_review_20261006.json",
+  "cache_sha256": "ac2f8bda06a2b85259eab774fcbce84c0c35f8fd8b56441f17f5907042edb5fe",
+  "action_config": {
+    "representation": "tool_relative_pose_open_positive_v2",
+    "position_scale_meters": 0.1,
+    "max_normalized_position": 3.0,
+    "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+  },
+  "tests_passed": 21,
+  "partitions": {
+    "train": {
+      "windows": 316,
+      "valid_targets": 5056,
+      "normalized_xyz_absmax": 3.2844841480255127,
+      "targets_exceeding_bound": 20,
+      "affected_windows": [
+        {
+          "index": 90,
+          "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::38",
+          "start": 24,
+          "affected_targets": 5,
+          "mean_position_error_lower_bound_cm": 0.316646546125412,
+          "max_position_error_lower_bound_cm": 1.40411376953125
+        },
+        {
+          "index": 193,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+          "start": 12,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.060832202434539795,
+          "max_position_error_lower_bound_cm": 0.9733152389526367
+        },
+        {
+          "index": 194,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+          "start": 16,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.017366111278533936,
+          "max_position_error_lower_bound_cm": 0.27785778045654297
+        },
+        {
+          "index": 196,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+          "start": 24,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.0017277896404266357,
+          "max_position_error_lower_bound_cm": 0.027644634246826172
+        },
+        {
+          "index": 201,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+          "start": 44,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.09892836213111877,
+          "max_position_error_lower_bound_cm": 1.5828537940979004
+        },
+        {
+          "index": 202,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+          "start": 48,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.14138579368591309,
+          "max_position_error_lower_bound_cm": 2.2621726989746094
+        },
+        {
+          "index": 213,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::1",
+          "start": 8,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.013879388570785522,
+          "max_position_error_lower_bound_cm": 0.22207021713256836
+        },
+        {
+          "index": 235,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::10",
+          "start": 12,
+          "affected_targets": 4,
+          "mean_position_error_lower_bound_cm": 0.4256947338581085,
+          "max_position_error_lower_bound_cm": 2.844841480255127
+        },
+        {
+          "index": 241,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::10",
+          "start": 36,
+          "affected_targets": 4,
+          "mean_position_error_lower_bound_cm": 0.4114632308483124,
+          "max_position_error_lower_bound_cm": 2.67484188079834
+        },
+        {
+          "index": 386,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::45",
+          "start": 4,
+          "affected_targets": 1,
+          "mean_position_error_lower_bound_cm": 0.0062622129917144775,
+          "max_position_error_lower_bound_cm": 0.10019540786743164
+        }
+      ],
+      "mean_error_lower_bound_cm": 0.0047284378670156,
+      "max_error_lower_bound_cm": 2.844841480255127
+    },
+    "validation": {
+      "windows": 55,
+      "valid_targets": 880,
+      "normalized_xyz_absmax": 2.7915077209472656,
+      "targets_exceeding_bound": 0,
+      "affected_windows": [],
+      "mean_error_lower_bound_cm": 0.0,
+      "max_error_lower_bound_cm": 0.0
+    }
+  },
+  "cached_config_factory_check": {
+    "passed": true,
+    "controller_bound": 3.0
+  },
+  "previous_five_failed_fit_windows": {
+    "indices": [
+      90,
+      235,
+      241,
+      247,
+      327
+    ],
+    "also_affected_by_clip": [
+      90,
+      235,
+      241
+    ],
+    "not_affected_by_clip": [
+      247,
+      327
+    ],
+    "scope": "Window overlap is not causal attribution of all recorded fitting errors."
+  },
+  "decision": {
+    "scale_meters": 0.1,
+    "reference": "One measured input TCP pose for the entire block; never re-anchor rows cumulatively",
+    "command_execution": "Native movep/IK to each validated target; do not insert Cartesian waypoints to satisfy normalized bounds",
+    "bounds": "Read from checkpoint action config; reject incompatible scale/representation/missing bound; no silent fallback or clipping in controller",
+    "training_admission": "Future selected training targets must fit declared sampling range, or protocol must explicitly change before training. Existing labels, checkpoint bound and weights unchanged.",
+    "not_resolved": [
+      "Observed Bridge targets versus low-level commands",
+      "Timing and control frequency",
+      "Cross-robot TCP and suction/gripper semantics",
+      "New-demonstration generalization"
+    ],
+    "claims": "Geometry config check does not establish robot-transfer validity or learned task success."
+  }
+}

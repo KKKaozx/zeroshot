@@ -6,6 +6,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'code'))
 from cliport_controller import ContinuousTCPController
+from dataset import ACTION_REPRESENTATION
 
 
 class EndEffector:
@@ -41,6 +42,24 @@ class Environment:
 
 
 class ContinuousTests(unittest.TestCase):
+    def test_checkpoint_range_is_used_without_default_fallback(self):
+        config = dict(representation=ACTION_REPRESENTATION, position_scale_meters=.1,
+                      max_normalized_position=2.)
+        env = Environment(); controller = ContinuousTCPController.from_action_config(env, config)
+        with self.assertRaisesRegex(ValueError, 'no clipping'):
+            controller.execute(self.actions([2.1]), [.4, 0, .2], [0, 0, 0, 1])
+        self.assertEqual(env.calls, [])
+
+    def test_incompatible_checkpoint_geometry_is_rejected(self):
+        config = dict(representation=ACTION_REPRESENTATION, position_scale_meters=.1,
+                      max_normalized_position=3.)
+        for key, value in [('representation', 'absolute_pose'), ('position_scale_meters', .01),
+                           ('max_normalized_position', None), ('max_normalized_position', float('inf'))]:
+            with self.subTest(key=key, value=value), self.assertRaises(ValueError):
+                ContinuousTCPController.from_action_config(Environment(), dict(config, **{key: value}))
+        with self.assertRaises(ValueError):
+            ContinuousTCPController.from_action_config(Environment(), {})
+
     def actions(self, xs):
         a = np.zeros((len(xs), 8), np.float32)
         a[:, 0], a[:, 6], a[:, 7] = xs, 1., 1.

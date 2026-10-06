@@ -1,0 +1,368 @@
+{
+  "scope": "One training episode only; native execution checks, not learned policy or benchmark evaluation",
+  "author_commit": "2be5c47b5bb9bb7040ad90693288b87b1e18e7ad",
+  "author_repo": "https://github.com/cliport/cliport",
+  "author_snapshot_git_blob_verification": {
+    "files_checked": 239,
+    "all_match": true
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "versions": {
+    "numpy": "1.26.4",
+    "pybullet": "3.2.7",
+    "gym": "0.17.3",
+    "torch": "2.11.0+cu128",
+    "opencv-python": "4.10.0.84"
+  },
+  "package_facade_skipped": true,
+  "author_task_environment_primitive_reward_bodies_modified": false,
+  "original_requirements_reproduced": false,
+  "inherited_tensorflow_dependency_compatible": false,
+  "training_environment_modified": false,
+  "model_used": false,
+  "trained": false,
+  "test_targets_used": false,
+  "primitive_timeout_directly_observable": false,
+  "retained_source_and_replay_env_MiB": 418.6,
+  "checks": {
+    "seed_reset": {
+      "action_source": "stored_training_primitives",
+      "episodes": [
+        {
+          "file": "000000-0.pkl",
+          "seed": 0,
+          "reset_position_max_m": 0.3312647402380761,
+          "reset_rotation_max_deg": 0.0,
+          "reset_language_matches": true,
+          "steps": [],
+          "total_reward": 0.0,
+          "success": false,
+          "stopped": "Initial scene mismatch; stored actions were not executed"
+        }
+      ],
+      "raw_report_sha256": "a04a30a8331b2d3f20ec446d1cfd3270a84fde6ab53743acdb35963287379979"
+    },
+    "fresh_oracle": {
+      "action_source": "author_oracle",
+      "episodes": [
+        {
+          "file": "000000-0.pkl",
+          "seed": 0,
+          "reset_position_max_m": 0.3312647402380761,
+          "reset_rotation_max_deg": 0.0,
+          "reset_language_matches": true,
+          "steps": [
+            {
+              "index": 0,
+              "reward": 0.16666666666666666,
+              "done": false,
+              "empty_observation": false
+            },
+            {
+              "index": 1,
+              "reward": 0.16666666666666666,
+              "done": false,
+              "empty_observation": false
+            },
+            {
+              "index": 2,
+              "reward": 0.0,
+              "done": false,
+              "empty_observation": false
+            },
+            {
+              "index": 3,
+              "reward": 0.16666666666666669,
+              "done": false,
+              "empty_observation": false
+            },
+            {
+              "index": 4,
+              "reward": 0.16666666666666663,
+              "done": false,
+              "empty_observation": false
+            },
+            {
+              "index": 5,
+              "reward": 0.16666666666666663,
+              "done": false,
+              "empty_observation": false
+            },
+            {
+              "index": 6,
+              "reward": 0.16666666666666663,
+              "done": true,
+              "empty_observation": false
+            }
+          ],
+          "total_reward": 0.9999999999999999,
+          "success": true,
+          "reset_objects": {
+            "5": {
+              "stored_xyz": [
+                0.35625,
+                0.04062500000000002,
+                0.0025
+              ],
+              "recreated_xyz": [
+                0.35625,
+                0.04062500000000002,
+                0.0025
+              ]
+            },
+            "6": {
+              "stored_xyz": [
+                0.4375,
+                0.11562500000000009,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.415625,
+                0.11562500000000009,
+                0.02
+              ]
+            },
+            "7": {
+              "stored_xyz": [
+                0.534375,
+                -0.09999999999999998,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.609375,
+                -0.09999999999999998,
+                0.02
+              ]
+            },
+            "8": {
+              "stored_xyz": [
+                0.41875,
+                -0.08124999999999999,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.5218750000000001,
+                -0.08124999999999999,
+                0.02
+              ]
+            },
+            "9": {
+              "stored_xyz": [
+                0.45,
+                0.44062500000000004,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.43125,
+                0.44062500000000004,
+                0.02
+              ]
+            },
+            "10": {
+              "stored_xyz": [
+                0.334375,
+                0.28437500000000004,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.665625,
+                0.28125,
+                0.02
+              ]
+            },
+            "11": {
+              "stored_xyz": [
+                0.621875,
+                0.05312499999999998,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.51875,
+                0.05312499999999998,
+                0.02
+              ]
+            }
+          }
+        }
+      ],
+      "raw_report_sha256": "5395be429d06f8d355a1034be69e890562401f8c99e1c2bffc1bb0f8075fb9b0"
+    },
+    "recorded_state_replay": {
+      "action_source": "stored_training_primitives",
+      "episodes": [
+        {
+          "file": "000000-0.pkl",
+          "seed": 0,
+          "reset_position_max_m": 0.3312647402380761,
+          "reset_rotation_max_deg": 0.0,
+          "reset_language_matches": true,
+          "steps": [
+            {
+              "index": 0,
+              "reward": 0.16666666666666666,
+              "done": false,
+              "stored_next_reward": 0.16666666666666666,
+              "object_position_max_m_vs_recording": 3.2367146263480063e-07,
+              "object_rotation_max_deg_vs_recording": 0.00037265630412898525,
+              "empty_observation": false
+            },
+            {
+              "index": 1,
+              "reward": 0.16666666666666666,
+              "done": false,
+              "stored_next_reward": 0.16666666666666666,
+              "object_position_max_m_vs_recording": 2.8116212491019835e-07,
+              "object_rotation_max_deg_vs_recording": 8.87267600082681e-05,
+              "empty_observation": false
+            },
+            {
+              "index": 2,
+              "reward": 0.0,
+              "done": false,
+              "stored_next_reward": 0.0,
+              "object_position_max_m_vs_recording": 2.812371336398894e-07,
+              "object_rotation_max_deg_vs_recording": 8.887451491496322e-05,
+              "empty_observation": false
+            },
+            {
+              "index": 3,
+              "reward": 0.16666666666666669,
+              "done": false,
+              "stored_next_reward": 0.16666666666666669,
+              "object_position_max_m_vs_recording": 2.812914992419315e-07,
+              "object_rotation_max_deg_vs_recording": 8.897288186805479e-05,
+              "empty_observation": false
+            },
+            {
+              "index": 4,
+              "reward": 0.16666666666666663,
+              "done": false,
+              "stored_next_reward": 0.16666666666666663,
+              "object_position_max_m_vs_recording": 9.97461290715686e-05,
+              "object_rotation_max_deg_vs_recording": 0.03218649712227142,
+              "empty_observation": false
+            },
+            {
+              "index": 5,
+              "reward": 0.16666666666666663,
+              "done": false,
+              "stored_next_reward": 0.16666666666666663,
+              "object_position_max_m_vs_recording": 0.0028139464094364517,
+              "object_rotation_max_deg_vs_recording": 2.2975281958675478,
+              "empty_observation": false
+            },
+            {
+              "index": 6,
+              "reward": 0.0,
+              "done": false,
+              "stored_next_reward": 0.16666666666666663,
+              "object_position_max_m_vs_recording": 0.012673129505633431,
+              "object_rotation_max_deg_vs_recording": 26.20768678473359,
+              "empty_observation": false
+            }
+          ],
+          "total_reward": 0.8333333333333333,
+          "success": false,
+          "reset_objects": {
+            "5": {
+              "stored_xyz": [
+                0.35625,
+                0.04062500000000002,
+                0.0025
+              ],
+              "recreated_xyz": [
+                0.35625,
+                0.04062500000000002,
+                0.0025
+              ]
+            },
+            "6": {
+              "stored_xyz": [
+                0.4375,
+                0.11562500000000009,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.415625,
+                0.11562500000000009,
+                0.02
+              ]
+            },
+            "7": {
+              "stored_xyz": [
+                0.534375,
+                -0.09999999999999998,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.609375,
+                -0.09999999999999998,
+                0.02
+              ]
+            },
+            "8": {
+              "stored_xyz": [
+                0.41875,
+                -0.08124999999999999,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.5218750000000001,
+                -0.08124999999999999,
+                0.02
+              ]
+            },
+            "9": {
+              "stored_xyz": [
+                0.45,
+                0.44062500000000004,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.43125,
+                0.44062500000000004,
+                0.02
+              ]
+            },
+            "10": {
+              "stored_xyz": [
+                0.334375,
+                0.28437500000000004,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.665625,
+                0.28125,
+                0.02
+              ]
+            },
+            "11": {
+              "stored_xyz": [
+                0.621875,
+                0.05312499999999998,
+                0.02
+              ],
+              "recreated_xyz": [
+                0.51875,
+                0.05312499999999998,
+                0.02
+              ]
+            }
+          },
+          "restored_position_max_m": 0.0,
+          "restored_rotation_max_deg": 0.0,
+          "restored_object_ids": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "raw_report_sha256": "e9b1eaec902596e34134f80b8a6ff20464c5907773da516845996399355a805a"
+    }
+  },
+  "conclusion": "Fresh author oracle completes one current scene. Seed-only reconstruction differs from stored scene. Restoring logged rigid poses allows recorded primitives to execute; first six rewards match, final placement fails. Neither full historical replay nor learned policy success is established."
+}

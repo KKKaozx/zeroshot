@@ -77,7 +77,7 @@
 
 ## 下一步与停止条件
 
-Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL.md](FORMAL_EXPERIMENT_PROTOCOL.md)。更正此前的路径判断：已有 `_append` 会排除 CLIPort，旧绝对事件位姿函数没有经正常路径进入统一训练，不能被当作历史 Bridge 泛化失败根因。现已阻止旧函数绕过调用，新增独立原生读取：10 条训练演示、61 个 primitive 的记录检查与 5 项合同测试通过。本地 LIBERO 原生动作仍为 7 维 OSC_POSE 增量控制。原生环境回放与统一转换尚未验证，须完成动作/执行接口检查后再进入完整模型基线。
+Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL.md](FORMAL_EXPERIMENT_PROTOCOL.md)。更正此前的路径判断：已有 `_append` 会排除 CLIPort，旧绝对事件位姿函数没有经正常路径进入统一训练，不能被当作历史 Bridge 泛化失败根因。现已阻止旧函数绕过调用，新增独立原生读取：10 条训练演示、61 个 primitive 的记录检查与 5 项合同测试通过。本地 LIBERO 原生动作仍为 7 维 OSC_POSE 增量控制。完整旧演示回放与统一转换尚未通过；当前原生执行核查见下节。须完成动作/执行接口检查后再进入完整模型基线。
 
 有限补充方案 [NEXT_EXPERIMENT.md](NEXT_EXPERIMENT.md) 已由作业 188044 完成，按停止条件结束，不再扫描参数。它不替代老师的正式模型与基准实验。
 
@@ -88,3 +88,7 @@ Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL
 不继续重复头部记忆实验或仅增加轮数，不把小样本训练拟合写成泛化，不把离线动作误差写成仿真成功率。已有 3 条开发演示反复查看，正式最终测试需要保持独立。
 
 当前仅一条 `sweep into pile` 指令，不能开展有效的多指令/反事实泛化结论。正式 8 层 Adapter、联合 DDPM 训练、四种增强、基线比较、LIBERO/CLIPort rollout 均未完成。
+
+## CLIPort 原生执行核查（2026-10-06）
+
+固定作者提交后，仅检查训练 seed 0。作者专家在当前场景完成任务（奖励 1）；旧演示按 seed 重建时最大物体位置差 33.13 cm，未执行旧动作。恢复记录初始物体位姿后，前 6 个动作奖励一致，最后堆叠未完成（总奖励 5/6）。这是环境复现缺口，不涉及学习模型，也不能解释 Bridge 离线泛化失败。见 [CLIPORT_NATIVE_EXECUTION.md](CLIPORT_NATIVE_EXECUTION.md)。

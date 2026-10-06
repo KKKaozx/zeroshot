@@ -1,0 +1,106 @@
+{
+  "job_id": 188044,
+  "job_completed": true,
+  "source_log_sha256": "19f433f983e03908bf26c55757594b1d3701324d87471e18c5342fc43a58bd3e",
+  "source_precision": "Rounded console metrics; exact JSON and per-episode/gripper results not yet retrieved",
+  "baseline_initialization_frozen_parameters_full_input_stream_passed": true,
+  "learning_rate": 3e-05,
+  "training_monitor": [
+    {
+      "step": 0,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 12.7259,
+      "rotation_error_deg": 130.88
+    },
+    {
+      "step": 2500,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 0.1561,
+      "rotation_error_deg": 0.742
+    },
+    {
+      "step": 5000,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 0.1435,
+      "rotation_error_deg": 0.466
+    },
+    {
+      "step": 7500,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 0.2291,
+      "rotation_error_deg": 1.033
+    },
+    {
+      "step": 9000,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 0.3985,
+      "rotation_error_deg": 1.28
+    },
+    {
+      "step": 9500,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 0.0307,
+      "rotation_error_deg": 0.108
+    },
+    {
+      "step": 9875,
+      "sample_seed": 1101,
+      "windows": 316,
+      "position_error_cm": 0.1151,
+      "rotation_error_deg": 0.442
+    }
+  ],
+  "final": [
+    {
+      "sample_seed": 1101,
+      "partition": "train",
+      "windows": 316,
+      "position_error_cm": 0.1151,
+      "rotation_error_deg": 0.442
+    },
+    {
+      "sample_seed": 1101,
+      "partition": "validation",
+      "windows": 55,
+      "position_error_cm": 10.1699,
+      "rotation_error_deg": 15.445
+    },
+    {
+      "sample_seed": 1102,
+      "partition": "train",
+      "windows": 316,
+      "position_error_cm": 0.1151,
+      "rotation_error_deg": 0.442
+    },
+    {
+      "sample_seed": 1102,
+      "partition": "validation",
+      "windows": 55,
+      "position_error_cm": 10.1698,
+      "rotation_error_deg": 15.445
+    },
+    {
+      "sample_seed": 1103,
+      "partition": "train",
+      "windows": 316,
+      "position_error_cm": 0.1151,
+      "rotation_error_deg": 0.442
+    },
+    {
+      "sample_seed": 1103,
+      "partition": "validation",
+      "windows": 55,
+      "position_error_cm": 10.1699,
+      "rotation_error_deg": 15.445
+    }
+  ],
+  "stop_further_learning_rate_search": true,
+  "independent_training_runs": 1,
+  "test_targets_used": false
+}

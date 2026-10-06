@@ -1,0 +1,127 @@
+{
+  "job_id": 188044,
+  "source_report_sha256": "7e14ca3e94e834b0b7e357bfea81d7f33e4e23975cf885dc5bd2c5e0cc54e1ce",
+  "verification": {
+    "initial_state_sha256": true,
+    "frozen_state_sha256": true,
+    "paired_inputs_sha256": true,
+    "frozen_parameters_unchanged": true,
+    "full_training_stream_matches_baseline": true,
+    "all_windows_drawn_2000_times": true
+  },
+  "run_settings": {
+    "arms": [
+      "author"
+    ],
+    "learning_rate": 3e-05,
+    "monitor_steps": [
+      0,
+      2500,
+      5000,
+      7500,
+      9000,
+      9500,
+      9875
+    ],
+    "walltime_seconds": 7200
+  },
+  "independent_training_runs": 1,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "mean_over_sampling_seeds": {
+    "train": {
+      "windows": 316.0,
+      "action_targets": 5056.0,
+      "position_error_cm": 0.11513686222902057,
+      "zero_motion_position_error_cm": 9.869146921829474,
+      "rotation_error_deg": 0.4422229938704036,
+      "identity_rotation_error_deg": 13.652706095033237,
+      "gripper_accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "open_recall": 1.0,
+      "closed_recall": 1.0,
+      "open_to_closed_pairs": 41.0,
+      "open_to_closed_correct": 41.0,
+      "closed_to_open_pairs": 16.0,
+      "closed_to_open_correct": 16.0
+    },
+    "validation": {
+      "windows": 55.0,
+      "action_targets": 880.0,
+      "position_error_cm": 10.169856417109692,
+      "zero_motion_position_error_cm": 9.608274026460759,
+      "rotation_error_deg": 15.44537918150161,
+      "identity_rotation_error_deg": 12.941876599364264,
+      "gripper_accuracy": 0.9090909090909091,
+      "balanced_accuracy": 0.6743153606434652,
+      "open_recall": 0.39436619718309857,
+      "closed_recall": 0.954264524103832,
+      "open_to_closed_pairs": 13.0,
+      "open_to_closed_correct": 0.0,
+      "closed_to_open_pairs": 6.0,
+      "closed_to_open_correct": 0.0
+    }
+  },
+  "validation_episodes_mean_over_sampling_seeds": {
+    "bridge_data_v2-train.tfrecord-00003-of-01024::14": {
+      "windows": 21.0,
+      "action_targets": 336.0,
+      "position_error_cm": 10.7722138295188,
+      "zero_motion_position_error_cm": 10.154419259894068,
+      "rotation_error_deg": 15.863280600979117,
+      "identity_rotation_error_deg": 12.68285258974044,
+      "gripper_accuracy": 0.9047619047619048,
+      "balanced_accuracy": 0.5,
+      "open_recall": 0.0,
+      "closed_recall": 1.0,
+      "open_to_closed_pairs": 7.0,
+      "open_to_closed_correct": 0.0,
+      "closed_to_open_pairs": 4.0,
+      "closed_to_open_correct": 0.0
+    },
+    "bridge_data_v2-train.tfrecord-00015-of-01024::31": {
+      "windows": 16.0,
+      "action_targets": 256.0,
+      "position_error_cm": 12.744869414435335,
+      "zero_motion_position_error_cm": 11.230821214298283,
+      "rotation_error_deg": 12.203033695671957,
+      "identity_rotation_error_deg": 11.87090963593846,
+      "gripper_accuracy": 0.84765625,
+      "balanced_accuracy": 0.8848082595870205,
+      "open_recall": 0.9333333333333332,
+      "closed_recall": 0.8362831858407079,
+      "open_to_closed_pairs": 4.0,
+      "open_to_closed_correct": 0.0,
+      "closed_to_open_pairs": 1.0,
+      "closed_to_open_correct": 0.0
+    },
+    "bridge_data_v2-train.tfrecord-00019-of-01024::5": {
+      "windows": 18.0,
+      "action_targets": 288.0,
+      "position_error_cm": 7.178205660565162,
+      "zero_motion_position_error_cm": 7.528840420488539,
+      "rotation_error_deg": 17.839912401737546,
+      "identity_rotation_error_deg": 14.196041911415,
+      "gripper_accuracy": 0.96875,
+      "balanced_accuracy": 0.5,
+      "open_recall": 0.0,
+      "closed_recall": 1.0,
+      "open_to_closed_pairs": 2.0,
+      "open_to_closed_correct": 0.0,
+      "closed_to_open_pairs": 1.0,
+      "closed_to_open_correct": 0.0
+    }
+  },
+  "decision": {
+    "final_training_pose_threshold_passed": true,
+    "development_pose_beats_baseline_every_seed_and_episode": false,
+    "stop_further_learning_rate_search": true,
+    "gripper_requires_separate_assessment": true
+  },
+  "validation_used_for_optimizer": false,
+  "test_targets_used": false,
+  "scope": "One author learning-rate follow-up; no architecture comparison or zero-shot success claim."
+}

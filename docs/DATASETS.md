@@ -41,3 +41,10 @@ Download/source information:
 [LIBERO](https://libero-project.github.io/), [CLIPort](https://cliport.github.io/).
 LIBERO and CLIPort are planned simulation benchmarks; their names do not denote
 the current three-episode Bridge validation split.
+
+CLIPort is already excluded by the unified loader because its world-frame
+`pose0`/`pose1` primitives lack synchronized input TCP poses for the Bridge
+contract. The legacy synthetic reader now rejects calls.
+`read_cliport_native_episode` preserves the native records separately; it does
+not provide unified training targets. Ten training episodes (61 primitives)
+passed record checks; environment replay remains unverified.

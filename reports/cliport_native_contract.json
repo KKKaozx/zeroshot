@@ -1,0 +1,424 @@
+{
+  "action_representation": "cliport_world_pick_place_v1",
+  "training_episodes": 10,
+  "primitive_actions": 61,
+  "native_record_checks_passed": true,
+  "trained": false,
+  "test_targets_used": false,
+  "simulation_executed": false,
+  "unified_conversion_verified": false,
+  "note": "Existing unified loader already excludes CLIPort; native checks do not prove physical replay success.",
+  "rows": [
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000000-0.pkl",
+      "action_file_sha256": "1d9b034f42e123c1bc366164901cb6029a0b5bccf9562e9f279601cc4a0b0267",
+      "observation_records": 8,
+      "primitive_actions": 7,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "color_shape": [
+        8,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the brown block on the lightest brown block",
+        "put the green block on the middle brown block",
+        "put the red block on the darkest brown block",
+        "put the blue block on the brown and green blocks",
+        "put the gray block on the green and red blocks",
+        "put the yellow block on the blue and gray blocks"
+      ],
+      "native_xyz_min_m": [
+        0.31488803029060364,
+        -0.11874999999999997,
+        0.03814697265625
+      ],
+      "native_xyz_max_m": [
+        0.6125,
+        0.45000000000000007,
+        0.15245068073272705
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000001-2.pkl",
+      "action_file_sha256": "fb79edd49038b78b04e0fe56ce323e16c67286c79a7f3186dff92aa43303376d",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the red block on the lightest brown block",
+        "put the blue block on the middle brown block",
+        "put the green block on the darkest brown block",
+        "put the gray block on the red and blue blocks",
+        "put the yellow block on the blue and green blocks",
+        "put the brown block on the gray and yellow blocks"
+      ],
+      "native_xyz_min_m": [
+        0.259375,
+        -0.38125,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.7,
+        0.171875,
+        0.15245071053504944
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000002-4.pkl",
+      "action_file_sha256": "5c39d9f993d78b33237e5749822bed37f2ba4cb450bdee525e65528f06bdd4fc",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the brown block on the lightest brown block",
+        "put the yellow block on the middle brown block",
+        "put the cyan block on the darkest brown block",
+        "put the gray block on the brown and yellow blocks",
+        "put the red block on the yellow and cyan blocks",
+        "put the green block on the gray and red blocks"
+      ],
+      "native_xyz_min_m": [
+        0.290625,
+        -0.26249999999999996,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.5531250000000001,
+        0.4279896020889282,
+        0.15245045721530914
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000003-8.pkl",
+      "action_file_sha256": "0ddf9572cdaed306b46584052b2d18d16df20c4c7f9880ff94ab26861c1f6cd7",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the brown block on the lightest brown block",
+        "put the red block on the middle brown block",
+        "put the cyan block on the darkest brown block",
+        "put the blue block on the brown and red blocks",
+        "put the gray block on the red and cyan blocks",
+        "put the yellow block on the blue and gray blocks"
+      ],
+      "native_xyz_min_m": [
+        0.33734238147735596,
+        -0.271875,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.675,
+        0.36756211519241333,
+        0.15245072543621063
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000004-10.pkl",
+      "action_file_sha256": "38c2964915ac562dbeea35a00f8eade03aaa20c241c26ec303a91c46f94403aa",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the red block on the lightest brown block",
+        "put the yellow block on the middle brown block",
+        "put the cyan block on the darkest brown block",
+        "put the green block on the red and yellow blocks",
+        "put the blue block on the yellow and cyan blocks",
+        "put the brown block on the green and blue blocks"
+      ],
+      "native_xyz_min_m": [
+        0.4,
+        -0.4625,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.73125,
+        0.2614518105983734,
+        0.15245071053504944
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000005-12.pkl",
+      "action_file_sha256": "3e40af207fc8d8443e97385ce1a1be4b33e1263dde40dff575d717359bc68f31",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the gray block on the lightest brown block",
+        "put the yellow block on the middle brown block",
+        "put the red block on the darkest brown block",
+        "put the brown block on the gray and yellow blocks",
+        "put the blue block on the yellow and red blocks",
+        "put the cyan block on the brown and blue blocks"
+      ],
+      "native_xyz_min_m": [
+        0.290625,
+        -0.45625,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.6156250000000001,
+        0.43125,
+        0.15245091915130615
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000006-14.pkl",
+      "action_file_sha256": "f08e861f92fdae728980f21b41a9f618fed32c230060804857060bd6525074ce",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the green block on the lightest brown block",
+        "put the red block on the middle brown block",
+        "put the brown block on the darkest brown block",
+        "put the yellow block on the green and red blocks",
+        "put the cyan block on the red and brown blocks",
+        "put the blue block on the yellow and cyan blocks"
+      ],
+      "native_xyz_min_m": [
+        0.271875,
+        -0.21249999999999997,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.68125,
+        0.36250000000000004,
+        0.15245069563388824
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000007-16.pkl",
+      "action_file_sha256": "d080c0483026d497b4b9d33a572d2d072253e3835dc97ce93fd7f437ccbae7c4",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the cyan block on the lightest brown block",
+        "put the green block on the middle brown block",
+        "put the red block on the darkest brown block",
+        "put the gray block on the cyan and green blocks",
+        "put the blue block on the green and red blocks",
+        "put the yellow block on the gray and blue blocks"
+      ],
+      "native_xyz_min_m": [
+        0.303125,
+        -0.415625,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.6272183060646057,
+        0.25312500000000004,
+        0.15245069563388824
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000008-18.pkl",
+      "action_file_sha256": "858671824700a9ccf584abe3c9b73d8a97f53e4da9060d99ea6b4442663d68ef",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the brown block on the lightest brown block",
+        "put the blue block on the middle brown block",
+        "put the yellow block on the darkest brown block",
+        "put the red block on the brown and blue blocks",
+        "put the gray block on the blue and yellow blocks",
+        "put the cyan block on the red and gray blocks"
+      ],
+      "native_xyz_min_m": [
+        0.346875,
+        -0.24374999999999997,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.7125,
+        0.34687500000000004,
+        0.15245069563388824
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    },
+    {
+      "file": "data\\stack-block-pyramid-seq-seen-colors-train\\action\\000009-20.pkl",
+      "action_file_sha256": "6f16d980da991bb0a0771c78ffb495e7e6ef3617277a92cb0f97edd238617573",
+      "observation_records": 7,
+      "primitive_actions": 6,
+      "executable_step_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "color_shape": [
+        7,
+        3,
+        480,
+        640,
+        3
+      ],
+      "instructions": [
+        "put the gray block on the lightest brown block",
+        "put the brown block on the middle brown block",
+        "put the red block on the darkest brown block",
+        "put the yellow block on the gray and brown blocks",
+        "put the blue block on the brown and red blocks",
+        "put the green block on the yellow and blue blocks"
+      ],
+      "native_xyz_min_m": [
+        0.421875,
+        -0.4625,
+        0.0389404296875
+      ],
+      "native_xyz_max_m": [
+        0.6625000000000001,
+        0.384375,
+        0.15245091915130615
+      ],
+      "json_roundtrip_preserves_pose": true,
+      "unified_training_compatible": false
+    }
+  ]
+}

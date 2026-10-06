@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -357,6 +358,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="生成统一机器人数据的第一阶段验收报告")
     parser.add_argument("--single-source-check", choices=("bcz", "bridge"),
                         help="独立原始记录/图像/PyBullet转换核对；单一来源，不训练")
+    parser.add_argument("--cliport-native-only", action="store_true",
+                        help="只核验CLIPort训练分区原生primitive及观测索引，不转换8维目标或运行仿真")
     parser.add_argument("--tfds-reference", action="store_true",
                         help="Bridge单来源审计：用元数据驱动的官方TFDS入口独立对照原始字段")
     parser.add_argument("--bridge-timeline", action="store_true",
@@ -387,6 +390,42 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--stats-samples", type=int, default=32)
     parser.add_argument("--samples-per-schema", type=int, default=3)
     return parser.parse_args()
+
+
+def audit_cliport_native(args):
+    output = Path(args.output_dir)
+    if output.exists() and any(output.iterdir()):
+        raise ValueError("Preserve existing reports; choose a new output directory")
+    files = sorted(Path(args.dataset_dir).glob("**/*-train/action/*.pkl"))
+    if not files:
+        raise ValueError("No CLIPort *-train/action/*.pkl files found")
+    rows = []
+    for path in files:
+        episode = UnifiedRobotDataset.read_cliport_native_episode(path)
+        positions = []
+        for step in episode["executable_step_indices"]:
+            action = episode["action"][step]
+            serial = {key: [np.asarray(v).tolist() for v in pose] for key, pose in action.items()}
+            restored = json.loads(json.dumps(serial, allow_nan=False))
+            for key in ("pose0", "pose1"):
+                for original, actual in zip(action[key], restored[key]):
+                    assert np.array_equal(np.asarray(original), np.asarray(actual))
+                positions.append(np.asarray(action[key][0], dtype=float))
+        rows.append(dict(file=str(path.relative_to(Path(args.dataset_dir))),
+            action_file_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+            observation_records=len(episode["color"]), primitive_actions=len(episode["executable_step_indices"]),
+            executable_step_indices=episode["executable_step_indices"],
+            color_shape=list(np.asarray(episode["color"]).shape),
+            instructions=list(dict.fromkeys(episode["info"][t]["lang_goal"] for t in episode["executable_step_indices"])),
+            native_xyz_min_m=np.min(positions,axis=0).tolist(), native_xyz_max_m=np.max(positions,axis=0).tolist(),
+            json_roundtrip_preserves_pose=True, unified_training_compatible=False))
+    output.mkdir(parents=True, exist_ok=True)
+    report = dict(action_representation="cliport_world_pick_place_v1", training_episodes=len(rows),
+        primitive_actions=sum(r["primitive_actions"] for r in rows), native_record_checks_passed=True,
+        trained=False, test_targets_used=False, simulation_executed=False, unified_conversion_verified=False,
+        note="Existing unified loader already excludes CLIPort; native checks do not prove physical replay success.", rows=rows)
+    (output/"cliport_native.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
+    print(f"CLIPORT NATIVE RECORD CHECK: PASSED; episodes={len(rows)}, primitives={report['primitive_actions']}; no rollout")
 
 
 def prepare_bridge_task_plan(args: argparse.Namespace) -> None:
@@ -863,6 +902,11 @@ def audit_single_source(args: argparse.Namespace) -> None:
 
 if __name__ == "__main__":
     arguments = parse_args()
+    if arguments.cliport_native_only:
+        if arguments.single_source_check or arguments.bridge_task_plan or arguments.tfds_reference or arguments.bridge_timeline:
+            raise ValueError("Native CLIPort audit cannot combine with Bridge/BC-Z modes")
+        audit_cliport_native(arguments)
+        sys.exit(0)
     if arguments.bridge_task_plan:
         if arguments.tfds_reference or arguments.bridge_timeline or arguments.single_source_check:
             raise ValueError("单任务计划必须单独运行，不能与窗口审计混用")

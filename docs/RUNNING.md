@@ -75,3 +75,16 @@ run GPU work on an allocated compute node.
 No new dataset download, training run, simulation rollout or baseline reproduction
 is performed by this repository update. CLI checks and mathematical self-checks
 do not establish physical robot success or a clean-environment reproduction.
+
+## Native CLIPort record audit
+
+```bash
+python code/audit_dataset.py --cliport-native-only --dataset-dir /path/to/cliport --output-dir /path/to/new-report-directory
+python -m unittest discover -s tests -p test_cliport_contract.py -v
+```
+
+The audit reads only `*-train/action/*.pkl` and matching camera, depth, info and
+reward records. Choose an empty output directory. It verifies record alignment,
+native poses and language fields without training, conversion or rollout.
+The five tests cover pose preservation, malformed alignment/quaternions,
+missing intermediate actions and exclusion from unified training.

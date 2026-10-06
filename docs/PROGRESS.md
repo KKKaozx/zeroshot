@@ -77,7 +77,7 @@
 
 ## 下一步与停止条件
 
-Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL.md](FORMAL_EXPERIMENT_PROTOCOL.md)。现已发现 CLIPort 加载器返回未经相对转换/位置缩放的绝对事件位姿，不符合声明的统一 Bridge 动作合同；本地 LIBERO 原生动作则为 7 维 OSC_POSE 增量控制。先核验并修正动作/执行接口，再进入 8 层完整模型无增强基线。该问题没有参与历史 Bridge 训练，不能被当作其泛化失败根因。
+Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL.md](FORMAL_EXPERIMENT_PROTOCOL.md)。更正此前的路径判断：已有 `_append` 会排除 CLIPort，旧绝对事件位姿函数没有经正常路径进入统一训练，不能被当作历史 Bridge 泛化失败根因。现已阻止旧函数绕过调用，新增独立原生读取：10 条训练演示、61 个 primitive 的记录检查与 5 项合同测试通过。本地 LIBERO 原生动作仍为 7 维 OSC_POSE 增量控制。原生环境回放与统一转换尚未验证，须完成动作/执行接口检查后再进入完整模型基线。
 
 有限补充方案 [NEXT_EXPERIMENT.md](NEXT_EXPERIMENT.md) 已由作业 188044 完成，按停止条件结束，不再扫描参数。它不替代老师的正式模型与基准实验。
 

@@ -1139,51 +1139,65 @@ class UnifiedRobotDataset(
             raise ValueError("CLIPort pose does not contain xyz position")
         return np.concatenate([position[:3], quaternion, [gripper]]).astype(np.float32)
 
+    @staticmethod
+    def read_cliport_native_episode(action_path: str | Path) -> Dict[str, Any]:
+        """Read primitive-aligned records separately from unified training targets.
+
+        Original pose0/pose1 objects, camera arrays and terminal indices are
+        preserved. No inferred TCP pose, gripper command or dense trajectory.
+        """
+        action_path = Path(action_path)
+        task_dir = action_path.parent.parent
+        if action_path.parent.name != "action":
+            raise ValueError("Expected a CLIPort action/<episode>.pkl path")
+        values = {}
+        for component in ("action", "color", "depth", "info", "reward"):
+            with (task_dir / component / action_path.name).open("rb") as stream:
+                values[component] = pickle.load(stream)
+        actions = values["action"]
+        if not isinstance(actions, (list, tuple)) or not actions:
+            raise ValueError("Empty or invalid CLIPort episode")
+        if any(len(value) != len(actions) for value in values.values()):
+            raise ValueError("CLIPort action/observation/info/reward lengths differ")
+        color, depth = np.asarray(values["color"]), np.asarray(values["depth"])
+        if (color.ndim != 5 or color.shape[-1] != 3 or color.dtype != np.uint8
+                or any(dim <= 0 for dim in color.shape)
+                or depth.shape != color.shape[:-1] or not np.isfinite(depth).all()):
+            raise ValueError("Expected aligned [step,camera,H,W,RGB] and depth arrays")
+        steps = []
+        for step, action in enumerate(actions):
+            if action is None:
+                if step != len(actions) - 1:
+                    raise ValueError("Nonterminal missing action; do not reindex observations")
+                continue
+            if not isinstance(action, dict) or set(action) != {"pose0", "pose1"}:
+                raise ValueError("Expected native pose0/pose1 primitive")
+            for key in ("pose0", "pose1"):
+                pose = action[key]
+                if not isinstance(pose, (tuple, list)) or len(pose) != 2:
+                    raise ValueError("Invalid native pose")
+                xyz, q = np.asarray(pose[0]), np.asarray(pose[1])
+                if (xyz.shape != (3,) or q.shape != (4,) or not np.isfinite(xyz).all()
+                        or not np.isfinite(q).all() or abs(np.linalg.norm(q)-1) > 1e-3):
+                    raise ValueError("Native pose requires finite xyz and unit xyzw quaternion")
+            info = values["info"][step]
+            if (not isinstance(info, dict) or not isinstance(info.get("lang_goal"), str)
+                    or not info["lang_goal"].strip()):
+                raise ValueError("Missing native instruction at primitive input")
+            steps.append(step)
+        if not steps:
+            raise ValueError("No executable primitives")
+        return dict(action_representation="cliport_world_pick_place_v1",
+                    compatible_with_unified_training=False, executable_step_indices=steps,
+                    **values)
+
     def _get_cliport(
         self, sample: Dict[str, Any]
     ) -> Tuple[str, torch.Tensor, torch.Tensor, torch.Tensor]:
-        with open(sample["action_path"], "rb") as stream:
-            raw_actions = pickle.load(stream)
-        with open(sample["image_path"], "rb") as stream:
-            color = np.asarray(pickle.load(stream))
-        with open(sample["info_path"], "rb") as stream:
-            information = pickle.load(stream)
-
-        high_level_actions = [action for action in raw_actions if isinstance(action, dict)]
-        start = min(int(sample["start_index"]), max(0, len(high_level_actions) - 1))
-        waypoints: List[np.ndarray] = []
-        for action in high_level_actions[start:]:
-            if "pose0" not in action or "pose1" not in action:
-                continue
-            waypoints.extend(
-                [
-                    self._cliport_pose_action(action["pose0"], +1.0),
-                    self._cliport_pose_action(action["pose0"], -1.0),
-                    self._cliport_pose_action(action["pose1"], -1.0),
-                    self._cliport_pose_action(action["pose1"], +1.0),
-                ]
-            )
-            if len(waypoints) >= self.chunk_size:
-                break
-
-        image = color
-        if image.ndim == 5:  # [time, camera, height, width, channel]
-            image = image[min(start, image.shape[0] - 1), 0]
-        elif image.ndim == 4:
-            image = image[min(start, image.shape[0] - 1)]
-
-        instruction = "perform the manipulation task"
-        if isinstance(information, list) and information:
-            entry = information[min(start, len(information) - 1)]
-            if isinstance(entry, dict):
-                instruction = str(entry.get("lang_goal", instruction))
-        elif isinstance(information, dict):
-            instruction = str(information.get("lang_goal", instruction))
-        return (
-            instruction,
-            prepare_image(image),
-            torch.tensor([1.0], dtype=torch.float32),
-            pad_action_chunk(waypoints, self.chunk_size),
+        raise ValueError(
+            "CLIPort pose0/pose1 are world-frame primitives, not "
+            f"{ACTION_REPRESENTATION}. Use read_cliport_native_episode for native "
+            "interface checks; unified training is excluded until a verified mapping exists."
         )
 
     @staticmethod

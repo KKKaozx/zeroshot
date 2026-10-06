@@ -17,8 +17,11 @@
       0.026024727150797844,
       0.05247802659869194
     ],
-    "loader_output_is_absolute_xyz_without_position_scaling": true,
-    "source_reference": "code/dataset.py::_cliport_pose_action and _get_cliport"
+    "source_reference": "code/dataset.py::_cliport_pose_action and _get_cliport",
+    "legacy_reader_output_was_absolute_xyz_without_position_scaling": true,
+    "unified_ingestion_already_excluded_cliport": true,
+    "legacy_reader_now_rejects_calls": true,
+    "correction": "The legacy reader body was not a reachable training path: _append already excluded CLIPort. Native world poses are not unified training targets."
   },
   "libero_example": {
     "relative_path": "LIBERO\\libero_90\\KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it_demo.hdf5",

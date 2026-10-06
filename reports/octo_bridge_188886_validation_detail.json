@@ -1,0 +1,141 @@
+{
+  "job_id": 188886,
+  "source": "User-pasted extracted validation episode output, not the full cluster report",
+  "full_cluster_report_received": false,
+  "validation_episodes": {
+    "bridge_data_v2-train.tfrecord-00003-of-01024::14": {
+      "windows": 21,
+      "octo_mean": {
+        "position_cm": 1.155615250269572,
+        "rotation_deg": 2.4611539045969644,
+        "gripper_accuracy": 0.9047619047619047,
+        "balanced_accuracy": 0.8981481481481483
+      },
+      "baseline": {
+        "position_cm": 1.7044378519058228,
+        "rotation_deg": 1.9492849111557007,
+        "gripper_accuracy": 0.8571428571428571,
+        "balanced_accuracy": 0.5
+      },
+      "per_sampling_seed": {
+        "0": {
+          "position_cm": 1.0023571252822876,
+          "rotation_deg": 2.6049981117248535,
+          "balanced_accuracy": 0.9722222222222222
+        },
+        "1": {
+          "position_cm": 1.2689850330352783,
+          "rotation_deg": 2.6340417861938477,
+          "balanced_accuracy": 0.7777777777777777
+        },
+        "2": {
+          "position_cm": 1.19550359249115,
+          "rotation_deg": 2.1444218158721924,
+          "balanced_accuracy": 0.9444444444444444
+        }
+      },
+      "position_improvement_percent": 32.19962529127025
+    },
+    "bridge_data_v2-train.tfrecord-00015-of-01024::31": {
+      "windows": 16,
+      "octo_mean": {
+        "position_cm": 1.6134337186813354,
+        "rotation_deg": 3.0460750261942544,
+        "gripper_accuracy": 0.9583333333333334,
+        "balanced_accuracy": 0.9444444444444443
+      },
+      "baseline": {
+        "position_cm": 2.0079078674316406,
+        "rotation_deg": 2.766817092895508,
+        "gripper_accuracy": 0.75,
+        "balanced_accuracy": 0.5
+      },
+      "per_sampling_seed": {
+        "0": {
+          "position_cm": 1.7987995147705078,
+          "rotation_deg": 3.261544704437256,
+          "balanced_accuracy": 0.875
+        },
+        "1": {
+          "position_cm": 1.5081647634506226,
+          "rotation_deg": 2.618464231491089,
+          "balanced_accuracy": 0.9583333333333333
+        },
+        "2": {
+          "position_cm": 1.533336877822876,
+          "rotation_deg": 3.258216142654419,
+          "balanced_accuracy": 1.0
+        }
+      },
+      "position_improvement_percent": 19.64602834366528
+    },
+    "bridge_data_v2-train.tfrecord-00019-of-01024::5": {
+      "windows": 18,
+      "octo_mean": {
+        "position_cm": 1.6565191348393757,
+        "rotation_deg": 3.3886419932047525,
+        "gripper_accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "baseline": {
+        "position_cm": 1.7868237495422363,
+        "rotation_deg": 2.7396440505981445,
+        "gripper_accuracy": 0.8888888888888888,
+        "balanced_accuracy": 0.5
+      },
+      "per_sampling_seed": {
+        "0": {
+          "position_cm": 1.7747688293457031,
+          "rotation_deg": 3.6224305629730225,
+          "balanced_accuracy": 1.0
+        },
+        "1": {
+          "position_cm": 1.6386113166809082,
+          "rotation_deg": 2.9493579864501953,
+          "balanced_accuracy": 1.0
+        },
+        "2": {
+          "position_cm": 1.5561772584915161,
+          "rotation_deg": 3.59413743019104,
+          "balanced_accuracy": 1.0
+        }
+      },
+      "position_improvement_percent": 7.292527577845497
+    }
+  },
+  "historical_project_single_step_comparison": {
+    "source": "results/bridge_single_step_v1/evaluation.json",
+    "new_inference_executed": false,
+    "same_subset_identity_and_validation_indices": true,
+    "per_episode_baselines_match_atol": 1e-05,
+    "results": {
+      "best": {
+        "epoch": 4,
+        "updates": 160,
+        "checkpoint_sha256": "edc34edfc5730f99f7fbfd51f83444661f0f0ead5930146bf9a91a3c6b803d21",
+        "validation": {
+          "position_error_cm": 2.0131188416538435,
+          "rotation_error_deg": 6.16641014018742,
+          "gripper_accuracy": 0.9090909090909091,
+          "balanced_accuracy": 0.7669082125603865
+        }
+      },
+      "latest": {
+        "epoch": 25,
+        "updates": 1000,
+        "checkpoint_sha256": "511071e3458b2adf9accf633274d0b5ac5de48cdf60594b905f4907c781a5e76",
+        "validation": {
+          "position_error_cm": 2.3007533948487757,
+          "rotation_error_deg": 4.697886481048959,
+          "gripper_accuracy": 0.9090909090909091,
+          "balanced_accuracy": 0.7222222222222222
+        }
+      }
+    },
+    "limitations": [
+      "Historical single-step model, not the latest later decoder-pair experiment.",
+      "Different pretraining, inputs and complete networks; not a controlled module ablation.",
+      "Development-selected best checkpoint is not an untouched-test result."
+    ]
+  }
+}

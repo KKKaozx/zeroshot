@@ -34,8 +34,8 @@
 
 | 缺口 | 最小交付物 | 当前状态 |
 | --- | --- | --- |
-| 相机 | 固定一个 RGB 视角、完整配置及与训练预处理对应；不能按效果换视角 | 未确定 |
-| 当前夹爪输入 | 明确请求、激活、附着哪一个是输入，依据检查点 encoding 定义映射 | 未验收 |
+| 相机 | 固定一个 RGB 视角、完整配置及与训练预处理对应；不能按效果换视角 | 工程候选固定 front/index=0，实跑预处理通过；跨域效果未验收 |
+| 当前夹爪输入 | 明确请求、激活、附着哪一个是输入，依据检查点 encoding 定义映射 | 已查明 Bridge 输入是连续实测开度；吸盘映射不兼容/未验证 |
 | 标签时间 | 核对第 1 行目标与命令生效时刻；0.2s 只是候选控制周期 | Bridge 名义频率已查，逐步时间/执行迁移未标定 |
 | TCP 可行域 | 固定参考点、工作空间依据、IK 非法/不可达处理 | 坐标系已修正，可行域未完成物理验证 |
 | 评分与基线 | 固定频率、时间预算、独立任务分区，以及同协议的基线 | 未实施 |
@@ -59,3 +59,21 @@
 连续 TCP 控制改动了作者原生 primitive 协议，结果须标为自定义 CLIPort 环境工程协议。原版 CLIPort 基线使用 pose0/pose1，不能将它与自定义连续协议的成功率直接并列当作公平比较；后续需共同协议或明确不同协议及其限制。
 
 下一项是完成阶段 A 的相机和末端状态合同，并选一个不越界的阶段 B 接触对照。若现有工程记录不满足条件，就保留未通过状态，不继续修改专家轨迹、奖励或门槛追求成功。正式研究路线见 [FORMAL_EXPERIMENT_PROTOCOL.md](FORMAL_EXPERIMENT_PROTOCOL.md)。
+
+## 本轮合同实跑结果
+
+工程候选相机固定为作者 `RealSenseD415.CONFIG[0]`（front）：位置 (1,0,0.75)m、原始 RGB 480×640、焦距 450、无噪声。复用 `dataset.prepare_image` 得到有限的 float32 `[3,224,224]`，与训练用函数一致。重新调用 `_get_obs()` 后图像逐字节一致，环境计数和 TCP 位置不变，没有物理时间推进。完整外参四元数、内参、图像哈希见报告。这个检查不包含 CLIP 前向，不证明 front 视角与 Bridge 图像分布匹配，也不证明该视角最佳。
+
+固定 Bridge 实验清单声明 `bridge_current_gripper=continuous`；源代码取 `state[start,6]` 的实测开度，再做 `2*opening-1`，并保留超出 [0,1] 的原始传感器读数。吸盘请求、激活、附着三个状态均保留独立字段，未生成模型夹爪输入（报告为 null）。因此现有 Bridge 检查点仍未满足吸盘部署合同，不直接替换成布尔值或 ±1。
+
+阶段 B 选取原记录第一操作边界 tick=640 前的**全部 6 个规则到达位姿目标**（tick=96..576），初始同一 TCP 锚点，吸盘请求按区间起点保持/重试，先验证所有目标合法后执行；没有预定位、状态恢复、插入接触点或范围放宽。0.2s×6=1.2s/576 个实际物理步，全部达到 1cm/5° 门槛，最大位置误差约 0.2338cm；但没有附着，结束时原生任务部分奖励为 0。没有执行整条任务，也没有额外静置/等待接触。
+
+首次原生接触请求 tick=143 时 TCP 高度约 3.92cm，相邻规则采样 tick=96/192 却在 16.09/16.63cm。这个区间内先下降再抬起，稀疏到达目标没有记录最低接触位姿。实跑确认“几何合法且目标跟踪通过”不等于“保持原抓取过程”。此项不是网络失败，不解释 Bridge 泛化，也不证明所有 5Hz 控制不可能。
+
+**阶段 B 未通过，模型接入继续关闭。** 后续先明确训练的未来到达位姿与部署控制目标如何对应、怎样保留接触所需过程；不继续将作者阻塞轨迹简单降采样当作无损控制命令，不直接改频率、加速度、奖励或补接触点追求该回放通过。相机选择已固定，夹爪迁移缺口已明确，无需继续换视角或盲调吸盘时刻。27 项合同测试通过，证据：[观测与合法接触前缀](../reports/cliport_observation_contact_contract.json)。
+
+复现复用现有入口，不需下载模型；报告必须使用新路径：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --replay-reached-trace training_cache/cliport_fresh_control/reached_clock_trace.json --reached-contact-prefix --output-json results/new-front-contact-prefix.json
+```

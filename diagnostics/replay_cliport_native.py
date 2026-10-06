@@ -63,6 +63,8 @@ def main():
                         help="Sample measured TCP at actual physics ticks; keep suction events separate")
     parser.add_argument("--replay-reached-trace", type=Path,
                         help="Initial admissible timed prefix of <=16 targets, suction held open")
+    parser.add_argument('--reached-contact-prefix', action='store_true',
+                        help='First primitive regular prefix with floor-aligned held suction; engineering only')
     parser.add_argument("--replay-tcp-trace", type=Path,
                         help="Execute a captured expert trace through the continuous controller")
     parser.add_argument("--absolute-trace-control", action="store_true",
@@ -81,6 +83,8 @@ def main():
     parser.add_argument("--fixed-period-grasp-control", action="store_true",
                         help="16-slot author-target pickup/hold/release fixture; not task evaluation")
     args = parser.parse_args()
+    if args.reached_contact_prefix and not args.replay_reached_trace:
+        raise ValueError('Contact prefix requires a captured reached clock')
     if (args.hold_suction or args.exact_release or args.observe_suction_objects) and not args.suction_clock:
         raise ValueError('Held suction/release ablation requires a suction clock')
     if bool(args.suction_clock) != bool(args.suction_timing) or (args.suction_clock and (
@@ -130,7 +134,7 @@ def main():
 
     root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(root / "code"))
-    from dataset import UnifiedRobotDataset, relative_pose_action, decode_relative_pose, trajectory_to_cliport_primitive
+    from dataset import UnifiedRobotDataset, relative_pose_action, decode_relative_pose, trajectory_to_cliport_primitive, prepare_image
     from cliport_controller import ContinuousTCPController, native_ik_to_tcp_link
     task_name = "stack-block-pyramid-seq-seen-colors"
     action_dir = args.dataset_dir / "data" / (task_name + "-train") / "action"
@@ -224,14 +228,43 @@ def main():
                         or captured['sampling_stride_ticks'] != 96):
                     raise ValueError("Reached trace scene/frame/clock contract differs")
                 samples = [s for s in captured['samples'] if s['regular_sample']]
+                if args.reached_contact_prefix:
+                    before_counter = env.step_counter
+                    before_tcp = p.getLinkState(env.ur5,env.ee_tip,computeForwardKinematics=True)
+                    repeated_obs = env._get_obs()
+                    rgb = np.asarray(current_obs['color'][0])
+                    prepared = prepare_image(rgb)
+                    if (env.step_counter != before_counter
+                            or not np.array_equal(rgb,repeated_obs['color'][0])
+                            or not np.isfinite(prepared.numpy()).all()
+                            or tuple(prepared.shape) != (3,224,224)
+                            or not np.array_equal(before_tcp[4],p.getLinkState(env.ur5,env.ee_tip,computeForwardKinematics=True)[4])):
+                        raise ValueError('Front camera refresh/preprocessing invariant failed')
+                    row['observation_contract'] = dict(camera_index=0,
+                        camera_config=env.agent_cams[0],raw_rgb_shape=list(rgb.shape),
+                        raw_dtype=str(rgb.dtype),raw_sha256=hashlib.sha256(rgb.tobytes()).hexdigest(),
+                        prepared_shape=list(prepared.shape),prepared_sha256=hashlib.sha256(prepared.numpy().tobytes()).hexdigest(),
+                        repeated_render_identical=True,refresh_advanced_physics=False,
+                        language=env.info['lang_goal'],request_open=True,
+                        suction_activated=bool(env.ee.activated),attached=bool(env.ee.check_grasp()),
+                        model_gripper_feature=None,bridge_continuous_opening_mapping_verified=False)
                 controller = ContinuousTCPController(env)
                 rejected = []; admitted = []; selected = 0; reference = samples[0]
                 future = samples[1:17]
                 if [x['tick']-reference['tick'] for x in future] != list(range(96,17*96,96)):
                     raise ValueError("Missing or reordered timed samples")
+                schedule = suction_schedule(captured['suction_requests'],'start') if args.reached_contact_prefix else []
+                if args.reached_contact_prefix:
+                    boundary = captured['primitive_boundaries'][0]['tick']
+                    future = [s for s in future if s['tick'] <= boundary]
                 for offset, sample in enumerate(future, 1):
+                    open_request = True
+                    if args.reached_contact_prefix:
+                        for event in schedule:
+                            if event['scheduled_tick'] <= sample['tick']-96:
+                                open_request = event['open']
                     candidate = relative_pose_action(reference['position'],reference['quaternion'],
-                        sample['position'],sample['quaternion'],1.)
+                        sample['position'],sample['quaternion'],1. if open_request else -1.)
                     try:
                         controller._prepare_targets(candidate[None],reference['position'],reference['quaternion'])
                         admitted.append(candidate)
@@ -257,6 +290,14 @@ def main():
                     suction_mode='held open; source events not replayed',
                     task_reward_evaluated=False, targets=timed,
                     tracking_passed=all(t['position_error_m']<=.01 and t['rotation_error_deg']<=5 for t in timed))
+                if args.reached_contact_prefix:
+                    reward,_ = task.reward()
+                    row['reached_motion_fixture'].update(suction_mode='floor-aligned requests held with close retry',
+                        task_reward_evaluated=True,partial_reward=float(reward),full_task_evaluated=False,
+                        selection='all regular targets before first source primitive boundary; no inserted contact target',
+                        source_primitive_boundary_tick=boundary,source_first_close_tick=captured['suction_requests'][0]['tick'],
+                        contact_acquired=any(t['grasp_attached'] for t in timed),
+                        trace_sha256=hashlib.sha256(args.replay_reached_trace.read_bytes()).hexdigest())
                 row['success'],row['total_reward']=None,None
                 print('Reached motion window',selected,'tracking',row['reached_motion_fixture']['tracking_passed'],flush=True)
                 continue

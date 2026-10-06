@@ -11,6 +11,7 @@ zero-shot task-success result is claimed.**
 
 - [Current progress and module evidence (中文)](docs/PROGRESS.md)
 - [Architecture, action contract, and code map](docs/ARCHITECTURE.md)
+- [Comparison with the original Diffusion Policy implementation (中文)](docs/DIFFUSION_POLICY_COMPARISON.md)
 - [Environment and execution instructions](docs/RUNNING.md)
 - [Supervisor requirements and completion status](docs/REQUIREMENTS.md)
 - [Dataset versions and diagnostic split](docs/DATASETS.md)

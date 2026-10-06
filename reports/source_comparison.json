@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-06",
+  "purpose": "read_only_source_comparison_not_benchmark_reproduction",
+  "local_source_commit": "6c7514574b2558d7f2a6391aa129836b3beec2db",
+  "author_repository": "https://github.com/real-stanford/diffusion_policy",
+  "author_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "author_variant": "DiffusionUnetImagePolicy; train_diffusion_unet_image_workspace.yaml; default task lift_image_abs",
+  "scheduler_source": "https://github.com/huggingface/diffusers/blob/v0.11.1/src/diffusers/schedulers/scheduling_ddpm.py",
+  "scheduler_version_evidence": "Author conda_environment.yaml line 46",
+  "local_files": [
+    {
+      "path": "code/models.py",
+      "working_file_sha256": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+      "bytes": 21381
+    },
+    {
+      "path": "code/diffusion_decoder.py",
+      "working_file_sha256": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+      "bytes": 4703
+    },
+    {
+      "path": "code/dataset.py",
+      "working_file_sha256": "74c1c396ac924e0743b9d5633fc9a4ab083aa3e8f6727e31252343dc6edffe3d",
+      "bytes": 85062
+    },
+    {
+      "path": "code/train.py",
+      "working_file_sha256": "8e7fe62f49d5dc0522fd88a7c7997006d3cf324da6828084ece44db93da37d87",
+      "bytes": 109945
+    },
+    {
+      "path": "diagnostics/full_x0/cached_diffusion.py",
+      "working_file_sha256": "2aa12739a1f1d5ce06c2de648ad59e8b1a60b59bd5f36618e055479bb91edcc4",
+      "bytes": 20663
+    },
+    {
+      "path": "diagnostics/full_x0/diffusion_decoder.py",
+      "working_file_sha256": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+      "bytes": 4703
+    },
+    {
+      "path": "diagnostics/full_x0/run_full_fit.py",
+      "working_file_sha256": "d80e6ad2b8c3c289732e759a962ba2f693aa283507699e4a05543d9b22384dbb",
+      "bytes": 11164
+    },
+    {
+      "path": "configs/bridge_full_x0/provenance.json",
+      "working_file_sha256": "ccc0e3cd00cae62b7cf356280d79c6b2c9b6d52aad643444754a0256716efa19",
+      "bytes": 2357
+    },
+    {
+      "path": "reports/bridge_diffusion_math/audit.json",
+      "working_file_sha256": "bb82d2d48e08b3d02520a78144368d57100b6cf96224d957c555a211b842d2f3",
+      "bytes": 8451
+    }
+  ],
+  "author_files": [
+    {
+      "path": "diffusion_policy/model/diffusion/conditional_unet1d.py",
+      "working_file_sha256": "1e020288d07f187a13b1e7a23324540fcf1db307c200e43a177e72d9208d1c33",
+      "bytes": 9194
+    },
+    {
+      "path": "diffusion_policy/model/diffusion/conv1d_components.py",
+      "working_file_sha256": "71c04137f59d3ba6a7d41e985336f7a5753439976753ce6fc23cb57a5b53d98d",
+      "bytes": 1269
+    },
+    {
+      "path": "diffusion_policy/policy/diffusion_unet_image_policy.py",
+      "working_file_sha256": "ff3bf7d91caa14ff7987df620b69a983249424184f92048115baafc2f5a45c66",
+      "bytes": 9911
+    },
+    {
+      "path": "diffusion_policy/config/train_diffusion_unet_image_workspace.yaml",
+      "working_file_sha256": "2b1514d39ec5cd2248cd3f2b42d2ac7a62358e8369501aa54a37a7d98423d2f6",
+      "bytes": 3769
+    },
+    {
+      "path": "diffusion_policy/config/task/lift_image_abs.yaml",
+      "working_file_sha256": "cfb4eec7eca11a87004b785d652a2d64618f51b0cd9744f8edd33316eacb3e6d",
+      "bytes": 1797
+    },
+    {
+      "path": "diffusion_policy/dataset/robomimic_replay_image_dataset.py",
+      "working_file_sha256": "c6d65d9e0f206a20df4ce87ed6ad0e78b7b1c91a2a5043cd46b480d7e00e01d2",
+      "bytes": 14895
+    },
+    {
+      "path": "diffusion_policy/model/common/normalizer.py",
+      "working_file_sha256": "41716b26e46f75a868db012647e810c0a75666e2839bdf4a79bbca6524d0e803",
+      "bytes": 12254
+    },
+    {
+      "path": "diffusion_policy/common/normalize_util.py",
+      "working_file_sha256": "6a51898829954a7e66112f38b8f02afec0ccf8c39fe29693d8992240181cac91",
+      "bytes": 7876
+    },
+    {
+      "path": "diffusion_policy/workspace/train_diffusion_unet_image_workspace.py",
+      "working_file_sha256": "e60167ee988a932c4df56041ccb662c0e136820fa3093f013e29f0b7a577b282",
+      "bytes": 12507
+    },
+    {
+      "path": "conda_environment.yaml",
+      "working_file_sha256": "98faf32bd026a431498cfa516897b6f15e9193f258f560dd3eb6bfe6c30a8878",
+      "bytes": 1691
+    }
+  ],
+  "checks": {
+    "author_tree_clean": true,
+    "local_core_and_snapshot_unchanged": true,
+    "new_training": false,
+    "new_simulation": false,
+    "new_dependencies_installed": false,
+    "new_cross_library_numeric_test": false
+  },
+  "limits": [
+    "Static code review and existing diagnostic evidence do not isolate a generalization root cause.",
+    "One selected author config; not all variants and not Bridge benchmark reproduction.",
+    "Working-file hashes describe local bytes; Git line-ending normalization may change blob hashes."
+  ]
+}

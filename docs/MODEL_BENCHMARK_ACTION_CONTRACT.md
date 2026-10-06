@@ -184,3 +184,22 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 ```powershell
 training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --replay-tcp-trace training_cache/cliport_fresh_control/expert_tcp_trace_typed.json --absolute-trace-control --suction-clock training_cache/cliport_fresh_control/reached_clock_trace.json --suction-timing exact --output-json results/new-suction-exact.json
 ```
+
+## 保持关闭并重试的实际执行对照（2026-10-06）
+
+在相同场景与绝对运动命令上加入 `--hold-suction`，复用 ContinuousTCPController.command_suction：请求关闭后，每实际物理步若尚未激活则再调用一次原生 activate；激活后不重试。请求打开时释放并停止关闭重试。记录请求时刻、激活/附着变化与重试次数，不修改原生吸盘或奖励。这里仍为作者阻塞运动轨迹，未验收模型固定周期运动与吸盘联合执行。
+
+| 保持请求的时序 | 奖励 | 已执行 primitive | 后续重试次数 |
+| --- | --- | --- | --- |
+| 原时刻 | 1 | 7 | 0 |
+| 全部移到区间起点 | 1/3 | 4 | 739 |
+| 全部移到区间终点 | 0 | 1 | 383 |
+| 关闭移到起点，释放保留原时刻 | 1/3 | 4 | 351 |
+
+原时刻条件与原记录逐步物体位置完全一致，5,371 个物理步完成。起点条件首次关闭请求 tick=96 时没有接触，保持请求后在 tick=143 附着，恢复前两次放置奖励。提前释放时第一次释放高度约 12.83cm，但两次放置仍成功，不能仅凭高度宣称放置失败。完整轨迹在第四次操作得到 0 而非预期 1/6，下一条语言目标不匹配后停止；剩余 6 次请求未执行。终点条件首次关闭已错过接触，即使重试至打开也没有激活/附着，剩余 12 次请求未执行。
+
+保留原释放时刻也只有 1/3，因此**提前释放不是该剩余失败的唯一原因**。该条件前两次附着发生在原 tick=143、877，但第三次附着提前到 tick=1536，原关闭请求为 tick=1544。第三次操作原本就是零奖励的作者失败尝试；接触时刻与后续物体状态可能改变，尚未确认所附对象和具体接触原因，不能把所有零奖励都解释为未抓取。
+
+本次证明保持关闭重试可补上这一个“关闭请求早于接触”的失败，同时不能解决所有边界对齐问题。没有从记录读取事件时刻供模型使用，没有新增动作头时间维度，也没有宣布 5Hz 控制不可行。下一项先观察第三次尝试所附对象和原生接触条件，再选取清楚的工程协议；模型接入与泛化仍未完成。27 项合同测试通过，无下载、训练、标签/权重/速度/奖励变更。证据：[保持吸盘对照](../reports/cliport_held_suction_control.json)。
+
+复现沿用上节命令，加入 `--hold-suction`；起点关闭/原时刻释放条件再加入 `--exact-release`，输出另选新路径。原始工程轨迹留在 Git 忽略缓存，报告仅保存紧凑证据。

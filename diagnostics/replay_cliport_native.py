@@ -70,11 +70,17 @@ def main():
     parser.add_argument('--suction-clock', type=Path,
                         help='Captured actual physics clock for absolute trace timing control')
     parser.add_argument('--suction-timing', choices=('exact', 'start', 'end'))
+    parser.add_argument('--hold-suction', action='store_true',
+                        help='Hold requested state; retry unactivated close once per physics tick')
+    parser.add_argument('--exact-release', action='store_true',
+                        help='Timing ablation: retain recorded release ticks while shifting close')
     parser.add_argument("--trace-ablation", choices=("relative-only", "absolute-subdivided"),
                         help="Engineering only: isolate conversion or waypoint subdivision")
     parser.add_argument("--fixed-period-grasp-control", action="store_true",
                         help="16-slot author-target pickup/hold/release fixture; not task evaluation")
     args = parser.parse_args()
+    if (args.hold_suction or args.exact_release) and not args.suction_clock:
+        raise ValueError('Held suction/release ablation requires a suction clock')
     if bool(args.suction_clock) != bool(args.suction_timing) or (args.suction_clock and (
             not args.absolute_trace_control or args.capture_reached_trace or args.max_episodes != 1
             or args.restore_before_step is not None)):
@@ -271,26 +277,57 @@ def main():
                         or source_commands != [r['open'] for r in requests]):
                     raise ValueError('Trace and suction clock contract differ')
                 schedule = suction_schedule(requests, args.suction_timing)
+                if args.exact_release:
+                    for event in schedule:
+                        if event['open']:
+                            event['scheduled_tick'] = event['original_tick']
+                    if any(a['scheduled_tick'] > b['scheduled_tick'] for a, b in zip(schedule, schedule[1:])):
+                        raise ValueError('Release override changes request order')
                 timing_log = dict(timing=args.suction_timing, period_seconds=.2,
                     trace_sha256=hashlib.sha256(args.replay_tcp_trace.read_bytes()).hexdigest(),
                     clock_sha256=hashlib.sha256(args.suction_clock.read_bytes()).hexdigest(),
-                    schedule=schedule, executed=[], retry=False, motion_targets_and_speeds_unchanged=True)
+                    schedule=schedule, executed=[], retry=args.hold_suction,
+                    exact_release=args.exact_release, retry_attempts=0, state_events=[],
+                    motion_targets_and_speeds_unchanged=True)
                 row['suction_timing_control'] = timing_log
                 timing_tick = 0
                 timing_next = 0
                 original_simulation_step = env.step_simulation
                 original_grasp_check = env.ee.check_grasp
+                held_controller = ContinuousTCPController(env)
+                requested_open = True
+                previous_state = (bool(env.ee.activated), bool(original_grasp_check()))
+
+                def observe_timing_state():
+                    nonlocal previous_state
+                    state = (bool(env.ee.activated), bool(original_grasp_check()))
+                    if state != previous_state:
+                        tcp_now = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                        timing_log['state_events'].append(dict(tick=timing_tick,
+                            activated=state[0], attached=state[1], tcp_position=list(tcp_now[4])))
+                        previous_state = state
 
                 def dispatch_suction():
-                    nonlocal timing_next
+                    nonlocal timing_next, requested_open
+                    dispatched = False
                     while timing_next < len(schedule) and schedule[timing_next]['scheduled_tick'] <= timing_tick:
                         event = schedule[timing_next]
-                        (env.ee.release if event['open'] else env.ee.activate)()
+                        requested_open = event['open']
+                        if args.hold_suction:
+                            held_controller.command_suction(requested_open)
+                        else:
+                            (env.ee.release if event['open'] else env.ee.activate)()
                         tcp_now = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
                         timing_log['executed'].append(dict(**event, actual_tick=timing_tick,
                             activated=bool(env.ee.activated), attached=bool(original_grasp_check()),
                             tcp_position=list(tcp_now[4])))
                         timing_next += 1
+                        dispatched = True
+                        observe_timing_state()
+                    if args.hold_suction and not dispatched and not requested_open and not env.ee.activated:
+                        timing_log['retry_attempts'] += 1
+                        held_controller.command_suction(False)
+                    observe_timing_state()
 
                 def timed_simulation_step():
                     nonlocal timing_tick

@@ -40,7 +40,15 @@ def main():
                         help="Save one fresh expert engineering episode using the author writer")
     parser.add_argument("--event-adapter-control", action="store_true",
                         help="Synthetic trajectory fixture from author poses; no learned model")
+    parser.add_argument("--capture-tcp-trace", type=Path,
+                        help="Record author low-level pose/suction commands for engineering replay")
+    parser.add_argument("--replay-tcp-trace", type=Path,
+                        help="Execute a captured expert trace through the continuous controller")
+    parser.add_argument("--absolute-trace-control", action="store_true",
+                        help="Replay typed trace unchanged, bypassing relative conversion/subdivision")
     args = parser.parse_args()
+    if args.absolute_trace_control and not args.replay_tcp_trace:
+        raise ValueError("Absolute trace control requires a captured trace")
     if args.output_json.exists() or args.max_episodes < 1:
         raise ValueError("Choose a new report path and positive episode count")
     if args.oracle_smoke and args.restore_recorded_reset:
@@ -53,6 +61,12 @@ def main():
         raise ValueError("Expert export requires oracle mode, one episode and a new directory")
     if args.event_adapter_control and (args.oracle_smoke or args.restore_recorded_reset):
         raise ValueError("Event adapter control uses a strict seeded recorded scene")
+    if args.capture_tcp_trace or args.replay_tcp_trace:
+        if (args.max_episodes != 1 or args.oracle_smoke or args.event_adapter_control
+                or args.restore_recorded_reset or args.save_oracle_dir):
+            raise ValueError("TCP trace controls require one strict seeded engineering episode")
+        if args.capture_tcp_trace and (args.capture_tcp_trace.exists() or args.replay_tcp_trace):
+            raise ValueError("Choose a new trace file and one trace mode")
     author = args.author_root.resolve()
     # Skip ONLY the package facade that eagerly imports learned agents/models.
     # Environment, task, primitive, rendering and reward source remain unchanged.
@@ -66,6 +80,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(root / "code"))
     from dataset import UnifiedRobotDataset, relative_pose_action, trajectory_to_cliport_primitive
+    from cliport_controller import ContinuousTCPController
     task_name = "stack-block-pyramid-seq-seen-colors"
     action_dir = args.dataset_dir / "data" / (task_name + "-train") / "action"
     files = sorted(action_dir.glob("*.pkl"))[:args.max_episodes]
@@ -78,11 +93,16 @@ def main():
                   test_targets_used=False, hz=480, simulation_executed=True,
                   package_facade_skipped=True, author_source_hashes=source_hashes,
                   action_source=("synthetic_author_endpoint_event_fixture" if args.event_adapter_control
+                                 else "author_low_level_command_trace" if args.replay_tcp_trace
                                  else "author_oracle" if args.oracle_smoke else "stored_training_primitives"),
                   restore_recorded_reset=args.restore_recorded_reset,
                   restore_before_step=args.restore_before_step,
                   event_adapter_control=args.event_adapter_control,
-                  primitive_return_observed=True, grasp_return_observed=True,
+                  continuous_tcp_trace_control=bool(args.replay_tcp_trace),
+                  absolute_trace_control=args.absolute_trace_control,
+                  continuous_trace_workspace_override=bool(args.replay_tcp_trace and not args.absolute_trace_control),
+                  primitive_return_observed=not bool(args.replay_tcp_trace),
+                  grasp_return_observed=not args.absolute_trace_control,
                   versions={n: importlib.metadata.version(n) for n in
                             ("numpy", "pybullet", "gym", "torch", "opencv-python")}, episodes=[])
     env = Environment(str(author / "cliport/environments/assets"), disp=False, hz=480)
@@ -137,6 +157,41 @@ def main():
                 print(file.name, row["stopped"], flush=True)
                 continue
             agent = task.oracle(env) if args.oracle_smoke else None
+            trace = dict(seed=seed, task=task_name, model_used=False, primitive_commands=[])
+            replay_trace = json.loads(args.replay_tcp_trace.read_text()) if args.replay_tcp_trace else None
+            if replay_trace and (replay_trace['seed'] != seed or replay_trace['task'] != task_name):
+                raise ValueError("Trace scene metadata differs")
+            # Native expert has below-plane IK command targets in a failed pick.
+            # This trace-only envelope is NOT the default learned TCP workspace.
+            controller = ContinuousTCPController(env, workspace=[[.2, -.55, -.1], [.8, .55, .7]]) if replay_trace else None
+            tcp_events = []
+            last_pose = None
+            command_open = True
+            if args.capture_tcp_trace:
+                native_move, native_activate, native_release = env.movep, env.ee.activate, env.ee.release
+
+                def capture_move(pose, speed=.01):
+                    nonlocal last_pose
+                    last_pose = [np.asarray(x).tolist() for x in pose]
+                    result = native_move(pose, speed=speed)
+                    tcp_events.append(dict(kind="move", pose=last_pose, open=command_open, speed=float(speed)))
+                    return result
+
+                def capture_activate():
+                    nonlocal command_open
+                    result = native_activate()
+                    command_open = False
+                    tcp_events.append(dict(kind="suction", pose=last_pose, open=False, speed=.01))
+                    return result
+
+                def capture_release():
+                    nonlocal command_open
+                    result = native_release()
+                    command_open = True
+                    tcp_events.append(dict(kind="suction", pose=last_pose, open=True, speed=.01))
+                    return result
+
+                env.movep, env.ee.activate, env.ee.release = capture_move, capture_activate, capture_release
             steps = range(task.max_steps) if args.oracle_smoke else episode["executable_step_indices"]
             native_primitive, native_grasp = task.primitive, env.ee.check_grasp
             observation = {}
@@ -154,6 +209,7 @@ def main():
             # Observers preserve arguments and native return values; no controller changes.
             task.primitive, env.ee.check_grasp = observe_primitive, observe_grasp
             for step in steps:
+                tcp_events.clear()
                 observation.clear()
                 observation["grasp_checks"] = []
                 intervention = None
@@ -200,7 +256,63 @@ def main():
                             raise ValueError("Adapter endpoint outside author workspace; no clipping")
                 if args.save_oracle_dir is not None:
                     fresh_records.append((current_obs, action, current_reward, current_info))
-                obs, reward, done, _ = env.step(action)
+                continuous_stats = None
+                if replay_trace:
+                    continuous_stats = dict(targets=0, suction_events=0, subdivisions=0, timeouts=0,
+                                            physics_steps=0, grasp_attachment_observations=0)
+                    for event in replay_trace['primitive_commands'][step]:
+                        if args.absolute_trace_control:
+                            if event.get('kind') == 'suction':
+                                (env.ee.release if event['open'] else env.ee.activate)()
+                                continuous_stats['suction_events'] += 1
+                            elif event.get('kind') == 'move':
+                                before = env.step_counter
+                                timeout = env.movep(event['pose'], speed=event['speed'])
+                                continuous_stats['targets'] += 1
+                                continuous_stats['physics_steps'] += env.step_counter-before
+                                continuous_stats['timeouts'] += int(bool(timeout))
+                                if timeout:
+                                    raise RuntimeError("Absolute trace target timed out")
+                            else:
+                                raise ValueError("Typed move/suction trace required")
+                            continue
+                        if event.get('kind') == 'suction':
+                            controller.command_suction(event['open'])
+                            continuous_stats['suction_events'] += 1
+                            continue
+                        if event.get('kind') != 'move':
+                            raise ValueError("Typed move/suction trace required; recapture legacy trace")
+                        goal_pos, goal_quat = map(np.asarray, event['pose'])
+                        for subdivision in range(16):
+                            tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                            encoded = relative_pose_action(tcp[4], tcp[5], goal_pos, goal_quat,
+                                                           1. if event['open'] else -1.)
+                            amplitude = float(np.abs(encoded[:3]).max())
+                            fraction = min(1., 2.8 / max(amplitude, 1e-9))
+                            waypoint = np.asarray(tcp[4]) + fraction * (goal_pos-tcp[4])
+                            encoded = relative_pose_action(tcp[4], tcp[5], waypoint, goal_quat,
+                                                           1. if event['open'] else -1.)
+                            outcome = controller.execute(encoded[None], tcp[4], tcp[5], speed=event['speed'])[0]
+                            continuous_stats['targets'] += 1
+                            continuous_stats['physics_steps'] += outcome['physics_steps']
+                            continuous_stats['timeouts'] += int(outcome['timeout'])
+                            continuous_stats['grasp_attachment_observations'] += int(outcome.get('grasp_attached', False))
+                            if outcome['timeout']:
+                                raise RuntimeError("Continuous TCP target timed out")
+                            if fraction == 1.:
+                                break
+                            continuous_stats['subdivisions'] += 1
+                        else:
+                            raise RuntimeError("Expert waypoint exceeded subdivision budget")
+                    # Expert boundary used ONLY for this engineering comparison.
+                    # Not a learned rollout or a defined fixed-frequency benchmark.
+                    obs, _, _, _ = env.step()
+                    reward, _ = task.reward()
+                    done = task.done()
+                else:
+                    obs, reward, done, _ = env.step(action)
+                if args.capture_tcp_trace:
+                    trace['primitive_commands'].append(list(tcp_events))
                 current_obs, current_reward = obs, reward
                 row["total_reward"] += float(reward)
                 row["steps"].append(dict(index=step, reward=float(reward), done=bool(done),
@@ -209,6 +321,8 @@ def main():
                     row["steps"][-1]["state_intervention"] = intervention
                 if adapter_control is not None:
                     row["steps"][-1]["event_adapter_control"] = adapter_control
+                if continuous_stats is not None:
+                    row['steps'][-1]['continuous_tcp_control'] = continuous_stats
                 if not args.oracle_smoke:
                     row["steps"][-1]["stored_next_reward"] = float(episode["reward"][step+1])
                     pos_error, rot_error = pose_errors(episode["info"][step+1], env.info)
@@ -222,6 +336,9 @@ def main():
                 if done:
                     break
             row["success"] = row["total_reward"] > .99
+            if args.capture_tcp_trace:
+                args.capture_tcp_trace.parent.mkdir(parents=True, exist_ok=True)
+                args.capture_tcp_trace.write_text(json.dumps(trace), encoding='utf-8')
             if args.save_oracle_dir is not None:
                 if not row["success"]:
                     raise ValueError("Expert episode incomplete; do not export as successful demonstration")

@@ -1,0 +1,311 @@
+{
+  "purpose": "Single-scene engineering execution control; no neural model, training or generalization evaluation",
+  "model_used": false,
+  "test_targets_used": false,
+  "controller_contract": "cliport_continuous_tcp_open_positive_v1",
+  "learned_controller_accepted": false,
+  "default_workspace_m": [
+    [
+      0.2,
+      -0.55,
+      0
+    ],
+    [
+      0.8,
+      0.55,
+      0.7
+    ]
+  ],
+  "trace_only_workspace_m": [
+    [
+      0.2,
+      -0.55,
+      -0.1
+    ],
+    [
+      0.8,
+      0.55,
+      0.7
+    ]
+  ],
+  "tests_passed": 19,
+  "comparisons": {
+    "native_capture": {
+      "source_report": "results\\cliport_tcp_trace_capture_typed.json",
+      "sha256": "fb6f40c5a26ac44152e0d128e500e73a47b6334fa069fa1590b9ccae28d62781",
+      "seed": 0,
+      "total_reward": 0.9999999999999999,
+      "success": true,
+      "stopped": null,
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 3,
+          "reward": 0.16666666666666669,
+          "done": false,
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 4,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 5,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 6,
+          "reward": 0.16666666666666663,
+          "done": true,
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        }
+      ]
+    },
+    "absolute_trace": {
+      "source_report": "results\\cliport_absolute_typed_trace_control.json",
+      "sha256": "c5cdf77aae4e0a883f5591e89b876f83fbc21aaafc6ed933785cf85802a8277e",
+      "seed": 0,
+      "total_reward": 0.9999999999999999,
+      "success": true,
+      "stopped": null,
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 654,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1280,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 657,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1352,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 765,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1504,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 3,
+          "reward": 0.16666666666666669,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 654,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1176,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 4,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 668,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1812,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 5,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 668,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1942,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 6,
+          "reward": 0.16666666666666663,
+          "done": true,
+          "continuous_tcp_control": {
+            "targets": 676,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1562,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        }
+      ]
+    },
+    "relative_controller": {
+      "source_report": "results\\cliport_continuous_tcp_typed_control.json",
+      "sha256": "2c2ed97ac9ca1c4d3fc40fce17ac0a54f85afe201b0db6c6620b1d33ea2913aa",
+      "seed": 0,
+      "total_reward": 0.3333333333333333,
+      "success": false,
+      "stopped": "Language goal diverged; remaining stored actions not executed",
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 656,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1284,
+            "grasp_attachment_observations": 330
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 3.443069722329912e-05,
+          "object_rotation_max_deg_vs_recording": 0.1271087977927734
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 660,
+            "suction_events": 2,
+            "subdivisions": 3,
+            "timeouts": 0,
+            "physics_steps": 1358,
+            "grasp_attachment_observations": 332
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0038645880984751477,
+          "object_rotation_max_deg_vs_recording": 11.42508405966394
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 767,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1476,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 0.17736890767463143,
+          "object_rotation_max_deg_vs_recording": 133.29457145556157
+        },
+        {
+          "index": 3,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 656,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1176,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 0.19986406758602612,
+          "object_rotation_max_deg_vs_recording": 126.09896366344978
+        }
+      ]
+    }
+  },
+  "trace": {
+    "sha256": "946161c4c1cea1eefd0c78fa84b9202caf2679c565f03ddafa550c776eccc838",
+    "size_bytes": 739835,
+    "events": 4756,
+    "move_events": 4742,
+    "suction_events": 14
+  },
+  "interpretation": [
+    "Original expert command trace completes this seeded scene without object-state restoration.",
+    "Relative conversion plus bounded waypoint subdivision does not reproduce the task: total reward 1/3; stopped at language-goal divergence after four primitive boundaries.",
+    "Removing accidental extra movements on suction events did not resolve failure.",
+    "Failure narrows to the changed execution path in this scene; subdivision, numeric conversion and accumulated physics differences are not individually isolated.",
+    "Expert boundary checks and below-plane command envelope are engineering privileges; this is not a learned or official benchmark rollout.",
+    "Bridge offline generalization remains failed and is independent of this simulation-interface check."
+  ]
+}

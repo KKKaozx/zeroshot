@@ -1,0 +1,71 @@
+{
+  "stage": "user_supplied_cluster_log_summary",
+  "job_id": 188886,
+  "completed_exit_code": "0:0",
+  "full_cluster_report_received": false,
+  "official_evaluation_passed_log": true,
+  "trained": false,
+  "robot_controlled": false,
+  "unseen_data_generalization_established": false,
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "partitions": {
+    "train": {
+      "windows": 316,
+      "octo_mean_metrics_from_log": {
+        "position_cm": 1.3953654368718464,
+        "rotation_deg": 3.0904854933420816,
+        "gripper_accuracy": 0.9609704641350211,
+        "balanced_accuracy": 0.9186330465400232
+      },
+      "baseline_from_verified_local_data": {
+        "windows": 316,
+        "position_cm": 1.9203360080718994,
+        "rotation_deg": 2.7019505500793457,
+        "gripper_accuracy": 0.8639240506329114,
+        "open_recall": 0.0,
+        "closed_recall": 1.0,
+        "balanced_accuracy": 0.5,
+        "confusion": {
+          "true_open_pred_open": 0,
+          "true_open_pred_closed": 43,
+          "true_closed_pred_open": 0,
+          "true_closed_pred_closed": 273
+        },
+        "true_open_count": 43,
+        "predicted_open_count": 0
+      },
+      "per_episode_cluster_results_received": false
+    },
+    "validation": {
+      "windows": 55,
+      "octo_mean_metrics_from_log": {
+        "position_cm": 1.4527308543523152,
+        "rotation_deg": 2.93485418955485,
+        "gripper_accuracy": 0.9515151515151515,
+        "balanced_accuracy": 0.9412238325281804
+      },
+      "baseline_from_verified_local_data": {
+        "windows": 55,
+        "position_cm": 1.8196828365325928,
+        "rotation_deg": 2.445775270462036,
+        "gripper_accuracy": 0.8363636363636363,
+        "open_recall": 0.0,
+        "closed_recall": 1.0,
+        "balanced_accuracy": 0.5,
+        "confusion": {
+          "true_open_pred_open": 0,
+          "true_open_pred_closed": 9,
+          "true_closed_pred_open": 0,
+          "true_closed_pred_closed": 46
+        },
+        "true_open_count": 9,
+        "predicted_open_count": 0
+      },
+      "per_episode_cluster_results_received": false
+    }
+  }
+}

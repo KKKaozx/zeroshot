@@ -135,6 +135,11 @@ class ContinuousTCPController:
             open_command = bool(row[7] > 0)
             self.command_suction(open_command)
             first_attached_tick = None
+            start_joints = np.array([physics.getJointState(self.env.ur5, j)[0]
+                                     for j in self.env.joints])
+            start_distance = float(np.linalg.norm(target_joints-start_joints))
+            traveled = 0.
+            first_tracking_tick = None
             for tick in range(ticks):
                 current = np.array([physics.getJointState(self.env.ur5, j)[0]
                                     for j in self.env.joints])
@@ -145,9 +150,18 @@ class ContinuousTCPController:
                     physics.POSITION_CONTROL, targetPositions=current+step,
                     positionGains=np.ones(len(current)))
                 self.env.step_simulation()
+                after_joints = np.array([physics.getJointState(self.env.ur5, j)[0]
+                                         for j in self.env.joints])
+                traveled += float(np.linalg.norm(after_joints-current))
                 self.command_suction(open_command)
                 if first_attached_tick is None and self.env.ee.check_grasp():
                     first_attached_tick = tick+1
+                state = physics.getLinkState(self.env.ur5, self.env.ee_tip, computeForwardKinematics=True)
+                q_actual, q_goal = np.asarray(state[5]), np.asarray(pose[1])
+                dot = abs(float(q_actual @ q_goal))/(np.linalg.norm(q_actual)*np.linalg.norm(q_goal))
+                if (first_tracking_tick is None and np.linalg.norm(np.asarray(state[4])-pose[0]) <= .01
+                        and np.degrees(2*np.arccos(np.clip(dot, 0, 1))) <= 5.):
+                    first_tracking_tick = tick+1
             tcp = physics.getLinkState(self.env.ur5, self.env.ee_tip, computeForwardKinematics=True)
             quaternion = np.asarray(tcp[5]); goal_q = np.asarray(pose[1])
             cosine = abs(float(quaternion @ goal_q))/(np.linalg.norm(quaternion)*np.linalg.norm(goal_q))
@@ -155,6 +169,13 @@ class ContinuousTCPController:
                 command_open=open_command, suction_activated=bool(self.env.ee.activated),
                 grasp_attached=bool(self.env.ee.check_grasp()),
                 first_attached_tick=first_attached_tick,
+                start_joint_distance_rad=start_distance,
+                joint_command_step_limit_rad=joint_step_limit,
+                ideal_joint_command_budget_rad=ticks*joint_step_limit,
+                ideal_zero_lag_steps_to_ik_target=int(np.ceil(start_distance/joint_step_limit)),
+                actual_joint_path_length_rad=traveled,
+                final_joint_distance_rad=float(np.linalg.norm(target_joints-after_joints)),
+                first_tracking_tick=first_tracking_tick,
                 position_error_m=float(np.linalg.norm(np.asarray(tcp[4])-pose[0])),
                 rotation_error_deg=float(np.degrees(2*np.arccos(np.clip(cosine, 0, 1)))),
                 actual_position=list(tcp[4]), actual_quaternion=list(tcp[5]),

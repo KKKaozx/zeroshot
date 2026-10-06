@@ -1,0 +1,118 @@
+{
+  "purpose": "Fixed-period pickup fixture deadline feasibility audit; no model, training or generalization",
+  "source_fixed_report": "results\\cliport_fixed_period_deadline_audit.json",
+  "fixed_sha256": "59f01bb4af5d58ff1f3dc59237aa391555a7115b47ecbeb3be2a7e420c784f8c",
+  "source_native_report": "results\\cliport_native_lift_duration.json",
+  "native_sha256": "8494f97df2e4175a0be88693c4eac883653498d48ab81455f86b781ed04af147",
+  "tests_passed": 25,
+  "fixed_lift_target": {
+    "physics_steps": 96,
+    "duration_seconds": 0.2,
+    "command_open": false,
+    "suction_activated": true,
+    "grasp_attached": true,
+    "first_attached_tick": 1,
+    "start_joint_distance_rad": 1.154281343324832,
+    "joint_command_step_limit_rad": 0.01,
+    "ideal_joint_command_budget_rad": 0.96,
+    "ideal_zero_lag_steps_to_ik_target": 116,
+    "actual_joint_path_length_rad": 0.9618024668600086,
+    "final_joint_distance_rad": 0.1924831890396081,
+    "first_tracking_tick": null,
+    "position_error_m": 0.06074158564399814,
+    "rotation_error_deg": 0.01712373992288852,
+    "actual_position": [
+      0.42491427063941956,
+      0.09640266746282578,
+      0.3032810389995575
+    ],
+    "actual_quaternion": [
+      0.7071393132209778,
+      -0.7070741057395935,
+      -0.0003530225367285311,
+      0.00017302620108239353
+    ],
+    "target_position": [
+      0.40312498807907104,
+      0.09687499701976776,
+      0.35997799038887024
+    ],
+    "target_quaternion": [
+      -0.7071068286895752,
+      0.7071068286895752,
+      -7.275958481545164e-12,
+      1.57776031822765e-11
+    ]
+  },
+  "next_hold_target": {
+    "physics_steps": 96,
+    "duration_seconds": 0.2,
+    "command_open": false,
+    "suction_activated": true,
+    "grasp_attached": true,
+    "first_attached_tick": 1,
+    "start_joint_distance_rad": 0.19248400748134326,
+    "joint_command_step_limit_rad": 0.01,
+    "ideal_joint_command_budget_rad": 0.96,
+    "ideal_zero_lag_steps_to_ik_target": 20,
+    "actual_joint_path_length_rad": 0.193443929713122,
+    "final_joint_distance_rad": 3.119958561436704e-05,
+    "first_tracking_tick": 17,
+    "position_error_m": 0.000254621814545949,
+    "rotation_error_deg": 0.0,
+    "actual_position": [
+      0.40334707498550415,
+      0.09698660671710968,
+      0.35992273688316345
+    ],
+    "actual_quaternion": [
+      -0.7071043252944946,
+      0.7071092128753662,
+      2.5800429739319952e-06,
+      -9.27692872210173e-06
+    ],
+    "target_position": [
+      0.40312498807907104,
+      0.09687499701976776,
+      0.35997799038887024
+    ],
+    "target_quaternion": [
+      -0.7071068286895752,
+      0.7071068286895752,
+      -7.275958481545164e-12,
+      1.57776031822765e-11
+    ]
+  },
+  "first_tracking_time_from_lift_start_seconds": 0.23541666666666666,
+  "same_world_target_in_next_interval": true,
+  "original_author_lift": {
+    "purpose": "Unmodified first author primitive lift duration, counted by actual physics calls",
+    "model_used": false,
+    "full_task_success_evaluated": false,
+    "object_state_restored": false,
+    "lift_calls": [
+      {
+        "start_joint_distance_rad": 1.1503034915613786,
+        "actual_physics_steps": 114,
+        "actual_simulated_seconds": 0.2375,
+        "native_joint_step_parameter": 0.01,
+        "timeout": false
+      }
+    ]
+  },
+  "interpretation": [
+    "At lift start the joint-distance norm is 1.154rad; ideal 96-step command budget is 0.96rad; actual joint path is 0.9618rad.",
+    "Ideal zero-lag estimate requires 116 steps to the IK joint goal; this is not a universal mechanical feasibility proof.",
+    "Fixed loop reaches the Cartesian 1cm/5deg threshold after 113 total steps (0.2354s), during the next held interval.",
+    "Original blocking author lift used 114 actual physics calls (0.2375s) at the original joint-step parameter.",
+    "The engineering fixture used a blocking final goal as if it were a 0.2s reached-pose sample. Its missed deadline does not establish a learned-model bug."
+  ],
+  "decision": {
+    "keep_period_seconds": 0.2,
+    "keep_joint_step_limit": 0.01,
+    "keep_failed_deadline_record": true,
+    "next_control_fixture": "Collect actual reached TCP link poses with counted physics timestamps; sample them at declared observation times. Keep requested suction events and their actual transition times separate; do not infer a sampled command from measured gripper opening.",
+    "do_not_claim": "Current expert fixture is not passed; no new demonstrations, robot tasks or model generalization evaluated."
+  },
+  "code_sha256": "374c0f0a53a04464779ea158ec1387020f3c4732c730ab0dd5c06b24a65ed114"
+}

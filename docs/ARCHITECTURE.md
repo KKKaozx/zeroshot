@@ -71,3 +71,5 @@ The non-separate eight-dimensional diffusion masked-loss path has a recorded
 defect in the existing audit. The verified seven-dimensional separate-gripper
 path does not establish correctness of every optional configuration.
 Simulation action mapping and multi-source physical semantics remain incomplete.
+
+A scoped input/output review is in [MODEL_BENCHMARK_ACTION_CONTRACT.md](MODEL_BENCHMARK_ACTION_CONTRACT.md). The current 16 tool-relative targets have no verified mapping to CLIPort world-frame pick/place primitives. The native expert replay control does not validate that mapping or the learned model.

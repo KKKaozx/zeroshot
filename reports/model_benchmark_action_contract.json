@@ -1,0 +1,54 @@
+{
+  "scope": "Static input/action interface review plus synthetic coordinate mathematics; no model inference, training or simulation",
+  "model_inference_run": false,
+  "trained": false,
+  "generalization_tested": false,
+  "clip_config": {
+    "vision_hidden": 1024,
+    "text_hidden": 768,
+    "joint_projection": 768,
+    "image_size": 224,
+    "patch_size": 14,
+    "text_max_positions": 77
+  },
+  "main_context_inputs": [
+    "RGB image",
+    "language token sequence"
+  ],
+  "main_pose_decoder_current_tcp_input": false,
+  "current_gripper_is_optional_gripper_head_input": true,
+  "relative_targets_share_input_frame": true,
+  "rotated_coordinate_roundtrip": {
+    "normalized_xyz": [
+      1.0000001192092896,
+      -7.450580596923828e-08,
+      0.0
+    ],
+    "position_error_m": 2.9802322387695312e-08,
+    "quaternion_vector_error_sign_invariant": 6.143906006172983e-08
+  },
+  "same_anchor_example": {
+    "correct_world_targets": [
+      [
+        0.15000000596046448,
+        0.0,
+        0.0
+      ],
+      [
+        0.20000000298023224,
+        0.0,
+        0.0
+      ]
+    ],
+    "incorrect_incremental_final_x": 0.25
+  },
+  "cliport_direct_mapping_verified": false,
+  "source_sha256": {
+    "code\\dataset.py": "c806e468758ce4d6d80e993ed9428033e1be9901ad803ef73eb808556c9c7f92",
+    "code\\models.py": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+    "code\\adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code\\eval_closed_loop.py": "254635cb09332191c8c9c8836237d748c8a83bff6d8bd062f0fe8c3dd960f933",
+    "training_cache\\cliport_author\\cliport\\environments\\environment.py": "7e5cfb7247c5b12ff60685648d3aab7297194b44d73b3efe603ec2ae4ae94fee",
+    "training_cache\\cliport_author\\cliport\\tasks\\primitives.py": "08561cc4e449d996e76df7c732a04fa0fb8d58bfd9bce1cabaded9b6a2592606"
+  }
+}

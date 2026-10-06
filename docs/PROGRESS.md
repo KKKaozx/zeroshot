@@ -96,3 +96,5 @@ Bridge 头部诊断路线已结束。正式阶段见 [FORMAL_EXPERIMENT_PROTOCOL
 后续受控检查：原生抓取均成功且无 primitive 超时。只在最后动作前恢复记录位姿并清零物体速度，总奖励从 5/6 变为 1。说明累积物体状态参与该次回放失败，但干预成功不能计作无辅助成功率；没有确认具体依赖或数值根因。旧版本清单未找到，避免继续盲试版本。见 [干预证据](../reports/cliport_native_state_intervention.json)。
 
 固定当前版本生成的一条作者专家演示（训练模式 seed=0、7 个动作）已通过保存→原生读取→同 seed 无辅助连续回放：奖励 1，初始与逐步物体位姿相同，RGB 及作者 float32 保存精度的深度一致。新增数据 49.23 MiB。**此项没有学习模型，不是泛化实验，也不验证 OpenX 统一加载/动作转换。** [证据](../reports/cliport_fresh_expert_roundtrip.json)。
+
+模型输入/动作合同已核对：主上下文接收 RGB 与语言，当前夹爪可进入夹爪支路，未输入 TCP 位姿。16 个动作共享输入末端参考系；合成坐标往返通过，但它们无法直接作为 CLIPort 两位姿 primitive。视角选择、阶段选择、吸盘/连续控制桥接仍未确定。无网络预测或训练。见 [合同核对](MODEL_BENCHMARK_ACTION_CONTRACT.md)。

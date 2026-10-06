@@ -1,0 +1,764 @@
+{
+  "date": "2026-10-06",
+  "user_reported_local_free_GB_approximately": 30,
+  "results_GiB": 29.224,
+  "checkpoint_GiB": 28.716,
+  "checkpoint_count": 139,
+  "groups": [
+    {
+      "branch": "bcz_generalization_x0_v1",
+      "GiB": 1.342,
+      "weight_GiB": 1.341,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_overfit_cosine_v1",
+      "GiB": 1.341,
+      "weight_GiB": 1.341,
+      "files": 5,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_overfit_cosine_v2",
+      "GiB": 1.341,
+      "weight_GiB": 1.341,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_overfit_x0_v1",
+      "GiB": 1.341,
+      "weight_GiB": 1.341,
+      "files": 5,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "oxe_core_8shard_v1",
+      "GiB": 1.341,
+      "weight_GiB": 1.341,
+      "files": 3,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "oxe_core_pilot",
+      "GiB": 1.341,
+      "weight_GiB": 1.341,
+      "files": 3,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_pool_adapter_lr_split_v1",
+      "GiB": 1.214,
+      "weight_GiB": 1.213,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_adapter_fit_lr_low_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_adapter_fit_lr_split_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_adapter_fit_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_pool_adapter_smoke_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 4,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_pool_adapter_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 4,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_pool_seen_probe_fit_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 8,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_pool_seen_probe_rotation4_v1",
+      "GiB": 1.213,
+      "weight_GiB": 1.213,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_cls_regression_fit_control_v1",
+      "GiB": 1.211,
+      "weight_GiB": 1.211,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_generalization_regression_v1",
+      "GiB": 1.211,
+      "weight_GiB": 1.211,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_overfit_regression_v1",
+      "GiB": 1.211,
+      "weight_GiB": 1.211,
+      "files": 5,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_patch_pool_regression_fit_v1",
+      "GiB": 1.211,
+      "weight_GiB": 1.211,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_first_command_fit_v1",
+      "GiB": 1.21,
+      "weight_GiB": 1.21,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_first_command_pilot_v1",
+      "GiB": 1.21,
+      "weight_GiB": 1.21,
+      "files": 5,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_fusion_adapter_v1",
+      "GiB": 1.21,
+      "weight_GiB": 1.21,
+      "files": 5,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_adapter_trainability_v1",
+      "GiB": 0.557,
+      "weight_GiB": 0.557,
+      "files": 18,
+      "weights": 15,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_fixed_fit_constant_lr_v1",
+      "GiB": 0.245,
+      "weight_GiB": 0.238,
+      "files": 23,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_fixed_fit_v1",
+      "GiB": 0.239,
+      "weight_GiB": 0.238,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_gripper_coverage_fit_v1",
+      "GiB": 0.239,
+      "weight_GiB": 0.238,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_full_validation_v1",
+      "GiB": 0.239,
+      "weight_GiB": 0.238,
+      "files": 6,
+      "weights": 2,
+      "preserve": true
+    },
+    {
+      "branch": "bridge_single_task_pilot_v1",
+      "GiB": 0.239,
+      "weight_GiB": 0.238,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_step_v1",
+      "GiB": 0.238,
+      "weight_GiB": 0.238,
+      "files": 13,
+      "weights": 4,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_official_subset_v1",
+      "GiB": 0.136,
+      "weight_GiB": 0.0,
+      "files": 7,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_subset_upload_check",
+      "GiB": 0.136,
+      "weight_GiB": 0.0,
+      "files": 7,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_patch_features_v1",
+      "GiB": 0.076,
+      "weight_GiB": 0.028,
+      "files": 24,
+      "weights": 1,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_pool_baseline_v1",
+      "GiB": 0.058,
+      "weight_GiB": 0.057,
+      "files": 11,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_pool_smoke_v1",
+      "GiB": 0.057,
+      "weight_GiB": 0.057,
+      "files": 4,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_sequence_fit_v1",
+      "GiB": 0.055,
+      "weight_GiB": 0.054,
+      "files": 9,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_balanced_fit_v1",
+      "GiB": 0.053,
+      "weight_GiB": 0.053,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_fusion_simple_v1",
+      "GiB": 0.053,
+      "weight_GiB": 0.053,
+      "files": 5,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_input_neighbors_v1",
+      "GiB": 0.051,
+      "weight_GiB": 0.003,
+      "files": 147,
+      "weights": 1,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_module_diagnostic_v3",
+      "GiB": 0.03,
+      "weight_GiB": 0.0,
+      "files": 249,
+      "weights": 0,
+      "preserve": true
+    },
+    {
+      "branch": "bcz_gripper_head_mlp2_400_v1",
+      "GiB": 0.025,
+      "weight_GiB": 0.025,
+      "files": 9,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_head_mlp2_v1",
+      "GiB": 0.025,
+      "weight_GiB": 0.025,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_head_legacy_400_v1",
+      "GiB": 0.022,
+      "weight_GiB": 0.022,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_head_legacy_v1",
+      "GiB": 0.022,
+      "weight_GiB": 0.022,
+      "files": 6,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_only_fit_v1",
+      "GiB": 0.022,
+      "weight_GiB": 0.022,
+      "files": 7,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diffusion_target_pair_smoke_v1",
+      "GiB": 0.02,
+      "weight_GiB": 0.019,
+      "files": 16,
+      "weights": 3,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_pooling_readout_v1",
+      "GiB": 0.019,
+      "weight_GiB": 0.019,
+      "files": 34,
+      "weights": 16,
+      "preserve": true
+    },
+    {
+      "branch": "bridge_current_pose_input_v1",
+      "GiB": 0.016,
+      "weight_GiB": 0.016,
+      "files": 23,
+      "weights": 16,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_expanded_v1",
+      "GiB": 0.012,
+      "weight_GiB": 0.0,
+      "files": 129,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_expanded_v2",
+      "GiB": 0.012,
+      "weight_GiB": 0.0,
+      "files": 129,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_reverse_scan_v1",
+      "GiB": 0.012,
+      "weight_GiB": 0.0,
+      "files": 129,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_timing_v1",
+      "GiB": 0.012,
+      "weight_GiB": 0.0,
+      "files": 129,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_timing_v2",
+      "GiB": 0.012,
+      "weight_GiB": 0.0,
+      "files": 129,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diffusion_full_fit_prepare_v1",
+      "GiB": 0.008,
+      "weight_GiB": 0.008,
+      "files": 13,
+      "weights": 2,
+      "preserve": true
+    },
+    {
+      "branch": "bridge_diffusion_full_fit_smoke_v1",
+      "GiB": 0.008,
+      "weight_GiB": 0.007,
+      "files": 7,
+      "weights": 1,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diffusion_fit_smoke_v2",
+      "GiB": 0.007,
+      "weight_GiB": 0.007,
+      "files": 7,
+      "weights": 1,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_head_isolation_v1",
+      "GiB": 0.006,
+      "weight_GiB": 0.006,
+      "files": 5,
+      "weights": 3,
+      "preserve": true
+    },
+    {
+      "branch": "loader_bcz_expanded_v1",
+      "GiB": 0.006,
+      "weight_GiB": 0.0,
+      "files": 127,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_timeline_e_v1",
+      "GiB": 0.006,
+      "weight_GiB": 0.0,
+      "files": 49,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_decoder_comparison",
+      "GiB": 0.004,
+      "weight_GiB": 0.0,
+      "files": 32,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_module_diagnostic_v2",
+      "GiB": 0.004,
+      "weight_GiB": 0.0,
+      "files": 6,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_bridge_tfds_e_v1",
+      "GiB": 0.003,
+      "weight_GiB": 0.0,
+      "files": 33,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_contract_v2",
+      "GiB": 0.002,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_native_sequence_contract_v1",
+      "GiB": 0.002,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_saved_checkpoints_v1",
+      "GiB": 0.002,
+      "weight_GiB": 0.002,
+      "files": 8,
+      "weights": 2,
+      "preserve": false
+    },
+    {
+      "branch": "loader_independent_bridge_v1",
+      "GiB": 0.002,
+      "weight_GiB": 0.0,
+      "files": 24,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_independent_bridge_v2",
+      "GiB": 0.002,
+      "weight_GiB": 0.0,
+      "files": 24,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_semantics_audit_64",
+      "GiB": 0.001,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diffusion_fit_prepare_v1",
+      "GiB": 0.001,
+      "weight_GiB": 0.001,
+      "files": 13,
+      "weights": 1,
+      "preserve": true
+    },
+    {
+      "branch": "bridge_diffusion_target_pair_prepare_v1",
+      "GiB": 0.001,
+      "weight_GiB": 0.001,
+      "files": 13,
+      "weights": 1,
+      "preserve": true
+    },
+    {
+      "branch": "data_audit_semantics_v1",
+      "GiB": 0.001,
+      "weight_GiB": 0.0,
+      "files": 5,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "loader_independent_bcz_v1",
+      "GiB": 0.001,
+      "weight_GiB": 0.0,
+      "files": 25,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": ".gitkeep",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_head_comparison_400_v1.json",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_gripper_head_comparison_v1.json",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_command_contract_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_first_command_protocol_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bcz_semantics_audit",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 2,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diagnostic_summary_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 2,
+      "weights": 0,
+      "preserve": true
+    },
+    {
+      "branch": "bridge_diagnostic_summary_v2",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 2,
+      "weights": 0,
+      "preserve": true
+    },
+    {
+      "branch": "bridge_diffusion_audit_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 3,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diffusion_fit_current_audit_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_diffusion_fit_smoke_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 2,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_fixed_fit_constant_lr_entry_check_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_fixed_fit_entry_check_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_fixed_fit_prepare_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_gripper_coverage_entry_check_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_gripper_coverage_prepare_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_module_diagnostic_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 2,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_official_comparison_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 14,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_full_validation_prepare_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_plan_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_plan_v2",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_prepare_v1",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_prepare_v2",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 1,
+      "weights": 0,
+      "preserve": false
+    },
+    {
+      "branch": "bridge_single_task_prepare_v3",
+      "GiB": 0.0,
+      "weight_GiB": 0.0,
+      "files": 2,
+      "weights": 0,
+      "preserve": false
+    }
+  ],
+  "scope": "Read-only size inventory, not duplicate detection or deletion authorization.",
+  "deleted_files": 0,
+  "moved_files": 0
+}

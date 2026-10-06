@@ -48,7 +48,11 @@ def main():
                         help="Replay typed trace unchanged, bypassing relative conversion/subdivision")
     parser.add_argument("--trace-ablation", choices=("relative-only", "absolute-subdivided"),
                         help="Engineering only: isolate conversion or waypoint subdivision")
+    parser.add_argument("--fixed-period-grasp-control", action="store_true",
+                        help="16-slot author-target pickup/hold/release fixture; not task evaluation")
     args = parser.parse_args()
+    if args.fixed_period_grasp_control and (not args.replay_tcp_trace or args.trace_ablation or args.absolute_trace_control):
+        raise ValueError("Fixed-period fixture requires its own trace replay mode")
     if args.trace_ablation and (not args.replay_tcp_trace or args.absolute_trace_control):
         raise ValueError("Trace ablation requires trace replay and a separate control mode")
     if args.absolute_trace_control and not args.replay_tcp_trace:
@@ -105,8 +109,9 @@ def main():
                   continuous_tcp_trace_control=bool(args.replay_tcp_trace),
                   absolute_trace_control=args.absolute_trace_control,
                   trace_ablation=args.trace_ablation,
+                  fixed_period_grasp_control=args.fixed_period_grasp_control,
                   trace_only_normalized_position_bound=100. if args.trace_ablation == "relative-only" else 3.,
-                  continuous_trace_workspace_override=bool(args.replay_tcp_trace and not args.absolute_trace_control),
+                  continuous_trace_workspace_override=bool(args.replay_tcp_trace and not args.absolute_trace_control and not args.fixed_period_grasp_control),
                   primitive_return_observed=not bool(args.replay_tcp_trace),
                   grasp_return_observed=not args.absolute_trace_control,
                   versions={n: importlib.metadata.version(n) for n in
@@ -172,6 +177,41 @@ def main():
             controller = ContinuousTCPController(env,
                 max_normalized_position=100. if args.trace_ablation == "relative-only" else 3.,
                 workspace=[[.2, -.55, -.1], [.8, .55, .7]]) if replay_trace else None
+            if args.fixed_period_grasp_control:
+                # Use existing expert descent targets; do not invent intermediate
+                # Cartesian points to force a long command into the model bound.
+                block = replay_trace['primitive_commands'][0]
+                close_index = next(i for i, e in enumerate(block) if e['kind'] == 'suction' and not e['open'])
+                descent = [e for e in block[:close_index] if e['kind'] == 'move']
+                selected = [min(descent, key=lambda e: abs(e['pose'][0][2]-z))
+                            for z in np.linspace(.18, block[close_index]['pose'][0][2], 8)]
+                if env.movep(selected[0]['pose']):
+                    raise RuntimeError("Fixture warm-up positioning timed out")
+                tcp = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                native_goal = np.asarray(selected[0]['pose'][1])
+                native_actual = np.asarray(tcp[5])
+                native_rotation_error = float(np.degrees(2*np.arccos(np.clip(abs(
+                    float(native_actual@native_goal))/(np.linalg.norm(native_actual)*np.linalg.norm(native_goal)), 0, 1))))
+                postpick = block[close_index+1]['pose']
+                fixture = np.stack([relative_pose_action(tcp[4], tcp[5], *e['pose'],
+                    1. if i < 6 else -1.) for i, e in enumerate(selected)] +
+                    [relative_pose_action(tcp[4], tcp[5], *postpick, -1.) for _ in range(7)] +
+                    [relative_pose_action(tcp[4], tcp[5], *postpick, 1.)])
+                timed = ContinuousTCPController(env).execute_fixed_period(fixture, tcp[4], tcp[5])
+                row['fixed_period_fixture'] = dict(period_seconds=.2, fixed_steps_per_target=96,
+                    simulated_duration_seconds=sum(r['duration_seconds'] for r in timed),
+                    warmup_outside_timed_budget=True, source_targets_with_subsampling_and_holds=True,
+                    native_blocking_warmup_rotation_error_deg=native_rotation_error,
+                    native_blocking_warmup_actual_quaternion=list(tcp[5]),
+                    task_reward_evaluated=False, normalized_xyz_absmax=float(abs(fixture[:,:3]).max()),
+                    tracking_threshold_position_m=.01, tracking_threshold_rotation_deg=5.,
+                    tracking_passed=all(r['position_error_m'] <= .01 and r['rotation_error_deg'] <= 5. for r in timed),
+                    pickup_then_release=any(r['grasp_attached'] for r in timed[:-1]) and not timed[-1]['grasp_attached'],
+                    targets=timed)
+                row['stopped'] = 'Bounded pickup fixture only; task success was not evaluated'
+                row['success'], row['total_reward'] = None, None
+                print(json.dumps({k:v for k,v in row['fixed_period_fixture'].items() if k != 'targets'}), flush=True)
+                continue
             tcp_events = []
             last_pose = None
             command_open = True
@@ -374,8 +414,11 @@ def main():
                 checked = UnifiedRobotDataset.read_cliport_native_episode(saved_path)
                 row["exported_primitives"] = len(checked["executable_step_indices"])
                 row["exported_dataset_dir"] = str(args.save_oracle_dir)
-        report["successful_episodes"] = sum(row["success"] for row in report["episodes"])
+        report["successful_episodes"] = (None if args.fixed_period_grasp_control else
+                                         sum(row["success"] for row in report["episodes"]))
         report["executed_episodes"] = sum(bool(row["steps"]) for row in report["episodes"])
+        if args.fixed_period_grasp_control:
+            report['executed_fixed_period_fixtures'] = sum('fixed_period_fixture' in row for row in report['episodes'])
     except Exception as error:
         report["error"] = repr(error)
         raise
@@ -383,7 +426,10 @@ def main():
         p.disconnect()
         args.output_json.parent.mkdir(parents=True, exist_ok=True)
         args.output_json.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(report["action_source"], report["successful_episodes"], "/", len(files), flush=True)
+    if args.fixed_period_grasp_control:
+        print('Fixed-period fixture complete; task success not evaluated', flush=True)
+    else:
+        print(report["action_source"], report["successful_episodes"], "/", len(files), flush=True)
 
 
 if __name__ == "__main__":

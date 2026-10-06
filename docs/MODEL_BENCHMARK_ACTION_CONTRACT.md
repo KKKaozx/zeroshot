@@ -105,3 +105,19 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 真实作者环境检查：在首个作者抓取目标上方请求关闭，吸盘未激活、未附着；沿作者接触下降逻辑移动 323 次后再次请求关闭，激活且附着；请求打开后两者均为否。没有模型、任务奖励或状态恢复。这验证原生吸盘重试，不构成任务成功率。修复后再执行同一相对转换但不拆分的专家命令对照，7 个 primitive 边界奖励仍匹配、总奖励 1；仍使用明确标注的诊断大范围，未放宽生产模型。
 
 工程结论：几何和吸盘重试已有运行证据；模型部署的固定周期、夹爪触发时间、TCP 与跨机器人映射仍未验收。下一项应先建立固定时序与接触反馈的执行协议，分别评估位姿跟踪和吸盘事件；保持离线到达位姿诊断与仿真命令评估的名称和结论分开。无需追加头部训练或直接混入 CLIPort 演示。证据：[动作时间与夹爪核查](../reports/action_timing_gripper_contract.json)。
+
+## 固定周期与接触反馈对照（同日后续）
+
+已实现独立的 `execute_fixed_period`：整个块仍使用同一输入 TCP；每个目标先由作者 IK 得到关节目标，再按声明的关节空间步幅预算驱动，每个物理步检查关闭请求与原生吸盘状态。请求从区间开始生效；截止时记录位置/旋转误差，不延长周期等到到达，不添加笛卡尔中间点。这是自定义执行协议，不是原版 blocking movej，也没有完成 Bridge 到吸盘机器人的时间标定。
+
+先做一个有界抓取工程对照：从作者第一个抓取的下降命令中抽取 8 个已有目标，加入 7 个相同抬升目标用于保持、最后打开。没有新造用于裁剪长命令的空间路径点。起始预定位明确在计时外；固定块 16 行，默认界限 ±3、正高度工作空间不变，实际位置幅值最大 1.785。每行 96 个实际物理步，步长 1/480s，合计仿真时间 3.2s，不能称为原始作者轨迹的无损重放或真实数据的严格 5Hz 时序。
+
+结果：第 8 个目标发生吸附，最后成功释放；24 项合同测试通过。但按预先声明的 1cm/5° 跟踪门槛，整体未通过。抬升目标截止时位置误差最大约 6.074cm，后续保持目标才接近；全部姿态仍有接近 180° 的误差。作者原生阻塞预定位执行同一目标时，也有约 179.984° 的误差。因此姿态问题不是本次固定周期独有，需检查原生 IK 与实际 TCP/目标姿态的关系，不能忽略旋转后宣称接口有效。没有评估堆叠任务奖励、没有学习模型或泛化测试。
+
+时间计数注意：作者 movej 本身增加 step_counter，随后调用 step_simulation 再增加一次。此前底层命令回放报告中的 physics_steps 实为该计数器差值，不能直接换算真实物理秒数；不影响那些报告记录的任务奖励。新固定周期模式按实际 step_simulation 调用次数与引擎 fixedTimeStep 计时，不以该计数器推导周期。
+
+证据：[固定周期对照](../reports/cliport_fixed_period_control.json)。当前验收结论是时间预算/接触处理可以运行，完整位姿跟踪未通过；下一项限定检查原生 TCP/IK 姿态与截止跟踪，不盲目增大周期或忽略误差，不进入学习策略 rollout。复现需使用新报告路径：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-fixed-period.json --replay-tcp-trace training_cache/cliport_fresh_control/expert_tcp_trace_typed.json --fixed-period-grasp-control
+```

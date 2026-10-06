@@ -49,18 +49,12 @@ class ContinuousTCPController:
             self.env.ee.activate()
         self.command_open = bool(open_command)
 
-    def execute(self, actions, reference_position, reference_quaternion, *, speed=.01):
-        """Prevalidate <=16 targets, then move/command suction using one fixed anchor.
-
-        Movement completes per target; this is not a fixed-frequency controller.
-        No task reward, grasp assistance, state restoration or clipping is added.
-        """
+    def _prepare_targets(self, actions, reference_position, reference_quaternion):
         a = np.asarray(actions, dtype=np.float32)
         p, q = np.asarray(reference_position), np.asarray(reference_quaternion)
         if (a.ndim != 2 or a.shape[1] != 8 or not 1 <= len(a) <= 16
                 or not np.isfinite(a).all() or p.shape != (3,) or q.shape != (4,)
-                or not np.isfinite(p).all() or not np.isfinite(q).all()
-                or not np.isfinite(speed) or speed <= 0):
+                or not np.isfinite(p).all() or not np.isfinite(q).all()):
             raise ValueError("Finite 1..16 eight-dimensional targets and reference pose required")
         if (abs(np.linalg.norm(q)-1) > 1e-3
                 or np.any(abs(np.linalg.norm(a[:, 3:7], axis=1)-1) > 1e-3)):
@@ -73,6 +67,13 @@ class ContinuousTCPController:
         if any(np.any(pos < self.workspace[0]) or np.any(pos > self.workspace[1])
                for pos, _ in targets):
             raise ValueError("TCP target outside declared workspace; no clipping")
+        return a, targets
+
+    def execute(self, actions, reference_position, reference_quaternion, *, speed=.01):
+        """Blocking target completion; no reward, assistance, restoration or clipping."""
+        if not np.isfinite(speed) or speed <= 0:
+            raise ValueError("Positive finite speed required")
+        a, targets = self._prepare_targets(actions, reference_position, reference_quaternion)
         results = []
         for row, pose in zip(a, targets):
             before = self.env.step_counter
@@ -85,4 +86,56 @@ class ContinuousTCPController:
                 suction_activated=bool(self.env.ee.activated),
                 grasp_attached=bool(self.env.ee.check_grasp()),
                 physics_steps=self.env.step_counter-before))
+        return results
+
+    def execute_fixed_period(self, actions, reference_position, reference_quaternion,
+                             *, period_seconds=.2, joint_step_limit=.01):
+        """Experimental fixed simulated period with native IK and suction feedback.
+
+        A command applies at interval start and is retried during motion. Targets
+        are not extended until arrival; errors at the deadline are reported.
+        This is a custom protocol, not the author's blocking movej/primitive.
+        """
+        import pybullet as physics
+        a, targets = self._prepare_targets(actions, reference_position, reference_quaternion)
+        dt = float(physics.getPhysicsEngineParameters()['fixedTimeStep'])
+        if (not np.isfinite(period_seconds) or period_seconds <= 0
+                or not np.isfinite(joint_step_limit) or joint_step_limit <= 0):
+            raise ValueError("Positive finite period and joint step limit required")
+        ticks = int(round(period_seconds / dt))
+        if ticks < 1 or not np.isclose(ticks * dt, period_seconds, rtol=0, atol=1e-9):
+            raise ValueError("Period must be an exact positive number of physics steps")
+        results = []
+        for row, pose in zip(a, targets):
+            target_joints = np.asarray(self.env.solve_ik(pose))
+            if (target_joints.shape != (len(self.env.joints),)
+                    or not np.isfinite(target_joints).all()):
+                raise ValueError("Native IK returned invalid joint targets")
+            open_command = bool(row[7] > 0)
+            self.command_suction(open_command)
+            first_attached_tick = None
+            for tick in range(ticks):
+                current = np.array([physics.getJointState(self.env.ur5, j)[0]
+                                    for j in self.env.joints])
+                difference = target_joints-current
+                norm = np.linalg.norm(difference)
+                step = difference * min(1., joint_step_limit/max(norm, 1e-12))
+                physics.setJointMotorControlArray(self.env.ur5, self.env.joints,
+                    physics.POSITION_CONTROL, targetPositions=current+step,
+                    positionGains=np.ones(len(current)))
+                self.env.step_simulation()
+                self.command_suction(open_command)
+                if first_attached_tick is None and self.env.ee.check_grasp():
+                    first_attached_tick = tick+1
+            tcp = physics.getLinkState(self.env.ur5, self.env.ee_tip, computeForwardKinematics=True)
+            quaternion = np.asarray(tcp[5]); goal_q = np.asarray(pose[1])
+            cosine = abs(float(quaternion @ goal_q))/(np.linalg.norm(quaternion)*np.linalg.norm(goal_q))
+            results.append(dict(physics_steps=ticks, duration_seconds=ticks*dt,
+                command_open=open_command, suction_activated=bool(self.env.ee.activated),
+                grasp_attached=bool(self.env.ee.check_grasp()),
+                first_attached_tick=first_attached_tick,
+                position_error_m=float(np.linalg.norm(np.asarray(tcp[4])-pose[0])),
+                rotation_error_deg=float(np.degrees(2*np.arccos(np.clip(cosine, 0, 1)))),
+                actual_position=list(tcp[4]), actual_quaternion=list(tcp[5]),
+                target_position=np.asarray(pose[0]).tolist(), target_quaternion=goal_q.tolist()))
         return results

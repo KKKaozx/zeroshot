@@ -1,6 +1,8 @@
 """Continuous action semantics and rejection must be tested before motor calls."""
 import sys
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 from pathlib import Path
 import numpy as np
 
@@ -42,6 +44,33 @@ class Environment:
 
 
 class ContinuousTests(unittest.TestCase):
+    def test_fixed_period_has_exact_budget_and_no_blocking_moves(self):
+        env = Environment(); env.ur5=1; env.ee_tip=10; env.joints=[0]
+        env.solve_ik = lambda pose: np.array([.1])
+        env.step_simulation = lambda: setattr(env, 'step_counter', env.step_counter+1)
+        motor_calls = []
+        physics = SimpleNamespace(POSITION_CONTROL=0,
+            getPhysicsEngineParameters=lambda: {'fixedTimeStep': 1/480},
+            getJointState=lambda body, joint: (0.,),
+            setJointMotorControlArray=lambda *args, **kwargs: motor_calls.append(kwargs['targetPositions']),
+            getLinkState=lambda *args, **kwargs: (None,None,None,None,[.4,0,.2],[0,0,0,1]))
+        a = self.actions([0,0]); a[:,7] = [-1,1]
+        with patch.dict(sys.modules, {'pybullet': physics}):
+            results = ContinuousTCPController(env).execute_fixed_period(a,[.4,0,.2],[0,0,0,1])
+        self.assertEqual(env.calls, [])
+        self.assertEqual(env.step_counter, 192)
+        self.assertEqual([x['physics_steps'] for x in results], [96,96])
+        self.assertTrue(results[0]['grasp_attached'])
+        self.assertFalse(results[1]['grasp_attached'])
+        self.assertAlmostEqual(float(max(abs(x[0]) for x in motor_calls)), .01)
+
+    def test_nonintegral_fixed_period_rejected_before_motor_calls(self):
+        env = Environment()
+        physics = SimpleNamespace(getPhysicsEngineParameters=lambda: {'fixedTimeStep': 1/480})
+        with patch.dict(sys.modules, {'pybullet': physics}), self.assertRaisesRegex(ValueError, 'exact'):
+            ContinuousTCPController(env).execute_fixed_period(self.actions([0]), [.4,0,.2], [0,0,0,1], period_seconds=.201)
+        self.assertEqual(env.calls, [])
+
     def test_failed_close_request_is_retried_on_next_target(self):
         class ContactLater(EndEffector):
             def activate(self):

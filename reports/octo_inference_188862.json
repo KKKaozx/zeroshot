@@ -1,0 +1,170 @@
+{
+  "stage": "official_single_image_inference",
+  "trained": false,
+  "robot_controlled": false,
+  "generalization_evaluated": false,
+  "model_used": true,
+  "passed": true,
+  "plan": {
+    "date": "2026-10-07",
+    "stage": "cpu_setup_then_gpu_official_inference",
+    "purpose": "Official pretrained inference positive control; not independent generalization or full paper reproduction",
+    "code_repository": "https://github.com/octo-models/octo",
+    "code_commit": "241fb3514b7c40957a86d869fecb7c7fc353f540",
+    "model_repository": "rail-berkeley/octo-small-1.5",
+    "model_revision": "dc9aa3019f764726c770814b27e4ab0fc6e32a58",
+    "t5_revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+    "model_checkpoint_bytes": 546696551,
+    "official_example": "examples/01_inference_pretrained.ipynb",
+    "inference_case": "First official notebook case: Bridge example image, pick up the fork, history length 1 with valid mask, seed 0, bridge_dataset action statistics",
+    "expected_action_shape": [
+      1,
+      4,
+      7
+    ],
+    "official_dependency_pins": {
+      "python": "3.10",
+      "numpy": "1.24.3",
+      "jax": "0.4.20",
+      "ml_dtypes": "0.2.0",
+      "flax": "0.7.5",
+      "optax": "0.1.5",
+      "chex": "0.1.85",
+      "tensorflow": "2.15.0"
+    },
+    "environment_policy": "New isolated project environment after preflight; preserve zeroshot, bridge-reader and bridge-diffusion environments",
+    "project_quota_bytes_planning_limit": 200000000000,
+    "new_installation_budget_gib": 15,
+    "minimum_project_headroom_gib": 15,
+    "local_artifact_limit_mib": 100,
+    "preflight_installs_packages": false,
+    "preflight_downloads_weights": false,
+    "preflight_trains_model": false,
+    "notes": [
+      "Reported quota is a planning limit, not a live quota query; du apparent bytes conservatively estimates current use.",
+      "The HF AutoModel snippet is generic; use official OctoModel and the official notebook.",
+      "Pretraining includes Bridge, BC-Z, Fractal and Language Table: local Bridge performance cannot establish unseen-data generalization.",
+      "Official requirements contain open-ended dependencies; resolve and pin compatible transitive packages before installing.",
+      "JAX GPU wheel availability and driver compatibility still require cluster verification.",
+      "Inference success means loading and producing finite native actions, not robotic task success."
+    ]
+  },
+  "source_commit": "241fb3514b7c40957a86d869fecb7c7fc353f540",
+  "action_shape": [
+    1,
+    4,
+    7
+  ],
+  "native_actions": [
+    [
+      [
+        0.002565043279901147,
+        -6.127166852820665e-05,
+        -0.01794743537902832,
+        0.05920825153589249,
+        -0.004638983868062496,
+        -0.01637108251452446,
+        0.9971176385879517
+      ],
+      [
+        -0.001388870645314455,
+        0.0018526893109083176,
+        -0.010730244219303131,
+        0.010310901328921318,
+        0.023536212742328644,
+        0.02078942023217678,
+        1.0012218952178955
+      ],
+      [
+        0.0009062376338988543,
+        0.0012554496061056852,
+        -0.003261369187384844,
+        0.0022185822017490864,
+        0.017183847725391388,
+        0.023110250011086464,
+        -0.0010167543077841401
+      ],
+      [
+        -0.0013598178047686815,
+        -0.0030437055975198746,
+        -0.0022470541298389435,
+        -0.031554076820611954,
+        0.005156680475920439,
+        0.02526373229920864,
+        -0.0007502004154957831
+      ]
+    ]
+  ],
+  "language": "pick up the fork",
+  "history_length": 1,
+  "sampling_seed": 0,
+  "backend": "gpu",
+  "devices": [
+    "cuda:0"
+  ],
+  "elapsed_seconds": 26.05465921293944,
+  "assets": {
+    "model_path": "/projects/Zeroshot/.tmp/hf/hub/models--rail-berkeley--octo-small-1.5/snapshots/dc9aa3019f764726c770814b27e4ab0fc6e32a58",
+    "t5_revision": "a9723ea7f1b39c1eae772870f3b547bf6ef7e6c1",
+    "image_url": "https://rail.eecs.berkeley.edu/datasets/bridge_release/raw/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/01/2023-04-19_09-18-15/raw/traj_group0/traj0/images0/im_12.jpg",
+    "image_sha256": "e857ccfb2f48f0ee3f5806feb89f825f6b21e49502d389e265c6177236e984da"
+  },
+  "normalization_source": "model.dataset_statistics[bridge_dataset][action]",
+  "action_statistics": {
+    "mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "max": [
+      0.41691166162490845,
+      0.25864794850349426,
+      0.21218234300613403,
+      3.122201919555664,
+      1.8618112802505493,
+      6.280478477478027,
+      1.0
+    ],
+    "mean": [
+      0.0002175864647142589,
+      0.00012508298095781356,
+      -0.00017108325846493244,
+      -0.00016171138850040734,
+      -0.0002524856827221811,
+      0.00025157874915748835,
+      0.5879484415054321
+    ],
+    "min": [
+      -0.4007510244846344,
+      -0.13874775171279907,
+      -0.22553899884223938,
+      -3.2010786533355713,
+      -1.8618112802505493,
+      -6.279075622558594,
+      0.0
+    ],
+    "std": [
+      0.009632384404540062,
+      0.013500643894076347,
+      0.012510603293776512,
+      0.028145212680101395,
+      0.030282432213425636,
+      0.07585602253675461,
+      0.4877190887928009
+    ]
+  },
+  "versions": {
+    "jax": "0.4.20",
+    "jaxlib": "0.4.20+cuda11.cudnn86",
+    "flax": "0.7.5",
+    "numpy": "1.24.3",
+    "tensorflow": "2.15.0",
+    "transformers": "4.38.2",
+    "huggingface-hub": "0.23.5",
+    "orbax-checkpoint": "0.4.3"
+  }
+}

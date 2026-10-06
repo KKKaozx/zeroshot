@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-06",
+  "authorization": "User authorized deleting obsolete files and accepts rerunning old experiments.",
+  "planned_files": [
+    {
+      "path": "results/oxe_core_pilot/latest.pt",
+      "bytes": 719940581,
+      "sha256": "d8f631bf313bf7b0d94e235baf06679006f02d72f355647b96c720cc7d3e068e",
+      "reason": "Superseded exploratory final checkpoint; best checkpoint and records retained"
+    },
+    {
+      "path": "results/oxe_core_8shard_v1/latest.pt",
+      "bytes": 719976357,
+      "sha256": "9a9f307463f12a1961bbc71cfdcd9b6ec8e14685a72b3b9e934e3658b5becb09",
+      "reason": "Superseded exploratory final checkpoint; best checkpoint and records retained"
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v1/latest.pt",
+      "bytes": 719928677,
+      "sha256": "a4927909e7a77c769b4c64c0ba8bd296442904ad6f039179e43a884703fa7290",
+      "reason": "Superseded exploratory final checkpoint; best checkpoint and records retained"
+    },
+    {
+      "path": "results/bridge_diffusion_target_pair_smoke_v1/epsilon/final_head.pt",
+      "bytes": 6979381,
+      "sha256": "4449a8ff37e6a92f21216d56a41a93ae34a780247083dd5cb86700156e55be79",
+      "reason": "Byte-identical smoke-test duplicate; other copy retained"
+    }
+  ],
+  "freed_bytes": 2166824996,
+  "deleted_files": [
+    "results/oxe_core_pilot/latest.pt",
+    "results/oxe_core_8shard_v1/latest.pt",
+    "results/bcz_overfit_cosine_v1/latest.pt",
+    "results/bridge_diffusion_target_pair_smoke_v1/epsilon/final_head.pt"
+  ]
+}

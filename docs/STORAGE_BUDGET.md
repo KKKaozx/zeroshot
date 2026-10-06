@@ -2,6 +2,11 @@
 
 Snapshot: 2026-10-06. Local capacity checks are read-only; no old artifacts deleted.
 
+Subsequent authorized cleanup: three obsolete final checkpoints and one identical
+smoke-test duplicate were removed, freeing 2.018 GiB. D: free space measured after
+cleanup is approximately 40.46 GiB. Existing best checkpoints and current Bridge
+dependencies were retained. See [the cleanup record](../reports/local_checkpoint_cleanup.json).
+
 User clarification: the constraint is **approximately 30 GB free on the local
 disk**, not a request to inspect cluster quota. Treat this reported figure as the
 planning limit; the earlier measured snapshot below is informational.

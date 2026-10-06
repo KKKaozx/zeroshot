@@ -1,6 +1,6 @@
 # 可删除候选及代价
 
-本次仅核对，没有删除文件。
+用户随后授权删除。2026-10-06 已删除下面三个 latest.pt，以及重复副本 `results/bridge_diffusion_target_pair_smoke_v1/epsilon/final_head.pt`，合计释放约 2.018 GiB。保留项已核对。逐文件原大小、SHA256 和删除记录见 [local_checkpoint_cleanup.json](local_checkpoint_cleanup.json)。以下清单保留删除前的判断依据。
 
 ## 放弃旧实验续训后可删除的候选
 

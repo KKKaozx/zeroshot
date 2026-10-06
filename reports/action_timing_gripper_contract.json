@@ -1,0 +1,89 @@
+{
+  "scope": "Timing and gripper semantics review plus real native suction retry smoke; no model training or generalization test",
+  "model_used": false,
+  "test_targets_used_for_metrics": false,
+  "sources_sha256": {
+    "code/dataset.py": "8004cb44f23505429d4da1592993c1dae0b22c60b6a3658344821d6402db1a20",
+    "code/cliport_controller.py": "f03a38f0c2258c888416d2adc3ca40bc3328c6237c57e4e8f58fa73e64e6e58d",
+    "results/bridge_official_comparison_v1/official_reference/jaxrl_m/data/bridge_dataset.py": "289012216f59a1cbfeedb3507fbfc80badad8d8edd53193287ff4f2dcf446d4f",
+    "training_cache/cliport_author/cliport/tasks/grippers.py": "b365e0d10428715694b9d27ba74e8c1612d1f0a1a7bcb83fbfb03920fd720514"
+  },
+  "nominal_source_frequency_hz": 5,
+  "nominal_frequency_source": "https://bridgedata-v2.github.io/",
+  "per_record_dt_validated": false,
+  "raw_record_field_check": {
+    "source_shard": "bridge_data_v2-train.tfrecord-00001-of-01024",
+    "record_index": 0,
+    "steps": 49,
+    "time_fields": [],
+    "feature_keys": [
+      "episode_metadata/episode_id",
+      "episode_metadata/file_path",
+      "episode_metadata/has_image_0",
+      "episode_metadata/has_image_1",
+      "episode_metadata/has_image_2",
+      "episode_metadata/has_image_3",
+      "episode_metadata/has_language",
+      "steps/action",
+      "steps/discount",
+      "steps/is_first",
+      "steps/is_last",
+      "steps/is_terminal",
+      "steps/language_embedding",
+      "steps/language_instruction",
+      "steps/observation/image_0",
+      "steps/observation/image_1",
+      "steps/observation/image_2",
+      "steps/observation/image_3",
+      "steps/observation/state",
+      "steps/reward"
+    ],
+    "scope": "One train record field inspection, not timing calibration"
+  },
+  "suction_physics_check": {
+    "purpose": "Native suction command/activation/attachment distinction and retry smoke test",
+    "model_used": false,
+    "task_reward_evaluated": false,
+    "descent_moves": 323,
+    "before_contact": {
+      "command_open": false,
+      "activated": false,
+      "attached": false
+    },
+    "after_contact_same_close_request": {
+      "command_open": false,
+      "activated": true,
+      "attached": true
+    },
+    "released": {
+      "command_open": true,
+      "activated": false,
+      "attached": false
+    },
+    "passed": true
+  },
+  "tests_passed": 22,
+  "label_alignment": {
+    "input": "image/state at start",
+    "future_pose_row_k": "observed state at start+k+1",
+    "gripper_row_k": "source action at start+k, after explicit reverse-scan policy if selected",
+    "input_gripper": "continuous measured state encoding; not previous commanded suction state"
+  },
+  "controller_limitations": [
+    "Blocking movep completion duration varies; not a verified 5Hz schedule",
+    "Suction command currently applied after target completion, while label command belongs to preceding observation interval; physical timing equivalence is unverified",
+    "Bridge parallel-jaw gripper command cannot be assumed physically equivalent to UR5 suction",
+    "No automatic conversion of measured gripper opening into prior suction command"
+  ],
+  "fix": "Retry a held close request at later target when native suction is still inactive; separately log command_open, suction_activated and grasp_attached.",
+  "expert_regression_after_fix": {
+    "source_report": "results\\cliport_relative_only_suction_retry_regression.json",
+    "sha256": "4363e20da41baf0378e60f843ea3b297af1468c6a6d6a5ced4a2556d91e25f33",
+    "total_reward": 0.9999999999999999,
+    "success": true,
+    "primitive_boundaries": 7,
+    "relative_only_diagnostic_bound": 100,
+    "production_bound_changed": false,
+    "interpretation": "One expert command trace still completes; not learned policy, timing calibration or generalization."
+  }
+}

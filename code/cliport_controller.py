@@ -40,11 +40,13 @@ class ContinuousTCPController:
         """Apply a command transition without inserting a TCP movement."""
         if not isinstance(open_command, (bool, np.bool_)):
             raise ValueError("Boolean suction command required")
-        if open_command != self.command_open:
-            if open_command:
+        if open_command:
+            if self.env.ee.activated:
                 self.env.ee.release()
-            else:
-                self.env.ee.activate()
+        elif not self.env.ee.activated:
+            # An earlier close request may have found no contact. Keep applying
+            # the requested state at later targets until native activation occurs.
+            self.env.ee.activate()
         self.command_open = bool(open_command)
 
     def execute(self, actions, reference_position, reference_quaternion, *, speed=.01):
@@ -80,6 +82,7 @@ class ContinuousTCPController:
                 break
             self.command_suction(bool(row[7] > 0))
             results.append(dict(timeout=False, command_open=self.command_open,
+                suction_activated=bool(self.env.ee.activated),
                 grasp_attached=bool(self.env.ee.check_grasp()),
                 physics_steps=self.env.step_counter-before))
         return results

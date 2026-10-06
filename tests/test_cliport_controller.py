@@ -42,6 +42,19 @@ class Environment:
 
 
 class ContinuousTests(unittest.TestCase):
+    def test_failed_close_request_is_retried_on_next_target(self):
+        class ContactLater(EndEffector):
+            def activate(self):
+                self.activations += 1
+                self.activated = self.activations >= 2
+        env = Environment(); env.ee = ContactLater()
+        a = self.actions([0, .1]); a[:, 7] = -1
+        result = self.run_actions(env, a)
+        self.assertEqual(env.ee.activations, 2)
+        self.assertFalse(result[0]['command_open'])
+        self.assertFalse(result[0]['suction_activated'])
+        self.assertTrue(result[1]['suction_activated'])
+
     def test_checkpoint_range_is_used_without_default_fallback(self):
         config = dict(representation=ACTION_REPRESENTATION, position_scale_meters=.1,
                       max_normalized_position=2.)

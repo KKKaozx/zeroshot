@@ -162,3 +162,25 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-clock-capture.json --capture-reached-trace training_cache/new-reached-trace.json
 training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-motion-prefix.json --replay-reached-trace training_cache/new-reached-trace.json
 ```
+
+## 吸盘事件对齐区间边界的实跑对照（2026-10-06）
+
+沿用同一条作者底层绝对运动目标、速度、初始 seed 与原生奖励，分别在记录的实际物理 tick、所在 96 步区间起点、区间终点发送吸盘请求。每个请求只发送一次，不增加重试；物理步后发送事件，tick=0 事件在运动前发送。记录使用 step_simulation 实际调用计数，未用双增的 step_counter 当时钟。没有重新规划、插入路径点或恢复对象状态；运动命令相同不代表改变吸盘后实际接触/运动状态也相同。
+
+| 条件 | 奖励 | 已执行 primitive | 首次关闭 tick | 请求后的激活/附着 |
+| --- | --- | --- | --- | --- |
+| 原时刻 | 1 | 7 | 143 | 是/是 |
+| 区间起点 | 0 | 1 | 96 | 否/否 |
+| 区间终点 | 0 | 1 | 192 | 否/否 |
+
+原时刻执行全部 14 次请求、5,371 个物理步，逐 primitive 物体位置与原记录完全一致，说明该时钟回放可作为本次对照。起点条件首次关闭提前 47 步（97.92ms），TCP 高度约 16.09cm；终点条件推迟 49 步（102.08ms），TCP 已抬起到约 16.63cm；两者均没有激活/附着。原时刻关闭时 TCP 高度约 3.92cm，成功附着。第一次操作奖励不匹配后保留原语言目标检查并停止，剩余 12 次请求未执行，不能把结果写成完整七次操作统计。
+
+这确认**本单场景、一次性请求条件下，直接将事件移到 0.2s 边界足以破坏执行**；没有单独隔离释放时刻，也不代表所有 5Hz 策略失败。当前连续控制器还会重试保持的关闭请求，此项没有评估该语义，更不能据此要求动作头增加事件时间输出。下一项可用同一场景检查“区间内保持关闭并接触重试”的协议，分别报告抓取与释放/放置，之后再决定模型接口。
+
+这是作者命令工程对照，使用原作者命令范围，包含其低于零的 TCP 目标；不是默认模型范围的验收，也不是学习模型成功、训练拟合、独立测试或泛化。未修改权重、数据标签、速度、周期或奖励；27 项合同测试通过。证据：[吸盘时序对照](../reports/cliport_suction_timing_control.json)。
+
+复现使用原始忽略缓存轨迹，输出路径必须新建；分别将 `exact` 改成 `start` 与 `end`：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --replay-tcp-trace training_cache/cliport_fresh_control/expert_tcp_trace_typed.json --absolute-trace-control --suction-clock training_cache/cliport_fresh_control/reached_clock_trace.json --suction-timing exact --output-json results/new-suction-exact.json
+```

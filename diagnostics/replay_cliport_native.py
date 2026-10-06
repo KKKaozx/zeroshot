@@ -11,6 +11,23 @@ from pathlib import Path
 import numpy as np
 
 
+def suction_schedule(requests, timing, stride=96):
+    """Quantize requests without changing their order or adding retries."""
+    if timing not in ('exact', 'start', 'end') or stride <= 0:
+        raise ValueError('Invalid suction timing contract')
+    scheduled = []
+    previous = -1
+    for request in requests:
+        tick = request['tick']
+        if not isinstance(tick, int) or tick < previous or tick < 0 or type(request['open']) is not bool:
+            raise ValueError('Suction requests must be ordered integer ticks with binary commands')
+        target = tick if timing == 'exact' else (tick // stride * stride if timing == 'start'
+                                                else (tick + stride - 1) // stride * stride)
+        scheduled.append(dict(original_tick=tick, scheduled_tick=target, open=request['open']))
+        previous = tick
+    return scheduled
+
+
 def pose_errors(saved, actual):
     keys = [k for k in saved if isinstance(k, int)]
     if set(keys) != {k for k in actual if isinstance(k, int)}:
@@ -50,11 +67,18 @@ def main():
                         help="Execute a captured expert trace through the continuous controller")
     parser.add_argument("--absolute-trace-control", action="store_true",
                         help="Replay typed trace unchanged, bypassing relative conversion/subdivision")
+    parser.add_argument('--suction-clock', type=Path,
+                        help='Captured actual physics clock for absolute trace timing control')
+    parser.add_argument('--suction-timing', choices=('exact', 'start', 'end'))
     parser.add_argument("--trace-ablation", choices=("relative-only", "absolute-subdivided"),
                         help="Engineering only: isolate conversion or waypoint subdivision")
     parser.add_argument("--fixed-period-grasp-control", action="store_true",
                         help="16-slot author-target pickup/hold/release fixture; not task evaluation")
     args = parser.parse_args()
+    if bool(args.suction_clock) != bool(args.suction_timing) or (args.suction_clock and (
+            not args.absolute_trace_control or args.capture_reached_trace or args.max_episodes != 1
+            or args.restore_before_step is not None)):
+        raise ValueError('Suction timing requires a separate strict absolute trace control')
     if args.replay_reached_trace and (args.max_episodes != 1 or args.capture_reached_trace
             or args.capture_tcp_trace or args.replay_tcp_trace or args.oracle_smoke
             or args.restore_recorded_reset or args.save_oracle_dir or args.event_adapter_control):
@@ -234,6 +258,49 @@ def main():
             inertial_pose = p.getDynamicsInfo(env.ur5, env.ee_tip)[3:5]
             if replay_trace and (replay_trace['seed'] != seed or replay_trace['task'] != task_name):
                 raise ValueError("Trace scene metadata differs")
+            timing_log = None
+            if args.suction_clock:
+                clock = json.loads(args.suction_clock.read_text())
+                requests = clock['suction_requests']
+                source_commands = [e['open'] for batch in replay_trace['primitive_commands']
+                                   for e in batch if e['kind'] == 'suction']
+                if (clock['seed'] != seed or clock['task'] != task_name
+                        or clock['sampling_stride_ticks'] != 96
+                        or clock['physics_tick_seconds'] != 1/480
+                        or p.getPhysicsEngineParameters()['fixedTimeStep'] != 1/480
+                        or source_commands != [r['open'] for r in requests]):
+                    raise ValueError('Trace and suction clock contract differ')
+                schedule = suction_schedule(requests, args.suction_timing)
+                timing_log = dict(timing=args.suction_timing, period_seconds=.2,
+                    trace_sha256=hashlib.sha256(args.replay_tcp_trace.read_bytes()).hexdigest(),
+                    clock_sha256=hashlib.sha256(args.suction_clock.read_bytes()).hexdigest(),
+                    schedule=schedule, executed=[], retry=False, motion_targets_and_speeds_unchanged=True)
+                row['suction_timing_control'] = timing_log
+                timing_tick = 0
+                timing_next = 0
+                original_simulation_step = env.step_simulation
+                original_grasp_check = env.ee.check_grasp
+
+                def dispatch_suction():
+                    nonlocal timing_next
+                    while timing_next < len(schedule) and schedule[timing_next]['scheduled_tick'] <= timing_tick:
+                        event = schedule[timing_next]
+                        (env.ee.release if event['open'] else env.ee.activate)()
+                        tcp_now = p.getLinkState(env.ur5, env.ee_tip, computeForwardKinematics=True)
+                        timing_log['executed'].append(dict(**event, actual_tick=timing_tick,
+                            activated=bool(env.ee.activated), attached=bool(original_grasp_check()),
+                            tcp_position=list(tcp_now[4])))
+                        timing_next += 1
+
+                def timed_simulation_step():
+                    nonlocal timing_tick
+                    result = original_simulation_step()
+                    timing_tick += 1
+                    dispatch_suction()
+                    return result
+
+                env.step_simulation = timed_simulation_step
+                dispatch_suction()
             # Native expert has below-plane IK command targets in a failed pick.
             # This trace-only envelope is NOT the default learned TCP workspace.
             controller = ContinuousTCPController(env,
@@ -416,7 +483,8 @@ def main():
                     for event in replay_trace['primitive_commands'][step]:
                         if args.absolute_trace_control:
                             if event.get('kind') == 'suction':
-                                (env.ee.release if event['open'] else env.ee.activate)()
+                                if timing_log is None:
+                                    (env.ee.release if event['open'] else env.ee.activate)()
                                 continuous_stats['suction_events'] += 1
                             elif event.get('kind') == 'move':
                                 before = env.step_counter
@@ -503,6 +571,9 @@ def main():
                 if done:
                     break
             row["success"] = row["total_reward"] > .99
+            if timing_log is not None:
+                timing_log['total_physics_ticks'] = timing_tick
+                timing_log['pending_requests'] = len(schedule) - timing_next
             if args.capture_reached_trace:
                 if not row['success']:
                     raise ValueError("Native expert incomplete; do not export reached trace as successful")

@@ -1,0 +1,452 @@
+{
+  "purpose": "Coordinate conversion / path subdivision ablation in one seeded expert-command engineering scene",
+  "model_used": false,
+  "training_performed": false,
+  "generalization_evaluation": false,
+  "seed": 0,
+  "trace_sha256": "946161c4c1cea1eefd0c78fa84b9202caf2679c565f03ddafa550c776eccc838",
+  "same_author_sources_versions_initial_scene": true,
+  "comparisons": {
+    "absolute_original": {
+      "source_report": "results\\cliport_absolute_typed_trace_control.json",
+      "sha256": "c5cdf77aae4e0a883f5591e89b876f83fbc21aaafc6ed933785cf85802a8277e",
+      "total_reward": 0.9999999999999999,
+      "success": true,
+      "stopped": null,
+      "primitive_boundaries_executed": 7,
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 654,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1280,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 657,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1352,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 765,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1504,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 3,
+          "reward": 0.16666666666666669,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 654,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1176,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 4,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 668,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1812,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 5,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 668,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1942,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        },
+        {
+          "index": 6,
+          "reward": 0.16666666666666663,
+          "done": true,
+          "continuous_tcp_control": {
+            "targets": 676,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1562,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0,
+          "object_rotation_max_deg_vs_recording": 0.0
+        }
+      ]
+    },
+    "relative_only": {
+      "source_report": "results\\cliport_relative_only_ablation.json",
+      "sha256": "4363e20da41baf0378e60f843ea3b297af1468c6a6d6a5ced4a2556d91e25f33",
+      "total_reward": 0.9999999999999999,
+      "success": true,
+      "stopped": null,
+      "primitive_boundaries_executed": 7,
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 654,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1280,
+            "grasp_attachment_observations": 329,
+            "normalized_xyz_absmax": 3.2531630992889404,
+            "roundtrip_position_max_m": 1.1920928955078125e-07,
+            "roundtrip_quaternion_max_l2": 1.332800394785281e-07
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 7.31166456727491e-09,
+          "object_rotation_max_deg_vs_recording": 1.6288963005921602e-05
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 657,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1352,
+            "grasp_attachment_observations": 331,
+            "normalized_xyz_absmax": 3.280121088027954,
+            "roundtrip_position_max_m": 1.1920928955078125e-07,
+            "roundtrip_quaternion_max_l2": 9.541398696106052e-08
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 6.744738801271379e-08,
+          "object_rotation_max_deg_vs_recording": 5.8056607945109e-05
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 765,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1504,
+            "grasp_attachment_observations": 338,
+            "normalized_xyz_absmax": 4.235526084899902,
+            "roundtrip_position_max_m": 8.940696716308594e-08,
+            "roundtrip_quaternion_max_l2": 1.1920929310349403e-07
+          },
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 1.1742398655847465e-07,
+          "object_rotation_max_deg_vs_recording": 0.0002689373433696355
+        },
+        {
+          "index": 3,
+          "reward": 0.16666666666666669,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 654,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1176,
+            "grasp_attachment_observations": 330,
+            "normalized_xyz_absmax": 3.269275426864624,
+            "roundtrip_position_max_m": 5.960464477539063e-08,
+            "roundtrip_quaternion_max_l2": 8.940696732961936e-08
+          },
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 1.0274381219459239e-07,
+          "object_rotation_max_deg_vs_recording": 0.0009498553173377456
+        },
+        {
+          "index": 4,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 668,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1812,
+            "grasp_attachment_observations": 341,
+            "normalized_xyz_absmax": 4.184974670410156,
+            "roundtrip_position_max_m": 1.2693349299878494e-07,
+            "roundtrip_quaternion_max_l2": 1.3328005338071497e-07
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 1.9057684278754716e-05,
+          "object_rotation_max_deg_vs_recording": 0.02378203431854073
+        },
+        {
+          "index": 5,
+          "reward": 0.16666666666666663,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 668,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1942,
+            "grasp_attachment_observations": 341,
+            "normalized_xyz_absmax": 4.236900329589844,
+            "roundtrip_position_max_m": 1.4901161193847656e-07,
+            "roundtrip_quaternion_max_l2": 1.3328005020307235e-07
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.00026739401267417275,
+          "object_rotation_max_deg_vs_recording": 0.347023602231936
+        },
+        {
+          "index": 6,
+          "reward": 0.16666666666666663,
+          "done": true,
+          "continuous_tcp_control": {
+            "targets": 676,
+            "suction_events": 2,
+            "subdivisions": 0,
+            "timeouts": 0,
+            "physics_steps": 1562,
+            "grasp_attachment_observations": 351,
+            "normalized_xyz_absmax": 3.477003812789917,
+            "roundtrip_position_max_m": 1.7881393432617188e-07,
+            "roundtrip_quaternion_max_l2": 1.3328003908132297e-07
+          },
+          "stored_next_reward": 0.16666666666666663,
+          "object_position_max_m_vs_recording": 0.0002402671556928815,
+          "object_rotation_max_deg_vs_recording": 0.4077252175672597
+        }
+      ]
+    },
+    "absolute_subdivided": {
+      "source_report": "results\\cliport_absolute_subdivided_ablation.json",
+      "sha256": "4c84cf2b1f1288e895f35dfb440de853d5d3314487fcd6f53d366bd0cf58ff44",
+      "total_reward": 0.3333333333333333,
+      "success": false,
+      "stopped": "Language goal diverged; remaining stored actions not executed",
+      "primitive_boundaries_executed": 4,
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 656,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1284,
+            "grasp_attachment_observations": 0,
+            "normalized_xyz_absmax": 3.2534825801849365,
+            "roundtrip_position_max_m": 5.1619136559035694e-08,
+            "roundtrip_quaternion_max_l2": 1.3328004146455477e-07
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 3.443356615876133e-05,
+          "object_rotation_max_deg_vs_recording": 0.12710765081513228
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 660,
+            "suction_events": 2,
+            "subdivisions": 3,
+            "timeouts": 0,
+            "physics_steps": 1358,
+            "grasp_attachment_observations": 0,
+            "normalized_xyz_absmax": 3.2609939575195312,
+            "roundtrip_position_max_m": 2.9802322387695312e-08,
+            "roundtrip_quaternion_max_l2": 1.0745380248208932e-07
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0038645849087069334,
+          "object_rotation_max_deg_vs_recording": 11.42508473433723
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 767,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1476,
+            "grasp_attachment_observations": 0,
+            "normalized_xyz_absmax": 4.195781707763672,
+            "roundtrip_position_max_m": 1.0045852321976765e-07,
+            "roundtrip_quaternion_max_l2": 5.960475846214703e-08
+          },
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 0.17736889345251822,
+          "object_rotation_max_deg_vs_recording": 133.29471647458442
+        },
+        {
+          "index": 3,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 656,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1176,
+            "grasp_attachment_observations": 0,
+            "normalized_xyz_absmax": 3.2513973712921143,
+            "roundtrip_position_max_m": 1.545689587433946e-07,
+            "roundtrip_quaternion_max_l2": 9.541398751590105e-08
+          },
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 0.1998640852218341,
+          "object_rotation_max_deg_vs_recording": 126.09910031921217
+        }
+      ]
+    },
+    "relative_subdivided": {
+      "source_report": "results\\cliport_continuous_tcp_typed_control.json",
+      "sha256": "2c2ed97ac9ca1c4d3fc40fce17ac0a54f85afe201b0db6c6620b1d33ea2913aa",
+      "total_reward": 0.3333333333333333,
+      "success": false,
+      "stopped": "Language goal diverged; remaining stored actions not executed",
+      "primitive_boundaries_executed": 4,
+      "steps": [
+        {
+          "index": 0,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 656,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1284,
+            "grasp_attachment_observations": 330
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 3.443069722329912e-05,
+          "object_rotation_max_deg_vs_recording": 0.1271087977927734
+        },
+        {
+          "index": 1,
+          "reward": 0.16666666666666666,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 660,
+            "suction_events": 2,
+            "subdivisions": 3,
+            "timeouts": 0,
+            "physics_steps": 1358,
+            "grasp_attachment_observations": 332
+          },
+          "stored_next_reward": 0.16666666666666666,
+          "object_position_max_m_vs_recording": 0.0038645880984751477,
+          "object_rotation_max_deg_vs_recording": 11.42508405966394
+        },
+        {
+          "index": 2,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 767,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1476,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.0,
+          "object_position_max_m_vs_recording": 0.17736890767463143,
+          "object_rotation_max_deg_vs_recording": 133.29457145556157
+        },
+        {
+          "index": 3,
+          "reward": 0.0,
+          "done": false,
+          "continuous_tcp_control": {
+            "targets": 656,
+            "suction_events": 2,
+            "subdivisions": 2,
+            "timeouts": 0,
+            "physics_steps": 1176,
+            "grasp_attachment_observations": 0
+          },
+          "stored_next_reward": 0.16666666666666669,
+          "object_position_max_m_vs_recording": 0.19986406758602612,
+          "object_rotation_max_deg_vs_recording": 126.09896366344978
+        }
+      ]
+    }
+  },
+  "relative_only_measurements": {
+    "normalized_xyz_absmax": 4.236900329589844,
+    "position_roundtrip_error_max_m": 1.7881393432617188e-07,
+    "object_position_drift_max_m": 0.00026739401267417275,
+    "trace_only_normalized_bound": 100.0,
+    "default_controller_bound_unchanged": 3.0
+  },
+  "conclusions": [
+    "Relative conversion without subdivision completed this scene.",
+    "Subdivision without relative conversion reproduced failure: reward 1/3.",
+    "Thus subdivision is sufficient to disrupt this particular expert open-loop trace; conversion is not required for this failure.",
+    "This does not establish which contact, IK branch or physics-step difference mediates the failure.",
+    "Unsplit relative control uses a diagnostic enlarged position bound and below-plane command envelope; not an accepted learned controller.",
+    "Do not insert Cartesian waypoints solely to force author commands into model clipping range; define controller and action-range contracts before learned rollout.",
+    "No CLIP, adapter or learned action-head output was used; Bridge offline generalization is unaffected."
+  ]
+}

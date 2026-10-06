@@ -110,3 +110,27 @@ training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_
 作者失败抓取尝试中的命令最低为负高度；命令目标不能当作实际到达的 TCP。连续对照单独使用 z 下界 −0.1m 的作者命令包络；默认模型控制器仍为 z≥0。两种条件不能混用。对照还使用已知作者 primitive 边界结算奖励，不是正式连续策略评测。完整轨迹仅在忽略的工程缓存内保留，不上传数据或权重。
 
 结论：连续控制接口尚未验收，不接入失败的 Bridge 权重，也不启动正式 rollout。下一项限定检查是分别隔离坐标转换与路径拆分，随后才确定实时反馈、控制周期及吸盘触发协议；避免反复调整奖励、工作空间或网络追求通过。证据：[连续控制对照摘要](../reports/cliport_continuous_tcp_control.json)。Bridge 离线泛化失败与此控制接口问题分别记录。
+
+## 坐标转换与路径拆分的隔离结果（同日后续）
+
+上述限定检查已完成，沿用同一作者底层命令文件、seed=0 场景、作者源码和依赖版本。没有恢复物体状态，也没有学习模型。仍在已知作者 primitive 边界结算原生奖励。
+
+| 相对坐标转换 | 新增路径中间点 | 总奖励 | 任务完成 |
+| --- | --- | --- | --- |
+| 否 | 否 | 1 | 是 |
+| 是 | 否 | 1 | 是 |
+| 否 | 是 | 1/3 | 否 |
+| 是 | 是 | 1/3 | 否 |
+
+因此，新增路径中间点本身足以导致这一场景失败；相对坐标转换不是该失败的必要条件。作者 `movep` 本来就通过逆运动学与关节运动执行长距离目标，额外插入笛卡尔中间目标改变了执行路径，不能当作等价变换。还未单独确定是哪次接触、逆运动学解或物理步数差异导致状态偏离；不能推广为所有路径规划均有问题。
+
+不拆分的相对转换最大坐标往返误差约 1.79e-7m，任务完成但物体位姿不再逐位相同。作者命令最大局部位置幅值约 4.237，超出现有默认 3 的范围；这个隔离条件显式使用诊断范围 100 以免在执行前被拒绝，未改变生产控制器默认范围、模型裁剪或训练标签。工程负高度命令包络也继续单独标注。因此这不等于当前模型接口已经通过部署验收。
+
+停止用额外笛卡尔中间点把作者命令硬塞入模型范围。后续先明确训练动作范围与仿真控制合同，再用有接触反馈的专家对照验收；正式模型仍需独立通过离线泛化。结果与复核哈希见 [路径拆分隔离摘要](../reports/cliport_tcp_subdivision_ablation.json)。没有新增数据集、权重或依赖下载。
+
+复现本轮两个新增条件（输出文件必须是新路径）：
+
+```powershell
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-relative-only.json --replay-tcp-trace training_cache/cliport_fresh_control/expert_tcp_trace_typed.json --trace-ablation relative-only
+training_cache/cliport_replay_env/Scripts/python.exe diagnostics/replay_cliport_native.py --author-root training_cache/cliport_author --dataset-dir training_cache/cliport_fresh_control --output-json results/new-absolute-subdivided.json --replay-tcp-trace training_cache/cliport_fresh_control/expert_tcp_trace_typed.json --trace-ablation absolute-subdivided
+```

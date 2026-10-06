@@ -46,7 +46,11 @@ def main():
                         help="Execute a captured expert trace through the continuous controller")
     parser.add_argument("--absolute-trace-control", action="store_true",
                         help="Replay typed trace unchanged, bypassing relative conversion/subdivision")
+    parser.add_argument("--trace-ablation", choices=("relative-only", "absolute-subdivided"),
+                        help="Engineering only: isolate conversion or waypoint subdivision")
     args = parser.parse_args()
+    if args.trace_ablation and (not args.replay_tcp_trace or args.absolute_trace_control):
+        raise ValueError("Trace ablation requires trace replay and a separate control mode")
     if args.absolute_trace_control and not args.replay_tcp_trace:
         raise ValueError("Absolute trace control requires a captured trace")
     if args.output_json.exists() or args.max_episodes < 1:
@@ -79,7 +83,7 @@ def main():
 
     root = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(root / "code"))
-    from dataset import UnifiedRobotDataset, relative_pose_action, trajectory_to_cliport_primitive
+    from dataset import UnifiedRobotDataset, relative_pose_action, decode_relative_pose, trajectory_to_cliport_primitive
     from cliport_controller import ContinuousTCPController
     task_name = "stack-block-pyramid-seq-seen-colors"
     action_dir = args.dataset_dir / "data" / (task_name + "-train") / "action"
@@ -100,6 +104,8 @@ def main():
                   event_adapter_control=args.event_adapter_control,
                   continuous_tcp_trace_control=bool(args.replay_tcp_trace),
                   absolute_trace_control=args.absolute_trace_control,
+                  trace_ablation=args.trace_ablation,
+                  trace_only_normalized_position_bound=100. if args.trace_ablation == "relative-only" else 3.,
                   continuous_trace_workspace_override=bool(args.replay_tcp_trace and not args.absolute_trace_control),
                   primitive_return_observed=not bool(args.replay_tcp_trace),
                   grasp_return_observed=not args.absolute_trace_control,
@@ -163,7 +169,9 @@ def main():
                 raise ValueError("Trace scene metadata differs")
             # Native expert has below-plane IK command targets in a failed pick.
             # This trace-only envelope is NOT the default learned TCP workspace.
-            controller = ContinuousTCPController(env, workspace=[[.2, -.55, -.1], [.8, .55, .7]]) if replay_trace else None
+            controller = ContinuousTCPController(env,
+                max_normalized_position=100. if args.trace_ablation == "relative-only" else 3.,
+                workspace=[[.2, -.55, -.1], [.8, .55, .7]]) if replay_trace else None
             tcp_events = []
             last_pose = None
             command_open = True
@@ -259,7 +267,9 @@ def main():
                 continuous_stats = None
                 if replay_trace:
                     continuous_stats = dict(targets=0, suction_events=0, subdivisions=0, timeouts=0,
-                                            physics_steps=0, grasp_attachment_observations=0)
+                                            physics_steps=0, grasp_attachment_observations=0,
+                                            normalized_xyz_absmax=0., roundtrip_position_max_m=0.,
+                                            roundtrip_quaternion_max_l2=0.)
                     for event in replay_trace['primitive_commands'][step]:
                         if args.absolute_trace_control:
                             if event.get('kind') == 'suction':
@@ -288,11 +298,23 @@ def main():
                             encoded = relative_pose_action(tcp[4], tcp[5], goal_pos, goal_quat,
                                                            1. if event['open'] else -1.)
                             amplitude = float(np.abs(encoded[:3]).max())
-                            fraction = min(1., 2.8 / max(amplitude, 1e-9))
+                            continuous_stats['normalized_xyz_absmax'] = max(continuous_stats['normalized_xyz_absmax'], amplitude)
+                            fraction = 1. if args.trace_ablation == "relative-only" else min(1., 2.8 / max(amplitude, 1e-9))
                             waypoint = np.asarray(tcp[4]) + fraction * (goal_pos-tcp[4])
                             encoded = relative_pose_action(tcp[4], tcp[5], waypoint, goal_quat,
                                                            1. if event['open'] else -1.)
-                            outcome = controller.execute(encoded[None], tcp[4], tcp[5], speed=event['speed'])[0]
+                            decoded_pos, decoded_quat = decode_relative_pose(tcp[4], tcp[5], encoded)
+                            continuous_stats['roundtrip_position_max_m'] = max(
+                                continuous_stats['roundtrip_position_max_m'], float(np.linalg.norm(decoded_pos-waypoint)))
+                            continuous_stats['roundtrip_quaternion_max_l2'] = max(
+                                continuous_stats['roundtrip_quaternion_max_l2'], float(min(
+                                    np.linalg.norm(decoded_quat-goal_quat), np.linalg.norm(decoded_quat+goal_quat))))
+                            if args.trace_ablation == "absolute-subdivided":
+                                before = env.step_counter
+                                timeout = env.movep((waypoint, goal_quat), speed=event['speed'])
+                                outcome = dict(timeout=bool(timeout), physics_steps=env.step_counter-before)
+                            else:
+                                outcome = controller.execute(encoded[None], tcp[4], tcp[5], speed=event['speed'])[0]
                             continuous_stats['targets'] += 1
                             continuous_stats['physics_steps'] += outcome['physics_steps']
                             continuous_stats['timeouts'] += int(outcome['timeout'])

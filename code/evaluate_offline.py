@@ -359,6 +359,8 @@ def evaluate(args: argparse.Namespace) -> None:
             bcz_current_gripper=data_config.get("bcz_current_gripper", "binary"),
             bridge_gripper_policy=data_config.get("bridge_gripper_policy", "threshold_v1"),
             bridge_current_gripper=data_config.get("bridge_current_gripper", "binary"),
+            rt1_gripper_policy=data_config.get("rt1_gripper_policy", "legacy_threshold_v1"),
+            bcz_reached_gripper_policy=data_config.get("bcz_reached_gripper_policy", "future_measured_v1"),
         )
         evaluation_indices = list(range(len(dataset)))
         evaluation_name = f"external:{args.dataset_dir}"
@@ -383,6 +385,8 @@ def evaluate(args: argparse.Namespace) -> None:
             bcz_current_gripper=data_config.get("bcz_current_gripper", "binary"),
             bridge_gripper_policy=data_config.get("bridge_gripper_policy", "threshold_v1"),
             bridge_current_gripper=data_config.get("bridge_current_gripper", "binary"),
+            rt1_gripper_policy=data_config.get("rt1_gripper_policy", "legacy_threshold_v1"),
+            bcz_reached_gripper_policy=data_config.get("bcz_reached_gripper_policy", "future_measured_v1"),
             bridge_episode_selection=data_config.get("bridge_episode_selection"),
         )
         if (checkpoint.get("dataset_identity") is not None

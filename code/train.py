@@ -99,6 +99,12 @@ def dataset_split_identity(dataset, *, target_override=None, chunk_override=None
         payload["bridge_episode_selection"] = dataset.bridge_episode_selection
     if getattr(dataset, "bridge_window_horizon", None) is not None:
         payload["bridge_window_horizon"] = dataset.bridge_window_horizon
+    if (getattr(dataset, "rt1_gripper_policy", "legacy_threshold_v1") != "legacy_threshold_v1"
+            and any(s["source"] == "tfrecord_rt1_pose" for s in dataset.samples)):
+        payload["rt1_gripper_policy"] = dataset.rt1_gripper_policy
+    if (getattr(dataset, "bcz_reached_gripper_policy", "future_measured_v1") != "future_measured_v1"
+            and any(s["source"] == "tfrecord_bc_z_pose" for s in dataset.samples)):
+        payload["bcz_reached_gripper_policy"] = dataset.bcz_reached_gripper_policy
     encoded = json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
 
@@ -982,7 +988,13 @@ def train(args: argparse.Namespace) -> None:
         bridge_current_gripper=args.bridge_current_gripper,
         bridge_episode_selection=bridge_selection,
         bridge_window_horizon=args.bridge_window_horizon,
+        rt1_gripper_policy=args.rt1_gripper_policy,
+        bcz_reached_gripper_policy=args.bcz_reached_gripper_policy,
     )
+    if (any(s["source"] == "tfrecord_rt1_pose" for s in dataset.samples)
+            and args.rt1_gripper_policy == "legacy_threshold_v1"
+            and not args.prepare_only and not args.resume):
+        raise ValueError("新Fractal训练必须选择 --rt1-gripper-policy relative_scan_v2，不能沿用旧阈值标签")
     pool_fit_checkpoint = None
     if args.pool_fit_from:
         pool_fit_checkpoint = torch.load(args.pool_fit_from, map_location="cpu", weights_only=False)
@@ -1750,6 +1762,8 @@ def train(args: argparse.Namespace) -> None:
                 "bcz_current_gripper": args.bcz_current_gripper,
                 "bridge_gripper_policy": args.bridge_gripper_policy,
                 "bridge_current_gripper": args.bridge_current_gripper,
+                "rt1_gripper_policy": args.rt1_gripper_policy,
+                "bcz_reached_gripper_policy": args.bcz_reached_gripper_policy,
                 "bridge_episode_selection": bridge_selection,
             },
             "experiment_kind": ("training_fit_diagnostic" if bridge_selection and args.overfit_samples else
@@ -1981,6 +1995,10 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--bridge-current-gripper", choices=("binary", "continuous"), default="binary",
                         help="Bridge输入测量编码；连续观测2*opening-1，不等价于上一控制命令")
     parser.add_argument("--bridge-task-plan", help="固定Bridge单任务演示计划；不可与旧模型/拟合诊断混用")
+    parser.add_argument("--rt1-gripper-policy", choices=("legacy_threshold_v1", "relative_scan_v2"),
+                        default="legacy_threshold_v1", help="新Fractal训练须显式选择relative_scan_v2；旧权重保留原标签合同。")
+    parser.add_argument("--bcz-reached-gripper-policy", choices=("future_measured_v1", "preceding_command_v2"),
+                        default="future_measured_v1", help="混源到达位姿监督采用preceding_command_v2；旧观测状态标签不暗中更换。")
     return parser.parse_args(argv)
 
 

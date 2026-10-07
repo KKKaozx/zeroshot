@@ -1,0 +1,33 @@
+{
+  "selection": "Fixed first-shard train records 1,2,3; diagnostic only, not training selection",
+  "records": {
+    "1": {
+      "steps": 91,
+      "adjacent_pairs": 90,
+      "future_measured_vs_preceding_command_disagreements": 0,
+      "open_measured_targets": 90,
+      "open_command_targets": 90,
+      "new_command_policy_checked_target_views": 304
+    },
+    "2": {
+      "steps": 201,
+      "adjacent_pairs": 200,
+      "future_measured_vs_preceding_command_disagreements": 72,
+      "open_measured_targets": 118,
+      "open_command_targets": 190,
+      "new_command_policy_checked_target_views": 752
+    },
+    "3": {
+      "steps": 200,
+      "adjacent_pairs": 199,
+      "future_measured_vs_preceding_command_disagreements": 20,
+      "open_measured_targets": 19,
+      "open_command_targets": 39,
+      "new_command_policy_checked_target_views": 736
+    }
+  },
+  "trained": false,
+  "test_targets_read": false,
+  "new_policy": "preceding_command_v2",
+  "new_policy_actual_loader_checks_passed": true
+}

@@ -1,0 +1,113 @@
+{
+  "purpose": "one_fixed_train_record_per_core_source_contract_probe",
+  "model_loaded": false,
+  "trained": false,
+  "test_targets_read": false,
+  "mixed_training_ready": false,
+  "sources": {
+    "language_table": {
+      "shard": "language_table-train.tfrecord-00000-of-01024",
+      "record_index": 0,
+      "selection_rule": "first record with more than 16 frames, by length only",
+      "steps": 27,
+      "windows": 3,
+      "payload_sha256": "66bfee26317fed9c17631ea670d6dbbd8d41de3bf3f95498d80912bfa5947cd4",
+      "decoded_frames": 27,
+      "image_sizes": [
+        [
+          640,
+          360
+        ]
+      ],
+      "position_max_abs_reconstruction_error": 2.2351741790771484e-08,
+      "rotation_matrix_max_abs_error": 0.0,
+      "valid_supervision_dimensions": [
+        "x",
+        "y"
+      ],
+      "open_target_views": null,
+      "production_gripper_label": "placeholder_masked",
+      "rt1_policy": null,
+      "rt1_legacy_disagreement_target_views": null,
+      "bcz_measured_label_vs_first_command_disagreements": null,
+      "bcz_compared_target_views": null,
+      "physical_units_independently_verified": false,
+      "numeric_production_reconstruction_passed": true
+    },
+    "bc_z": {
+      "shard": "bc_z-train.tfrecord-00000-of-00512",
+      "record_index": 1,
+      "selection_rule": "first record with more than 16 frames, by length only",
+      "steps": 91,
+      "windows": 19,
+      "payload_sha256": "d754a92b5b3363e2b8209f6184d827e3d772cdd3c5e4155ca49675da67a62949",
+      "decoded_frames": 91,
+      "image_sizes": [
+        [
+          213,
+          171
+        ]
+      ],
+      "position_max_abs_reconstruction_error": 4.885042148572438e-09,
+      "rotation_matrix_max_abs_error": 1.1102221253445066e-07,
+      "valid_supervision_dimensions": [
+        "x",
+        "y",
+        "z",
+        "qx",
+        "qy",
+        "qz",
+        "qw",
+        "gripper"
+      ],
+      "open_target_views": 304,
+      "production_gripper_label": "future_measured_state",
+      "rt1_policy": null,
+      "rt1_legacy_disagreement_target_views": null,
+      "bcz_measured_label_vs_first_command_disagreements": 0,
+      "bcz_compared_target_views": 304,
+      "physical_units_independently_verified": false,
+      "numeric_production_reconstruction_passed": true
+    },
+    "fractal": {
+      "shard": "fractal20220817_data-train.tfrecord-00000-of-01024",
+      "record_index": 0,
+      "selection_rule": "first record with more than 16 frames, by length only",
+      "steps": 115,
+      "windows": 25,
+      "payload_sha256": "4ce9288ba3e89e27e9578be9d4897b48c68ca94c09da8db92ce0a95dda0f7907",
+      "decoded_frames": 115,
+      "image_sizes": [
+        [
+          320,
+          256
+        ]
+      ],
+      "position_max_abs_reconstruction_error": 2.7384871825741897e-07,
+      "rotation_matrix_max_abs_error": 1.4546249792191102e-07,
+      "valid_supervision_dimensions": [
+        "x",
+        "y",
+        "z",
+        "qx",
+        "qy",
+        "qz",
+        "qw",
+        "gripper"
+      ],
+      "open_target_views": 206,
+      "production_gripper_label": "preceding_relative_command_reconstructed_absolute",
+      "rt1_policy": "relative_scan_v2",
+      "rt1_legacy_disagreement_target_views": 162,
+      "bcz_measured_label_vs_first_command_disagreements": null,
+      "bcz_compared_target_views": null,
+      "physical_units_independently_verified": false,
+      "numeric_production_reconstruction_passed": true
+    }
+  },
+  "limitations": [
+    "One record does not establish dataset-wide integrity.",
+    "Numerical reconstruction cannot establish physical units or controller execution.",
+    "Production decoding and masks checked; full source scanning not checked here."
+  ]
+}

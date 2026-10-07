@@ -51,6 +51,26 @@ CLIP_IMAGE_STD = torch.tensor([0.26862954, 0.26130258, 0.27577711]).view(3, 1, 1
 _TFRECORD_OFFSETS: Dict[str, List[int]] = {}
 
 
+def rt1_relative_gripper_commands(values: np.ndarray) -> np.ndarray:
+    """OXE/Octo convention: positive closes, negative opens, zero retains state.
+
+    Match pinned Octo rel2abs_gripper_actions thresholds and initial-state inference.
+    Return the project's absolute -1 closed / +1 open commands.
+    """
+    values = np.asarray(values, dtype=np.float32).reshape(-1)
+    if not len(values) or not np.isfinite(values).all():
+        raise ValueError("RT-1 relative gripper commands must be finite and nonempty")
+    changes = np.where(values < -0.1, 1, np.where(values > 0.1, -1, 0))
+    meaningful = np.flatnonzero(changes)
+    carry = -changes[meaningful[0]] if len(meaningful) else 1
+    result = np.empty(len(values), dtype=np.float32)
+    for i, change in enumerate(changes):
+        if change:
+            carry = change
+        result[i] = carry
+    return result
+
+
 def normalise_quaternion(quaternion: np.ndarray) -> np.ndarray:
     quaternion = np.asarray(quaternion, dtype=np.float32).reshape(-1)
     if len(quaternion) != 4:
@@ -366,12 +386,20 @@ class UnifiedRobotDataset(
         bridge_current_gripper: str = "binary",
         bridge_episode_selection: Sequence[dict] | None = None,
         bridge_window_horizon: int | None = None,
+        rt1_gripper_policy: str = "legacy_threshold_v1",
+        bcz_reached_gripper_policy: str = "future_measured_v1",
     ) -> None:
         if chunk_size <= 0 or stride <= 0 or min_trajectory_steps < 2:
             raise ValueError(
                 "chunk_size/stride must be positive and min_trajectory_steps >= 2"
             )
         self.data_dir = Path(data_dir)
+        if rt1_gripper_policy not in {"legacy_threshold_v1", "relative_scan_v2"}:
+            raise ValueError("Unknown RT-1 gripper policy")
+        self.rt1_gripper_policy = rt1_gripper_policy
+        if bcz_reached_gripper_policy not in {"future_measured_v1", "preceding_command_v2"}:
+            raise ValueError("Unknown BC-Z reached-pose gripper policy")
+        self.bcz_reached_gripper_policy = bcz_reached_gripper_policy
         self.chunk_size = chunk_size
         self.stride = stride
         if bcz_target not in {"reached", "first_command", "native_commands"}:
@@ -1700,7 +1728,16 @@ class UnifiedRobotDataset(
         actions: List[np.ndarray] = []
         for target_index in range(start + 1, stop):
             target_quaternion = rotation_vector_to_quaternion(axis_angle[target_index])
-            gripper = 1.0 if float(sensed_close[target_index]) < 0.5 else -1.0
+            if getattr(self, "bcz_reached_gripper_policy", "future_measured_v1") == "preceding_command_v2":
+                field = feature["steps/action/future/target_close"]
+                kind = field.WhichOneof("kind")
+                commands = np.asarray(getattr(field, kind).value, dtype=np.float32) if kind else np.asarray([])
+                if commands.size != step_count * 10 or not np.isfinite(commands).all():
+                    raise ValueError("BC-Z reached-pose labels require finite first commands")
+                closed = commands.reshape(step_count, 10)[target_index - 1, 0]
+            else:
+                closed = sensed_close[target_index]
+            gripper = 1.0 if float(closed) < 0.5 else -1.0
             actions.append(
                 relative_pose_action(
                     reference_position,
@@ -1726,8 +1763,8 @@ class UnifiedRobotDataset(
         """Read RT-1 / fractal20220817_data reached tool poses.
 
         ``base_pose_tool_reached`` is stored as ``[xyz, qx, qy, qz, qw]``.
-        The gripper action is continuous closedness, so values below 0.5 map
-        to the project's ``+1 = open`` convention.
+        The new explicit policy reconstructs absolute commands from relative
+        closedness actions. Legacy checkpoints retain their former threshold.
         """
         from PIL import Image
 
@@ -1761,6 +1798,9 @@ class UnifiedRobotDataset(
         poses = poses.reshape(step_count, 7)
         observed_closed = observed_closed.reshape(step_count)
         commanded_closed = commanded_closed.reshape(step_count)
+        absolute_gripper = (rt1_relative_gripper_commands(commanded_closed)
+            if getattr(self, "rt1_gripper_policy", "legacy_threshold_v1") == "relative_scan_v2"
+            else np.where(commanded_closed < 0.5, 1.0, -1.0))
 
         start = int(sample["start_index"])
         reference_position = poses[start, :3]
@@ -1770,9 +1810,7 @@ class UnifiedRobotDataset(
         actions: List[np.ndarray] = []
         for target_index in range(start + 1, stop):
             command_index = min(target_index - 1, len(commanded_closed) - 1)
-            gripper = (
-                1.0 if float(commanded_closed[command_index]) < 0.5 else -1.0
-            )
+            gripper = float(absolute_gripper[command_index])
             actions.append(
                 relative_pose_action(
                     reference_position,

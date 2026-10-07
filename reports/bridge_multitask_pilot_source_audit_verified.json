@@ -1,0 +1,1158 @@
+{
+  "passed": true,
+  "purpose": "pilot_train_development_source_and_production_loader_audit",
+  "trained": false,
+  "model_loaded": false,
+  "reserved_test_targets_read": false,
+  "plan_sha256": "4fdba94e69060a35d81a012925d489511c7bf44791536e22f12e4b42f25de14f",
+  "episodes": [
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+      "record_index": 36,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 1.3439768131728869e-08,
+      "rotation_matrix_max_abs_error": 1.74914317613295e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 16,
+      "payload_sha256": "4f92852dabd068e055c9a90b214a36680883592e27e11d4d16c616234b948af7"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+      "record_index": 36,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.4068893772201108e-08,
+      "rotation_matrix_max_abs_error": 1.2626033087798083e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 34,
+      "payload_sha256": "973ca4b8a629bde92f2ad6ee4b8d24559e02c87ac59f2ebe8af67c3a9aed59e1"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 23,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 2.9373230174545295e-08,
+      "rotation_matrix_max_abs_error": 1.2096952173301645e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 40,
+      "payload_sha256": "bc119ed3b6d0a464b1797cc5974523be0e848dc135535bef2eb74e1980d1aeaa"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 21,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.714869424240817e-08,
+      "rotation_matrix_max_abs_error": 5.700299210431581e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 80,
+      "payload_sha256": "7f913da87be2604cd52e968429865405e19c45e162233ad4825ac395b0e4b3ef"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 25,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 43,
+      "windows": 7,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24
+      ],
+      "decoded_rgb_frames": 43,
+      "position_max_abs_error_m": 1.491806467246448e-08,
+      "rotation_matrix_max_abs_error": 1.4654859425977662e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 56,
+      "payload_sha256": "b701f078b9458742ce62cab81b1c1b95a43455a74a1cbe046d4933b1df591788"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+      "record_index": 41,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 48,
+      "windows": 8,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "decoded_rgb_frames": 48,
+      "position_max_abs_error_m": 1.567363722143611e-08,
+      "rotation_matrix_max_abs_error": 9.307266068958597e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 30,
+      "payload_sha256": "9357cee237e20fc5cd67f98faf0598e3866a7df215a4b32a808d44701c423813"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 41,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 27,
+      "windows": 3,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "decoded_rgb_frames": 27,
+      "position_max_abs_error_m": 1.3622546993219409e-08,
+      "rotation_matrix_max_abs_error": 7.858512136860174e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 48,
+      "payload_sha256": "e9f49cff514a7d2d134b640ce124eac78e17bc355e910feadf083aa0e8d1b9c3"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 54,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.2660876472225802e-08,
+      "rotation_matrix_max_abs_error": 8.194863490573745e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 34,
+      "payload_sha256": "e268be86b039c1801b6344aecb15422393c664c6282a9e7d63d9826efccdc1af"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 44,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 40,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 40,
+      "position_max_abs_error_m": 1.652925064876687e-08,
+      "rotation_matrix_max_abs_error": 1.1735270383228524e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 44,
+      "payload_sha256": "5926afbf0da041dc134867da6c74518c33de914c7d5fb6325bc7185ada7dac48"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+      "record_index": 26,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 29,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 29,
+      "position_max_abs_error_m": 2.7798589485872327e-08,
+      "rotation_matrix_max_abs_error": 8.633307724270622e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 42,
+      "payload_sha256": "469b4f55aecd1deed7da203b32371a8ba7e271e5264f1c7316db352d2036561c"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 2,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.1401915966935405e-08,
+      "rotation_matrix_max_abs_error": 1.2682338390579417e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 38,
+      "payload_sha256": "a319b97080197b0fcd2eecb104266f70af6c2207266cfc471d999982d4b8d587"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+      "record_index": 13,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 4.815805865199252e-09,
+      "rotation_matrix_max_abs_error": 6.413294256768509e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 14,
+      "payload_sha256": "8bd29a8ad0f93d41cff875c48cb97af41776654bdea6bec72c5ad9a172e3397e"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 29,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 21,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 21,
+      "position_max_abs_error_m": 4.670009379204032e-09,
+      "rotation_matrix_max_abs_error": 8.390179362383066e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 12,
+      "payload_sha256": "55cdd1dca208b28005e339d157c96aa9a0f3271e791fffbc7b70f4d65308382f"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 11,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 5.20518028679362e-09,
+      "rotation_matrix_max_abs_error": 7.347078517794259e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 12,
+      "payload_sha256": "8bd69be631da7ffab4affb4a7498e5df9da1d80e91fb4fe8c44ff9702c0869de"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 35,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 5.584159135096911e-09,
+      "rotation_matrix_max_abs_error": 6.269421015669963e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 16,
+      "payload_sha256": "81e330e4bb8b4014c00c72fb86c536c28bade5e1de005da7866899c75e6dd04b"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 2,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 3.457601427392376e-09,
+      "rotation_matrix_max_abs_error": 6.219921461214639e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 8,
+      "payload_sha256": "c8091e65ff1436e08ca96d04d5e7367e9b0cab9bf2c15855fdee074b47d9968d"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 33,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 2.0062732919434723e-08,
+      "rotation_matrix_max_abs_error": 7.723675360393756e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 32,
+      "payload_sha256": "5fbf2b34e0abb84067b7f51f6221ffc215b2735d588cda1814f72c4eb26edb19"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 7,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 19,
+      "windows": 1,
+      "starts": [
+        0
+      ],
+      "decoded_rgb_frames": 19,
+      "position_max_abs_error_m": 2.683918434720489e-09,
+      "rotation_matrix_max_abs_error": 4.072590228942907e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 9,
+      "payload_sha256": "045f63af4ec6fe199b1932dafa4ed457259d4271358749545274f8a5ceb46533"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+      "record_index": 7,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 6.098304417001543e-09,
+      "rotation_matrix_max_abs_error": 5.2000049932665604e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 16,
+      "payload_sha256": "406563a7c06957d82885900e8db121298e524d0b9f8a219f0cab5d1413d08c84"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+      "record_index": 45,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 3.159162924315506e-09,
+      "rotation_matrix_max_abs_error": 7.952196401372902e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 14,
+      "payload_sha256": "920d552ddaf1bfa88caaa173d2bc64b422748caf5a97bd17ec926f373dc24e7f"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 43,
+      "partition": "train",
+      "instruction": "turn lever vertical to front",
+      "steps": 19,
+      "windows": 1,
+      "starts": [
+        0
+      ],
+      "decoded_rgb_frames": 19,
+      "position_max_abs_error_m": 5.617668941138021e-09,
+      "rotation_matrix_max_abs_error": 7.828073167459593e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 7,
+      "payload_sha256": "df80877af54f81f28fb99a594f59ab879966007c48b2e239447aad7022f6d26d"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00028-of-01024",
+      "record_index": 2,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.002884342238275e-08,
+      "rotation_matrix_max_abs_error": 6.981323918964222e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 50,
+      "payload_sha256": "8c61dfe532e065fc0c8935c7716a258d1edef1395c6764212f0f6e4b4dda5494"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 40,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 2.6833506014400932e-08,
+      "rotation_matrix_max_abs_error": 1.1537257760263486e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 55,
+      "payload_sha256": "eb21e811cc5795327a376fdae0a7c96c5477d88c7c167b471427d8dd50a79265"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 10,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 8.778251153751526e-09,
+      "rotation_matrix_max_abs_error": 8.439684928696067e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 48,
+      "payload_sha256": "3164f3cdaa7feb2db8802887720ad273f0a368d2530af1ad3582625b5148d1fb"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 37,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 25,
+      "windows": 3,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "decoded_rgb_frames": 25,
+      "position_max_abs_error_m": 1.4991488883620008e-08,
+      "rotation_matrix_max_abs_error": 5.2580757137210554e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 31,
+      "payload_sha256": "9e39dd1f778df31beb9c4b9b3e623ebcc620aaf9b6a126d883578086c6fc76ea"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+      "record_index": 33,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 2.1906262859250347e-08,
+      "rotation_matrix_max_abs_error": 1.0085750334898336e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 52,
+      "payload_sha256": "6a07f30cc0c16b435c066635e111ee160a3903c43d155a7845bd0eb566785a82"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+      "record_index": 21,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.5573572861860008e-08,
+      "rotation_matrix_max_abs_error": 6.84658691407769e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 48,
+      "payload_sha256": "6829b1e82e4590befa5b4b1e1d92b089612c9223fc440315c01bb9db53025bf1"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 33,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.3195417369882279e-08,
+      "rotation_matrix_max_abs_error": 5.320603438385696e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 48,
+      "payload_sha256": "160d70c09f70297ff6f97f5c7520d5f72d55f6cf7b556498cc8bdaed3b21008b"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+      "record_index": 6,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 2.0231218922361904e-08,
+      "rotation_matrix_max_abs_error": 8.039478480159623e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 51,
+      "payload_sha256": "3f42bfa8e6cf1b10ef7d160881e722bea1ac079fabb1c66e38ed687cb54fc155"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 29,
+      "partition": "train",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 2.8788420203262888e-08,
+      "rotation_matrix_max_abs_error": 2.0975261469380335e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 50,
+      "payload_sha256": "2de94c1a9bc4e21a57b6d92505c4d96af7a90b26186b3054d87626bb129b7423"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 17,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 29,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 29,
+      "position_max_abs_error_m": 2.033412860313888e-08,
+      "rotation_matrix_max_abs_error": 9.217407626049834e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 64,
+      "payload_sha256": "7012c73a3068a37d7a51841591403b17450853b92799154850f9d9858babdeab"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 31,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.860544798781838e-08,
+      "rotation_matrix_max_abs_error": 9.672417794481802e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 96,
+      "payload_sha256": "6c1f00da950dfd970a1f69715d256e62db50573a0e0097dd54710cf32d6642f3"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 25,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.810391420109525e-08,
+      "rotation_matrix_max_abs_error": 9.592119054602222e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 96,
+      "payload_sha256": "066a76bebd9bbdf280b42ece02e44216776e6ba3b4e95845be536701d51f0be7"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+      "record_index": 40,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.720965764340221e-08,
+      "rotation_matrix_max_abs_error": 7.22799108343608e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 80,
+      "payload_sha256": "69744cdd04d5eef7dd02927a6dbdbcb52bad4fd021944e544d65ed73ef72fc6e"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 20,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 29,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 29,
+      "position_max_abs_error_m": 1.3206552740285815e-08,
+      "rotation_matrix_max_abs_error": 1.457209656274827e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 64,
+      "payload_sha256": "9aa654a4e3fef43f8e6bd17700a7516e0a2253c28ed8217366a66b95a2b94253"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 4,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.2841650964823259e-08,
+      "rotation_matrix_max_abs_error": 7.441739519054025e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 96,
+      "payload_sha256": "74ff44abe5272f2554dba92e33e120f1c20813514e62d2b641f6afc09069b748"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+      "record_index": 8,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.3690468425586744e-08,
+      "rotation_matrix_max_abs_error": 1.5265637620665018e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 96,
+      "payload_sha256": "92e403950257d433a135a8ecf3689d7d54bb993a039bff3a22adc341b017ac5c"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+      "record_index": 39,
+      "partition": "train",
+      "instruction": "close microwave",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.500452162517263e-08,
+      "rotation_matrix_max_abs_error": 8.801779061151649e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 96,
+      "payload_sha256": "86808a55b675738f71dcba23560700694fcbee9131388e1bc341ebd7c15a2325"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00025-of-01024",
+      "record_index": 15,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 32,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 32,
+      "position_max_abs_error_m": 1.3888775726722535e-08,
+      "rotation_matrix_max_abs_error": 4.19311696753244e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 34,
+      "payload_sha256": "ac94a566115b1792b3001c104f8d6ed5bb7a0311872fe44de6d25397e209cc65"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 20,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 7.401709356535946e-09,
+      "rotation_matrix_max_abs_error": 4.635168937561218e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 80,
+      "payload_sha256": "1f9024856689c73f4eb5bd2654a696aec49bc9d8ff8ee4a7df5f0232f38217db"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+      "record_index": 3,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 48,
+      "windows": 8,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "decoded_rgb_frames": 48,
+      "position_max_abs_error_m": 1.4240359780259837e-08,
+      "rotation_matrix_max_abs_error": 1.358583704424987e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 28,
+      "payload_sha256": "3b2d059af3e82887baa8d0a33cedef7a0c03947c60e27671d753bb1758fd524f"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 26,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 3.142103260911355e-08,
+      "rotation_matrix_max_abs_error": 4.2330091525044633e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 80,
+      "payload_sha256": "f0f9fc5531e080eb7a50417330577697ca24e1ad4ce7105dd466954eec312425"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 26,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 48,
+      "windows": 8,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "decoded_rgb_frames": 48,
+      "position_max_abs_error_m": 1.2877242494546692e-08,
+      "rotation_matrix_max_abs_error": 7.938661994444374e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 128,
+      "payload_sha256": "9a1e534d7eca8d83e9c19f44cfaaad8e1119450864a6719725481fcd24349b1f"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+      "record_index": 22,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 32,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 32,
+      "position_max_abs_error_m": 2.40519689165275e-08,
+      "rotation_matrix_max_abs_error": 3.5902530254317e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 40,
+      "payload_sha256": "0d942e3425102cb8716c21fa968d41c266378a9daff9b9c3291106c47ac9abab"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00031-of-01024",
+      "record_index": 17,
+      "partition": "train",
+      "instruction": "close the drawer",
+      "steps": 33,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 33,
+      "position_max_abs_error_m": 3.666418957326556e-08,
+      "rotation_matrix_max_abs_error": 2.7410927343207714e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 80,
+      "payload_sha256": "636ef46fe6d059bf5d269fda08a87cabe80f9bb29f84e04d57487a98dccca7c2"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+      "record_index": 9,
+      "partition": "validation",
+      "instruction": "open the drawer",
+      "steps": 39,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 39,
+      "position_max_abs_error_m": 1.6964332175128938e-08,
+      "rotation_matrix_max_abs_error": 1.0545117001825588e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 40,
+      "payload_sha256": "25613136b0ba69865b67f57d4438ffcd6fa0a75cb6e101e092cdac501fc25d68"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+      "record_index": 39,
+      "partition": "validation",
+      "instruction": "open the drawer",
+      "steps": 36,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 36,
+      "position_max_abs_error_m": 1.3377750712750824e-08,
+      "rotation_matrix_max_abs_error": 8.600627188215526e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 27,
+      "payload_sha256": "09064442584d493aef0a43bc8ca17095f96b69d6b0edca89a9a1f35c1d6cb44e"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+      "record_index": 34,
+      "partition": "validation",
+      "instruction": "turn lever vertical to front",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 3.0123009642224474e-09,
+      "rotation_matrix_max_abs_error": 6.286557430179585e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 16,
+      "payload_sha256": "a64721e584a8adef468d06b1d94c4aeac5ca33c590eea17f2b5d6663e974bcfb"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00021-of-01024",
+      "record_index": 19,
+      "partition": "validation",
+      "instruction": "turn lever vertical to front",
+      "steps": 21,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 21,
+      "position_max_abs_error_m": 7.611852037570088e-09,
+      "rotation_matrix_max_abs_error": 4.9108675681530656e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 16,
+      "payload_sha256": "e2ccdf1ea01df776fd1f0b0f47622ccf7360f1b931ed47156ec32d0de99c5f4a"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 24,
+      "partition": "validation",
+      "instruction": "take broccoli out of pan",
+      "steps": 25,
+      "windows": 3,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "decoded_rgb_frames": 25,
+      "position_max_abs_error_m": 1.9075105495147682e-08,
+      "rotation_matrix_max_abs_error": 4.3397816000545486e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 30,
+      "payload_sha256": "862c0c06345be2b17cea176ecc82b421b825f07f7d12b70cdadeea213959afd4"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 54,
+      "partition": "validation",
+      "instruction": "take broccoli out of pan",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.5558931490411432e-08,
+      "rotation_matrix_max_abs_error": 9.237871217981919e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 52,
+      "payload_sha256": "d538b14527ca88e7539b9628c144043645b8ce8f773cbfdcfdfa3d2585b0502c"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+      "record_index": 11,
+      "partition": "validation",
+      "instruction": "close microwave",
+      "steps": 30,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 30,
+      "position_max_abs_error_m": 1.3451626021399044e-08,
+      "rotation_matrix_max_abs_error": 6.375682215509215e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 64,
+      "payload_sha256": "846b1317d37e109270545f5c21accb3e08902b4a3864c90d8cbcf926506b489e"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 38,
+      "partition": "validation",
+      "instruction": "close microwave",
+      "steps": 38,
+      "windows": 6,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "decoded_rgb_frames": 38,
+      "position_max_abs_error_m": 1.6839130229096e-08,
+      "rotation_matrix_max_abs_error": 7.676390545441336e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 96,
+      "payload_sha256": "14cc1d8a4f761bce3fb099409382077846b304cdc1181aa568de1625e5d8ed47"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+      "record_index": 38,
+      "partition": "validation",
+      "instruction": "close the drawer",
+      "steps": 21,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 21,
+      "position_max_abs_error_m": 1.9886124330570354e-08,
+      "rotation_matrix_max_abs_error": 3.8447849515232946e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 14,
+      "payload_sha256": "b7d03b90ed89922b352e4de6febb01295dda0f2fb85ba5d7a377ff4ca0c451a9"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+      "record_index": 22,
+      "partition": "validation",
+      "instruction": "close the drawer",
+      "steps": 32,
+      "windows": 4,
+      "starts": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "decoded_rgb_frames": 32,
+      "position_max_abs_error_m": 3.2534542560025415e-08,
+      "rotation_matrix_max_abs_error": 2.2704874098888883e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 64,
+      "payload_sha256": "7baa31906948718198cbc05ae616cb3de03d12e3dde05e53da56a3e433ccf752"
+    }
+  ],
+  "dataset_source_sha256": "8004cb44f23505429d4da1592993c1dae0b22c60b6a3658344821d6402db1a20",
+  "limitations": [
+    "No physical controller calibration or benchmark execution.",
+    "Same-task episode holdout does not establish scene/task independence.",
+    "Output range mismatches are recorded, not silently clipped."
+  ],
+  "partitions": {
+    "train": {
+      "episodes": 45,
+      "windows": 207,
+      "decoded_rgb_frames": 1476,
+      "out_of_30cm_target_views": 0
+    },
+    "validation": {
+      "episodes": 10,
+      "windows": 40,
+      "decoded_rgb_frames": 303,
+      "out_of_30cm_target_views": 0
+    }
+  },
+  "elapsed_seconds": 6.39100000000326
+}

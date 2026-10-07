@@ -1,0 +1,186 @@
+{
+  "passed": false,
+  "purpose": "pilot_train_development_source_and_production_loader_audit",
+  "trained": false,
+  "model_loaded": false,
+  "reserved_test_targets_read": false,
+  "plan_sha256": "4fdba94e69060a35d81a012925d489511c7bf44791536e22f12e4b42f25de14f",
+  "episodes": [
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+      "record_index": 36,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 23,
+      "windows": 2,
+      "starts": [
+        0,
+        4
+      ],
+      "decoded_rgb_frames": 23,
+      "position_max_abs_error_m": 1.3439768131728869e-08,
+      "rotation_matrix_max_abs_error": 1.74914317613295e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 16,
+      "payload_sha256": "4f92852dabd068e055c9a90b214a36680883592e27e11d4d16c616234b948af7"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+      "record_index": 36,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.4068893772201108e-08,
+      "rotation_matrix_max_abs_error": 1.2626033087798083e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 34,
+      "payload_sha256": "973ca4b8a629bde92f2ad6ee4b8d24559e02c87ac59f2ebe8af67c3a9aed59e1"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 23,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 2.9373230174545295e-08,
+      "rotation_matrix_max_abs_error": 1.2096952173301645e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 40,
+      "payload_sha256": "bc119ed3b6d0a464b1797cc5974523be0e848dc135535bef2eb74e1980d1aeaa"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 21,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.714869424240817e-08,
+      "rotation_matrix_max_abs_error": 5.700299210431581e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 80,
+      "payload_sha256": "7f913da87be2604cd52e968429865405e19c45e162233ad4825ac395b0e4b3ef"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 25,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 43,
+      "windows": 7,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24
+      ],
+      "decoded_rgb_frames": 43,
+      "position_max_abs_error_m": 1.491806467246448e-08,
+      "rotation_matrix_max_abs_error": 1.4654859425977662e-07,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 56,
+      "payload_sha256": "b701f078b9458742ce62cab81b1c1b95a43455a74a1cbe046d4933b1df591788"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+      "record_index": 41,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 48,
+      "windows": 8,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "decoded_rgb_frames": 48,
+      "position_max_abs_error_m": 1.567363722143611e-08,
+      "rotation_matrix_max_abs_error": 9.307266068958597e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 30,
+      "payload_sha256": "9357cee237e20fc5cd67f98faf0598e3866a7df215a4b32a808d44701c423813"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 41,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 27,
+      "windows": 3,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "decoded_rgb_frames": 27,
+      "position_max_abs_error_m": 1.3622546993219409e-08,
+      "rotation_matrix_max_abs_error": 7.858512136860174e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 48,
+      "payload_sha256": "e9f49cff514a7d2d134b640ce124eac78e17bc355e910feadf083aa0e8d1b9c3"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 54,
+      "partition": "train",
+      "instruction": "open the drawer",
+      "steps": 34,
+      "windows": 5,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "decoded_rgb_frames": 34,
+      "position_max_abs_error_m": 1.2660876472225802e-08,
+      "rotation_matrix_max_abs_error": 8.194863490573745e-08,
+      "out_of_30cm_target_views": 0,
+      "open_target_views": 34,
+      "payload_sha256": "e268be86b039c1801b6344aecb15422393c664c6282a9e7d63d9826efccdc1af"
+    }
+  ],
+  "dataset_source_sha256": "8004cb44f23505429d4da1592993c1dae0b22c60b6a3658344821d6402db1a20",
+  "limitations": [
+    "No physical controller calibration or benchmark execution.",
+    "Same-task episode holdout does not establish scene/task independence.",
+    "Output range mismatches are recorded, not silently clipped."
+  ],
+  "error": "ValueError(\"Production loader contract failed: ('bridge_data_v2-train.tfrecord-00011-of-01024', 44)\")",
+  "elapsed_seconds": 4.375
+}

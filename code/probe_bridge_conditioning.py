@@ -169,6 +169,7 @@ def main():
     parser.add_argument('--chain-probe', action='store_true')
     parser.add_argument('--reference-report', type=Path)
     parser.add_argument('--all-train-windows', action='store_true')
+    parser.add_argument('--one-step-image-probe', action='store_true')
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError('Use a new output path')
@@ -176,8 +177,10 @@ def main():
         raise ValueError('At least two training episodes per task are required')
     if args.chain_probe and args.reference_report is None:
         raise ValueError('Chain probe requires previous complete conditioning report')
-    if args.all_train_windows and not args.chain_probe:
-        raise ValueError('Full-window mode is limited to the paired chain probe')
+    if args.one_step_image_probe and (args.chain_probe or not args.all_train_windows or args.reference_report is None):
+        raise ValueError('One-step image probe requires full windows and reference, without chain probe')
+    if args.all_train_windows and not (args.chain_probe or args.one_step_image_probe):
+        raise ValueError('Full-window mode requires a chain or one-step image probe')
     # Import the archived training package, rather than mutable workspace models.
     sys.path.insert(0, str(args.pack.resolve()))
     import numpy as np
@@ -223,6 +226,11 @@ def main():
     splits = bridge_plan_splits(dataset)
     assert {k: len(v) for k, v in splits.items()} == json.loads(manifest.read_text())['expected_windows']
     rows = select_windows(dataset, splits, selected, args.train_episodes_per_task,args.all_train_windows)
+    if args.one_step_image_probe:
+        reference = json.loads(args.reference_report.read_text())
+        assert rows == reference['window_selection']
+        assert reference['sampling_seeds'] == [0,1,2]
+        assert {name:sha256(args.pack/name) for name in reference['module_sha256']} == reference['module_sha256']
     images, texts = donor_indices(rows)
     items = [dataset[r['dataset_index']] for r in rows]
     target = np.stack([item[3].numpy() for item in items])
@@ -248,7 +256,10 @@ def main():
     model.load_state_dict(checkpoint['trainable_state_dict'], strict=False)
     tokenizer = CLIPTokenizer.from_pretrained(checkpoint['config']['model']['name'], local_files_only=True)
     before = state_digest(model)
-    conditions = ('correct',) if args.chain_probe else ('correct', 'image_swap_same_task', 'language_swap_other_task')
+    if args.one_step_image_probe:
+        assert sha256(args.run/'latest.pt') == reference['checkpoint_sha256']
+        assert before == reference['trainable_state_sha256_after']
+    conditions = ('correct',) if args.chain_probe else (('correct','image_swap_same_task') if args.one_step_image_probe else ('correct', 'image_swap_same_task', 'language_swap_other_task'))
     contexts = defaultdict(list)
     started = time.monotonic()
     with torch.inference_mode():
@@ -267,6 +278,10 @@ def main():
             groups[part+'/overall'] = [i for i, r in enumerate(rows) if r['partition'] == part]
             for task in sorted({r['task'] for r in rows}):
                 groups[part+'/task/'+task] = [i for i, r in enumerate(rows) if r['partition'] == part and r['task'] == task]
+            if args.one_step_image_probe:
+                for shard,record in sorted({(r['shard'],r['record_index']) for r in rows if r['partition'] == part}):
+                    groups[part+'/episode/'+shard+'::'+str(record)] = [i for i,r in enumerate(rows)
+                        if r['partition'] == part and (r['shard'],r['record_index']) == (shard,record)]
         report = dict(trained=False, weights_updated=False, checkpoint='latest', checkpoint_epoch=checkpoint['epoch'],
             checkpoint_sha256=sha256(args.run/'latest.pt'), reserved_test_targets_read=False,
             training_subset_policy='All fixed train/development windows' if args.all_train_windows else f'First full window of first {args.train_episodes_per_task} source-order episodes per task; no prediction-based selection',
@@ -287,12 +302,22 @@ def main():
         if args.chain_probe:
             assert before == json.loads(args.reference_report.read_text())['trainable_state_sha256_after']
             run_chain_probe(model,contexts,items,target,groups,report,args.reference_report,pose_metrics)
-        for case in (() if args.chain_probe else ('target_t0','target_t24','target_t49','target_t74','target_t99','pure_noise_t99','native_sample')):
+        if args.one_step_image_probe:
+            report.update(experiment='paired_pure_noise_first_prediction_image_swap',
+                reference_sha256=sha256(args.reference_report),initial_noise_sha256={})
+            report['limits'] = ['Full fixed train/development pools; reserved test unused.',
+                'Same language, weights and initial noise; only image changed to another same-task episode in same partition.',
+                'Donors are deterministic first eligible windows, not a bijection or a phase-balanced permutation.',
+                'Sensitivity and mean errors cannot establish task success or identify a unique faulty module.',
+                'Episode groups support paired descriptive analysis; development has only ten episodes.']
+        cases = () if args.chain_probe else (('pure_noise_t99',) if args.one_step_image_probe else ('target_t0','target_t24','target_t49','target_t74','target_t99','pure_noise_t99','native_sample'))
+        for case in cases:
             report['cases'][case] = {}
             correct_predictions = {}
             for condition in conditions:
                 results = defaultdict(list)
                 for seed in range(3):
+                    noise_digest = hashlib.sha256()
                     prediction = np.empty((len(rows),16,7), np.float32)
                     for start in range(0, len(rows), 2):
                         context = contexts[condition][start:start+2].cuda()
@@ -304,12 +329,18 @@ def main():
                         else:
                             step = int(case.rsplit('t',1)[1])
                             noise = torch.randn_like(clean)
+                            if args.one_step_image_probe:
+                                noise_digest.update(noise.cpu().contiguous().numpy().tobytes())
                             alpha = model.alpha_bars[step]
                             noisy = noise if case == 'pure_noise_t99' else alpha.sqrt()*clean + (1-alpha).sqrt()*noise
                             timestep = torch.full((len(clean),),step,device='cuda',dtype=torch.long)
                             output = model.diffusion_decoder(noisy,timestep,context)
                         assert torch.isfinite(output).all()
                         prediction[start:start+len(clean)] = output.cpu().numpy()
+                    if args.one_step_image_probe:
+                        report['initial_noise_sha256'].setdefault(condition,[]).append(noise_digest.hexdigest())
+                        if condition != 'correct':
+                            assert noise_digest.hexdigest() == report['initial_noise_sha256']['correct'][seed]
                     for group, indices in groups.items():
                         values = pose_metrics(prediction[indices],target[indices,:,:7])
                         if condition != 'correct':
@@ -323,6 +354,12 @@ def main():
                 report['cases'][case][condition] = dict(results)
                 print('PROBE',case,condition,'train',results['train/overall'],
                     'development',results['validation/overall'],flush=True)
+        if args.one_step_image_probe:
+            correct = report['cases']['pure_noise_t99']['correct']
+            report['correct_reference_metric_differences'] = {g:[
+                {k:correct[g][s][k]-values[s][k] for k in ('position_cm','rotation_deg')}
+                for s in range(3)] for g,values in reference['one_step_pure_noise'].items()}
+            report['identical_initial_noise'] = True
         report['alpha_bars'] = {str(t): float(model.alpha_bars[t]) for t in (0,24,49,74,99)}
         report['static_baselines'] = {}
         static = np.zeros_like(target[:,:,:7]); static[:,:,6] = 1

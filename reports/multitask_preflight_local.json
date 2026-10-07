@@ -1,0 +1,41 @@
+{
+  "passed": false,
+  "purpose": "multitask_joint_model_resource_preflight",
+  "formal_training": false,
+  "validation_evaluated": false,
+  "reserved_test_targets_read": false,
+  "updates": 8,
+  "batch_size": 2,
+  "seed": 42,
+  "losses": [],
+  "clip_path": "C:\\Users\\21043\\.cache\\huggingface\\hub\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "config": {
+    "action": {
+      "max_normalized_position": 3.0
+    },
+    "model": {
+      "name": "C:\\Users\\21043\\.cache\\huggingface\\hub\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "adapter_pooling": "cls_patch_mean",
+      "dropout": 0.1,
+      "decoder_type": "diffusion",
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "diffusion_prediction_type": "sample",
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+      "gripper_target_mode": "state",
+      "balanced_gripper_loss": false,
+      "gripper_loss_weight": 0.25
+    }
+  },
+  "error": "OSError('Error no file named model.safetensors, or pytorch_model.bin, found in directory C:\\\\Users\\\\21043\\\\.cache\\\\huggingface\\\\hub\\\\models--openai--clip-vit-large-patch14\\\\snapshots\\\\32bd64288804d66eefd0ccbe215aa642df71cc41.')"
+}

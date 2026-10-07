@@ -1,0 +1,113 @@
+{
+  "job_id": 189937,
+  "evidence": "Downloaded full-evaluation.json and history.json",
+  "file_sha256": {
+    "full-evaluation.json": "07a635a60d05492b76d3e928388cc59a7d9a666572ec9b87828ddb0eec9e1049",
+    "history.json": "646d8603c675147f58c7dada9a23550afe33cee61af116f17b2b935ef44b835e"
+  },
+  "training_seed": 42,
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "reserved_test_targets_read": false,
+  "latest_task_means": {
+    "train/task/turn lever vertical to front": {
+      "windows": 18.0,
+      "position_cm": 3.736923635005951,
+      "static_position_cm": 4.166395664215088,
+      "rotation_deg": 8.225604375203451,
+      "static_rotation_deg": 10.777950286865234,
+      "balanced_accuracy": 0.88481338818868,
+      "gripper_class_count": 2.0
+    },
+    "train/task/take broccoli out of pan": {
+      "windows": 51.0,
+      "position_cm": 13.021543423334757,
+      "static_position_cm": 8.879984617233278,
+      "rotation_deg": 15.069377581278482,
+      "static_rotation_deg": 13.246960639953613,
+      "balanced_accuracy": 0.6867323120435079,
+      "gripper_class_count": 2.0
+    },
+    "train/task/close microwave": {
+      "windows": 43.0,
+      "position_cm": 12.2413702805837,
+      "static_position_cm": 9.73256051540375,
+      "rotation_deg": 14.410676956176758,
+      "static_rotation_deg": 13.4646635055542,
+      "balanced_accuracy": 1.0,
+      "gripper_class_count": 1.0
+    },
+    "train/task/close the drawer": {
+      "windows": 39.0,
+      "position_cm": 9.584385951360067,
+      "static_position_cm": 8.040741086006165,
+      "rotation_deg": 12.123235384623209,
+      "static_rotation_deg": 11.495644569396973,
+      "balanced_accuracy": 0.8414018551508585,
+      "gripper_class_count": 2.0
+    },
+    "train/task/open the drawer": {
+      "windows": 56.0,
+      "position_cm": 9.186713298161825,
+      "static_position_cm": 7.8933268785476685,
+      "rotation_deg": 13.098638852437338,
+      "static_rotation_deg": 12.598844528198242,
+      "balanced_accuracy": 0.7770679195721945,
+      "gripper_class_count": 2.0
+    },
+    "validation/task/close the drawer": {
+      "windows": 6.0,
+      "position_cm": 9.497252106666565,
+      "static_position_cm": 9.757025837898254,
+      "rotation_deg": 41.57155100504557,
+      "static_rotation_deg": 41.403709411621094,
+      "balanced_accuracy": 0.5,
+      "gripper_class_count": 2.0
+    },
+    "validation/task/close microwave": {
+      "windows": 10.0,
+      "position_cm": 14.248974323272705,
+      "static_position_cm": 9.132288098335268,
+      "rotation_deg": 13.004517237345377,
+      "static_rotation_deg": 11.021167755126953,
+      "balanced_accuracy": 1.0,
+      "gripper_class_count": 1.0
+    },
+    "validation/task/take broccoli out of pan": {
+      "windows": 9.0,
+      "position_cm": 13.505732615788778,
+      "static_position_cm": 9.201328754425049,
+      "rotation_deg": 11.753254254659018,
+      "static_rotation_deg": 8.586380004882812,
+      "balanced_accuracy": 0.6436532884836197,
+      "gripper_class_count": 2.0
+    },
+    "validation/task/turn lever vertical to front": {
+      "windows": 4.0,
+      "position_cm": 2.9249393939971924,
+      "static_position_cm": 3.376197516918183,
+      "rotation_deg": 8.51303768157959,
+      "static_rotation_deg": 10.624619483947754,
+      "balanced_accuracy": 0.8125,
+      "gripper_class_count": 2.0
+    },
+    "validation/task/open the drawer": {
+      "windows": 11.0,
+      "position_cm": 10.144314169883728,
+      "static_position_cm": 7.482841610908508,
+      "rotation_deg": 11.923487345377604,
+      "static_rotation_deg": 11.411458015441895,
+      "balanced_accuracy": 0.6766169269879659,
+      "gripper_class_count": 2.0
+    }
+  },
+  "conclusions": [
+    "Four of five tasks have worse mean training position error than static baseline at the fixed budget.",
+    "Lever task mean position and rotation beat its own baseline on train and development.",
+    "Microwave gripper has one class; its balanced_accuracy=1 is not a two-class or transition success.",
+    "No isolated causal explanation or zero-shot task success is established."
+  ]
+}

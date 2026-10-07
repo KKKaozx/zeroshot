@@ -1,0 +1,366 @@
+{
+  "job_id": 190952,
+  "evidence": "Downloaded full JSON; initial-state identity, restored variance, unchanged parameters and reference-report hash checked",
+  "source_sha256": "7f8510c1fbcd3520049e12abaa7efc1ac894c7fc5a3193f10419e1b79def98b0",
+  "checks_passed": true,
+  "elapsed_seconds": 29.615494087920524,
+  "chains": {
+    "native_stochastic": {
+      "final_means": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 10.508494774500528,
+          "rotation_deg": 16.93514569600423,
+          "pose_component_mse": 0.2810474932193756,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 13.981699148813883,
+          "rotation_deg": 15.674035708109537,
+          "pose_component_mse": 0.41177581747372943,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 13.258538643519083,
+          "rotation_deg": 21.754841486612957,
+          "pose_component_mse": 0.391979585091273,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.773655692736307,
+          "rotation_deg": 19.80989646911621,
+          "pose_component_mse": 0.18374386926492056,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 13.123731215794882,
+          "rotation_deg": 19.949818929036457,
+          "pose_component_mse": 0.39042646686236065,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.404850165049235,
+          "rotation_deg": 7.487135728200276,
+          "pose_component_mse": 0.02731172740459442,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 10.174556175867716,
+          "rotation_deg": 17.263703028361004,
+          "pose_component_mse": 0.22990170121192932,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 12.499266862869263,
+          "rotation_deg": 12.584035237630209,
+          "pose_component_mse": 0.29139797886212665,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 12.675192753473917,
+          "rotation_deg": 46.347304026285805,
+          "pose_component_mse": 0.3841485579808553,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 8.672342300415039,
+          "rotation_deg": 12.13734213511149,
+          "pose_component_mse": 0.15768391887346903,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 11.04668895403544,
+          "rotation_deg": 13.614797274271647,
+          "pose_component_mse": 0.2423079013824463,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.780610124270121,
+          "rotation_deg": 7.645001729329427,
+          "pose_component_mse": 0.01547562206784884,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "development_predicted_x0_trace": {
+        "99": {
+          "windows": 40.0,
+          "position_cm": 7.42934286594391,
+          "rotation_deg": 14.67424201965332,
+          "pose_component_mse": 0.12141361584266026,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 1.2756524483362834
+        },
+        "89": {
+          "windows": 40.0,
+          "position_cm": 7.444233496983846,
+          "rotation_deg": 14.575919151306152,
+          "pose_component_mse": 0.1220011090238889,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 1.2074440320332844
+        },
+        "74": {
+          "windows": 40.0,
+          "position_cm": 8.094691038131714,
+          "rotation_deg": 15.610954920450846,
+          "pose_component_mse": 0.14390937487284342,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 1.0378888845443726
+        },
+        "49": {
+          "windows": 40.0,
+          "position_cm": 9.26651656627655,
+          "rotation_deg": 16.512339274088543,
+          "pose_component_mse": 0.1830980827411016,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.6787063876787821
+        },
+        "24": {
+          "windows": 40.0,
+          "position_cm": 9.779455661773682,
+          "rotation_deg": 17.28050359090169,
+          "pose_component_mse": 0.20635325213273367,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.35165515542030334
+        },
+        "9": {
+          "windows": 40.0,
+          "position_cm": 9.991143544514975,
+          "rotation_deg": 16.961315155029297,
+          "pose_component_mse": 0.21621990203857422,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.24243256946404776
+        },
+        "0": {
+          "windows": 40.0,
+          "position_cm": 10.174487233161926,
+          "rotation_deg": 17.260602951049805,
+          "pose_component_mse": 0.22985387841860452,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.22560965518156686
+        }
+      }
+    },
+    "no_step_noise": {
+      "final_means": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 9.00382916132609,
+          "rotation_deg": 15.37677796681722,
+          "pose_component_mse": 0.20138068993886313,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 7.274898290634155,
+          "paired_output_change_deg": 8.874192873636881
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 14.39999262491862,
+          "rotation_deg": 14.20424715677897,
+          "pose_component_mse": 0.42863842844963074,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 10.115804473559061,
+          "paired_output_change_deg": 7.849455197652181
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.712347944577536,
+          "rotation_deg": 19.047842025756836,
+          "pose_component_mse": 0.1887668271859487,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 7.76240110397339,
+          "paired_output_change_deg": 13.163205782572428
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 7.27172056833903,
+          "rotation_deg": 16.822734196980793,
+          "pose_component_mse": 0.11973995963732402,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 7.88108507792155,
+          "paired_output_change_deg": 12.9567289352417
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 11.282506783803305,
+          "rotation_deg": 19.44610532124837,
+          "pose_component_mse": 0.24492426216602325,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 9.19004201889038,
+          "paired_output_change_deg": 8.509109179178873
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.3525746067365017,
+          "rotation_deg": 7.362958908081055,
+          "pose_component_mse": 0.02483392631014188,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 1.4251586546500523,
+          "paired_output_change_deg": 1.8924651145935059
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.844853202501934,
+          "rotation_deg": 16.364795684814453,
+          "pose_component_mse": 0.13660663863023123,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 7.180235981941223,
+          "paired_output_change_deg": 6.767443339029948
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 10.586332082748413,
+          "rotation_deg": 11.535284042358398,
+          "pose_component_mse": 0.20849650104840597,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 9.618422985076904,
+          "paired_output_change_deg": 7.988770008087158
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 8.422601421674093,
+          "rotation_deg": 46.79575983683268,
+          "pose_component_mse": 0.17296141386032104,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 7.914550701777141,
+          "paired_output_change_deg": 7.618463516235352
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 6.317639748255412,
+          "rotation_deg": 10.507622400919596,
+          "pose_component_mse": 0.08326304703950882,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 5.787172714869182,
+          "paired_output_change_deg": 5.700601259867351
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 8.64841341972351,
+          "rotation_deg": 12.614798863728842,
+          "pose_component_mse": 0.15260112782319388,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 8.420320351918539,
+          "paired_output_change_deg": 8.418326536814371
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.516363263130188,
+          "rotation_deg": 7.3368550936381025,
+          "pose_component_mse": 0.013057145910958448,
+          "quaternion_degenerate_count": 0.0,
+          "paired_output_change_cm": 1.0240284105141957,
+          "paired_output_change_deg": 1.6569246451059978
+        }
+      },
+      "development_predicted_x0_trace": {
+        "99": {
+          "windows": 40.0,
+          "position_cm": 7.42934286594391,
+          "rotation_deg": 14.67424201965332,
+          "pose_component_mse": 0.12141361584266026,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 1.2756524483362834
+        },
+        "89": {
+          "windows": 40.0,
+          "position_cm": 7.530740102132161,
+          "rotation_deg": 14.766645749409994,
+          "pose_component_mse": 0.124443419277668,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.23370866974194845
+        },
+        "74": {
+          "windows": 40.0,
+          "position_cm": 7.528764605522156,
+          "rotation_deg": 14.75074577331543,
+          "pose_component_mse": 0.12550043563048044,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.1840163916349411
+        },
+        "49": {
+          "windows": 40.0,
+          "position_cm": 7.578688859939576,
+          "rotation_deg": 14.83550771077474,
+          "pose_component_mse": 0.12739758690198263,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.13939128816127777
+        },
+        "24": {
+          "windows": 40.0,
+          "position_cm": 7.611794471740723,
+          "rotation_deg": 15.122036616007486,
+          "pose_component_mse": 0.12890136241912842,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.12826950351397196
+        },
+        "9": {
+          "windows": 40.0,
+          "position_cm": 7.668999234835308,
+          "rotation_deg": 15.653428395589193,
+          "pose_component_mse": 0.13105725248654684,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.1294551889101664
+        },
+        "0": {
+          "windows": 40.0,
+          "position_cm": 7.844844261805218,
+          "rotation_deg": 16.364884694417317,
+          "pose_component_mse": 0.13658342758814493,
+          "quaternion_degenerate_count": 0.0,
+          "noisy_state_component_mse": 0.13464435438315073
+        }
+      }
+    }
+  },
+  "native_replay_metric_differences": {
+    "train/overall": [
+      {
+        "position_cm": -9.179115295410156e-05,
+        "rotation_deg": -3.62396240234375e-05,
+        "pose_component_mse": -4.4405460357666016e-06
+      },
+      {
+        "position_cm": -8.225440979003906e-05,
+        "rotation_deg": -0.0001430511474609375,
+        "pose_component_mse": -4.649162292480469e-06
+      },
+      {
+        "position_cm": -9.894371032537208e-05,
+        "rotation_deg": 0.0001163482666015625,
+        "pose_component_mse": -3.7997961044311523e-06
+      }
+    ],
+    "validation/overall": [
+      {
+        "position_cm": -5.125999450683594e-05,
+        "rotation_deg": 5.7220458984375e-06,
+        "pose_component_mse": -2.4586915969848633e-06
+      },
+      {
+        "position_cm": -9.059906006037011e-05,
+        "rotation_deg": 0.0001068115234375,
+        "pose_component_mse": -3.933906555175781e-06
+      },
+      {
+        "position_cm": -0.00010371208190917969,
+        "rotation_deg": -5.340576171875e-05,
+        "pose_component_mse": -3.874301910400391e-06
+      }
+    ]
+  },
+  "limits": [
+    "Same repeatedly-used development set and fixed 40-window training subset",
+    "Observed degradation along a generated chain does not uniquely identify bad denoiser training, sampling distribution or an implementation fault",
+    "Lower target error does not establish robotic task success"
+  ]
+}

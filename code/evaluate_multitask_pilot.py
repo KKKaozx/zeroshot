@@ -48,7 +48,8 @@ def main():
         tfrecord_splits=['train'],bridge_gripper_policy='reverse_scan_valid_steps_v2',
         bridge_current_gripper='continuous',bridge_episode_selection=selected)
     splits=bridge_plan_splits(dataset)
-    assert {k:len(v) for k,v in splits.items()}=={'train':207,'validation':40,'test':0}
+    expected=json.loads(args.manifest.read_text(encoding='utf-8'))['expected_windows']
+    assert {k:len(v) for k,v in splits.items()}==expected
     items=[dataset[i] for i in range(len(dataset))]
     targets=np.stack([x[3].numpy() for x in items])
     groups={}

@@ -1,0 +1,25 @@
+{
+  "purpose": "Bridge-only expansion export readiness",
+  "source_audit_passed": true,
+  "export_reader_passed": true,
+  "archive_crc_passed": true,
+  "file_sha256_passed": true,
+  "training_episodes": 405,
+  "development_episodes": 10,
+  "reserved_test_episodes_not_exported": 13,
+  "windows": {
+    "train": 1836,
+    "validation": 40,
+    "test": 0
+  },
+  "development_payloads_unchanged": true,
+  "clip_or_model_loaded_here": false,
+  "trained": false,
+  "archive_bytes": 727974763,
+  "unpacked_bytes": 816881349,
+  "archive_sha256": "2a0171d66096df7a9b6941d6b54cc9b7869ec511ea7a0066f9afab2efc724f7b",
+  "epochs": 20,
+  "expected_updates": 18360,
+  "previous_updates": 2080,
+  "comparison_limit": "More training data and more updates; not a single-factor data-count comparison"
+}

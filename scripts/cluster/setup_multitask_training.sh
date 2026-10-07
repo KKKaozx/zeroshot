@@ -15,7 +15,7 @@ export USE_TF=0
 mkdir -p "$TMPDIR"
 PY=/projects/Zeroshot/envs/multitask-preflight-v1/bin/python
 printf 'torch==2.5.1+cu118\ntransformers==5.17.0\n' > "$TMPDIR/constraints.txt"
-"$PY" -m pip install --constraint "$TMPDIR/constraints.txt" 'tensorflow==2.15.0'
+"$PY" -m pip install --constraint "$TMPDIR/constraints.txt" 'tensorflow==2.15.0' 'Pillow==12.3.0'
 "$PY" -m pip check
 PACK=/projects/Zeroshot/multitask_training_v1
 cd "$PACK"

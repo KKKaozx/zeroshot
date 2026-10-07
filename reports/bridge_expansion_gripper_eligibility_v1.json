@@ -1,0 +1,85 @@
+{
+  "checked_episodes": 422,
+  "failures": [
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00082-of-01024",
+      "record_index": 39,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "episode_id": 49,
+      "partition": "train",
+      "last_valid_gripper_command": 0.916483998298645,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00128-of-01024",
+      "record_index": 48,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "episode_id": 197,
+      "partition": "train",
+      "last_valid_gripper_command": 0.06886400282382965,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00160-of-01024",
+      "record_index": 3,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "episode_id": 135,
+      "partition": "train",
+      "last_valid_gripper_command": 0.4180710017681122,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00166-of-01024",
+      "record_index": 8,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "episode_id": 66,
+      "partition": "train",
+      "last_valid_gripper_command": 0.4019539952278137,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00189-of-01024",
+      "record_index": 24,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toysink3_bww/turn_lever_vertical_to_front/train/out.npy",
+      "episode_id": 12,
+      "partition": "train",
+      "last_valid_gripper_command": 0.80976802110672,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00228-of-01024",
+      "record_index": 6,
+      "steps": 19,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toysink2_bww/turn_lever_vertical_to-front/train/out.npy",
+      "episode_id": 26,
+      "partition": "train",
+      "last_valid_gripper_command": 0.2864469885826111,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00232-of-01024",
+      "record_index": 55,
+      "steps": 18,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "episode_id": 87,
+      "partition": "train",
+      "last_valid_gripper_command": 0.19291800260543823,
+      "reason": "reverse_scan_valid_steps_v2 cannot resolve binary gripper at last valid command"
+    }
+  ],
+  "passed_training_candidates": 405,
+  "development_unchanged": true,
+  "reserved_test_targets_read": false
+}

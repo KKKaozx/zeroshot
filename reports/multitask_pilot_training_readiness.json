@@ -1,0 +1,38 @@
+{
+  "cluster_preflight_job": 189626,
+  "evidence": "User-provided Slurm output and JSON field extraction; full cluster JSON not retrieved",
+  "passed": true,
+  "module_changed": {
+    "adapter": true,
+    "pose": true,
+    "gripper": true
+  },
+  "clip_unchanged": true,
+  "peak_allocated_gib": 2.7543764114379883,
+  "peak_reserved_gib": 2.779296875,
+  "mean_warm_update_seconds": 0.10784982514035489,
+  "new_training_started": false,
+  "local_prepare_only_passed": true,
+  "window_counts": {
+    "train": 207,
+    "validation": 40,
+    "test": 0
+  },
+  "trajectory_counts": {
+    "train": 45,
+    "validation": 10,
+    "test": 0
+  },
+  "archive_bytes": 101015610,
+  "archive_sha256": "f77b99c46f01d638c093bfdcd969bfda110fb0718dcb0c3800f6ab5acd46e8b0",
+  "budget": {
+    "training_seed": 42,
+    "epochs": 20,
+    "batch_size": 2,
+    "updates": 2080,
+    "learning_rate": 0.0001,
+    "schedule": "cosine",
+    "validation_windows_per_epoch": 40
+  },
+  "reserved_test_targets_read": false
+}

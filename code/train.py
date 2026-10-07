@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from contextlib import nullcontext
 import hashlib
 import json
 import random
@@ -102,8 +103,35 @@ def dataset_split_identity(dataset, *, target_override=None, chunk_override=None
     return hashlib.sha256(encoded).hexdigest()
 
 
-def bridge_plan_selection(path):
+def bridge_plan_selection(path, dataset_dir=None):
     plan = json.loads(Path(path).read_text(encoding="utf-8"))
+    if plan.get("purpose") == "bridge_multitask_offline_pilot_manifest_v1":
+        if (plan.get("status") != "verified_train_development_only"
+                or plan.get("reserved_test_targets_read") is not False
+                or plan.get("partitions", {}).get("test") != []):
+            raise ValueError("多任务pilot清单必须只包含已核对的训练/开发数据")
+        root = Path(path).resolve().parent / plan["data_directory"]
+        if dataset_dir is not None and Path(dataset_dir).resolve() != root.resolve():
+            raise ValueError("数据目录与多任务清单不同")
+        for name, expected in plan["shard_sha256"].items():
+            digest = hashlib.sha256()
+            with (root / name).open("rb") as stream:
+                for block in iter(lambda: stream.read(4 * 1024**2), b""):
+                    digest.update(block)
+            if digest.hexdigest() != expected:
+                raise ValueError("多任务pilot数据指纹不一致")
+        selected = []
+        for part in ("train", "validation"):
+            if not plan["partitions"][part]:
+                raise ValueError("训练/开发分区不能为空")
+            selected.extend({**r, "partition": part} for r in plan["partitions"][part])
+        if any(r["shard"] not in plan["shard_sha256"] for r in selected):
+            raise ValueError("清单缺少数据指纹")
+        keys = [(r["shard"], r["record_index"]) for r in selected]
+        reserved = {(r["shard"], r["record_index"]) for r in plan["reserved_test_identity_only"]}
+        if len(keys) != len(set(keys)) or set(keys) & reserved:
+            raise ValueError("多任务演示身份重复或测试泄漏")
+        return selected
     if (plan.get("purpose") != "bridge_single_task_metadata_plan_not_training_manifest"
             or plan.get("version") != "0.0.1" or not plan.get("selected_instruction")):
         raise ValueError("不是已准备的Bridge单任务计划，或没有足够演示")
@@ -168,7 +196,10 @@ def validate_split_indices(dataset, splits):
     seen_indices, seen_groups = set(), set()
     for name in ("train", "validation", "test"):
         indices = splits[name]
-        if not indices or any(type(i) is not int or not 0 <= i < len(dataset) for i in indices):
+        pilot_without_test = (name == "test" and not indices
+            and bool(getattr(dataset, "bridge_episode_selection", None))
+            and {r["partition"] for r in dataset.bridge_episode_selection} == {"train", "validation"})
+        if (not indices and not pilot_without_test) or any(type(i) is not int or not 0 <= i < len(dataset) for i in indices):
             raise ValueError(f"数据划分 {name} 为空或包含非法索引")
         index_set = set(indices)
         groups = {dataset.group_key(i) for i in indices}
@@ -829,7 +860,11 @@ def validate_native_experiment(args):
 
 
 def train(args: argparse.Namespace) -> None:
-    bridge_selection = bridge_plan_selection(args.bridge_task_plan) if args.bridge_task_plan else None
+    bridge_selection = bridge_plan_selection(args.bridge_task_plan, args.dataset_dir) if args.bridge_task_plan else None
+    multitask_pilot = bool(args.bridge_task_plan and json.loads(Path(args.bridge_task_plan).read_text(encoding="utf-8")).get("purpose") == "bridge_multitask_offline_pilot_manifest_v1")
+    if multitask_pilot:
+        import tensorflow as tf
+        tf.config.set_visible_devices([], "GPU")  # TensorFlow reads records; PyTorch owns the GPU.
     if args.bridge_validation_scope == "all_windows" and (not bridge_selection or args.overfit_samples):
         raise ValueError("全窗口验证只用于固定Bridge完整训练分区，不能混用小样本拟合")
     if args.bridge_current_gripper == "continuous" and args.gripper_target_mode != "state":
@@ -837,10 +872,15 @@ def train(args: argparse.Namespace) -> None:
     if args.bridge_current_gripper == "continuous" and (args.gripper_change_weight != 1.0 or args.balanced_gripper_loss):
         raise ValueError("Bridge连续测量基线不按测量阈值构造切换权重，也不启用类别平衡")
     if bridge_selection and (args.bcz_target != "reached" or args.bridge_current_gripper != "continuous"
-            or args.bridge_gripper_policy != "reverse_scan_valid_steps_v2" or args.decoder_type != "regression"
+            or args.bridge_gripper_policy != "reverse_scan_valid_steps_v2" or args.decoder_type != ("diffusion" if multitask_pilot else "regression")
             or args.resume or args.init_from or args.pool_fit_from
             or args.gripper_only_fit_from or args.offline_command_experiment):
         raise ValueError("Bridge单任务计划仅用于独立从头回归基线：连续测量、官方扫描、state命令；不混用迁移或旧诊断")
+    if multitask_pilot and (args.overfit_samples or args.chunk_size != 16
+            or args.adapter_layers != 8 or args.attention_dim != 512
+            or args.adapter_pooling != "cls_patch_mean" or args.balanced_sampling
+            or args.fusion_type != "cross_attention" or args.diffusion_prediction_type != "sample"):
+        raise ValueError("多任务pilot须使用已预检结构和完整固定分区，不挑选或重采样")
     if bridge_selection and args.overfit_samples and (
             (not args.bridge_gripper_fit_report and args.overfit_trajectories != args.overfit_samples) or not args.split_manifest
             or args.balanced_overfit_targets or args.balanced_sampling):
@@ -1037,6 +1077,10 @@ def train(args: argparse.Namespace) -> None:
         )
     if bridge_selection:
         planned = bridge_plan_splits(dataset)
+        if multitask_pilot:
+            expected = json.loads(Path(args.bridge_task_plan).read_text(encoding="utf-8"))["expected_windows"]
+            if {name: len(indices) for name, indices in planned.items()} != expected:
+                raise ValueError("多任务pilot窗口覆盖与已验收清单不同")
         train_indices, validation_indices, test_indices = (planned[name] for name in ("train", "validation", "test"))
     if args.split_manifest:
         if args.init_from or (args.overfit_samples and not args.balanced_overfit_targets and not native_fit and not bridge_selection):
@@ -1589,18 +1633,17 @@ def train(args: argparse.Namespace) -> None:
         train_loss = running_loss / step_count
         scope = "已见训练窗口拟合检查" if args.overfit_samples else "独立验证"
         print(f"[{scope}] Epoch {epoch} 训练结束，正在计算损失……")
-        validation_loss = evaluate_loss(
-            model,
-            validation_loader,
-            tokenizer,
-            device,
-            criterion,
-            max_batches=(
-                args.max_validation_batches
-                if args.max_validation_batches > 0
-                else None
-            ),
-        )
+        with (torch.random.fork_rng(devices=[device.index or 0] if device.type == "cuda" else []) if multitask_pilot else nullcontext()):
+            if multitask_pilot:
+                set_seed(args.seed + 10_000)
+            validation_loss = evaluate_loss(
+                model,
+                validation_loader,
+                tokenizer,
+                device,
+                criterion,
+                max_batches=(args.max_validation_batches if args.max_validation_batches > 0 else None),
+            )
         action_metrics: Dict[str, float] = {}
         should_measure_actions = (
             args.metric_batches > 0
@@ -1612,7 +1655,7 @@ def train(args: argparse.Namespace) -> None:
                 "计算位置、旋转和夹爪误差；这一步会比普通验证慢……"
             )
             with torch.random.fork_rng(devices=[device.index or 0] if device.type == "cuda" else []):
-                if args.overfit_samples:
+                if args.overfit_samples or multitask_pilot:
                     set_seed(args.seed + 20_000)  # 轮次间保持相同采样噪声，便于比较。
                 action_metrics = evaluate_action_metrics(
                     model, validation_metric_loader, tokenizer, device,

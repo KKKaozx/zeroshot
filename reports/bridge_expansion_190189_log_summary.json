@@ -1,0 +1,350 @@
+{
+  "job_id": 190189,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "evidence": "User-provided completed terminal log; full evaluation JSON and history not yet retrieved",
+  "training_epochs": 20,
+  "expected_training_updates": 18360,
+  "training_episodes": 405,
+  "development_episodes": 10,
+  "reserved_test_targets_read": false,
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "training_seed": 42,
+  "checkpoints": {
+    "best": {
+      "train": {
+        "sampling_seed_metrics": [
+          {
+            "windows": 1836,
+            "action_targets": 29376,
+            "position_cm": 10.564671754837036,
+            "rotation_deg": 17.108823776245117,
+            "gripper_accuracy": 0.8684300184249878,
+            "balanced_accuracy": 0.8566063344478607,
+            "gripper_class_count": 2,
+            "open_targets": 20964,
+            "static_position_cm": 8.226703405380249,
+            "static_rotation_deg": 14.030460357666016,
+            "always_closed_accuracy": 0.28635621070861816,
+            "open_to_closed_pairs": 689,
+            "open_to_closed_pair_accuracy": 0.11611030250787735,
+            "closed_to_open_pairs": 324,
+            "closed_to_open_pair_accuracy": 0.021604938432574272
+          },
+          {
+            "windows": 1836,
+            "action_targets": 29376,
+            "position_cm": 10.495463609695435,
+            "rotation_deg": 17.02056312561035,
+            "gripper_accuracy": 0.8700980544090271,
+            "balanced_accuracy": 0.8591985404491425,
+            "gripper_class_count": 2,
+            "open_targets": 20964,
+            "static_position_cm": 8.226703405380249,
+            "static_rotation_deg": 14.030460357666016,
+            "always_closed_accuracy": 0.28635621070861816,
+            "open_to_closed_pairs": 689,
+            "open_to_closed_pair_accuracy": 0.11465892940759659,
+            "closed_to_open_pairs": 324,
+            "closed_to_open_pair_accuracy": 0.04938271641731262
+          },
+          {
+            "windows": 1836,
+            "action_targets": 29376,
+            "position_cm": 10.589243173599245,
+            "rotation_deg": 16.979494094848633,
+            "gripper_accuracy": 0.8697916865348816,
+            "balanced_accuracy": 0.858094185590744,
+            "gripper_class_count": 2,
+            "open_targets": 20964,
+            "static_position_cm": 8.226703405380249,
+            "static_rotation_deg": 14.030460357666016,
+            "always_closed_accuracy": 0.28635621070861816,
+            "open_to_closed_pairs": 689,
+            "open_to_closed_pair_accuracy": 0.10885340720415115,
+            "closed_to_open_pairs": 324,
+            "closed_to_open_pair_accuracy": 0.03086419776082039
+          }
+        ],
+        "three_sampling_seed_mean": {
+          "windows": 1836.0,
+          "action_targets": 29376.0,
+          "position_cm": 10.549792846043905,
+          "rotation_deg": 17.036293665568035,
+          "gripper_accuracy": 0.8694399197896322,
+          "balanced_accuracy": 0.8579663534959158,
+          "gripper_class_count": 2.0,
+          "open_targets": 20964.0,
+          "static_position_cm": 8.226703405380249,
+          "static_rotation_deg": 14.030460357666016,
+          "always_closed_accuracy": 0.28635621070861816,
+          "open_to_closed_pairs": 689.0,
+          "open_to_closed_pair_accuracy": 0.11320754637320836,
+          "closed_to_open_pairs": 324.0,
+          "closed_to_open_pair_accuracy": 0.03395061753690243
+        }
+      },
+      "development": {
+        "sampling_seed_metrics": [
+          {
+            "windows": 40,
+            "action_targets": 640,
+            "position_cm": 10.515124797821047,
+            "rotation_deg": 18.799833297729492,
+            "gripper_accuracy": 0.832812488079071,
+            "balanced_accuracy": 0.8220661282539368,
+            "gripper_class_count": 2,
+            "open_targets": 419,
+            "static_position_cm": 8.212326169013979,
+            "static_rotation_deg": 15.098396301269531,
+            "always_closed_accuracy": 0.3453125059604645,
+            "open_to_closed_pairs": 20,
+            "open_to_closed_pair_accuracy": 0.15000000596046448,
+            "closed_to_open_pairs": 8,
+            "closed_to_open_pair_accuracy": 0.0
+          },
+          {
+            "windows": 40,
+            "action_targets": 640,
+            "position_cm": 9.805663824081421,
+            "rotation_deg": 17.468080520629883,
+            "gripper_accuracy": 0.8296874761581421,
+            "balanced_accuracy": 0.82609423995018,
+            "gripper_class_count": 2,
+            "open_targets": 419,
+            "static_position_cm": 8.212326169013979,
+            "static_rotation_deg": 15.098396301269531,
+            "always_closed_accuracy": 0.3453125059604645,
+            "open_to_closed_pairs": 20,
+            "open_to_closed_pair_accuracy": 0.15000000596046448,
+            "closed_to_open_pairs": 8,
+            "closed_to_open_pair_accuracy": 0.0
+          },
+          {
+            "windows": 40,
+            "action_targets": 640,
+            "position_cm": 10.088400840759277,
+            "rotation_deg": 18.54172134399414,
+            "gripper_accuracy": 0.840624988079071,
+            "balanced_accuracy": 0.8344474732875824,
+            "gripper_class_count": 2,
+            "open_targets": 419,
+            "static_position_cm": 8.212326169013979,
+            "static_rotation_deg": 15.098396301269531,
+            "always_closed_accuracy": 0.3453125059604645,
+            "open_to_closed_pairs": 20,
+            "open_to_closed_pair_accuracy": 0.15000000596046448,
+            "closed_to_open_pairs": 8,
+            "closed_to_open_pair_accuracy": 0.125
+          }
+        ],
+        "three_sampling_seed_mean": {
+          "windows": 40.0,
+          "action_targets": 640.0,
+          "position_cm": 10.136396487553915,
+          "rotation_deg": 18.269878387451172,
+          "gripper_accuracy": 0.8343749841054281,
+          "balanced_accuracy": 0.8275359471638998,
+          "gripper_class_count": 2.0,
+          "open_targets": 419.0,
+          "static_position_cm": 8.212326169013979,
+          "static_rotation_deg": 15.098396301269531,
+          "always_closed_accuracy": 0.3453125059604645,
+          "open_to_closed_pairs": 20.0,
+          "open_to_closed_pair_accuracy": 0.15000000596046448,
+          "closed_to_open_pairs": 8.0,
+          "closed_to_open_pair_accuracy": 0.041666666666666664
+        }
+      }
+    },
+    "latest": {
+      "train": {
+        "sampling_seed_metrics": [
+          {
+            "windows": 1836,
+            "action_targets": 29376,
+            "position_cm": 10.321629047393799,
+            "rotation_deg": 16.962831497192383,
+            "gripper_accuracy": 0.8737404942512512,
+            "balanced_accuracy": 0.8661990761756897,
+            "gripper_class_count": 2,
+            "open_targets": 20964,
+            "static_position_cm": 8.226703405380249,
+            "static_rotation_deg": 14.030460357666016,
+            "always_closed_accuracy": 0.28635621070861816,
+            "open_to_closed_pairs": 689,
+            "open_to_closed_pair_accuracy": 0.12917271256446838,
+            "closed_to_open_pairs": 324,
+            "closed_to_open_pair_accuracy": 0.040123455226421356
+          },
+          {
+            "windows": 1836,
+            "action_targets": 29376,
+            "position_cm": 10.26010513305664,
+            "rotation_deg": 16.702470779418945,
+            "gripper_accuracy": 0.873910665512085,
+            "balanced_accuracy": 0.8669233620166779,
+            "gripper_class_count": 2,
+            "open_targets": 20964,
+            "static_position_cm": 8.226703405380249,
+            "static_rotation_deg": 14.030460357666016,
+            "always_closed_accuracy": 0.28635621070861816,
+            "open_to_closed_pairs": 689,
+            "open_to_closed_pair_accuracy": 0.11756168305873871,
+            "closed_to_open_pairs": 324,
+            "closed_to_open_pair_accuracy": 0.043209876865148544
+          },
+          {
+            "windows": 1836,
+            "action_targets": 29376,
+            "position_cm": 10.316283702850344,
+            "rotation_deg": 16.579212188720703,
+            "gripper_accuracy": 0.8750340342521667,
+            "balanced_accuracy": 0.86753249168396,
+            "gripper_class_count": 2,
+            "open_targets": 20964,
+            "static_position_cm": 8.226703405380249,
+            "static_rotation_deg": 14.030460357666016,
+            "always_closed_accuracy": 0.28635621070861816,
+            "open_to_closed_pairs": 689,
+            "open_to_closed_pair_accuracy": 0.1248185783624649,
+            "closed_to_open_pairs": 324,
+            "closed_to_open_pair_accuracy": 0.03395061567425728
+          }
+        ],
+        "three_sampling_seed_mean": {
+          "windows": 1836.0,
+          "action_targets": 29376.0,
+          "position_cm": 10.299339294433594,
+          "rotation_deg": 16.74817148844401,
+          "gripper_accuracy": 0.8742283980051676,
+          "balanced_accuracy": 0.8668849766254425,
+          "gripper_class_count": 2.0,
+          "open_targets": 20964.0,
+          "static_position_cm": 8.226703405380249,
+          "static_rotation_deg": 14.030460357666016,
+          "always_closed_accuracy": 0.28635621070861816,
+          "open_to_closed_pairs": 689.0,
+          "open_to_closed_pair_accuracy": 0.12385099132855733,
+          "closed_to_open_pairs": 324.0,
+          "closed_to_open_pair_accuracy": 0.039094649255275726
+        }
+      },
+      "development": {
+        "sampling_seed_metrics": [
+          {
+            "windows": 40,
+            "action_targets": 640,
+            "position_cm": 10.031609535217285,
+            "rotation_deg": 17.132497787475586,
+            "gripper_accuracy": 0.832812488079071,
+            "balanced_accuracy": 0.8220661282539368,
+            "gripper_class_count": 2,
+            "open_targets": 419,
+            "static_position_cm": 8.212326169013979,
+            "static_rotation_deg": 15.098396301269531,
+            "always_closed_accuracy": 0.3453125059604645,
+            "open_to_closed_pairs": 20,
+            "open_to_closed_pair_accuracy": 0.20000000298023224,
+            "closed_to_open_pairs": 8,
+            "closed_to_open_pair_accuracy": 0.125
+          },
+          {
+            "windows": 40,
+            "action_targets": 640,
+            "position_cm": 10.097049474716187,
+            "rotation_deg": 17.236032485961914,
+            "gripper_accuracy": 0.831250011920929,
+            "balanced_accuracy": 0.8272875547409058,
+            "gripper_class_count": 2,
+            "open_targets": 419,
+            "static_position_cm": 8.212326169013979,
+            "static_rotation_deg": 15.098396301269531,
+            "always_closed_accuracy": 0.3453125059604645,
+            "open_to_closed_pairs": 20,
+            "open_to_closed_pair_accuracy": 0.15000000596046448,
+            "closed_to_open_pairs": 8,
+            "closed_to_open_pair_accuracy": 0.0
+          },
+          {
+            "windows": 40,
+            "action_targets": 640,
+            "position_cm": 10.439774990081787,
+            "rotation_deg": 16.675220489501953,
+            "gripper_accuracy": 0.84375,
+            "balanced_accuracy": 0.8400414884090424,
+            "gripper_class_count": 2,
+            "open_targets": 419,
+            "static_position_cm": 8.212326169013979,
+            "static_rotation_deg": 15.098396301269531,
+            "always_closed_accuracy": 0.3453125059604645,
+            "open_to_closed_pairs": 20,
+            "open_to_closed_pair_accuracy": 0.10000000149011612,
+            "closed_to_open_pairs": 8,
+            "closed_to_open_pair_accuracy": 0.25
+          }
+        ],
+        "three_sampling_seed_mean": {
+          "windows": 40.0,
+          "action_targets": 640.0,
+          "position_cm": 10.189478000005087,
+          "rotation_deg": 17.014583587646484,
+          "gripper_accuracy": 0.8359375,
+          "balanced_accuracy": 0.8297983904679617,
+          "gripper_class_count": 2.0,
+          "open_targets": 419.0,
+          "static_position_cm": 8.212326169013979,
+          "static_rotation_deg": 15.098396301269531,
+          "always_closed_accuracy": 0.3453125059604645,
+          "open_to_closed_pairs": 20.0,
+          "open_to_closed_pair_accuracy": 0.15000000347693762,
+          "closed_to_open_pairs": 8.0,
+          "closed_to_open_pair_accuracy": 0.125
+        }
+      }
+    }
+  },
+  "limits": [
+    "Same-task repeatedly used development episodes, not independent zero-shot benchmark",
+    "Training population and total update count changed; no isolated causal attribution to data scale",
+    "Three sampling seeds, not three independent training runs",
+    "Transition target pairs overlap; not physical-event success",
+    "No unique module root cause identified"
+  ],
+  "fixed_development_latest_comparison": {
+    "position_cm": {
+      "previous": 11.10780119895935,
+      "expanded": 10.189478000005087,
+      "expanded_minus_previous": -0.9183231989542637
+    },
+    "rotation_deg": {
+      "previous": 16.261606852213543,
+      "expanded": 17.014583587646484,
+      "expanded_minus_previous": 0.7529767354329415
+    },
+    "gripper_accuracy": {
+      "previous": 0.7880208293596903,
+      "expanded": 0.8359375,
+      "expanded_minus_previous": 0.04791667064030969
+    },
+    "balanced_accuracy": {
+      "previous": 0.7422416508197784,
+      "expanded": 0.8297983904679617,
+      "expanded_minus_previous": 0.08755673964818322
+    },
+    "open_to_closed_pair_accuracy": {
+      "previous": 0.23333333432674408,
+      "expanded": 0.15000000347693762,
+      "expanded_minus_previous": -0.08333333084980646
+    },
+    "closed_to_open_pair_accuracy": {
+      "previous": 0.0,
+      "expanded": 0.125,
+      "expanded_minus_previous": 0.125
+    }
+  }
+}

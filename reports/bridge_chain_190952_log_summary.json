@@ -1,0 +1,36 @@
+{
+  "job_id": 190952,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "evidence": "User-provided successful L40 terminal output; full trace JSON not yet retrieved",
+  "trained": false,
+  "groups": {
+    "train": {
+      "native_stochastic": {
+        "position_cm": 10.508494774500528,
+        "rotation_deg": 16.93514569600423
+      },
+      "no_step_noise": {
+        "position_cm": 9.00382916132609,
+        "rotation_deg": 15.37677796681722
+      }
+    },
+    "development": {
+      "native_stochastic": {
+        "position_cm": 10.174556175867716,
+        "rotation_deg": 17.263703028361004
+      },
+      "no_step_noise": {
+        "position_cm": 7.844853202501934,
+        "rotation_deg": 16.364795684814453
+      }
+    }
+  },
+  "full_report_on_cluster": "/projects/Zeroshot/runs/bridge-chain-190952.json",
+  "limits": [
+    "Fixed 40 training and 40 development windows, not full training or independent test",
+    "Removing step noise changes sampling distribution; no implementation bug established",
+    "Intermediate trace and per-task effects pending full report",
+    "No-step-noise still depends on initial random noise; three sampling seeds, not independent training seeds"
+  ]
+}

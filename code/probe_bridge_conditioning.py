@@ -59,6 +59,98 @@ def donor_indices(rows):
     return images, texts
 
 
+def sample_with_trace(model, context, current, steps):
+    """Observe the actual production decoder without replacing its sampler."""
+    trace, calls = {}, []
+    def observe(module, inputs, output):
+        step = int(inputs[1][0])
+        calls.append(step)
+        if step in steps:
+            trace[step] = (inputs[0].detach().cpu().numpy().copy(),
+                output.detach().cpu().numpy().copy())
+    hook = model.diffusion_decoder.register_forward_hook(observe)
+    try:
+        output = model.sample(context, current)
+    finally:
+        hook.remove()
+    assert calls == list(reversed(range(model.num_diffusion_steps)))
+    assert set(trace) == set(steps)
+    return output[..., :7], trace
+
+
+def run_chain_probe(model, contexts, items, target, groups, report, reference_path, pose_metrics):
+    import numpy as np
+    import torch
+    from train import collate_batch, set_seed
+    reference = json.loads(reference_path.read_text())
+    for key in ('checkpoint_sha256','module_sha256','window_selection','sampling_seeds'):
+        assert report[key] == reference[key], f'Prior probe mismatch: {key}'
+    steps = (99,89,74,49,24,9,0)
+    variance = model.posterior_variance.clone()
+    originals = {}
+    report.update(experiment='paired_production_ddpm_with_and_without_step_noise',
+        prior_probe_sha256=sha256(reference_path), trace_steps=list(steps),
+        trace_semantics='Raw predicted x0 before each reverse update; target used for scoring only',
+        clip_denoised=model.clip_denoised, max_normalized_position=model.max_normalized_position,
+        chains={}, prior_native_replay_metric_differences={})
+    report['limits'] = ['40 fixed training windows, not full training evaluation.',
+        'Same initial noise and same production mean update; no training or hyperparameter selection.',
+        'Suppressing posterior step noise changes the sampling distribution, not only numerical precision.',
+        'Better target error does not imply better robot-task performance.',
+        'Initial noise still varies across seeds; no-step-noise chain is deterministic only conditional on it.',
+        'Traced x0 errors are not errors of completed robot actions or proofs of a unique root cause.']
+    try:
+        for variant in ('native_stochastic','no_step_noise'):
+            model.posterior_variance.copy_(variance if variant == 'native_stochastic' else torch.zeros_like(variance))
+            final_results, trace_results = defaultdict(list), {t:defaultdict(list) for t in steps}
+            for seed in range(3):
+                prediction = np.empty((len(items),16,7),np.float32)
+                predicted_x0 = {t:np.empty_like(prediction) for t in steps}
+                noisy_states = {t:np.empty_like(prediction) for t in steps}
+                for start in range(0,len(items),2):
+                    context = contexts['correct'][start:start+2].cuda()
+                    _,_,current,_,_ = collate_batch(items[start:start+2])
+                    set_seed(seed*10000+start)
+                    output,trace = sample_with_trace(model,context,current.cuda(),steps)
+                    assert torch.isfinite(output).all()
+                    prediction[start:start+len(output)] = output.cpu().numpy()
+                    for t,(noisy,clean) in trace.items():
+                        assert np.isfinite(noisy).all() and np.isfinite(clean).all()
+                        noisy_states[t][start:start+len(output)] = noisy
+                        predicted_x0[t][start:start+len(output)] = clean
+                if variant == 'native_stochastic':
+                    originals[seed] = (noisy_states[99].copy(),predicted_x0[99].copy(),prediction.copy())
+                else:
+                    assert np.array_equal(noisy_states[99],originals[seed][0]), 'Initial noise differs'
+                    assert np.array_equal(predicted_x0[99],originals[seed][1]), 'Initial x0 prediction differs'
+                for group,indices in groups.items():
+                    values = pose_metrics(prediction[indices],target[indices,:,:7])
+                    if variant == 'no_step_noise':
+                        change = pose_metrics(prediction[indices],originals[seed][2][indices])
+                        values.update(paired_output_change_cm=change['position_cm'],
+                            paired_output_change_deg=change['rotation_deg'])
+                    final_results[group].append(values)
+                    for t in steps:
+                        score = pose_metrics(predicted_x0[t][indices],target[indices,:,:7])
+                        score['noisy_state_component_mse'] = float(((noisy_states[t][indices]-target[indices,:,:7])**2).mean())
+                        trace_results[t][group].append(score)
+            report['chains'][variant] = dict(final=dict(final_results),
+                predicted_x0_trace={str(t):dict(v) for t,v in trace_results.items()})
+            print('CHAIN',variant,'train',final_results['train/overall'],
+                'development',final_results['validation/overall'],flush=True)
+        for group in ('train/overall','validation/overall'):
+            old = reference['cases']['native_sample']['correct'][group]
+            new = report['chains']['native_stochastic']['final'][group]
+            report['prior_native_replay_metric_differences'][group] = [
+                {k:new[i][k]-old[i][k] for k in ('position_cm','rotation_deg','pose_component_mse')}
+                for i in range(3)]
+        report['identical_initial_noise_and_initial_x0'] = True
+    finally:
+        model.posterior_variance.copy_(variance)
+    report['posterior_variance_restored'] = bool(torch.equal(model.posterior_variance,variance))
+    assert report['posterior_variance_restored']
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--pack', type=Path, required=True)
@@ -66,11 +158,15 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--train-episodes-per-task', type=int, default=8)
     parser.add_argument('--prepare-only', action='store_true')
+    parser.add_argument('--chain-probe', action='store_true')
+    parser.add_argument('--reference-report', type=Path)
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError('Use a new output path')
     if args.train_episodes_per_task < 2:
         raise ValueError('At least two training episodes per task are required')
+    if args.chain_probe and args.reference_report is None:
+        raise ValueError('Chain probe requires previous complete conditioning report')
     # Import the archived training package, rather than mutable workspace models.
     sys.path.insert(0, str(args.pack.resolve()))
     import numpy as np
@@ -120,6 +216,9 @@ def main():
     target = np.stack([item[3].numpy() for item in items])
     assert np.isfinite(target).all() and all(torch.all(item[4] == 1) for item in items)
     if args.prepare_only:
+        if args.chain_probe:
+            reference = json.loads(args.reference_report.read_text())
+            assert rows == reference['window_selection']
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(dict(stage='subset_and_control_preparation_only',
             model_loaded=False, trained=False, reserved_test_targets_read=False,
@@ -136,7 +235,7 @@ def main():
     model.load_state_dict(checkpoint['trainable_state_dict'], strict=False)
     tokenizer = CLIPTokenizer.from_pretrained(checkpoint['config']['model']['name'], local_files_only=True)
     before = state_digest(model)
-    conditions = ('correct', 'image_swap_same_task', 'language_swap_other_task')
+    conditions = ('correct',) if args.chain_probe else ('correct', 'image_swap_same_task', 'language_swap_other_task')
     contexts = defaultdict(list)
     started = time.monotonic()
     with torch.inference_mode():
@@ -171,7 +270,10 @@ def main():
                 'One-step noised-target reconstruction has access to target information.',
                 'Native generation has final clipping/quaternion normalization; one-step position is raw.',
                 'Sensitivity does not identify a unique module bug or prove correct semantic grounding.'])
-        for case in ('target_t0','target_t24','target_t49','target_t74','target_t99','pure_noise_t99','native_sample'):
+        if args.chain_probe:
+            assert before == json.loads(args.reference_report.read_text())['trainable_state_sha256_after']
+            run_chain_probe(model,contexts,items,target,groups,report,args.reference_report,pose_metrics)
+        for case in (() if args.chain_probe else ('target_t0','target_t24','target_t49','target_t74','target_t99','pure_noise_t99','native_sample')):
             report['cases'][case] = {}
             correct_predictions = {}
             for condition in conditions:
@@ -218,7 +320,7 @@ def main():
             elapsed_seconds=time.monotonic()-started, peak_allocated_gib=torch.cuda.max_memory_allocated()/1024**3)
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(report,indent=2)+'\n')
-    print('FROZEN CONDITIONING PROBE: COMPLETE',args.output,flush=True)
+    print('FROZEN CHAIN PROBE: COMPLETE' if args.chain_probe else 'FROZEN CONDITIONING PROBE: COMPLETE',args.output,flush=True)
 
 
 if __name__ == '__main__':

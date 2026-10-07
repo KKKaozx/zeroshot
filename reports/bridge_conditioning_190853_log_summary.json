@@ -1,0 +1,1596 @@
+{
+  "job_id": 190853,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "evidence": "User-provided final 20 log lines; full diagnostic JSON not yet retrieved",
+  "report_path_on_cluster": "/projects/Zeroshot/runs/bridge-conditioning-190853.json",
+  "cases_available_in_terminal_excerpt": {
+    "target_t0": {
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 1.4632101356983185,
+              "rotation_deg": 9.529979705810547,
+              "pose_component_mse": 0.0064759342931210995,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.370314508676529,
+              "paired_prediction_change_deg": 4.384223461151123,
+              "paired_prediction_component_mse": 0.005602821242064238
+            },
+            {
+              "windows": 40,
+              "position_cm": 1.463942676782608,
+              "rotation_deg": 9.479673385620117,
+              "pose_component_mse": 0.006445751991122961,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3669662177562714,
+              "paired_prediction_change_deg": 4.379627227783203,
+              "paired_prediction_component_mse": 0.005552168004214764
+            },
+            {
+              "windows": 40,
+              "position_cm": 1.467103511095047,
+              "rotation_deg": 9.485821723937988,
+              "pose_component_mse": 0.006451950874179602,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3639914989471436,
+              "paired_prediction_change_deg": 4.369561195373535,
+              "paired_prediction_component_mse": 0.005562115460634232
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 1.4647521078586578,
+            "rotation_deg": 9.498491605122885,
+            "pose_component_mse": 0.006457879052807887,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.3670907417933147,
+            "paired_prediction_change_deg": 4.377803961435954,
+            "paired_prediction_component_mse": 0.005572368235637744
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 1.5796577930450442,
+              "rotation_deg": 9.368928909301758,
+              "pose_component_mse": 0.0074372426606714725,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3399770855903625,
+              "paired_prediction_change_deg": 5.35981559753418,
+              "paired_prediction_component_mse": 0.006065583787858486
+            },
+            {
+              "windows": 40,
+              "position_cm": 1.5708355605602267,
+              "rotation_deg": 9.322484970092773,
+              "pose_component_mse": 0.007425640244036913,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3373109698295593,
+              "paired_prediction_change_deg": 5.338448524475098,
+              "paired_prediction_component_mse": 0.006022505462169647
+            },
+            {
+              "windows": 40,
+              "position_cm": 1.5919841825962067,
+              "rotation_deg": 9.380857467651367,
+              "pose_component_mse": 0.007498793303966522,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3384750485420227,
+              "paired_prediction_change_deg": 5.340001106262207,
+              "paired_prediction_component_mse": 0.006043822038918734
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 1.5808258454004924,
+            "rotation_deg": 9.357423782348633,
+            "pose_component_mse": 0.007453892069558303,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.3385877013206482,
+            "paired_prediction_change_deg": 5.346088409423828,
+            "paired_prediction_component_mse": 0.006043970429648955
+          }
+        }
+      }
+    },
+    "target_t24": {
+      "correct": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 2.2783955931663513,
+              "rotation_deg": 11.015365600585938,
+              "pose_component_mse": 0.011336129158735275,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.150757312774658,
+              "rotation_deg": 11.375080108642578,
+              "pose_component_mse": 0.010607502423226833,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.2598011791706085,
+              "rotation_deg": 10.769474029541016,
+              "pose_component_mse": 0.011207080446183681,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 2.2296513617038727,
+            "rotation_deg": 11.053306579589844,
+            "pose_component_mse": 0.011050237342715263,
+            "quaternion_degenerate_count": 0.0
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 2.3257713019847874,
+              "rotation_deg": 10.180936813354492,
+              "pose_component_mse": 0.011507379822432995,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.4594600498676304,
+              "rotation_deg": 9.773584365844727,
+              "pose_component_mse": 0.012678343802690506,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.5171229243278503,
+              "rotation_deg": 10.846562385559082,
+              "pose_component_mse": 0.013600953854620457,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 2.4341180920600896,
+            "rotation_deg": 10.267027854919434,
+            "pose_component_mse": 0.012595559159914652,
+            "quaternion_degenerate_count": 0.0
+          }
+        }
+      },
+      "image_swap_same_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 2.3332884907722473,
+              "rotation_deg": 11.31029224395752,
+              "pose_component_mse": 0.012154392898082733,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.48544127494096756,
+              "paired_prediction_change_deg": 2.0310921669006348,
+              "paired_prediction_component_mse": 0.001329435152001679
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.259281426668167,
+              "rotation_deg": 11.21003246307373,
+              "pose_component_mse": 0.011468352749943733,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.4945702478289605,
+              "paired_prediction_change_deg": 2.0838608741760254,
+              "paired_prediction_component_mse": 0.0012016945984214544
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.2809031605720524,
+              "rotation_deg": 11.133428573608398,
+              "pose_component_mse": 0.011589158326387405,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.49010105431079865,
+              "paired_prediction_change_deg": 1.958900809288025,
+              "paired_prediction_component_mse": 0.0013220913242548704
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 2.291157692670822,
+            "rotation_deg": 11.217917760213217,
+            "pose_component_mse": 0.011737301324804624,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 0.49003752569357556,
+            "paired_prediction_change_deg": 2.0246179501215615,
+            "paired_prediction_component_mse": 0.001284407024892668
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 2.403831779956818,
+              "rotation_deg": 10.798551559448242,
+              "pose_component_mse": 0.012369725853204727,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.4673115164041519,
+              "paired_prediction_change_deg": 2.341857671737671,
+              "paired_prediction_component_mse": 0.0008652260294184089
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.4973833560943604,
+              "rotation_deg": 10.388494491577148,
+              "pose_component_mse": 0.013319221325218678,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.4623482748866081,
+              "paired_prediction_change_deg": 2.4274914264678955,
+              "paired_prediction_component_mse": 0.0008519336697645485
+            },
+            {
+              "windows": 40,
+              "position_cm": 2.5553324818611145,
+              "rotation_deg": 11.685880661010742,
+              "pose_component_mse": 0.014356964267790318,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.46715885400772095,
+              "paired_prediction_change_deg": 2.478170394897461,
+              "paired_prediction_component_mse": 0.000902669969946146
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 2.4855158726374307,
+            "rotation_deg": 10.957642237345377,
+            "pose_component_mse": 0.013348637148737907,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 0.4656062150994937,
+            "paired_prediction_change_deg": 2.4158398310343423,
+            "paired_prediction_component_mse": 0.0008732765563763678
+          }
+        }
+      },
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 3.066973090171814,
+              "rotation_deg": 12.68907356262207,
+              "pose_component_mse": 0.020868346095085144,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.0755442976951604,
+              "paired_prediction_change_deg": 6.088891506195068,
+              "paired_prediction_component_mse": 0.012332496233284473
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.013763427734375,
+              "rotation_deg": 12.122036933898926,
+              "pose_component_mse": 0.020095309242606163,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.0380911231040955,
+              "paired_prediction_change_deg": 5.99342155456543,
+              "paired_prediction_component_mse": 0.01129173208028078
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.1347069144248967,
+              "rotation_deg": 12.262563705444336,
+              "pose_component_mse": 0.02103174477815628,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.9810558855533602,
+              "paired_prediction_change_deg": 5.749419689178467,
+              "paired_prediction_component_mse": 0.01129510160535574
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 3.071814477443695,
+            "rotation_deg": 12.357891400655111,
+            "pose_component_mse": 0.020665133371949196,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 2.031563768784205,
+            "paired_prediction_change_deg": 5.943910916646321,
+            "paired_prediction_component_mse": 0.011639776639640331
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 3.211911916732788,
+              "rotation_deg": 12.176922798156738,
+              "pose_component_mse": 0.02287248894572258,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.9206783175468447,
+              "paired_prediction_change_deg": 7.079527378082275,
+              "paired_prediction_component_mse": 0.011781210079789162
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.2485395669937134,
+              "rotation_deg": 11.470501899719238,
+              "pose_component_mse": 0.023407837375998497,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.8896852433681488,
+              "paired_prediction_change_deg": 6.738480567932129,
+              "paired_prediction_component_mse": 0.010825751349329948
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.3772784471511845,
+              "rotation_deg": 13.1670503616333,
+              "pose_component_mse": 0.025532249361276627,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.8863490223884585,
+              "paired_prediction_change_deg": 6.711071968078613,
+              "paired_prediction_component_mse": 0.01107254158705473
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 3.279243310292562,
+            "rotation_deg": 12.271491686503092,
+            "pose_component_mse": 0.0239375252276659,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.8989041944344838,
+            "paired_prediction_change_deg": 6.843026638031006,
+            "paired_prediction_component_mse": 0.01122650100539128
+          }
+        }
+      }
+    },
+    "target_t49": {
+      "correct": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 3.6769941449165344,
+              "rotation_deg": 13.0245943069458,
+              "pose_component_mse": 0.029078951105475426,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.3883148431777954,
+              "rotation_deg": 13.163070678710938,
+              "pose_component_mse": 0.02477162890136242,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.6152666807174683,
+              "rotation_deg": 12.937817573547363,
+              "pose_component_mse": 0.028508249670267105,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 3.560191889603933,
+            "rotation_deg": 13.041827519734701,
+            "pose_component_mse": 0.02745294322570165,
+            "quaternion_degenerate_count": 0.0
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 3.749923706054688,
+              "rotation_deg": 11.688272476196289,
+              "pose_component_mse": 0.029807792976498604,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 4.082030355930328,
+              "rotation_deg": 11.501317024230957,
+              "pose_component_mse": 0.03415932133793831,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 4.208756983280182,
+              "rotation_deg": 12.956319808959961,
+              "pose_component_mse": 0.03722606971859932,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 4.013570348421733,
+            "rotation_deg": 12.048636436462402,
+            "pose_component_mse": 0.03373106134434541,
+            "quaternion_degenerate_count": 0.0
+          }
+        }
+      },
+      "image_swap_same_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 3.806533217430115,
+              "rotation_deg": 13.539382934570312,
+              "pose_component_mse": 0.031693678349256516,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.9363106638193132,
+              "paired_prediction_change_deg": 3.144369602203369,
+              "paired_prediction_component_mse": 0.0046320632100105286
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.5264095664024353,
+              "rotation_deg": 13.127248764038086,
+              "pose_component_mse": 0.026827676221728325,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.9052090346813202,
+              "paired_prediction_change_deg": 3.1660804748535156,
+              "paired_prediction_component_mse": 0.003584669204428792
+            },
+            {
+              "windows": 40,
+              "position_cm": 3.76858651638031,
+              "rotation_deg": 13.479894638061523,
+              "pose_component_mse": 0.030292943120002747,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.9260910749435426,
+              "paired_prediction_change_deg": 2.8188421726226807,
+              "paired_prediction_component_mse": 0.004406477324664593
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 3.70050976673762,
+            "rotation_deg": 13.38217544555664,
+            "pose_component_mse": 0.02960476589699586,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 0.9225369244813919,
+            "paired_prediction_change_deg": 3.043097416559855,
+            "paired_prediction_component_mse": 0.0042077365797013044
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 3.973917961120606,
+              "rotation_deg": 12.878039360046387,
+              "pose_component_mse": 0.03397960215806961,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.906137228012085,
+              "paired_prediction_change_deg": 3.585919141769409,
+              "paired_prediction_component_mse": 0.0029495006892830133
+            },
+            {
+              "windows": 40,
+              "position_cm": 4.222521781921388,
+              "rotation_deg": 12.78246784210205,
+              "pose_component_mse": 0.03718816861510277,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.9156258404254913,
+              "paired_prediction_change_deg": 3.6084189414978027,
+              "paired_prediction_component_mse": 0.002981680678203702
+            },
+            {
+              "windows": 40,
+              "position_cm": 4.398016929626465,
+              "rotation_deg": 14.45604419708252,
+              "pose_component_mse": 0.041346073150634766,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 0.9315766394138336,
+              "paired_prediction_change_deg": 3.7219786643981934,
+              "paired_prediction_component_mse": 0.003098882967606187
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 4.198152224222819,
+            "rotation_deg": 13.372183799743652,
+            "pose_component_mse": 0.03750461464126905,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 0.9177799026171366,
+            "paired_prediction_change_deg": 3.6387722492218018,
+            "paired_prediction_component_mse": 0.0030100214450309672
+          }
+        }
+      },
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 5.207319259643555,
+              "rotation_deg": 15.413678169250488,
+              "pose_component_mse": 0.05795155093073845,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.6534848809242253,
+              "paired_prediction_change_deg": 8.890335083007812,
+              "paired_prediction_component_mse": 0.03572607785463333
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.127735137939453,
+              "rotation_deg": 14.7847261428833,
+              "pose_component_mse": 0.057493194937705994,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.5803118348121643,
+              "paired_prediction_change_deg": 8.760595321655273,
+              "paired_prediction_component_mse": 0.03451743349432945
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.340358018875122,
+              "rotation_deg": 15.038342475891113,
+              "pose_component_mse": 0.06159209460020065,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.467096984386444,
+              "paired_prediction_change_deg": 8.312065124511719,
+              "paired_prediction_component_mse": 0.03230373188853264
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 5.22513747215271,
+            "rotation_deg": 15.0789155960083,
+            "pose_component_mse": 0.059012280156215034,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 3.566964566707611,
+            "paired_prediction_change_deg": 8.654331843058268,
+            "paired_prediction_component_mse": 0.034182414412498474
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 5.286773443222046,
+              "rotation_deg": 15.151741027832031,
+              "pose_component_mse": 0.060024186968803406,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.134530186653137,
+              "paired_prediction_change_deg": 10.183967590332031,
+              "paired_prediction_component_mse": 0.028744438663125038
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.405004620552063,
+              "rotation_deg": 14.221651077270508,
+              "pose_component_mse": 0.06177622824907303,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.116024434566498,
+              "paired_prediction_change_deg": 9.157734870910645,
+              "paired_prediction_component_mse": 0.02640979178249836
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.584725737571716,
+              "rotation_deg": 16.484516143798828,
+              "pose_component_mse": 0.06678060442209244,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.1119024753570557,
+              "paired_prediction_change_deg": 9.181686401367188,
+              "paired_prediction_component_mse": 0.026442771777510643
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 5.425501267115275,
+            "rotation_deg": 15.285969416300455,
+            "pose_component_mse": 0.06286033987998962,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 3.1208190321922302,
+            "paired_prediction_change_deg": 9.507796287536621,
+            "paired_prediction_component_mse": 0.02719900074104468
+          }
+        }
+      }
+    },
+    "target_t74": {
+      "correct": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 5.794588327407838,
+              "rotation_deg": 14.576227188110352,
+              "pose_component_mse": 0.07785400748252869,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.429049730300903,
+              "rotation_deg": 14.057229995727539,
+              "pose_component_mse": 0.06840657442808151,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.727183222770691,
+              "rotation_deg": 14.46777057647705,
+              "pose_component_mse": 0.07606342434883118,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 5.65027376015981,
+            "rotation_deg": 14.36707592010498,
+            "pose_component_mse": 0.07410800208648045,
+            "quaternion_degenerate_count": 0.0
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 5.519087910652161,
+              "rotation_deg": 13.253568649291992,
+              "pose_component_mse": 0.06810338795185089,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.931797623634338,
+              "rotation_deg": 12.895223617553711,
+              "pose_component_mse": 0.0763682872056961,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 6.4183878898620605,
+              "rotation_deg": 14.5877046585083,
+              "pose_component_mse": 0.08885755389928818,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 5.9564244747161865,
+            "rotation_deg": 13.578832308451334,
+            "pose_component_mse": 0.07777640968561172,
+            "quaternion_degenerate_count": 0.0
+          }
+        }
+      },
+      "image_swap_same_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 5.8891838788986215,
+              "rotation_deg": 15.198686599731445,
+              "pose_component_mse": 0.08082148432731628,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.5511289238929749,
+              "paired_prediction_change_deg": 4.183098316192627,
+              "paired_prediction_component_mse": 0.011268998496234417
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.590767264366151,
+              "rotation_deg": 14.291328430175781,
+              "pose_component_mse": 0.07091040164232254,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.4350241422653198,
+              "paired_prediction_change_deg": 3.9361636638641357,
+              "paired_prediction_component_mse": 0.008427111431956291
+            },
+            {
+              "windows": 40,
+              "position_cm": 5.976068377494812,
+              "rotation_deg": 15.172683715820312,
+              "pose_component_mse": 0.08017785102128983,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.4806470274925232,
+              "paired_prediction_change_deg": 3.5257954597473145,
+              "paired_prediction_component_mse": 0.009869814850389957
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 5.818673173586528,
+            "rotation_deg": 14.887566248575846,
+            "pose_component_mse": 0.07730324566364288,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.4889333645502727,
+            "paired_prediction_change_deg": 3.881685813268026,
+            "paired_prediction_component_mse": 0.009855308259526888
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 5.98245918750763,
+              "rotation_deg": 14.548433303833008,
+              "pose_component_mse": 0.07951843738555908,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.6108593344688418,
+              "paired_prediction_change_deg": 4.416339874267578,
+              "paired_prediction_component_mse": 0.008482462726533413
+            },
+            {
+              "windows": 40,
+              "position_cm": 6.29108726978302,
+              "rotation_deg": 14.8309326171875,
+              "pose_component_mse": 0.08687206357717514,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.6325128078460693,
+              "paired_prediction_change_deg": 4.383699893951416,
+              "paired_prediction_component_mse": 0.008596704341471195
+            },
+            {
+              "windows": 40,
+              "position_cm": 6.940905451774597,
+              "rotation_deg": 16.218421936035156,
+              "pose_component_mse": 0.10321025550365448,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.6881862282752993,
+              "paired_prediction_change_deg": 4.5008721351623535,
+              "paired_prediction_component_mse": 0.009208505041897297
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 6.404817303021749,
+            "rotation_deg": 15.199262619018555,
+            "pose_component_mse": 0.08986691882212956,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.6438527901967366,
+            "paired_prediction_change_deg": 4.433637301127116,
+            "paired_prediction_component_mse": 0.008762557369967302
+          }
+        }
+      },
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.499804496765138,
+              "rotation_deg": 16.19448471069336,
+              "pose_component_mse": 0.12137743085622787,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 4.692296385765076,
+              "paired_prediction_change_deg": 9.349931716918945,
+              "paired_prediction_component_mse": 0.05096122995018959
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.481132745742798,
+              "rotation_deg": 15.934613227844238,
+              "pose_component_mse": 0.12288495153188705,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 4.396963715553285,
+              "paired_prediction_change_deg": 8.71932315826416,
+              "paired_prediction_component_mse": 0.04845457896590233
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.6453375816345215,
+              "rotation_deg": 16.03377342224121,
+              "pose_component_mse": 0.1300840973854065,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 4.312488436698914,
+              "paired_prediction_change_deg": 8.682062149047852,
+              "paired_prediction_component_mse": 0.041198763996362686
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.542091608047485,
+            "rotation_deg": 16.054290453592937,
+            "pose_component_mse": 0.12478215992450714,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 4.467249512672424,
+            "paired_prediction_change_deg": 8.917105674743652,
+            "paired_prediction_component_mse": 0.046871524304151535
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.1198874711990365,
+              "rotation_deg": 17.13788414001465,
+              "pose_component_mse": 0.10752927511930466,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.9123529195785522,
+              "paired_prediction_change_deg": 10.699662208557129,
+              "paired_prediction_component_mse": 0.03655935078859329
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.359328866004944,
+              "rotation_deg": 16.17636489868164,
+              "pose_component_mse": 0.11175055801868439,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.7726128101348877,
+              "paired_prediction_change_deg": 9.293906211853027,
+              "paired_prediction_component_mse": 0.03413333743810654
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.67979621887207,
+              "rotation_deg": 17.97628402709961,
+              "pose_component_mse": 0.12108753621578217,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 4.0767693519592285,
+              "paired_prediction_change_deg": 9.957075119018555,
+              "paired_prediction_component_mse": 0.03789988160133362
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.386337518692017,
+            "rotation_deg": 17.0968443552653,
+            "pose_component_mse": 0.11345578978459041,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 3.920578360557556,
+            "paired_prediction_change_deg": 9.983547846476236,
+            "paired_prediction_component_mse": 0.03619752327601115
+          }
+        }
+      }
+    },
+    "target_t99": {
+      "correct": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 8.464048504829409,
+              "rotation_deg": 14.7728853225708,
+              "pose_component_mse": 0.1728530377149582,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.397414088249207,
+              "rotation_deg": 14.547647476196289,
+              "pose_component_mse": 0.17341677844524384,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.414533734321594,
+              "rotation_deg": 14.683609008789062,
+              "pose_component_mse": 0.17465703189373016,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 8.425332109133402,
+            "rotation_deg": 14.668047269185385,
+            "pose_component_mse": 0.17364228268464407,
+            "quaternion_degenerate_count": 0.0
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.36580491065979,
+              "rotation_deg": 14.591946601867676,
+              "pose_component_mse": 0.11975972354412079,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.366287112236024,
+              "rotation_deg": 14.526423454284668,
+              "pose_component_mse": 0.11962006241083145,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.553868293762207,
+              "rotation_deg": 14.902837753295898,
+              "pose_component_mse": 0.12479352951049805,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.428653438886006,
+            "rotation_deg": 14.673735936482748,
+            "pose_component_mse": 0.1213911051551501,
+            "quaternion_degenerate_count": 0.0
+          }
+        }
+      },
+      "image_swap_same_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 8.464393615722656,
+              "rotation_deg": 15.213455200195312,
+              "pose_component_mse": 0.17159810662269592,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2085045874118805,
+              "paired_prediction_change_deg": 2.8606152534484863,
+              "paired_prediction_component_mse": 0.006846358068287373
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.447591662406923,
+              "rotation_deg": 15.028305053710938,
+              "pose_component_mse": 0.17304439842700958,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.178467720746994,
+              "paired_prediction_change_deg": 2.8720860481262207,
+              "paired_prediction_component_mse": 0.005549160297960043
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.493320345878603,
+              "rotation_deg": 15.249926567077637,
+              "pose_component_mse": 0.17495599389076233,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2094707787036898,
+              "paired_prediction_change_deg": 2.7205471992492676,
+              "paired_prediction_component_mse": 0.006517910864204168
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 8.468435208002726,
+            "rotation_deg": 15.163895606994629,
+            "pose_component_mse": 0.1731994996468226,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.1988143622875214,
+            "paired_prediction_change_deg": 2.817749500274658,
+            "paired_prediction_component_mse": 0.006304476410150528
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.768026590347291,
+              "rotation_deg": 15.424880981445312,
+              "pose_component_mse": 0.1322403848171234,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2840867042541504,
+              "paired_prediction_change_deg": 2.725069522857666,
+              "paired_prediction_component_mse": 0.005192999262362719
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.7622002363204965,
+              "rotation_deg": 15.47172737121582,
+              "pose_component_mse": 0.13272784650325775,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2827439606189728,
+              "paired_prediction_change_deg": 2.656031847000122,
+              "paired_prediction_component_mse": 0.005161994602531195
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.979426383972169,
+              "rotation_deg": 15.766024589538574,
+              "pose_component_mse": 0.13823650777339935,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3304471969604492,
+              "paired_prediction_change_deg": 2.819122552871704,
+              "paired_prediction_component_mse": 0.005570214241743088
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.836551070213319,
+            "rotation_deg": 15.554210980733236,
+            "pose_component_mse": 0.13440157969792685,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.2990926206111908,
+            "paired_prediction_change_deg": 2.733407974243164,
+            "paired_prediction_component_mse": 0.005308402702212334
+          }
+        }
+      },
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 8.883999586105347,
+              "rotation_deg": 15.813136100769043,
+              "pose_component_mse": 0.1861395388841629,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.583565413951874,
+              "paired_prediction_change_deg": 6.112338066101074,
+              "paired_prediction_component_mse": 0.016206324100494385
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.834673166275026,
+              "rotation_deg": 15.785784721374512,
+              "pose_component_mse": 0.18536479771137238,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.5894886255264282,
+              "paired_prediction_change_deg": 6.296187400817871,
+              "paired_prediction_component_mse": 0.01593463309109211
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.867928385734558,
+              "rotation_deg": 15.808934211730957,
+              "pose_component_mse": 0.18618185818195343,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.552928626537323,
+              "paired_prediction_change_deg": 6.28464412689209,
+              "paired_prediction_component_mse": 0.015350415371358395
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 8.862200379371643,
+            "rotation_deg": 15.802618344624838,
+            "pose_component_mse": 0.1858953982591629,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 2.5753275553385415,
+            "paired_prediction_change_deg": 6.231056531270345,
+            "paired_prediction_component_mse": 0.01583045752098163
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.956072092056275,
+              "rotation_deg": 16.712514877319336,
+              "pose_component_mse": 0.13515932857990265,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.4234640598297124,
+              "paired_prediction_change_deg": 6.810839653015137,
+              "paired_prediction_component_mse": 0.01281474344432354
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.9091215133667,
+              "rotation_deg": 16.43880271911621,
+              "pose_component_mse": 0.13444899022579193,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.378624379634857,
+              "paired_prediction_change_deg": 6.556288242340088,
+              "paired_prediction_component_mse": 0.012267163023352623
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.074838519096375,
+              "rotation_deg": 16.895061492919922,
+              "pose_component_mse": 0.1374180018901825,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.4669361114501953,
+              "paired_prediction_change_deg": 6.6702752113342285,
+              "paired_prediction_component_mse": 0.012636475265026093
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.980010708173116,
+            "rotation_deg": 16.68212636311849,
+            "pose_component_mse": 0.13567544023195902,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 2.4230081836382547,
+            "paired_prediction_change_deg": 6.679134368896484,
+            "paired_prediction_component_mse": 0.012572793910900751
+          }
+        }
+      }
+    },
+    "pure_noise_t99": {
+      "correct": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 8.464938402175903,
+              "rotation_deg": 14.773289680480957,
+              "pose_component_mse": 0.17289121448993683,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.398343920707703,
+              "rotation_deg": 14.548078536987305,
+              "pose_component_mse": 0.17345479130744934,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.415448069572449,
+              "rotation_deg": 14.683877944946289,
+              "pose_component_mse": 0.17469467222690582,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 8.426243464152018,
+            "rotation_deg": 14.668415387471518,
+            "pose_component_mse": 0.17368022600809732,
+            "quaternion_degenerate_count": 0.0
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.3664844036102295,
+              "rotation_deg": 14.592294692993164,
+              "pose_component_mse": 0.11978200078010559,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.366999983787537,
+              "rotation_deg": 14.526896476745605,
+              "pose_component_mse": 0.1196429654955864,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.554548978805542,
+              "rotation_deg": 14.903364181518555,
+              "pose_component_mse": 0.12481623888015747,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.429344455401103,
+            "rotation_deg": 14.674185117085775,
+            "pose_component_mse": 0.12141373505194981,
+            "quaternion_degenerate_count": 0.0
+          }
+        }
+      },
+      "image_swap_same_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 8.465272188186646,
+              "rotation_deg": 15.213780403137207,
+              "pose_component_mse": 0.1716354340314865,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2083933502435684,
+              "paired_prediction_change_deg": 2.86040997505188,
+              "paired_prediction_component_mse": 0.006845215801149607
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.448432683944702,
+              "rotation_deg": 15.028787612915039,
+              "pose_component_mse": 0.17307959496974945,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.1783888190984728,
+              "paired_prediction_change_deg": 2.8723769187927246,
+              "paired_prediction_component_mse": 0.005548288580030203
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.494113683700562,
+              "rotation_deg": 15.250104904174805,
+              "pose_component_mse": 0.17499025166034698,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2093379348516464,
+              "paired_prediction_change_deg": 2.719935894012451,
+              "paired_prediction_component_mse": 0.006516686640679836
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 8.46927285194397,
+            "rotation_deg": 15.16422430674235,
+            "pose_component_mse": 0.173235093553861,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.1987067013978958,
+            "paired_prediction_change_deg": 2.8175742626190186,
+            "paired_prediction_component_mse": 0.006303397007286549
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.768689990043641,
+              "rotation_deg": 15.425152778625488,
+              "pose_component_mse": 0.1322629302740097,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.284024864435196,
+              "paired_prediction_change_deg": 2.724825859069824,
+              "paired_prediction_component_mse": 0.005192263517528772
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.76285469532013,
+              "rotation_deg": 15.471875190734863,
+              "pose_component_mse": 0.13275080919265747,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.2826736271381378,
+              "paired_prediction_change_deg": 2.655430555343628,
+              "paired_prediction_component_mse": 0.005161596462130547
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.9800957441329965,
+              "rotation_deg": 15.766372680664062,
+              "pose_component_mse": 0.1382603794336319,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 1.3303816318511963,
+              "paired_prediction_change_deg": 2.8183741569519043,
+              "paired_prediction_component_mse": 0.005569591652601957
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.837213476498923,
+            "rotation_deg": 15.55446688334147,
+            "pose_component_mse": 0.1344247063000997,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 1.2990267078081768,
+            "paired_prediction_change_deg": 2.7328768571217856,
+            "paired_prediction_component_mse": 0.0053078172107537585
+          }
+        }
+      },
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 8.884575963020325,
+              "rotation_deg": 15.81359577178955,
+              "pose_component_mse": 0.1861642748117447,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.583288550376892,
+              "paired_prediction_change_deg": 6.112397193908691,
+              "paired_prediction_component_mse": 0.016202760860323906
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.835245966911316,
+              "rotation_deg": 15.786199569702148,
+              "pose_component_mse": 0.18538975715637207,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.5891882181167603,
+              "paired_prediction_change_deg": 6.296609401702881,
+              "paired_prediction_component_mse": 0.015931058675050735
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.86852264404297,
+              "rotation_deg": 15.809346199035645,
+              "pose_component_mse": 0.1862064003944397,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.5526967644691467,
+              "paired_prediction_change_deg": 6.285006046295166,
+              "paired_prediction_component_mse": 0.015347902663052082
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 8.862781524658203,
+            "rotation_deg": 15.803047180175781,
+            "pose_component_mse": 0.18592014412085214,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 2.575057844320933,
+            "paired_prediction_change_deg": 6.231337547302246,
+            "paired_prediction_component_mse": 0.015827240732808907
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 7.956553101539613,
+              "rotation_deg": 16.71268081665039,
+              "pose_component_mse": 0.13517403602600098,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.4233198165893555,
+              "paired_prediction_change_deg": 6.810243129730225,
+              "paired_prediction_component_mse": 0.01281316950917244
+            },
+            {
+              "windows": 40,
+              "position_cm": 7.909590601921082,
+              "rotation_deg": 16.43942642211914,
+              "pose_component_mse": 0.13446320593357086,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.378514707088471,
+              "paired_prediction_change_deg": 6.555881500244141,
+              "paired_prediction_component_mse": 0.012265965342521667
+            },
+            {
+              "windows": 40,
+              "position_cm": 8.075289726257324,
+              "rotation_deg": 16.895389556884766,
+              "pose_component_mse": 0.13743185997009277,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 2.4668388068675995,
+              "paired_prediction_change_deg": 6.669695854187012,
+              "paired_prediction_component_mse": 0.012635261751711369
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 7.980477809906006,
+            "rotation_deg": 16.682498931884766,
+            "pose_component_mse": 0.13568970064322153,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 2.4228911101818085,
+            "paired_prediction_change_deg": 6.678606828053792,
+            "paired_prediction_component_mse": 0.012571465534468492
+          }
+        }
+      }
+    },
+    "native_sample": {
+      "correct": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 10.891157388687134,
+              "rotation_deg": 18.19243812561035,
+              "pose_component_mse": 0.31458860635757446,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 10.357741117477417,
+              "rotation_deg": 15.836257934570312,
+              "pose_component_mse": 0.28573593497276306,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 10.276858806610107,
+              "rotation_deg": 16.776803970336914,
+              "pose_component_mse": 0.24283082783222198,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 10.508585770924887,
+            "rotation_deg": 16.93516667683919,
+            "pose_component_mse": 0.28105178972085315,
+            "quaternion_degenerate_count": 0.0
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 9.319925308227539,
+              "rotation_deg": 16.622020721435547,
+              "pose_component_mse": 0.1960698664188385,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 11.309159994125368,
+              "rotation_deg": 17.437274932861328,
+              "pose_component_mse": 0.28317540884017944,
+              "quaternion_degenerate_count": 0
+            },
+            {
+              "windows": 40,
+              "position_cm": 9.894828796386719,
+              "rotation_deg": 17.731754302978516,
+              "pose_component_mse": 0.21047009527683258,
+              "quaternion_degenerate_count": 0
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 10.174638032913208,
+            "rotation_deg": 17.263683319091797,
+            "pose_component_mse": 0.22990512351195017,
+            "quaternion_degenerate_count": 0.0
+          }
+        }
+      },
+      "image_swap_same_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 10.963399410247805,
+              "rotation_deg": 17.958572387695312,
+              "pose_component_mse": 0.30221524834632874,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.115507960319519,
+              "paired_prediction_change_deg": 6.948709964752197,
+              "paired_prediction_component_mse": 0.038051385432481766
+            },
+            {
+              "windows": 40,
+              "position_cm": 10.965325832366943,
+              "rotation_deg": 17.87225914001465,
+              "pose_component_mse": 0.30306878685951233,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.260999321937561,
+              "paired_prediction_change_deg": 5.008245944976807,
+              "paired_prediction_component_mse": 0.04160240292549133
+            },
+            {
+              "windows": 40,
+              "position_cm": 10.747530460357666,
+              "rotation_deg": 17.382658004760742,
+              "pose_component_mse": 0.2553374171257019,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.4150478243827824,
+              "paired_prediction_change_deg": 6.4113006591796875,
+              "paired_prediction_component_mse": 0.04551105946302414
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 10.892085234324137,
+            "rotation_deg": 17.737829844156902,
+            "pose_component_mse": 0.28687381744384766,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 3.2638517022132874,
+            "paired_prediction_change_deg": 6.1227521896362305,
+            "paired_prediction_component_mse": 0.04172161594033241
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 10.111008882522583,
+              "rotation_deg": 19.55487060546875,
+              "pose_component_mse": 0.2287558913230896,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.4589990973472595,
+              "paired_prediction_change_deg": 7.275893211364746,
+              "paired_prediction_component_mse": 0.04396694898605347
+            },
+            {
+              "windows": 40,
+              "position_cm": 12.199424505233765,
+              "rotation_deg": 18.764602661132812,
+              "pose_component_mse": 0.32360997796058655,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.4687376022338867,
+              "paired_prediction_change_deg": 5.036377429962158,
+              "paired_prediction_component_mse": 0.03944091126322746
+            },
+            {
+              "windows": 40,
+              "position_cm": 10.582563877105713,
+              "rotation_deg": 18.93758773803711,
+              "pose_component_mse": 0.23678645491600037,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 3.851699531078339,
+              "paired_prediction_change_deg": 6.8921613693237305,
+              "paired_prediction_component_mse": 0.05294476076960564
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 10.964332421620687,
+            "rotation_deg": 19.085687001546223,
+            "pose_component_mse": 0.2630507747332255,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 3.593145410219828,
+            "paired_prediction_change_deg": 6.401477336883545,
+            "paired_prediction_component_mse": 0.04545087367296219
+          }
+        }
+      },
+      "language_swap_other_task": {
+        "train": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 11.463627815246582,
+              "rotation_deg": 19.929162979125977,
+              "pose_component_mse": 0.2796824872493744,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 8.276023864746094,
+              "paired_prediction_change_deg": 15.604771614074707,
+              "paired_prediction_component_mse": 0.15270395576953888
+            },
+            {
+              "windows": 40,
+              "position_cm": 11.873162984848024,
+              "rotation_deg": 17.054861068725586,
+              "pose_component_mse": 0.29295629262924194,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 8.758529424667358,
+              "paired_prediction_change_deg": 8.873193740844727,
+              "paired_prediction_component_mse": 0.17644250392913818
+            },
+            {
+              "windows": 40,
+              "position_cm": 12.505455017089846,
+              "rotation_deg": 18.50133514404297,
+              "pose_component_mse": 0.3172556757926941,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 7.486993670463563,
+              "paired_prediction_change_deg": 12.950495719909668,
+              "paired_prediction_component_mse": 0.12831726670265198
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 11.947415272394815,
+            "rotation_deg": 18.49511973063151,
+            "pose_component_mse": 0.29663148522377014,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 8.173848986625671,
+            "paired_prediction_change_deg": 12.476153691609701,
+            "paired_prediction_component_mse": 0.15248790880044302
+          }
+        },
+        "development": {
+          "seed_metrics": [
+            {
+              "windows": 40,
+              "position_cm": 11.009577512741089,
+              "rotation_deg": 19.276031494140625,
+              "pose_component_mse": 0.24605342745780945,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 7.673312425613404,
+              "paired_prediction_change_deg": 10.915372848510742,
+              "paired_prediction_component_mse": 0.13059401512145996
+            },
+            {
+              "windows": 40,
+              "position_cm": 12.086048126220703,
+              "rotation_deg": 22.491851806640625,
+              "pose_component_mse": 0.2956027686595917,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 7.725939750671388,
+              "paired_prediction_change_deg": 13.21168327331543,
+              "paired_prediction_component_mse": 0.12779133021831512
+            },
+            {
+              "windows": 40,
+              "position_cm": 11.653574705123901,
+              "rotation_deg": 23.969654083251953,
+              "pose_component_mse": 0.2772458493709564,
+              "quaternion_degenerate_count": 0,
+              "paired_prediction_change_cm": 8.319592475891113,
+              "paired_prediction_change_deg": 15.584362983703613,
+              "paired_prediction_component_mse": 0.15615513920783997
+            }
+          ],
+          "means": {
+            "windows": 40.0,
+            "position_cm": 11.583066781361898,
+            "rotation_deg": 21.912512461344402,
+            "pose_component_mse": 0.2729673484961192,
+            "quaternion_degenerate_count": 0.0,
+            "paired_prediction_change_cm": 7.906281550725301,
+            "paired_prediction_change_deg": 13.237139701843262,
+            "paired_prediction_component_mse": 0.13818016151587167
+          }
+        }
+      }
+    }
+  },
+  "limits": [
+    "Terminal excerpt omits some initial cases, parameter hashes, control checks and per-task results",
+    "Single fixed checkpoint; three noise seeds, not training seeds",
+    "Training subset is 40 windows, development 40 windows",
+    "Mean predictor versus stochastic sample error can differ without a sampler implementation bug",
+    "Condition swaps may be outside training distribution; cannot isolate adapter or encoder fault"
+  ]
+}

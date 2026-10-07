@@ -19,7 +19,7 @@ def main():
     assert audit['dataset_source_sha256'] == hashlib.sha256((ROOT/'code/dataset.py').read_bytes()).hexdigest()
     rows = [r for task in plan['tasks'] for r in
             [r for r in plan['split_episodes']['train'] if r['instruction'] == task][:2]]
-    out = ROOT/'training_cache/exports/multitask_preflight_v1'
+    out = ROOT/'training_cache/exports/multitask_preflight_v2'
     out.mkdir(parents=True, exist_ok=False)
     data = UnifiedRobotDataset(data_dir='E:/dataset/bridge_v2_0.0.1/0.0.1',
         chunk_size=16, stride=4, sources=['tfrecord'], min_trajectory_steps=17,
@@ -39,19 +39,20 @@ def main():
     np.savez_compressed(out/'training_probe.npz', instructions=np.array([v[0] for v in values]),
         images=np.stack([v[1].numpy() for v in values]), current=np.stack([v[2].numpy() for v in values]),
         actions=np.stack([v[3].numpy() for v in values]), masks=np.stack([v[4].numpy() for v in values]))
-    for name in ('models.py','adapter.py','diffusion_decoder.py','train.py','dataset.py','multitask_resource_preflight.py'):
+    for name in ('models.py','adapter.py','diffusion_decoder.py','train.py','dataset.py','multitask_resource_preflight.py','setup_clip_assets.py'):
         shutil.copyfile(ROOT/'code'/name, out/name)
     shutil.copyfile(ROOT/'scripts/cluster/multitask_preflight.sh', out/'multitask_preflight.sh')
+    shutil.copyfile(ROOT/'scripts/cluster/setup_multitask_preflight.sh', out/'setup_multitask_preflight.sh')
     manifest = dict(purpose='resource_and_update_preflight_only', reserved_test_targets_read=False,
         selection='First two planned training episodes per task; window start zero; no target-based selection',
         plan_sha256=audit['plan_sha256'], windows=identities,
         files_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in out.iterdir() if p.is_file()})
     (out/'manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-    archive = out.parent/'multitask_preflight_v1.zip'
+    archive = out.parent/'multitask_preflight_v2.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
-        for p in out.iterdir(): z.write(p,'multitask_preflight_v1/'+p.name)
+        for p in out.iterdir(): z.write(p,'multitask_preflight_v2/'+p.name)
     assert archive.stat().st_size < 100*1024**2
-    (out.parent/'multitask_preflight_v1.sha256').write_text(hashlib.sha256(archive.read_bytes()).hexdigest()+'  '+archive.name+'\n')
+    (out.parent/'multitask_preflight_v2.sha256').write_text(hashlib.sha256(archive.read_bytes()).hexdigest()+'  '+archive.name+'\n')
     print(archive, archive.stat().st_size, 'bytes')
 
 

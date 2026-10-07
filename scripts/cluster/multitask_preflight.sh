@@ -15,7 +15,7 @@ export TMPDIR="/projects/Zeroshot/.tmp/${SLURM_JOB_ID}"
 export OMP_NUM_THREADS=4
 mkdir -p "$TMPDIR" /projects/Zeroshot/runs
 nvidia-smi
-# Reuse PyTorch; transformers must be present. No automatic package/weight downloads.
-/projects/Zeroshot/envs/bridge-diffusion/bin/python -u \
-  /projects/Zeroshot/multitask_preflight_v1/multitask_resource_preflight.py \
+/projects/Zeroshot/envs/multitask-preflight-v1/bin/python -u \
+  /projects/Zeroshot/multitask_preflight_v2/multitask_resource_preflight.py \
+  --clip-dir /projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1 \
   --output "/projects/Zeroshot/runs/multitask-preflight-${SLURM_JOB_ID}.json"

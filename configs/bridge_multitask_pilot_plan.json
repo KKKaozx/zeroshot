@@ -1,0 +1,624 @@
+{
+  "status": "candidate_metadata_split_not_ready_for_training",
+  "purpose": "Bridge-only multitask offline joint-training engineering pilot, not final zero-shot benchmark",
+  "date": "2026-10-07",
+  "tasks": [
+    "open the drawer",
+    "turn lever vertical to front",
+    "take broccoli out of pan",
+    "close microwave",
+    "close the drawer"
+  ],
+  "split_seed": 42,
+  "split_rng": "Python random.Random with documented per-task string seed",
+  "counts_by_task": {
+    "open the drawer": {
+      "train": 11,
+      "development": 2,
+      "reserved_test": 4
+    },
+    "turn lever vertical to front": {
+      "train": 10,
+      "development": 2,
+      "reserved_test": 3
+    },
+    "take broccoli out of pan": {
+      "train": 9,
+      "development": 2,
+      "reserved_test": 2
+    },
+    "close microwave": {
+      "train": 8,
+      "development": 2,
+      "reserved_test": 2
+    },
+    "close the drawer": {
+      "train": 7,
+      "development": 2,
+      "reserved_test": 2
+    }
+  },
+  "counts": {
+    "train": 45,
+    "development": 10,
+    "reserved_test": 13
+  },
+  "split_episodes": {
+    "train": [
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 36,
+        "episode_id": 1,
+        "steps": 23,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/33/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+        "record_index": 36,
+        "episode_id": 29,
+        "steps": 34,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/13/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+        "record_index": 23,
+        "episode_id": 32,
+        "steps": 34,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/05/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 21,
+        "episode_id": 13,
+        "steps": 34,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_folding_table/drawer_pnp/01/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 25,
+        "episode_id": 4,
+        "steps": 43,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/11/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 41,
+        "episode_id": 7,
+        "steps": 48,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/16/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 41,
+        "episode_id": 16,
+        "steps": 27,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_folding_table/drawer_pnp/02/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+        "record_index": 54,
+        "episode_id": 30,
+        "steps": 34,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/03/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 44,
+        "episode_id": 20,
+        "steps": 40,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/15/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 26,
+        "episode_id": 37,
+        "steps": 29,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/07/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 2,
+        "episode_id": 4,
+        "steps": 38,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/08/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+        "record_index": 13,
+        "episode_id": 208,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 29,
+        "episode_id": 18,
+        "steps": 21,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toysink2_bww/turn_lever_vertical_to-front/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 11,
+        "episode_id": 13,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toysink2_bww/turn_lever_vertical_to-front/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 35,
+        "episode_id": 214,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 2,
+        "episode_id": 14,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toysink2_bww/turn_lever_vertical_to-front/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+        "record_index": 33,
+        "episode_id": 2,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/upenn/toysink5/turn_lever_vertical_to_front/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+        "record_index": 7,
+        "episode_id": 129,
+        "steps": 19,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 7,
+        "episode_id": 42,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+        "record_index": 45,
+        "episode_id": 244,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 43,
+        "episode_id": 0,
+        "steps": 19,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen2_room8052/turn_lever_vertical_to_front/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00028-of-01024",
+        "record_index": 2,
+        "episode_id": 48,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 40,
+        "episode_id": 160,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 10,
+        "episode_id": 31,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 37,
+        "episode_id": 2,
+        "steps": 25,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+        "record_index": 33,
+        "episode_id": 11,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 21,
+        "episode_id": 15,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 33,
+        "episode_id": 149,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+        "record_index": 6,
+        "episode_id": 145,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 29,
+        "episode_id": 77,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 17,
+        "episode_id": 1,
+        "steps": 29,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_toykitchen1/close_microwave/00/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 31,
+        "episode_id": 74,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 25,
+        "episode_id": 68,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 40,
+        "episode_id": 61,
+        "steps": 34,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 20,
+        "episode_id": 10,
+        "steps": 29,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_toykitchen1/close_microwave/00/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 4,
+        "episode_id": 10,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 8,
+        "episode_id": 61,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 39,
+        "episode_id": 51,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00025-of-01024",
+        "record_index": 15,
+        "episode_id": 16,
+        "steps": 32,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/25/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 20,
+        "episode_id": 4,
+        "steps": 34,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/01/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+        "record_index": 3,
+        "episode_id": 10,
+        "steps": 48,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/09/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 26,
+        "episode_id": 8,
+        "steps": 34,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/03/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 26,
+        "episode_id": 20,
+        "steps": 48,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/14/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+        "record_index": 22,
+        "episode_id": 36,
+        "steps": 32,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/22/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00031-of-01024",
+        "record_index": 17,
+        "episode_id": 1,
+        "steps": 33,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/09/train/out.npy"
+      }
+    ],
+    "development": [
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "episode_id": 23,
+        "steps": 39,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/13/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "episode_id": 7,
+        "steps": 36,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/12/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 34,
+        "episode_id": 201,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00021-of-01024",
+        "record_index": 19,
+        "episode_id": 20,
+        "steps": 21,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "episode_id": 1,
+        "steps": 25,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "episode_id": 124,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "episode_id": 14,
+        "steps": 30,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "episode_id": 46,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 38,
+        "episode_id": 8,
+        "steps": 21,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/22/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "episode_id": 21,
+        "steps": 32,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/06/train/out.npy"
+      }
+    ],
+    "reserved_test": [
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 5,
+        "episode_id": 0,
+        "steps": 30,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/03/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 15,
+        "episode_id": 7,
+        "steps": 28,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/40/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "episode_id": 9,
+        "steps": 45,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/13/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "episode_id": 12,
+        "steps": 39,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/02/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 28,
+        "episode_id": 249,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 6,
+        "episode_id": 180,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 2,
+        "episode_id": 152,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "episode_id": 95,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "episode_id": 153,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 45,
+        "episode_id": 85,
+        "steps": 23,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "episode_id": 41,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "episode_id": 0,
+        "steps": 39,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/08/train/out.npy"
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "episode_id": 22,
+        "steps": 43,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/08/train/out.npy"
+      }
+    ]
+  },
+  "original_25_diagnostic_episodes_and_sweep_task_excluded": true,
+  "test_targets_read": false,
+  "model": {
+    "clip": "frozen ViT-L/14",
+    "adapter_layers": 8,
+    "attention_dim": 512,
+    "pooling": "cls_patch_mean",
+    "decoder": "conditional temporal U-Net/DDPM",
+    "adapter_and_decoder_jointly_optimized": true,
+    "separate_gripper_jointly_optimized": true,
+    "action_contract": "tool_relative_pose_open_positive_v2",
+    "prediction_horizon": 16
+  },
+  "not_done": [
+    "Train/development numeric state, gripper, time/boundary and RGB eligibility verification",
+    "Final trainable manifest with source hashes",
+    "Resource/gradient preflight and fixed optimization budget",
+    "Training, validation or test inference"
+  ],
+  "limits": [
+    "Different datasets and architectures from prior diagnostics; not a single-factor causal comparison.",
+    "68 episodes is an engineering pilot, not evidence of adequate final training scale.",
+    "Only episode holdout is proposed; visual-scene and unseen-task independence not established.",
+    "Candidate eligibility depends on metadata; stop and revise the plan transparently if numeric checks fail.",
+    "Final four-source OXE training and LIBERO/CLIPort benchmark requirements remain incomplete."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "purpose": "metadata_only_inventory_summary",
+  "cached_first_8_shards": {
+    "scanned_episodes": 403,
+    "accepted_episodes": 269,
+    "distinct_instruction_strings": 228
+  },
+  "original_first_32_shards": {
+    "scanned_episodes": 1654,
+    "accepted_episodes": 1116,
+    "distinct_instruction_strings": 838
+  },
+  "candidate_task_counts": {
+    "open the drawer": 17,
+    "turn lever vertical to front": 15,
+    "take broccoli out of pan": 13,
+    "close microwave": 12,
+    "close the drawer": 11
+  },
+  "candidate_split_counts": {
+    "train": 45,
+    "development": 10,
+    "reserved_test": 13
+  },
+  "model_training_started": false,
+  "numeric_action_targets_read": false,
+  "images_decoded": false,
+  "new_dataset_downloaded": false,
+  "old_test_targets_used": false,
+  "inventory_metadata_sha256": "afa8ca7fcd0544d4ee553dda955068f28dde7f88e20fab84c989d7b7c6fc8066"
+}

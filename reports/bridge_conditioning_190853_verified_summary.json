@@ -1,0 +1,2588 @@
+{
+  "job_id": 190853,
+  "evidence": "Downloaded complete diagnostic JSON, identities, controls and hashes checked locally",
+  "report_sha256": "9239d318866461a153724f8328ce637cace61e02765711e42b60b60a718d9af8",
+  "trainable_parameters_unchanged": true,
+  "archive_module_hashes_match": true,
+  "subset_and_donors_match_local_preparation": true,
+  "effective_input_controls": {
+    "image_pixel_mse_mean": 1.208931628614664,
+    "identical_image_pairs": 0,
+    "different_language_pairs": 80
+  },
+  "elapsed_seconds": 103.54083948896732,
+  "peak_allocated_gib": 1.8615107536315918,
+  "alpha_bars": {
+    "0": 0.9993687272071838,
+    "24": 0.8470121026039124,
+    "49": 0.49384352564811707,
+    "74": 0.1442720890045166,
+    "99": 2.4285407107527135e-07
+  },
+  "case_means": {
+    "target_t0": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 1.0727012157440186,
+          "rotation_deg": 9.029966990152994,
+          "pose_component_mse": 0.003469115744034449,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 1.291690170764923,
+          "rotation_deg": 10.282392501831055,
+          "pose_component_mse": 0.0046156941292186575,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 0.99152738849322,
+          "rotation_deg": 9.31529426574707,
+          "pose_component_mse": 0.0034395214170217514,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 0.9178631504376731,
+          "rotation_deg": 9.606624921162924,
+          "pose_component_mse": 0.002950281836092472,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 1.0806504885355632,
+          "rotation_deg": 10.498108863830566,
+          "pose_component_mse": 0.0037298317377765975,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 1.0817751040061314,
+          "rotation_deg": 5.447413603464763,
+          "pose_component_mse": 0.002610249755283197,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 1.0882443189620974,
+          "rotation_deg": 8.32851791381836,
+          "pose_component_mse": 0.0034029794236024222,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 1.1427391072114308,
+          "rotation_deg": 7.786885420481364,
+          "pose_component_mse": 0.00325989187695086,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 1.2334377070267994,
+          "rotation_deg": 15.259713172912598,
+          "pose_component_mse": 0.006487796859194835,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 0.7898945113023124,
+          "rotation_deg": 6.948785622914632,
+          "pose_component_mse": 0.0018813379186516006,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 1.3190223773320515,
+          "rotation_deg": 7.300241470336914,
+          "pose_component_mse": 0.0038661847356706858,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 1.0354284445444744,
+          "rotation_deg": 5.393697738647461,
+          "pose_component_mse": 0.002275774721056223,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 1.0950927933057149,
+          "rotation_deg": 9.082139650980631,
+          "pose_component_mse": 0.003648645943030715,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.3320848072568576,
+          "paired_prediction_change_deg": 1.5351746082305908,
+          "paired_prediction_component_mse": 0.0006108365875358382
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 1.2846892575422924,
+          "rotation_deg": 10.288358370463053,
+          "pose_component_mse": 0.004586898256093264,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.016286551641921203,
+          "paired_prediction_change_deg": 0.04190891360243162,
+          "paired_prediction_component_mse": 6.952307103347266e-07
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 1.021743838985761,
+          "rotation_deg": 9.17298444112142,
+          "pose_component_mse": 0.003342496541639169,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.3667239348093669,
+          "paired_prediction_change_deg": 2.954425891240438,
+          "paired_prediction_component_mse": 0.0004217699752189219
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 0.9589010973771414,
+          "rotation_deg": 10.253445943196615,
+          "pose_component_mse": 0.003275322883079449,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.31166476507981616,
+          "paired_prediction_change_deg": 2.086596886316935,
+          "paired_prediction_component_mse": 0.0005079317488707602
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 0.9667471299568812,
+          "rotation_deg": 9.981306076049805,
+          "pose_component_mse": 0.0032631843350827694,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.637039914727211,
+          "paired_prediction_change_deg": 1.9472577969233196,
+          "paired_prediction_component_mse": 0.0009330833369555572
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 1.2433820962905884,
+          "rotation_deg": 5.714605490366618,
+          "pose_component_mse": 0.0037753275440384946,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.3287088498473168,
+          "paired_prediction_change_deg": 0.6456836064656576,
+          "paired_prediction_component_mse": 0.0011907027025396626
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 1.0684979210297267,
+          "rotation_deg": 8.527516682942709,
+          "pose_component_mse": 0.0033987422163287797,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.3208121409018834,
+          "paired_prediction_change_deg": 1.8951518138249714,
+          "paired_prediction_component_mse": 0.00045160623267292976
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 1.151025767127673,
+          "rotation_deg": 7.795629978179932,
+          "pose_component_mse": 0.0032989350923647485,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.022109536609301966,
+          "paired_prediction_change_deg": 0.07761594901482265,
+          "paired_prediction_component_mse": 1.4085607441908603e-06
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 1.2461937218904495,
+          "rotation_deg": 16.804118474324543,
+          "pose_component_mse": 0.006992593718071778,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.6108019004265467,
+          "paired_prediction_change_deg": 6.355562210083008,
+          "paired_prediction_component_mse": 0.0012018583559741576
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 0.7924619813760122,
+          "rotation_deg": 7.158951759338379,
+          "pose_component_mse": 0.0019870696123689413,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.3710092107454936,
+          "paired_prediction_change_deg": 1.6083287795384724,
+          "paired_prediction_component_mse": 0.00036524034415682155
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 1.212326188882192,
+          "rotation_deg": 6.889455159505208,
+          "pose_component_mse": 0.00334515313928326,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.5239966884255409,
+          "paired_prediction_change_deg": 2.0524332523345947,
+          "paired_prediction_component_mse": 0.0007566779580277702
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 1.0311197737852733,
+          "rotation_deg": 5.391519705454509,
+          "pose_component_mse": 0.0022601576832433543,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.03737695204714934,
+          "paired_prediction_change_deg": 0.18325563271840414,
+          "paired_prediction_component_mse": 2.8170606280279267e-06
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 1.4647521078586578,
+          "rotation_deg": 9.498491605122885,
+          "pose_component_mse": 0.006457879052807887,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.3670907417933147,
+          "paired_prediction_change_deg": 4.377803961435954,
+          "paired_prediction_component_mse": 0.005572368235637744
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 1.2557377417882283,
+          "rotation_deg": 9.402393023173014,
+          "pose_component_mse": 0.004652595613151789,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.3257722059885662,
+          "paired_prediction_change_deg": 5.883727232615153,
+          "paired_prediction_component_mse": 0.0037735065755744777
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 1.0989329715569813,
+          "rotation_deg": 9.71035893758138,
+          "pose_component_mse": 0.0037004550298055014,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.6377174456914266,
+          "paired_prediction_change_deg": 5.015518506368001,
+          "paired_prediction_component_mse": 0.0011459558736532927
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 1.0312838852405548,
+          "rotation_deg": 10.263958295186361,
+          "pose_component_mse": 0.0034938695219655833,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.5350941916306814,
+          "paired_prediction_change_deg": 2.1520608266194663,
+          "paired_prediction_component_mse": 0.0007188612362369895
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 3.017491102218628,
+          "rotation_deg": 11.934235572814941,
+          "pose_component_mse": 0.018028723696867626,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.1885369618733725,
+          "paired_prediction_change_deg": 6.0126722653706866,
+          "paired_prediction_component_mse": 0.01953713099161784
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 0.9203148633241653,
+          "rotation_deg": 6.181512832641602,
+          "pose_component_mse": 0.002413751014197866,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.1483332018057506,
+          "paired_prediction_change_deg": 2.8250420093536377,
+          "paired_prediction_component_mse": 0.0026863873936235905
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 1.5808258454004924,
+          "rotation_deg": 9.357423782348633,
+          "pose_component_mse": 0.007453892069558303,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.3385877013206482,
+          "paired_prediction_change_deg": 5.346088409423828,
+          "paired_prediction_component_mse": 0.006043970429648955
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 1.4816514650980632,
+          "rotation_deg": 8.579769134521484,
+          "pose_component_mse": 0.004895801500727733,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.2403693546851475,
+          "paired_prediction_change_deg": 5.032790660858154,
+          "paired_prediction_component_mse": 0.003017070470377803
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 1.3443442682425182,
+          "rotation_deg": 17.067589441935223,
+          "pose_component_mse": 0.007954586297273636,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.4926634579896927,
+          "paired_prediction_change_deg": 6.206391016642253,
+          "paired_prediction_component_mse": 0.0011102389156197507
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 0.9901628891626996,
+          "rotation_deg": 7.794317245483398,
+          "pose_component_mse": 0.002736534302433332,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.6817051768302917,
+          "paired_prediction_change_deg": 5.216129144032796,
+          "paired_prediction_component_mse": 0.0014201670419424772
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 2.92210062344869,
+          "rotation_deg": 8.330889066060385,
+          "pose_component_mse": 0.018288768207033474,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.9407717784245815,
+          "paired_prediction_change_deg": 6.068507353464763,
+          "paired_prediction_component_mse": 0.02009720044831435
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 0.7899392892916998,
+          "rotation_deg": 6.344553629557292,
+          "pose_component_mse": 0.001692341174930334,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.054531956712405,
+          "paired_prediction_change_deg": 3.5708255767822266,
+          "paired_prediction_component_mse": 0.0021075091790407896
+        }
+      }
+    },
+    "target_t24": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 2.2296513617038727,
+          "rotation_deg": 11.053306579589844,
+          "pose_component_mse": 0.011050237342715263,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 2.5246611734231315,
+          "rotation_deg": 11.099827448527018,
+          "pose_component_mse": 0.013376371624569098,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 2.437737137079239,
+          "rotation_deg": 11.997648239135742,
+          "pose_component_mse": 0.012981176376342773,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 2.108784019947052,
+          "rotation_deg": 13.072967847188314,
+          "pose_component_mse": 0.01057098557551702,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 2.284061014652252,
+          "rotation_deg": 12.243190129597982,
+          "pose_component_mse": 0.011578782461583614,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 1.7930140097935994,
+          "rotation_deg": 6.852899233500163,
+          "pose_component_mse": 0.006743873159090678,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 2.4341180920600896,
+          "rotation_deg": 10.267027854919434,
+          "pose_component_mse": 0.012595559159914652,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 2.7708534399668374,
+          "rotation_deg": 9.966341972351074,
+          "pose_component_mse": 0.014858513449629148,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 2.387813925743103,
+          "rotation_deg": 19.0779291788737,
+          "pose_component_mse": 0.016398747451603413,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 2.1595415472984314,
+          "rotation_deg": 8.723414262135824,
+          "pose_component_mse": 0.009976818691939116,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 2.607406179110209,
+          "rotation_deg": 8.281648317972818,
+          "pose_component_mse": 0.012942545426388582,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.0269239942232766,
+          "rotation_deg": 6.514430681864421,
+          "pose_component_mse": 0.007654199531922738,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 2.291157692670822,
+          "rotation_deg": 11.217917760213217,
+          "pose_component_mse": 0.011737301324804624,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.49003752569357556,
+          "paired_prediction_change_deg": 2.0246179501215615,
+          "paired_prediction_component_mse": 0.001284407024892668
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 2.5217407941818237,
+          "rotation_deg": 11.10653018951416,
+          "pose_component_mse": 0.013351513693730036,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.020988143514841795,
+          "paired_prediction_change_deg": 0.049350122610727944,
+          "paired_prediction_component_mse": 1.161598371860843e-06
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 2.5289894143740335,
+          "rotation_deg": 11.845854123433432,
+          "pose_component_mse": 0.013424973003566265,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.5552352219820023,
+          "paired_prediction_change_deg": 3.9702921708424888,
+          "paired_prediction_component_mse": 0.0008572114941974481
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 2.161618024110794,
+          "rotation_deg": 14.372157414754232,
+          "pose_component_mse": 0.011530439058939615,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.4680980866154035,
+          "paired_prediction_change_deg": 2.7317955493927,
+          "paired_prediction_component_mse": 0.0009671871666796505
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 2.271238515774409,
+          "rotation_deg": 11.668043454488119,
+          "pose_component_mse": 0.011382090238233408,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.9124442934989929,
+          "paired_prediction_change_deg": 2.494044542312622,
+          "paired_prediction_component_mse": 0.001866107069266339
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 1.972201019525528,
+          "rotation_deg": 7.097002029418945,
+          "pose_component_mse": 0.008997488766908646,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.4934218898415566,
+          "paired_prediction_change_deg": 0.8776073853174845,
+          "paired_prediction_component_mse": 0.002730368326107661
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 2.4855158726374307,
+          "rotation_deg": 10.957642237345377,
+          "pose_component_mse": 0.013348637148737907,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.4656062150994937,
+          "paired_prediction_change_deg": 2.4158398310343423,
+          "paired_prediction_component_mse": 0.0008732765563763678
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 2.7771340807278952,
+          "rotation_deg": 9.971892356872559,
+          "pose_component_mse": 0.014928444599111875,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.031297411769628525,
+          "paired_prediction_change_deg": 0.10127936551968257,
+          "paired_prediction_component_mse": 2.938553582983635e-06
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 2.6267784337202706,
+          "rotation_deg": 22.696544011433918,
+          "pose_component_mse": 0.020117634907364845,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.9116410712401072,
+          "paired_prediction_change_deg": 8.646724383036295,
+          "paired_prediction_component_mse": 0.002366586122661829
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 2.1507489681243896,
+          "rotation_deg": 9.383010705312094,
+          "pose_component_mse": 0.010058571894963583,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.5361705894271532,
+          "paired_prediction_change_deg": 1.8673824469248455,
+          "paired_prediction_component_mse": 0.000730722036678344
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 2.686163683732351,
+          "rotation_deg": 8.134380022684732,
+          "pose_component_mse": 0.013673976374169191,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.7437798629204432,
+          "paired_prediction_change_deg": 2.484594186147054,
+          "paired_prediction_component_mse": 0.0014039495727047324
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.013727823893229,
+          "rotation_deg": 6.496245384216309,
+          "pose_component_mse": 0.007561288774013519,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.06238309356073538,
+          "paired_prediction_change_deg": 0.2094760239124298,
+          "paired_prediction_component_mse": 7.1677779184634955e-06
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 3.071814477443695,
+          "rotation_deg": 12.357891400655111,
+          "pose_component_mse": 0.020665133371949196,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.031563768784205,
+          "paired_prediction_change_deg": 5.943910916646321,
+          "paired_prediction_component_mse": 0.011639776639640331
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 3.18171759446462,
+          "rotation_deg": 11.522677103678385,
+          "pose_component_mse": 0.020740967864791553,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.0206030706564584,
+          "paired_prediction_change_deg": 7.782843589782715,
+          "paired_prediction_component_mse": 0.00849187932908535
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 2.5781904657681785,
+          "rotation_deg": 12.402277310689291,
+          "pose_component_mse": 0.013802899668614069,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.945462038119634,
+          "paired_prediction_change_deg": 6.815492947896321,
+          "paired_prediction_component_mse": 0.0023362611730893454
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 2.2207472225030265,
+          "rotation_deg": 13.960660298665365,
+          "pose_component_mse": 0.011921432490150133,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.7677079488833746,
+          "paired_prediction_change_deg": 2.742039998372396,
+          "paired_prediction_component_mse": 0.0014109804760664701
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 4.695823987325032,
+          "rotation_deg": 14.955713589986166,
+          "pose_component_mse": 0.04242115716139475,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 4.353273808956146,
+          "paired_prediction_change_deg": 8.105840365091959,
+          "paired_prediction_component_mse": 0.037526035060485206
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.6825921734174094,
+          "rotation_deg": 8.948127746582031,
+          "pose_component_mse": 0.01443920967479547,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.07077220082283,
+          "paired_prediction_change_deg": 4.273338158925374,
+          "paired_prediction_component_mse": 0.008433727857967218
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 3.279243310292562,
+          "rotation_deg": 12.271491686503092,
+          "pose_component_mse": 0.0239375252276659,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.8989041944344838,
+          "paired_prediction_change_deg": 6.843026638031006,
+          "paired_prediction_component_mse": 0.01122650100539128
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 3.317402799924215,
+          "rotation_deg": 11.93354860941569,
+          "pose_component_mse": 0.02118847891688347,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.6930195192495983,
+          "paired_prediction_change_deg": 6.349624792734782,
+          "paired_prediction_component_mse": 0.0056878854520618916
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 2.662264853715897,
+          "rotation_deg": 23.34734598795573,
+          "pose_component_mse": 0.021902055169145267,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.7591414948304495,
+          "paired_prediction_change_deg": 9.133419036865234,
+          "paired_prediction_component_mse": 0.002439269796013832
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 2.5411437451839447,
+          "rotation_deg": 10.302243868509928,
+          "pose_component_mse": 0.01354757851610581,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.0550034046173096,
+          "paired_prediction_change_deg": 6.44951868057251,
+          "paired_prediction_component_mse": 0.0028289295732975006
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 4.706881145636241,
+          "rotation_deg": 9.612783432006836,
+          "pose_component_mse": 0.04468636338909467,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.9074488480885825,
+          "paired_prediction_change_deg": 7.3859931627909345,
+          "paired_prediction_component_mse": 0.03545133645335833
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.92690247297287,
+          "rotation_deg": 7.9000922838846845,
+          "pose_component_mse": 0.015750812987486523,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.9247610370318096,
+          "paired_prediction_change_deg": 4.501414934794108,
+          "paired_prediction_component_mse": 0.006841325977196296
+        }
+      }
+    },
+    "target_t49": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 3.560191889603933,
+          "rotation_deg": 13.041827519734701,
+          "pose_component_mse": 0.02745294322570165,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 4.246675868829091,
+          "rotation_deg": 13.030033429463705,
+          "pose_component_mse": 0.03466563671827316,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 4.1808608174324045,
+          "rotation_deg": 15.08552328745524,
+          "pose_component_mse": 0.03713471442461014,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 3.2929824789365134,
+          "rotation_deg": 16.43968677520752,
+          "pose_component_mse": 0.025008618210752804,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 3.710816403230032,
+          "rotation_deg": 14.240043640136719,
+          "pose_component_mse": 0.028541974102457363,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.3696235815684,
+          "rotation_deg": 6.413850625356038,
+          "pose_component_mse": 0.011913778260350227,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 4.013570348421733,
+          "rotation_deg": 12.048636436462402,
+          "pose_component_mse": 0.03373106134434541,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 4.955538511276245,
+          "rotation_deg": 10.765538215637207,
+          "pose_component_mse": 0.04558534547686577,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 3.7117542823155723,
+          "rotation_deg": 25.581757227579754,
+          "pose_component_mse": 0.038025780270497,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 3.581406076749166,
+          "rotation_deg": 9.834644317626953,
+          "pose_component_mse": 0.026999811952312786,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 4.362184206644694,
+          "rotation_deg": 9.123154004414877,
+          "pose_component_mse": 0.035484987000624336,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.515444060166677,
+          "rotation_deg": 7.627520561218262,
+          "pose_component_mse": 0.0122178690508008,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 3.70050976673762,
+          "rotation_deg": 13.38217544555664,
+          "pose_component_mse": 0.02960476589699586,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.9225369244813919,
+          "paired_prediction_change_deg": 3.043097416559855,
+          "paired_prediction_component_mse": 0.0042077365797013044
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 4.241574307282765,
+          "rotation_deg": 13.03471310933431,
+          "pose_component_mse": 0.034578642497460045,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.033392064894239105,
+          "paired_prediction_change_deg": 0.07543071111043294,
+          "paired_prediction_component_mse": 3.176680744824504e-06
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 4.394738972187042,
+          "rotation_deg": 15.394135157267252,
+          "pose_component_mse": 0.039197963972886406,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.076224943002065,
+          "paired_prediction_change_deg": 5.950375398000081,
+          "paired_prediction_component_mse": 0.002830127409348885
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 3.4337592124938965,
+          "rotation_deg": 18.220423380533855,
+          "pose_component_mse": 0.027855657661954563,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.8658930907646815,
+          "paired_prediction_change_deg": 3.651898145675659,
+          "paired_prediction_component_mse": 0.0028344678382078805
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 3.8305882612864175,
+          "rotation_deg": 13.376742998758951,
+          "pose_component_mse": 0.029940611993273098,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.826470047235489,
+          "paired_prediction_change_deg": 4.422844966252645,
+          "paired_prediction_component_mse": 0.0072043474453190965
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.6018887758255005,
+          "rotation_deg": 6.884863058725993,
+          "pose_component_mse": 0.016450959878663223,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.8107043554385504,
+          "paired_prediction_change_deg": 1.1149375836054485,
+          "paired_prediction_component_mse": 0.008166562455395857
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 4.198152224222819,
+          "rotation_deg": 13.372183799743652,
+          "pose_component_mse": 0.03750461464126905,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.9177799026171366,
+          "paired_prediction_change_deg": 3.6387722492218018,
+          "paired_prediction_component_mse": 0.0030100214450309672
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 4.968140721321106,
+          "rotation_deg": 10.80726146697998,
+          "pose_component_mse": 0.04583341752489408,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.05342456822594007,
+          "paired_prediction_change_deg": 0.15960222482681274,
+          "paired_prediction_component_mse": 9.13762157021362e-06
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 4.212436179320018,
+          "rotation_deg": 32.81024169921875,
+          "pose_component_mse": 0.04942491029699644,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.7482685546080272,
+          "paired_prediction_change_deg": 12.826377550760904,
+          "paired_prediction_component_mse": 0.0071415474327902
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 3.6305307348569236,
+          "rotation_deg": 10.878684361775717,
+          "pose_component_mse": 0.028225064277648926,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.0983636975288391,
+          "paired_prediction_change_deg": 2.5789801279703775,
+          "paired_prediction_component_mse": 0.0029381470133860907
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 4.7863660256067915,
+          "rotation_deg": 8.873187065124512,
+          "pose_component_mse": 0.042986415326595306,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.4675600330034893,
+          "paired_prediction_change_deg": 4.219029585520427,
+          "paired_prediction_component_mse": 0.0050080013461411
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.489235053459803,
+          "rotation_deg": 7.6072737375895185,
+          "pose_component_mse": 0.011986874975264072,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.09932472370564938,
+          "paired_prediction_change_deg": 0.16414050261179605,
+          "paired_prediction_component_mse": 1.7142576931898173e-05
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 5.22513747215271,
+          "rotation_deg": 15.0789155960083,
+          "pose_component_mse": 0.059012280156215034,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.566964566707611,
+          "paired_prediction_change_deg": 8.654331843058268,
+          "paired_prediction_component_mse": 0.034182414412498474
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 5.82361360390981,
+          "rotation_deg": 12.991456985473633,
+          "pose_component_mse": 0.06719319149851799,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.8574936985969543,
+          "paired_prediction_change_deg": 11.033101399739584,
+          "paired_prediction_component_mse": 0.030432424197594326
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 4.515059093634288,
+          "rotation_deg": 16.812345186869305,
+          "pose_component_mse": 0.04079635441303253,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.8200133244196575,
+          "paired_prediction_change_deg": 10.391034762064615,
+          "paired_prediction_component_mse": 0.007792460887382428
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 3.5792123277982077,
+          "rotation_deg": 17.37929344177246,
+          "pose_component_mse": 0.02957265575726827,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.3679900020360947,
+          "paired_prediction_change_deg": 3.9056206544240317,
+          "paired_prediction_component_mse": 0.0043820650316774845
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 7.967823942502339,
+          "rotation_deg": 18.988189061482746,
+          "pose_component_mse": 0.12170121570428212,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 7.03115959962209,
+          "paired_prediction_change_deg": 11.476709365844727,
+          "paired_prediction_component_mse": 0.09970433761676152
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 4.239978392918904,
+          "rotation_deg": 9.223293622334799,
+          "pose_component_mse": 0.03579798837502798,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.758166333039602,
+          "paired_prediction_change_deg": 6.465195337931315,
+          "paired_prediction_component_mse": 0.02860078712304433
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 5.425501267115275,
+          "rotation_deg": 15.285969416300455,
+          "pose_component_mse": 0.06286033987998962,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.1208190321922302,
+          "paired_prediction_change_deg": 9.507796287536621,
+          "paired_prediction_component_mse": 0.02719900074104468
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 5.649471084276835,
+          "rotation_deg": 13.550686200459799,
+          "pose_component_mse": 0.0590202659368515,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.7590213219324746,
+          "paired_prediction_change_deg": 8.784533818562826,
+          "paired_prediction_component_mse": 0.015468056624134382
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 4.309311906496684,
+          "rotation_deg": 34.825331370035805,
+          "pose_component_mse": 0.05540969098607699,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.5910330911477406,
+          "paired_prediction_change_deg": 14.885293960571289,
+          "paired_prediction_component_mse": 0.00827021695052584
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 4.39309964577357,
+          "rotation_deg": 12.479843457539877,
+          "pose_component_mse": 0.039587621887524925,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.9090625147024791,
+          "paired_prediction_change_deg": 8.198070367177328,
+          "paired_prediction_component_mse": 0.007948207668960094
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 7.428614099820456,
+          "rotation_deg": 10.4374361038208,
+          "pose_component_mse": 0.10911401609579723,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 5.760366121927897,
+          "paired_prediction_change_deg": 9.908475240071615,
+          "paired_prediction_component_mse": 0.0772803674141566
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 4.8719603816668196,
+          "rotation_deg": 8.941176096598307,
+          "pose_component_mse": 0.0435656967262427,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.71334175268809,
+          "paired_prediction_change_deg": 5.949921766916911,
+          "paired_prediction_component_mse": 0.02517613147695859
+        }
+      }
+    },
+    "target_t74": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 5.65027376015981,
+          "rotation_deg": 14.36707592010498,
+          "pose_component_mse": 0.07410800208648045,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 7.751380205154419,
+          "rotation_deg": 14.662008921305338,
+          "pose_component_mse": 0.12132140745719273,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 6.251866420110066,
+          "rotation_deg": 17.421142578125,
+          "pose_component_mse": 0.08921051770448685,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 4.9675436814626055,
+          "rotation_deg": 17.18268330891927,
+          "pose_component_mse": 0.055517675975958504,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 6.46983007589976,
+          "rotation_deg": 15.996755917867025,
+          "pose_component_mse": 0.08624017983675003,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.810748815536499,
+          "rotation_deg": 6.572788556416829,
+          "pose_component_mse": 0.018250215177734692,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 5.9564244747161865,
+          "rotation_deg": 13.578832308451334,
+          "pose_component_mse": 0.07777640968561172,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 8.11670164267222,
+          "rotation_deg": 11.063417752583822,
+          "pose_component_mse": 0.123966450492541,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 5.431851148605347,
+          "rotation_deg": 32.979942321777344,
+          "pose_component_mse": 0.07920011878013611,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 5.172973275184631,
+          "rotation_deg": 10.430425961812338,
+          "pose_component_mse": 0.056300909568866096,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 6.417468587557475,
+          "rotation_deg": 9.79055372873942,
+          "pose_component_mse": 0.08085663616657257,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.459732939799627,
+          "rotation_deg": 7.947441418965657,
+          "pose_component_mse": 0.012292828721304735,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 5.818673173586528,
+          "rotation_deg": 14.887566248575846,
+          "pose_component_mse": 0.07730324566364288,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.4889333645502727,
+          "paired_prediction_change_deg": 3.881685813268026,
+          "paired_prediction_component_mse": 0.009855308259526888
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 7.733406623204549,
+          "rotation_deg": 14.639602343241373,
+          "pose_component_mse": 0.1207876056432724,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.05509249400347471,
+          "paired_prediction_change_deg": 0.13422063489754996,
+          "paired_prediction_component_mse": 8.519962193531683e-06
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 6.410906910896301,
+          "rotation_deg": 18.470797856648762,
+          "pose_component_mse": 0.09060812244812648,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.7446865141391754,
+          "paired_prediction_change_deg": 7.177147388458252,
+          "paired_prediction_component_mse": 0.007117228116840124
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 5.3131892283757525,
+          "rotation_deg": 18.541581471761067,
+          "pose_component_mse": 0.06433027610182762,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.5186590452988942,
+          "paired_prediction_change_deg": 4.540909290313721,
+          "paired_prediction_component_mse": 0.008308080956339836
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 6.664315462112427,
+          "rotation_deg": 15.755038579305014,
+          "pose_component_mse": 0.08881884068250656,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.0975558360417685,
+          "paired_prediction_change_deg": 6.368180274963379,
+          "paired_prediction_component_mse": 0.020549871027469635
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.971546550591787,
+          "rotation_deg": 7.030810674031575,
+          "pose_component_mse": 0.02197137288749218,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.0286727299292882,
+          "paired_prediction_change_deg": 1.1879709164301555,
+          "paired_prediction_component_mse": 0.01329284394159913
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 6.404817303021749,
+          "rotation_deg": 15.199262619018555,
+          "pose_component_mse": 0.08986691882212956,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.6438527901967366,
+          "paired_prediction_change_deg": 4.433637301127116,
+          "paired_prediction_component_mse": 0.008762557369967302
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 8.141106764475506,
+          "rotation_deg": 11.13472048441569,
+          "pose_component_mse": 0.12466604262590408,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.08342764650781949,
+          "paired_prediction_change_deg": 0.24335909883181253,
+          "paired_prediction_component_mse": 2.2626575325072434e-05
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 5.841635465621948,
+          "rotation_deg": 40.354958852132164,
+          "pose_component_mse": 0.09466773519913356,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.822154462337494,
+          "paired_prediction_change_deg": 14.480293273925781,
+          "paired_prediction_component_mse": 0.01630786495904128
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 5.617780983448029,
+          "rotation_deg": 11.897173563639322,
+          "pose_component_mse": 0.06599386781454086,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.2544934352238974,
+          "paired_prediction_change_deg": 3.394611199696859,
+          "paired_prediction_component_mse": 0.011436986736953259
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 7.578396201133729,
+          "rotation_deg": 10.203072230021158,
+          "pose_component_mse": 0.11173724383115768,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.527852306763331,
+          "paired_prediction_change_deg": 5.571269830067952,
+          "paired_prediction_component_mse": 0.014060265074173609
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.4326605101426444,
+          "rotation_deg": 7.949249903361003,
+          "pose_component_mse": 0.012110533813635508,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.1092033243427674,
+          "paired_prediction_change_deg": 0.13699541240930557,
+          "paired_prediction_component_mse": 1.9909452627568196e-05
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 7.542091608047485,
+          "rotation_deg": 16.054290453592937,
+          "pose_component_mse": 0.12478215992450714,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 4.467249512672424,
+          "paired_prediction_change_deg": 8.917105674743652,
+          "paired_prediction_component_mse": 0.046871524304151535
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 9.888498584429422,
+          "rotation_deg": 12.094379107157389,
+          "pose_component_mse": 0.19539810717105865,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 4.963922500610352,
+          "paired_prediction_change_deg": 9.784951368967691,
+          "paired_prediction_component_mse": 0.05433915679653486
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 6.779423554738362,
+          "rotation_deg": 20.135780970255535,
+          "pose_component_mse": 0.10463553418715794,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.2757476965586343,
+          "paired_prediction_change_deg": 12.848726590474447,
+          "paired_prediction_component_mse": 0.023050074155131977
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 5.589891076087952,
+          "rotation_deg": 18.326655705769856,
+          "pose_component_mse": 0.06855797270933787,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.133758266766866,
+          "paired_prediction_change_deg": 4.02249797185262,
+          "paired_prediction_component_mse": 0.010290596634149551
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 9.963047107060751,
+          "rotation_deg": 20.25596745808919,
+          "pose_component_mse": 0.1929054707288742,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 6.7641715208689375,
+          "paired_prediction_change_deg": 10.21135425567627,
+          "paired_prediction_component_mse": 0.0915378878513972
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 5.48959751923879,
+          "rotation_deg": 9.458673477172852,
+          "pose_component_mse": 0.06241374587019285,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 5.19864817460378,
+          "paired_prediction_change_deg": 7.717997233072917,
+          "paired_prediction_component_mse": 0.055139909187952675
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.386337518692017,
+          "rotation_deg": 17.0968443552653,
+          "pose_component_mse": 0.11345578978459041,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.920578360557556,
+          "paired_prediction_change_deg": 9.983547846476236,
+          "paired_prediction_component_mse": 0.03619752327601115
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 8.265298008918762,
+          "rotation_deg": 13.330105145772299,
+          "pose_component_mse": 0.12809046606222788,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.413227399190267,
+          "paired_prediction_change_deg": 9.198331991831461,
+          "paired_prediction_component_mse": 0.02546810917556286
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 6.021134455998738,
+          "rotation_deg": 45.293731689453125,
+          "pose_component_mse": 0.1065370539824168,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.7772233883539834,
+          "paired_prediction_change_deg": 17.312873522440594,
+          "paired_prediction_component_mse": 0.01989768010874589
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 6.484665274620056,
+          "rotation_deg": 12.820550918579102,
+          "pose_component_mse": 0.08529854814211528,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.893634537855784,
+          "paired_prediction_change_deg": 7.966228644053142,
+          "paired_prediction_component_mse": 0.017448396421968937
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 8.892684181531271,
+          "rotation_deg": 10.807047208150228,
+          "pose_component_mse": 0.15371711055437723,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 5.844220320383708,
+          "paired_prediction_change_deg": 9.875441869099935,
+          "paired_prediction_component_mse": 0.07475116848945618
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 6.327059467633565,
+          "rotation_deg": 10.130206425984701,
+          "pose_component_mse": 0.07409163812796275,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 5.399889945983887,
+          "paired_prediction_change_deg": 6.7434695561726885,
+          "paired_prediction_component_mse": 0.05228523910045624
+        }
+      }
+    },
+    "target_t99": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 8.425332109133402,
+          "rotation_deg": 14.668047269185385,
+          "pose_component_mse": 0.17364228268464407,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 12.73910919825236,
+          "rotation_deg": 14.34137217203776,
+          "pose_component_mse": 0.33218275507291156,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.431379199028015,
+          "rotation_deg": 16.66252326965332,
+          "pose_component_mse": 0.18026172121365866,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 7.1779632568359375,
+          "rotation_deg": 18.307435989379883,
+          "pose_component_mse": 0.11105250070492427,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 10.840783516565958,
+          "rotation_deg": 17.24662144978841,
+          "pose_component_mse": 0.2258289853731791,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.9374240835507712,
+          "rotation_deg": 6.78228235244751,
+          "pose_component_mse": 0.01888543056945006,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.428653438886006,
+          "rotation_deg": 14.673735936482748,
+          "pose_component_mse": 0.1213911051551501,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 9.570349057515463,
+          "rotation_deg": 11.075031916300455,
+          "pose_component_mse": 0.17139102518558502,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 7.792305946350098,
+          "rotation_deg": 39.961727142333984,
+          "pose_component_mse": 0.15024305880069733,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 6.395445068677266,
+          "rotation_deg": 10.870452245076498,
+          "pose_component_mse": 0.0831313282251358,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 8.33357016245524,
+          "rotation_deg": 9.48732058207194,
+          "pose_component_mse": 0.14216420551141104,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.334193686644236,
+          "rotation_deg": 7.8669783274332685,
+          "pose_component_mse": 0.01158834993839264,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 8.468435208002726,
+          "rotation_deg": 15.163895606994629,
+          "pose_component_mse": 0.1731994996468226,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.1988143622875214,
+          "paired_prediction_change_deg": 2.817749500274658,
+          "paired_prediction_component_mse": 0.006304476410150528
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 12.720690965652466,
+          "rotation_deg": 14.307344118754068,
+          "pose_component_mse": 0.3310568630695343,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.054423006561895214,
+          "paired_prediction_change_deg": 0.149356077114741,
+          "paired_prediction_component_mse": 9.107546702580294e-06
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.213341434796652,
+          "rotation_deg": 17.92623456319173,
+          "pose_component_mse": 0.17389671504497528,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.2327341735363007,
+          "paired_prediction_change_deg": 5.6066281000773115,
+          "paired_prediction_component_mse": 0.003537556932618221
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 7.732279102007548,
+          "rotation_deg": 18.6931578318278,
+          "pose_component_mse": 0.12681265672047934,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.4123845100402832,
+          "paired_prediction_change_deg": 3.615517775217692,
+          "paired_prediction_component_mse": 0.0059479339979588985
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 10.490790208180746,
+          "rotation_deg": 17.659228642781574,
+          "pose_component_mse": 0.20982629557450613,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.3692413171132407,
+          "paired_prediction_change_deg": 3.4198575019836426,
+          "paired_prediction_component_mse": 0.011789619301756224
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.1850757201512656,
+          "rotation_deg": 7.233516534169515,
+          "pose_component_mse": 0.02440500073134899,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.9252885232369105,
+          "paired_prediction_change_deg": 1.2973880767822266,
+          "paired_prediction_component_mse": 0.010238165501505136
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.836551070213319,
+          "rotation_deg": 15.554210980733236,
+          "pose_component_mse": 0.13440157969792685,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.2990926206111908,
+          "paired_prediction_change_deg": 2.733407974243164,
+          "paired_prediction_component_mse": 0.005308402702212334
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 9.593674540519714,
+          "rotation_deg": 11.10910669962565,
+          "pose_component_mse": 0.17208296060562134,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.07477197020004193,
+          "paired_prediction_change_deg": 0.20706861714522043,
+          "paired_prediction_component_mse": 2.0264706715048913e-05
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 7.666998108228049,
+          "rotation_deg": 42.709370930989586,
+          "pose_component_mse": 0.1565478245417277,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.837174197038015,
+          "paired_prediction_change_deg": 9.133173306783041,
+          "paired_prediction_component_mse": 0.007047976832836866
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 7.051544189453125,
+          "rotation_deg": 11.74359925587972,
+          "pose_component_mse": 0.09756765762964885,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.868147204319636,
+          "paired_prediction_change_deg": 2.110260804494222,
+          "paired_prediction_component_mse": 0.0074285354154805345
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 9.410819013913473,
+          "rotation_deg": 10.461556116739908,
+          "pose_component_mse": 0.1774255484342575,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.139428506294886,
+          "paired_prediction_change_deg": 3.1921218236287436,
+          "paired_prediction_component_mse": 0.00978556244323651
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.3147332668304443,
+          "rotation_deg": 7.8718922932942705,
+          "pose_component_mse": 0.011468069938321909,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.09711626606682937,
+          "paired_prediction_change_deg": 0.13115444034337997,
+          "paired_prediction_component_mse": 1.541249639558373e-05
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 8.862200379371643,
+          "rotation_deg": 15.802618344624838,
+          "pose_component_mse": 0.1858953982591629,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.5753275553385415,
+          "paired_prediction_change_deg": 6.231056531270345,
+          "paired_prediction_component_mse": 0.01583045752098163
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 13.348320325215658,
+          "rotation_deg": 12.754854838053385,
+          "pose_component_mse": 0.3545859158039093,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.2778030236562095,
+          "paired_prediction_change_deg": 7.513092835744222,
+          "paired_prediction_component_mse": 0.009332343625525633
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.508353034655253,
+          "rotation_deg": 19.07720120747884,
+          "pose_component_mse": 0.19370450576146445,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.4521506329377494,
+          "paired_prediction_change_deg": 8.603269894917807,
+          "paired_prediction_component_mse": 0.013011174586911997
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.121624191602072,
+          "rotation_deg": 19.030200322469074,
+          "pose_component_mse": 0.13654224574565887,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.6838734845320384,
+          "paired_prediction_change_deg": 2.141019026438395,
+          "paired_prediction_component_mse": 0.006076234082380931
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 10.508246024449667,
+          "rotation_deg": 20.128072102864582,
+          "pose_component_mse": 0.21262773871421814,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.0876338481903076,
+          "paired_prediction_change_deg": 7.157482782999675,
+          "paired_prediction_component_mse": 0.024608288581172626
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.824456532796224,
+          "rotation_deg": 8.02276579538981,
+          "pose_component_mse": 0.03201666846871376,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.3751766880353298,
+          "paired_prediction_change_deg": 5.740417003631592,
+          "paired_prediction_component_mse": 0.026124245797594387
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.980010708173116,
+          "rotation_deg": 16.68212636311849,
+          "pose_component_mse": 0.13567544023195902,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.4230081836382547,
+          "paired_prediction_change_deg": 6.679134368896484,
+          "paired_prediction_component_mse": 0.012572793910900751
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 9.552701314290365,
+          "rotation_deg": 12.432270050048828,
+          "pose_component_mse": 0.17511439820130667,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.332193603118261,
+          "paired_prediction_change_deg": 7.771721363067627,
+          "paired_prediction_component_mse": 0.009893311808506647
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 7.4343907833099365,
+          "rotation_deg": 46.34748077392578,
+          "pose_component_mse": 0.15566776196161905,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.899049033721288,
+          "paired_prediction_change_deg": 9.434995333353678,
+          "paired_prediction_component_mse": 0.008145562993983427
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 7.0823609828948975,
+          "rotation_deg": 11.440691947937012,
+          "pose_component_mse": 0.0985390270749728,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.9431454936663313,
+          "paired_prediction_change_deg": 3.7216850916544595,
+          "paired_prediction_component_mse": 0.006851641616473596
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 9.318960905075073,
+          "rotation_deg": 11.194159825642904,
+          "pose_component_mse": 0.16805643339951834,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.0835271875063577,
+          "paired_prediction_change_deg": 7.579823970794678,
+          "paired_prediction_component_mse": 0.021676264703273773
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 4.322612981001536,
+          "rotation_deg": 9.570605913798014,
+          "pose_component_mse": 0.036357540637254715,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.269436260064443,
+          "paired_prediction_change_deg": 5.9203135172526045,
+          "paired_prediction_component_mse": 0.02116270177066326
+        }
+      }
+    },
+    "pure_noise_t99": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 8.426243464152018,
+          "rotation_deg": 14.668415387471518,
+          "pose_component_mse": 0.17368022600809732,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 12.740519046783447,
+          "rotation_deg": 14.341910362243652,
+          "pose_component_mse": 0.33225663503011066,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.43220849831899,
+          "rotation_deg": 16.66272036234538,
+          "pose_component_mse": 0.180297389626503,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 7.179114619890849,
+          "rotation_deg": 18.308038075764973,
+          "pose_component_mse": 0.11108537018299103,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 10.841894944508871,
+          "rotation_deg": 17.246991475423176,
+          "pose_component_mse": 0.22587549686431885,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 2.9374799132347107,
+          "rotation_deg": 6.7824165026346845,
+          "pose_component_mse": 0.018886251375079155,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.429344455401103,
+          "rotation_deg": 14.674185117085775,
+          "pose_component_mse": 0.12141373505194981,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 9.571313460667929,
+          "rotation_deg": 11.075705846150717,
+          "pose_component_mse": 0.17142590880393982,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 7.793349623680115,
+          "rotation_deg": 39.96312713623047,
+          "pose_component_mse": 0.15027527014414468,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 6.395818988482158,
+          "rotation_deg": 10.870578447977701,
+          "pose_component_mse": 0.08314007520675659,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 8.33441992600759,
+          "rotation_deg": 9.487477938334147,
+          "pose_component_mse": 0.14219391842683157,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.3341924945513406,
+          "rotation_deg": 7.866974671681722,
+          "pose_component_mse": 0.0115881422534585,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 8.46927285194397,
+          "rotation_deg": 15.16422430674235,
+          "pose_component_mse": 0.173235093553861,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.1987067013978958,
+          "paired_prediction_change_deg": 2.8175742626190186,
+          "paired_prediction_component_mse": 0.006303397007286549
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 12.722066640853884,
+          "rotation_deg": 14.307746569315592,
+          "pose_component_mse": 0.3311285575230916,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.054407306015491486,
+          "paired_prediction_change_deg": 0.1495658109585444,
+          "paired_prediction_component_mse": 9.120798495132476e-06
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.214100201924643,
+          "rotation_deg": 17.92646853129069,
+          "pose_component_mse": 0.17393112182617188,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.2325453758239746,
+          "paired_prediction_change_deg": 5.605775674184163,
+          "paired_prediction_component_mse": 0.003536536047856013
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 7.733311454455058,
+          "rotation_deg": 18.693442662556965,
+          "pose_component_mse": 0.12684355676174164,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.412222037712733,
+          "paired_prediction_change_deg": 3.6152312755584717,
+          "paired_prediction_component_mse": 0.005947159292797248
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 10.491785208384195,
+          "rotation_deg": 17.659745534261067,
+          "pose_component_mse": 0.20986699561278024,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.3691744108994803,
+          "paired_prediction_change_deg": 3.4198784828186035,
+          "paired_prediction_component_mse": 0.011788657555977503
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.1851008534431458,
+          "rotation_deg": 7.233716646830241,
+          "pose_component_mse": 0.024405233561992645,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.9251843144496282,
+          "paired_prediction_change_deg": 1.2974196672439575,
+          "paired_prediction_component_mse": 0.010235511853049198
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.837213476498923,
+          "rotation_deg": 15.55446688334147,
+          "pose_component_mse": 0.1344247063000997,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.2990267078081768,
+          "paired_prediction_change_deg": 2.7328768571217856,
+          "paired_prediction_component_mse": 0.0053078172107537585
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 9.594683647155762,
+          "rotation_deg": 11.10953458150228,
+          "pose_component_mse": 0.17211885750293732,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.07480292425801356,
+          "paired_prediction_change_deg": 0.2064644048611323,
+          "paired_prediction_component_mse": 2.0274749052380987e-05
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 7.667875091234844,
+          "rotation_deg": 42.71052678426107,
+          "pose_component_mse": 0.15657608211040497,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.836923013130824,
+          "paired_prediction_change_deg": 9.13167413075765,
+          "paired_prediction_component_mse": 0.007046195523192485
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 7.051942547162374,
+          "rotation_deg": 11.74330965677897,
+          "pose_component_mse": 0.09757858514785767,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.8680500487486522,
+          "paired_prediction_change_deg": 2.1098825931549072,
+          "paired_prediction_component_mse": 0.007427573359260957
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 9.411592483520508,
+          "rotation_deg": 10.461727778116861,
+          "pose_component_mse": 0.17745638887087503,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.1394009391466775,
+          "paired_prediction_change_deg": 3.191951274871826,
+          "paired_prediction_component_mse": 0.009785317194958528
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.3146878679593406,
+          "rotation_deg": 7.87204376856486,
+          "pose_component_mse": 0.011467796129484972,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.09708582423627377,
+          "paired_prediction_change_deg": 0.13103042294581732,
+          "paired_prediction_component_mse": 1.540258441915891e-05
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 8.862781524658203,
+          "rotation_deg": 15.803047180175781,
+          "pose_component_mse": 0.18592014412085214,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.575057844320933,
+          "paired_prediction_change_deg": 6.231337547302246,
+          "paired_prediction_component_mse": 0.015827240732808907
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 13.349345922470093,
+          "rotation_deg": 12.756456057230631,
+          "pose_component_mse": 0.35464122891426086,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.277533014615377,
+          "paired_prediction_change_deg": 7.515756289164226,
+          "paired_prediction_component_mse": 0.009331104966501394
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.508941729863485,
+          "rotation_deg": 19.076845169067383,
+          "pose_component_mse": 0.19373596707979837,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.4518551429112754,
+          "paired_prediction_change_deg": 8.602182388305664,
+          "paired_prediction_component_mse": 0.013007793885966143
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.122756282488504,
+          "rotation_deg": 19.03106753031413,
+          "pose_component_mse": 0.13657898704210916,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.6836572190125783,
+          "paired_prediction_change_deg": 2.140662511189779,
+          "paired_prediction_component_mse": 0.00607475529735287
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 10.50822893778483,
+          "rotation_deg": 20.127546946207683,
+          "pose_component_mse": 0.2126258760690689,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.0872960885365806,
+          "paired_prediction_change_deg": 7.157115618387858,
+          "paired_prediction_component_mse": 0.02460327496131261
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.8246370355288186,
+          "rotation_deg": 8.023321310679117,
+          "pose_component_mse": 0.03201861182848612,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.374947508176168,
+          "paired_prediction_change_deg": 5.740972836812337,
+          "paired_prediction_component_mse": 0.026119276881217957
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 7.980477809906006,
+          "rotation_deg": 16.682498931884766,
+          "pose_component_mse": 0.13568970064322153,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.4228911101818085,
+          "paired_prediction_change_deg": 6.678606828053792,
+          "paired_prediction_component_mse": 0.012571465534468492
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 9.553366104761759,
+          "rotation_deg": 12.432911237080893,
+          "pose_component_mse": 0.17513970534006754,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 2.33210821946462,
+          "paired_prediction_change_deg": 7.771635850270589,
+          "paired_prediction_component_mse": 0.00989277350405852
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 7.435236970583598,
+          "rotation_deg": 46.34771474202474,
+          "pose_component_mse": 0.1556916137536367,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.8988849222660065,
+          "paired_prediction_change_deg": 9.433461825052897,
+          "paired_prediction_component_mse": 0.008144086847702662
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 7.082993785540263,
+          "rotation_deg": 11.441283543904623,
+          "pose_component_mse": 0.09855640431245168,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.9430855413277948,
+          "paired_prediction_change_deg": 3.7209654649098716,
+          "paired_prediction_component_mse": 0.006851069318751494
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 9.318934281667074,
+          "rotation_deg": 11.194034258524576,
+          "pose_component_mse": 0.1680546204249064,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.0833222468694053,
+          "paired_prediction_change_deg": 7.579415162404378,
+          "paired_prediction_component_mse": 0.021673516059915226
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 4.322674075762431,
+          "rotation_deg": 9.571027119954428,
+          "pose_component_mse": 0.03635737175742785,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.2693534096082053,
+          "paired_prediction_change_deg": 5.920446713765462,
+          "paired_prediction_component_mse": 0.021160736059149105
+        }
+      }
+    },
+    "native_sample": {
+      "correct": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 10.508585770924887,
+          "rotation_deg": 16.93516667683919,
+          "pose_component_mse": 0.28105178972085315,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 13.981821537017822,
+          "rotation_deg": 15.674051920572916,
+          "pose_component_mse": 0.4117821455001831,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 13.258662621180216,
+          "rotation_deg": 21.754933039347332,
+          "pose_component_mse": 0.391985962788264,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 8.773713310559591,
+          "rotation_deg": 19.81002362569173,
+          "pose_component_mse": 0.18374478071928024,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 13.12386711438497,
+          "rotation_deg": 19.949647903442383,
+          "pose_component_mse": 0.39043383797009784,
+          "quaternion_degenerate_count": 0.0
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.4048659602801004,
+          "rotation_deg": 7.487171808878581,
+          "pose_component_mse": 0.02731221541762352,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 10.174638032913208,
+          "rotation_deg": 17.263683319091797,
+          "pose_component_mse": 0.22990512351195017,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 12.499344746271769,
+          "rotation_deg": 12.58421802520752,
+          "pose_component_mse": 0.2914014756679535,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 12.675313949584961,
+          "rotation_deg": 46.346885681152344,
+          "pose_component_mse": 0.3841555714607239,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 8.672428131103516,
+          "rotation_deg": 12.137346267700195,
+          "pose_component_mse": 0.15768633782863617,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 11.046776374181112,
+          "rotation_deg": 13.614775021870932,
+          "pose_component_mse": 0.24231157203515372,
+          "quaternion_degenerate_count": 0.0
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.780624727408091,
+          "rotation_deg": 7.6450276374816895,
+          "pose_component_mse": 0.015475738793611526,
+          "quaternion_degenerate_count": 0.0
+        }
+      },
+      "image_swap_same_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 10.892085234324137,
+          "rotation_deg": 17.737829844156902,
+          "pose_component_mse": 0.28687381744384766,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.2638517022132874,
+          "paired_prediction_change_deg": 6.1227521896362305,
+          "paired_prediction_component_mse": 0.04172161594033241
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 13.939775625864664,
+          "rotation_deg": 15.60766855875651,
+          "pose_component_mse": 0.4095084269841512,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.16814656555652618,
+          "paired_prediction_change_deg": 0.19418283800284067,
+          "paired_prediction_component_mse": 8.796359058275509e-05
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 13.251917759577433,
+          "rotation_deg": 20.89556948343913,
+          "pose_component_mse": 0.38178903857866925,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 5.027064681053162,
+          "paired_prediction_change_deg": 10.540444374084473,
+          "paired_prediction_component_mse": 0.06171990931034088
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 10.036405324935913,
+          "rotation_deg": 23.136097590128582,
+          "pose_component_mse": 0.21917868157227835,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.408919076124827,
+          "paired_prediction_change_deg": 7.437905470530192,
+          "paired_prediction_component_mse": 0.03960563614964485
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 13.518759409586588,
+          "rotation_deg": 21.181358337402344,
+          "pose_component_mse": 0.3935004274050395,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 6.618422667185466,
+          "paired_prediction_change_deg": 10.93859608968099,
+          "paired_prediction_component_mse": 0.09359111885229747
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 3.7135690450668335,
+          "rotation_deg": 7.868456840515137,
+          "pose_component_mse": 0.030392466112971306,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 1.0967064400513966,
+          "paired_prediction_change_deg": 1.5026311874389648,
+          "paired_prediction_component_mse": 0.013603448867797852
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 10.964332421620687,
+          "rotation_deg": 19.085687001546223,
+          "pose_component_mse": 0.2630507747332255,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 3.593145410219828,
+          "paired_prediction_change_deg": 6.401477336883545,
+          "paired_prediction_component_mse": 0.04545087367296219
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 12.580988804499308,
+          "rotation_deg": 12.689162890116373,
+          "pose_component_mse": 0.2950352132320404,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.26963795224825543,
+          "paired_prediction_change_deg": 0.29528364539146423,
+          "paired_prediction_component_mse": 0.0003204299573553726
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 12.69151508808136,
+          "rotation_deg": 48.78593953450521,
+          "pose_component_mse": 0.3754776269197464,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 7.200697461764018,
+          "paired_prediction_change_deg": 14.308290799458822,
+          "paired_prediction_component_mse": 0.10914943863948186
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 9.79337453842163,
+          "rotation_deg": 15.743532498677572,
+          "pose_component_mse": 0.20532428721586862,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 4.339301586151123,
+          "paired_prediction_change_deg": 6.85465653737386,
+          "paired_prediction_component_mse": 0.046822564055522285
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 13.088076512018842,
+          "rotation_deg": 15.574414253234863,
+          "pose_component_mse": 0.33319849769274396,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 5.510760545730591,
+          "paired_prediction_change_deg": 10.075982411702475,
+          "paired_prediction_component_mse": 0.07164201140403748
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 2.7736269434293113,
+          "rotation_deg": 7.617904822031657,
+          "pose_component_mse": 0.01536484838773807,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 0.12402408135433991,
+          "paired_prediction_change_deg": 0.2928627133369446,
+          "paired_prediction_component_mse": 2.690310611797031e-05
+        }
+      },
+      "language_swap_other_task": {
+        "train/overall": {
+          "windows": 40.0,
+          "position_cm": 11.947415272394815,
+          "rotation_deg": 18.49511973063151,
+          "pose_component_mse": 0.29663148522377014,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 8.173848986625671,
+          "paired_prediction_change_deg": 12.476153691609701,
+          "paired_prediction_component_mse": 0.15248790880044302
+        },
+        "train/task/close microwave": {
+          "windows": 8.0,
+          "position_cm": 12.97483483950297,
+          "rotation_deg": 17.774818420410156,
+          "pose_component_mse": 0.3604211211204529,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 7.2187473376592,
+          "paired_prediction_change_deg": 14.436583518981934,
+          "paired_prediction_component_mse": 0.11835593730211258
+        },
+        "train/task/close the drawer": {
+          "windows": 8.0,
+          "position_cm": 12.624874909718832,
+          "rotation_deg": 23.319992701212566,
+          "pose_component_mse": 0.34191768368085224,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 7.19800094763438,
+          "paired_prediction_change_deg": 17.431688626607258,
+          "paired_prediction_component_mse": 0.11381925890843074
+        },
+        "train/task/open the drawer": {
+          "windows": 8.0,
+          "position_cm": 10.819769501686096,
+          "rotation_deg": 19.294310251871746,
+          "pose_component_mse": 0.250898410876592,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 4.6572160720825195,
+          "paired_prediction_change_deg": 6.773189703623454,
+          "paired_prediction_component_mse": 0.051159744461377464
+        },
+        "train/task/take broccoli out of pan": {
+          "windows": 8.0,
+          "position_cm": 11.090675195058187,
+          "rotation_deg": 19.733957290649414,
+          "pose_component_mse": 0.23027953505516052,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 9.856273531913757,
+          "paired_prediction_change_deg": 11.855756123860678,
+          "paired_prediction_component_mse": 0.2053124358256658
+        },
+        "train/task/turn lever vertical to front": {
+          "windows": 8.0,
+          "position_cm": 12.226922114690145,
+          "rotation_deg": 12.352516492207846,
+          "pose_component_mse": 0.29964059094587964,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 11.939008235931396,
+          "paired_prediction_change_deg": 11.88354778289795,
+          "paired_prediction_component_mse": 0.27379212776819867
+        },
+        "validation/overall": {
+          "windows": 40.0,
+          "position_cm": 11.583066781361898,
+          "rotation_deg": 21.912512461344402,
+          "pose_component_mse": 0.2729673484961192,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 7.906281550725301,
+          "paired_prediction_change_deg": 13.237139701843262,
+          "paired_prediction_component_mse": 0.13818016151587167
+        },
+        "validation/task/close microwave": {
+          "windows": 10.0,
+          "position_cm": 11.225161155064901,
+          "rotation_deg": 19.550257682800293,
+          "pose_component_mse": 0.2480915238459905,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 7.069755395253499,
+          "paired_prediction_change_deg": 17.06790542602539,
+          "paired_prediction_component_mse": 0.1120876669883728
+        },
+        "validation/task/close the drawer": {
+          "windows": 6.0,
+          "position_cm": 12.800718943277994,
+          "rotation_deg": 55.62642161051432,
+          "pose_component_mse": 0.38343384861946106,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 6.486303806304932,
+          "paired_prediction_change_deg": 12.347829500834147,
+          "paired_prediction_component_mse": 0.10209514573216438
+        },
+        "validation/task/open the drawer": {
+          "windows": 11.0,
+          "position_cm": 12.360405524571737,
+          "rotation_deg": 16.544933319091797,
+          "pose_component_mse": 0.3020590841770172,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 6.49887482325236,
+          "paired_prediction_change_deg": 10.676263173421225,
+          "paired_prediction_component_mse": 0.09100127965211868
+        },
+        "validation/task/take broccoli out of pan": {
+          "windows": 9.0,
+          "position_cm": 9.769869446754456,
+          "rotation_deg": 11.78763198852539,
+          "pose_component_mse": 0.18554984033107758,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 9.764535625775656,
+          "paired_prediction_change_deg": 13.022698402404785,
+          "paired_prediction_component_mse": 0.19669094681739807
+        },
+        "validation/task/turn lever vertical to front": {
+          "windows": 4.0,
+          "position_cm": 12.59336749712626,
+          "rotation_deg": 14.789100329081217,
+          "pose_component_mse": 0.28614431619644165,
+          "quaternion_degenerate_count": 0.0,
+          "paired_prediction_change_cm": 11.816858053207397,
+          "paired_prediction_change_deg": 12.51909605662028,
+          "paired_prediction_component_mse": 0.2556314915418625
+        }
+      }
+    }
+  },
+  "task_comparison": {
+    "train/task/close microwave": {
+      "static": {
+        "windows": 8,
+        "position_cm": 11.350897550582886,
+        "rotation_deg": 12.493779182434082,
+        "pose_component_mse": 0.26671406626701355,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 8.0,
+        "position_cm": 12.740519046783447,
+        "rotation_deg": 14.341910362243652,
+        "pose_component_mse": 0.33225663503011066,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 8.0,
+        "position_cm": 13.981821537017822,
+        "rotation_deg": 15.674051920572916,
+        "pose_component_mse": 0.4117821455001831,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "train/task/close the drawer": {
+      "static": {
+        "windows": 8,
+        "position_cm": 9.5116126537323,
+        "rotation_deg": 17.268386840820312,
+        "pose_component_mse": 0.23208698630332947,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 8.0,
+        "position_cm": 8.43220849831899,
+        "rotation_deg": 16.66272036234538,
+        "pose_component_mse": 0.180297389626503,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 8.0,
+        "position_cm": 13.258662621180216,
+        "rotation_deg": 21.754933039347332,
+        "pose_component_mse": 0.391985962788264,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "train/task/open the drawer": {
+      "static": {
+        "windows": 8,
+        "position_cm": 9.924081563949585,
+        "rotation_deg": 20.750370025634766,
+        "pose_component_mse": 0.19498611986637115,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 8.0,
+        "position_cm": 7.179114619890849,
+        "rotation_deg": 18.308038075764973,
+        "pose_component_mse": 0.11108537018299103,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 8.0,
+        "position_cm": 8.773713310559591,
+        "rotation_deg": 19.81002362569173,
+        "pose_component_mse": 0.18374478071928024,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "train/task/take broccoli out of pan": {
+      "static": {
+        "windows": 8,
+        "position_cm": 10.139278173446655,
+        "rotation_deg": 17.271244049072266,
+        "pose_component_mse": 0.20081424713134766,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 8.0,
+        "position_cm": 10.841894944508871,
+        "rotation_deg": 17.246991475423176,
+        "pose_component_mse": 0.22587549686431885,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 8.0,
+        "position_cm": 13.12386711438497,
+        "rotation_deg": 19.949647903442383,
+        "pose_component_mse": 0.39043383797009784,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "train/task/turn lever vertical to front": {
+      "static": {
+        "windows": 8,
+        "position_cm": 4.331417977809907,
+        "rotation_deg": 11.083667755126953,
+        "pose_component_mse": 0.036565475165843964,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 8.0,
+        "position_cm": 2.9374799132347107,
+        "rotation_deg": 6.7824165026346845,
+        "pose_component_mse": 0.018886251375079155,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 8.0,
+        "position_cm": 3.4048659602801004,
+        "rotation_deg": 7.487171808878581,
+        "pose_component_mse": 0.02731221541762352,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "validation/task/close microwave": {
+      "static": {
+        "windows": 10,
+        "position_cm": 9.132288098335268,
+        "rotation_deg": 11.021167755126953,
+        "pose_component_mse": 0.1584508717060089,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 10.0,
+        "position_cm": 9.571313460667929,
+        "rotation_deg": 11.075705846150717,
+        "pose_component_mse": 0.17142590880393982,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 10.0,
+        "position_cm": 12.499344746271769,
+        "rotation_deg": 12.58421802520752,
+        "pose_component_mse": 0.2914014756679535,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "validation/task/close the drawer": {
+      "static": {
+        "windows": 6,
+        "position_cm": 9.757025837898254,
+        "rotation_deg": 41.403709411621094,
+        "pose_component_mse": 0.20975486934185028,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 6.0,
+        "position_cm": 7.793349623680115,
+        "rotation_deg": 39.96312713623047,
+        "pose_component_mse": 0.15027527014414468,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 6.0,
+        "position_cm": 12.675313949584961,
+        "rotation_deg": 46.346885681152344,
+        "pose_component_mse": 0.3841555714607239,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "validation/task/open the drawer": {
+      "static": {
+        "windows": 11,
+        "position_cm": 7.482841610908508,
+        "rotation_deg": 11.411458015441895,
+        "pose_component_mse": 0.10880989581346512,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 11.0,
+        "position_cm": 6.395818988482158,
+        "rotation_deg": 10.870578447977701,
+        "pose_component_mse": 0.08314007520675659,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 11.0,
+        "position_cm": 8.672428131103516,
+        "rotation_deg": 12.137346267700195,
+        "pose_component_mse": 0.15768633782863617,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "validation/task/take broccoli out of pan": {
+      "static": {
+        "windows": 9,
+        "position_cm": 9.201328754425049,
+        "rotation_deg": 8.586380004882812,
+        "pose_component_mse": 0.16598936915397644,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 9.0,
+        "position_cm": 8.33441992600759,
+        "rotation_deg": 9.487477938334147,
+        "pose_component_mse": 0.14219391842683157,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 9.0,
+        "position_cm": 11.046776374181112,
+        "rotation_deg": 13.614775021870932,
+        "pose_component_mse": 0.24231157203515372,
+        "quaternion_degenerate_count": 0.0
+      }
+    },
+    "validation/task/turn lever vertical to front": {
+      "static": {
+        "windows": 4,
+        "position_cm": 3.376197516918183,
+        "rotation_deg": 10.624619483947754,
+        "pose_component_mse": 0.020245809108018875,
+        "quaternion_degenerate_count": 0
+      },
+      "pure_noise_one_step": {
+        "windows": 4.0,
+        "position_cm": 2.3341924945513406,
+        "rotation_deg": 7.866974671681722,
+        "pose_component_mse": 0.0115881422534585,
+        "quaternion_degenerate_count": 0.0
+      },
+      "native_sample": {
+        "windows": 4.0,
+        "position_cm": 2.780624727408091,
+        "rotation_deg": 7.6450276374816895,
+        "pose_component_mse": 0.015475738793611526,
+        "quaternion_degenerate_count": 0.0
+      }
+    }
+  },
+  "limits": [
+    "Training subset 40 windows is not full-training evaluation.",
+    "Corrupted conditioning is diagnostic, not a valid robotic-task benchmark.",
+    "One-step noised-target reconstruction has access to target information.",
+    "Native generation has final clipping/quaternion normalization; one-step position is raw.",
+    "Sensitivity does not identify a unique module bug or prove correct semantic grounding.",
+    "Lower conditional point-estimate error than a stochastic sample does not establish a sampling implementation bug."
+  ]
+}

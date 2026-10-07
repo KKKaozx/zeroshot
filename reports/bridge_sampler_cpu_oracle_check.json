@@ -1,0 +1,20 @@
+{
+  "stage": "CPU production sampler algebra and oracle check",
+  "checkpoint_loaded": false,
+  "clip_loaded": false,
+  "trained": false,
+  "production_sampler": "RobotAdapterModel.sample from exported bridge_expansion_training_v1",
+  "schedule": "squaredcos_cap_v2, 100 steps, float32",
+  "oracle_clean_pose_recovery_max_abs_errors": [
+    5.960464477539063e-08,
+    5.960464477539063e-08,
+    5.960464477539063e-08
+  ],
+  "posterior_mean_identity_max_abs_error": 1.6570091247558594e-05,
+  "passed": true,
+  "limits": [
+    "Synthetic denoiser supplies exact x0 at every step; does not test learned predictions on generated intermediate states",
+    "CPU float32 only; does not establish every GPU numerical path or calibration",
+    "Does not prove stochastic sampler is the best point predictor"
+  ]
+}

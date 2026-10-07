@@ -21,8 +21,8 @@ def sha256(path):
     return digest.hexdigest()
 
 
-def select_windows(dataset, splits, selection, per_task):
-    """First window of first distinct train episodes, never selected by error."""
+def select_windows(dataset, splits, selection, per_task, all_train=False):
+    """Select a source-order diagnostic subset or every fixed split window."""
     lookup = {(r['shard'], r['record_index']): r for r in selection}
     counts, seen, rows = defaultdict(int), set(), []
     for part in ('train', 'validation'):
@@ -32,14 +32,16 @@ def select_windows(dataset, splits, selection, per_task):
             sample = dataset.samples[index]
             key = Path(sample['file_path']).name, sample['record_index']
             task = lookup[key]['instruction']
-            if part == 'train':
+            if part == 'train' and not all_train:
                 if key in seen or counts[task] >= per_task:
                     continue
                 seen.add(key)
                 counts[task] += 1
             rows.append(dict(dataset_index=index, partition=part, task=task,
                 shard=key[0], record_index=key[1], start_index=sample['start_index']))
-    if len(counts) != 5 or any(v != per_task for v in counts.values()):
+    if all_train:
+        assert {r['dataset_index'] for r in rows} == set(splits['train']) | set(splits['validation'])
+    elif len(counts) != 5 or any(v != per_task for v in counts.values()):
         raise ValueError('Training subset does not cover five tasks at requested count')
     return rows
 
@@ -83,7 +85,8 @@ def run_chain_probe(model, contexts, items, target, groups, report, reference_pa
     import torch
     from train import collate_batch, set_seed
     reference = json.loads(reference_path.read_text())
-    for key in ('checkpoint_sha256','module_sha256','window_selection','sampling_seeds'):
+    full = report.get('all_train_windows',False)
+    for key in ('checkpoint_sha256','module_sha256','sampling_seeds') + (() if full else ('window_selection',)):
         assert report[key] == reference[key], f'Prior probe mismatch: {key}'
     steps = (99,89,74,49,24,9,0)
     variance = model.posterior_variance.clone()
@@ -93,7 +96,7 @@ def run_chain_probe(model, contexts, items, target, groups, report, reference_pa
         trace_semantics='Raw predicted x0 before each reverse update; target used for scoring only',
         clip_denoised=model.clip_denoised, max_normalized_position=model.max_normalized_position,
         chains={}, prior_native_replay_metric_differences={})
-    report['limits'] = ['40 fixed training windows, not full training evaluation.',
+    report['limits'] = ['Full fixed training/development pool; reserved test unused.' if full else '40 fixed training windows, not full training evaluation.',
         'Same initial noise and same production mean update; no training or hyperparameter selection.',
         'Suppressing posterior step noise changes the sampling distribution, not only numerical precision.',
         'Better target error does not imply better robot-task performance.',
@@ -112,6 +115,8 @@ def run_chain_probe(model, contexts, items, target, groups, report, reference_pa
                     _,_,current,_,_ = collate_batch(items[start:start+2])
                     set_seed(seed*10000+start)
                     output,trace = sample_with_trace(model,context,current.cuda(),steps)
+                    if full and (start+len(output)) % 200 == 0:
+                        print('CHAIN_PROGRESS',variant,'seed',seed,'windows',start+len(output),'/',len(items),flush=True)
                     assert torch.isfinite(output).all()
                     prediction[start:start+len(output)] = output.cpu().numpy()
                     for t,(noisy,clean) in trace.items():
@@ -138,7 +143,10 @@ def run_chain_probe(model, contexts, items, target, groups, report, reference_pa
                 predicted_x0_trace={str(t):dict(v) for t,v in trace_results.items()})
             print('CHAIN',variant,'train',final_results['train/overall'],
                 'development',final_results['validation/overall'],flush=True)
-        for group in ('train/overall','validation/overall'):
+        if full:
+            report['one_step_pure_noise'] = report['chains']['native_stochastic']['predicted_x0_trace']['99']
+            report['prior_replay_not_directly_comparable'] = 'Population/order and batch seeds changed; compare the three current paired outputs instead.'
+        for group in (() if full else ('train/overall','validation/overall')):
             old = reference['cases']['native_sample']['correct'][group]
             new = report['chains']['native_stochastic']['final'][group]
             report['prior_native_replay_metric_differences'][group] = [
@@ -160,6 +168,7 @@ def main():
     parser.add_argument('--prepare-only', action='store_true')
     parser.add_argument('--chain-probe', action='store_true')
     parser.add_argument('--reference-report', type=Path)
+    parser.add_argument('--all-train-windows', action='store_true')
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError('Use a new output path')
@@ -167,12 +176,15 @@ def main():
         raise ValueError('At least two training episodes per task are required')
     if args.chain_probe and args.reference_report is None:
         raise ValueError('Chain probe requires previous complete conditioning report')
+    if args.all_train_windows and not args.chain_probe:
+        raise ValueError('Full-window mode is limited to the paired chain probe')
     # Import the archived training package, rather than mutable workspace models.
     sys.path.insert(0, str(args.pack.resolve()))
     import numpy as np
     import tensorflow as tf
     tf.config.set_visible_devices([], 'GPU')
     import torch
+    torch.set_num_threads(int(os.environ.get('OMP_NUM_THREADS','4')))
     from transformers import CLIPTokenizer
     from train import bridge_plan_selection, bridge_plan_splits, collate_batch, set_seed, trainable_state_dict
     from dataset import UnifiedRobotDataset
@@ -210,7 +222,7 @@ def main():
         bridge_current_gripper='continuous', bridge_episode_selection=selected)
     splits = bridge_plan_splits(dataset)
     assert {k: len(v) for k, v in splits.items()} == json.loads(manifest.read_text())['expected_windows']
-    rows = select_windows(dataset, splits, selected, args.train_episodes_per_task)
+    rows = select_windows(dataset, splits, selected, args.train_episodes_per_task,args.all_train_windows)
     images, texts = donor_indices(rows)
     items = [dataset[r['dataset_index']] for r in rows]
     target = np.stack([item[3].numpy() for item in items])
@@ -218,7 +230,8 @@ def main():
     if args.prepare_only:
         if args.chain_probe:
             reference = json.loads(args.reference_report.read_text())
-            assert rows == reference['window_selection']
+            if not args.all_train_windows:
+                assert rows == reference['window_selection']
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(dict(stage='subset_and_control_preparation_only',
             model_loaded=False, trained=False, reserved_test_targets_read=False,
@@ -256,7 +269,8 @@ def main():
                 groups[part+'/task/'+task] = [i for i, r in enumerate(rows) if r['partition'] == part and r['task'] == task]
         report = dict(trained=False, weights_updated=False, checkpoint='latest', checkpoint_epoch=checkpoint['epoch'],
             checkpoint_sha256=sha256(args.run/'latest.pt'), reserved_test_targets_read=False,
-            training_subset_policy=f'First full window of first {args.train_episodes_per_task} source-order episodes per task; no prediction-based selection',
+            training_subset_policy='All fixed train/development windows' if args.all_train_windows else f'First full window of first {args.train_episodes_per_task} source-order episodes per task; no prediction-based selection',
+            all_train_windows=args.all_train_windows,
             module_sha256={name: sha256(args.pack/name) for name in ('models.py','adapter.py','diffusion_decoder.py','dataset.py','train.py')},
             window_selection=rows, image_donors=images, language_donors=texts, sampling_seeds=[0,1,2],
             control_input_checks=dict(image_pixel_mse_mean=float(np.mean([

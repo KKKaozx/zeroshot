@@ -8,7 +8,7 @@ from torch import nn
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'code'))
 from models import RobotAdapterModel, diffusion_betas
-from probe_bridge_conditioning import sample_with_trace
+from probe_bridge_conditioning import sample_with_trace, select_windows
 
 
 class Oracle(nn.Module):
@@ -37,6 +37,15 @@ def fixture():
 
 
 class TraceTests(unittest.TestCase):
+    def test_full_selection_retains_overlapping_windows_and_excludes_reserved(self):
+        dataset=SimpleNamespace(samples=[dict(file_path='shard',record_index=r,start_index=s)
+            for r,s in ((0,0),(0,4),(1,0),(2,0))])
+        selection=[dict(shard='shard',record_index=r,instruction='task') for r in range(3)]
+        rows=select_windows(dataset,{'train':[1,0],'validation':[2],'test':[3]},
+            selection,8,all_train=True)
+        self.assertEqual([r['dataset_index'] for r in rows],[0,1,2])
+        self.assertEqual([r['partition'] for r in rows],['train','train','validation'])
+
     def test_hook_does_not_change_output_or_rng(self):
         model,clean=fixture()
         context,current=torch.zeros(2,1024),torch.zeros(2,1)

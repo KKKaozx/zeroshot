@@ -1,5 +1,11 @@
 # Dataset selection and evaluation roles
 
+Latest actual local inventory and source-specific blockers (2026-10-07):
+[Multi-source ingestion plan (中文)](MULTISOURCE_INGESTION_PLAN.md).
+All four supervisor-requested training sources are present, including Fractal.
+Their approximately 685 GiB total requires staged exports under the cluster quota;
+presence is not proof of verified mixed-source training readiness.
+
 Teacher-requested primary subsets below are **reference full-dataset counts from
 the correspondence**, not counts downloaded, parsed or trained by this project.
 

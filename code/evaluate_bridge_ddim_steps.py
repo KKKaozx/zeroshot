@@ -39,7 +39,20 @@ def ddim_sample(torch, model, context, initial_noise, evaluations):
         timesteps = torch.full(
             (len(actions),), step, device=actions.device, dtype=torch.long
         )
-        raw_clean = model.diffusion_decoder(actions, timesteps, context)
+        model_output = model.diffusion_decoder(actions, timesteps, context)
+        alpha_bar = model.alpha_bars[step]
+        if model.diffusion_prediction_type == "epsilon":
+            predicted_noise = model_output
+            raw_clean = (
+                actions - (1 - alpha_bar).sqrt() * predicted_noise
+            ) / alpha_bar.sqrt()
+        elif model.diffusion_prediction_type == "sample":
+            raw_clean = model_output
+            predicted_noise = (
+                actions - alpha_bar.sqrt() * raw_clean
+            ) / (1 - alpha_bar).sqrt()
+        else:
+            raise ValueError("Unsupported diffusion prediction type")
         if len(schedule) == 1:
             # Exact replay of 193030: that diagnostic applied only the final
             # pose constraints, not intermediate clip_denoised processing.
@@ -50,11 +63,7 @@ def ddim_sample(torch, model, context, initial_noise, evaluations):
             actions = clean
             break
         next_step = schedule[index + 1]
-        alpha_bar = model.alpha_bars[step]
         next_alpha_bar = model.alpha_bars[next_step]
-        predicted_noise = (
-            actions - alpha_bar.sqrt() * raw_clean
-        ) / (1 - alpha_bar).sqrt()
         actions = (
             next_alpha_bar.sqrt() * clean
             + (1 - next_alpha_bar).sqrt() * predicted_noise

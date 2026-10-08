@@ -23,6 +23,24 @@ class OracleModel:
         betas = torch.linspace(0.0001, 0.02, 100)
         self.alpha_bars = torch.cumprod(1 - betas, dim=0)
         self.diffusion_decoder = OracleDecoder(clean)
+        self.diffusion_prediction_type = "sample"
+
+
+class EpsilonOracleDecoder:
+    def __init__(self, model, clean):
+        self.model = model
+        self.clean = clean
+
+    def __call__(self, noisy, timesteps, context):
+        alpha = self.model.alpha_bars[timesteps].reshape(-1, 1, 1)
+        return (noisy - alpha.sqrt() * self.clean) / (1 - alpha).sqrt()
+
+
+class EpsilonOracleModel(OracleModel):
+    def __init__(self, clean):
+        super().__init__(clean)
+        self.diffusion_prediction_type = "epsilon"
+        self.diffusion_decoder = EpsilonOracleDecoder(self, clean)
 
 
 class DdimStepsTest(unittest.TestCase):
@@ -45,6 +63,14 @@ class DdimStepsTest(unittest.TestCase):
         clean = torch.tensor([[[0.0, 0.0, 0.0, 2.0, -2.0, 0.0, 1.0]]])
         result = ddim_sample(torch, OracleModel(clean), None, torch.zeros_like(clean), 1)
         self.assertTrue(torch.equal(result, clean))
+
+    def test_epsilon_oracle_recovers_x0_for_every_schedule(self):
+        clean = torch.tensor([[[0.2, -0.3, 0.4, 0.0, 0.0, 0.0, 1.0]]])
+        model = EpsilonOracleModel(clean)
+        initial = torch.randn_like(clean)
+        for count in (1, 2, 4, 8, 16, 32, 50, 100):
+            result = ddim_sample(torch, model, None, initial, count)
+            self.assertTrue(torch.allclose(result, clean, atol=2e-5), count)
 
 
 if __name__ == "__main__":

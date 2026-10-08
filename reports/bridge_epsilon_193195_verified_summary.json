@@ -1,0 +1,522 @@
+{
+  "job_id": 193195,
+  "source_sha256": "096d0e0cd3bd124483e72a9e5e46a3bfb89ef0664b3893ea7cc1ac9fc382adf6",
+  "checks": {
+    "phase": "train",
+    "passed": true,
+    "trained": true,
+    "reserved_test_targets_read": false,
+    "updates": 18360,
+    "clip_unchanged": true,
+    "trainable_state_changed": true,
+    "peak_reserved_gib": 2.802734375,
+    "evaluation_seconds": 91.71176763693802
+  },
+  "protocol": {
+    "source_head_report_sha256": "f4732ed3a6112f0080fa6d28d4ae69327efe52be27a9626c5c42dd2ceb950b76",
+    "source_one_step_report_sha256": "b89dbe34fd37d44e962f2ab3eb2739fcc078756a63c0af9be9cd9d099e042177",
+    "source_ddim_report_sha256": "8c1f52db07b6336ca83f3225ced68bf1a66aa4811dff2b399349af17dc712095",
+    "window_reference_sha256": "b41bd1a40b95a97135392df68c4d2c1f3341d4510a6e367c69d230a3f22fca23",
+    "module_sha256": {
+      "models.py": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+      "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "diffusion_decoder.py": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+      "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+    },
+    "order_sha256": "7e1ce1359470c86332ab0c65ed6df9ec656e96eaf14c981efdb84b9413e2b62d",
+    "initial_shared_sha256": "8a94ba424e644a675a7f7418189e69c7f91240b55e896c290e2b5b49a3a21324",
+    "initial_trainable_sha256": "eac9ce15367657dd7bd02e56dbfd023e98d6b0037c7b0df865cbea536528a64c",
+    "clip_sha256": "404527ba08cabe218719acf9844c3b40a7b53a73e7973054dc4c1d572b914613",
+    "only_intended_change": "diffusion_prediction_type sample(x0) -> epsilon",
+    "epochs": 20,
+    "batch_size": 2,
+    "updates": 18360,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "lr_schedule": "cosine_per_epoch",
+    "gradient_clip_norm": 1.0,
+    "evaluation": "8-step DDIM eta=0"
+  },
+  "groups": {
+    "train/overall": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 13.689214388529459,
+        "path_rotation_deg": 23.50067965189616,
+        "endpoint_position_cm": 19.336150487263996,
+        "endpoint_rotation_deg": 31.701948801676433,
+        "endpoint_gripper_accuracy": 0.7857661583151779,
+        "grasp_exact_timing_accuracy": 0.13836477987421383,
+        "release_exact_timing_accuracy": 0.05144032921810699
+      },
+      "per_draw": [
+        {
+          "windows": 1836,
+          "action_targets": 29376,
+          "path_position_cm": 13.570466041564941,
+          "path_rotation_deg": 23.447006225585938,
+          "endpoint_position_cm": 19.112388610839844,
+          "endpoint_rotation_deg": 31.54193115234375,
+          "endpoint_gripper_accuracy": 0.7772331154684096,
+          "grasp_events": 689,
+          "grasp_exact_timing_accuracy": 0.14078374455732948,
+          "grasp_position_cm_at_true_event": 12.75693130493164,
+          "grasp_rotation_deg_at_true_event": 21.827146530151367,
+          "release_events": 324,
+          "release_exact_timing_accuracy": 0.04938271604938271,
+          "release_position_cm_at_true_event": 16.634763717651367,
+          "release_rotation_deg_at_true_event": 22.456621170043945
+        },
+        {
+          "windows": 1836,
+          "action_targets": 29376,
+          "path_position_cm": 13.774696350097656,
+          "path_rotation_deg": 23.251161575317383,
+          "endpoint_position_cm": 19.41619873046875,
+          "endpoint_rotation_deg": 31.392452239990234,
+          "endpoint_gripper_accuracy": 0.795751633986928,
+          "grasp_events": 689,
+          "grasp_exact_timing_accuracy": 0.13933236574746008,
+          "grasp_position_cm_at_true_event": 12.659847259521484,
+          "grasp_rotation_deg_at_true_event": 22.534353256225586,
+          "release_events": 324,
+          "release_exact_timing_accuracy": 0.05246913580246913,
+          "release_position_cm_at_true_event": 17.152423858642578,
+          "release_rotation_deg_at_true_event": 23.301198959350586
+        },
+        {
+          "windows": 1836,
+          "action_targets": 29376,
+          "path_position_cm": 13.722480773925781,
+          "path_rotation_deg": 23.803871154785156,
+          "endpoint_position_cm": 19.4798641204834,
+          "endpoint_rotation_deg": 32.17146301269531,
+          "endpoint_gripper_accuracy": 0.7843137254901961,
+          "grasp_events": 689,
+          "grasp_exact_timing_accuracy": 0.13497822931785197,
+          "grasp_position_cm_at_true_event": 12.633089065551758,
+          "grasp_rotation_deg_at_true_event": 22.281461715698242,
+          "release_events": 324,
+          "release_exact_timing_accuracy": 0.05246913580246913,
+          "release_position_cm_at_true_event": 17.46510887145996,
+          "release_rotation_deg_at_true_event": 23.892946243286133
+        }
+      ]
+    },
+    "validation/overall": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 13.108126958211264,
+        "path_rotation_deg": 21.54875119527181,
+        "endpoint_position_cm": 17.404939651489258,
+        "endpoint_rotation_deg": 28.754603068033855,
+        "endpoint_gripper_accuracy": 0.7333333333333334,
+        "grasp_exact_timing_accuracy": 0.03333333333333333,
+        "release_exact_timing_accuracy": 0.08333333333333333
+      },
+      "per_draw": [
+        {
+          "windows": 40,
+          "action_targets": 640,
+          "path_position_cm": 14.076922416687012,
+          "path_rotation_deg": 24.065214157104492,
+          "endpoint_position_cm": 18.72299575805664,
+          "endpoint_rotation_deg": 31.43414306640625,
+          "endpoint_gripper_accuracy": 0.775,
+          "grasp_events": 20,
+          "grasp_exact_timing_accuracy": 0.1,
+          "grasp_position_cm_at_true_event": 14.237704277038574,
+          "grasp_rotation_deg_at_true_event": 21.459924697875977,
+          "release_events": 8,
+          "release_exact_timing_accuracy": 0.125,
+          "release_position_cm_at_true_event": 14.219128608703613,
+          "release_rotation_deg_at_true_event": 22.05060386657715
+        },
+        {
+          "windows": 40,
+          "action_targets": 640,
+          "path_position_cm": 13.250271797180176,
+          "path_rotation_deg": 21.13302230834961,
+          "endpoint_position_cm": 17.728410720825195,
+          "endpoint_rotation_deg": 27.755773544311523,
+          "endpoint_gripper_accuracy": 0.675,
+          "grasp_events": 20,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 14.156591415405273,
+          "grasp_rotation_deg_at_true_event": 16.223228454589844,
+          "release_events": 8,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 14.911619186401367,
+          "release_rotation_deg_at_true_event": 24.29207992553711
+        },
+        {
+          "windows": 40,
+          "action_targets": 640,
+          "path_position_cm": 11.997186660766602,
+          "path_rotation_deg": 19.448017120361328,
+          "endpoint_position_cm": 15.763412475585938,
+          "endpoint_rotation_deg": 27.07389259338379,
+          "endpoint_gripper_accuracy": 0.75,
+          "grasp_events": 20,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 9.623556137084961,
+          "grasp_rotation_deg_at_true_event": 14.331027030944824,
+          "release_events": 8,
+          "release_exact_timing_accuracy": 0.125,
+          "release_position_cm_at_true_event": 14.439136505126953,
+          "release_rotation_deg_at_true_event": 14.267282485961914
+        }
+      ]
+    },
+    "validation/task/close microwave": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 17.189663887023926,
+        "path_rotation_deg": 18.44917170206706,
+        "endpoint_position_cm": 19.463337580362957,
+        "endpoint_rotation_deg": 19.91054344177246,
+        "endpoint_gripper_accuracy": 1.0,
+        "grasp_exact_timing_accuracy": null,
+        "release_exact_timing_accuracy": null
+      },
+      "per_draw": [
+        {
+          "windows": 10,
+          "action_targets": 160,
+          "path_position_cm": 19.753963470458984,
+          "path_rotation_deg": 21.25616455078125,
+          "endpoint_position_cm": 21.389137268066406,
+          "endpoint_rotation_deg": 20.424278259277344,
+          "endpoint_gripper_accuracy": 1.0,
+          "grasp_events": 0,
+          "grasp_exact_timing_accuracy": null,
+          "grasp_position_cm_at_true_event": null,
+          "grasp_rotation_deg_at_true_event": null,
+          "release_events": 0,
+          "release_exact_timing_accuracy": null,
+          "release_position_cm_at_true_event": null,
+          "release_rotation_deg_at_true_event": null
+        },
+        {
+          "windows": 10,
+          "action_targets": 160,
+          "path_position_cm": 14.72387409210205,
+          "path_rotation_deg": 15.941879272460938,
+          "endpoint_position_cm": 17.420244216918945,
+          "endpoint_rotation_deg": 17.63448715209961,
+          "endpoint_gripper_accuracy": 1.0,
+          "grasp_events": 0,
+          "grasp_exact_timing_accuracy": null,
+          "grasp_position_cm_at_true_event": null,
+          "grasp_rotation_deg_at_true_event": null,
+          "release_events": 0,
+          "release_exact_timing_accuracy": null,
+          "release_position_cm_at_true_event": null,
+          "release_rotation_deg_at_true_event": null
+        },
+        {
+          "windows": 10,
+          "action_targets": 160,
+          "path_position_cm": 17.091154098510742,
+          "path_rotation_deg": 18.149471282958984,
+          "endpoint_position_cm": 19.580631256103516,
+          "endpoint_rotation_deg": 21.67286491394043,
+          "endpoint_gripper_accuracy": 1.0,
+          "grasp_events": 0,
+          "grasp_exact_timing_accuracy": null,
+          "grasp_position_cm_at_true_event": null,
+          "grasp_rotation_deg_at_true_event": null,
+          "release_events": 0,
+          "release_exact_timing_accuracy": null,
+          "release_position_cm_at_true_event": null,
+          "release_rotation_deg_at_true_event": null
+        }
+      ]
+    },
+    "validation/task/close the drawer": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 13.32673454284668,
+        "path_rotation_deg": 42.76778793334961,
+        "endpoint_position_cm": 19.846944173177082,
+        "endpoint_rotation_deg": 60.23433176676432,
+        "endpoint_gripper_accuracy": 0.9444444444444444,
+        "grasp_exact_timing_accuracy": 0.0,
+        "release_exact_timing_accuracy": 0.0
+      },
+      "per_draw": [
+        {
+          "windows": 6,
+          "action_targets": 96,
+          "path_position_cm": 11.162821769714355,
+          "path_rotation_deg": 38.538143157958984,
+          "endpoint_position_cm": 17.5329647064209,
+          "endpoint_rotation_deg": 59.85546875,
+          "endpoint_gripper_accuracy": 1.0,
+          "grasp_events": 2,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 6.582053184509277,
+          "grasp_rotation_deg_at_true_event": 21.89333152770996,
+          "release_events": 2,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 12.373493194580078,
+          "release_rotation_deg_at_true_event": 22.383758544921875
+        },
+        {
+          "windows": 6,
+          "action_targets": 96,
+          "path_position_cm": 12.804472923278809,
+          "path_rotation_deg": 46.3859748840332,
+          "endpoint_position_cm": 19.07567024230957,
+          "endpoint_rotation_deg": 59.19417953491211,
+          "endpoint_gripper_accuracy": 1.0,
+          "grasp_events": 2,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 7.666506767272949,
+          "grasp_rotation_deg_at_true_event": 9.29158878326416,
+          "release_events": 2,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 13.026071548461914,
+          "release_rotation_deg_at_true_event": 37.23735046386719
+        },
+        {
+          "windows": 6,
+          "action_targets": 96,
+          "path_position_cm": 16.012908935546875,
+          "path_rotation_deg": 43.37924575805664,
+          "endpoint_position_cm": 22.93219757080078,
+          "endpoint_rotation_deg": 61.65334701538086,
+          "endpoint_gripper_accuracy": 0.8333333333333334,
+          "grasp_events": 2,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 10.18221664428711,
+          "grasp_rotation_deg_at_true_event": 10.407069206237793,
+          "release_events": 2,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 13.369308471679688,
+          "release_rotation_deg_at_true_event": 10.372468948364258
+        }
+      ]
+    },
+    "validation/task/open the drawer": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 10.81653912862142,
+        "path_rotation_deg": 17.393490473429363,
+        "endpoint_position_cm": 16.239219029744465,
+        "endpoint_rotation_deg": 25.201822916666668,
+        "endpoint_gripper_accuracy": 0.6363636363636364,
+        "grasp_exact_timing_accuracy": 0.09523809523809523,
+        "release_exact_timing_accuracy": 0.1111111111111111
+      },
+      "per_draw": [
+        {
+          "windows": 11,
+          "action_targets": 176,
+          "path_position_cm": 11.501062393188477,
+          "path_rotation_deg": 21.806079864501953,
+          "endpoint_position_cm": 17.50505828857422,
+          "endpoint_rotation_deg": 30.840721130371094,
+          "endpoint_gripper_accuracy": 0.6363636363636364,
+          "grasp_events": 7,
+          "grasp_exact_timing_accuracy": 0.2857142857142857,
+          "grasp_position_cm_at_true_event": 14.857580184936523,
+          "grasp_rotation_deg_at_true_event": 26.027698516845703,
+          "release_events": 3,
+          "release_exact_timing_accuracy": 0.3333333333333333,
+          "release_position_cm_at_true_event": 12.197612762451172,
+          "release_rotation_deg_at_true_event": 14.484177589416504
+        },
+        {
+          "windows": 11,
+          "action_targets": 176,
+          "path_position_cm": 11.890460968017578,
+          "path_rotation_deg": 16.46173858642578,
+          "endpoint_position_cm": 17.631776809692383,
+          "endpoint_rotation_deg": 23.5989990234375,
+          "endpoint_gripper_accuracy": 0.45454545454545453,
+          "grasp_events": 7,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 14.950345039367676,
+          "grasp_rotation_deg_at_true_event": 18.182865142822266,
+          "release_events": 3,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 15.255282402038574,
+          "release_rotation_deg_at_true_event": 19.385643005371094
+        },
+        {
+          "windows": 11,
+          "action_targets": 176,
+          "path_position_cm": 9.058094024658203,
+          "path_rotation_deg": 13.912652969360352,
+          "endpoint_position_cm": 13.580821990966797,
+          "endpoint_rotation_deg": 21.165748596191406,
+          "endpoint_gripper_accuracy": 0.8181818181818182,
+          "grasp_events": 7,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 9.483596801757812,
+          "grasp_rotation_deg_at_true_event": 16.3677978515625,
+          "release_events": 3,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 13.80896282196045,
+          "release_rotation_deg_at_true_event": 11.969380378723145
+        }
+      ]
+    },
+    "validation/task/take broccoli out of pan": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 15.559143702189127,
+        "path_rotation_deg": 20.24350102742513,
+        "endpoint_position_cm": 20.669459025065105,
+        "endpoint_rotation_deg": 28.56465784708659,
+        "endpoint_gripper_accuracy": 0.4074074074074074,
+        "grasp_exact_timing_accuracy": 0.0,
+        "release_exact_timing_accuracy": 0.16666666666666666
+      },
+      "per_draw": [
+        {
+          "windows": 9,
+          "action_targets": 144,
+          "path_position_cm": 17.59694480895996,
+          "path_rotation_deg": 24.892040252685547,
+          "endpoint_position_cm": 24.12526512145996,
+          "endpoint_rotation_deg": 32.8718376159668,
+          "endpoint_gripper_accuracy": 0.5555555555555556,
+          "grasp_events": 7,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 22.3212947845459,
+          "grasp_rotation_deg_at_true_event": 22.81513786315918,
+          "release_events": 2,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 22.990949630737305,
+          "release_rotation_deg_at_true_event": 31.22864532470703
+        },
+        {
+          "windows": 9,
+          "action_targets": 144,
+          "path_position_cm": 17.89152717590332,
+          "path_rotation_deg": 20.60288429260254,
+          "endpoint_position_cm": 23.039335250854492,
+          "endpoint_rotation_deg": 29.9417724609375,
+          "endpoint_gripper_accuracy": 0.3333333333333333,
+          "grasp_events": 7,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 21.15973472595215,
+          "grasp_rotation_deg_at_true_event": 20.543764114379883,
+          "release_events": 2,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 19.69645118713379,
+          "release_rotation_deg_at_true_event": 23.450820922851562
+        },
+        {
+          "windows": 9,
+          "action_targets": 144,
+          "path_position_cm": 11.188959121704102,
+          "path_rotation_deg": 15.235578536987305,
+          "endpoint_position_cm": 14.84377670288086,
+          "endpoint_rotation_deg": 22.88036346435547,
+          "endpoint_gripper_accuracy": 0.3333333333333333,
+          "grasp_events": 7,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 13.696928024291992,
+          "grasp_rotation_deg_at_true_event": 18.103702545166016,
+          "release_events": 2,
+          "release_exact_timing_accuracy": 0.5,
+          "release_position_cm_at_true_event": 19.395538330078125,
+          "release_rotation_deg_at_true_event": 16.620512008666992
+        }
+      ]
+    },
+    "validation/task/turn lever vertical to front": {
+      "draws": 3,
+      "mean": {
+        "path_position_cm": 3.363450765609741,
+        "path_rotation_deg": 11.832928339640299,
+        "endpoint_position_cm": 4.456498940785726,
+        "endpoint_rotation_deg": 13.842689514160156,
+        "endpoint_gripper_accuracy": 0.75,
+        "grasp_exact_timing_accuracy": 0.0,
+        "release_exact_timing_accuracy": 0.0
+      },
+      "per_draw": [
+        {
+          "windows": 4,
+          "action_targets": 64,
+          "path_position_cm": 3.419032573699951,
+          "path_rotation_deg": 13.730716705322266,
+          "endpoint_position_cm": 5.036894798278809,
+          "endpoint_rotation_deg": 14.723952293395996,
+          "endpoint_gripper_accuracy": 0.75,
+          "grasp_events": 4,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 2.834465503692627,
+          "grasp_rotation_deg_at_true_event": 10.877997398376465,
+          "release_events": 1,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 6.431306838989258,
+          "release_rotation_deg_at_true_event": 25.727487564086914
+        },
+        {
+          "windows": 4,
+          "action_targets": 64,
+          "path_position_cm": 3.531623125076294,
+          "path_rotation_deg": 10.27031135559082,
+          "endpoint_position_cm": 4.794104099273682,
+          "endpoint_rotation_deg": 12.413997650146484,
+          "endpoint_gripper_accuracy": 0.75,
+          "grasp_events": 4,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 3.7570719718933105,
+          "grasp_rotation_deg_at_true_event": 8.698750495910645,
+          "release_events": 1,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 8.082060813903809,
+          "release_rotation_deg_at_true_event": 14.803356170654297
+        },
+        {
+          "windows": 4,
+          "action_targets": 64,
+          "path_position_cm": 3.1396965980529785,
+          "path_rotation_deg": 11.497756958007812,
+          "endpoint_position_cm": 3.5384979248046875,
+          "endpoint_rotation_deg": 14.390118598937988,
+          "endpoint_gripper_accuracy": 0.75,
+          "grasp_events": 4,
+          "grasp_exact_timing_accuracy": 0.0,
+          "grasp_position_cm_at_true_event": 2.460754632949829,
+          "grasp_rotation_deg_at_true_event": 6.126480579376221,
+          "release_events": 1,
+          "release_exact_timing_accuracy": 0.0,
+          "release_position_cm_at_true_event": 8.556514739990234,
+          "release_rotation_deg_at_true_event": 24.244159698486328
+        }
+      ]
+    }
+  },
+  "episode_directions": {
+    "episodes": 10,
+    "path_position_cm": {
+      "epsilon_better_than_static": 2,
+      "epsilon_better_than_x0_one_step": 0,
+      "epsilon_better_than_regression": 0
+    },
+    "path_rotation_deg": {
+      "epsilon_better_than_static": 1,
+      "epsilon_better_than_x0_one_step": 0,
+      "epsilon_better_than_regression": 0
+    },
+    "endpoint_position_cm": {
+      "epsilon_better_than_static": 2,
+      "epsilon_better_than_x0_one_step": 1,
+      "epsilon_better_than_regression": 1
+    },
+    "endpoint_rotation_deg": {
+      "epsilon_better_than_static": 2,
+      "epsilon_better_than_x0_one_step": 0,
+      "epsilon_better_than_regression": 0
+    }
+  }
+}

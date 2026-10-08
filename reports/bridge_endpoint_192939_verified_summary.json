@@ -1,0 +1,469 @@
+{
+  "job_id": 192939,
+  "slurm_state": "COMPLETED",
+  "slurm_exit_code": "0:0",
+  "elapsed": "00:00:01",
+  "source_sha256": "2bdc0921436c97f06345a21c997bd37565325b80f743731c22a27584dc9f49b8",
+  "checks_passed": true,
+  "training_report_sha256": "f4732ed3a6112f0080fa6d28d4ae69327efe52be27a9626c5c42dd2ceb950b76",
+  "window_reference_sha256": "b41bd1a40b95a97135392df68c4d2c1f3341d4510a6e367c69d230a3f22fca23",
+  "sources": {
+    "regression": {
+      "path": "/projects/Zeroshot/runs/bridge-head-train-192651/regression-predictions.npz",
+      "sha256": "91133563a7401ccb860e2d6f3222d396df58af9622419126592d50c240793832",
+      "shape": [
+        1,
+        1876,
+        16,
+        8
+      ]
+    },
+    "diffusion": {
+      "path": "/projects/Zeroshot/runs/bridge-head-train-192651/diffusion-predictions.npz",
+      "sha256": "a5532e77cb6b17a49b042c5bcd75001803da6ee70501027b4fc17a26d28e5d80",
+      "shape": [
+        3,
+        1876,
+        16,
+        8
+      ]
+    }
+  },
+  "definitions": {
+    "path": "Mean over all 16 targets (ADE-like).",
+    "endpoint": "Target index 15 relative to the input observation tool frame; not necessarily the task endpoint.",
+    "event": "Pose error at target t+1 where ground truth gripper changes within the 16-target window.",
+    "oracle": "Best of saved diffusion draws after seeing ground truth; coverage diagnostic only."
+  },
+  "overall": {
+    "train": {
+      "static": {
+        "windows": 1836,
+        "action_targets": 29376,
+        "path_position_cm": 8.226703643798828,
+        "path_rotation_deg": 14.0304594039917,
+        "endpoint_position_cm": 11.8787202835083,
+        "endpoint_rotation_deg": 20.230451583862305,
+        "endpoint_gripper_accuracy": 0.6677559912854031,
+        "grasp_events": 689,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 8.875237464904785,
+        "grasp_rotation_deg_at_true_event": 14.832161903381348,
+        "release_events": 324,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.21727466583252,
+        "release_rotation_deg_at_true_event": 14.03685474395752
+      },
+      "train_task_mean": {
+        "windows": 1836,
+        "action_targets": 29376,
+        "path_position_cm": 7.861696720123291,
+        "path_rotation_deg": 13.706543922424316,
+        "endpoint_position_cm": 11.522653579711914,
+        "endpoint_rotation_deg": 19.535743713378906,
+        "endpoint_gripper_accuracy": 0.7293028322440087,
+        "grasp_events": 689,
+        "grasp_exact_timing_accuracy": 0.07402031930333818,
+        "grasp_position_cm_at_true_event": 7.4972333908081055,
+        "grasp_rotation_deg_at_true_event": 13.607766151428223,
+        "release_events": 324,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.596653938293457,
+        "release_rotation_deg_at_true_event": 14.145214080810547
+      },
+      "regression": {
+        "windows": 1836,
+        "action_targets": 29376,
+        "path_position_cm": 3.983949661254883,
+        "path_rotation_deg": 11.113001823425293,
+        "endpoint_position_cm": 5.53199577331543,
+        "endpoint_rotation_deg": 15.799086570739746,
+        "endpoint_gripper_accuracy": 0.8752723311546841,
+        "grasp_events": 689,
+        "grasp_exact_timing_accuracy": 0.216255442670537,
+        "grasp_position_cm_at_true_event": 3.7819671630859375,
+        "grasp_rotation_deg_at_true_event": 11.607149124145508,
+        "release_events": 324,
+        "release_exact_timing_accuracy": 0.08950617283950617,
+        "release_position_cm_at_true_event": 5.1444902420043945,
+        "release_rotation_deg_at_true_event": 11.376683235168457
+      },
+      "diffusion_mean": {
+        "windows": 1836.0,
+        "action_targets": 29376.0,
+        "path_position_cm": 10.777219454447428,
+        "path_rotation_deg": 17.832767486572266,
+        "endpoint_position_cm": 15.348254521687826,
+        "endpoint_rotation_deg": 23.511818567911785,
+        "endpoint_gripper_accuracy": 0.7670660856935366,
+        "grasp_exact_timing_accuracy": 0.12723754233188195,
+        "grasp_position_cm_at_true_event": 10.124897956848145,
+        "grasp_rotation_deg_at_true_event": 16.881694157918293,
+        "release_exact_timing_accuracy": 0.016460905349794237,
+        "release_position_cm_at_true_event": 14.779080708821615,
+        "release_rotation_deg_at_true_event": 18.93173599243164
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 7.6185078620910645,
+        "path_rotation_deg": 12.201916694641113,
+        "endpoint_position_cm": 10.352713584899902,
+        "endpoint_rotation_deg": 16.22879409790039,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      }
+    },
+    "validation": {
+      "static": {
+        "windows": 40,
+        "action_targets": 640,
+        "path_position_cm": 8.212326049804688,
+        "path_rotation_deg": 15.098398208618164,
+        "endpoint_position_cm": 10.56533432006836,
+        "endpoint_rotation_deg": 19.98635482788086,
+        "endpoint_gripper_accuracy": 0.575,
+        "grasp_events": 20,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 8.961858749389648,
+        "grasp_rotation_deg_at_true_event": 11.817361831665039,
+        "release_events": 8,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.59077262878418,
+        "release_rotation_deg_at_true_event": 12.053526878356934
+      },
+      "train_task_mean": {
+        "windows": 40,
+        "action_targets": 640,
+        "path_position_cm": 7.721783638000488,
+        "path_rotation_deg": 14.591934204101562,
+        "endpoint_position_cm": 10.264566421508789,
+        "endpoint_rotation_deg": 19.297855377197266,
+        "endpoint_gripper_accuracy": 0.825,
+        "grasp_events": 20,
+        "grasp_exact_timing_accuracy": 0.1,
+        "grasp_position_cm_at_true_event": 7.546329498291016,
+        "grasp_rotation_deg_at_true_event": 10.619429588317871,
+        "release_events": 8,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.662117004394531,
+        "release_rotation_deg_at_true_event": 13.258028984069824
+      },
+      "regression": {
+        "windows": 40,
+        "action_targets": 640,
+        "path_position_cm": 6.625511169433594,
+        "path_rotation_deg": 12.107712745666504,
+        "endpoint_position_cm": 8.324223518371582,
+        "endpoint_rotation_deg": 14.66044807434082,
+        "endpoint_gripper_accuracy": 0.825,
+        "grasp_events": 20,
+        "grasp_exact_timing_accuracy": 0.15,
+        "grasp_position_cm_at_true_event": 6.905364036560059,
+        "grasp_rotation_deg_at_true_event": 10.099154472351074,
+        "release_events": 8,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 6.673437118530273,
+        "release_rotation_deg_at_true_event": 10.715875625610352
+      },
+      "diffusion_mean": {
+        "windows": 40.0,
+        "action_targets": 640.0,
+        "path_position_cm": 10.235368410746256,
+        "path_rotation_deg": 16.471942901611328,
+        "endpoint_position_cm": 13.686824162801107,
+        "endpoint_rotation_deg": 20.925437927246094,
+        "endpoint_gripper_accuracy": 0.775,
+        "grasp_exact_timing_accuracy": 0.13333333333333333,
+        "grasp_position_cm_at_true_event": 8.6285719871521,
+        "grasp_rotation_deg_at_true_event": 14.097879409790039,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.590339024861654,
+        "release_rotation_deg_at_true_event": 17.15510431925456
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 7.441082000732422,
+        "path_rotation_deg": 12.157556533813477,
+        "endpoint_position_cm": 9.361555099487305,
+        "endpoint_rotation_deg": 15.018472671508789,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      }
+    }
+  },
+  "validation_tasks": {
+    "close microwave": {
+      "windows": 10,
+      "regression": {
+        "windows": 10,
+        "action_targets": 160,
+        "path_position_cm": 8.157941818237305,
+        "path_rotation_deg": 11.01003646850586,
+        "endpoint_position_cm": 8.508157730102539,
+        "endpoint_rotation_deg": 11.320600509643555,
+        "endpoint_gripper_accuracy": 1.0,
+        "grasp_events": 0,
+        "grasp_exact_timing_accuracy": null,
+        "grasp_position_cm_at_true_event": null,
+        "grasp_rotation_deg_at_true_event": null,
+        "release_events": 0,
+        "release_exact_timing_accuracy": null,
+        "release_position_cm_at_true_event": null,
+        "release_rotation_deg_at_true_event": null
+      },
+      "diffusion_mean_endpoint": {
+        "endpoint_position_cm": 17.46504847208659,
+        "endpoint_rotation_deg": 14.957688013712565
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 12.300664901733398,
+        "path_rotation_deg": 11.849740982055664,
+        "endpoint_position_cm": 13.581385612487793,
+        "endpoint_rotation_deg": 10.665525436401367,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      },
+      "static": {
+        "windows": 10,
+        "action_targets": 160,
+        "path_position_cm": 9.132287979125977,
+        "path_rotation_deg": 11.021172523498535,
+        "endpoint_position_cm": 8.487979888916016,
+        "endpoint_rotation_deg": 12.05439567565918,
+        "endpoint_gripper_accuracy": 1.0,
+        "grasp_events": 0,
+        "grasp_exact_timing_accuracy": null,
+        "grasp_position_cm_at_true_event": null,
+        "grasp_rotation_deg_at_true_event": null,
+        "release_events": 0,
+        "release_exact_timing_accuracy": null,
+        "release_position_cm_at_true_event": null,
+        "release_rotation_deg_at_true_event": null
+      }
+    },
+    "close the drawer": {
+      "windows": 6,
+      "regression": {
+        "windows": 6,
+        "action_targets": 96,
+        "path_position_cm": 6.498197555541992,
+        "path_rotation_deg": 23.804601669311523,
+        "endpoint_position_cm": 9.855720520019531,
+        "endpoint_rotation_deg": 31.71656036376953,
+        "endpoint_gripper_accuracy": 0.6666666666666666,
+        "grasp_events": 2,
+        "grasp_exact_timing_accuracy": 0.5,
+        "grasp_position_cm_at_true_event": 3.8426637649536133,
+        "grasp_rotation_deg_at_true_event": 6.274970054626465,
+        "release_events": 2,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.526798248291016,
+        "release_rotation_deg_at_true_event": 14.764129638671875
+      },
+      "diffusion_mean_endpoint": {
+        "endpoint_position_cm": 17.54389762878418,
+        "endpoint_rotation_deg": 52.69041061401367
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 7.227766513824463,
+        "path_rotation_deg": 26.115022659301758,
+        "endpoint_position_cm": 12.133021354675293,
+        "endpoint_rotation_deg": 39.391258239746094,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      },
+      "static": {
+        "windows": 6,
+        "action_targets": 96,
+        "path_position_cm": 9.757027626037598,
+        "path_rotation_deg": 41.40371322631836,
+        "endpoint_position_cm": 15.095776557922363,
+        "endpoint_rotation_deg": 56.87118148803711,
+        "endpoint_gripper_accuracy": 1.0,
+        "grasp_events": 2,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 8.286928176879883,
+        "grasp_rotation_deg_at_true_event": 5.366113662719727,
+        "release_events": 2,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 17.810359954833984,
+        "release_rotation_deg_at_true_event": 15.334779739379883
+      }
+    },
+    "open the drawer": {
+      "windows": 11,
+      "regression": {
+        "windows": 11,
+        "action_targets": 176,
+        "path_position_cm": 5.992792129516602,
+        "path_rotation_deg": 11.56319808959961,
+        "endpoint_position_cm": 8.505775451660156,
+        "endpoint_rotation_deg": 13.817144393920898,
+        "endpoint_gripper_accuracy": 0.9090909090909091,
+        "grasp_events": 7,
+        "grasp_exact_timing_accuracy": 0.14285714285714285,
+        "grasp_position_cm_at_true_event": 8.205182075500488,
+        "grasp_rotation_deg_at_true_event": 15.105629920959473,
+        "release_events": 3,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 5.793796062469482,
+        "release_rotation_deg_at_true_event": 6.773377895355225
+      },
+      "diffusion_mean_endpoint": {
+        "endpoint_position_cm": 11.399843533833822,
+        "endpoint_rotation_deg": 15.745856920878092
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 5.322580337524414,
+        "path_rotation_deg": 9.098956108093262,
+        "endpoint_position_cm": 6.704229354858398,
+        "endpoint_rotation_deg": 10.443327903747559,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      },
+      "static": {
+        "windows": 11,
+        "action_targets": 176,
+        "path_position_cm": 7.4828410148620605,
+        "path_rotation_deg": 11.411456108093262,
+        "endpoint_position_cm": 11.172967910766602,
+        "endpoint_rotation_deg": 15.125640869140625,
+        "endpoint_gripper_accuracy": 0.2727272727272727,
+        "grasp_events": 7,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 10.623128890991211,
+        "grasp_rotation_deg_at_true_event": 16.83179473876953,
+        "release_events": 3,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 9.752399444580078,
+        "release_rotation_deg_at_true_event": 7.030107498168945
+      }
+    },
+    "take broccoli out of pan": {
+      "windows": 9,
+      "regression": {
+        "windows": 9,
+        "action_targets": 144,
+        "path_position_cm": 7.72097110748291,
+        "path_rotation_deg": 8.273454666137695,
+        "endpoint_position_cm": 9.200976371765137,
+        "endpoint_rotation_deg": 9.980557441711426,
+        "endpoint_gripper_accuracy": 0.6666666666666666,
+        "grasp_events": 7,
+        "grasp_exact_timing_accuracy": 0.14285714285714285,
+        "grasp_position_cm_at_true_event": 9.523087501525879,
+        "grasp_rotation_deg_at_true_event": 8.961567878723145,
+        "release_events": 2,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 3.899249792098999,
+        "release_rotation_deg_at_true_event": 10.198932647705078
+      },
+      "diffusion_mean_endpoint": {
+        "endpoint_position_cm": 13.99805482228597,
+        "endpoint_rotation_deg": 17.884376843770344
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 7.130950927734375,
+        "path_rotation_deg": 9.3788480758667,
+        "endpoint_position_cm": 8.834235191345215,
+        "endpoint_rotation_deg": 12.041366577148438,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      },
+      "static": {
+        "windows": 9,
+        "action_targets": 144,
+        "path_position_cm": 9.20132827758789,
+        "path_rotation_deg": 8.586381912231445,
+        "endpoint_position_cm": 12.238813400268555,
+        "endpoint_rotation_deg": 12.034960746765137,
+        "endpoint_gripper_accuracy": 0.3333333333333333,
+        "grasp_events": 7,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 9.868070602416992,
+        "grasp_rotation_deg_at_true_event": 9.406350135803223,
+        "release_events": 2,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.656204223632812,
+        "release_rotation_deg_at_true_event": 14.80010986328125
+      }
+    },
+    "turn lever vertical to front": {
+      "windows": 4,
+      "regression": {
+        "windows": 4,
+        "action_targets": 64,
+        "path_position_cm": 2.260603189468384,
+        "path_rotation_deg": 7.431067943572998,
+        "endpoint_position_cm": 3.0951719284057617,
+        "endpoint_rotation_deg": 10.274728775024414,
+        "endpoint_gripper_accuracy": 0.75,
+        "grasp_events": 4,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 1.5810164213180542,
+        "grasp_rotation_deg_at_true_event": 5.240688800811768,
+        "release_events": 1,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 5.154009819030762,
+        "release_rotation_deg_at_true_event": 15.48075008392334
+      },
+      "diffusion_mean_endpoint": {
+        "endpoint_position_cm": 4.044581572214763,
+        "endpoint_rotation_deg": 9.283589363098145
+      },
+      "diffusion_oracle_min_at_3": {
+        "draws": 3,
+        "path_position_cm": 2.135770797729492,
+        "path_rotation_deg": 6.654149532318115,
+        "endpoint_position_cm": 3.148897886276245,
+        "endpoint_rotation_deg": 8.621800422668457,
+        "selection": "Ground-truth oracle independently minimizes each scalar per window; unavailable at deployment without a selector."
+      },
+      "static": {
+        "windows": 4,
+        "action_targets": 64,
+        "path_position_cm": 3.376197338104248,
+        "path_rotation_deg": 10.624619483947754,
+        "endpoint_position_cm": 3.5267295837402344,
+        "endpoint_rotation_deg": 15.746606826782227,
+        "endpoint_gripper_accuracy": 0.25,
+        "grasp_events": 4,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 4.806228160858154,
+        "grasp_rotation_deg_at_true_event": 10.4870023727417,
+        "release_events": 1,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 4.53585147857666,
+        "release_rotation_deg_at_true_event": 15.06811237335205
+      }
+    }
+  },
+  "validation_episode_directions": {
+    "path_position_cm": {
+      "episodes": 10,
+      "regression_better_than_diffusion_mean": 8,
+      "oracle_better_than_regression": 4,
+      "regression_better_than_static": 8,
+      "oracle_better_than_static": 8
+    },
+    "path_rotation_deg": {
+      "episodes": 10,
+      "regression_better_than_diffusion_mean": 8,
+      "oracle_better_than_regression": 4,
+      "regression_better_than_static": 7,
+      "oracle_better_than_static": 6
+    },
+    "endpoint_position_cm": {
+      "episodes": 10,
+      "regression_better_than_diffusion_mean": 10,
+      "oracle_better_than_regression": 4,
+      "regression_better_than_static": 6,
+      "oracle_better_than_static": 7
+    },
+    "endpoint_rotation_deg": {
+      "episodes": 10,
+      "regression_better_than_diffusion_mean": 8,
+      "oracle_better_than_regression": 5,
+      "regression_better_than_static": 7,
+      "oracle_better_than_static": 8
+    }
+  }
+}

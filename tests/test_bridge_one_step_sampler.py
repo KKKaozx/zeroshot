@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "code"))
-from evaluate_bridge_one_step_sampler import finish_pose, decode_state_gripper
+from evaluate_bridge_one_step_sampler import finish_pose, decode_state_gripper, select_windows
 
 
 class FakeModel:
@@ -30,6 +30,21 @@ class OneStepSamplerTest(unittest.TestCase):
         pose[..., 0] = torch.tensor([[-1.0, 0.0, 2.0]])
         result = decode_state_gripper(torch, FakeModel(), None, pose, torch.zeros(1))
         self.assertEqual(result.tolist(), [[-1.0, 1.0, 1.0]])
+
+    def test_window_selection_is_source_ordered_and_complete(self):
+        class Dataset:
+            samples = [
+                {"file_path": "/x/b", "record_index": 2, "start_index": 4},
+                {"file_path": "/x/a", "record_index": 1, "start_index": 8},
+                {"file_path": "/x/a", "record_index": 1, "start_index": 0},
+            ]
+        selection = [
+            {"shard": "a", "record_index": 1, "instruction": "open"},
+            {"shard": "b", "record_index": 2, "instruction": "close"},
+        ]
+        rows = select_windows(Dataset(), {"train": [0, 2], "validation": [1]}, selection)
+        self.assertEqual([row["dataset_index"] for row in rows], [2, 0, 1])
+        self.assertEqual([row["task"] for row in rows], ["open", "close", "open"])
 
 
 if __name__ == "__main__":

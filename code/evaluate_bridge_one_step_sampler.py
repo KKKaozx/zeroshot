@@ -42,6 +42,36 @@ def decode_state_gripper(torch, model, context, pose, current):
     return torch.where(logits >= 0, torch.ones_like(logits), -torch.ones_like(logits))
 
 
+def select_windows(dataset, splits, selection):
+    """Recreate the frozen source-order population without an external probe module."""
+    lookup = {(row["shard"], row["record_index"]): row for row in selection}
+    rows = []
+    for partition in ("train", "validation"):
+        ordered = sorted(
+            splits[partition],
+            key=lambda index: (
+                Path(dataset.samples[index]["file_path"]).name,
+                dataset.samples[index]["record_index"],
+                dataset.samples[index]["start_index"],
+            ),
+        )
+        for index in ordered:
+            sample = dataset.samples[index]
+            key = Path(sample["file_path"]).name, sample["record_index"]
+            rows.append({
+                "dataset_index": index,
+                "partition": partition,
+                "task": lookup[key]["instruction"],
+                "shard": key[0],
+                "record_index": key[1],
+                "start_index": sample["start_index"],
+            })
+    expected = set(splits["train"]) | set(splits["validation"])
+    if {row["dataset_index"] for row in rows} != expected:
+        raise ValueError("Selected windows differ from the complete frozen split")
+    return rows
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--pack", type=Path, required=True)
@@ -63,7 +93,6 @@ def main():
     from models import RobotAdapterModel
     from train import (bridge_plan_selection, bridge_plan_splits, collate_batch,
                        set_seed, trainable_state_dict)
-    from probe_bridge_conditioning import select_windows
     from evaluate_bridge_endpoint_metrics import scalar_metrics, oracle_minimum
 
     torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", "4")))
@@ -87,7 +116,7 @@ def main():
         bridge_current_gripper="continuous", bridge_episode_selection=selection,
     )
     splits = bridge_plan_splits(dataset)
-    rows = select_windows(dataset, splits, selection, 8, all_train=True)
+    rows = select_windows(dataset, splits, selection)
     expected_window_sha = hashlib.sha256(
         json.dumps(rows, sort_keys=True).encode()
     ).hexdigest()

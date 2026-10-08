@@ -19,7 +19,7 @@ export USE_TF=0
 export OMP_NUM_THREADS=4
 mkdir -p "$TMPDIR"
 
-cd /projects/Zeroshot/bridge_one_step_sampler_v1
+cd /projects/Zeroshot/bridge_one_step_sampler_v2
 sha256sum -c SHA256SUMS
 (cd /projects/Zeroshot/bridge_expansion_training_v1 && sha256sum -c SHA256SUMS)
 

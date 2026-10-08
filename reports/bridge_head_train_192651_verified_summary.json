@@ -1,0 +1,367 @@
+{
+  "job_id": 192651,
+  "slurm_state": "COMPLETED",
+  "slurm_exit_code": "0:0",
+  "elapsed": "00:59:10",
+  "source_sha256": "f4732ed3a6112f0080fa6d28d4ae69327efe52be27a9626c5c42dd2ceb950b76",
+  "checks_passed": true,
+  "protocol": {
+    "module_sha256": {
+      "models.py": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+      "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "diffusion_decoder.py": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+      "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+    },
+    "manifest_sha256": "bcd80954a895580068485f7f665d58b07e179341c8c07c161ec2bc6c0caec0b2",
+    "driver_sha256": "70e57f748c691ee029c3cd7a903a19afd9faadf65cbdbc34ddc43de9d17dfa58",
+    "reference_sha256": "b41bd1a40b95a97135392df68c4d2c1f3341d4510a6e367c69d230a3f22fca23",
+    "order_sha256": "7e1ce1359470c86332ab0c65ed6df9ec656e96eaf14c981efdb84b9413e2b62d",
+    "window_sha256": "d1caa0868fe5e5aaf313ae9a0827fa534d1c8963d2ceadae4c3072f97720353d",
+    "epochs": 20,
+    "batch_size": 2,
+    "updates_per_group": 18360,
+    "init_seed": 42,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "lr_schedule": "cosine_per_epoch",
+    "selection": "fixed_final_epoch_20",
+    "shared_initialization": "All trainable state except the two alternative pose heads",
+    "step_rng": "reset seed 420000 + update before each forward; sample order uses independent NumPy RNG",
+    "objective": "Archived regression xyz MSE + sign-invariant quaternion loss versus diffusion x0 MSE; shared gripper loss",
+    "limitations": "Different head capacity/objective; one training seed; not a sampler-only ablation or final generalization benchmark",
+    "source_config": {
+      "action": {
+        "representation": "tool_relative_pose_open_positive_v2",
+        "position_scale_meters": 0.1,
+        "max_normalized_position": 3.0,
+        "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+      },
+      "model": {
+        "name": "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+        "fusion_type": "cross_attention",
+        "adapter_pooling": "cls_patch_mean",
+        "decoder_type": "diffusion",
+        "diffusion_prediction_type": "sample",
+        "num_adapter_layers": 8,
+        "attention_dim": 512,
+        "num_attention_heads": 8,
+        "decoder_hidden_dim": 256,
+        "chunk_size": 16,
+        "action_dim": 8,
+        "num_diffusion_steps": 100,
+        "beta_schedule": "squaredcos_cap_v2",
+        "clip_denoised": true,
+        "dropout": 0.1,
+        "separate_gripper_head": true,
+        "trajectory_conditioned_gripper": true,
+        "gripper_head_type": "legacy",
+        "condition_on_current_gripper": true,
+        "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+        "gripper_loss_weight": 0.25,
+        "gripper_change_weight": 1.0,
+        "gripper_target_mode": "state",
+        "gripper_transition_decode": "cumulative",
+        "gripper_switch_threshold": 0.0,
+        "balanced_gripper_loss": false
+      }
+    }
+  },
+  "preflight_sha256": "5d47cdd21b8d8f4b134adc83b6e68b775b347096b1a1640b7cfe8f694eb5270a",
+  "heads": {
+    "regression": {
+      "updates": 18360,
+      "trainable_parameters": 54144881,
+      "initial_shared_sha256": "8a94ba424e644a675a7f7418189e69c7f91240b55e896c290e2b5b49a3a21324",
+      "clip_sha256": "404527ba08cabe218719acf9844c3b40a7b53a73e7973054dc4c1d572b914613",
+      "clip_unchanged": true,
+      "warm_update_seconds": 0.07049279815273718,
+      "peak_reserved_gib": 2.69140625,
+      "evaluation_seconds": 40.214134445996024,
+      "evaluation_windows": 1876,
+      "sampling_seeds": [
+        0
+      ],
+      "overall": {
+        "train": {
+          "position_cm": 3.983949720859528,
+          "rotation_deg": 11.113001823425293,
+          "gripper_accuracy": 0.9204792976379395,
+          "balanced_accuracy": 0.9183770418167114,
+          "static_position_cm": 8.226703405380249,
+          "static_rotation_deg": 14.030460357666016,
+          "always_closed_accuracy": 0.28635621070861816,
+          "open_to_closed_pairs": 689.0,
+          "open_to_closed_pair_accuracy": 0.21625544130802155,
+          "closed_to_open_pairs": 324.0,
+          "closed_to_open_pair_accuracy": 0.08950617164373398
+        },
+        "validation": {
+          "position_cm": 6.6255122423172,
+          "rotation_deg": 12.10771369934082,
+          "gripper_accuracy": 0.8578125238418579,
+          "balanced_accuracy": 0.8668182194232941,
+          "static_position_cm": 8.212326169013979,
+          "static_rotation_deg": 15.098396301269531,
+          "always_closed_accuracy": 0.3453125059604645,
+          "open_to_closed_pairs": 20.0,
+          "open_to_closed_pair_accuracy": 0.15000000596046448,
+          "closed_to_open_pairs": 8.0,
+          "closed_to_open_pair_accuracy": 0.0
+        }
+      },
+      "tasks": {
+        "train": {
+          "close microwave": {
+            "position_cm": 4.807083010673523,
+            "rotation_deg": 11.718021392822266,
+            "gripper_accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "static_position_cm": 10.49508571624756,
+            "static_rotation_deg": 14.199441909790039
+          },
+          "close the drawer": {
+            "position_cm": 3.8103604316711426,
+            "rotation_deg": 12.036033630371094,
+            "gripper_accuracy": 0.9676679968833923,
+            "balanced_accuracy": 0.9511968195438385,
+            "static_position_cm": 8.038178086280823,
+            "static_rotation_deg": 16.126089096069336
+          },
+          "open the drawer": {
+            "position_cm": 3.366307616233826,
+            "rotation_deg": 10.792119979858398,
+            "gripper_accuracy": 0.8727250695228577,
+            "balanced_accuracy": 0.874409019947052,
+            "static_position_cm": 7.7782440185546875,
+            "static_rotation_deg": 13.861355781555176
+          },
+          "take broccoli out of pan": {
+            "position_cm": 5.13843059539795,
+            "rotation_deg": 11.85457706451416,
+            "gripper_accuracy": 0.8494318127632141,
+            "balanced_accuracy": 0.8524778187274933,
+            "static_position_cm": 8.830822110176086,
+            "static_rotation_deg": 13.310624122619629
+          },
+          "turn lever vertical to front": {
+            "position_cm": 2.657651901245117,
+            "rotation_deg": 6.945192337036133,
+            "gripper_accuracy": 0.8999277353286743,
+            "balanced_accuracy": 0.8994220793247223,
+            "static_position_cm": 4.55507218837738,
+            "static_rotation_deg": 9.540494918823242
+          }
+        },
+        "validation": {
+          "close microwave": {
+            "position_cm": 8.157942891120912,
+            "rotation_deg": 11.010038375854492,
+            "gripper_accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "static_position_cm": 9.132288098335268,
+            "static_rotation_deg": 11.021167755126953
+          },
+          "close the drawer": {
+            "position_cm": 6.498197317123414,
+            "rotation_deg": 23.804597854614258,
+            "gripper_accuracy": 0.90625,
+            "balanced_accuracy": 0.8782051205635071,
+            "static_position_cm": 9.757025837898254,
+            "static_rotation_deg": 41.403709411621094
+          },
+          "open the drawer": {
+            "position_cm": 5.992792248725891,
+            "rotation_deg": 11.563201904296875,
+            "gripper_accuracy": 0.7897727489471436,
+            "balanced_accuracy": 0.7583869695663452,
+            "static_position_cm": 7.482841610908508,
+            "static_rotation_deg": 11.411458015441895
+          },
+          "take broccoli out of pan": {
+            "position_cm": 7.72097110748291,
+            "rotation_deg": 8.273454666137695,
+            "gripper_accuracy": 0.7708333134651184,
+            "balanced_accuracy": 0.7909126579761505,
+            "static_position_cm": 9.201328754425049,
+            "static_rotation_deg": 8.586380004882812
+          },
+          "turn lever vertical to front": {
+            "position_cm": 2.2606031596660614,
+            "rotation_deg": 7.4310622215271,
+            "gripper_accuracy": 0.8125,
+            "balanced_accuracy": 0.8125,
+            "static_position_cm": 3.376197516918183,
+            "static_rotation_deg": 10.624619483947754
+          }
+        }
+      }
+    },
+    "diffusion": {
+      "updates": 18360,
+      "trainable_parameters": 59972104,
+      "initial_shared_sha256": "8a94ba424e644a675a7f7418189e69c7f91240b55e896c290e2b5b49a3a21324",
+      "clip_sha256": "404527ba08cabe218719acf9844c3b40a7b53a73e7973054dc4c1d572b914613",
+      "clip_unchanged": true,
+      "warm_update_seconds": 0.07663141439235588,
+      "peak_reserved_gib": 2.806640625,
+      "evaluation_seconds": 684.065241861972,
+      "evaluation_windows": 1876,
+      "sampling_seeds": [
+        0,
+        1,
+        2
+      ],
+      "overall": {
+        "train": {
+          "position_cm": 10.77721913655599,
+          "rotation_deg": 17.832767486572266,
+          "gripper_accuracy": 0.8484136660893759,
+          "balanced_accuracy": 0.8332581023375193,
+          "static_position_cm": 8.226703405380249,
+          "static_rotation_deg": 14.030460357666016,
+          "always_closed_accuracy": 0.28635621070861816,
+          "open_to_closed_pairs": 689.0,
+          "open_to_closed_pair_accuracy": 0.1272375409801801,
+          "closed_to_open_pairs": 324.0,
+          "closed_to_open_pair_accuracy": 0.016460905472437542
+        },
+        "validation": {
+          "position_cm": 10.235368013381958,
+          "rotation_deg": 16.471940994262695,
+          "gripper_accuracy": 0.8432291746139526,
+          "balanced_accuracy": 0.8442765871683756,
+          "static_position_cm": 8.212326169013979,
+          "static_rotation_deg": 15.098396301269531,
+          "always_closed_accuracy": 0.3453125059604645,
+          "open_to_closed_pairs": 20.0,
+          "open_to_closed_pair_accuracy": 0.1333333378036817,
+          "closed_to_open_pairs": 8.0,
+          "closed_to_open_pair_accuracy": 0.0
+        }
+      },
+      "tasks": {
+        "train": {
+          "close microwave": {
+            "position_cm": 14.440449078877768,
+            "rotation_deg": 16.29228401184082,
+            "gripper_accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "static_position_cm": 10.49508571624756,
+            "static_rotation_deg": 14.199441909790039
+          },
+          "close the drawer": {
+            "position_cm": 10.016628702481588,
+            "rotation_deg": 23.32179005940755,
+            "gripper_accuracy": 0.9432281057039896,
+            "balanced_accuracy": 0.8827639718850454,
+            "static_position_cm": 8.038178086280823,
+            "static_rotation_deg": 16.126089096069336
+          },
+          "open the drawer": {
+            "position_cm": 10.207465887069702,
+            "rotation_deg": 17.353158315022785,
+            "gripper_accuracy": 0.7304039001464844,
+            "balanced_accuracy": 0.7330986261367798,
+            "static_position_cm": 7.7782440185546875,
+            "static_rotation_deg": 13.861355781555176
+          },
+          "take broccoli out of pan": {
+            "position_cm": 12.902834812800089,
+            "rotation_deg": 17.38607660929362,
+            "gripper_accuracy": 0.7042748928070068,
+            "balanced_accuracy": 0.7047659854094187,
+            "static_position_cm": 8.830822110176086,
+            "static_rotation_deg": 13.310624122619629
+          },
+          "turn lever vertical to front": {
+            "position_cm": 3.628930648167928,
+            "rotation_deg": 7.5418596267700195,
+            "gripper_accuracy": 0.8923410375912985,
+            "balanced_accuracy": 0.8920749028523763,
+            "static_position_cm": 4.55507218837738,
+            "static_rotation_deg": 9.540494918823242
+          }
+        },
+        "validation": {
+          "close microwave": {
+            "position_cm": 15.783501068751017,
+            "rotation_deg": 14.57615852355957,
+            "gripper_accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "static_position_cm": 9.132288098335268,
+            "static_rotation_deg": 11.021167755126953
+          },
+          "close the drawer": {
+            "position_cm": 10.338582793871561,
+            "rotation_deg": 36.38760630289713,
+            "gripper_accuracy": 0.8541666666666666,
+            "balanced_accuracy": 0.6182336149116358,
+            "static_position_cm": 9.757025837898254,
+            "static_rotation_deg": 41.403709411621094
+          },
+          "open the drawer": {
+            "position_cm": 7.636868357658386,
+            "rotation_deg": 12.770304044087728,
+            "gripper_accuracy": 0.7784090836842855,
+            "balanced_accuracy": 0.726208413640658,
+            "static_position_cm": 7.482841610908508,
+            "static_rotation_deg": 11.411458015441895
+          },
+          "take broccoli out of pan": {
+            "position_cm": 10.579464435577393,
+            "rotation_deg": 13.906047503153482,
+            "gripper_accuracy": 0.7592592636744181,
+            "balanced_accuracy": 0.7689483265082041,
+            "static_position_cm": 9.201328754425049,
+            "static_rotation_deg": 8.586380004882812
+          },
+          "turn lever vertical to front": {
+            "position_cm": 2.5818749765555062,
+            "rotation_deg": 7.290663083394368,
+            "gripper_accuracy": 0.8020833333333334,
+            "balanced_accuracy": 0.8020833333333334,
+            "static_position_cm": 3.376197516918183,
+            "static_rotation_deg": 10.624619483947754
+          }
+        }
+      }
+    }
+  },
+  "episode_directions": {
+    "train": {
+      "position_cm": {
+        "episodes": 405,
+        "regression_better_than_diffusion": 397,
+        "regression_better_than_static": 402,
+        "equal_episode_weighted_regression_minus_diffusion": -5.955413827618946,
+        "equal_episode_weighted_regression_minus_static": -4.083304728070895
+      },
+      "rotation_deg": {
+        "episodes": 405,
+        "regression_better_than_diffusion": 370,
+        "regression_better_than_static": 312,
+        "equal_episode_weighted_regression_minus_diffusion": -5.712198101640238,
+        "equal_episode_weighted_regression_minus_static": -2.8516973813374835
+      }
+    },
+    "validation": {
+      "position_cm": {
+        "episodes": 10,
+        "regression_better_than_diffusion": 8,
+        "regression_better_than_static": 8,
+        "equal_episode_weighted_regression_minus_diffusion": -3.1684455821911492,
+        "equal_episode_weighted_regression_minus_static": -1.5968242734670643
+      },
+      "rotation_deg": {
+        "episodes": 10,
+        "regression_better_than_diffusion": 8,
+        "regression_better_than_static": 7,
+        "equal_episode_weighted_regression_minus_diffusion": -4.458237663904827,
+        "equal_episode_weighted_regression_minus_static": -3.285119390487671
+      }
+    }
+  }
+}

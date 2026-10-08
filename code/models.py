@@ -9,7 +9,7 @@ import torch.nn.functional as F
 from transformers import CLIPModel
 
 from adapter import CrossAttentionAdapter
-from diffusion_decoder import ConditionalDiffusionDecoder
+from diffusion_decoder import ConditionalDiffusionDecoder, MultiscaleConditionalUnet1D
 
 
 def extract(values: torch.Tensor, timesteps: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
@@ -60,6 +60,13 @@ class RobotAdapterModel(nn.Module):
         self.diffusion_prediction_type = str(model_config.get("diffusion_prediction_type", "epsilon"))
         if self.diffusion_prediction_type not in {"epsilon", "sample"}:
             raise ValueError("diffusion_prediction_type must be epsilon or sample")
+        self.diffusion_architecture = str(
+            model_config.get("diffusion_architecture", "compact")
+        )
+        if self.diffusion_architecture not in {"compact", "multiscale"}:
+            raise ValueError(
+                "diffusion_architecture must be compact or multiscale"
+            )
         self.separate_gripper_head = bool(
             model_config.get("separate_gripper_head", False)
         )
@@ -162,13 +169,33 @@ class RobotAdapterModel(nn.Module):
                 self.regression_head[-1].bias.zero_()
                 self.regression_head[-1].bias.reshape(self.chunk_size, 7)[:, 6] = 1
         else:
-            self.diffusion_decoder = ConditionalDiffusionDecoder(
-                action_dim=diffusion_action_dim,
-                chunk_size=self.chunk_size,
-                context_dim=context_dim,
-                hidden_dim=decoder_hidden_dim,
-                num_steps=self.num_diffusion_steps,
-            )
+            if self.diffusion_architecture == "multiscale":
+                self.diffusion_decoder = MultiscaleConditionalUnet1D(
+                    action_dim=diffusion_action_dim,
+                    chunk_size=self.chunk_size,
+                    context_dim=context_dim,
+                    down_dims=tuple(
+                        int(value)
+                        for value in model_config.get(
+                            "diffusion_down_dims", (256, 512, 1024)
+                        )
+                    ),
+                    diffusion_step_embed_dim=int(
+                        model_config.get("diffusion_step_embed_dim", 128)
+                    ),
+                    kernel_size=int(
+                        model_config.get("diffusion_kernel_size", 5)
+                    ),
+                    num_steps=self.num_diffusion_steps,
+                )
+            else:
+                self.diffusion_decoder = ConditionalDiffusionDecoder(
+                    action_dim=diffusion_action_dim,
+                    chunk_size=self.chunk_size,
+                    context_dim=context_dim,
+                    hidden_dim=decoder_hidden_dim,
+                    num_steps=self.num_diffusion_steps,
+                )
         if self.separate_gripper_head:
             if self.trajectory_conditioned_gripper:
                 # 每个夹爪状态同时查看视觉语言上下文、对应的7维位姿目标和

@@ -1,0 +1,54 @@
+{
+  "stage": "decoder_resource_and_gradient_preflight",
+  "trained_policy": false,
+  "real_data_read": false,
+  "checkpoint_loaded": false,
+  "device": "NVIDIA A40",
+  "torch": "2.5.1+cu118",
+  "input": {
+    "batch": 2,
+    "horizon": 16,
+    "action_dim": 7,
+    "context_dim": 1024
+  },
+  "controls": {
+    "compact": {
+      "parameters": 6120455,
+      "trainable_parameters": 6120455,
+      "output_shape": [
+        2,
+        16,
+        7
+      ],
+      "final_loss": 0.31000247597694397,
+      "gradient_norm": 1.7805439233779907,
+      "mean_warm_update_seconds": 0.010484483015413085,
+      "peak_allocated_gib": 0.13209104537963867,
+      "peak_reserved_gib": 0.13671875,
+      "weights_changed": true,
+      "context_gradient_nonzero": true
+    },
+    "official_style": {
+      "parameters": 77670023,
+      "trainable_parameters": 77670023,
+      "output_shape": [
+        2,
+        16,
+        7
+      ],
+      "final_loss": 0.29517337679862976,
+      "gradient_norm": 2.5026323795318604,
+      "mean_warm_update_seconds": 0.028076905369137723,
+      "peak_allocated_gib": 1.5289621353149414,
+      "peak_reserved_gib": 1.56640625,
+      "weights_changed": true,
+      "context_gradient_nonzero": true
+    }
+  },
+  "limits": [
+    "Synthetic tensors only; this does not measure policy accuracy.",
+    "The adapter, CLIP, gripper head, dataset and checkpoints are not loaded.",
+    "Passing authorizes only a later real-batch integration preflight."
+  ],
+  "passed": true
+}

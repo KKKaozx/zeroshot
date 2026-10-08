@@ -1,5 +1,7 @@
 # 当前进度与模块证据
 
+193761多尺度x0结构对照训练已COMPLETED/0:0：20轮18360更新、37分14秒，共享初始化/顺序/CLIP哈希与192651匹配；CLIP不变，三个可训练模块均改变。最终权重526.2MB已在评价前保存，峰值保留显存4.166GiB。轮均位姿损失0.09467→0.04508不能证明离线误差改善。已准备冻结权重的一步配对评价：与193030使用相同三组噪声，旧紧凑x0和回归直接读取保存预测，覆盖完整1836/40窗口并按任务/演示拆分，不更新参数、不读保留测试。评价尚未执行，当前不能声称新结构更好。见[完整协议](BRIDGE_OFFICIAL_UNET_PREFLIGHT.md)、[训练报告](../reports/bridge-unet-train-193761.json)和[history](../reports/bridge-unet-train-193761-history.json)。
+
 193711多尺度U-Net真实Bridge batch预检已COMPLETED/0:0：完整模型5.58亿参数、可训练1.315亿，峰值保留显存4.145GiB、暖更新0.1116秒。CLIP首步无梯度且六步后不变，Adapter/解码器/夹爪头均有梯度并变化；真实输入与x0损失链路通过，临时权重已丢弃，没有精度评价。已准备正式结构单变量训练：复用192651共享初始化和20轮顺序，只把紧凑U-Net改为多尺度U-Net；18360更新后先保存约0.5GiB最终权重，再独立评价。本次训练不读取开发图像/动作目标、不按开发结果选权重。见[协议与两次预检](BRIDGE_OFFICIAL_UNET_PREFLIGHT.md)和[193711报告](../reports/bridge-unet-real-193711.json)。
 
 193548官方式Conditional U-Net资源预检已COMPLETED/0:0：A40上合成batch2完成4次前后向与AdamW更新。新结构77,670,023参数，峰值保留显存1.566GiB、暖更新0.0281秒；旧紧凑头6,120,455参数、0.137GiB、0.0105秒。输出形状、权重变化和上下文梯度均通过，但本次未加载CLIP/Adapter、真实数据或checkpoint，不能说明精度。现已将新结构作为可选配置接入，默认紧凑结构和旧权重行为保持不变；下一项仅运行冻结CLIP+Adapter+真实Bridge batch的6更新预检，使用x0目标、不评价开发集、不保存临时权重。见[结构与资源记录](BRIDGE_OFFICIAL_UNET_PREFLIGHT.md)和[报告](../reports/bridge-unet-check-193548.json)。

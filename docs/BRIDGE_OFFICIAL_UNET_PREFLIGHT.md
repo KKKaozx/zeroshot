@@ -32,3 +32,13 @@ GPU作业分别对现有紧凑解码器和新解码器执行4次batch 2前向、
 训练完成后先保存最终权重、history、协议和报告，再由独立只读作业执行单步评价。这可避免评价脚本故障丢失训练成果。预计按预检暖更新时间约34分钟纯更新，作业额度90分钟；最终可训练权重约0.5GiB，只留集群，本地只取JSON。入口：[训练驱动](../code/run_bridge_official_unet_training.py)与[集群脚本](../scripts/cluster/bridge_official_unet_training.sh)。
 
 证据：[193711完整报告](../reports/bridge-unet-real-193711.json)。该报告仍不包含精度或泛化结果。
+
+## 193761正式训练结果与独立评价
+
+作业193761在A40上COMPLETED、0:0，用时37分14秒。完成20轮、18360次更新；共享初始化、训练顺序和CLIP哈希与192651匹配。Adapter、解码器与夹爪头均改变，CLIP不变。峰值保留显存4.166GiB，最终checkpoint为526,171,494字节，SHA256为`17565858b58c68aaf8c531b24dfb142d5d19739b05bd1779102c63bf3fe66814`。
+
+训练位姿损失的轮均值从0.09467降至0.04508，总损失从0.20827降至0.10761；这些数字只证明优化过程进行，不能说明动作误差或泛化改善。最终第20轮权重在评价前已保存，没有使用40个开发窗口选择checkpoint。
+
+下一作业冻结该checkpoint，覆盖相同1836个训练窗口和40个开发窗口，使用与193030逐字节相同的三组初始高斯噪声，在`t=99`调用多尺度x0网络一次。紧凑x0单步和回归结果直接读取193030/192651保存预测，避免跨GPU重算。报告总体、逐任务和逐演示的位置、旋转、路径/终点夹爪、平衡准确率以及抓取/释放时刻；不读取保留测试目标、不更新权重。入口：[评价驱动](../code/evaluate_bridge_official_unet_one_step.py)与[集群脚本](../scripts/cluster/bridge_official_unet_evaluation.sh)。
+
+训练证据：[报告](../reports/bridge-unet-train-193761.json)与[20轮history](../reports/bridge-unet-train-193761-history.json)。独立评价尚未执行，训练损失下降不能替代评价结论。

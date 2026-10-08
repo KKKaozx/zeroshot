@@ -1,0 +1,71 @@
+{
+  "stage": "multiscale_x0_training",
+  "passed": true,
+  "trained": true,
+  "evaluated": false,
+  "reserved_test_targets_read": false,
+  "protocol": {
+    "source_head_report_sha256": "f4732ed3a6112f0080fa6d28d4ae69327efe52be27a9626c5c42dd2ceb950b76",
+    "window_reference_sha256": "b41bd1a40b95a97135392df68c4d2c1f3341d4510a6e367c69d230a3f22fca23",
+    "preflight_sha256": "c20e124b1fd7657eba01a5695c88cda7a7b49d6ac5c62cf506b7ff2d038665b7",
+    "module_sha256": {
+      "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+      "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+      "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+    },
+    "order_sha256": "7e1ce1359470c86332ab0c65ed6df9ec656e96eaf14c981efdb84b9413e2b62d",
+    "initial_shared_sha256": "8a94ba424e644a675a7f7418189e69c7f91240b55e896c290e2b5b49a3a21324",
+    "initial_trainable_sha256": "100f831223bccf4753387df29c35ce11bf7e1ad7fb4b8e9c025f7037a4d7dee0",
+    "clip_sha256": "404527ba08cabe218719acf9844c3b40a7b53a73e7973054dc4c1d572b914613",
+    "only_intended_change_from_compact_x0": "compact -> multiscale Conditional U-Net",
+    "prediction_type": "sample_x0",
+    "architecture": "multiscale_256_512_1024_kernel5_film",
+    "epochs": 20,
+    "batch_size": 2,
+    "updates": 18360,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "lr_schedule": "cosine_per_epoch",
+    "gradient_clip_norm": 1.0,
+    "evaluation": "separate job after checkpoint is safely saved"
+  },
+  "counts": {
+    "train_windows": 1836,
+    "validation_windows_indexed_only": 40,
+    "updates": 18360
+  },
+  "parameters": {
+    "all": 557761928,
+    "trainable": 131521672,
+    "decoder": 77670023
+  },
+  "first_update_nonzero_gradient": {
+    "adapter": true,
+    "diffusion_decoder": true,
+    "gripper_head": true
+  },
+  "module_changed": {
+    "adapter": true,
+    "decoder": true,
+    "gripper": true
+  },
+  "clip_unchanged": true,
+  "checkpoint": {
+    "path": "/projects/Zeroshot/runs/bridge-unet-train-193761/final.pt",
+    "sha256": "17565858b58c68aaf8c531b24dfb142d5d19739b05bd1779102c63bf3fe66814",
+    "bytes": 526171494
+  },
+  "history_path": "/projects/Zeroshot/runs/bridge-unet-train-193761/history.json",
+  "elapsed_seconds": 2195.685823642998,
+  "mean_warm_update_seconds": 0.11850486278825345,
+  "peak_allocated_gib": 4.118749141693115,
+  "peak_reserved_gib": 4.166015625,
+  "limits": [
+    "Final epoch-20 weights are saved before any evaluation.",
+    "No development or held-out test target was used for checkpoint selection.",
+    "Offline one-step evaluation must run as a separate immutable-checkpoint job."
+  ]
+}

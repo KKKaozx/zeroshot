@@ -1,0 +1,94 @@
+{
+  "stage": "official_style_unet_real_bridge_preflight",
+  "passed": true,
+  "trained_policy": false,
+  "temporary_updates_discarded": true,
+  "reserved_test_targets_read": false,
+  "device": "NVIDIA A40",
+  "torch": "2.5.1+cu118",
+  "protocol": {
+    "source_head_report_sha256": "f4732ed3a6112f0080fa6d28d4ae69327efe52be27a9626c5c42dd2ceb950b76",
+    "window_reference_sha256": "b41bd1a40b95a97135392df68c4d2c1f3341d4510a6e367c69d230a3f22fca23",
+    "resource_report_sha256": "78ee746dad10a225258298bdab1a8b9accfcdc1b821ed876cf1fc4d09577c854",
+    "module_sha256": {
+      "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+      "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+      "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+    },
+    "updates": 6,
+    "batch_size": 2,
+    "prediction_type": "sample_x0",
+    "architecture": "multiscale_256_512_1024_kernel5_film",
+    "evaluation": "none"
+  },
+  "counts": {
+    "all_windows": 1876,
+    "train_windows": 1836,
+    "updates": 6
+  },
+  "parameters": {
+    "all": 557761928,
+    "trainable": 131521672,
+    "decoder": 77670023
+  },
+  "first_update_nonzero_gradient": {
+    "clip": false,
+    "adapter": true,
+    "decoder": true,
+    "gripper": true
+  },
+  "module_changed": {
+    "clip": false,
+    "adapter": true,
+    "decoder": true,
+    "gripper": true
+  },
+  "losses": [
+    {
+      "update": 1,
+      "loss": 0.48830634355545044,
+      "pose": 0.28109011054039,
+      "gripper": 0.8288648724555969
+    },
+    {
+      "update": 2,
+      "loss": 0.7270749807357788,
+      "pose": 0.5553025603294373,
+      "gripper": 0.6870896220207214
+    },
+    {
+      "update": 3,
+      "loss": 0.42303407192230225,
+      "pose": 0.3005795478820801,
+      "gripper": 0.48981815576553345
+    },
+    {
+      "update": 4,
+      "loss": 0.561911940574646,
+      "pose": 0.3266749382019043,
+      "gripper": 0.9409480690956116
+    },
+    {
+      "update": 5,
+      "loss": 0.43373656272888184,
+      "pose": 0.3228243291378021,
+      "gripper": 0.44364890456199646
+    },
+    {
+      "update": 6,
+      "loss": 0.27610254287719727,
+      "pose": 0.21260826289653778,
+      "gripper": 0.2539771497249603
+    }
+  ],
+  "mean_warm_update_seconds": 0.11159896322060377,
+  "peak_allocated_gib": 4.111132621765137,
+  "peak_reserved_gib": 4.14453125,
+  "limits": [
+    "Six temporary real Bridge updates only; resulting weights are discarded.",
+    "No accuracy, generation, development or test evaluation was run.",
+    "Passing permits preparation of a paired full-training protocol only."
+  ]
+}

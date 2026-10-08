@@ -1,0 +1,39 @@
+{
+  "phase": "prepare",
+  "protocol": {
+    "module_sha256": {
+      "models.py": "7b1b226162823dd051da27ffe8103650066d3473376d1b0eb91e18477dbcdcaf",
+      "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "diffusion_decoder.py": "c9ff194149f8d9b1498f4fbd56eb4502cbbfddc64e34f27b7d4a3c416e2ac47e",
+      "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+    },
+    "manifest_sha256": "bcd80954a895580068485f7f665d58b07e179341c8c07c161ec2bc6c0caec0b2",
+    "driver_sha256": "70e57f748c691ee029c3cd7a903a19afd9faadf65cbdbc34ddc43de9d17dfa58",
+    "reference_sha256": "b41bd1a40b95a97135392df68c4d2c1f3341d4510a6e367c69d230a3f22fca23",
+    "order_sha256": "7e1ce1359470c86332ab0c65ed6df9ec656e96eaf14c981efdb84b9413e2b62d",
+    "window_sha256": "d1caa0868fe5e5aaf313ae9a0827fa534d1c8963d2ceadae4c3072f97720353d",
+    "epochs": 20,
+    "batch_size": 2,
+    "updates_per_group": 18360,
+    "init_seed": 42,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "lr_schedule": "cosine_per_epoch",
+    "selection": "fixed_final_epoch_20",
+    "shared_initialization": "All trainable state except the two alternative pose heads",
+    "step_rng": "reset seed 420000 + update before each forward; sample order uses independent NumPy RNG",
+    "objective": "Archived regression xyz MSE + sign-invariant quaternion loss versus diffusion x0 MSE; shared gripper loss",
+    "limitations": "Different head capacity/objective; one training seed; not a sampler-only ablation or final generalization benchmark"
+  },
+  "reserved_test_targets_read": false,
+  "model_loaded": false,
+  "trained": false,
+  "counts": {
+    "train": 1836,
+    "validation": 40
+  },
+  "groups": {}
+}

@@ -1,0 +1,36 @@
+{
+  "job_id": 193390,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "report_sha256": "538fc69f5dc84471d34b80eab9bf260d0348cff1c44a7ea76d6431749aa82152",
+  "stage": "frozen_epsilon_checkpoint_ddim_step_sweep",
+  "trained": false,
+  "weights_updated": false,
+  "reserved_test_targets_read": false,
+  "counts": {
+    "train_windows": 1836,
+    "validation_windows": 40,
+    "sampling_seeds": 3
+  },
+  "computed_in_job": [16, 32, 100],
+  "eight_step_source": "saved predictions from completed job 193195",
+  "validation_mean": {
+    "8": {"path_position_cm": 13.108127, "path_rotation_deg": 21.548751, "endpoint_position_cm": 17.404940, "endpoint_rotation_deg": 28.754604, "endpoint_gripper_accuracy": 0.733333},
+    "16": {"path_position_cm": 11.976581, "path_rotation_deg": 19.751338, "endpoint_position_cm": 15.932326, "endpoint_rotation_deg": 26.406968, "endpoint_gripper_accuracy": 0.758333},
+    "32": {"path_position_cm": 11.465623, "path_rotation_deg": 19.612984, "endpoint_position_cm": 15.184216, "endpoint_rotation_deg": 26.052779, "endpoint_gripper_accuracy": 0.750000},
+    "100": {"path_position_cm": 11.192583, "path_rotation_deg": 20.964212, "endpoint_position_cm": 14.680231, "endpoint_rotation_deg": 27.100318, "endpoint_gripper_accuracy": 0.766667},
+    "static": {"path_position_cm": 8.212326, "path_rotation_deg": 15.098398, "endpoint_position_cm": 10.565334, "endpoint_rotation_deg": 19.986355}
+  },
+  "reference_validation": {
+    "x0_one_step": {"path_position_cm": 7.672, "path_rotation_deg": 14.726, "endpoint_position_cm": 10.156, "endpoint_rotation_deg": 19.424},
+    "regression": {"path_position_cm": 6.626, "path_rotation_deg": 12.108, "endpoint_position_cm": 8.324, "endpoint_rotation_deg": 14.660}
+  },
+  "episode_path_position_better_counts_out_of_10": {
+    "8": {"static": 2, "x0_one_step": 0, "regression": 0},
+    "16": {"static": 2, "x0_one_step": 0, "regression": 0},
+    "32": {"static": 2, "x0_one_step": 0, "regression": 0},
+    "100": {"static": 1, "x0_one_step": 0, "regression": 0}
+  },
+  "decision": "Stop the current compact-U-Net epsilon branch. More DDIM steps improve position but do not reach static, x0 one-step, or regression performance; rotation worsens after 32 steps.",
+  "next_control": "Resource-only preflight for an official-style multiscale Conditional U-Net while holding data, x0 target, and one-step evaluation fixed."
+}

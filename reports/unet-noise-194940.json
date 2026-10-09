@@ -1,0 +1,1542 @@
+{
+  "stage": "frozen_multiscale_noise_image_probe",
+  "trained": false,
+  "weights_updated": false,
+  "reserved_test_targets_read": false,
+  "validation_payload_read": false,
+  "training_report_sha256": "4931038c913981c2f2d3bee90d36a85e42f9141f894812956ebb66fb33039660",
+  "checkpoint_sha256": "17565858b58c68aaf8c531b24dfb142d5d19739b05bd1779102c63bf3fe66814",
+  "module_sha256": {
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+  },
+  "window_selection": [
+    {
+      "dataset_index": 0,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+      "record_index": 45,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 2,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+      "record_index": 21,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 8,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+      "record_index": 39,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 14,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+      "record_index": 8,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 24,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+      "record_index": 3,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 32,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+      "record_index": 36,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 37,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 2,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 39,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 10,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 45,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 26,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 53,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+      "record_index": 7,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 55,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 25,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 61,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 37,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 76,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 20,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 80,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 21,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 85,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 25,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 92,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 33,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 98,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 2,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 104,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 17,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 108,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 40,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 117,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 31,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 123,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 35,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 125,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 44,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 131,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 33,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 133,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 54,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 138,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+      "record_index": 6,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 144,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+      "record_index": 33,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 150,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 26,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 155,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 43,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 156,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 7,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 157,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 23,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 162,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+      "record_index": 13,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 164,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+      "record_index": 22,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 168,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 29,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 174,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 41,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 179,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 4,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 187,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 20,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 202,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00025-of-01024",
+      "record_index": 15,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 232,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+      "record_index": 40,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 242,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00031-of-01024",
+      "record_index": 17,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 293,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00041-of-01024",
+      "record_index": 41,
+      "start_index": 0
+    }
+  ],
+  "image_donor_indices": [
+    6,
+    7,
+    3,
+    2,
+    8,
+    13,
+    0,
+    1,
+    4,
+    0,
+    2,
+    1,
+    2,
+    5,
+    5,
+    1,
+    5,
+    2,
+    1,
+    2,
+    0,
+    5,
+    0,
+    5,
+    1,
+    1,
+    4,
+    0,
+    0,
+    5,
+    0,
+    4,
+    1,
+    5,
+    2,
+    4,
+    4,
+    2,
+    4,
+    4
+  ],
+  "training_windows": 40,
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "alpha_bars": {
+    "0": 0.9993687272071838,
+    "24": 0.8470121026039124,
+    "49": 0.49384352564811707,
+    "74": 0.1442720890045166,
+    "99": 2.4285407107527135e-07
+  },
+  "static": {
+    "position_cm": 9.051458358764648,
+    "rotation_deg": 15.773492813110352
+  },
+  "cases": {
+    "t0": {
+      "correct": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 1.3280507326126099,
+            "rotation_deg": 11.59116268157959,
+            "raw_component_mse": 0.005704703275114298,
+            "raw_xyz_mse": 0.007682144641876221,
+            "raw_quaternion_mse": 0.004221622832119465
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.3328399658203125,
+            "rotation_deg": 11.611693382263184,
+            "raw_component_mse": 0.005694789346307516,
+            "raw_xyz_mse": 0.007639589719474316,
+            "raw_quaternion_mse": 0.004236189182847738
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.3285688161849976,
+            "rotation_deg": 11.580896377563477,
+            "raw_component_mse": 0.005672560539096594,
+            "raw_xyz_mse": 0.007605935446918011,
+            "raw_quaternion_mse": 0.004222528543323278
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 1.5051319599151611,
+            "rotation_deg": 12.504087448120117,
+            "raw_component_mse": 0.006653743330389261,
+            "raw_xyz_mse": 0.009466629475355148,
+            "raw_quaternion_mse": 0.0045440783724188805
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.5217875242233276,
+            "rotation_deg": 12.546201705932617,
+            "raw_component_mse": 0.006676402408629656,
+            "raw_xyz_mse": 0.009479387663304806,
+            "raw_quaternion_mse": 0.004574163816869259
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.5217393636703491,
+            "rotation_deg": 12.492198944091797,
+            "raw_component_mse": 0.006665580905973911,
+            "raw_xyz_mse": 0.00949366670101881,
+            "raw_quaternion_mse": 0.004544517025351524
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 1.4702786207199097,
+            "rotation_deg": 13.635623931884766,
+            "raw_component_mse": 0.007793749216943979,
+            "raw_xyz_mse": 0.01005446258932352,
+            "raw_quaternion_mse": 0.006098212208598852
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.4735910892486572,
+            "rotation_deg": 13.567502975463867,
+            "raw_component_mse": 0.007701729889959097,
+            "raw_xyz_mse": 0.00995576474815607,
+            "raw_quaternion_mse": 0.006011203862726688
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.4510154724121094,
+            "rotation_deg": 13.559837341308594,
+            "raw_component_mse": 0.007574545685201883,
+            "raw_xyz_mse": 0.009662601165473461,
+            "raw_quaternion_mse": 0.006008503492921591
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 1.1751638650894165,
+            "rotation_deg": 12.083576202392578,
+            "raw_component_mse": 0.004881679080426693,
+            "raw_xyz_mse": 0.00556974858045578,
+            "raw_quaternion_mse": 0.004365625791251659
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.1970330476760864,
+            "rotation_deg": 12.101675987243652,
+            "raw_component_mse": 0.004969045985490084,
+            "raw_xyz_mse": 0.005716544110327959,
+            "raw_quaternion_mse": 0.00440842192620039
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.1776049137115479,
+            "rotation_deg": 12.053678512573242,
+            "raw_component_mse": 0.004896975588053465,
+            "raw_xyz_mse": 0.005578596144914627,
+            "raw_quaternion_mse": 0.004385760985314846
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 1.3365554809570312,
+            "rotation_deg": 13.618890762329102,
+            "raw_component_mse": 0.0060169892385602,
+            "raw_xyz_mse": 0.007100565824657679,
+            "raw_quaternion_mse": 0.005204307846724987
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.3271732330322266,
+            "rotation_deg": 13.763916969299316,
+            "raw_component_mse": 0.005989345721900463,
+            "raw_xyz_mse": 0.006909321527928114,
+            "raw_quaternion_mse": 0.005299363750964403
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.3345057964324951,
+            "rotation_deg": 13.713972091674805,
+            "raw_component_mse": 0.006038744002580643,
+            "raw_xyz_mse": 0.007048828061670065,
+            "raw_quaternion_mse": 0.005281181074678898
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 1.1531234979629517,
+            "rotation_deg": 6.113637447357178,
+            "raw_component_mse": 0.0031773578375577927,
+            "raw_xyz_mse": 0.006219314411282539,
+            "raw_quaternion_mse": 0.000895890174433589
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.1446149349212646,
+            "rotation_deg": 6.07916784286499,
+            "raw_component_mse": 0.0031374224927276373,
+            "raw_xyz_mse": 0.006136929150670767,
+            "raw_quaternion_mse": 0.000887792615685612
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.1579785346984863,
+            "rotation_deg": 6.08479118347168,
+            "raw_component_mse": 0.0031869548838585615,
+            "raw_xyz_mse": 0.006245987024158239,
+            "raw_quaternion_mse": 0.000892681535333395
+          }
+        ]
+      }
+    },
+    "t24": {
+      "correct": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 2.3088111877441406,
+            "rotation_deg": 12.382802963256836,
+            "raw_component_mse": 0.012584982439875603,
+            "raw_xyz_mse": 0.022911233827471733,
+            "raw_quaternion_mse": 0.004840292502194643
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.208498001098633,
+            "rotation_deg": 12.660654067993164,
+            "raw_component_mse": 0.011854143813252449,
+            "raw_xyz_mse": 0.020994286984205246,
+            "raw_quaternion_mse": 0.004999035503715277
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.330084800720215,
+            "rotation_deg": 12.225873947143555,
+            "raw_component_mse": 0.012435559183359146,
+            "raw_xyz_mse": 0.022543014958500862,
+            "raw_quaternion_mse": 0.004854965023696423
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 2.427816390991211,
+            "rotation_deg": 12.586675643920898,
+            "raw_component_mse": 0.013511828146874905,
+            "raw_xyz_mse": 0.02545231580734253,
+            "raw_quaternion_mse": 0.004556463100016117
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.4843530654907227,
+            "rotation_deg": 13.066377639770508,
+            "raw_component_mse": 0.013871414586901665,
+            "raw_xyz_mse": 0.025742972269654274,
+            "raw_quaternion_mse": 0.004967746790498495
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.6476526260375977,
+            "rotation_deg": 12.38148021697998,
+            "raw_component_mse": 0.014546730555593967,
+            "raw_xyz_mse": 0.027819430455565453,
+            "raw_quaternion_mse": 0.004592207260429859
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 2.629176378250122,
+            "rotation_deg": 15.852767944335938,
+            "raw_component_mse": 0.01708870939910412,
+            "raw_xyz_mse": 0.028480952605605125,
+            "raw_quaternion_mse": 0.00854452420026064
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.6513266563415527,
+            "rotation_deg": 14.712543487548828,
+            "raw_component_mse": 0.016450608149170876,
+            "raw_xyz_mse": 0.02911134995520115,
+            "raw_quaternion_mse": 0.0069550517946481705
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.5170931816101074,
+            "rotation_deg": 14.129621505737305,
+            "raw_component_mse": 0.015498253516852856,
+            "raw_xyz_mse": 0.026980668306350708,
+            "raw_quaternion_mse": 0.006886443588882685
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 1.9377577304840088,
+            "rotation_deg": 13.88305950164795,
+            "raw_component_mse": 0.009619497694075108,
+            "raw_xyz_mse": 0.015347142703831196,
+            "raw_quaternion_mse": 0.005323763936758041
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.854734182357788,
+            "rotation_deg": 14.538253784179688,
+            "raw_component_mse": 0.009570837020874023,
+            "raw_xyz_mse": 0.013929418288171291,
+            "raw_quaternion_mse": 0.006301903165876865
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.273029088973999,
+            "rotation_deg": 13.867640495300293,
+            "raw_component_mse": 0.01242944784462452,
+            "raw_xyz_mse": 0.02104458212852478,
+            "raw_quaternion_mse": 0.005968100391328335
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 2.7320165634155273,
+            "rotation_deg": 12.502983093261719,
+            "raw_component_mse": 0.015205052681267262,
+            "raw_xyz_mse": 0.029398590326309204,
+            "raw_quaternion_mse": 0.00455990107730031
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.234712600708008,
+            "rotation_deg": 14.253068923950195,
+            "raw_component_mse": 0.012551797553896904,
+            "raw_xyz_mse": 0.021683240309357643,
+            "raw_quaternion_mse": 0.005703216418623924
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.291987895965576,
+            "rotation_deg": 14.071985244750977,
+            "raw_component_mse": 0.012241820804774761,
+            "raw_xyz_mse": 0.020932018756866455,
+            "raw_quaternion_mse": 0.005724173039197922
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 1.8172892332077026,
+            "rotation_deg": 7.088527202606201,
+            "raw_component_mse": 0.007499826140701771,
+            "raw_xyz_mse": 0.01587718166410923,
+            "raw_quaternion_mse": 0.0012168089160695672
+          },
+          {
+            "seed": 1,
+            "position_cm": 1.8173635005950928,
+            "rotation_deg": 6.733028411865234,
+            "raw_component_mse": 0.006826060824096203,
+            "raw_xyz_mse": 0.014504462480545044,
+            "raw_quaternion_mse": 0.001067258883267641
+          },
+          {
+            "seed": 2,
+            "position_cm": 1.9206610918045044,
+            "rotation_deg": 6.67864465713501,
+            "raw_component_mse": 0.007461535278707743,
+            "raw_xyz_mse": 0.015938380733132362,
+            "raw_quaternion_mse": 0.001103900489397347
+          }
+        ]
+      }
+    },
+    "t49": {
+      "correct": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 3.556807041168213,
+            "rotation_deg": 13.270359992980957,
+            "raw_component_mse": 0.02750704064965248,
+            "raw_xyz_mse": 0.05650930479168892,
+            "raw_quaternion_mse": 0.005755342543125153
+          },
+          {
+            "seed": 1,
+            "position_cm": 3.3882851600646973,
+            "rotation_deg": 13.589506149291992,
+            "raw_component_mse": 0.02493816800415516,
+            "raw_xyz_mse": 0.050266459584236145,
+            "raw_quaternion_mse": 0.005941944662481546
+          },
+          {
+            "seed": 2,
+            "position_cm": 3.626155138015747,
+            "rotation_deg": 13.4003267288208,
+            "raw_component_mse": 0.029294362291693687,
+            "raw_xyz_mse": 0.0600455068051815,
+            "raw_quaternion_mse": 0.0062309992499649525
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 4.090595245361328,
+            "rotation_deg": 13.289730072021484,
+            "raw_component_mse": 0.0330011285841465,
+            "raw_xyz_mse": 0.0703156441450119,
+            "raw_quaternion_mse": 0.005015243776142597
+          },
+          {
+            "seed": 1,
+            "position_cm": 4.003470420837402,
+            "rotation_deg": 13.804655075073242,
+            "raw_component_mse": 0.03170743212103844,
+            "raw_xyz_mse": 0.06658419966697693,
+            "raw_quaternion_mse": 0.0055498541332781315
+          },
+          {
+            "seed": 2,
+            "position_cm": 4.233206748962402,
+            "rotation_deg": 12.683246612548828,
+            "raw_component_mse": 0.03283117711544037,
+            "raw_xyz_mse": 0.06997404247522354,
+            "raw_quaternion_mse": 0.004974033683538437
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 3.911311626434326,
+            "rotation_deg": 17.450284957885742,
+            "raw_component_mse": 0.03347189724445343,
+            "raw_xyz_mse": 0.06379150599241257,
+            "raw_quaternion_mse": 0.010732191614806652
+          },
+          {
+            "seed": 1,
+            "position_cm": 4.030088901519775,
+            "rotation_deg": 15.474576950073242,
+            "raw_component_mse": 0.03369835764169693,
+            "raw_xyz_mse": 0.06806791573762894,
+            "raw_quaternion_mse": 0.007921187207102776
+          },
+          {
+            "seed": 2,
+            "position_cm": 4.137265205383301,
+            "rotation_deg": 15.203393936157227,
+            "raw_component_mse": 0.037908606231212616,
+            "raw_xyz_mse": 0.07720611989498138,
+            "raw_quaternion_mse": 0.008435467258095741
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 2.901299476623535,
+            "rotation_deg": 15.873113632202148,
+            "raw_component_mse": 0.020137911662459373,
+            "raw_xyz_mse": 0.0376838743686676,
+            "raw_quaternion_mse": 0.0069784438237547874
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.754882335662842,
+            "rotation_deg": 17.324018478393555,
+            "raw_component_mse": 0.01837013103067875,
+            "raw_xyz_mse": 0.030935710296034813,
+            "raw_quaternion_mse": 0.008945949375629425
+          },
+          {
+            "seed": 2,
+            "position_cm": 3.7975189685821533,
+            "rotation_deg": 17.396638870239258,
+            "raw_component_mse": 0.034668199717998505,
+            "raw_xyz_mse": 0.06778610497713089,
+            "raw_quaternion_mse": 0.009829767048358917
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 4.413346290588379,
+            "rotation_deg": 12.649582862854004,
+            "raw_component_mse": 0.03668178245425224,
+            "raw_xyz_mse": 0.07921295613050461,
+            "raw_quaternion_mse": 0.004783403128385544
+          },
+          {
+            "seed": 1,
+            "position_cm": 3.656642436981201,
+            "rotation_deg": 14.55208969116211,
+            "raw_component_mse": 0.028115812689065933,
+            "raw_xyz_mse": 0.05733007192611694,
+            "raw_quaternion_mse": 0.0062051150016486645
+          },
+          {
+            "seed": 2,
+            "position_cm": 3.45717191696167,
+            "rotation_deg": 15.001689910888672,
+            "raw_component_mse": 0.027568256482481956,
+            "raw_xyz_mse": 0.05529874190688133,
+            "raw_quaternion_mse": 0.006770395673811436
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 2.4674830436706543,
+            "rotation_deg": 7.089088439941406,
+            "raw_component_mse": 0.014242480508983135,
+            "raw_xyz_mse": 0.031542547047138214,
+            "raw_quaternion_mse": 0.0012674296740442514
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.4963417053222656,
+            "rotation_deg": 6.792191505432129,
+            "raw_component_mse": 0.01279909722507,
+            "raw_xyz_mse": 0.028414404019713402,
+            "raw_quaternion_mse": 0.001087619224563241
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.505615234375,
+            "rotation_deg": 6.716670989990234,
+            "raw_component_mse": 0.013495557941496372,
+            "raw_xyz_mse": 0.029962526634335518,
+            "raw_quaternion_mse": 0.0011453311890363693
+          }
+        ]
+      }
+    },
+    "t74": {
+      "correct": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 5.610817909240723,
+            "rotation_deg": 14.014419555664062,
+            "raw_component_mse": 0.0728970319032669,
+            "raw_xyz_mse": 0.1614905446767807,
+            "raw_quaternion_mse": 0.006451899651437998
+          },
+          {
+            "seed": 1,
+            "position_cm": 5.37960958480835,
+            "rotation_deg": 13.954902648925781,
+            "raw_component_mse": 0.06564576178789139,
+            "raw_xyz_mse": 0.14478799700737,
+            "raw_quaternion_mse": 0.006289097014814615
+          },
+          {
+            "seed": 2,
+            "position_cm": 5.6002678871154785,
+            "rotation_deg": 14.664851188659668,
+            "raw_component_mse": 0.07310207933187485,
+            "raw_xyz_mse": 0.16043247282505035,
+            "raw_quaternion_mse": 0.0076043009757995605
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 6.984416961669922,
+            "rotation_deg": 14.021610260009766,
+            "raw_component_mse": 0.10045979171991348,
+            "raw_xyz_mse": 0.22702829539775848,
+            "raw_quaternion_mse": 0.00553341768682003
+          },
+          {
+            "seed": 1,
+            "position_cm": 7.838665962219238,
+            "rotation_deg": 14.66441535949707,
+            "raw_component_mse": 0.1280997097492218,
+            "raw_xyz_mse": 0.2909649908542633,
+            "raw_quaternion_mse": 0.005950730759650469
+          },
+          {
+            "seed": 2,
+            "position_cm": 7.592583656311035,
+            "rotation_deg": 13.511981964111328,
+            "raw_component_mse": 0.11583329737186432,
+            "raw_xyz_mse": 0.2628779113292694,
+            "raw_quaternion_mse": 0.005549842957407236
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 6.012548446655273,
+            "rotation_deg": 18.14712142944336,
+            "raw_component_mse": 0.07824987173080444,
+            "raw_xyz_mse": 0.16666705906391144,
+            "raw_quaternion_mse": 0.011936991475522518
+          },
+          {
+            "seed": 1,
+            "position_cm": 5.904499053955078,
+            "rotation_deg": 14.926502227783203,
+            "raw_component_mse": 0.06924859434366226,
+            "raw_xyz_mse": 0.15145757794380188,
+            "raw_quaternion_mse": 0.0075918580405414104
+          },
+          {
+            "seed": 2,
+            "position_cm": 5.950024604797363,
+            "rotation_deg": 16.494304656982422,
+            "raw_component_mse": 0.07990451902151108,
+            "raw_xyz_mse": 0.17401663959026337,
+            "raw_quaternion_mse": 0.009320450946688652
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 5.159500598907471,
+            "rotation_deg": 17.375022888183594,
+            "raw_component_mse": 0.0649992823600769,
+            "raw_xyz_mse": 0.14053766429424286,
+            "raw_quaternion_mse": 0.008345494046807289
+          },
+          {
+            "seed": 1,
+            "position_cm": 4.426249027252197,
+            "rotation_deg": 18.69191551208496,
+            "raw_component_mse": 0.04337435960769653,
+            "raw_xyz_mse": 0.08761632442474365,
+            "raw_quaternion_mse": 0.010192887857556343
+          },
+          {
+            "seed": 2,
+            "position_cm": 5.696622371673584,
+            "rotation_deg": 20.298948287963867,
+            "raw_component_mse": 0.07522550970315933,
+            "raw_xyz_mse": 0.15736748278141022,
+            "raw_quaternion_mse": 0.01361902430653572
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 7.005569934844971,
+            "rotation_deg": 13.447583198547363,
+            "raw_component_mse": 0.10042212903499603,
+            "raw_xyz_mse": 0.2273969054222107,
+            "raw_quaternion_mse": 0.005191033240407705
+          },
+          {
+            "seed": 1,
+            "position_cm": 5.973750591278076,
+            "rotation_deg": 14.790191650390625,
+            "raw_component_mse": 0.07054882496595383,
+            "raw_xyz_mse": 0.15576763451099396,
+            "raw_quaternion_mse": 0.0066347126848995686
+          },
+          {
+            "seed": 2,
+            "position_cm": 5.927717208862305,
+            "rotation_deg": 16.239381790161133,
+            "raw_component_mse": 0.07537660747766495,
+            "raw_xyz_mse": 0.1647091656923294,
+            "raw_quaternion_mse": 0.008377191610634327
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 2.892054319381714,
+            "rotation_deg": 7.080765724182129,
+            "raw_component_mse": 0.02035410888493061,
+            "raw_xyz_mse": 0.04582284390926361,
+            "raw_quaternion_mse": 0.001252559944987297
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.7548813819885254,
+            "rotation_deg": 6.7014923095703125,
+            "raw_component_mse": 0.016957342624664307,
+            "raw_xyz_mse": 0.0381334088742733,
+            "raw_quaternion_mse": 0.0010752934031188488
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.8343915939331055,
+            "rotation_deg": 6.779634952545166,
+            "raw_component_mse": 0.01917046681046486,
+            "raw_xyz_mse": 0.043191101402044296,
+            "raw_quaternion_mse": 0.0011549919145181775
+          }
+        ]
+      }
+    },
+    "t99": {
+      "correct": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 8.333290100097656,
+            "rotation_deg": 14.33610725402832,
+            "raw_component_mse": 0.17125380039215088,
+            "raw_xyz_mse": 0.3905560076236725,
+            "raw_quaternion_mse": 0.006777117494493723
+          },
+          {
+            "seed": 1,
+            "position_cm": 8.401833534240723,
+            "rotation_deg": 14.283554077148438,
+            "raw_component_mse": 0.1763095110654831,
+            "raw_xyz_mse": 0.4025820791721344,
+            "raw_quaternion_mse": 0.006605032831430435
+          },
+          {
+            "seed": 2,
+            "position_cm": 8.326681137084961,
+            "rotation_deg": 14.593877792358398,
+            "raw_component_mse": 0.1739479899406433,
+            "raw_xyz_mse": 0.3962945342063904,
+            "raw_quaternion_mse": 0.00718809524551034
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 12.330684661865234,
+            "rotation_deg": 13.332687377929688,
+            "raw_component_mse": 0.30694177746772766,
+            "raw_xyz_mse": 0.7099737524986267,
+            "raw_quaternion_mse": 0.004667812958359718
+          },
+          {
+            "seed": 1,
+            "position_cm": 12.6632661819458,
+            "rotation_deg": 14.024258613586426,
+            "raw_component_mse": 0.33389660716056824,
+            "raw_xyz_mse": 0.7720959186553955,
+            "raw_quaternion_mse": 0.005247162654995918
+          },
+          {
+            "seed": 2,
+            "position_cm": 12.540841102600098,
+            "rotation_deg": 14.0581693649292,
+            "raw_component_mse": 0.32936280965805054,
+            "raw_xyz_mse": 0.7614806294441223,
+            "raw_quaternion_mse": 0.005274348892271519
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 8.256429672241211,
+            "rotation_deg": 16.039857864379883,
+            "raw_component_mse": 0.17876878380775452,
+            "raw_xyz_mse": 0.40427693724632263,
+            "raw_quaternion_mse": 0.009637714363634586
+          },
+          {
+            "seed": 1,
+            "position_cm": 8.263915061950684,
+            "rotation_deg": 14.620565414428711,
+            "raw_component_mse": 0.17666928470134735,
+            "raw_xyz_mse": 0.4021032154560089,
+            "raw_quaternion_mse": 0.007593820802867413
+          },
+          {
+            "seed": 2,
+            "position_cm": 8.15372371673584,
+            "rotation_deg": 15.9308443069458,
+            "raw_component_mse": 0.17398186028003693,
+            "raw_xyz_mse": 0.394070029258728,
+            "raw_quaternion_mse": 0.008915719576179981
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 7.512821674346924,
+            "rotation_deg": 18.600696563720703,
+            "raw_component_mse": 0.12740421295166016,
+            "raw_xyz_mse": 0.28381848335266113,
+            "raw_quaternion_mse": 0.01009351946413517
+          },
+          {
+            "seed": 1,
+            "position_cm": 7.242526054382324,
+            "rotation_deg": 19.498004913330078,
+            "raw_component_mse": 0.11748715490102768,
+            "raw_xyz_mse": 0.25991299748420715,
+            "raw_quaternion_mse": 0.010667740367352962
+          },
+          {
+            "seed": 2,
+            "position_cm": 7.317043304443359,
+            "rotation_deg": 18.637218475341797,
+            "raw_component_mse": 0.12071879953145981,
+            "raw_xyz_mse": 0.26622381806373596,
+            "raw_quaternion_mse": 0.011590028181672096
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 10.66177749633789,
+            "rotation_deg": 17.0192928314209,
+            "raw_component_mse": 0.22322700917720795,
+            "raw_xyz_mse": 0.5097295045852661,
+            "raw_quaternion_mse": 0.00835015531629324
+          },
+          {
+            "seed": 1,
+            "position_cm": 10.96876335144043,
+            "rotation_deg": 16.88426399230957,
+            "raw_component_mse": 0.23418273031711578,
+            "raw_xyz_mse": 0.5350831151008606,
+            "raw_quaternion_mse": 0.008507464081048965
+          },
+          {
+            "seed": 2,
+            "position_cm": 10.664437294006348,
+            "rotation_deg": 17.823226928710938,
+            "raw_component_mse": 0.2255934774875641,
+            "raw_xyz_mse": 0.5142526030540466,
+            "raw_quaternion_mse": 0.009099120274186134
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 2.904738187789917,
+            "rotation_deg": 6.6880035400390625,
+            "raw_component_mse": 0.01992717757821083,
+            "raw_xyz_mse": 0.044981569051742554,
+            "raw_quaternion_mse": 0.001136384205892682
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.8706932067871094,
+            "rotation_deg": 6.390678405761719,
+            "raw_component_mse": 0.019311651587486267,
+            "raw_xyz_mse": 0.0437152199447155,
+            "raw_quaternion_mse": 0.0010089785791933537
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.957364320755005,
+            "rotation_deg": 6.519923210144043,
+            "raw_component_mse": 0.020082997158169746,
+            "raw_xyz_mse": 0.045445311814546585,
+            "raw_quaternion_mse": 0.001061260118149221
+          }
+        ]
+      }
+    },
+    "pure_noise_t99": {
+      "correct": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 8.33439826965332,
+            "rotation_deg": 14.3368558883667,
+            "raw_component_mse": 0.17130178213119507,
+            "raw_xyz_mse": 0.3906671702861786,
+            "raw_quaternion_mse": 0.0067777568474411964
+          },
+          {
+            "seed": 1,
+            "position_cm": 8.402837753295898,
+            "rotation_deg": 14.284464836120605,
+            "raw_component_mse": 0.17635385692119598,
+            "raw_xyz_mse": 0.4026845693588257,
+            "raw_quaternion_mse": 0.006605842616409063
+          },
+          {
+            "seed": 2,
+            "position_cm": 8.327679634094238,
+            "rotation_deg": 14.594655990600586,
+            "raw_component_mse": 0.17398957908153534,
+            "raw_xyz_mse": 0.3963905870914459,
+            "raw_quaternion_mse": 0.007188813295215368
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 12.332950592041016,
+            "rotation_deg": 13.333540916442871,
+            "raw_component_mse": 0.30706024169921875,
+            "raw_xyz_mse": 0.710249662399292,
+            "raw_quaternion_mse": 0.004668169654905796
+          },
+          {
+            "seed": 1,
+            "position_cm": 12.665101051330566,
+            "rotation_deg": 14.025178909301758,
+            "raw_component_mse": 0.3339957892894745,
+            "raw_xyz_mse": 0.7723264098167419,
+            "raw_quaternion_mse": 0.005247771739959717
+          },
+          {
+            "seed": 2,
+            "position_cm": 12.542604446411133,
+            "rotation_deg": 14.058692932128906,
+            "raw_component_mse": 0.3294548988342285,
+            "raw_xyz_mse": 0.761695384979248,
+            "raw_quaternion_mse": 0.005274550057947636
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 8.257177352905273,
+            "rotation_deg": 16.040660858154297,
+            "raw_component_mse": 0.17880187928676605,
+            "raw_xyz_mse": 0.4043528139591217,
+            "raw_quaternion_mse": 0.00963863730430603
+          },
+          {
+            "seed": 1,
+            "position_cm": 8.26481819152832,
+            "rotation_deg": 14.621238708496094,
+            "raw_component_mse": 0.17671073973178864,
+            "raw_xyz_mse": 0.40219923853874207,
+            "raw_quaternion_mse": 0.007594389375299215
+          },
+          {
+            "seed": 2,
+            "position_cm": 8.154438972473145,
+            "rotation_deg": 15.931706428527832,
+            "raw_component_mse": 0.17401015758514404,
+            "raw_xyz_mse": 0.3941349685192108,
+            "raw_quaternion_mse": 0.008916542865335941
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 7.514001846313477,
+            "rotation_deg": 18.601411819458008,
+            "raw_component_mse": 0.12744031846523285,
+            "raw_xyz_mse": 0.2839011549949646,
+            "raw_quaternion_mse": 0.010094678029417992
+          },
+          {
+            "seed": 1,
+            "position_cm": 7.243703842163086,
+            "rotation_deg": 19.49956703186035,
+            "raw_component_mse": 0.11752252280712128,
+            "raw_xyz_mse": 0.25999316573143005,
+            "raw_quaternion_mse": 0.01066955178976059
+          },
+          {
+            "seed": 2,
+            "position_cm": 7.318084716796875,
+            "rotation_deg": 18.638225555419922,
+            "raw_component_mse": 0.12074874341487885,
+            "raw_xyz_mse": 0.26629170775413513,
+            "raw_quaternion_mse": 0.011591531336307526
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 10.662997245788574,
+            "rotation_deg": 17.020490646362305,
+            "raw_component_mse": 0.2232779711484909,
+            "raw_xyz_mse": 0.5098474621772766,
+            "raw_quaternion_mse": 0.008350841701030731
+          },
+          {
+            "seed": 1,
+            "position_cm": 10.969785690307617,
+            "rotation_deg": 16.88550567626953,
+            "raw_component_mse": 0.23422738909721375,
+            "raw_xyz_mse": 0.5351858735084534,
+            "raw_quaternion_mse": 0.008508465252816677
+          },
+          {
+            "seed": 2,
+            "position_cm": 10.665764808654785,
+            "rotation_deg": 17.824283599853516,
+            "raw_component_mse": 0.22564981877803802,
+            "raw_xyz_mse": 0.5143828392028809,
+            "raw_quaternion_mse": 0.009100050665438175
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 2.9048619270324707,
+            "rotation_deg": 6.68817138671875,
+            "raw_component_mse": 0.019928578287363052,
+            "raw_xyz_mse": 0.04498474672436714,
+            "raw_quaternion_mse": 0.001136456849053502
+          },
+          {
+            "seed": 1,
+            "position_cm": 2.870776414871216,
+            "rotation_deg": 6.39083194732666,
+            "raw_component_mse": 0.019312944263219833,
+            "raw_xyz_mse": 0.043718159198760986,
+            "raw_quaternion_mse": 0.0010090325959026814
+          },
+          {
+            "seed": 2,
+            "position_cm": 2.957505464553833,
+            "rotation_deg": 6.520380973815918,
+            "raw_component_mse": 0.02008427120745182,
+            "raw_xyz_mse": 0.04544810950756073,
+            "raw_quaternion_mse": 0.001061389921233058
+          }
+        ]
+      },
+      "image_swap": {
+        "overall": [
+          {
+            "seed": 0,
+            "position_cm": 8.384964942932129,
+            "rotation_deg": 15.537481307983398,
+            "raw_component_mse": 0.172084778547287,
+            "raw_xyz_mse": 0.3911336362361908,
+            "raw_quaternion_mse": 0.007798131555318832,
+            "paired_position_change_cm": 1.1883586645126343
+          },
+          {
+            "seed": 1,
+            "position_cm": 8.430227279663086,
+            "rotation_deg": 15.494386672973633,
+            "raw_component_mse": 0.175930455327034,
+            "raw_xyz_mse": 0.4001105725765228,
+            "raw_quaternion_mse": 0.007795406971126795,
+            "paired_position_change_cm": 1.151001900434494
+          },
+          {
+            "seed": 2,
+            "position_cm": 8.461042404174805,
+            "rotation_deg": 15.917974472045898,
+            "raw_component_mse": 0.17713847756385803,
+            "raw_xyz_mse": 0.4019652009010315,
+            "raw_quaternion_mse": 0.008518398739397526,
+            "paired_position_change_cm": 1.2488827854394913
+          }
+        ],
+        "task/close microwave": [
+          {
+            "seed": 0,
+            "position_cm": 12.178564071655273,
+            "rotation_deg": 13.211935043334961,
+            "raw_component_mse": 0.29845789074897766,
+            "raw_xyz_mse": 0.6903576850891113,
+            "raw_quaternion_mse": 0.0045330822467803955,
+            "paired_position_change_cm": 0.5669569596648216
+          },
+          {
+            "seed": 1,
+            "position_cm": 12.46330451965332,
+            "rotation_deg": 14.196340560913086,
+            "raw_component_mse": 0.3240237534046173,
+            "raw_xyz_mse": 0.7489221692085266,
+            "raw_quaternion_mse": 0.005349908955395222,
+            "paired_position_change_cm": 0.485386922955513
+          },
+          {
+            "seed": 2,
+            "position_cm": 12.46996021270752,
+            "rotation_deg": 13.992493629455566,
+            "raw_component_mse": 0.3242945075035095,
+            "raw_xyz_mse": 0.749833881855011,
+            "raw_quaternion_mse": 0.005139986053109169,
+            "paired_position_change_cm": 0.5037795752286911
+          }
+        ],
+        "task/close the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 8.428564071655273,
+            "rotation_deg": 20.504467010498047,
+            "raw_component_mse": 0.1897633969783783,
+            "raw_xyz_mse": 0.4244760572910309,
+            "raw_quaternion_mse": 0.013728909194469452,
+            "paired_position_change_cm": 1.2287893891334534
+          },
+          {
+            "seed": 1,
+            "position_cm": 8.547972679138184,
+            "rotation_deg": 19.684640884399414,
+            "raw_component_mse": 0.1888934075832367,
+            "raw_xyz_mse": 0.42411646246910095,
+            "raw_quaternion_mse": 0.012476128526031971,
+            "paired_position_change_cm": 1.3026826083660126
+          },
+          {
+            "seed": 2,
+            "position_cm": 8.515620231628418,
+            "rotation_deg": 19.89167022705078,
+            "raw_component_mse": 0.1884969025850296,
+            "raw_xyz_mse": 0.4223989248275757,
+            "raw_quaternion_mse": 0.013070391491055489,
+            "paired_position_change_cm": 1.5134409070014954
+          }
+        ],
+        "task/open the drawer": [
+          {
+            "seed": 0,
+            "position_cm": 7.720296859741211,
+            "rotation_deg": 19.027698516845703,
+            "raw_component_mse": 0.1353396326303482,
+            "raw_xyz_mse": 0.30140483379364014,
+            "raw_quaternion_mse": 0.010790737345814705,
+            "paired_position_change_cm": 1.2407906353473663
+          },
+          {
+            "seed": 1,
+            "position_cm": 7.333178520202637,
+            "rotation_deg": 19.244487762451172,
+            "raw_component_mse": 0.12151069194078445,
+            "raw_xyz_mse": 0.2686091661453247,
+            "raw_quaternion_mse": 0.011186826974153519,
+            "paired_position_change_cm": 1.177063137292862
+          },
+          {
+            "seed": 2,
+            "position_cm": 7.6288533210754395,
+            "rotation_deg": 20.208593368530273,
+            "raw_component_mse": 0.13179819285869598,
+            "raw_xyz_mse": 0.28900399804115295,
+            "raw_quaternion_mse": 0.013893859460949898,
+            "paired_position_change_cm": 1.2163029611110687
+          }
+        ],
+        "task/take broccoli out of pan": [
+          {
+            "seed": 0,
+            "position_cm": 10.52033805847168,
+            "rotation_deg": 17.412216186523438,
+            "raw_component_mse": 0.21268810331821442,
+            "raw_xyz_mse": 0.4849335849285126,
+            "raw_quaternion_mse": 0.008504011668264866,
+            "paired_position_change_cm": 1.966986060142517
+          },
+          {
+            "seed": 1,
+            "position_cm": 10.774612426757812,
+            "rotation_deg": 17.274673461914062,
+            "raw_component_mse": 0.22207286953926086,
+            "raw_xyz_mse": 0.5065340995788574,
+            "raw_quaternion_mse": 0.008726985193789005,
+            "paired_position_change_cm": 2.013835310935974
+          },
+          {
+            "seed": 2,
+            "position_cm": 10.64522933959961,
+            "rotation_deg": 18.21373748779297,
+            "raw_component_mse": 0.21906277537345886,
+            "raw_xyz_mse": 0.4989076554775238,
+            "raw_quaternion_mse": 0.009179141372442245,
+            "paired_position_change_cm": 2.0561009645462036
+          }
+        ],
+        "task/turn lever vertical to front": [
+          {
+            "seed": 0,
+            "position_cm": 3.077056884765625,
+            "rotation_deg": 7.531087875366211,
+            "raw_component_mse": 0.02417483739554882,
+            "raw_xyz_mse": 0.054496053606271744,
+            "raw_quaternion_mse": 0.0014339193003252149,
+            "paired_position_change_cm": 0.93827024102211
+          },
+          {
+            "seed": 1,
+            "position_cm": 3.0320701599121094,
+            "rotation_deg": 7.071789741516113,
+            "raw_component_mse": 0.023151619359850883,
+            "raw_xyz_mse": 0.052370864897966385,
+            "raw_quaternion_mse": 0.0012371842749416828,
+            "paired_position_change_cm": 0.7760415226221085
+          },
+          {
+            "seed": 2,
+            "position_cm": 3.0455501079559326,
+            "rotation_deg": 7.283381462097168,
+            "raw_component_mse": 0.022039951756596565,
+            "raw_xyz_mse": 0.049681734293699265,
+            "raw_quaternion_mse": 0.0013086162507534027,
+            "paired_position_change_cm": 0.9547897428274155
+          }
+        ]
+      }
+    }
+  },
+  "elapsed_seconds": 3.294654972036369,
+  "limits": [
+    "Forty fixed training windows, one per demonstration; not full training evaluation.",
+    "Noisy-target cases contain ground truth and are reconstruction diagnostics only.",
+    "Image swaps test the use of the observed scene, not semantic correctness.",
+    "No automatic threshold can by itself establish a unique root cause."
+  ]
+}

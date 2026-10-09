@@ -14,11 +14,12 @@ source /projects/Zeroshot/scripts/ssd_cache.sh
 export TMPDIR="/projects/Zeroshot/.tmp/${SLURM_JOB_ID}"
 export OMP_NUM_THREADS=4
 mkdir -p "$TMPDIR"
-cd /projects/Zeroshot/multiscale_noise_probe_v1
+cd /projects/Zeroshot/multiscale_noise_probe_v2
 sha256sum -c SHA256SUMS
 /projects/Zeroshot/envs/multitask-preflight-v1/bin/python -u diagnose_multiscale_noise.py \
   --pack /projects/Zeroshot/bridge_expansion_training_v1 \
   --training-run /projects/Zeroshot/runs/bridge-unet-train-193761 \
   --training-report /projects/Zeroshot/runs/bridge-unet-train-193761/report.json \
   --window-reference /projects/Zeroshot/runs/bridge-full-chain-191004.json \
+  --reference-probe /projects/Zeroshot/runs/unet-noise-194940.json \
   --output /projects/Zeroshot/runs/unet-noise-${SLURM_JOB_ID}.json

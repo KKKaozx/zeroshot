@@ -33,10 +33,27 @@ def select_training(rows, per_task=8):
     return selected, donors
 
 
+def restoration_comparison(noisy_raw, noisy_pose, output_pose, target, pose_errors):
+    """Compare the same noisy input before and after the learned restoration."""
+    input_position, input_rotation = pose_errors(noisy_pose, target)
+    output_position, output_rotation = pose_errors(output_pose, target)
+    return {
+        "input_position_cm": float(input_position.mean()),
+        "input_rotation_deg": float(input_rotation.mean()),
+        "position_improvement_cm": float((input_position-output_position).mean()),
+        "rotation_improvement_deg": float((input_rotation-output_rotation).mean()),
+        "position_improved_target_fraction": float((output_position < input_position).mean()),
+        "rotation_improved_target_fraction": float((output_rotation < input_rotation).mean()),
+        "input_raw_xyz_mse": float(((noisy_raw[..., :3]-target[..., :3])**2).mean()),
+        "input_raw_quaternion_mse": float(((noisy_raw[..., 3:]-target[..., 3:])**2).mean()),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("pack", "training-run", "training-report", "window-reference", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--reference-probe", type=Path)
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
@@ -78,6 +95,13 @@ def main():
     if rows != reference["window_selection"]:
         raise ValueError("Population differs from frozen reference")
     selected, donors = select_training(rows)
+    prior_probe = None
+    if args.reference_probe is not None:
+        prior_probe = json.loads(args.reference_probe.read_text())
+        if (prior_probe["window_selection"] != selected
+                or prior_probe["image_donor_indices"] != donors
+                or prior_probe["checkpoint_sha256"] != source["checkpoint"]["sha256"]):
+            raise ValueError("Probe subset or checkpoint differs from 194940")
     items = [dataset[row["dataset_index"]] for row in selected]
     language, images, _, targets, masks = collate_batch(items)
     if not (masks[..., :7] > .5).all():
@@ -122,6 +146,8 @@ def main():
                 for seed in range(3):
                     raw = np.empty_like(truth)
                     clean = np.empty_like(truth)
+                    input_raw = np.empty_like(truth)
+                    input_pose = np.empty_like(truth)
                     for start in range(0, len(items), 2):
                         target = targets[start:start + 2, :, :7].cuda()
                         set_seed(seed * 10000 + start)
@@ -134,7 +160,9 @@ def main():
                             raise ValueError("Nonfinite output")
                         raw[start:start + len(target)] = value.cpu().numpy()
                         clean[start:start + len(target)] = finish_pose(torch, value, float(model.max_normalized_position or 3)).cpu().numpy()
-                    seeds.append((raw, clean))
+                        input_raw[start:start + len(target)] = noisy.cpu().numpy()
+                        input_pose[start:start + len(target)] = finish_pose(torch, noisy, float(model.max_normalized_position or 3)).cpu().numpy()
+                    seeds.append((raw, clean, input_raw, input_pose))
                 outputs[kind] = seeds
                 groups = {"overall": list(range(len(items)))}
                 groups.update({"task/" + task: [i for i,r in enumerate(selected) if r["task"] == task]
@@ -142,24 +170,38 @@ def main():
                 cases[label][kind] = {}
                 for group, ids in groups.items():
                     scores = []
-                    for seed, (raw, clean) in enumerate(seeds):
+                    for seed, (raw, clean, input_raw, input_pose) in enumerate(seeds):
                         pos, rot = pose_errors(clean[ids], truth[ids])
                         value = {"seed": seed, "position_cm": float(pos.mean()), "rotation_deg": float(rot.mean()),
                                  "raw_component_mse": float(((raw[ids]-truth[ids])**2).mean()),
                                  "raw_xyz_mse": float(((raw[ids,:,:3]-truth[ids,:,:3])**2).mean()),
                                  "raw_quaternion_mse": float(((raw[ids,:,3:]-truth[ids,:,3:])**2).mean())}
+                        value.update(restoration_comparison(
+                            input_raw[ids], input_pose[ids], clean[ids], truth[ids], pose_errors))
+                        norms = np.linalg.norm(raw[ids, :, 3:], axis=-1)
+                        value["output_raw_quaternion_norm_mean"] = float(norms.mean())
+                        value["output_degenerate_quaternions"] = int((norms <= 1e-6).sum())
                         if kind == "image_swap":
                             change = clean[ids] - outputs["correct"][seed][1][ids]
                             value["paired_position_change_cm"] = float(np.linalg.norm(change[..., :3], axis=-1).mean()*10)
                         scores.append(value)
                     cases[label][kind][group] = scores
-                print("NOISE_PROBE", label, kind, cases[label][kind]["overall"], flush=True)
+                overall = cases[label][kind]["overall"]
+                mean = lambda key: float(np.mean([row[key] for row in overall]))
+                print("RESTORATION", label, kind,
+                      "input=", round(mean("input_position_cm"), 4), round(mean("input_rotation_deg"), 4),
+                      "output=", round(mean("position_cm"), 4), round(mean("rotation_deg"), 4),
+                      "improvement=", round(mean("position_improvement_cm"), 4), round(mean("rotation_improvement_deg"), 4),
+                      flush=True)
     if sha256(checkpoint_path) != initial_hash:
         raise ValueError("Checkpoint changed")
     static = np.zeros_like(truth)
     static[..., 6] = 1
     pos, rot = pose_errors(static, truth)
     report = {"stage": "frozen_multiscale_noise_image_probe", "trained": False, "weights_updated": False,
+              "schema_version": 2,
+              "input_baseline": "Same noisy input with production position clipping and quaternion normalization; positive improvement means output error is lower.",
+              "reference_probe_sha256": sha256(args.reference_probe) if args.reference_probe is not None else None,
               "reserved_test_targets_read": False, "validation_payload_read": False,
               "training_report_sha256": sha256(args.training_report), "checkpoint_sha256": initial_hash,
               "module_sha256": module_hashes, "window_selection": selected, "image_donor_indices": donors,
@@ -171,6 +213,16 @@ def main():
                          "Noisy-target cases contain ground truth and are reconstruction diagnostics only.",
                          "Image swaps test the use of the observed scene, not semantic correctness.",
                          "No automatic threshold can by itself establish a unique root cause."]}
+    if prior_probe is not None:
+        report["prior_overall_metric_differences"] = {
+            label: {
+                kind: [{key: row[key]-prior_probe["cases"][label][kind]["overall"][seed][key]
+                        for key in ("position_cm", "rotation_deg")}
+                       for seed, row in enumerate(groups["overall"])]
+                for kind, groups in variants.items()
+            }
+            for label, variants in cases.items()
+        }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n")
     print("FROZEN MULTISCALE NOISE/IMAGE PROBE: PASSED", args.output, flush=True)

@@ -2,10 +2,20 @@ import sys
 from pathlib import Path
 import unittest
 import numpy as np
+import torch
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "code"))
-from diagnose_multiscale_noise import select_training, restoration_comparison
+from diagnose_multiscale_noise import select_training, restoration_comparison, traced_ddim
 from evaluate_bridge_endpoint_metrics import pose_errors
+from evaluate_bridge_ddim_steps import ddim_sample
+
+
+class OracleDecoder(torch.nn.Module):
+    def forward(self, noisy, timestep, context):
+        result = torch.zeros_like(noisy)
+        result[..., 6] = 1
+        return result
 
 
 class NoiseSelectionTest(unittest.TestCase):
@@ -45,6 +55,26 @@ class NoiseSelectionTest(unittest.TestCase):
         worse = restoration_comparison(target, target, noisy, target, pose_errors)
         self.assertLess(worse['position_improvement_cm'], 0)
         self.assertLess(worse['rotation_improvement_deg'], 0)
+
+    def test_tracing_does_not_change_chain_or_leave_hooks(self):
+        decoder = OracleDecoder()
+        model = SimpleNamespace(diffusion_decoder=decoder,
+                                diffusion_prediction_type='sample',
+                                max_normalized_position=3,
+                                alpha_bars=torch.cumprod(1-torch.linspace(.0001,.02,100),0))
+        noise = torch.randn(2,16,7)
+        expected = ddim_sample(torch, model, None, noise, 100)
+        final, trace = traced_ddim(torch, model, None, noise, ddim_sample)
+        self.assertTrue(torch.equal(final, expected))
+        self.assertEqual(set(trace), {99,49,24,9,0})
+        self.assertTrue(torch.equal(trace[99][0], noise))
+        self.assertEqual(len(decoder._forward_hooks), 0)
+
+        def fail(*args):
+            raise RuntimeError('synthetic failure')
+        with self.assertRaises(RuntimeError):
+            traced_ddim(torch, model, None, noise, fail)
+        self.assertEqual(len(decoder._forward_hooks), 0)
 
 
 if __name__ == '__main__':

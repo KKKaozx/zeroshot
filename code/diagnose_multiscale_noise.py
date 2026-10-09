@@ -49,14 +49,113 @@ def restoration_comparison(noisy_raw, noisy_pose, output_pose, target, pose_erro
     }
 
 
+def traced_ddim(torch, model, context, noise, ddim_sample):
+    """Observe one unchanged deterministic chain; remove hook on all exits."""
+    trace, calls = {}, []
+    def observe(module, inputs, output):
+        step = int(inputs[1][0])
+        calls.append(step)
+        if step in (99, 49, 24, 9, 0):
+            trace[step] = (inputs[0].detach().cpu().clone(), output.detach().cpu().clone())
+    hook = model.diffusion_decoder.register_forward_hook(observe)
+    try:
+        final = ddim_sample(torch, model, context, noise, 100)
+    finally:
+        hook.remove()
+    if calls != list(range(99, -1, -1)):
+        raise ValueError("Expected a full 100-step DDIM chain")
+    return final, trace
+
+
+def run_tail_probe(args, model, contexts, targets, selected, donors, source, module_hashes, initial_hash):
+    import torch
+    from train import set_seed
+    from evaluate_bridge_ddim_steps import ddim_sample
+    from evaluate_bridge_one_step_sampler import finish_pose, sha256
+    from evaluate_bridge_endpoint_metrics import pose_errors
+
+    truth = targets[..., :7].numpy()
+    started = time.monotonic()
+    steps = (99, 49, 24, 9, 0)
+    groups = {"overall": list(range(len(selected)))}
+    groups.update({"task/" + task: [i for i,r in enumerate(selected) if r["task"] == task]
+                   for task in sorted({r["task"] for r in selected})})
+    results = {group: [] for group in groups}
+    limit = float(model.max_normalized_position or 3)
+    with torch.inference_mode():
+        for seed in range(3):
+            inputs = {step: np.empty_like(truth) for step in steps}
+            x0s = {step: np.empty_like(truth) for step in steps}
+            final = np.empty_like(truth)
+            for start in range(0, len(selected), 2):
+                context = contexts["correct"][start:start + 2].cuda()
+                set_seed(seed * 10000 + start)
+                noise = torch.randn(len(context), 16, 7, device="cuda")
+                completed, trace = traced_ddim(torch, model, context, noise, ddim_sample)
+                final[start:start + len(context)] = finish_pose(torch, completed, limit).cpu().numpy()
+                for step in steps:
+                    noisy, estimate = trace[step]
+                    inputs[step][start:start + len(context)] = finish_pose(torch, noisy, limit).numpy()
+                    x0s[step][start:start + len(context)] = finish_pose(torch, estimate, limit).numpy()
+            for group, ids in groups.items():
+                def score(value):
+                    pos, rot = pose_errors(value[ids], truth[ids])
+                    return {"position_cm": float(pos.mean()), "rotation_deg": float(rot.mean())}
+                final_score = score(final)
+                stage_results = {}
+                for step in steps:
+                    input_score, x0_score = score(inputs[step]), score(x0s[step])
+                    input_pos, input_rot = pose_errors(inputs[step][ids], truth[ids])
+                    final_pos, final_rot = pose_errors(final[ids], truth[ids])
+                    stage_results[str(step)] = {
+                        "input_before_step": input_score,
+                        "clean_estimate_at_step": x0_score,
+                        "final_minus_input_position_cm": final_score["position_cm"]-input_score["position_cm"],
+                        "final_minus_input_rotation_deg": final_score["rotation_deg"]-input_score["rotation_deg"],
+                        "final_minus_estimate_position_cm": final_score["position_cm"]-x0_score["position_cm"],
+                        "final_minus_estimate_rotation_deg": final_score["rotation_deg"]-x0_score["rotation_deg"],
+                        "final_worse_than_input_position_fraction": float((final_pos > input_pos).mean()),
+                        "final_worse_than_input_rotation_fraction": float((final_rot > input_rot).mean()),
+                    }
+                results[group].append({"seed": seed, "final": final_score, "steps": stage_results})
+            print("TAIL_SEED", seed, json.dumps(results["overall"][-1]), flush=True)
+    checkpoint_path = args.training_run / "final.pt"
+    if sha256(checkpoint_path) != initial_hash:
+        raise ValueError("Checkpoint changed")
+    report = {
+        "stage": "frozen_multiscale_ddim_tail_probe", "trained": False, "weights_updated": False,
+        "reserved_test_targets_read": False, "validation_payload_read": False,
+        "training_report_sha256": sha256(args.training_report), "checkpoint_sha256": initial_hash,
+        "reference_probe_sha256": sha256(args.reference_probe), "module_sha256": module_hashes,
+        "window_selection": selected, "image_donor_indices": donors, "sampling_seeds": [0,1,2],
+        "sampler": "100-step DDIM eta=0, unchanged existing ddim_sample implementation",
+        "trace_steps": list(steps), "groups": results, "elapsed_seconds": time.monotonic()-started,
+        "difference_sign": "Positive final-minus-input/estimate means continuing increases target error.",
+        "limits": [
+            "Same forty training windows; no development or test payloads.",
+            "Scoring uses target data, but generation never receives target actions.",
+            "Input snapshot is still a noisy latent with final pose constraints; estimate snapshot is predicted x0.",
+            "These snapshots are offline ablations, not executable early-stop policies.",
+            "Tail results concern this deterministic DDIM chain, not every sampler or training parameterization.",
+            "No timing or checkpoint is chosen as best on these diagnostic results.",
+        ],
+    }
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(report, indent=2) + "\n")
+    print("FROZEN MULTISCALE DDIM TAIL PROBE: PASSED", args.output, flush=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("pack", "training-run", "training-report", "window-reference", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--reference-probe", type=Path)
+    parser.add_argument("--chain-tail", action="store_true")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
+    if args.chain_tail and args.reference_probe is None:
+        raise ValueError("Chain-tail probe requires a prior reconstruction report")
     script_dir = Path(__file__).resolve().parent
     sys.path.insert(0, str(args.pack.resolve()))
     sys.path.insert(0, str(script_dir))
@@ -123,7 +222,7 @@ def main():
     model.load_state_dict(checkpoint["model"], strict=False)
     model.cuda().eval()
     tokenizer = CLIPTokenizer.from_pretrained(checkpoint["config"]["model"]["name"], local_files_only=True)
-    contexts = {"correct": [], "image_swap": []}
+    contexts = {"correct": []} if args.chain_tail else {"correct": [], "image_swap": []}
     with torch.inference_mode():
         for start in range(0, len(items), 2):
             ids = list(range(start, min(start + 2, len(items))))
@@ -133,6 +232,9 @@ def main():
                 contexts[kind].append(model.get_context_vector(
                     images[image_ids].cuda(), tokens["input_ids"].cuda(), tokens["attention_mask"].cuda()).cpu())
     contexts = {key: torch.cat(value) for key, value in contexts.items()}
+    if args.chain_tail:
+        run_tail_probe(args, model, contexts, targets, selected, donors, source, module_hashes, initial_hash)
+        return
     truth = targets[..., :7].numpy()
     cases = {}
     began = time.monotonic()

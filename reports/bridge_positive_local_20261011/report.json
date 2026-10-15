@@ -1,0 +1,148 @@
+{
+  "stage": "local_train_only_positive_control",
+  "execution_checks_passed": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "train_only": true,
+  "new_dataset_downloads": false,
+  "clip_adapter_executed": false,
+  "gripper_trained": false,
+  "development_targets_used": false,
+  "test_targets_used": false,
+  "retained_compact_replay": {
+    "position_cm": 0.21037320792675018,
+    "rotation_deg": 0.9530473351478577,
+    "endpoint_position_cm": 0.26113826036453247,
+    "endpoint_rotation_deg": 0.8983509540557861,
+    "seed_position_cm": [
+      0.21039284765720367,
+      0.2103654444217682,
+      0.21036139130592346
+    ],
+    "seed_rotation_deg": [
+      0.953182578086853,
+      0.9529825448989868,
+      0.9529769420623779
+    ],
+    "windows_all_three_seeds_pass": 311,
+    "windows": 316,
+    "static_position_cm": 9.869146347045898,
+    "static_rotation_deg": 13.652612686157227,
+    "pose_fit_passed": true
+  },
+  "fresh_current_multiscale_fit": {
+    "position_cm": 0.15276314318180084,
+    "rotation_deg": 0.3038884699344635,
+    "endpoint_position_cm": 0.16207991540431976,
+    "endpoint_rotation_deg": 0.2163962572813034,
+    "seed_position_cm": [
+      0.15241248905658722,
+      0.15291589498519897,
+      0.15296106040477753
+    ],
+    "seed_rotation_deg": [
+      0.30438077449798584,
+      0.30379289388656616,
+      0.3034918010234833
+    ],
+    "windows_all_three_seeds_pass": 8,
+    "windows": 8,
+    "static_position_cm": 7.735259056091309,
+    "static_rotation_deg": 7.785233497619629,
+    "pose_fit_passed": true
+  },
+  "selection": [
+    {
+      "cache_index": 0,
+      "original_dataset_index": 7,
+      "episode": "bridge_data_v2-train.tfrecord-00001-of-01024::29",
+      "start": 0
+    },
+    {
+      "cache_index": 18,
+      "original_dataset_index": 25,
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::22",
+      "start": 0
+    },
+    {
+      "cache_index": 39,
+      "original_dataset_index": 84,
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::38",
+      "start": 0
+    },
+    {
+      "cache_index": 60,
+      "original_dataset_index": 105,
+      "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::57",
+      "start": 0
+    },
+    {
+      "cache_index": 79,
+      "original_dataset_index": 157,
+      "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::39",
+      "start": 0
+    },
+    {
+      "cache_index": 96,
+      "original_dataset_index": 174,
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::25",
+      "start": 0
+    },
+    {
+      "cache_index": 112,
+      "original_dataset_index": 190,
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+      "start": 0
+    },
+    {
+      "cache_index": 133,
+      "original_dataset_index": 211,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::1",
+      "start": 0
+    }
+  ],
+  "updates": 500,
+  "draws_per_window": 500,
+  "batch_size": 8,
+  "lr": 0.0003,
+  "optimizer": "Adam",
+  "weight_decay": 0,
+  "learning_rate_schedule": "constant",
+  "prediction_type": "sample",
+  "decoder_parameters": 77670023,
+  "frozen_nondecoder_unchanged": true,
+  "first_gradient_norm": 6.684730052947998,
+  "decoder_initial_sha256": "eff5e1366c4297e9987af833ec9dc07aa32273d117f9c5f1b052a8b32ab49399",
+  "decoder_final_sha256": "7b1a6eaa54eb3bcb3df2b3d19331809731db2bd8f4fda0c10f774e22d4f98b15",
+  "source_sha256": {
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722"
+  },
+  "archive_sha256": "eceaccd5134296bb98a06e95a2fdb71008b2f21b91a4868a70062df0125aec91",
+  "retained_checkpoint_sha256": "aeccf85972812ca790e41fdc3c5efddf3d0a19a1095c522c24a6fa4146556782",
+  "sampling_steps": 100,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "pose_pass_criteria": {
+    "all_seed_mean_position_cm": 0.5,
+    "all_seed_mean_rotation_deg": 5.0,
+    "windows_passing_every_seed_fraction": 0.9,
+    "all_seed_endpoint_position_cm": 1.0,
+    "all_seed_endpoint_rotation_deg": 10.0
+  },
+  "peak_reserved_gib": 1.53515625,
+  "mean_update_seconds": 0.05829458917831285,
+  "elapsed_seconds": 44.25,
+  "limits": [
+    "Same training windows evaluated; no generalization claim.",
+    "Real cached adapter contexts bypass the raw dataloader and CLIP/Adapter forward path.",
+    "Fresh decoder uses a deliberate memorization recipe, not the previous joint training optimizer.",
+    "Frozen gripper output is not evidence of new gripper learning.",
+    "No new checkpoint is retained to limit local disk usage; script/data/seed hashes bind reproduction."
+  ]
+}

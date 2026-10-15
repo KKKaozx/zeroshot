@@ -1,0 +1,29 @@
+{
+  "only_plan_difference": "learning_rate",
+  "same_initial_parameters": true,
+  "same_raw_inputs": true,
+  "same_clip_tokens": true,
+  "same_production_source": true,
+  "same_initial_generation_and_first_loss": true,
+  "independent_metrics_match": true,
+  "clip_and_gripper_unchanged": true,
+  "training_seeds": 1,
+  "sampling_seeds": 3,
+  "runner_snapshot_matches_executed_source": true,
+  "reference_report_sha256": "eb9e636331f702d8292826bd7323a9d6b63cf8039d1b61111f8033c0826cec57",
+  "files_sha256": {
+    "dropout_on_history.json": "402dc8d3d3a8845717d2508a2ebf709e3cb5d43836c4ed1a0e3bb73e91d162d5",
+    "dropout_on_losses.json": "927429f2c7d4f71e945a57de62d3f6bc7afffe93d7d544b859eb10569d44e749",
+    "dropout_on_predictions.npz": "855a3e4ddb6e87a2fc2acc1e3a8e34e4ff30e1c636e637bbcb0841497431ad43",
+    "independent_metrics.json": "b12f4dd23fbdb7f2aecb3c4ff91cd13f89caeef942a1a4b7b4d6d87ecfad0976",
+    "lr_overview.png": "dce9e9e0a2850b4f82416baa67039f7f7114977f338e74f3091a0e507d27fdcb",
+    "plan.json": "20997a95cdf62b5e69c3a7bb868aceb1589a1302f87f0518468090c6d3ee5a11",
+    "render_verify.py": "4c6047a8bcd0f46272fa460b706ee04b66d83b5fbad4739ca27abd8bdbbecabc",
+    "report.json": "16350c86b3bfedb0c77481e9ae126a2dafb6ba510301da07c173dd2ece3d7bf4",
+    "runner_snapshot.py": "401d70915a33f09187204b8c75663285f895d9d790d898099a0ded7a7f7e584f",
+    "update_0_predictions.npz": "abf6672a4c1dd9e3a17191bcd47b78563528fd2c8e6c716a322fc47301cfa1ea",
+    "update_100_predictions.npz": "838b01ec8d5c1a07e8903cc7d56a7d23b4fa427243354573791d6ce056632af2",
+    "update_20_predictions.npz": "e08f5ef25c85eff3312f48935fc4deada3ebd7abd999be908476e8a01ea4289a",
+    "update_500_predictions.npz": "d5dce9a75763f99b3cc74c5719dfbd64d5ccc4feb9f166bae3597fa06416fe66"
+  }
+}

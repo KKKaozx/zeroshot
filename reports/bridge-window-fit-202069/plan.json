@@ -1,0 +1,1772 @@
+{
+  "manifest": {
+    "date": "2026-10-13",
+    "stage": "preregistered_same_size_window_coverage",
+    "config": {
+      "action": {
+        "representation": "tool_relative_pose_open_positive_v2",
+        "position_scale_meters": 0.1,
+        "max_normalized_position": 3.0,
+        "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+      },
+      "model": {
+        "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+        "fusion_type": "cross_attention",
+        "adapter_pooling": "cls_patch_mean",
+        "decoder_type": "diffusion",
+        "diffusion_prediction_type": "sample",
+        "num_adapter_layers": 8,
+        "attention_dim": 512,
+        "num_attention_heads": 8,
+        "decoder_hidden_dim": 256,
+        "chunk_size": 16,
+        "action_dim": 8,
+        "num_diffusion_steps": 100,
+        "beta_schedule": "squaredcos_cap_v2",
+        "clip_denoised": true,
+        "dropout": 0.1,
+        "separate_gripper_head": true,
+        "trajectory_conditioned_gripper": true,
+        "gripper_head_type": "legacy",
+        "condition_on_current_gripper": true,
+        "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+        "gripper_loss_weight": 0.25,
+        "gripper_change_weight": 1.0,
+        "gripper_target_mode": "state",
+        "gripper_transition_decode": "cumulative",
+        "gripper_switch_threshold": 0.0,
+        "balanced_gripper_loss": false,
+        "diffusion_architecture": "multiscale",
+        "diffusion_down_dims": [
+          256,
+          512,
+          1024
+        ]
+      },
+      "frozen_context_dim": 1024
+    },
+    "train": [
+      {
+        "dataset_index": 11,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 39,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 28,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+        "record_index": 3,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 35,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+        "record_index": 36,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 5,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 21,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 1,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+        "record_index": 45,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 17,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 8,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 49,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 26,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 83,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 21,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 42,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 10,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 38,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 2,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 58,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 25,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 153,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 26,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 89,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 25,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 62,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 37,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 54,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 7,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 78,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 20,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 8,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 39,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 24,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+        "record_index": 3,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 32,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+        "record_index": 36,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 2,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 21,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 0,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+        "record_index": 45,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 14,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 8,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 45,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 26,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 80,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 21,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 39,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 10,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 37,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 2,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 55,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 25,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 150,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 26,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 85,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 25,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 61,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 37,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 53,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 7,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 76,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 20,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 104,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 17,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 105,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 17,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 117,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 31,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 119,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 31,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 179,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 4,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 181,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 4,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 232,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 40,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 234,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 40,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 164,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+        "record_index": 22,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 165,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+        "record_index": 22,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 187,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 20,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 189,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 20,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 202,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00025-of-01024",
+        "record_index": 15,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 203,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00025-of-01024",
+        "record_index": 15,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 98,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 2,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 100,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 2,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 125,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 44,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 127,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 44,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 135,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+        "record_index": 54,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 137,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+        "record_index": 54,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 92,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 33,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 94,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 33,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 108,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 40,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 110,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+        "record_index": 40,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 138,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+        "record_index": 6,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 140,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+        "record_index": 6,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 123,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 35,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 124,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 35,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 131,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+        "record_index": 33,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 132,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+        "record_index": 33,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 162,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+        "record_index": 13,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 163,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+        "record_index": 13,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 272,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00036-of-01024",
+        "record_index": 15,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 275,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00036-of-01024",
+        "record_index": 15,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 290,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00040-of-01024",
+        "record_index": 37,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 292,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00040-of-01024",
+        "record_index": 37,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 327,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00045-of-01024",
+        "record_index": 38,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 330,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00045-of-01024",
+        "record_index": 38,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 342,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00047-of-01024",
+        "record_index": 37,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 345,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00047-of-01024",
+        "record_index": 37,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 349,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00048-of-01024",
+        "record_index": 7,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 351,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00048-of-01024",
+        "record_index": 7,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 392,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00053-of-01024",
+        "record_index": 28,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 395,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00053-of-01024",
+        "record_index": 28,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 454,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00057-of-01024",
+        "record_index": 48,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 457,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00057-of-01024",
+        "record_index": 48,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 460,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00058-of-01024",
+        "record_index": 40,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 463,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00058-of-01024",
+        "record_index": 40,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 244,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00031-of-01024",
+        "record_index": 17,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 246,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00031-of-01024",
+        "record_index": 17,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 294,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00041-of-01024",
+        "record_index": 41,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 296,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00041-of-01024",
+        "record_index": 41,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 314,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00044-of-01024",
+        "record_index": 26,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 318,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00044-of-01024",
+        "record_index": 26,
+        "start_index": 28
+      },
+      {
+        "dataset_index": 354,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00048-of-01024",
+        "record_index": 9,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 356,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00048-of-01024",
+        "record_index": 9,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 359,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00048-of-01024",
+        "record_index": 11,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 362,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00048-of-01024",
+        "record_index": 11,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 371,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00050-of-01024",
+        "record_index": 33,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 373,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00050-of-01024",
+        "record_index": 33,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 159,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+        "record_index": 23,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 161,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+        "record_index": 23,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 175,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 41,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 176,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 41,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 207,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 26,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 209,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 26,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 210,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 36,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 211,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 36,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 215,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 41,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 219,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 41,
+        "start_index": 28
+      },
+      {
+        "dataset_index": 248,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00033-of-01024",
+        "record_index": 11,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 249,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00033-of-01024",
+        "record_index": 11,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 146,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+        "record_index": 33,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 149,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+        "record_index": 33,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 170,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 29,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 173,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 29,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 222,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00028-of-01024",
+        "record_index": 2,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 225,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00028-of-01024",
+        "record_index": 2,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 266,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00035-of-01024",
+        "record_index": 25,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 269,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00035-of-01024",
+        "record_index": 25,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 321,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00045-of-01024",
+        "record_index": 16,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 324,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00045-of-01024",
+        "record_index": 16,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 469,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00061-of-01024",
+        "record_index": 25,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 470,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00061-of-01024",
+        "record_index": 25,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 185,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 11,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 186,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 11,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 192,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 29,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 193,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 29,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 262,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00035-of-01024",
+        "record_index": 18,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 263,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00035-of-01024",
+        "record_index": 18,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 276,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00036-of-01024",
+        "record_index": 49,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 277,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00036-of-01024",
+        "record_index": 49,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 278,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00037-of-01024",
+        "record_index": 33,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 279,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00037-of-01024",
+        "record_index": 33,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 302,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00043-of-01024",
+        "record_index": 34,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 303,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00043-of-01024",
+        "record_index": 34,
+        "start_index": 4
+      }
+    ],
+    "development": [
+      {
+        "dataset_index": 20,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 21,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 22,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 23,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 64,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 65,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 66,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 67,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 68,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 69,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 70,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 71,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 72,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 73,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 74,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 75,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 114,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 115,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 116,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 177,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00021-of-01024",
+        "record_index": 19,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 178,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00021-of-01024",
+        "record_index": 19,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 194,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 195,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 196,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 197,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 198,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 34,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 199,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 34,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 200,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 38,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 201,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 38,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 226,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 227,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 228,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 229,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 230,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 16
+      },
+      {
+        "dataset_index": 231,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 20
+      },
+      {
+        "dataset_index": 237,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 0
+      },
+      {
+        "dataset_index": 238,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 4
+      },
+      {
+        "dataset_index": 239,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 8
+      },
+      {
+        "dataset_index": 240,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 12
+      },
+      {
+        "dataset_index": 241,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 16
+      }
+    ],
+    "retained_train_checks": [
+      {
+        "image_sha256": "1247a560070ca570cf68aa5460f1d8a99320c4d70c6afb5bb585697ea0b9ac1b",
+        "target_sha256": "4c7ee1594dab1a619c1779d33cd2f012fb082b8ae3fd2e5abd0cba8c2b17fb11"
+      },
+      {
+        "image_sha256": "214fecdf66de2bd1f49d1bb645fe44dcb64a3ddf43a5c6bd2f53514b96d5d1f9",
+        "target_sha256": "9019c9b26ae9d9a8b551495cc48e5d3ee918d9eacfffc96f2c21bc3051612ce3"
+      },
+      {
+        "image_sha256": "0b388aab2e93a9b8f9cb9617493d48e3a870501647ea4961f032bee3cfa55113",
+        "target_sha256": "f73d15049104f15825aa99164417e08770b21a92e29a877cddb42d99b349000e"
+      },
+      {
+        "image_sha256": "91881873b20f4468b5b7bd25a61012ae32e7159e815aa3534b17b4845b79dab5",
+        "target_sha256": "9f508eb429d43d909daadaf686751c7d1234beb89f3ebc69056d6d9a6fc1257f"
+      },
+      {
+        "image_sha256": "87ee62879e200d2c90217d8f5a524df3654126d3e093816bd89c60c024075029",
+        "target_sha256": "78f72b99c14e1383e9016350d956eb52e5ca8962778eb5b1170039ff6dfa5a23"
+      },
+      {
+        "image_sha256": "a800defdbb7452ac2a5872374dcb6b29411be283d964a146135bf9f6cabea68d",
+        "target_sha256": "a1411b1d14609f411ced3eae869abbf7422872a191ca9ec7d6c657cd86ae6402"
+      },
+      {
+        "image_sha256": "1bb5cafba84d52dbd75ec51a2efc1fb7f80c70da697702377b44d225176f91bb",
+        "target_sha256": "c2753a1120b4eed7164cfc8c4edca21967fd2057fcb32c73ac657cf3c6ea6a00"
+      },
+      {
+        "image_sha256": "e7ea7523fc3f9a2c925fba18afb28183aebce18b62779456f2d08ace115688fc",
+        "target_sha256": "398bcb368436bf59b4551fbeb111eb2323f614b343ade267687c58d4dd6c0d7f"
+      },
+      {
+        "image_sha256": "e2993aa3b2fbf10e507df8bcde7f272e6b4b5df6c5f778e965f2d0fc9a2160d3",
+        "target_sha256": "2d1f7f3e557cec66b1dcaa5ff7f039dcd008cb90235354893b523bf7209cf45c"
+      },
+      {
+        "image_sha256": "1fc2016a588d18b0a47ddbfb1bd967bb8854c78c4a21a409ac6f918ed6a9515f",
+        "target_sha256": "88b3844484ef0904d47b19dfbadbdd0f7e6417e90e80cf2a72a4a8163e214c65"
+      },
+      {
+        "image_sha256": "01171ef3de8732e3635f3936471c7ac1213740db75d013febc6ecee071f6de6b",
+        "target_sha256": "f77beeadc2e40e164455d9946f620d0e9117ba9aa3474618fc71aed676f286cd"
+      },
+      {
+        "image_sha256": "cb2390b4b07fe17ad0c62384a863c92c38053a9841a4e938c3d60d9bc4af4f27",
+        "target_sha256": "b30a796091f6a17078f0e96378580a1dd6fbedda7d10446840132415698047be"
+      },
+      {
+        "image_sha256": "88ad5d1f017d0e7b7f3b3558f33c4da755e06d0d59b8a35528a08b8624be731d",
+        "target_sha256": "074f338ff653f4ddfe45ef60adf340608f1a9937c3a0e853b8e80b2e01322e9c"
+      },
+      {
+        "image_sha256": "f1f053ed684e6b501b4a421f251d24312f7e771a6930415310e771e87dde278f",
+        "target_sha256": "a6f1617d228452e20f0eb044a8f5919fe354c2ce20079fc1d0f54a8b1a15cfaa"
+      },
+      {
+        "image_sha256": "9ee31a0bc0538d990f715112a99ea138c84d4a2f89065faed2c75ba2d42ec1f8",
+        "target_sha256": "6e3fe685c99c698110b861fe16adc6e6a6511f45ed076b068e87d8fd9a506253"
+      },
+      {
+        "image_sha256": "f25a5a9061b0820ebbab13abb7d704d594673ce3b3fc8dc8e70db41c32ae4636",
+        "target_sha256": "4dd5c8b3b75163aa9e2e4e269374ab36a43bb2a5bb03a97bb4a2ddcb9a7e75f7"
+      },
+      {
+        "image_sha256": "4571a099b9d0ab4e453383aaea0659a6cf8ada5079d1fe0bf2bdec5799207dea",
+        "target_sha256": "fc0009c919b0863a880a7300f9a61b64a99c312a6e38268013618e1c18eeec02"
+      },
+      {
+        "image_sha256": "758d7153a7c279af110891e92e358f80c8be656d460ee60a14fe09038abde438",
+        "target_sha256": "3520118bcfda0cf3a6041838b273c51d981544896a4cc14b5c9ec82209f96e6d"
+      },
+      {
+        "image_sha256": "54b5772b94a62eea49ce47be645c4d0819ab2d43d9050a03d8e165fef167e6eb",
+        "target_sha256": "89196dfb66a4d9740e6808ab10fbbdd8522403be3380de544d3f08b6e603aae1"
+      },
+      {
+        "image_sha256": "27f36d1fb8a77a83e8e3723cc7256456788265c045cde7b8bcd41a53a84a2de7",
+        "target_sha256": "4fed1f97233cdb686c643b034b0f91e19d89b103db059dd249dcec7dc44af2b0"
+      },
+      {
+        "image_sha256": "efcfc1f383fdd1a53bd40e6ce038fcc115b45e16196a97f33cdcd8e0ae9373a9",
+        "target_sha256": "eee4a933723e593b38f4544b01dae8cb89a43fc11185d601e374c258e3077be1"
+      },
+      {
+        "image_sha256": "f0f460208574d551b80dfcc8bd5440c9ce5c50a6993e71478ff2bb324a6a1e97",
+        "target_sha256": "6cc07800b8372f98113f5fd53252d078945c2b046a6286da1be34fb4e1549765"
+      },
+      {
+        "image_sha256": "ef2138d2d56dc66e4b8a864309a7f0ed927b1123b97f04bac53f583509083aca",
+        "target_sha256": "dc160165faee155d63c623f39696703df4cd9bcad6cb4bebd1127d46d2780e55"
+      },
+      {
+        "image_sha256": "9b55d3d4ae962815ec10978a568d20d4621565bc312c6183bb1b4b3489700ea5",
+        "target_sha256": "f6eec705752a34475255d41fe558479dd532125b4544c062cd1c0165c81aaa3a"
+      },
+      {
+        "image_sha256": "bc40590828b0eec7b613110ece94082ea17f9bb7f76d09e9f8c48ff7f2f3b63d",
+        "target_sha256": "822bcba0e6008d9327aada393dab6e87cc85fd8080da3b94f857c460c9274fe6"
+      },
+      {
+        "image_sha256": "52a77331190ffccf33427d1229f79c311be5d8d7b1a4c3c1a507860f8001b61a",
+        "target_sha256": "5118f91fe63069ae2bfb51fb500b91a728848d7ef01a8caa2e8c0b5216744845"
+      },
+      {
+        "image_sha256": "795c1e1f5bf2970a25e32f883650afe18bf452acfd3d1672ecb63174d9350a79",
+        "target_sha256": "bc3356a7ca57fb8a0989ad42b747bcdcba818bebc8414ca90bcd7e1f96b807b8"
+      },
+      {
+        "image_sha256": "8f96f7d8d0e4a1d6ae9866fd4a056905a4fcc0a6f952a0488e3c42c986f0168f",
+        "target_sha256": "9009a8113435f5ce245fbb6ac075d92c6eb0dfbf57e6a5ec83d4610ae5387824"
+      },
+      {
+        "image_sha256": "a0adc10800d9f1a9f75b83e6c6ed3931aec4ec14ecb40fa7e90cec62a0093efe",
+        "target_sha256": "40035ce7257f0fb0d4eb1de106f4c6632fc8739de25ff415df63a724d9723cac"
+      },
+      {
+        "image_sha256": "f7ed237f5e650a9daa9aebb32e2160ac36f1bda6842f6149ab383ff3477b6bbf",
+        "target_sha256": "b5a73cbc8d8b0e874b18282f2e3426e938d2e6b64d19ce4681e906b3e256db51"
+      },
+      {
+        "image_sha256": "7ac41188546d4ff3006056d9008eb3c71c13d02860e231d7cb1b738a559f8d67",
+        "target_sha256": "d062895cdb100d5dce4c75a2e01435e77ccd424fdf7de728c62b0ecf2f4f7aba"
+      },
+      {
+        "image_sha256": "4d06aa8e53a90a590ba7ae396a97dffe2bb015c843feb9729d9d2241e7eab627",
+        "target_sha256": "db375bd3ba93882218279ec474569fadb97364d647cba08d45fbfbea83a1ecf8"
+      }
+    ],
+    "reference_plan_sha256": "79c794257808d5e74ac1bf6994b2805b7429e4ed8e894699719d5cd9a9339e37",
+    "reference_report_sha256": "7af74a16fdf6d6530861a13bde2046b0a401b0c19ae947018c2aef54bcf9d7f3",
+    "source_sha256": {
+      "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+      "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+      "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+      "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+      "check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+      "bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+      "trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+      "check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+      "fit_bridge_window_coverage.py": "25c64dc090600a21bdfa9ae8bb114dc4ff8a9fec1d90a681236a6cc9d8e244cb",
+      "window_coverage_input_contract.py": "07c23ff631ce5a478787951fd0af4e3977028d2ce0b133f5feb3a17794574883"
+    },
+    "initialization_seeds": [
+      43
+    ],
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "arms": [
+      "reduced"
+    ],
+    "schedule_sha256": {
+      "mixed": "6ffbecb8feeb1da79f0bedc234112900e1c8633a3e675b368a17b72739dfdb61"
+    },
+    "changing_variable": "39 input-window identities substituted within same64 training demonstrations;89 retained",
+    "batch_size": 8,
+    "updates_per_arm": 8192,
+    "draw_slots_per_window": 512,
+    "optimizer": "Adam",
+    "lr": 0.0001,
+    "weight_decay": 0,
+    "learning_rate_schedule": "1e-4 for first256 cycles, then1e-5 for256 cycles",
+    "gradient_clip": 1.0,
+    "loss": "x0 pose MSE only; frozen gripper excluded from verdict",
+    "context": "Repeated-current two-call Adapter plus zero-initialized history projection, shared by both arms",
+    "sampling": "Production native 100-step cosine DDPM, sample/x0 target; no modified sampler",
+    "train_fit_gate": "Each draw path<=0.5cm/5deg, endpoint<=1cm/10deg; >=90% windows pass every draw (116/128)",
+    "preflight": "16common+16continuous/restored/reduced; verify168 inputs, observe16 retained+16 added, no PT",
+    "evaluation": "All128 train windows at frozen monitor points; unchanged40 development windows at final8192 only",
+    "limits": [
+      "One initialization43; repeated development set is exploratory, not fresh test generalization.",
+      "Same demonstrations and count; window contents change with phase. No unique-layer or root-cause claim.",
+      "Frozen gripper; pose-control results cannot establish grasping or task success.",
+      "Original retained_train/added_train metric groups mean first64/second64 row slots, not unchanged/substituted windows."
+    ],
+    "storage_policy": "No installations/raw dataset or model downloads. One final trainable PT cluster-only cap1GiB. Local package cap100MiB.",
+    "revision": "Same model, initialization43, row schedule,8192 updates and late LR as201663",
+    "input_reference_manifest_sha256": "1957102ac9c92956b08e5bbc43a1b8cf6337b9773459e79a08d69c6eee90818c",
+    "input_reference_files_sha256": {
+      "metadata.json": "46783791ba1bddbaa1195f8dbabac0327514f6be138fc832c6700fea54df8886",
+      "arrays.npz": "4bf5d3973470bcbbd03110fd54fdec24ec0049b76c45bdb81970b6516c2b9f12"
+    },
+    "input_validation": {
+      "raw_and_decoded_identity": "Exact SHA256 and image dimensions",
+      "absolute_tolerance": {
+        "images": 1e-06,
+        "targets": 1e-06,
+        "currents": 0
+      },
+      "relative_tolerance": 0,
+      "gripper_labels": "Exact",
+      "cluster_preflight_to_fit_processed_hashes": "Exact in the same environment",
+      "evidence": "User supplied cluster CPU audit 198856: raw equal, image max 4.76837158203125e-7, target max 4.470348358154297e-7"
+    },
+    "trace": {
+      "origin_manifest_sha256": "af8298a1325b604d319cb8aced88c5bdc2753bcf57bd13e19b919cb2af53b279",
+      "origin_report_sha256": "5ca346a7c1c658128d8a850d7e3a75d1d6cbee403b4cbb0ef68a6bd7dd322662",
+      "train_monitor_updates": [
+        0,
+        2048,
+        4096,
+        6144,
+        7168,
+        7680,
+        8192
+      ],
+      "development_evaluated_at": "Final update only; all40 windows, no checkpoint selection",
+      "gradient_logging": "Every update, before clipping: Adapter, U-Net and history projection",
+      "observer_guard": "Restore NumPy/Torch RNG and per-module mode; parameters/buffers immutable during evaluation",
+      "checkpoint_budget_bytes": 1073741824,
+      "final_checkpoints": "One final reduced trainable state, cluster-only",
+      "local_weights_saved": false,
+      "max_updates": 8192,
+      "inference": "Full native DDPM100, same three sampling seeds"
+    },
+    "late_lr": {
+      "origin_report_sha256": "4d1fe36e376762c4d7374577264833b90a5d1b6a01839a5a30697d5fbc78fdb2",
+      "origin_manifest_sha256": "a95d9ff6727fba65f045f5c264dc1c03b6abbfdbbcdb03398850aa9419d2ecdb",
+      "branch_update": 4096,
+      "final_update": 8192,
+      "rates": {
+        "constant": 0.0001,
+        "reduced": 1e-05
+      },
+      "initialization_seed": 43,
+      "common_state": "Identical weights and Adam moments/step; no optimizer reset",
+      "inference": "Unchanged native DDPM100, three original sampling seeds",
+      "control_reproduction_tolerance": {
+        "position_cm": 0.1,
+        "rotation_deg": 0.5
+      },
+      "warmup_must_pass_existing_fit_gate": false,
+      "checkpoint_budget_bytes": 1073741824,
+      "checkpoints": "One final reduced trainable state on cluster only; no warmup PT",
+      "hypothesis": "Does broader indexed input-window coverage improve held-out action prediction at identical size and exposure?"
+    },
+    "growth": {
+      "old_train_count": 64,
+      "new_train_count": 128,
+      "train_episodes": 64,
+      "heldout_windows": 40,
+      "retained64_manifest_sha256": "8359b789493915dad3bf429ccf7ad3e1fb6ff7103fa255f7e51db1c25517238b",
+      "retained64_contract_sha256": "34fb3835f682445061f5a34f57074870ffab1c405e0a1b180231da0e8b5cca90",
+      "retained64_report_sha256": "83a0538889c201cf034778b896eee325bb33f30fa4c550bd659274893d91890f",
+      "inventory_sha256": "bcd80954a895580068485f7f665d58b07e179341c8c07c161ec2bc6c0caec0b2",
+      "selection_report_sha256": "1ea63789e392d45db375b9e44c75a06e2cac6c910461af26054e5d1d96aab781",
+      "added_selection": "Per retained task counts, lexicographically first remaining train episodes with>=2 windows; first/last indexed window",
+      "task_window_counts": {
+        "close microwave": 32,
+        "close the drawer": 24,
+        "open the drawer": 24,
+        "take broccoli out of pan": 24,
+        "turn lever vertical to front": 24
+      },
+      "new_reference_sha256": {
+        "arrays.npz": "1d5704a893442a828b400cd653c92c72a8c0ff904a2faff48abfcd3b4240af91",
+        "metadata.json": "e9864168338d41e236a63e7d7b826890c6886f73b68637bb924cf811143aeeb8"
+      },
+      "input_check_order": "Original32+dev40+growth64_added32+new64; model retained64+new64+dev40",
+      "budget_interpretation": "Twice total updates versus64 to retain512 exposures/window; not fixed-total-compute comparison"
+    },
+    "window_coverage": {
+      "control_report_sha256": "d6d31fff27f7c8e40af3f66e962918e993583d44697da1dd96371d541e3ade00",
+      "selection_plan_sha256": "60f6566177946962439cfa77214214c8a1dbe8f3f29b0a5cec46f50e352f8f9c",
+      "changed_row_indices": [
+        13,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        50,
+        53,
+        55,
+        57,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        100,
+        102,
+        104,
+        106,
+        108,
+        110,
+        112,
+        114
+      ],
+      "retained_windows": 89,
+      "substituted_windows": 39,
+      "indexed_phase_counts": {
+        "middle": 51,
+        "last": 39,
+        "first": 38
+      },
+      "base_files_sha256": {
+        "manifest.json": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+        "growth128_input_contract.py": "bde3fd9da5d0ae8f67c1511418600121ae19729b368c732c0982e282c67b14d1",
+        "fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70",
+        "new_reference/metadata.json": "e9864168338d41e236a63e7d7b826890c6886f73b68637bb924cf811143aeeb8",
+        "new_reference/arrays.npz": "1d5704a893442a828b400cd653c92c72a8c0ff904a2faff48abfcd3b4240af91"
+      },
+      "new_reference_sha256": {
+        "metadata.json": "de281b0844841d0fd74317ded17d24ab0f427b1cf46e23514bd1fb57d0a1ef2b",
+        "arrays.npz": "e7646bcb66bcee3e61f82e7a67af9150aadaa5c92064dd8771749dba059d32eb"
+      },
+      "selection_rule": "Keep existing middle-window pairs and episodes with only two eligible windows; for remaining episode pairs substitute nearest midpoint (lower-start tie), retaining first/last in sorted task/episode order to balance endpoints within each task",
+      "verdict_rule": "First require training fit, then compare final40-window mean position and rotation against201663 andstatic; report tasks/demos/phases. One initialization, repeated development set: exploratory only."
+    }
+  },
+  "runtime_config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  }
+}

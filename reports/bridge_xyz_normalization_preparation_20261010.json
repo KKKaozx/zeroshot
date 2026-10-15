@@ -1,0 +1,42 @@
+{
+  "stage": "prepared_not_cluster_executed",
+  "experiment": "paired_training_xyz_axis_limits_with_physical_unit_MSE_compensation",
+  "source_training_job": 193761,
+  "training_statistics_job": 196693,
+  "training_statistics_sha256": "6ad908e091906c637fe0aa8111bc127d3aec6ae5c8762dd537d47e4927adcffb",
+  "local_checks_passed": [
+    "source syntax",
+    "Bash syntax",
+    "inverse normalization",
+    "loss equivalence and nonzero finite gradient",
+    "physical clipping",
+    "identity and custom identity full100-step bitwise replay",
+    "identity training bitwise replay",
+    "original pose tensors used by gripper",
+    "nonidentity full sampling finite and quaternion normalized",
+    "five frozen core module hashes unchanged"
+  ],
+  "preflight_updates_per_group": 6,
+  "train_updates_per_group": 18360,
+  "downloads_required": false,
+  "full_training_requires_passed_preflight": true,
+  "evaluation_included": false,
+  "additional_cluster_checkpoint_gib_approx": 1.1,
+  "files": {
+    "bridge_xyz_normalization.py": "9ed9b8798761fbb7c3d6d1babb123d189bf292348d2b2b7f3c38757d6891b2ae",
+    "run_bridge_xyz_normalization.py": "3f5fa02701440552a183693e55b8b673da4063907ed54e549df9dfde510d2ce9",
+    "run_bridge_xyz_pair.py": "57d1b93b1054708a7365ad2ee512fc5a91015a51b1ba2c1cd0f57e47dc0f363c",
+    "check_bridge_xyz_normalization.py": "b9ea91cadb5c6e5f139340149496d19655c4f279e6b030d4078558ff4c66dff7",
+    "training_xyz_stats.json": "6ad908e091906c637fe0aa8111bc127d3aec6ae5c8762dd537d47e4927adcffb",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "preflight.sh": "3f26269cec880ff2bf15c013ed0e27812fab491b85fb173a4d522e0eee80d78c",
+    "train.sh": "99e5758376f4440500d9fdebaa1671d76085532dd142f792c55d0a9e3374561f",
+    "README.md": "dd1a4d3b4ec1ec66128cd6286b219471a04b2dc0470566ce92e25e10d1f82b82"
+  },
+  "archive": "D:\\ntu_related\\dissertation\\GPU cluster\\bridge_xyz_normalization_v1.zip",
+  "archive_bytes": 32514,
+  "archive_sha256": "e61ff2b9a4e2f3e45d393fb4990eaffe53c254e2103334d7cb3e5fb79293ef82",
+  "zip_integrity_passed": true
+}

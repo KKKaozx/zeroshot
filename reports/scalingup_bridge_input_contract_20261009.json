@@ -1,0 +1,812 @@
+{
+  "stage": "real_bridge_input_contract_audit",
+  "trained": false,
+  "model_loaded": false,
+  "source_report_sha256": "c50125e1fb48a96982acc20ad607be78dd2b6cf8ea5698c95b1c1a39b8b10f54",
+  "dataset_module_sha256": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+  "windows": 10,
+  "tasks": [
+    "close microwave",
+    "close the drawer",
+    "open the drawer",
+    "take broccoli out of pan",
+    "turn lever vertical to front"
+  ],
+  "targets_checked": 160,
+  "reserved_test_targets_read": false,
+  "validation_payload_read": false,
+  "position_roundtrip_max_error_m": 1.666000493116826e-08,
+  "quaternion_matrix_roundtrip_max_absolute_error": 1.7881393432617188e-07,
+  "upper_two_rows_6d_roundtrip_max_absolute_error": 1.7881393432617188e-07,
+  "rows": [
+    {
+      "window": {
+        "dataset_index": 0,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+        "record_index": 45,
+        "start_index": 0
+      },
+      "steps": 23,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.4077054560184479,
+        1.0008161067962646
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 23,
+          "bytes_at_input": 31324,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 67.01478275715345,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 23,
+          "bytes_at_input": 31656,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 69.87603685431748,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_2": {
+          "frame_count": 23,
+          "bytes_at_input": 32839,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 71.5007578679518,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 23,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 2,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 21,
+        "start_index": 0
+      },
+      "steps": 38,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.6881998181343079,
+        1.0099300146102905
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 38,
+          "bytes_at_input": 34148,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 63.233049143461585,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 38,
+          "bytes_at_input": 30934,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 67.38342190334852,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_2": {
+          "frame_count": 38,
+          "bytes_at_input": 30633,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 61.074354745293526,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 38,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 8,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 39,
+        "start_index": 0
+      },
+      "steps": 38,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        1.0054124593734741,
+        1.0054124593734741
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 38,
+          "bytes_at_input": 30881,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 61.64277747151706,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 38,
+          "bytes_at_input": 26455,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 61.556945308834656,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_2": {
+          "frame_count": 38,
+          "bytes_at_input": 26975,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 64.40852648423963,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 38,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 14,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 8,
+        "start_index": 0
+      },
+      "steps": 38,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.9981546401977539,
+        0.9994885921478271
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 38,
+          "bytes_at_input": 22127,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 59.18254870295501,
+          "pixel_min": 1,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 38,
+          "bytes_at_input": 12870,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 59.53276713232808,
+          "pixel_min": 0,
+          "pixel_max": 181
+        },
+        "steps/observation/image_2": {
+          "frame_count": 38,
+          "bytes_at_input": 22890,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 51.14871842682507,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 38,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 24,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+        "record_index": 3,
+        "start_index": 0
+      },
+      "steps": 48,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.05403778702020645,
+        0.9844722747802734
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 48,
+          "bytes_at_input": 17630,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 62.69648511435607,
+          "pixel_min": 0,
+          "pixel_max": 220
+        },
+        "steps/observation/image_1": {
+          "frame_count": 48,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        },
+        "steps/observation/image_2": {
+          "frame_count": 48,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        },
+        "steps/observation/image_3": {
+          "frame_count": 48,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 32,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+        "record_index": 36,
+        "start_index": 0
+      },
+      "steps": 34,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.12930262088775635,
+        1.0027955770492554
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 34,
+          "bytes_at_input": 26956,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 55.34253794974921,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 34,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        },
+        "steps/observation/image_2": {
+          "frame_count": 34,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        },
+        "steps/observation/image_3": {
+          "frame_count": 34,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 37,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 2,
+        "start_index": 0
+      },
+      "steps": 23,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.1302075982093811,
+        0.9981546401977539
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 23,
+          "bytes_at_input": 25706,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 56.88245942355531,
+          "pixel_min": 0,
+          "pixel_max": 232
+        },
+        "steps/observation/image_1": {
+          "frame_count": 23,
+          "bytes_at_input": 26447,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 68.99275617816342,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_2": {
+          "frame_count": 23,
+          "bytes_at_input": 26772,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 61.78110668348785,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 23,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 39,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 10,
+        "start_index": 0
+      },
+      "steps": 38,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.457809716463089,
+        1.0105689764022827
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 38,
+          "bytes_at_input": 33664,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 58.90867835741235,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 38,
+          "bytes_at_input": 32478,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 67.76943239773803,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_2": {
+          "frame_count": 38,
+          "bytes_at_input": 30165,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 70.17458500869225,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 38,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 45,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 26,
+        "start_index": 0
+      },
+      "steps": 48,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.9988223910331726,
+        0.9994885921478271
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 48,
+          "bytes_at_input": 17975,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 49.74459123327997,
+          "pixel_min": 0,
+          "pixel_max": 250
+        },
+        "steps/observation/image_1": {
+          "frame_count": 48,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        },
+        "steps/observation/image_2": {
+          "frame_count": 48,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        },
+        "steps/observation/image_3": {
+          "frame_count": 48,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    },
+    {
+      "window": {
+        "dataset_index": 53,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 7,
+        "start_index": 0
+      },
+      "steps": 23,
+      "targets_checked": 16,
+      "image_fields": [
+        "steps/observation/image_0",
+        "steps/observation/image_1",
+        "steps/observation/image_2",
+        "steps/observation/image_3"
+      ],
+      "pose_history_indices": [
+        0,
+        0
+      ],
+      "history_first_observation_repeated": true,
+      "prior_command_at_first_observation_available": false,
+      "measured_gripper_range": [
+        0.07112513482570648,
+        0.9974852800369263
+      ],
+      "image_payloads": {
+        "steps/observation/image_0": {
+          "frame_count": 23,
+          "bytes_at_input": 31970,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 64.59068996322556,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_1": {
+          "frame_count": 23,
+          "bytes_at_input": 31603,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 68.3548679911625,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_2": {
+          "frame_count": 23,
+          "bytes_at_input": 34093,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 68.97125290332697,
+          "pixel_min": 0,
+          "pixel_max": 255
+        },
+        "steps/observation/image_3": {
+          "frame_count": 23,
+          "bytes_at_input": 1651,
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "pixel_std_at_input": 0.0,
+          "pixel_min": 0,
+          "pixel_max": 0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Only the 10 locally retained windows from the prior fixed training probe were read, not the full 1836-window training pool.",
+    "Reconstructed future observed poses are reached-state labels, not verified absolute commanded poses.",
+    "Pose history at episode start repeats state[0]; previous commanded gripper state at episode start is not supplied.",
+    "Sensor gripper measurements are not substituted for command flags.",
+    "No normalizer fitted; future normalizer must use only the complete selected training partition.",
+    "No second camera is synthesized; no paper reproduction or task-success claim.",
+    "Presence of an image field does not identify it as a wrist camera; camera role/calibration not verified."
+  ]
+}

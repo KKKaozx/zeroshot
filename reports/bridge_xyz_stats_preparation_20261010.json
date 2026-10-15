@@ -1,0 +1,36 @@
+{
+  "stage": "prepared_not_executed",
+  "purpose": "Frozen complete training xyz label statistics before a normalization-only control",
+  "training_windows": 1836,
+  "training_action_targets": 29376,
+  "normalizer_fit_partitions": [
+    "train"
+  ],
+  "gpu_required": false,
+  "loads_clip": false,
+  "trains_model": false,
+  "changes_labels": false,
+  "local_checks": [
+    "Python syntax",
+    "Bash syntax",
+    "Known axis distributions",
+    "Constant axis handling",
+    "Normalization inverse",
+    "Effective MSE multipliers",
+    "Nonfinite rejection",
+    "Five frozen core source hashes"
+  ],
+  "files": {
+    "audit_bridge_xyz_distribution.py": "f0bf454e7211606c08c7815a1ec5bbf27125cc3a62645666c538f4b53906347c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "evaluate_bridge_one_step_sampler.py": "e49df63dca4c612bd967d04ea48c1d207028356b33ff084e93edcefdb6ac6ffe",
+    "xyz_stats.sh": "4ddac84c8d954da1ac0e8a7a067cafb94b5e08e3c5c5d534c752ea143bfefed3",
+    "README.md": "8f8d139a1862c3943a7a548b41374fab20c41727865aa284aa1a8ae2e08b4ecd"
+  },
+  "archive": "D:\\ntu_related\\dissertation\\GPU cluster\\bridge_xyz_stats_v1.zip",
+  "archive_bytes": 20789,
+  "archive_sha256": "3c52473a919e9d9a1041492e4cb1b94f6b951339b2b82b9035e942739a70df24",
+  "zip_integrity_passed": true,
+  "cluster_executed": false
+}

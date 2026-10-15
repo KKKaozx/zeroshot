@@ -1,0 +1,155 @@
+{
+  "verified": true,
+  "formal_required_files": 27,
+  "prediction_snapshots_verified": 16,
+  "updates_per_arm_verified": 8192,
+  "both_training_fit": true,
+  "training_passing_windows": {
+    "zero": 127,
+    "real": 117
+  },
+  "train": {
+    "zero": {
+      "path_position_cm": 0.186144477536503,
+      "path_rotation_deg": 0.6666999362332088,
+      "endpoint_position_cm": 0.2504074690548663,
+      "endpoint_rotation_deg": 0.7573752200567426
+    },
+    "real": {
+      "path_position_cm": 0.2680917359203382,
+      "path_rotation_deg": 1.0665519372177859,
+      "endpoint_position_cm": 0.3547464420625741,
+      "endpoint_rotation_deg": 1.4089035363445905
+    }
+  },
+  "development": {
+    "zero": {
+      "path_position_cm": 8.878218053457209,
+      "path_rotation_deg": 16.47804249090317,
+      "endpoint_position_cm": 11.542120134463183,
+      "endpoint_rotation_deg": 22.653137536515487
+    },
+    "real": {
+      "path_position_cm": 8.381654748014052,
+      "path_rotation_deg": 15.99391770130639,
+      "endpoint_position_cm": 10.71061926355253,
+      "endpoint_rotation_deg": 22.287617579078972
+    },
+    "static": {
+      "path_position_cm": 8.21232607389037,
+      "path_rotation_deg": 15.098500432102608,
+      "endpoint_position_cm": 10.565334249436834,
+      "endpoint_rotation_deg": 19.986393321428388
+    }
+  },
+  "development_demos_position_improved": 6,
+  "development_demos_rotation_improved": 7,
+  "development_demos_both_improved": 5,
+  "real_demos_position_better_than_static": 5,
+  "candidate_screen_passed": true,
+  "development_static_protocol_passed": false,
+  "episode_equal_weighted_development": {
+    "zero": {
+      "path_position_cm": 8.049195690810679,
+      "path_rotation_deg": 15.865244760711906,
+      "endpoint_position_cm": 10.576822974392673,
+      "endpoint_rotation_deg": 21.491923549481292
+    },
+    "real": {
+      "path_position_cm": 7.689168462444688,
+      "path_rotation_deg": 15.515146104002692,
+      "endpoint_position_cm": 9.910040359287057,
+      "endpoint_rotation_deg": 21.122162052976368
+    }
+  },
+  "zero_original_prediction_comparison": {
+    "not_applicable": true,
+    "reason": "Initialization42 differs from original201663 initialization43; exact replay is verified within same-initialization preflight."
+  },
+  "max_float64_metric_difference": {
+    "path_position_cm": 1.3942756815765733e-06,
+    "path_rotation_deg": 0.002666233227437864,
+    "endpoint_position_cm": 1.8159877086532106e-06,
+    "endpoint_rotation_deg": 0.004279854313541498
+  },
+  "artifact_sha256": {
+    "zero/report.json": "91a088eb76b501d712c83cc791c3ce0ab2193c36231ddafdea709a3432dcaf70",
+    "zero/plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928",
+    "zero/runner_snapshot.py": "03dd5abf13022a3b8616d6727507164dead3bbdae7bb4bb3967d13685f03a89e",
+    "zero/common_updates.jsonl": "aa85bfe274c0e31adf90289c989a94d32c79925bb86b777729dfe979dbdd4070",
+    "zero/reduced_updates.jsonl": "bc0b514995ba1fe03b0c95e2a17b4742d525a477d1ced73754f5decf9d6199eb",
+    "zero/common_u0000_train.npz": "9908a0a8ae4fa879f5f6baeab3145e9a38686e35d09e3836364fd13802de8262",
+    "zero/common_u2048_train.npz": "814882f054b09f0d85b02e76fd64b8f0da02a4c745689fb136446eedb8451b18",
+    "zero/common_u4096_train.npz": "a6fb8b5150784dfa4c46c294ab5e55cdb17475cca9b4947243e0a879ef6f17fc",
+    "zero/reduced_u6144_train.npz": "6056058250ad355ff35a544421a895e18b8073270321894de4f740ecb9906a5d",
+    "zero/reduced_u7168_train.npz": "007d70bbdfac4682c1e77604b56ef46619411e6335f79f9595d2e5f50fe0ddeb",
+    "zero/reduced_u7680_train.npz": "7cca9b9b1a93101ccef273020ebf0e2935bc0e3cf34449b61a3d77c133cfcf39",
+    "zero/reduced_u8192_train.npz": "a21e4cea776ce9cc87e8deb5036dab3a8604a6b64078677804e31b3da1eba159",
+    "zero/reduced_u8192_development.npz": "c1e14c6db4b191364f3a88ef3566513afaf29e36993f94c6e342f6b0637b2a3f",
+    "real/report.json": "0907f80091a55979c4b60c782527698aad5fb8ce15b1415c4d32c9c494d01eeb",
+    "real/plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928",
+    "real/runner_snapshot.py": "03dd5abf13022a3b8616d6727507164dead3bbdae7bb4bb3967d13685f03a89e",
+    "real/common_updates.jsonl": "8594407cea59190512d98b169c08e804ecfe17fb7cb96a6759c475e90f70398c",
+    "real/reduced_updates.jsonl": "3bc3c8fe35313418a26377eecd3c4f7e5254b06b3d63947d5c701bfd54b997ae",
+    "real/common_u0000_train.npz": "9908a0a8ae4fa879f5f6baeab3145e9a38686e35d09e3836364fd13802de8262",
+    "real/common_u2048_train.npz": "553f56071e79179ea312f38bf32e9c494f8790c42903d19f4ad7f436393b99fd",
+    "real/common_u4096_train.npz": "f159d6c0cf9cf6a712c0197237c24f0059b62d65cac234dcb5b186505a438d51",
+    "real/reduced_u6144_train.npz": "6e969b1a655a7072f9169d8ad646dbf201a471417d3bcfec5b563797f7914e1e",
+    "real/reduced_u7168_train.npz": "92c5da711dc2100fb1758755e551fc393a7a2c575a7f8911d3d5e78a39d2bd60",
+    "real/reduced_u7680_train.npz": "326fd930957178b286aba85b9c514daaa6929f13e0cd3940dec1d7a7ad74441a",
+    "real/reduced_u8192_train.npz": "b8200f00d77c358b863cc252d880085233a36a0366fb7671cacc1c1415f5e764",
+    "real/reduced_u8192_development.npz": "8b7ba0b43d8e0fc0754039c2498d17257ef695991d5ccbafd50278a7eb049c5c"
+  },
+  "preflight_verified": true,
+  "checkpoints_downloaded": false,
+  "checkpoint_contents_verified_locally": false,
+  "cluster_checkpoint_total_bytes": 1058753284,
+  "action_context_state_checks_verified": true,
+  "initialization_seed": 42,
+  "init_replication_not_executed": false,
+  "next_step": "Candidate screen repeated but development still worse than static: close this bounded state experiment as partial benefit; prepare the same-Bridge author implementation reference/interface plan, without further state or seed sweeps.",
+  "limits": [
+    "Two fixed training initializations; three sampling seeds per initialization are not independent training replications.",
+    "Development reused for diagnostics; no untouched test or closed-loop task success."
+  ],
+  "replication": {
+    "first_pair_job": 202278,
+    "replication_pair_job": 202463,
+    "initialization_seeds": [
+      43,
+      42
+    ],
+    "candidate_screen_repeated": true,
+    "position_improved_in_both_initializations": 5,
+    "rotation_improved_in_both_initializations": 4,
+    "paired_development_change_by_initialization": {
+      "43": {
+        "path_position_cm": -0.37839954614165805,
+        "path_rotation_deg": -0.5914312906953079,
+        "endpoint_position_cm": -0.6308892109457283,
+        "endpoint_rotation_deg": -2.2773537633199012
+      },
+      "42": {
+        "path_position_cm": -0.4965633054431571,
+        "path_rotation_deg": -0.4841247895967804,
+        "endpoint_position_cm": -0.8315008709106522,
+        "endpoint_rotation_deg": -0.3655199574365149
+      }
+    },
+    "no_further_seed_selection": true,
+    "protected_test_evaluated": false
+  },
+  "all_training_windows_fit": {
+    "zero": false,
+    "real": false
+  },
+  "training_gate_definition": {
+    "window_mean_position_cm_max": 0.5,
+    "window_mean_rotation_deg_max": 5,
+    "fraction_all_three_sampling_seeds_pass_min": 0.9,
+    "per_sampling_seed_mean_position_cm_max": 0.5,
+    "per_sampling_seed_mean_rotation_deg_max": 5,
+    "per_sampling_seed_endpoint_mean_position_cm_max": 1,
+    "per_sampling_seed_endpoint_mean_rotation_deg_max": 10
+  }
+}

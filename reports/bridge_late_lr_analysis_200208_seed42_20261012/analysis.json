@@ -1,0 +1,48 @@
+{
+  "verified": true,
+  "initialization_seed": 42,
+  "report_sha256": "f48e3f61d8cd2e57d6b2e948636012e0b6ed2bc1aecfae55c1aad886604a01ed",
+  "common_state_and_adam_identical": true,
+  "common_predictions_and_constant_final_exactly_reproduce_origin": true,
+  "all_reduced_monitor_points_fit": true,
+  "reduced_final": {
+    "position_mm": 1.077699059780896,
+    "rotation_deg": 0.4062679772985243,
+    "endpoint_position_mm": 1.4006790342680056,
+    "endpoint_rotation_deg": 0.3877511296745866,
+    "window_mean_position_max_mm": 1.916244651556103,
+    "individual_target_position_max_mm": 3.301948210567045,
+    "passing_windows": 32
+  },
+  "training_windows_position_improved": 32,
+  "development_episodes_position_improved_vs_constant": 6,
+  "max_float64_metric_difference": {
+    "path_position_cm": 8.739115866518432e-07,
+    "path_rotation_deg": 0.0030449768148865797,
+    "endpoint_position_cm": 6.636239078261497e-07,
+    "endpoint_rotation_deg": 0.0029013224005303706
+  },
+  "artifact_hashes": {
+    "common_u0000_train.npz": "a2df79a13c5f08e4fc1afbe6b0fd35bbf46d7468e02a5b1dddaa0b5b0b85b427",
+    "common_u0512_train.npz": "eef5cbccd75adc144441df5a92b672c4777593bbc743cd4a5c92235f28ac30c8",
+    "common_u1024_train.npz": "d92805b37c7135320947ba6cec357741474ced379dece1e138c87b9c8cc4c3e3",
+    "constant_u1536_train.npz": "054c7ef9108d5f217cdbadb9b27f13aeb096a7f27b1ffec76e2f2fba01958ceb",
+    "constant_u1792_train.npz": "3469453674d31d4ecaed71623f8afcfbd55486087d05acec491e90bdcb77f8bc",
+    "constant_u1920_train.npz": "a31cd364accffe485c1aae47d047fc589977823e5f7d3108ea5a328c544d5bb3",
+    "constant_u2048_train.npz": "d695183e93f8315095384841bd46f494763c0958808c2135394a6a88fd4285fe",
+    "constant_u2048_development.npz": "aabdfa8907bc55acdc613d8f456dfd7db9fe4a861ace17c919374c84f5494021",
+    "reduced_u1536_train.npz": "ca4e9360a338ffc87a94a6305f8124435635c6a054c0fdc79951fadb3208eddf",
+    "reduced_u1792_train.npz": "d2f84c3677f1ef4dfd85dc0778ef6d2eacf8a4f2a1154a5445c17305b680a1df",
+    "reduced_u1920_train.npz": "f994083b36eb07303a89b2a8fd43830bcf1b0a7a0c5416331f796a633f9066a4",
+    "reduced_u2048_train.npz": "a400883f8d7bfd3caa2bfcca1e450b21f53b09de7b651665f3be51ef09a139ac",
+    "reduced_u2048_development.npz": "a5a4ec7219f0934f1880c60303b6dccaab1ad17a9b1f4f5ae00ef4b52fbc1065"
+  },
+  "pt_files_downloaded": false,
+  "checkpoint_total_cluster_bytes": 2646598577,
+  "limitations": [
+    "One training initialization; three sampling draws are not training replications.",
+    "Window-average pose fitting is not every target error below threshold or robot success.",
+    "Held-out pose performance remains worse than the static baseline; no intermediate development evaluation.",
+    "No unique faulty layer established; broad training/generalization root cause remains open."
+  ]
+}

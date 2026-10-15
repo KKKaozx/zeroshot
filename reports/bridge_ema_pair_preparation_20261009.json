@@ -1,0 +1,51 @@
+{
+  "stage": "prepared_not_executed_on_cluster",
+  "change": "same_training_raw_vs_ema",
+  "baseline_training_job": 193761,
+  "train_windows": 1836,
+  "validation_windows": 40,
+  "epochs": 20,
+  "updates": 18360,
+  "training_seed": 42,
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "evaluation_modes": [
+    "native_ddpm100",
+    "one_step_x0"
+  ],
+  "ema_recipe": {
+    "update_after_step": 0,
+    "inv_gamma": 1.0,
+    "power": 0.75,
+    "min_value": 0.0,
+    "max_value": 0.9999
+  },
+  "official_reference": "https://github.com/real-stanford/diffusion_policy/blob/5ba07ac6661db573af695b419a7947ecb704690f/diffusion_policy/model/diffusion/ema_model.py",
+  "local_checks": {
+    "ema_recurrence": true,
+    "raw_optimizer_and_rng_isolation": true,
+    "five_core_file_hashes_match_193761": true,
+    "metric_helper_imports": true,
+    "python_syntax": true,
+    "cluster_gpu_execution": false
+  },
+  "source_sha256": {
+    "run_bridge_official_unet_training.py": "3dcc6603461c1403d039a13d872308f4b17aa8854a7a1c27b93a9c3d99c7f3a2",
+    "evaluate_bridge_ema_pair.py": "7b4d86036a3affa1d0faf75d6683ee26843d8cd390613d9afc8f45abbbbeaa7f",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "evaluate_bridge_official_unet_one_step.py": "aaafbe98f60426366677951d93faa2e8e9d4c8bee796f1be6b9645f8353bda2d",
+    "evaluate_bridge_one_step_sampler.py": "e49df63dca4c612bd967d04ea48c1d207028356b33ff084e93edcefdb6ac6ffe",
+    "train_ema.sh": "06d2f758119dcaff38179a078cc43fe376b8ef631b6497544397718c75a13b77",
+    "evaluate_ema.sh": "9b09d2d948c9efbe1259f4f3ebf4ae16dbcf39f4db6ded8ad3cb1edd3441b8a4",
+    "README.md": "98a3c6ff73be0a713c7c02da4e3bb9c46ed8d4c1cdd67e247c6fa13f7390d12c"
+  },
+  "limits": [
+    "Prepared control is not a quality improvement result.",
+    "Storage estimate is not a live quota query."
+  ]
+}

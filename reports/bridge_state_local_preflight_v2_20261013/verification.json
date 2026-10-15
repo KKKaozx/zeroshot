@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "inputs": {
+    "passed": true,
+    "windows": 168,
+    "current_state_only": true,
+    "training_statistics_only": true,
+    "rotation_independently_verified": true,
+    "unchanged_evaluation_function": true,
+    "update_function_identical_except_verified_zero_gradient_clipping": true,
+    "max_feature_difference": 0.0,
+    "features_sha256": "8499c9b664dd95c412a3990d4bc6953e745e2b74b57764ce90bb20c061725024"
+  },
+  "launchers": {
+    "preflight": {
+      "passed": true,
+      "argv": [
+        "--manifest",
+        "../bridge_growth128_v1/manifest.json",
+        "--data-root",
+        "/projects/Zeroshot/bridge_expansion_training_v1/data",
+        "--clip",
+        "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+        "--data-reference",
+        "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+        "--origin-report",
+        "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+        "--retained-report",
+        "/projects/Zeroshot/runs/bridge-growth64-fit-200600/report.json",
+        "--control-report",
+        "/projects/Zeroshot/runs/bridge-growth128-fit-201663/report.json",
+        "--stage",
+        "preflight",
+        "--output",
+        "/projects/Zeroshot/runs/bridge-state-preflight-12345"
+      ]
+    },
+    "fit": {
+      "passed": true,
+      "argv": [
+        "--manifest",
+        "../bridge_growth128_v1/manifest.json",
+        "--data-root",
+        "/projects/Zeroshot/bridge_expansion_training_v1/data",
+        "--clip",
+        "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+        "--data-reference",
+        "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+        "--origin-report",
+        "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+        "--retained-report",
+        "/projects/Zeroshot/runs/bridge-growth64-fit-200600/report.json",
+        "--control-report",
+        "/projects/Zeroshot/runs/bridge-growth128-fit-201663/report.json",
+        "--stage",
+        "fit",
+        "--output",
+        "/projects/Zeroshot/runs/bridge-state-fit-12345",
+        "--preflight-reference",
+        "/projects/Zeroshot/runs/bridge-state-preflight-12344"
+      ]
+    }
+  },
+  "report_sha256": "a86ecacf6e358cc1814c836572b5ccd2912832b5af67be32c5ff6950745c301d",
+  "snapshots": 15,
+  "max_recomputed_metric_difference": 8.102210341043303e-05,
+  "zero_replay": {
+    "passed": true,
+    "parameters_exact": true,
+    "all_five_snapshots_exact": true,
+    "max_absolute_differences": {
+      "predictions": 0.0,
+      "contexts": 0.0,
+      "targets": 0.0,
+      "losses": 0.0
+    }
+  },
+  "state_interface": {
+    "passed": true,
+    "same_augmented_initialization": true,
+    "same_initial_loss": true,
+    "real_first_state_gradient": 0.1261644810438156,
+    "real_context_max_abs": 0.007977806031703949,
+    "zero_port_remains_zero": true
+  },
+  "full_fit_or_generalization_executed": false
+}

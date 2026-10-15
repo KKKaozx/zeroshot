@@ -1,0 +1,51 @@
+{
+  "stage": "prepared_not_executed",
+  "training_job": 197220,
+  "purpose": "Frozen complete-window evaluation of both new xyz-normalization training groups",
+  "windows": {
+    "train": 1836,
+    "validation": 40
+  },
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "primary_protocol": "native_ddpm100",
+  "additional_protocol": "one_step_x0",
+  "normalizers_fitted": false,
+  "weights_updated": false,
+  "reserved_test_targets_read": false,
+  "local_checks": [
+    "Python syntax",
+    "Bash syntax",
+    "Normalization source copied bytewise from frozen r1 training bundle",
+    "Physical-unit one-step inverse for both groups",
+    "Original physical gripper pose condition",
+    "Known centimeter endpoint/path errors",
+    "Quaternion sign equivalence",
+    "Known gripper transition event metrics",
+    "Partition groups"
+  ],
+  "files": {
+    "bridge_xyz_normalization.py": "9ed9b8798761fbb7c3d6d1babb123d189bf292348d2b2b7f3c38757d6891b2ae",
+    "run_bridge_xyz_normalization.py": "3f5fa02701440552a183693e55b8b673da4063907ed54e549df9dfde510d2ce9",
+    "run_bridge_xyz_pair.py": "57d1b93b1054708a7365ad2ee512fc5a91015a51b1ba2c1cd0f57e47dc0f363c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "training_xyz_stats.json": "6ad908e091906c637fe0aa8111bc127d3aec6ae5c8762dd537d47e4927adcffb",
+    "check_bridge_xyz_normalization.py": "d26f01a601ee0e8c1b4d37b78e3b4f154b07a06b8113b1b8eaced7b69fb82754",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "evaluate_bridge_xyz_pair.py": "98507503ac379acf8c978a292aeb980ca9f2e67c574fa9a174bd4dc8b9633a50",
+    "run_bridge_official_unet_training.py": "3dcc6603461c1403d039a13d872308f4b17aa8854a7a1c27b93a9c3d99c7f3a2",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "evaluate_bridge_official_unet_one_step.py": "aaafbe98f60426366677951d93faa2e8e9d4c8bee796f1be6b9645f8353bda2d",
+    "evaluate_bridge_one_step_sampler.py": "e49df63dca4c612bd967d04ea48c1d207028356b33ff084e93edcefdb6ac6ffe",
+    "evaluate.sh": "3bf0aca9c8de103b185c6523a7d8c73ba1faab9b6f7a454bdf37995b22b4317d",
+    "README.md": "f5c9880ccea0f52f584533c55f5f80654fb3d92a3ffc22c7976238f1381dd431"
+  },
+  "archive": "D:\\ntu_related\\dissertation\\GPU cluster\\bridge_xyz_evaluation_v1.zip",
+  "archive_bytes": 55759,
+  "archive_sha256": "d52b7204cbbd366ce9aa451eb65fc24b89b5833809c964f919e0d4d30b272a94",
+  "integrity_passed": true
+}

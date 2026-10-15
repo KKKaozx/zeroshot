@@ -1,0 +1,131 @@
+{
+  "selection": [
+    {
+      "cache_index": 18,
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::22",
+      "start": 0
+    },
+    {
+      "cache_index": 39,
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::38",
+      "start": 0
+    },
+    {
+      "cache_index": 60,
+      "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::57",
+      "start": 0
+    },
+    {
+      "cache_index": 79,
+      "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::39",
+      "start": 0
+    },
+    {
+      "cache_index": 17,
+      "episode": "bridge_data_v2-train.tfrecord-00001-of-01024::29",
+      "start": 68
+    },
+    {
+      "cache_index": 37,
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::22",
+      "start": 76
+    },
+    {
+      "cache_index": 78,
+      "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::57",
+      "start": 72
+    },
+    {
+      "cache_index": 94,
+      "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::39",
+      "start": 60
+    }
+  ],
+  "source_selection_sha256": "1e9589d56f34d06713a58f8de712a3d8129157b4eaecd5c572c1046672651787",
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  },
+  "updates_per_arm": 500,
+  "batch_size": 8,
+  "optimizer": "Adam",
+  "learning_rate": 0.0001,
+  "weight_decay": 0,
+  "schedule": "constant",
+  "gradient_clip": 1.0,
+  "checkpoints": [
+    0,
+    20,
+    100,
+    500
+  ],
+  "training_noise_seed": "420000+update, reset after context computation",
+  "comparison": "exposure",
+  "arms": [
+    "dropout_on"
+  ],
+  "adapter_mode": "One jointly trained path; p=0.1 in training, eval mode for generation",
+  "dropout_seed": "430000+update, independent of diffusion noise seed",
+  "sampling_steps": 100,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "fit_thresholds": {
+    "all_seed_mean_position_cm": 0.5,
+    "all_seed_mean_rotation_deg": 5.0,
+    "windows_passing_every_seed_fraction": 0.9,
+    "all_seed_endpoint_position_cm": 1.0,
+    "all_seed_endpoint_rotation_deg": 10.0
+  },
+  "train_only": true,
+  "data_scope": "Eight explicitly indexed records via current __getitem__; no full scanner/loader validation",
+  "changing_variable": "Enable original gripper supervision and update its modules alongside pose",
+  "gripper_supervision": "Unchanged train.policy_loss; true pose conditioning in training; generated pose conditioning in evaluation",
+  "gripper_criteria": {
+    "all_seed_state_accuracy": 0.95,
+    "all_seed_balanced_accuracy": 0.95,
+    "every_available_direction_pair_accuracy": 1.0,
+    "absent_direction_is_not_verified": true
+  }
+}

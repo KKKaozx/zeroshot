@@ -1,0 +1,124 @@
+{
+  "position_metrics": [
+    {
+      "group": "samecount32",
+      "start": 12,
+      "position_metrics_recomputed": true
+    },
+    {
+      "group": "samecount32",
+      "start": 0,
+      "position_metrics_recomputed": true
+    },
+    {
+      "group": "timepoint64",
+      "start": 12,
+      "position_metrics_recomputed": true
+    },
+    {
+      "group": "timepoint64",
+      "start": 0,
+      "position_metrics_recomputed": true
+    },
+    {
+      "group": "other_episode32",
+      "start": 12,
+      "position_metrics_recomputed": true
+    }
+  ],
+  "window_geometry": [
+    {
+      "start": 0,
+      "anchor_xyz_m": [
+        0.229288712143898,
+        -0.11339689791202545,
+        -0.04974505305290222
+      ],
+      "endpoint_delta_cm": [
+        -3.3595845699310303,
+        12.755821228027344,
+        16.562828063964844
+      ],
+      "path_length_cm": 39.43197250366211,
+      "maximum_distance_from_anchor_cm": 26.772876739501953,
+      "per_axis_span_cm": [
+        3.3595845699310303,
+        14.717146873474121,
+        23.699769973754883
+      ]
+    },
+    {
+      "start": 12,
+      "anchor_xyz_m": [
+        0.2083529531955719,
+        0.019167842343449593,
+        0.18191629648208618
+      ],
+      "endpoint_delta_cm": [
+        -2.294003963470459,
+        -1.8756566047668457,
+        -8.304853439331055
+      ],
+      "path_length_cm": 36.50252151489258,
+      "maximum_distance_from_anchor_cm": 10.928983688354492,
+      "per_axis_span_cm": [
+        8.594672203063965,
+        10.823040008544922,
+        8.304853439331055
+      ]
+    }
+  ],
+  "exploratory_action_state_lag": [
+    {
+      "lag": -2,
+      "pairs": 35,
+      "mean_vector_error_cm": 2.544334650039673,
+      "rmse_component_cm": 1.6922125816345215
+    },
+    {
+      "lag": -1,
+      "pairs": 36,
+      "mean_vector_error_cm": 1.9676963090896606,
+      "rmse_component_cm": 1.3406257629394531
+    },
+    {
+      "lag": 0,
+      "pairs": 37,
+      "mean_vector_error_cm": 1.224205493927002,
+      "rmse_component_cm": 0.863357424736023
+    },
+    {
+      "lag": 1,
+      "pairs": 36,
+      "mean_vector_error_cm": 0.31634724140167236,
+      "rmse_component_cm": 0.20556595921516418
+    },
+    {
+      "lag": 2,
+      "pairs": 35,
+      "mean_vector_error_cm": 1.316524624824524,
+      "rmse_component_cm": 0.8915448784828186
+    },
+    {
+      "lag": 3,
+      "pairs": 34,
+      "mean_vector_error_cm": 1.961507797241211,
+      "rmse_component_cm": 1.34819757938385
+    }
+  ],
+  "lag_limit": "Different pair counts and unknown control/timestamp semantics; neither prove misalignment nor authorize relabeling",
+  "production_source_unchanged": true,
+  "geometry_max_xyz_cm": 3.507304362036239e-06,
+  "geometry_max_rotation_deg": 1.277811388052082e-05,
+  "focal_features_distinct": true,
+  "focal_token_cosine_rank": 3,
+  "scope": "32 retained training windows; 16 episodes. No training or held-out evaluation.",
+  "saved_input_artifact_sha256": {
+    "reports\\bridge_samecount32_fit_20261011\\plan.json": "79c794257808d5e74ac1bf6994b2805b7429e4ed8e894699719d5cd9a9339e37",
+    "reports\\bridge_samecount32_fit_20261011\\repeat_current_predictions.npz": "275ecbb33091014cd8b42a8263a3d139b0cd9935fb49e9e330394762dd48db68",
+    "reports\\bridge_timepoint64_fit_20261011\\plan.json": "006b8d9c5d4828199e75408b8ed6d1aab33831b5c32b5ea318ba3eb51bebb584",
+    "reports\\bridge_timepoint64_fit_20261011\\repeat_current_predictions.npz": "01dcb962effb58008f0e8e826be5a49132c4e4a7be364bc6e9c6c8cc3d62aa9e",
+    "reports\\bridge_scale32_fit_20261011\\plan.json": "ba85c25c9e33206d24d3335a4be4b6aae09e58e21820946dfa9eff5fcf2c6ac6",
+    "reports\\bridge_scale32_fit_20261011\\repeat_current_predictions.npz": "929874216aaefe331656de8026e99c9d57d2635a9168eceab9a61bc71e727df0"
+  }
+}

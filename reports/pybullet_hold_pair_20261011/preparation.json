@@ -1,0 +1,51 @@
+{
+  "original_91_frame_prefix_exact": {
+    "images": true,
+    "positions": true,
+    "rotations": true,
+    "currents": true,
+    "commands": true,
+    "object_heights": true
+  },
+  "new_window_start": 90,
+  "recorded_future_states": 16,
+  "new_window_max_translation_m": 3.2856164016872684e-07,
+  "new_window_all_frames_have_two_finger_contacts": true,
+  "hold_reference_object_height_m": 0.8496936988712729,
+  "baseline_starts": [
+    0,
+    12,
+    24,
+    30,
+    38,
+    46,
+    58,
+    74,
+    74
+  ],
+  "hold_starts": [
+    0,
+    12,
+    24,
+    30,
+    38,
+    46,
+    58,
+    74,
+    90
+  ],
+  "updates_per_group": 1000,
+  "batch_per_group": 9,
+  "training_initialization": 42,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "changing_variable": "ninth training observation/target window only",
+  "hold_criteria": {
+    "last_20_actions_max_height_error_cm": 2,
+    "last_20_actions_height_range_cm": 1,
+    "two_finger_contact_actions": 20
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "observer_on_off_exact": true,
+  "all72_raw_and_numeric_inputs_verified": true,
+  "local_original_v2_initialization_and_first_loss_exact": true,
+  "local_original_v2_first4_final_predictions_max_difference": {
+    "train": 0.0,
+    "development": 0.0
+  },
+  "checkpoints_saved": false,
+  "history_updates": [
+    0,
+    4,
+    8
+  ],
+  "full_train_windows": 32,
+  "full_development_windows": 40,
+  "elapsed_seconds": 290.31200000003446,
+  "peak_reserved_gib": 3.869140625,
+  "gradient_summary": {
+    "adapter.": {
+      "min": 0.14281192421913147,
+      "max": 4.451174736022949,
+      "zero_updates": 0
+    },
+    "diffusion_decoder.": {
+      "min": 2.374370574951172,
+      "max": 9.478050231933594,
+      "zero_updates": 0
+    },
+    "history_projection.": {
+      "min": 0.014971772208809853,
+      "max": 0.45074889063835144,
+      "zero_updates": 0
+    }
+  },
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f"
+  },
+  "report_sha256": "163ac08b06ea9851b33d9d5c360c7c347cc553a7173d605fd406e23bf1145db4"
+}

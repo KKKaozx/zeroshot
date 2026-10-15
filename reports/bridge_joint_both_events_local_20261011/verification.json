@@ -1,0 +1,30 @@
+{
+  "same_selection_as_pose_only_control": false,
+  "initial_generation_identical_if_same_selection": false,
+  "independent_metrics_match": true,
+  "clip_unchanged": true,
+  "gripper_received_gradients_and_changed": true,
+  "production_model_and_parser_source_unchanged": true,
+  "runner_snapshot_matches_execution": true,
+  "joint_observed_fit_passed": false,
+  "release_evaluated": true,
+  "training_seeds": 1,
+  "sampling_seeds": 3,
+  "simulation_executed": false,
+  "files_sha256": {
+    "dropout_on_history.json": "f57f534d19239c2d7b71775bd5f78755d21c8ae350311fc2462e2f002346845b",
+    "dropout_on_losses.json": "22dee626d917bd86a724417bf20b5425869ca9d870351beba6692a31841e54d4",
+    "dropout_on_predictions.npz": "63434cb389b3db4604f82696234bae601bc433d6e1fe4921fc5a3fdf96cf6a0c",
+    "gripper_timing.png": "3b94f19b6eec171183c016efb9849a8f331b2b77b08cb5213af9ea2a32a1f9e0",
+    "independent_metrics.json": "97da15fe760f236192ad37731d306025dac12115dff4587fd3193162e6b8af3b",
+    "joint_overview.png": "05a21a2c0734a21bbb3eb1fe54e2b11f1a2ed4940f8c2a4f21e9d46c270e891a",
+    "plan.json": "df4cb34ac4f1f2812c35f81a3d7fb9344d74b8548f93e176dadacdaf0c7c9f18",
+    "report.json": "f970a2632876f07b97c6ba469919ad8e27021fa7ad7d8af34ed0d3474bf5a2ab",
+    "runner_snapshot.py": "3be5bef20856751ea8bb0839201b2d09f8d0d666cc4b9f07f231db0287120170",
+    "update_0_predictions.npz": "8c978b6c87e81f29dd69a765b0dcc15ae208bf5626736d4891b5d1eaf292a215",
+    "update_100_predictions.npz": "9497299cd05ae01bb7ccbc27b9cd246837841ce7083037122ea19cd1ef2b5df2",
+    "update_20_predictions.npz": "f92dcaa9c1d5d9eae66f94e7451f175d51ef716dfa66afc3284e95fb0613e010",
+    "update_500_predictions.npz": "cbba4c54d22731ae849f29be9a93bf765331ea9a64862441631e5dc5e7694ddd"
+  },
+  "checkpoint_sha256_verified": true
+}

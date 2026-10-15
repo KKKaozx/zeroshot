@@ -1,0 +1,49 @@
+{
+  "stage": "author_bridge_workspace_resource_preflight",
+  "passed": true,
+  "full_training": false,
+  "trained_updates": 4,
+  "simulation_executed": false,
+  "development_policy_evaluated": false,
+  "protocol_sha256": "cfea31dfa1b06d8653caa832a9ef26e19ccfee899504c0a29c8a4226db867257",
+  "packages_installed": false,
+  "weights_downloaded": false,
+  "torch_version": "1.12.1",
+  "gpu": "NVIDIA RTX A6000",
+  "author_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "author_source_verified": true,
+  "input_export_report_sha256": "0038e8ce91770c8663437279cd3a32c552ffe563cf527992e40b7f9feacf7e8a",
+  "action_normalize_roundtrip_max_difference": 2.384185791015625e-07,
+  "training_statistics_only": true,
+  "first_parameter_gradients": {
+    "encoder": [
+      0.01187760941684246,
+      0.010662241838872433,
+      0.011796118691563606,
+      0.008741853758692741
+    ],
+    "unet": [
+      0.2344486266374588,
+      0.295208215713501,
+      0.2511126697063446,
+      0.2433355450630188
+    ]
+  },
+  "parameters_changed": {
+    "encoder": true,
+    "unet": true,
+    "ema_unet": true
+  },
+  "parameters": 283055507,
+  "workspace_seconds": 15.62319919699803,
+  "peak_reserved_gib": 5.91015625,
+  "sampling_steps": 100,
+  "action_prediction_shape": [
+    2,
+    16,
+    7
+  ],
+  "checkpoint_saved": false,
+  "scientific_verdict": "Execution and data-interface readiness only; not fitting or generalization success.",
+  "elapsed_seconds": 51.13336451514624
+}

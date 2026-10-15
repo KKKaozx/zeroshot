@@ -1,0 +1,26 @@
+{
+  "same_initial_parameters_as_previous": true,
+  "same_raw_images_targets_and_current": true,
+  "same_clip_tokens_and_initial_context": true,
+  "dropout_off_replays_previous_metrics_exactly": true,
+  "both_arms_jointly_updated": true,
+  "clip_unchanged": true,
+  "frozen_gripper_unchanged": true,
+  "both_pose_fit_passed": true,
+  "elapsed_seconds": 219.78200000000652,
+  "files_sha256": {
+    "dropout_off_history.json": "beaa577c31a8550a81ffd07184fda9a9c4f1b8f5b0a2f2116d5a177d609f201e",
+    "dropout_off_losses.json": "0463b49ce8bb374125ba700f212ca2d41a1f1493e7596e958a878fb106736dcf",
+    "dropout_off_predictions.npz": "a44e05532b435712d7ca7f6c0d77a93ad5d3694c9f1c2e66104336a24a0a289c",
+    "dropout_on_history.json": "6212c3f2e33134880a0767477eae2fd346b8f909ba64631589cf014bdab2f357",
+    "dropout_on_losses.json": "9382ec3c4fb9a78529b4e135196529abb5b143ebfcc3bdca3d665dedf17edbdd",
+    "dropout_on_predictions.npz": "267feece30e2a559a767daba2e4f997531b3cb086635dc97730413fbc5e3ca42",
+    "dropout_pair_eight_windows.png": "e42118fb68377f896c08534a237cae59de2f9cdcd63559ce0f54c0c385b8309a",
+    "dropout_pair_overview.png": "32d5af1293a23f75a74b4076a33bbcaf01ed5777b38fcd534284d362920c2e11",
+    "per_window_metrics.json": "aa932a1a54ecf814539cffd5e417d05758e499c9ed85245d772a9422b8a227b2",
+    "plan.json": "c7f890b1a5291c42ac692ce126277d3247319a6bce0e01381260407d70109965",
+    "report.json": "fbf837a7df305661262fb4bedc3ac4b3c164f8c0bdfa3fe49d48650ff822a129",
+    "runner_snapshot.py": "efa3e86cabe26dd4889ad568fc72fc79d5cc8a36acf1cef0a7f0e227bd4ffc53"
+  },
+  "runner_snapshot_matches_executed_source": true
+}

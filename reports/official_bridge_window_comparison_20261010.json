@@ -1,0 +1,24 @@
+{
+  "official_source_function_executed": "create_indices (JIT decorator omitted for local CPU invocation)",
+  "toy_episode_steps": 20,
+  "official_horizon": 16,
+  "official_pad_before": 1,
+  "official_pad_after": 7,
+  "official_window_count": 13,
+  "official_first_window_indices": [
+    0,
+    15,
+    1,
+    16
+  ],
+  "official_last_window_indices": [
+    11,
+    20,
+    0,
+    9
+  ],
+  "project_full_future_window_starts_stride4": [
+    0
+  ],
+  "limits": "This toy uses the actual official index function; differences are sampling policy, not proof of timing misalignment."
+}

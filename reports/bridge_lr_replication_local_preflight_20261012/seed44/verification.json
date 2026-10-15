@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "initialization_seed": 44,
+  "report_sha256": "a1b532b7725f15fdd2ae435e70296931dda2ec20cb25188bf4e66e947bffc5e0",
+  "restore_logs_and_predictions_exact": true,
+  "shared_model_and_adam_hashes_match": true,
+  "first_branch_loss_and_gradients_equal": true,
+  "snapshots": [
+    {
+      "file": "common_u0000_train.npz",
+      "sha256": "33e7a61c22ac08b907d1115345a843d9653ac9764cc6ae6a4810bde80e6caf29",
+      "metrics_float64": {
+        "path_position_cm": 9.86671251503495,
+        "path_rotation_deg": 122.97371470363969,
+        "endpoint_position_cm": 10.774367728842863,
+        "endpoint_rotation_deg": 100.78881625213053
+      }
+    },
+    {
+      "file": "common_u0004_train.npz",
+      "sha256": "2c659f8f02c80bc87775c4e51004c61e2716da930ac02d26706340717db2b76d",
+      "metrics_float64": {
+        "path_position_cm": 8.78354896161643,
+        "path_rotation_deg": 41.6033572468247,
+        "endpoint_position_cm": 10.703022823253002,
+        "endpoint_rotation_deg": 50.70950387397346
+      }
+    },
+    {
+      "file": "constant_u0008_train.npz",
+      "sha256": "39234e63b3efc4d64c638ee08f01edba926d4412df54ccdfe271f8b2b44b0d29",
+      "metrics_float64": {
+        "path_position_cm": 8.650599347894254,
+        "path_rotation_deg": 26.615511685748643,
+        "endpoint_position_cm": 10.924476341079261,
+        "endpoint_rotation_deg": 27.81379433689953
+      }
+    },
+    {
+      "file": "reduced_u0008_train.npz",
+      "sha256": "158d8ca178bdd19b7e8622394ba90a404e2a4ec4f9460146ffdd5b348bbb5e05",
+      "metrics_float64": {
+        "path_position_cm": 7.6066425852538915,
+        "path_rotation_deg": 26.301050334388933,
+        "endpoint_position_cm": 10.584629384831084,
+        "endpoint_rotation_deg": 34.69141297901542
+      }
+    },
+    {
+      "file": "restore_same_lr_u0008_train.npz",
+      "sha256": "39234e63b3efc4d64c638ee08f01edba926d4412df54ccdfe271f8b2b44b0d29",
+      "metrics_float64": {
+        "path_position_cm": 8.650599347894254,
+        "path_rotation_deg": 26.615511685748643,
+        "endpoint_position_cm": 10.924476341079261,
+        "endpoint_rotation_deg": 27.81379433689953
+      }
+    }
+  ],
+  "max_metric_differences": {
+    "path_position_cm": 3.471604248517224e-07,
+    "path_rotation_deg": 3.8892169541782096e-05,
+    "endpoint_position_cm": 6.276811230776502e-07,
+    "endpoint_rotation_deg": 2.9764755975492108e-05
+  },
+  "elapsed_seconds": 222.68799999996554,
+  "peak_reserved_gib": 3.8515625,
+  "local_checkpoints_saved": false,
+  "full_training_executed": false
+}

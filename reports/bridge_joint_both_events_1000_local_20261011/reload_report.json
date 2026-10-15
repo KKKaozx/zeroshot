@@ -1,0 +1,34 @@
+{
+  "checkpoint_loaded": true,
+  "checkpoint_sha256_verified": true,
+  "common_0_20_100_500_predictions_replayed_exactly": {
+    "0": true,
+    "20": true,
+    "100": true,
+    "500": true
+  },
+  "missing_keys_are_frozen_clip_only": true,
+  "raw_image_clip_adapter_recomputed": true,
+  "context_max_absolute_difference": 0.0,
+  "prediction_max_absolute_difference": 0.0,
+  "generated_gripper_commands_identical": true,
+  "pose_metrics": {
+    "position_cm": 0.15260595083236694,
+    "rotation_deg": 0.9392571449279785,
+    "endpoint_position_cm": 0.1408776491880417,
+    "endpoint_rotation_deg": 0.45527589321136475,
+    "seed_position_cm": [
+      0.15260595083236694
+    ],
+    "seed_rotation_deg": [
+      0.9392571449279785
+    ],
+    "windows_all_three_seeds_pass": 8,
+    "windows": 8,
+    "static_position_cm": 6.096284866333008,
+    "static_rotation_deg": 9.561344146728516,
+    "pose_fit_passed": true
+  },
+  "simulation_executed": false,
+  "checkpoint_bytes": 526176535
+}

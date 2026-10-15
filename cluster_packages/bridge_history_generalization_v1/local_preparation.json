@@ -1,0 +1,69 @@
+{
+  "stage": "static_local_preparation",
+  "passed": true,
+  "parent_source_sha256": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa",
+  "patches": [
+    {
+      "old": "from models import RobotAdapterModel",
+      "new": "from models import RobotAdapterModel\nfrom history_inputs import load_previous_images"
+    },
+    {
+      "old": "    args = ap.parse_args()",
+      "new": "    ap.add_argument(\"--history-arm\", choices=(\"repeat_current\", \"real_previous\"), required=True)\n    args = ap.parse_args()"
+    },
+    {
+      "old": "        targets = torch.stack([v[3] for v in items]).cuda()",
+      "new": "        previous_images, history_checks = load_previous_images(rows, items, args.data_root)\n        report.update(history_arm=args.history_arm, history_input_checks=history_checks)\n        targets = torch.stack([v[3] for v in items]).cuda()"
+    },
+    {
+      "old": "        mask = texts[\"attention_mask\"].cuda()",
+      "new": "        with torch.no_grad():\n            older = (torch.cat([model.vision_encoder(pixel_values=previous_images[i:i+2].cuda()).last_hidden_state\n                     for i in range(0, len(items), 2)]).detach() if args.history_arm == \"real_previous\" else visual)\n        del previous_images\n        mask = texts[\"attention_mask\"].cuda()"
+    },
+    {
+      "old": "            repeated = model.adapter(visual[indices], language[indices], mask[indices])",
+      "new": "            repeated = model.adapter(older[indices], language[indices], mask[indices])"
+    },
+    {
+      "old": "            payload[\"state_arm\"]=args.state_arm",
+      "new": "            payload[\"history_arm\"] = args.history_arm\n            payload[\"history_protocol_sha256\"] = sha(Path(__file__).resolve().parent/\"protocol.json\")\n            payload[\"reconstruction\"] += \" History image slot: \" + args.history_arm + \"; real_previous uses same-record max(0,t-1).\"\n            payload[\"state_arm\"]=args.state_arm"
+    }
+  ],
+  "unchanged_function_ast": [
+    "advance",
+    "check",
+    "gradient_norms",
+    "cpu_copy",
+    "state_sha",
+    "trainable_copy"
+  ],
+  "original_base_copy_import_unchanged": true,
+  "bash_syntax_passed": true,
+  "full_gpu_preflight_executed": false,
+  "trained": false,
+  "scope": "Input audit and unchanged trainer-body proof only; numerical GPU replay and gradient tests remain in the cluster preflight",
+  "actual_history_helper_all168_inputs_verified": true,
+  "helper_source_sha256": "e01b8588beda34281edfac2b09bda58bbd4d069537661aea809bd204d301023f",
+  "history_tensor_shape": [
+    168,
+    3,
+    224,
+    224
+  ],
+  "no_clip_loaded": true,
+  "no_checkpoint_loaded": true,
+  "bash_syntax_checked_files": [
+    "preflight.sh",
+    "fit.sh"
+  ],
+  "cli_import_and_help_passed": true,
+  "source_sha256": {
+    "fit.sh": "98c2ae7a731c068ea2cee214abf42080045da754db09524adbddadb8fa98e115",
+    "fit_history_arm.py": "e88000c6d9957d88ffa2722abb3644bfce0095b579fb4259953fc7422c8b2a96",
+    "history_inputs.json": "dd88a9598ba1ecf3a5e785349e06094b2fd20c833eb47eb883427f1c450e06ad",
+    "history_inputs.py": "e01b8588beda34281edfac2b09bda58bbd4d069537661aea809bd204d301023f",
+    "preflight.sh": "5b1ceb945de2d98c60dec8164aeead0b80dd7c40afa574512fb677a5f87e909e",
+    "protocol.json": "7f4b88da79b40a4355de977d33a4cac7c3ae1059a2afaa03b3862f739e886b1d",
+    "run_history_pair.py": "58e816bf155d9b4f0e6126227f17027af23cc2d48d79a7558c5864fc2673fd95",
+    "state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493"
+  }
+}

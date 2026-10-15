@@ -1,0 +1,107 @@
+{
+  "stage": "official_vs_bridge_data_supervision_code_comparison",
+  "official_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "source_provenance": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\diffusion_policy_data_reference\\provenance.json",
+  "actual_checkpoint_config": "reports/official_pusht_195527/checkpoint_config.yaml",
+  "checks": {
+    "stage": "data_contract_code_and_synthetic_checks",
+    "trained": false,
+    "real_bridge_records_checked_this_run": false,
+    "dataset_sha256": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "roundtrip_random_pose_cases": 1000,
+    "roundtrip_max_position_abs_error_m": 1.4901161193847656e-07,
+    "roundtrip_max_quaternion_sign_invariant_l2_error": 1.9082797564351495e-07,
+    "known_rotated_tool_frame_case_passed": true,
+    "synthetic_bridge_observation_index": 2,
+    "synthetic_bridge_future_state_indices": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "synthetic_bridge_gripper_command_indices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "synthetic_current_gripper_measurement_affine_passed": true,
+    "synthetic_pose_labels_ignore_raw_action_first_six_columns": true,
+    "limits": [
+      "Synthetic parser test verifies implementation indexing, not real sensor/action clock synchronization.",
+      "Geometric roundtrip does not validate learned model accuracy or command semantics.",
+      "Official source comparison concerns Push-T, not a native Bridge control policy."
+    ]
+  },
+  "comparison": [
+    {
+      "module": "supervised_action_semantics",
+      "official": "Recorded native 2D agent control target, sample action array; environment controller tracks that absolute target.",
+      "project": "Future reached 3D poses from state, relative to observation tool frame; raw action first six dimensions unused; commanded gripper from raw action.",
+      "status": "Confirmed semantic difference, not established defect",
+      "control": "Do not mix command-vs-reached change with normalization or network changes."
+    },
+    {
+      "module": "temporal_alignment",
+      "official": "Latest observation is sequence index 1 (two observations); execution selects action indices 1 through 8.",
+      "project": "Image at t; pose targets state[t+1:t+17]; gripper commands action[t:t+16].",
+      "status": "Implementation indexing verified synthetically; real clock semantics not reverified",
+      "control": "Future state index +1 is intentional reached-pose definition, not automatically an off-by-one."
+    },
+    {
+      "module": "window_sampling",
+      "official": "Horizon16, every-step sequence starts, pad_before1,pad_after7; repeats boundary values.",
+      "project": "Horizon16, stride4, selected Bridge protocol requires 16 real future states and discards incomplete tails.",
+      "status": "Confirmed population/weighting difference",
+      "control": "Changing padding or stride changes effective sample population; isolate it from labels/scaling."
+    },
+    {
+      "module": "normalization",
+      "official": "LinearNormalizer limits per dimension, invert with stored scale/offset; dataset source fits entire replay_buffer data arrays.",
+      "project": "Tool-relative xyz divided by0.10m; no fitted axiswise offset/scale; unit xyzw quaternion unchanged.",
+      "status": "Confirmed recipe difference; current pose encode/decode inverse passes numerical checks",
+      "control": "If testing per-axis normalization, fit only frozen training partition and save/invert its parameters; keep physical labels identical; scaling also changes relative loss weights."
+    },
+    {
+      "module": "conditioning_inputs",
+      "official": "Two RGB history frames plus numerical agent position; no language in Push-T.",
+      "project": "Single RGB frame plus language through CLIP/Adapter; tool pose defines labels but is absent from pose context.",
+      "status": "Confirmed input-contract difference; reserved for condition-module comparison",
+      "control": "Do not add proprioception/history during normalization-only comparison."
+    },
+    {
+      "module": "image_processing",
+      "official": "Image /255 then normalizer to[-1,1],96x96 with encoder crop84.",
+      "project": "CLIP resize/crop224 with CLIP mean/std.",
+      "status": "Backbone-specific difference, not erroneous by default",
+      "control": "Keep CLIP preprocessing when keeping CLIP; copying[-1,1] would change encoder input contract."
+    }
+  ],
+  "new_training": false,
+  "production_labels_changed": false,
+  "next_control_candidate": "axiswise xyz normalization only after frozen-training range audit; no quaternion rescaling or temporal/action-semantic changes"
+}

@@ -1,0 +1,851 @@
+{
+  "audit_passed": true,
+  "job": 203876,
+  "trained_updates": 0,
+  "local_model_loaded": false,
+  "original_full40_replay_exact": true,
+  "original_replay_max_absolute_difference": 0.0,
+  "all_paired_changes_and_valid_metrics_recomputed": true,
+  "image_change_exceeds_state_change_windows": 8,
+  "total_windows": 9,
+  "independent_development_episodes": 2,
+  "distinct_training_donors": 7,
+  "reported_weights_unchanged": true,
+  "weight_contents_independently_verified": false,
+  "reported_nonselected_rows_difference": 0.0,
+  "nonselected_intervention_outputs_not_saved_for_independent_check": true,
+  "reported_normalizer_matches_training_statistics": true,
+  "reported_peak_reserved_gib": 1.33203125,
+  "output_changes": {
+    "image_only": {
+      "position_cm": 10.042649629909729,
+      "rotation_deg": 16.09364600328329,
+      "per_window_position_cm": [
+        11.3281781213606,
+        8.122192900433499,
+        16.518810652945508,
+        9.153604960432029,
+        5.091052580671704,
+        16.34886535648653,
+        12.918971440322558,
+        9.486243448322655,
+        1.4159272082124694
+      ],
+      "per_window_rotation_deg": [
+        15.753307495669581,
+        18.053044200736718,
+        23.696279795273586,
+        14.234750089207987,
+        16.6050768193368,
+        32.40550566654071,
+        17.40209889857336,
+        4.520127703072419,
+        2.172623361138447
+      ],
+      "per_draw_position_cm": [
+        10.059984382098513,
+        9.953482725193297,
+        10.114481782437373
+      ],
+      "per_draw_rotation_deg": [
+        16.708003278612154,
+        15.84633220240682,
+        15.726602528830893
+      ]
+    },
+    "state_only": {
+      "position_cm": 1.2729546758846455,
+      "rotation_deg": 1.938844175218121,
+      "per_window_position_cm": [
+        1.0456782358564707,
+        0.7801310470153863,
+        1.2151024606890226,
+        1.0575061132317898,
+        1.2512596873532165,
+        1.312978197184527,
+        1.6984760258297793,
+        1.6139756790796114,
+        1.4814846367220083
+      ],
+      "per_window_rotation_deg": [
+        1.442318968188841,
+        0.6364636131447664,
+        2.401997588014655,
+        1.7753177306133257,
+        2.877785725129186,
+        2.4901282353728056,
+        2.7720609631403836,
+        1.2324104315858688,
+        1.8211143217732577
+      ],
+      "per_draw_position_cm": [
+        1.328706399230987,
+        1.2228584267224365,
+        1.2672992017005136
+      ],
+      "per_draw_rotation_deg": [
+        2.015145267758167,
+        1.8751581501878556,
+        1.92622910770834
+      ]
+    },
+    "both": {
+      "position_cm": 10.654406419955144,
+      "rotation_deg": 16.781557903875044,
+      "per_window_position_cm": [
+        11.505200993287986,
+        8.166294688058702,
+        17.081942628448097,
+        10.094493271827059,
+        5.991087544267572,
+        17.25534564336657,
+        14.045113754857397,
+        10.747015271396767,
+        1.0031639840861457
+      ],
+      "per_window_rotation_deg": [
+        16.55351730480973,
+        18.560549119820575,
+        23.86616286651869,
+        15.675519999494776,
+        17.99536536391372,
+        31.940728462196148,
+        20.254137803099418,
+        4.963230542353795,
+        1.2248096726685131
+      ],
+      "per_draw_position_cm": [
+        10.670214957794805,
+        10.585517561459476,
+        10.70748674061115
+      ],
+      "per_draw_rotation_deg": [
+        17.41539443251266,
+        16.520374077098623,
+        16.40890520201384
+      ]
+    }
+  },
+  "valid_context_quality": {
+    "original": {
+      "path_position_cm": 12.726062980547445,
+      "path_rotation_deg": 10.923319296277217,
+      "endpoint_position_cm": 17.776013341514936,
+      "endpoint_rotation_deg": 14.22889864151558,
+      "windows": 9,
+      "passing_windows": 0,
+      "pose_fit_passed": false
+    },
+    "both_donor": {
+      "path_position_cm": 0.8679790504281492,
+      "path_rotation_deg": 1.9693531823015793,
+      "endpoint_position_cm": 0.9393914289029084,
+      "endpoint_rotation_deg": 2.3075824954817725,
+      "windows": 9,
+      "passing_windows": 0,
+      "pose_fit_passed": false
+    }
+  },
+  "per_window": [
+    {
+      "window": 138,
+      "donor": 111,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "input_index": 0,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 11.3281781213606,
+          "rotation_deg": 15.753307495669581
+        },
+        "state_only": {
+          "position_cm": 1.0456782358564707,
+          "rotation_deg": 1.442318968188841
+        },
+        "both": {
+          "position_cm": 11.505200993287986,
+          "rotation_deg": 16.55351730480973
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 4.658343214616926,
+        "path_rotation_deg": 7.127922494125819,
+        "endpoint_position_cm": 10.861932119972233,
+        "endpoint_rotation_deg": 10.036170027845403,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.7821318853818117,
+        "path_rotation_deg": 1.6426601259176927,
+        "endpoint_position_cm": 0.8878017796363343,
+        "endpoint_rotation_deg": 1.8718904316173346,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 11.406661101031908,
+        "path_rotation_deg": 17.433555658394834,
+        "endpoint_position_cm": 14.566059135928912,
+        "endpoint_rotation_deg": 17.551806375717742,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 11.901087156972416,
+        "path_rotation_deg": 23.266090999020292,
+        "endpoint_position_cm": 18.80811947585689,
+        "endpoint_rotation_deg": 23.811489890958516,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 139,
+      "donor": 111,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "input_index": 4,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 8.122192900433499,
+          "rotation_deg": 18.053044200736718
+        },
+        "state_only": {
+          "position_cm": 0.7801310470153863,
+          "rotation_deg": 0.6364636131447664
+        },
+        "both": {
+          "position_cm": 8.166294688058702,
+          "rotation_deg": 18.560549119820575
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 10.77571355896842,
+        "path_rotation_deg": 7.420321554381423,
+        "endpoint_position_cm": 13.802909738140931,
+        "endpoint_rotation_deg": 4.2570990409573275,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.8347809002226771,
+        "path_rotation_deg": 1.0596693260023125,
+        "endpoint_position_cm": 0.7960717972255112,
+        "endpoint_rotation_deg": 0.9250077346346783,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 8.44009537428152,
+        "path_rotation_deg": 18.953339981897486,
+        "endpoint_position_cm": 9.635451974675082,
+        "endpoint_rotation_deg": 19.057011493683106,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 13.703731921683518,
+        "path_rotation_deg": 20.681960883213733,
+        "endpoint_position_cm": 23.032661726660457,
+        "endpoint_rotation_deg": 20.381376296548524,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 140,
+      "donor": 54,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "input_index": 8,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 16.518810652945508,
+          "rotation_deg": 23.696279795273586
+        },
+        "state_only": {
+          "position_cm": 1.2151024606890226,
+          "rotation_deg": 2.401997588014655
+        },
+        "both": {
+          "position_cm": 17.081942628448097,
+          "rotation_deg": 23.86616286651869
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 12.054940655889562,
+        "path_rotation_deg": 9.591729032652797,
+        "endpoint_position_cm": 14.658287954001215,
+        "endpoint_rotation_deg": 11.412282357521347,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.6759397815790864,
+        "path_rotation_deg": 1.2895975509289637,
+        "endpoint_position_cm": 0.7672471922536902,
+        "endpoint_rotation_deg": 1.5693625594837688,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 16.65725772063365,
+        "path_rotation_deg": 23.733116520927098,
+        "endpoint_position_cm": 25.128052003629847,
+        "endpoint_rotation_deg": 44.039409877311186,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 15.717262399182276,
+        "path_rotation_deg": 24.404876414256915,
+        "endpoint_position_cm": 14.546012285490963,
+        "endpoint_rotation_deg": 36.17857017179815,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 141,
+      "donor": 111,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "input_index": 12,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 9.153604960432029,
+          "rotation_deg": 14.234750089207987
+        },
+        "state_only": {
+          "position_cm": 1.0575061132317898,
+          "rotation_deg": 1.7753177306133257
+        },
+        "both": {
+          "position_cm": 10.094493271827059,
+          "rotation_deg": 15.675519999494776
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 9.530340780975761,
+        "path_rotation_deg": 9.66796703998409,
+        "endpoint_position_cm": 14.782355024686076,
+        "endpoint_rotation_deg": 8.673079303149965,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.9664223443111958,
+        "path_rotation_deg": 1.4814225659608582,
+        "endpoint_position_cm": 0.9560214224405662,
+        "endpoint_rotation_deg": 1.7207014210657077,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 10.6630773452506,
+        "path_rotation_deg": 16.0135587815025,
+        "endpoint_position_cm": 10.236047460372369,
+        "endpoint_rotation_deg": 14.788668412281956,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 12.748683598252507,
+        "path_rotation_deg": 22.498180155209987,
+        "endpoint_position_cm": 11.198356584683292,
+        "endpoint_rotation_deg": 15.892544385728105,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 142,
+      "donor": 113,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "input_index": 16,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 5.091052580671704,
+          "rotation_deg": 16.6050768193368
+        },
+        "state_only": {
+          "position_cm": 1.2512596873532165,
+          "rotation_deg": 2.877785725129186
+        },
+        "both": {
+          "position_cm": 5.991087544267572,
+          "rotation_deg": 17.99536536391372
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 12.126797590085504,
+        "path_rotation_deg": 8.296026509194101,
+        "endpoint_position_cm": 21.09102283129111,
+        "endpoint_rotation_deg": 21.68945122895468,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.9643477241881774,
+        "path_rotation_deg": 1.6799111007280907,
+        "endpoint_position_cm": 0.7650057703754803,
+        "endpoint_rotation_deg": 2.418201178851588,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 6.349720197707583,
+        "path_rotation_deg": 18.006169414664228,
+        "endpoint_position_cm": 8.910401827347515,
+        "endpoint_rotation_deg": 29.98521694153716,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 11.055891036439437,
+        "path_rotation_deg": 13.524501090002332,
+        "endpoint_position_cm": 15.923134985485312,
+        "endpoint_rotation_deg": 12.296142421930131,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 143,
+      "donor": 106,
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "input_index": 20,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 16.34886535648653,
+          "rotation_deg": 32.40550566654071
+        },
+        "state_only": {
+          "position_cm": 1.312978197184527,
+          "rotation_deg": 2.4901282353728056
+        },
+        "both": {
+          "position_cm": 17.25534564336657,
+          "rotation_deg": 31.940728462196148
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 13.65183669629358,
+        "path_rotation_deg": 11.251953933899179,
+        "endpoint_position_cm": 19.630524381978518,
+        "endpoint_rotation_deg": 20.727577726286487,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.8335577868055113,
+        "path_rotation_deg": 5.685564581221999,
+        "endpoint_position_cm": 1.0692536341268528,
+        "endpoint_rotation_deg": 7.225968115565976,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 17.563111469245932,
+        "path_rotation_deg": 36.435029043311,
+        "endpoint_position_cm": 25.568115102385278,
+        "endpoint_rotation_deg": 52.56733643623667,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 8.137737600636175,
+        "path_rotation_deg": 44.83154870733759,
+        "endpoint_position_cm": 14.73007609777696,
+        "endpoint_rotation_deg": 70.79205005430804,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 144,
+      "donor": 29,
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "input_index": 0,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 12.918971440322558,
+          "rotation_deg": 17.40209889857336
+        },
+        "state_only": {
+          "position_cm": 1.6984760258297793,
+          "rotation_deg": 2.7720609631403836
+        },
+        "both": {
+          "position_cm": 14.045113754857397,
+          "rotation_deg": 20.254137803099418
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 19.790302382917183,
+        "path_rotation_deg": 15.25339796374106,
+        "endpoint_position_cm": 27.95394194444631,
+        "endpoint_rotation_deg": 22.021219684748672,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.7453493162530981,
+        "path_rotation_deg": 1.3842135159880724,
+        "endpoint_position_cm": 1.1589713933747599,
+        "endpoint_rotation_deg": 1.4914014869359367,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 13.78661306927259,
+        "path_rotation_deg": 19.796853684267123,
+        "endpoint_position_cm": 17.41698784698974,
+        "endpoint_rotation_deg": 25.738497317557876,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 21.000966233529883,
+        "path_rotation_deg": 17.161572870879304,
+        "endpoint_position_cm": 29.567188500524328,
+        "endpoint_rotation_deg": 22.300100144146217,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 145,
+      "donor": 115,
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "input_index": 4,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 9.486243448322655,
+          "rotation_deg": 4.520127703072419
+        },
+        "state_only": {
+          "position_cm": 1.6139756790796114,
+          "rotation_deg": 1.2324104315858688
+        },
+        "both": {
+          "position_cm": 10.747015271396767,
+          "rotation_deg": 4.963230542353795
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 16.55378376445665,
+        "path_rotation_deg": 13.772178043442699,
+        "endpoint_position_cm": 17.858537879625285,
+        "endpoint_rotation_deg": 6.677606633417267,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 0.8958482571968269,
+        "path_rotation_deg": 1.7859541833913333,
+        "endpoint_position_cm": 1.002662215907388,
+        "endpoint_rotation_deg": 1.849889601385659,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 11.256334196493547,
+        "path_rotation_deg": 5.582657398905577,
+        "endpoint_position_cm": 19.42509264952365,
+        "endpoint_rotation_deg": 2.7655022285935456,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 9.58731867643542,
+        "path_rotation_deg": 13.321245787959407,
+        "endpoint_position_cm": 4.03273147074288,
+        "endpoint_rotation_deg": 4.675254469293046,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    },
+    {
+      "window": 146,
+      "donor": 114,
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "input_index": 8,
+      "donor_episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "output_changes": {
+        "image_only": {
+          "position_cm": 1.4159272082124694,
+          "rotation_deg": 2.172623361138447
+        },
+        "state_only": {
+          "position_cm": 1.4814846367220083,
+          "rotation_deg": 1.8211143217732577
+        },
+        "both": {
+          "position_cm": 1.0031639840861457,
+          "rotation_deg": 1.2248096726685131
+        }
+      },
+      "original_quality": {
+        "path_position_cm": 15.392508180723402,
+        "path_rotation_deg": 15.928377095073799,
+        "endpoint_position_cm": 19.34460819949274,
+        "endpoint_rotation_deg": 22.565601770759077,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "both_donor_quality": {
+        "path_position_cm": 1.1134334579149578,
+        "path_rotation_deg": 1.7151856905748921,
+        "endpoint_position_cm": 1.0514876547855925,
+        "endpoint_rotation_deg": 1.6958199297952996,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "original_prediction_to_donor_target": {
+        "path_position_cm": 1.6436658507199482,
+        "path_rotation_deg": 2.1787912104405014,
+        "endpoint_position_cm": 1.8736884562866154,
+        "endpoint_rotation_deg": 1.8904922099051564,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "true_target_difference": {
+        "path_position_cm": 16.48929742701656,
+        "path_rotation_deg": 16.091625388231165,
+        "endpoint_position_cm": 20.41352923189577,
+        "endpoint_rotation_deg": 22.684723896908512,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      }
+    }
+  ],
+  "project_saved_context_checks": {
+    "201663": {
+      "context_description": "Adapter output with repeated-current history cancellation; no numeric pose input",
+      "window": 146,
+      "training_neighbor": 114,
+      "context_vectors_exact_equal": false,
+      "context_l2_difference": 25.78287859490235,
+      "context_cosine": 0.6762587882948949,
+      "original_window_quality": {
+        "path_position_cm": 10.724888488351718,
+        "path_rotation_deg": 22.010139663049216,
+        "endpoint_position_cm": 12.021216426154469,
+        "endpoint_rotation_deg": 23.408147266758004,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "files_sha256": {
+        "reduced_u8192_train.npz": "6898cd6657bf20b511c2981fc82183a75c5de294416bee6f352190aac61e1bab",
+        "reduced_u8192_development.npz": "fe41104d396a8011548b76a644a1cb51e3fa39093ebb011d8a9bd5b041078e33"
+      },
+      "new_model_inference": false,
+      "paired_project_noise_intervention_executed": false,
+      "limit": "Distinct vectors exclude exact collapse for this pair; do not prove usable geometry or uniquely identify a faulty decoder.",
+      "fixed_cosine_nearest_training_readout": {
+        "development": {
+          "path_position_cm": 9.082260133985026,
+          "path_rotation_deg": 17.572789917723156,
+          "endpoint_position_cm": 12.171861237841814,
+          "endpoint_rotation_deg": 25.993764533747274,
+          "windows": 40,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "static": {
+          "path_position_cm": 8.21232607389037,
+          "path_rotation_deg": 15.098500432102608,
+          "endpoint_position_cm": 10.565334249436834,
+          "endpoint_rotation_deg": 19.986393321428388,
+          "windows": 40,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "selected_training_indices": [
+          90,
+          90,
+          81,
+          42,
+          70,
+          70,
+          70,
+          31,
+          70,
+          10,
+          19,
+          19,
+          3,
+          19,
+          113,
+          113,
+          115,
+          112,
+          57,
+          116,
+          116,
+          68,
+          37,
+          32,
+          10,
+          120,
+          25,
+          41,
+          41,
+          12,
+          12,
+          93,
+          12,
+          93,
+          47,
+          49,
+          101,
+          101,
+          101,
+          101
+        ],
+        "trained": false,
+        "development_targets_used_in_neighbor_selection": false,
+        "no_k_or_distance_sweep": true,
+        "interpretation": "Descriptive saved-feature readout; failure does not establish absent geometry or a correct action head."
+      }
+    },
+    "202278_real": {
+      "context_description": "Fused Adapter output plus numeric current-state projection; not Adapter output alone",
+      "window": 146,
+      "training_neighbor": 114,
+      "context_vectors_exact_equal": false,
+      "context_l2_difference": 23.877240473023562,
+      "context_cosine": 0.7275334072506687,
+      "original_window_quality": {
+        "path_position_cm": 10.744991526518964,
+        "path_rotation_deg": 18.04683815047132,
+        "endpoint_position_cm": 12.001606216965966,
+        "endpoint_rotation_deg": 16.10652634353449,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "files_sha256": {
+        "reduced_u8192_train.npz": "6219cfb072371f6efc6781c9dfed662a6a0659f34ee03a1ee774cc0a90ed37bf",
+        "reduced_u8192_development.npz": "b822c904ba1dca3fd71b002e685e5398af6788964610a885c56d5090ced1136f"
+      },
+      "new_model_inference": false,
+      "paired_project_noise_intervention_executed": false,
+      "limit": "Distinct vectors exclude exact collapse for this pair; do not prove usable geometry or uniquely identify a faulty decoder.",
+      "fixed_cosine_nearest_training_readout": {
+        "development": {
+          "path_position_cm": 8.982445043528353,
+          "path_rotation_deg": 16.540936788961872,
+          "endpoint_position_cm": 11.972165150137553,
+          "endpoint_rotation_deg": 25.852437992866044,
+          "windows": 40,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "static": {
+          "path_position_cm": 8.21232607389037,
+          "path_rotation_deg": 15.098500432102608,
+          "endpoint_position_cm": 10.565334249436834,
+          "endpoint_rotation_deg": 19.986393321428388,
+          "windows": 40,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "selected_training_indices": [
+          86,
+          80,
+          81,
+          42,
+          70,
+          70,
+          70,
+          70,
+          70,
+          10,
+          19,
+          19,
+          3,
+          19,
+          113,
+          113,
+          115,
+          13,
+          19,
+          116,
+          116,
+          68,
+          37,
+          32,
+          10,
+          120,
+          25,
+          41,
+          41,
+          12,
+          47,
+          93,
+          47,
+          93,
+          47,
+          47,
+          103,
+          101,
+          103,
+          101
+        ],
+        "trained": false,
+        "development_targets_used_in_neighbor_selection": false,
+        "no_k_or_distance_sweep": true,
+        "interpretation": "Descriptive saved-feature readout; failure does not establish absent geometry or a correct action head."
+      }
+    }
+  },
+  "files_sha256": {
+    "report.json": "b13ed4c6767f131f9e4249abbcdb6e4608d0a59bae8134b44a94f16c96c7bc4a",
+    "predictions.npz": "b83644b7759281a615fccd81df6d4c2b2937a1769b9df02ba4ad7693e6e599fd"
+  },
+  "interpretation": "Fixed-pair sensitivity under possible inconsistent crossed observations; no mixed-observation accuracy or improvement verdict."
+}

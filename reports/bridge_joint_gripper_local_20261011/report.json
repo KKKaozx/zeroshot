@@ -1,0 +1,734 @@
+{
+  "stage": "local_current_adapter_exposure_pair",
+  "execution_completed": true,
+  "model_parameters_updated": true,
+  "simulation_executed": false,
+  "validation_evaluated": false,
+  "test_targets_used": false,
+  "gripper_trained": true,
+  "downloads": false,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "groups": {
+    "dropout_on": {
+      "final_metrics": {
+        "position_cm": 0.27336058020591736,
+        "rotation_deg": 2.015606641769409,
+        "endpoint_position_cm": 0.35355642437934875,
+        "endpoint_rotation_deg": 1.281525731086731,
+        "seed_position_cm": [
+          0.27362582087516785,
+          0.27327826619148254,
+          0.2731776237487793
+        ],
+        "seed_rotation_deg": [
+          2.0147488117218018,
+          2.0165581703186035,
+          2.0155129432678223
+        ],
+        "windows_all_three_seeds_pass": 8,
+        "windows": 8,
+        "static_position_cm": 7.735259056091309,
+        "static_rotation_deg": 7.785233497619629,
+        "pose_fit_passed": true,
+        "gripper": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "seed_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "seed_balanced_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "open_targets": 84,
+          "closed_targets": 44,
+          "always_open_accuracy": 0.65625,
+          "always_closed_accuracy": 0.34375,
+          "open_to_closed": {
+            "target_pairs": 7,
+            "seed_correct_pairs": [
+              7,
+              7,
+              7
+            ],
+            "seed_pair_accuracy": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "closed_to_open": {
+            "target_pairs": 0,
+            "seed_correct_pairs": [
+              0,
+              0,
+              0
+            ],
+            "seed_pair_accuracy": null
+          },
+          "observed_state_and_events_fit_passed": true,
+          "release_evaluated": false
+        },
+        "teacher_forced_gripper": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "seed_accuracy": [
+            1.0
+          ],
+          "seed_balanced_accuracy": [
+            1.0
+          ],
+          "open_targets": 84,
+          "closed_targets": 44,
+          "always_open_accuracy": 0.65625,
+          "always_closed_accuracy": 0.34375,
+          "open_to_closed": {
+            "target_pairs": 7,
+            "seed_correct_pairs": [
+              7
+            ],
+            "seed_pair_accuracy": [
+              1.0
+            ]
+          },
+          "closed_to_open": {
+            "target_pairs": 0,
+            "seed_correct_pairs": [
+              0
+            ],
+            "seed_pair_accuracy": null
+          },
+          "observed_state_and_events_fit_passed": true,
+          "release_evaluated": false
+        },
+        "joint_observed_fit_passed": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "elapsed_seconds": 11.735000000044238,
+          "context_change_rms": 0.0,
+          "position_cm": 10.646944046020508,
+          "rotation_deg": 98.9244384765625,
+          "endpoint_position_cm": 13.361995697021484,
+          "endpoint_rotation_deg": 81.83280944824219,
+          "seed_position_cm": [
+            10.647435188293457,
+            10.650456428527832,
+            10.642940521240234
+          ],
+          "seed_rotation_deg": [
+            98.99300384521484,
+            98.84942626953125,
+            98.93087005615234
+          ],
+          "windows_all_three_seeds_pass": 0,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false,
+          "gripper": {
+            "accuracy": 0.421875,
+            "balanced_accuracy": 0.5595238095238095,
+            "seed_accuracy": [
+              0.421875,
+              0.421875,
+              0.421875
+            ],
+            "seed_balanced_accuracy": [
+              0.5595238095238095,
+              0.5595238095238095,
+              0.5595238095238095
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                0,
+                0,
+                0
+              ],
+              "seed_pair_accuracy": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0,
+                0,
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": false,
+            "release_evaluated": false
+          },
+          "teacher_forced_gripper": {
+            "accuracy": 0.3828125,
+            "balanced_accuracy": 0.5297619047619048,
+            "seed_accuracy": [
+              0.3828125
+            ],
+            "seed_balanced_accuracy": [
+              0.5297619047619048
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                0
+              ],
+              "seed_pair_accuracy": [
+                0.0
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": false,
+            "release_evaluated": false
+          },
+          "joint_observed_fit_passed": false
+        },
+        {
+          "update": 20,
+          "elapsed_seconds": 17.64100000000326,
+          "context_change_rms": 1.231629490852356,
+          "position_cm": 3.5381762981414795,
+          "rotation_deg": 10.07832145690918,
+          "endpoint_position_cm": 6.554921627044678,
+          "endpoint_rotation_deg": 13.679230690002441,
+          "seed_position_cm": [
+            3.5557103157043457,
+            3.542989492416382,
+            3.5158283710479736
+          ],
+          "seed_rotation_deg": [
+            10.085006713867188,
+            10.071048736572266,
+            10.078907012939453
+          ],
+          "windows_all_three_seeds_pass": 0,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false,
+          "gripper": {
+            "accuracy": 0.8984375,
+            "balanced_accuracy": 0.8522727272727272,
+            "seed_accuracy": [
+              0.8984375,
+              0.8984375,
+              0.8984375
+            ],
+            "seed_balanced_accuracy": [
+              0.8522727272727273,
+              0.8522727272727273,
+              0.8522727272727273
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                3,
+                3,
+                3
+              ],
+              "seed_pair_accuracy": [
+                0.42857142857142855,
+                0.42857142857142855,
+                0.42857142857142855
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0,
+                0,
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": false,
+            "release_evaluated": false
+          },
+          "teacher_forced_gripper": {
+            "accuracy": 0.890625,
+            "balanced_accuracy": 0.8463203463203464,
+            "seed_accuracy": [
+              0.890625
+            ],
+            "seed_balanced_accuracy": [
+              0.8463203463203464
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                2
+              ],
+              "seed_pair_accuracy": [
+                0.2857142857142857
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": false,
+            "release_evaluated": false
+          },
+          "joint_observed_fit_passed": false
+        },
+        {
+          "update": 100,
+          "elapsed_seconds": 34.14100000000326,
+          "context_change_rms": 1.2167874574661255,
+          "position_cm": 0.5030884742736816,
+          "rotation_deg": 2.2125966548919678,
+          "endpoint_position_cm": 0.8363202214241028,
+          "endpoint_rotation_deg": 2.586211919784546,
+          "seed_position_cm": [
+            0.5027546882629395,
+            0.504589319229126,
+            0.5019212961196899
+          ],
+          "seed_rotation_deg": [
+            2.2149689197540283,
+            2.209350109100342,
+            2.213470935821533
+          ],
+          "windows_all_three_seeds_pass": 5,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false,
+          "gripper": {
+            "accuracy": 0.9921875,
+            "balanced_accuracy": 0.9940476190476191,
+            "seed_accuracy": [
+              0.9921875,
+              0.9921875,
+              0.9921875
+            ],
+            "seed_balanced_accuracy": [
+              0.9940476190476191,
+              0.9940476190476191,
+              0.9940476190476191
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                7,
+                7,
+                7
+              ],
+              "seed_pair_accuracy": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0,
+                0,
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": true,
+            "release_evaluated": false
+          },
+          "teacher_forced_gripper": {
+            "accuracy": 0.9921875,
+            "balanced_accuracy": 0.9940476190476191,
+            "seed_accuracy": [
+              0.9921875
+            ],
+            "seed_balanced_accuracy": [
+              0.9940476190476191
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                7
+              ],
+              "seed_pair_accuracy": [
+                1.0
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": true,
+            "release_evaluated": false
+          },
+          "joint_observed_fit_passed": false
+        },
+        {
+          "update": 500,
+          "elapsed_seconds": 113.56300000002375,
+          "context_change_rms": 1.1942620277404785,
+          "position_cm": 0.27336058020591736,
+          "rotation_deg": 2.015606641769409,
+          "endpoint_position_cm": 0.35355642437934875,
+          "endpoint_rotation_deg": 1.281525731086731,
+          "seed_position_cm": [
+            0.27362582087516785,
+            0.27327826619148254,
+            0.2731776237487793
+          ],
+          "seed_rotation_deg": [
+            2.0147488117218018,
+            2.0165581703186035,
+            2.0155129432678223
+          ],
+          "windows_all_three_seeds_pass": 8,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": true,
+          "gripper": {
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "seed_accuracy": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "seed_balanced_accuracy": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                7,
+                7,
+                7
+              ],
+              "seed_pair_accuracy": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0,
+                0,
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": true,
+            "release_evaluated": false
+          },
+          "teacher_forced_gripper": {
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "seed_accuracy": [
+              1.0
+            ],
+            "seed_balanced_accuracy": [
+              1.0
+            ],
+            "open_targets": 84,
+            "closed_targets": 44,
+            "always_open_accuracy": 0.65625,
+            "always_closed_accuracy": 0.34375,
+            "open_to_closed": {
+              "target_pairs": 7,
+              "seed_correct_pairs": [
+                7
+              ],
+              "seed_pair_accuracy": [
+                1.0
+              ]
+            },
+            "closed_to_open": {
+              "target_pairs": 0,
+              "seed_correct_pairs": [
+                0
+              ],
+              "seed_pair_accuracy": null
+            },
+            "observed_state_and_events_fit_passed": true,
+            "release_evaluated": false
+          },
+          "joint_observed_fit_passed": true
+        }
+      ],
+      "updates": 500,
+      "first_gradients": {
+        "adapter": true,
+        "decoder": true,
+        "clip_vision": false,
+        "clip_text": false,
+        "gripper": true
+      },
+      "adapter_changed": true,
+      "decoder_changed": true,
+      "adapter_dropout_enabled_during_training": true,
+      "frozen_gripper_unchanged": false,
+      "gripper_changed": true,
+      "gripper_initial_sha256": "d2c73556c9fd59619d7691a81374e03f7dacc835314f76760e328234a324d5ac",
+      "gripper_final_sha256": "c311467e93d59bdddc380ab81b018cb3dedfd0fc9bd8f55b7951e58fb51511a4",
+      "other_state_unchanged": true,
+      "mean_warm_update_seconds": 0.18618837675408187,
+      "peak_reserved_gib": 2.95703125,
+      "last_100_mean_loss": 0.026680454891175032,
+      "adapter_final_sha256": "016c4612ea5c9f954e9f446b20b3ca29bc687c500d35553215a779b9d73e8314",
+      "decoder_final_sha256": "06dce977d9b70fec1031d32a362d2a1e6e4c6d59d7591f02309aa5d7332f3d0e"
+    }
+  },
+  "source_sha256": {
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "fit_bridge_adapter_pair.py": "df5a034ab3e2d8fa7493b226492492efabf92d09af30b73dcb7d5e8e9980cf3e",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+  },
+  "plan": {
+    "selection": [
+      {
+        "cache_index": 0,
+        "original_dataset_index": 7,
+        "episode": "bridge_data_v2-train.tfrecord-00001-of-01024::29",
+        "start": 0
+      },
+      {
+        "cache_index": 18,
+        "original_dataset_index": 25,
+        "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::22",
+        "start": 0
+      },
+      {
+        "cache_index": 39,
+        "original_dataset_index": 84,
+        "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::38",
+        "start": 0
+      },
+      {
+        "cache_index": 60,
+        "original_dataset_index": 105,
+        "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::57",
+        "start": 0
+      },
+      {
+        "cache_index": 79,
+        "original_dataset_index": 157,
+        "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::39",
+        "start": 0
+      },
+      {
+        "cache_index": 96,
+        "original_dataset_index": 174,
+        "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::25",
+        "start": 0
+      },
+      {
+        "cache_index": 112,
+        "original_dataset_index": 190,
+        "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+        "start": 0
+      },
+      {
+        "cache_index": 133,
+        "original_dataset_index": 211,
+        "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::1",
+        "start": 0
+      }
+    ],
+    "source_selection_sha256": "623f04f53015547158e6aab835adbc8e551564d0b2374bbc4fabde8c520de2d4",
+    "config": {
+      "action": {
+        "representation": "tool_relative_pose_open_positive_v2",
+        "position_scale_meters": 0.1,
+        "max_normalized_position": 3.0,
+        "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+      },
+      "model": {
+        "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+        "fusion_type": "cross_attention",
+        "adapter_pooling": "cls_patch_mean",
+        "decoder_type": "diffusion",
+        "diffusion_prediction_type": "sample",
+        "num_adapter_layers": 8,
+        "attention_dim": 512,
+        "num_attention_heads": 8,
+        "decoder_hidden_dim": 256,
+        "chunk_size": 16,
+        "action_dim": 8,
+        "num_diffusion_steps": 100,
+        "beta_schedule": "squaredcos_cap_v2",
+        "clip_denoised": true,
+        "dropout": 0.1,
+        "separate_gripper_head": true,
+        "trajectory_conditioned_gripper": true,
+        "gripper_head_type": "legacy",
+        "condition_on_current_gripper": true,
+        "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+        "gripper_loss_weight": 0.25,
+        "gripper_change_weight": 1.0,
+        "gripper_target_mode": "state",
+        "gripper_transition_decode": "cumulative",
+        "gripper_switch_threshold": 0.0,
+        "balanced_gripper_loss": false,
+        "diffusion_architecture": "multiscale",
+        "diffusion_down_dims": [
+          256,
+          512,
+          1024
+        ]
+      },
+      "frozen_context_dim": 1024
+    },
+    "updates_per_arm": 500,
+    "batch_size": 8,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "weight_decay": 0,
+    "schedule": "constant",
+    "gradient_clip": 1.0,
+    "checkpoints": [
+      0,
+      20,
+      100,
+      500
+    ],
+    "training_noise_seed": "420000+update, reset after context computation",
+    "comparison": "exposure",
+    "arms": [
+      "dropout_on"
+    ],
+    "adapter_mode": "One jointly trained path; p=0.1 in training, eval mode for generation",
+    "dropout_seed": "430000+update, independent of diffusion noise seed",
+    "sampling_steps": 100,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "fit_thresholds": {
+      "all_seed_mean_position_cm": 0.5,
+      "all_seed_mean_rotation_deg": 5.0,
+      "windows_passing_every_seed_fraction": 0.9,
+      "all_seed_endpoint_position_cm": 1.0,
+      "all_seed_endpoint_rotation_deg": 10.0
+    },
+    "train_only": true,
+    "data_scope": "Eight explicitly indexed records via current __getitem__; no full scanner/loader validation",
+    "changing_variable": "Enable original gripper supervision and update its modules alongside pose",
+    "gripper_supervision": "Unchanged train.policy_loss; true pose conditioning in training; generated pose conditioning in evaluation",
+    "gripper_criteria": {
+      "all_seed_state_accuracy": 0.95,
+      "all_seed_balanced_accuracy": 0.95,
+      "every_available_direction_pair_accuracy": 1.0,
+      "absent_direction_is_not_verified": true
+    }
+  },
+  "raw_data_check": {
+    "targets_exactly_match_previous_cache": true,
+    "currents_exactly_match_previous_cache": true,
+    "pose_masks_all_valid": true,
+    "image_sha256": "f068cc1ab8aff0692488c1be5eccef2f0406b9f81ea0d1eec5b25f1d70cb1a47",
+    "target_sha256": "69f135d290fea139ed28cd668cecd5736a2af3160e25e7e4898391eac3d434df",
+    "instructions": [
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile"
+    ]
+  },
+  "conditioning": {
+    "visual_shape": [
+      8,
+      257,
+      1024
+    ],
+    "text_shape": [
+      8,
+      5,
+      768
+    ],
+    "context_shape": [
+      8,
+      1024
+    ],
+    "production_context_max_abs_difference": 0.0,
+    "visual_sha256": "b34e3661f289e7da69a7338b01cdb7dc58ed4882c1f6c9ad567be2b519c2fe74",
+    "text_sha256": "7a57d4110247811eb5c9f0be709b4e2dfd2d84c8e864f1b06c16cea41242f884",
+    "initial_context_sha256": "60e380e120f6e9cd8ffa71317ed6565e4e35fe050daaadfc0c62be23f1992411"
+  },
+  "initial_hashes": {
+    "adapter": "39c3fcfde22823c2749e9ede386403700f81d7d98204746c5dd22650affe8f9f",
+    "decoder": "eff5e1366c4297e9987af833ec9dc07aa32273d117f9c5f1b052a8b32ab49399",
+    "clip": [
+      "5b0eed76211f2af365d565f04d6f49d234d3a18872607cb663a0a16f49cd5082",
+      "70a6fe9fb94bd4d0a8e717a4732780b136897e96d5b71467a59b99d2ef8dbd49"
+    ]
+  },
+  "clip_unchanged": true,
+  "elapsed_seconds": 115.89100000000326,
+  "limits": [
+    "Eight training windows, no validation or robot task-success claim.",
+    "One small-set training curve; update count is not an isolated explanation of earlier full-data failure.",
+    "Pose plus original gripper loss; absent release events cannot establish release skill.",
+    "One shared training initialization, three sampling seeds, not three training seeds.",
+    "No large checkpoint retained; predictions/settings/hashes retained for bounded reproduction."
+  ]
+}

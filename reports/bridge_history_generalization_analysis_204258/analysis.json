@@ -1,0 +1,558 @@
+{
+  "verified": true,
+  "artifacts": 17,
+  "artifact_bytes": 10992554,
+  "artifact_sha256": {
+    "real_previous/common_u0000_train.npz": "bc1a032ee5495a8c2cb04a41381941c6046a26bc616cf8f8555cbe1821a42274",
+    "real_previous/common_updates.jsonl": "c51f775f9fe1e47ef6e1ef269a7597c2141c046224091feddf0a25d68b34f813",
+    "real_previous/plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928",
+    "real_previous/reduced_u8192_development.npz": "95e55f2d651cfd3908f5894046b21a26603a9a3897605cab9d8df25080a1c6da",
+    "real_previous/reduced_u8192_train.npz": "88c85e062ec4c488b2d43db8928807adb2f984de826440a191c69b80b5f7ecdf",
+    "real_previous/reduced_updates.jsonl": "f6df3faaa0530edcb0f968e8a9b103b0ed70c10676fd51e9360e3a71c54d9af2",
+    "real_previous/report.json": "65b8556aac2073e6ebcbfd38df720931fe1eb86ea77fae60296ca96dc0a427c4",
+    "real_previous/runner_snapshot.py": "e88000c6d9957d88ffa2722abb3644bfce0095b579fb4259953fc7422c8b2a96",
+    "repeat_current/common_u0000_train.npz": "bc1a032ee5495a8c2cb04a41381941c6046a26bc616cf8f8555cbe1821a42274",
+    "repeat_current/common_updates.jsonl": "bad8f94a775a5fd9b02f2a9a08fa6e810fd7fa6115d1f136252839c0dc405711",
+    "repeat_current/plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928",
+    "repeat_current/reduced_u8192_development.npz": "b822c904ba1dca3fd71b002e685e5398af6788964610a885c56d5090ced1136f",
+    "repeat_current/reduced_u8192_train.npz": "6219cfb072371f6efc6781c9dfed662a6a0659f34ee03a1ee774cc0a90ed37bf",
+    "repeat_current/reduced_updates.jsonl": "3a9207dd095f8b8c966332a4b5ceb6cc49b5eeaf3d3f06f584e8caaa2e2c8e18",
+    "repeat_current/report.json": "d64aabbbb140e5d272fdb98cbdeaa0b3cd078bd8cfa080527c83360daa6ddf93",
+    "repeat_current/runner_snapshot.py": "e88000c6d9957d88ffa2722abb3644bfce0095b579fb4259953fc7422c8b2a96",
+    "report.json": "fc7c40427d79e73473e81a8309c0c027f24431e24a5aec8e7f5d6d2bbce1a76d"
+  },
+  "protocol_sha256": "7f4b88da79b40a4355de977d33a4cac7c3ae1059a2afaa03b3862f739e886b1d",
+  "results": {
+    "repeat_current/train": {
+      "metrics": {
+        "path_position_cm": 0.16881285789340109,
+        "path_rotation_deg": 0.5986484606004089,
+        "endpoint_position_cm": 0.21749852922249083,
+        "endpoint_rotation_deg": 0.6885199204769008
+      },
+      "static": {
+        "path_position_cm": 8.960284924153353,
+        "path_rotation_deg": 13.88273475795172,
+        "endpoint_position_cm": 12.615988871210611,
+        "endpoint_rotation_deg": 20.33054352452782
+      },
+      "pose_fit_passed": true,
+      "passing_windows": 128,
+      "windows": 128
+    },
+    "repeat_current/development": {
+      "metrics": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593287,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554033
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "pose_fit_passed": false,
+      "passing_windows": 0,
+      "windows": 40
+    },
+    "real_previous/train": {
+      "metrics": {
+        "path_position_cm": 0.19648451405810655,
+        "path_rotation_deg": 0.5437568709877932,
+        "endpoint_position_cm": 0.2437326240015354,
+        "endpoint_rotation_deg": 0.6015138573342297
+      },
+      "static": {
+        "path_position_cm": 8.960284924153353,
+        "path_rotation_deg": 13.88273475795172,
+        "endpoint_position_cm": 12.615988871210611,
+        "endpoint_rotation_deg": 20.33054352452782
+      },
+      "pose_fit_passed": true,
+      "passing_windows": 127,
+      "windows": 128
+    },
+    "real_previous/development": {
+      "metrics": {
+        "path_position_cm": 8.74892450069444,
+        "path_rotation_deg": 15.613647811509201,
+        "endpoint_position_cm": 11.571754163280923,
+        "endpoint_rotation_deg": 22.101079538918516
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "pose_fit_passed": false,
+      "passing_windows": 0,
+      "windows": 40
+    }
+  },
+  "maximum_metric_recomputation_differences": {
+    "path_position_cm": 1.1989976620441212e-06,
+    "path_rotation_deg": 0.0036863368595808077,
+    "endpoint_position_cm": 1.6150631498845769e-06,
+    "endpoint_rotation_deg": 0.006042791131553926
+  },
+  "original_control_replay": {
+    "initial": {
+      "predictions": 0.0,
+      "targets": 0.0,
+      "contexts": 0.0,
+      "row_indices": 0.0
+    },
+    "train": {
+      "predictions": 0.0,
+      "targets": 0.0,
+      "contexts": 0.0,
+      "row_indices": 0.0
+    },
+    "development": {
+      "predictions": 0.0,
+      "targets": 0.0,
+      "contexts": 0.0,
+      "row_indices": 0.0
+    }
+  },
+  "all8192_control_losses_max_difference": 0.0,
+  "position_reduction_fraction": -0.04788498652520399,
+  "position_worsening_percent": 4.788498652520399,
+  "history_minus_control": {
+    "path_position_cm": 0.39979781866614594,
+    "path_rotation_deg": 0.3575994729159149,
+    "endpoint_position_cm": 0.843402721907573,
+    "endpoint_rotation_deg": 1.316566960364483
+  },
+  "candidate_conditions": {
+    "position_reduction_at_least_10_percent": false,
+    "rotation_not_worse": false,
+    "at_least_6_episode_position_improvements": false,
+    "both_training_gates_passed": true,
+    "control_replay_passed": true
+  },
+  "candidate_passed": false,
+  "development_beats_static": false,
+  "position_improved_episodes": 4,
+  "rotation_improved_episodes": 6,
+  "per_episode": [
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+      "task": "close the drawer",
+      "windows": 4,
+      "repeat_current": {
+        "path_position_cm": 7.690449419564229,
+        "path_rotation_deg": 39.22917167380951,
+        "endpoint_position_cm": 10.616067776545561,
+        "endpoint_rotation_deg": 53.12275229112029
+      },
+      "real_previous": {
+        "path_position_cm": 8.33962894125442,
+        "path_rotation_deg": 42.63951463617814,
+        "endpoint_position_cm": 13.492472234865367,
+        "endpoint_rotation_deg": 57.347625419245894
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.6491795216901908,
+        "path_rotation_deg": 3.410342962368631,
+        "endpoint_position_cm": 2.876404458319806,
+        "endpoint_rotation_deg": 4.224873128125601
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+      "task": "close microwave",
+      "windows": 6,
+      "repeat_current": {
+        "path_position_cm": 10.949887419908414,
+        "path_rotation_deg": 12.677959123129867,
+        "endpoint_position_cm": 8.016194994845534,
+        "endpoint_rotation_deg": 19.527432563426235
+      },
+      "real_previous": {
+        "path_position_cm": 11.492873989648173,
+        "path_rotation_deg": 14.089322456655678,
+        "endpoint_position_cm": 10.097444326886862,
+        "endpoint_rotation_deg": 18.508910015273685
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.5429865697397585,
+        "path_rotation_deg": 1.4113633335258111,
+        "endpoint_position_cm": 2.0812493320413274,
+        "endpoint_rotation_deg": -1.01852254815255
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "task": "take broccoli out of pan",
+      "windows": 6,
+      "repeat_current": {
+        "path_position_cm": 8.349538265837522,
+        "path_rotation_deg": 10.631768328640453,
+        "endpoint_position_cm": 10.878949497849804,
+        "endpoint_rotation_deg": 10.287207279130062
+      },
+      "real_previous": {
+        "path_position_cm": 8.012671811085092,
+        "path_rotation_deg": 8.71125774632899,
+        "endpoint_position_cm": 9.636437332834596,
+        "endpoint_rotation_deg": 11.18608754153093
+      },
+      "history_minus_control": {
+        "path_position_cm": -0.33686645475243004,
+        "path_rotation_deg": -1.9205105823114632,
+        "endpoint_position_cm": -1.2425121650152082,
+        "endpoint_rotation_deg": 0.8988802624008692
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "task": "take broccoli out of pan",
+      "windows": 3,
+      "repeat_current": {
+        "path_position_cm": 13.892516188885066,
+        "path_rotation_deg": 15.918820952573778,
+        "endpoint_position_cm": 15.52917571112591,
+        "endpoint_rotation_deg": 15.621734700441525
+      },
+      "real_previous": {
+        "path_position_cm": 17.11710363384227,
+        "path_rotation_deg": 21.742879458624355,
+        "endpoint_position_cm": 22.436776700313825,
+        "endpoint_rotation_deg": 24.594342659015766
+      },
+      "history_minus_control": {
+        "path_position_cm": 3.224587444957203,
+        "path_rotation_deg": 5.8240585060505765,
+        "endpoint_position_cm": 6.907600989187914,
+        "endpoint_rotation_deg": 8.97260795857424
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+      "task": "turn lever vertical to front",
+      "windows": 2,
+      "repeat_current": {
+        "path_position_cm": 4.134765384506704,
+        "path_rotation_deg": 12.308306798261576,
+        "endpoint_position_cm": 5.1998481729487285,
+        "endpoint_rotation_deg": 12.900878168944418
+      },
+      "real_previous": {
+        "path_position_cm": 3.038673841957396,
+        "path_rotation_deg": 10.04253256861443,
+        "endpoint_position_cm": 3.49966718010875,
+        "endpoint_rotation_deg": 14.709361792492018
+      },
+      "history_minus_control": {
+        "path_position_cm": -1.0960915425493076,
+        "path_rotation_deg": -2.265774229647146,
+        "endpoint_position_cm": -1.7001809928399783,
+        "endpoint_rotation_deg": 1.8084836235476
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+      "task": "close microwave",
+      "windows": 4,
+      "repeat_current": {
+        "path_position_cm": 8.039266415682109,
+        "path_rotation_deg": 13.53870063327255,
+        "endpoint_position_cm": 7.1483327872069955,
+        "endpoint_rotation_deg": 16.089074796168408
+      },
+      "real_previous": {
+        "path_position_cm": 7.774175894918346,
+        "path_rotation_deg": 11.56898039830387,
+        "endpoint_position_cm": 9.066442195016611,
+        "endpoint_rotation_deg": 15.010178567031014
+      },
+      "history_minus_control": {
+        "path_position_cm": -0.2650905207637626,
+        "path_rotation_deg": -1.9697202349686798,
+        "endpoint_position_cm": 1.9181094078096157,
+        "endpoint_rotation_deg": -1.0788962291373938
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+      "task": "turn lever vertical to front",
+      "windows": 2,
+      "repeat_current": {
+        "path_position_cm": 1.6763207424598967,
+        "path_rotation_deg": 6.870002533993305,
+        "endpoint_position_cm": 3.0659723410796036,
+        "endpoint_rotation_deg": 10.995391474512877
+      },
+      "real_previous": {
+        "path_position_cm": 2.0056762060240523,
+        "path_rotation_deg": 6.79092189483804,
+        "endpoint_position_cm": 3.4951434962707126,
+        "endpoint_rotation_deg": 16.004326912061206
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.32935546356415557,
+        "path_rotation_deg": -0.07908063915526498,
+        "endpoint_position_cm": 0.42917115519110904,
+        "endpoint_rotation_deg": 5.008935437548329
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+      "task": "close the drawer",
+      "windows": 2,
+      "repeat_current": {
+        "path_position_cm": 5.719140692645914,
+        "path_rotation_deg": 9.533053434606023,
+        "endpoint_position_cm": 10.218370518569406,
+        "endpoint_rotation_deg": 15.400979040304632
+      },
+      "real_previous": {
+        "path_position_cm": 7.015074576286658,
+        "path_rotation_deg": 9.550992880238242,
+        "endpoint_position_cm": 11.111329588542956,
+        "endpoint_rotation_deg": 18.89844677463522
+      },
+      "history_minus_control": {
+        "path_position_cm": 1.2959338836407435,
+        "path_rotation_deg": 0.017939445632219275,
+        "endpoint_position_cm": 0.8929590699735499,
+        "endpoint_rotation_deg": 3.4974677343305896
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+      "task": "open the drawer",
+      "windows": 6,
+      "repeat_current": {
+        "path_position_cm": 8.147663260012493,
+        "path_rotation_deg": 16.378456360117816,
+        "endpoint_position_cm": 14.93053170739835,
+        "endpoint_rotation_deg": 25.938385215281347
+      },
+      "real_previous": {
+        "path_position_cm": 7.872987026885877,
+        "path_rotation_deg": 16.203891201723806,
+        "endpoint_position_cm": 12.687582460395639,
+        "endpoint_rotation_deg": 23.29272309591184
+      },
+      "history_minus_control": {
+        "path_position_cm": -0.27467623312661615,
+        "path_rotation_deg": -0.1745651583940102,
+        "endpoint_position_cm": -2.242949247002711,
+        "endpoint_rotation_deg": -2.645662119369508
+      }
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+      "task": "open the drawer",
+      "windows": 5,
+      "repeat_current": {
+        "path_position_cm": 8.325133611943118,
+        "path_rotation_deg": 11.172430610526249,
+        "endpoint_position_cm": 14.313297800157688,
+        "endpoint_rotation_deg": 18.91106859542647
+      },
+      "real_previous": {
+        "path_position_cm": 9.152080713461718,
+        "path_rotation_deg": 11.137514166186929,
+        "endpoint_position_cm": 14.916622692044008,
+        "endpoint_rotation_deg": 20.735668551982005
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.8269471015186003,
+        "path_rotation_deg": -0.03491644433931995,
+        "endpoint_position_cm": 0.6033248918863201,
+        "endpoint_rotation_deg": 1.8245999565555344
+      }
+    }
+  ],
+  "per_task": [
+    {
+      "task": "close the drawer",
+      "windows": 6,
+      "repeat_current": {
+        "path_position_cm": 7.033346510591457,
+        "path_rotation_deg": 29.330465594075022,
+        "endpoint_position_cm": 10.483502023886844,
+        "endpoint_rotation_deg": 40.54882787418173
+      },
+      "real_previous": {
+        "path_position_cm": 7.898110819598502,
+        "path_rotation_deg": 31.61000738419817,
+        "endpoint_position_cm": 12.698758019424565,
+        "endpoint_rotation_deg": 44.531232537709
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.8647643090070449,
+        "path_rotation_deg": 2.2795417901231474,
+        "endpoint_position_cm": 2.2152559955377207,
+        "endpoint_rotation_deg": 3.9824046635272694
+      }
+    },
+    {
+      "task": "close microwave",
+      "windows": 10,
+      "repeat_current": {
+        "path_position_cm": 9.785639018217891,
+        "path_rotation_deg": 13.022255727186943,
+        "endpoint_position_cm": 7.669050111790118,
+        "endpoint_rotation_deg": 18.152089456523104
+      },
+      "real_previous": {
+        "path_position_cm": 10.005394751756238,
+        "path_rotation_deg": 13.081185633314954,
+        "endpoint_position_cm": 9.685043474138762,
+        "endpoint_rotation_deg": 17.109417435976617
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.21975573353834754,
+        "path_rotation_deg": 0.058929906128010856,
+        "endpoint_position_cm": 2.0159933623486443,
+        "endpoint_rotation_deg": -1.0426720205464868
+      }
+    },
+    {
+      "task": "take broccoli out of pan",
+      "windows": 9,
+      "repeat_current": {
+        "path_position_cm": 10.197197573520036,
+        "path_rotation_deg": 12.394119203284893,
+        "endpoint_position_cm": 12.429024902275174,
+        "endpoint_rotation_deg": 12.065383086233881
+      },
+      "real_previous": {
+        "path_position_cm": 11.047482418670818,
+        "path_rotation_deg": 13.055131650427441,
+        "endpoint_position_cm": 13.903217121994338,
+        "endpoint_rotation_deg": 15.655505914025879
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.8502848451507816,
+        "path_rotation_deg": 0.6610124471425483,
+        "endpoint_position_cm": 1.4741922197191641,
+        "endpoint_rotation_deg": 3.5901228277919977
+      }
+    },
+    {
+      "task": "turn lever vertical to front",
+      "windows": 4,
+      "repeat_current": {
+        "path_position_cm": 2.9055430634833,
+        "path_rotation_deg": 9.58915466612744,
+        "endpoint_position_cm": 4.132910257014166,
+        "endpoint_rotation_deg": 11.948134821728646
+      },
+      "real_previous": {
+        "path_position_cm": 2.5221750239907244,
+        "path_rotation_deg": 8.416727231726234,
+        "endpoint_position_cm": 3.4974053381897314,
+        "endpoint_rotation_deg": 15.356844352276616
+      },
+      "history_minus_control": {
+        "path_position_cm": -0.3833680394925758,
+        "path_rotation_deg": -1.1724274344012056,
+        "endpoint_position_cm": -0.6355049188244348,
+        "endpoint_rotation_deg": 3.40870953054797
+      }
+    },
+    {
+      "task": "open the drawer",
+      "windows": 11,
+      "repeat_current": {
+        "path_position_cm": 8.228331601799141,
+        "path_rotation_deg": 14.012081019394376,
+        "endpoint_position_cm": 14.649970840470775,
+        "endpoint_rotation_deg": 22.744150388074583
+      },
+      "real_previous": {
+        "path_position_cm": 8.454393248056714,
+        "path_rotation_deg": 13.900992549207045,
+        "endpoint_position_cm": 13.700782565690352,
+        "endpoint_rotation_deg": 22.130425575943736
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.2260616462575733,
+        "path_rotation_deg": -0.11108847018733137,
+        "endpoint_position_cm": -0.9491882747804237,
+        "endpoint_rotation_deg": -0.6137248121308474
+      }
+    }
+  ],
+  "subgroups": [
+    {
+      "group": "all40",
+      "windows": 40,
+      "repeat_current": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593283,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554036
+      },
+      "real_previous": {
+        "path_position_cm": 8.748924500694438,
+        "path_rotation_deg": 15.613647811509201,
+        "endpoint_position_cm": 11.571754163280922,
+        "endpoint_rotation_deg": 22.101079538918516
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.39979781866614417,
+        "path_rotation_deg": 0.3575994729159184,
+        "endpoint_position_cm": 0.8434027219075713,
+        "endpoint_rotation_deg": 1.3165669603644794
+      }
+    },
+    {
+      "group": "real_history30",
+      "windows": 30,
+      "repeat_current": {
+        "path_position_cm": 8.58239546145094,
+        "path_rotation_deg": 15.3081983859738,
+        "endpoint_position_cm": 10.544458684813245,
+        "endpoint_rotation_deg": 19.470971128897396
+      },
+      "real_previous": {
+        "path_position_cm": 9.024686186940771,
+        "path_rotation_deg": 15.76752289779342,
+        "endpoint_position_cm": 11.604730392419834,
+        "endpoint_rotation_deg": 21.622724022138247
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.4422907254898316,
+        "path_rotation_deg": 0.4593245118196201,
+        "endpoint_position_cm": 1.0602717076065886,
+        "endpoint_rotation_deg": 2.1517528932408503
+      }
+    },
+    {
+      "group": "boundary10",
+      "windows": 10,
+      "repeat_current": {
+        "path_position_cm": 7.649320343760356,
+        "path_rotation_deg": 15.09959819645174,
+        "endpoint_position_cm": 11.280029711053665,
+        "endpoint_rotation_deg": 24.72513692752393
+      },
+      "real_previous": {
+        "path_position_cm": 7.921639441955434,
+        "path_rotation_deg": 15.152022552656545,
+        "endpoint_position_cm": 11.472825475864187,
+        "endpoint_rotation_deg": 23.536146089259315
+      },
+      "history_minus_control": {
+        "path_position_cm": 0.27231909819507827,
+        "path_rotation_deg": 0.05242435620480457,
+        "endpoint_position_cm": 0.19279576481052274,
+        "endpoint_rotation_deg": -1.1889908382646155
+      }
+    }
+  ],
+  "checkpoint_loaded": false,
+  "training_executed": false,
+  "new_model_inference": false,
+  "verdict": "Close the current history configuration; no follow-up seed or parameter sweep",
+  "limitations": "One training initialization, ten reused development episodes with overlapping windows; frozen-weight and source protections partly rely on GPU report. Does not prove history generally useless or uniquely identify a faulty module."
+}

@@ -1,0 +1,662 @@
+{
+  "source_sha256": "e731bb3f8edf4fe190268d44dbc2d17d905c3e19112f05fba250548aeaab03da",
+  "stage": "read_existing_ema_report",
+  "new_training": false,
+  "overall": {
+    "train": {
+      "static": {
+        "windows": 1836,
+        "action_targets": 29376,
+        "path_position_cm": 8.226703643798828,
+        "path_rotation_deg": 14.0304594039917,
+        "gripper_accuracy": 0.2863562091503268,
+        "gripper_balanced_accuracy": 0.5,
+        "gripper_class_count": 2,
+        "endpoint_position_cm": 11.8787202835083,
+        "endpoint_rotation_deg": 20.230451583862305,
+        "endpoint_gripper_accuracy": 0.332244008714597,
+        "grasp_events": 689,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 8.875237464904785,
+        "grasp_rotation_deg_at_true_event": 14.832161903381348,
+        "release_events": 324,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.21727466583252,
+        "release_rotation_deg_at_true_event": 14.03685474395752
+      },
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 7.546865940093994,
+          "path_rotation_deg": 13.845494270324707,
+          "endpoint_position_cm": 10.903455098470053,
+          "endpoint_rotation_deg": 19.587544123331707,
+          "gripper_balanced_accuracy": 0.8618701053355693,
+          "grasp_exact_timing_accuracy": 0.1296565070149976,
+          "release_exact_timing_accuracy": 0.007201646090534979
+        },
+        "native_ddpm100": {
+          "path_position_cm": 10.599370956420898,
+          "path_rotation_deg": 15.458396275838217,
+          "endpoint_position_cm": 14.97064240773519,
+          "endpoint_rotation_deg": 21.473132451375324,
+          "gripper_balanced_accuracy": 0.8546876047637492,
+          "grasp_exact_timing_accuracy": 0.12578616352201258,
+          "release_exact_timing_accuracy": 0.0205761316872428
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 7.570971330006917,
+          "path_rotation_deg": 13.80402660369873,
+          "endpoint_position_cm": 10.953067779541016,
+          "endpoint_rotation_deg": 19.553423563639324,
+          "gripper_balanced_accuracy": 0.8639660834691321,
+          "grasp_exact_timing_accuracy": 0.1296565070149976,
+          "release_exact_timing_accuracy": 0.0102880658436214
+        },
+        "native_ddpm100": {
+          "path_position_cm": 10.468737920125326,
+          "path_rotation_deg": 15.312982559204102,
+          "endpoint_position_cm": 14.83385181427002,
+          "endpoint_rotation_deg": 21.32933235168457,
+          "gripper_balanced_accuracy": 0.8573653605215762,
+          "grasp_exact_timing_accuracy": 0.1301402999516207,
+          "release_exact_timing_accuracy": 0.016460905349794237
+        }
+      }
+    },
+    "validation": {
+      "static": {
+        "windows": 40,
+        "action_targets": 640,
+        "path_position_cm": 8.212326049804688,
+        "path_rotation_deg": 15.098398208618164,
+        "gripper_accuracy": 0.3453125,
+        "gripper_balanced_accuracy": 0.5,
+        "gripper_class_count": 2,
+        "endpoint_position_cm": 10.56533432006836,
+        "endpoint_rotation_deg": 19.98635482788086,
+        "endpoint_gripper_accuracy": 0.425,
+        "grasp_events": 20,
+        "grasp_exact_timing_accuracy": 0.0,
+        "grasp_position_cm_at_true_event": 8.961858749389648,
+        "grasp_rotation_deg_at_true_event": 11.817361831665039,
+        "release_events": 8,
+        "release_exact_timing_accuracy": 0.0,
+        "release_position_cm_at_true_event": 11.59077262878418,
+        "release_rotation_deg_at_true_event": 12.053526878356934
+      },
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 7.420459747314453,
+          "path_rotation_deg": 14.246643702189127,
+          "endpoint_position_cm": 9.88795280456543,
+          "endpoint_rotation_deg": 18.658721923828125,
+          "gripper_balanced_accuracy": 0.8270805660248312,
+          "grasp_exact_timing_accuracy": 0.1,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 10.025251070658365,
+          "path_rotation_deg": 14.587262153625488,
+          "endpoint_position_cm": 13.31484285990397,
+          "endpoint_rotation_deg": 19.436381022135418,
+          "gripper_balanced_accuracy": 0.8304697314945806,
+          "grasp_exact_timing_accuracy": 0.1,
+          "release_exact_timing_accuracy": 0.125
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 7.482695420583089,
+          "path_rotation_deg": 14.289814949035645,
+          "endpoint_position_cm": 9.93694273630778,
+          "endpoint_rotation_deg": 18.729387283325195,
+          "gripper_balanced_accuracy": 0.8315640557673409,
+          "grasp_exact_timing_accuracy": 0.05,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 9.905103047688803,
+          "path_rotation_deg": 14.565923055013021,
+          "endpoint_position_cm": 13.195145924886068,
+          "endpoint_rotation_deg": 19.373972574869793,
+          "gripper_balanced_accuracy": 0.8306605182921342,
+          "grasp_exact_timing_accuracy": 0.11666666666666667,
+          "release_exact_timing_accuracy": 0.08333333333333333
+        }
+      }
+    }
+  },
+  "episode_counts": {
+    "train": {
+      "total": 405,
+      "raw": {
+        "path_position_cm": 381,
+        "path_rotation_deg": 305,
+        "endpoint_position_cm": 373,
+        "endpoint_rotation_deg": 300
+      },
+      "ema": {
+        "path_position_cm": 381,
+        "path_rotation_deg": 303,
+        "endpoint_position_cm": 369,
+        "endpoint_rotation_deg": 296
+      }
+    },
+    "validation": {
+      "total": 10,
+      "raw": {
+        "path_position_cm": 9,
+        "path_rotation_deg": 6,
+        "endpoint_position_cm": 9,
+        "endpoint_rotation_deg": 6
+      },
+      "ema": {
+        "path_position_cm": 9,
+        "path_rotation_deg": 6,
+        "endpoint_position_cm": 9,
+        "endpoint_rotation_deg": 6
+      }
+    }
+  },
+  "sampling_seed_results": {
+    "train/raw": [
+      {
+        "seed": 0,
+        "one_step_position_cm": 7.533452987670898,
+        "ddpm100_position_cm": 10.478774070739746
+      },
+      {
+        "seed": 1,
+        "one_step_position_cm": 7.567142009735107,
+        "ddpm100_position_cm": 10.612092018127441
+      },
+      {
+        "seed": 2,
+        "one_step_position_cm": 7.540002822875977,
+        "ddpm100_position_cm": 10.707246780395508
+      }
+    ],
+    "train/ema": [
+      {
+        "seed": 0,
+        "one_step_position_cm": 7.558785438537598,
+        "ddpm100_position_cm": 10.353558540344238
+      },
+      {
+        "seed": 1,
+        "one_step_position_cm": 7.588423728942871,
+        "ddpm100_position_cm": 10.498944282531738
+      },
+      {
+        "seed": 2,
+        "one_step_position_cm": 7.565704822540283,
+        "ddpm100_position_cm": 10.5537109375
+      }
+    ],
+    "validation/raw": [
+      {
+        "seed": 0,
+        "one_step_position_cm": 7.487795829772949,
+        "ddpm100_position_cm": 10.257396697998047
+      },
+      {
+        "seed": 1,
+        "one_step_position_cm": 7.409829139709473,
+        "ddpm100_position_cm": 9.98228645324707
+      },
+      {
+        "seed": 2,
+        "one_step_position_cm": 7.3637542724609375,
+        "ddpm100_position_cm": 9.83607006072998
+      }
+    ],
+    "validation/ema": [
+      {
+        "seed": 0,
+        "one_step_position_cm": 7.544134616851807,
+        "ddpm100_position_cm": 10.144736289978027
+      },
+      {
+        "seed": 1,
+        "one_step_position_cm": 7.4744672775268555,
+        "ddpm100_position_cm": 9.822776794433594
+      },
+      {
+        "seed": 2,
+        "one_step_position_cm": 7.4294843673706055,
+        "ddpm100_position_cm": 9.747796058654785
+      }
+    ]
+  },
+  "validation_episodes": {
+    "validation/episode/bridge_data_v2-train.tfrecord-00003-of-01024::22": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 7.072478294372559,
+          "path_rotation_deg": 49.342044830322266,
+          "endpoint_position_cm": 12.593400637308756,
+          "endpoint_rotation_deg": 71.2737808227539,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 10.595863978068033,
+          "path_rotation_deg": 41.805868784586586,
+          "endpoint_position_cm": 16.038007100423176,
+          "endpoint_rotation_deg": 62.73912684122721,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 7.167716821034749,
+          "path_rotation_deg": 49.9688975016276,
+          "endpoint_position_cm": 12.770169258117676,
+          "endpoint_rotation_deg": 71.97921752929688,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 10.523442268371582,
+          "path_rotation_deg": 42.10996627807617,
+          "endpoint_position_cm": 16.026727040608723,
+          "endpoint_rotation_deg": 63.179298400878906,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00008-of-01024::38": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 9.201446215311686,
+          "path_rotation_deg": 12.190217018127441,
+          "endpoint_position_cm": 9.71086565653483,
+          "endpoint_rotation_deg": 13.923231760660807,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 14.002026557922363,
+          "path_rotation_deg": 13.14256763458252,
+          "endpoint_position_cm": 15.682083447774252,
+          "endpoint_rotation_deg": 15.01741091410319,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 9.187886555989584,
+          "path_rotation_deg": 12.255079587300619,
+          "endpoint_position_cm": 9.684128761291504,
+          "endpoint_rotation_deg": 13.855679512023926,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 13.832547823588053,
+          "path_rotation_deg": 13.057177225748697,
+          "endpoint_position_cm": 15.21926244099935,
+          "endpoint_rotation_deg": 14.723522186279297,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00008-of-01024::54": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 7.731070359547933,
+          "path_rotation_deg": 7.934741338094075,
+          "endpoint_position_cm": 10.804312070210775,
+          "endpoint_rotation_deg": 11.213539123535156,
+          "gripper_balanced_accuracy": 0.726981351981352,
+          "grasp_exact_timing_accuracy": 0.16666666666666666,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 9.975780487060547,
+          "path_rotation_deg": 10.8311767578125,
+          "endpoint_position_cm": 14.565400759379068,
+          "endpoint_rotation_deg": 15.500624656677246,
+          "gripper_balanced_accuracy": 0.7316433566433567,
+          "grasp_exact_timing_accuracy": 0.16666666666666666,
+          "release_exact_timing_accuracy": 0.0
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 7.758073329925537,
+          "path_rotation_deg": 7.832958062489827,
+          "endpoint_position_cm": 10.777990659077963,
+          "endpoint_rotation_deg": 11.053339322408041,
+          "gripper_balanced_accuracy": 0.7307692307692308,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 9.513883431752523,
+          "path_rotation_deg": 10.356405258178711,
+          "endpoint_position_cm": 14.009553591410318,
+          "endpoint_rotation_deg": 15.034205754597982,
+          "gripper_balanced_accuracy": 0.7392191142191142,
+          "grasp_exact_timing_accuracy": 0.16666666666666666,
+          "release_exact_timing_accuracy": 0.0
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00011-of-01024::24": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 10.030354499816895,
+          "path_rotation_deg": 9.376396814982096,
+          "endpoint_position_cm": 11.321187973022461,
+          "endpoint_rotation_deg": 11.268091201782227,
+          "gripper_balanced_accuracy": 0.7611111111111111,
+          "grasp_exact_timing_accuracy": 0.1111111111111111,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 10.58647092183431,
+          "path_rotation_deg": 11.933318456013998,
+          "endpoint_position_cm": 13.06671142578125,
+          "endpoint_rotation_deg": 15.654426256815592,
+          "gripper_balanced_accuracy": 0.7555555555555555,
+          "grasp_exact_timing_accuracy": 0.2222222222222222,
+          "release_exact_timing_accuracy": 0.0
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 10.146666526794434,
+          "path_rotation_deg": 9.545486132303873,
+          "endpoint_position_cm": 11.435885747273764,
+          "endpoint_rotation_deg": 11.210393587748209,
+          "gripper_balanced_accuracy": 0.75,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 11.041112740834555,
+          "path_rotation_deg": 11.72072696685791,
+          "endpoint_position_cm": 13.614160219828287,
+          "endpoint_rotation_deg": 15.178136189778646,
+          "gripper_balanced_accuracy": 0.7518518518518519,
+          "grasp_exact_timing_accuracy": 0.2222222222222222,
+          "release_exact_timing_accuracy": 0.0
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00021-of-01024::19": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 2.8547661304473877,
+          "path_rotation_deg": 9.254269282023111,
+          "endpoint_position_cm": 3.754840612411499,
+          "endpoint_rotation_deg": 11.383160273234049,
+          "gripper_balanced_accuracy": 0.71875,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 2.3326188723246255,
+          "path_rotation_deg": 8.082495212554932,
+          "endpoint_position_cm": 3.0839192072550454,
+          "endpoint_rotation_deg": 9.110883394877115,
+          "gripper_balanced_accuracy": 0.71875,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 2.881575028101603,
+          "path_rotation_deg": 9.309708595275879,
+          "endpoint_position_cm": 3.740321397781372,
+          "endpoint_rotation_deg": 11.635061581929525,
+          "gripper_balanced_accuracy": 0.75,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 2.3417743841807046,
+          "path_rotation_deg": 8.148360252380371,
+          "endpoint_position_cm": 3.02392840385437,
+          "endpoint_rotation_deg": 9.210013389587402,
+          "gripper_balanced_accuracy": 0.75,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00024-of-01024::11": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 9.448240915934244,
+          "path_rotation_deg": 10.672731717427572,
+          "endpoint_position_cm": 8.132215817769369,
+          "endpoint_rotation_deg": 9.821796735127768,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 15.635152498881022,
+          "path_rotation_deg": 13.567906379699707,
+          "endpoint_position_cm": 15.782330830891928,
+          "endpoint_rotation_deg": 12.754870414733887,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 9.494013786315918,
+          "path_rotation_deg": 10.539227803548178,
+          "endpoint_position_cm": 8.18410619099935,
+          "endpoint_rotation_deg": 9.695298830668131,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 15.65517807006836,
+          "path_rotation_deg": 13.426814079284668,
+          "endpoint_position_cm": 15.962734540303549,
+          "endpoint_rotation_deg": 12.661731402079264,
+          "gripper_balanced_accuracy": 1.0,
+          "grasp_exact_timing_accuracy": null,
+          "release_exact_timing_accuracy": null
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00024-of-01024::34": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 2.13071076075236,
+          "path_rotation_deg": 6.445687294006348,
+          "endpoint_position_cm": 3.864685614903768,
+          "endpoint_rotation_deg": 9.417677243550619,
+          "gripper_balanced_accuracy": 0.875,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 2.5755567948023477,
+          "path_rotation_deg": 6.320211887359619,
+          "endpoint_position_cm": 4.7038319905598955,
+          "endpoint_rotation_deg": 8.154568672180176,
+          "gripper_balanced_accuracy": 0.875,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": null
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 2.088101069132487,
+          "path_rotation_deg": 6.288996696472168,
+          "endpoint_position_cm": 3.6417972246805825,
+          "endpoint_rotation_deg": 9.887015660603842,
+          "gripper_balanced_accuracy": 0.875,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": null
+        },
+        "native_ddpm100": {
+          "path_position_cm": 2.492258906364441,
+          "path_rotation_deg": 6.2316873868306475,
+          "endpoint_position_cm": 4.410240650177002,
+          "endpoint_rotation_deg": 8.2865358988444,
+          "gripper_balanced_accuracy": 0.875,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": null
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00024-of-01024::38": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 8.440083821614584,
+          "path_rotation_deg": 13.04545815785726,
+          "endpoint_position_cm": 13.98887856801351,
+          "endpoint_rotation_deg": 17.158987681070965,
+          "gripper_balanced_accuracy": 0.4761904761904762,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 14.134714126586914,
+          "path_rotation_deg": 17.159350395202637,
+          "endpoint_position_cm": 22.93439229329427,
+          "endpoint_rotation_deg": 25.414339065551758,
+          "gripper_balanced_accuracy": 0.4973544973544974,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.16666666666666666
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 8.73248322804769,
+          "path_rotation_deg": 12.732885360717773,
+          "endpoint_position_cm": 13.950521469116211,
+          "endpoint_rotation_deg": 17.045930862426758,
+          "gripper_balanced_accuracy": 0.503968253968254,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 13.698054631551107,
+          "path_rotation_deg": 17.964732487996418,
+          "endpoint_position_cm": 22.711926142374676,
+          "endpoint_rotation_deg": 25.927337646484375,
+          "gripper_balanced_accuracy": 0.4880952380952381,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00029-of-01024::9": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 5.537379900614421,
+          "path_rotation_deg": 10.959222157796225,
+          "endpoint_position_cm": 8.810429890950521,
+          "endpoint_rotation_deg": 15.676392237345377,
+          "gripper_balanced_accuracy": 0.7375,
+          "grasp_exact_timing_accuracy": 0.25,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 6.321083227793376,
+          "path_rotation_deg": 9.305527687072754,
+          "endpoint_position_cm": 9.55752690633138,
+          "endpoint_rotation_deg": 13.14451821645101,
+          "gripper_balanced_accuracy": 0.7625,
+          "grasp_exact_timing_accuracy": 0.16666666666666666,
+          "release_exact_timing_accuracy": 0.3333333333333333
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 5.727013111114502,
+          "path_rotation_deg": 11.085339546203613,
+          "endpoint_position_cm": 9.148323059082031,
+          "endpoint_rotation_deg": 15.790486653645834,
+          "gripper_balanced_accuracy": 0.7333333333333334,
+          "grasp_exact_timing_accuracy": 0.25,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 6.181642055511475,
+          "path_rotation_deg": 9.507241249084473,
+          "endpoint_position_cm": 9.553425153096518,
+          "endpoint_rotation_deg": 13.39948558807373,
+          "gripper_balanced_accuracy": 0.7428571428571429,
+          "grasp_exact_timing_accuracy": 0.25,
+          "release_exact_timing_accuracy": 0.3333333333333333
+        }
+      }
+    },
+    "validation/episode/bridge_data_v2-train.tfrecord-00030-of-01024::39": {
+      "raw": {
+        "one_step_x0": {
+          "path_position_cm": 7.794787883758545,
+          "path_rotation_deg": 11.536300977071127,
+          "endpoint_position_cm": 11.89632797241211,
+          "endpoint_rotation_deg": 13.472736358642578,
+          "gripper_balanced_accuracy": 0.6663172606568832,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 8.889485677083334,
+          "path_rotation_deg": 12.679140408833822,
+          "endpoint_position_cm": 13.167572975158691,
+          "endpoint_rotation_deg": 16.236215591430664,
+          "gripper_balanced_accuracy": 0.678662939669229,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        }
+      },
+      "ema": {
+        "one_step_x0": {
+          "path_position_cm": 7.755750974019368,
+          "path_rotation_deg": 11.444035847981771,
+          "endpoint_position_cm": 11.805001894632975,
+          "endpoint_rotation_deg": 13.502639134724935,
+          "gripper_balanced_accuracy": 0.6724901001630561,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        },
+        "native_ddpm100": {
+          "path_position_cm": 8.826736132303873,
+          "path_rotation_deg": 12.622623761494955,
+          "endpoint_position_cm": 13.203975359598795,
+          "endpoint_rotation_deg": 16.053868293762207,
+          "gripper_balanced_accuracy": 0.6724901001630561,
+          "grasp_exact_timing_accuracy": 0.0,
+          "release_exact_timing_accuracy": 0.0
+        }
+      }
+    }
+  },
+  "conclusions": [
+    "EMA gives small DDPM100 position improvement; one-step position worsens.",
+    "Large offline generation errors are present on training demonstrations; unseen demonstrations alone cannot explain them.",
+    "DDPM100 position degradation relative to one-step is widespread, but this does not prove a scheduler formula defect.",
+    "Three sampling seeds are not independent training repetitions.",
+    "Matched trajectory error does not establish task failure or success."
+  ]
+}

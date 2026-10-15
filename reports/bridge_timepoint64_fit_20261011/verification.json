@@ -1,0 +1,1802 @@
+{
+  "execution_verified": true,
+  "source_and_snapshot_hashes_match": true,
+  "reference_prefix_and_initial_state_preserved": true,
+  "reference_draw_counts_exactly_preserved": true,
+  "same_32_training_episodes": true,
+  "no_heldout_overlap": true,
+  "farthest_timepoint_selection_verified": true,
+  "stages": [
+    {
+      "updates": 160,
+      "mean_exposures": 20.0,
+      "groups": {
+        "all": {
+          "position_cm": 8.686426162719727,
+          "rotation_deg": 14.18963623046875,
+          "endpoint_position_cm": 12.802359580993652,
+          "endpoint_rotation_deg": 19.569419860839844,
+          "windows_all_three_seeds_pass": 0,
+          "pose_fit_passed": false
+        },
+        "common": {
+          "position_cm": 9.632660865783691,
+          "rotation_deg": 14.415884971618652,
+          "endpoint_position_cm": 14.114121437072754,
+          "endpoint_rotation_deg": 20.04511833190918,
+          "windows_all_three_seeds_pass": 0,
+          "pose_fit_passed": false
+        },
+        "added": {
+          "position_cm": 7.74019193649292,
+          "rotation_deg": 13.963386535644531,
+          "endpoint_position_cm": 11.49059772491455,
+          "endpoint_rotation_deg": 19.093717575073242,
+          "windows_all_three_seeds_pass": 0,
+          "pose_fit_passed": false
+        }
+      },
+      "predictions_sha256": "0f1c527a3923d0f426cf936743f19a82ddadfa8f25c06336cf0019e184e05996"
+    },
+    {
+      "updates": 400,
+      "mean_exposures": 50.0,
+      "groups": {
+        "all": {
+          "position_cm": 3.7742135524749756,
+          "rotation_deg": 9.171097755432129,
+          "endpoint_position_cm": 5.316898822784424,
+          "endpoint_rotation_deg": 12.503998756408691,
+          "windows_all_three_seeds_pass": 0,
+          "pose_fit_passed": false
+        },
+        "common": {
+          "position_cm": 4.173518180847168,
+          "rotation_deg": 10.092576026916504,
+          "endpoint_position_cm": 6.3669257164001465,
+          "endpoint_rotation_deg": 14.067039489746094,
+          "windows_all_three_seeds_pass": 0,
+          "pose_fit_passed": false
+        },
+        "added": {
+          "position_cm": 3.374908685684204,
+          "rotation_deg": 8.249621391296387,
+          "endpoint_position_cm": 4.266871929168701,
+          "endpoint_rotation_deg": 10.940960884094238,
+          "windows_all_three_seeds_pass": 0,
+          "pose_fit_passed": false
+        }
+      },
+      "predictions_sha256": "b738e90ebda4f2c859f2337c2038f80de99fa1a9cecc9919f2b0f44399517adb"
+    },
+    {
+      "updates": 4000,
+      "mean_exposures": 500.0,
+      "groups": {
+        "all": {
+          "position_cm": 0.3466379940509796,
+          "rotation_deg": 0.9626577496528625,
+          "endpoint_position_cm": 0.34319040179252625,
+          "endpoint_rotation_deg": 0.9227116703987122,
+          "windows_all_three_seeds_pass": 57,
+          "pose_fit_passed": false
+        },
+        "common": {
+          "position_cm": 0.3263181447982788,
+          "rotation_deg": 0.952644407749176,
+          "endpoint_position_cm": 0.30429449677467346,
+          "endpoint_rotation_deg": 0.8791899681091309,
+          "windows_all_three_seeds_pass": 31,
+          "pose_fit_passed": true
+        },
+        "added": {
+          "position_cm": 0.3669578731060028,
+          "rotation_deg": 0.9726712107658386,
+          "endpoint_position_cm": 0.38208627700805664,
+          "endpoint_rotation_deg": 0.9662333130836487,
+          "windows_all_three_seeds_pass": 26,
+          "pose_fit_passed": false
+        }
+      },
+      "predictions_sha256": "01dcb962effb58008f0e8e826be5a49132c4e4a7be364bc6e9c6c8cc3d62aa9e"
+    }
+  ],
+  "final_windows": [
+    {
+      "index": 0,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::39",
+      "task": "close microwave",
+      "start": 12,
+      "position_cm": 0.21185362339019775,
+      "rotation_deg": 1.1441031694412231,
+      "seed_position_cm": [
+        0.21059073507785797,
+        0.21215686202049255,
+        0.21281325817108154
+      ],
+      "seed_rotation_deg": [
+        1.1506550312042236,
+        1.138716697692871,
+        1.1429378986358643
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 1,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::3",
+      "task": "close the drawer",
+      "start": 16,
+      "position_cm": 0.3831559717655182,
+      "rotation_deg": 0.6645314693450928,
+      "seed_position_cm": [
+        0.38237249851226807,
+        0.38322365283966064,
+        0.3838719129562378
+      ],
+      "seed_rotation_deg": [
+        0.6618571281433105,
+        0.6651380658149719,
+        0.6665992140769958
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 2,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::36",
+      "task": "open the drawer",
+      "start": 12,
+      "position_cm": 0.33711493015289307,
+      "rotation_deg": 0.7521664500236511,
+      "seed_position_cm": [
+        0.33679383993148804,
+        0.3379056453704834,
+        0.336645245552063
+      ],
+      "seed_rotation_deg": [
+        0.7525779008865356,
+        0.7514632344245911,
+        0.7524581551551819
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 3,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "task": "take broccoli out of pan",
+      "start": 12,
+      "position_cm": 0.287485808134079,
+      "rotation_deg": 0.8705203533172607,
+      "seed_position_cm": [
+        0.2865239381790161,
+        0.286924809217453,
+        0.2890087366104126
+      ],
+      "seed_rotation_deg": [
+        0.8702588081359863,
+        0.8680528998374939,
+        0.8732492923736572
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 4,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00000-of-01024::45",
+      "task": "turn lever vertical to front",
+      "start": 4,
+      "position_cm": 0.3636707365512848,
+      "rotation_deg": 0.8547482490539551,
+      "seed_position_cm": [
+        0.36530831456184387,
+        0.36140382289886475,
+        0.36430007219314575
+      ],
+      "seed_rotation_deg": [
+        0.8581640720367432,
+        0.8538913726806641,
+        0.8521892428398132
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 5,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::8",
+      "task": "close microwave",
+      "start": 12,
+      "position_cm": 0.7368216514587402,
+      "rotation_deg": 1.1408683061599731,
+      "seed_position_cm": [
+        0.7369151711463928,
+        0.7369421124458313,
+        0.7366076707839966
+      ],
+      "seed_rotation_deg": [
+        1.1422936916351318,
+        1.1402150392532349,
+        1.1400961875915527
+      ],
+      "all_three_seeds_pass": false
+    },
+    {
+      "index": 6,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::26",
+      "task": "close the drawer",
+      "start": 16,
+      "position_cm": 0.29045024514198303,
+      "rotation_deg": 0.9848518371582031,
+      "seed_position_cm": [
+        0.29120585322380066,
+        0.29034745693206787,
+        0.2897973954677582
+      ],
+      "seed_rotation_deg": [
+        0.9863495826721191,
+        0.9835406541824341,
+        0.9846651554107666
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 7,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::21",
+      "task": "open the drawer",
+      "start": 12,
+      "position_cm": 0.24798865616321564,
+      "rotation_deg": 1.2123255729675293,
+      "seed_position_cm": [
+        0.2474023997783661,
+        0.24801048636436462,
+        0.24855315685272217
+      ],
+      "seed_rotation_deg": [
+        1.2164084911346436,
+        1.2120003700256348,
+        1.2085679769515991
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 8,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "task": "take broccoli out of pan",
+      "start": 12,
+      "position_cm": 0.49728354811668396,
+      "rotation_deg": 0.6809666752815247,
+      "seed_position_cm": [
+        0.4972308278083801,
+        0.49617817997932434,
+        0.49844157695770264
+      ],
+      "seed_rotation_deg": [
+        0.6823078393936157,
+        0.6818606853485107,
+        0.6787316799163818
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 9,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+      "task": "turn lever vertical to front",
+      "start": 4,
+      "position_cm": 0.19765663146972656,
+      "rotation_deg": 0.6286541819572449,
+      "seed_position_cm": [
+        0.19698697328567505,
+        0.19718487560749054,
+        0.1987980753183365
+      ],
+      "seed_rotation_deg": [
+        0.6239784359931946,
+        0.6286153197288513,
+        0.6333688497543335
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 10,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::25",
+      "task": "close microwave",
+      "start": 12,
+      "position_cm": 0.47744879126548767,
+      "rotation_deg": 1.3462778329849243,
+      "seed_position_cm": [
+        0.4754287004470825,
+        0.47837427258491516,
+        0.4785434603691101
+      ],
+      "seed_rotation_deg": [
+        1.3451998233795166,
+        1.348520040512085,
+        1.345113754272461
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 11,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::26",
+      "task": "close the drawer",
+      "start": 12,
+      "position_cm": 0.3116689920425415,
+      "rotation_deg": 0.8298600316047668,
+      "seed_position_cm": [
+        0.31048840284347534,
+        0.3127383589744568,
+        0.3117801547050476
+      ],
+      "seed_rotation_deg": [
+        0.8287160396575928,
+        0.8294714093208313,
+        0.8313928842544556
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 12,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::25",
+      "task": "open the drawer",
+      "start": 16,
+      "position_cm": 0.2764945328235626,
+      "rotation_deg": 0.6181812882423401,
+      "seed_position_cm": [
+        0.27541279792785645,
+        0.2772553563117981,
+        0.2768154740333557
+      ],
+      "seed_rotation_deg": [
+        0.6174382567405701,
+        0.6171740293502808,
+        0.6199315786361694
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 13,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "task": "take broccoli out of pan",
+      "start": 8,
+      "position_cm": 0.2965540289878845,
+      "rotation_deg": 1.202335238456726,
+      "seed_position_cm": [
+        0.29730939865112305,
+        0.29499688744544983,
+        0.2973558306694031
+      ],
+      "seed_rotation_deg": [
+        1.197643756866455,
+        1.2013070583343506,
+        1.208054780960083
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 14,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00007-of-01024::7",
+      "task": "turn lever vertical to front",
+      "start": 4,
+      "position_cm": 0.25580617785453796,
+      "rotation_deg": 0.9499165415763855,
+      "seed_position_cm": [
+        0.2564147412776947,
+        0.2557526230812073,
+        0.2552511692047119
+      ],
+      "seed_rotation_deg": [
+        0.9500835537910461,
+        0.9479329586029053,
+        0.9517329931259155
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 15,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::20",
+      "task": "close microwave",
+      "start": 8,
+      "position_cm": 0.4113851487636566,
+      "rotation_deg": 2.527399778366089,
+      "seed_position_cm": [
+        0.41265740990638733,
+        0.41078323125839233,
+        0.41071486473083496
+      ],
+      "seed_rotation_deg": [
+        2.5281691551208496,
+        2.524080276489258,
+        2.529949188232422
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 16,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::17",
+      "task": "close microwave",
+      "start": 8,
+      "position_cm": 0.22264552116394043,
+      "rotation_deg": 0.9846826195716858,
+      "seed_position_cm": [
+        0.22394846379756927,
+        0.22212812304496765,
+        0.22186002135276794
+      ],
+      "seed_rotation_deg": [
+        0.9804767966270447,
+        0.9867569804191589,
+        0.9868139624595642
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 17,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::22",
+      "task": "close the drawer",
+      "start": 8,
+      "position_cm": 0.17901857197284698,
+      "rotation_deg": 0.9788711667060852,
+      "seed_position_cm": [
+        0.17929363250732422,
+        0.1779986172914505,
+        0.17976346611976624
+      ],
+      "seed_rotation_deg": [
+        0.9769898653030396,
+        0.9800961017608643,
+        0.9795277118682861
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 18,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::2",
+      "task": "open the drawer",
+      "start": 12,
+      "position_cm": 0.352480411529541,
+      "rotation_deg": 0.6196818351745605,
+      "seed_position_cm": [
+        0.350713312625885,
+        0.352539986371994,
+        0.3541877865791321
+      ],
+      "seed_rotation_deg": [
+        0.6206176280975342,
+        0.6182729005813599,
+        0.6201550364494324
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 19,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "task": "take broccoli out of pan",
+      "start": 12,
+      "position_cm": 0.21740174293518066,
+      "rotation_deg": 0.7820918560028076,
+      "seed_position_cm": [
+        0.21791407465934753,
+        0.2159203737974167,
+        0.21837078034877777
+      ],
+      "seed_rotation_deg": [
+        0.7794963121414185,
+        0.7842448353767395,
+        0.7825344204902649
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 20,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::35",
+      "task": "turn lever vertical to front",
+      "start": 4,
+      "position_cm": 0.41733959317207336,
+      "rotation_deg": 0.5697575807571411,
+      "seed_position_cm": [
+        0.4164842963218689,
+        0.41953662037849426,
+        0.41599786281585693
+      ],
+      "seed_rotation_deg": [
+        0.5696452856063843,
+        0.5714530348777771,
+        0.5681744813919067
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 21,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::31",
+      "task": "close microwave",
+      "start": 12,
+      "position_cm": 0.25755879282951355,
+      "rotation_deg": 1.96196711063385,
+      "seed_position_cm": [
+        0.25681272149086,
+        0.2588621973991394,
+        0.2570013999938965
+      ],
+      "seed_rotation_deg": [
+        1.9601294994354248,
+        1.966167688369751,
+        1.9596037864685059
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 22,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::20",
+      "task": "close the drawer",
+      "start": 12,
+      "position_cm": 0.4545273780822754,
+      "rotation_deg": 0.49051856994628906,
+      "seed_position_cm": [
+        0.4542267322540283,
+        0.4552302658557892,
+        0.45412513613700867
+      ],
+      "seed_rotation_deg": [
+        0.4906178116798401,
+        0.48873648047447205,
+        0.49220141768455505
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 23,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::44",
+      "task": "open the drawer",
+      "start": 12,
+      "position_cm": 0.16110874712467194,
+      "rotation_deg": 0.994701087474823,
+      "seed_position_cm": [
+        0.16114433109760284,
+        0.16065572202205658,
+        0.16152618825435638
+      ],
+      "seed_rotation_deg": [
+        0.9923266172409058,
+        0.9947242140769958,
+        0.9970521926879883
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 24,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "task": "take broccoli out of pan",
+      "start": 12,
+      "position_cm": 0.46259573101997375,
+      "rotation_deg": 0.7025874257087708,
+      "seed_position_cm": [
+        0.4630325138568878,
+        0.46257638931274414,
+        0.4621783494949341
+      ],
+      "seed_rotation_deg": [
+        0.6924636363983154,
+        0.7111246585845947,
+        0.7041739821434021
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 25,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::33",
+      "task": "turn lever vertical to front",
+      "start": 4,
+      "position_cm": 0.2938295304775238,
+      "rotation_deg": 0.9668348431587219,
+      "seed_position_cm": [
+        0.2953420877456665,
+        0.29198354482650757,
+        0.29416292905807495
+      ],
+      "seed_rotation_deg": [
+        0.9675816297531128,
+        0.9667801260948181,
+        0.966143012046814
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 26,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+      "task": "close microwave",
+      "start": 12,
+      "position_cm": 0.2809304893016815,
+      "rotation_deg": 0.6404832005500793,
+      "seed_position_cm": [
+        0.2805010676383972,
+        0.2815725803375244,
+        0.2807178199291229
+      ],
+      "seed_rotation_deg": [
+        0.6398836374282837,
+        0.6416277885437012,
+        0.639938235282898
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 27,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00025-of-01024::15",
+      "task": "close the drawer",
+      "start": 8,
+      "position_cm": 0.2545944154262543,
+      "rotation_deg": 0.9436626434326172,
+      "seed_position_cm": [
+        0.2554163336753845,
+        0.2538225054740906,
+        0.25454431772232056
+      ],
+      "seed_rotation_deg": [
+        0.94107586145401,
+        0.944023847579956,
+        0.9458880424499512
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 28,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::54",
+      "task": "open the drawer",
+      "start": 12,
+      "position_cm": 0.19813215732574463,
+      "rotation_deg": 0.6653168797492981,
+      "seed_position_cm": [
+        0.19877514243125916,
+        0.19942307472229004,
+        0.1961982101202011
+      ],
+      "seed_rotation_deg": [
+        0.6673944592475891,
+        0.6641000509262085,
+        0.6644560098648071
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 29,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "task": "take broccoli out of pan",
+      "start": 12,
+      "position_cm": 0.2424243539571762,
+      "rotation_deg": 0.7882938981056213,
+      "seed_position_cm": [
+        0.24344182014465332,
+        0.2432781606912613,
+        0.24055305123329163
+      ],
+      "seed_rotation_deg": [
+        0.7897403240203857,
+        0.788325309753418,
+        0.7868161201477051
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 30,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::13",
+      "task": "turn lever vertical to front",
+      "start": 4,
+      "position_cm": 0.4241051971912384,
+      "rotation_deg": 0.5539522767066956,
+      "seed_position_cm": [
+        0.4237874448299408,
+        0.42378678917884827,
+        0.4247414469718933
+      ],
+      "seed_rotation_deg": [
+        0.5527758002281189,
+        0.5567789077758789,
+        0.5523021817207336
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 31,
+      "group": "common",
+      "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::40",
+      "task": "close microwave",
+      "start": 12,
+      "position_cm": 0.4406479299068451,
+      "rotation_deg": 1.433510661125183,
+      "seed_position_cm": [
+        0.4410427212715149,
+        0.44029849767684937,
+        0.440602570772171
+      ],
+      "seed_rotation_deg": [
+        1.4309178590774536,
+        1.431941032409668,
+        1.4376728534698486
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 32,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::39",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.40765976905822754,
+      "rotation_deg": 0.9803121089935303,
+      "seed_position_cm": [
+        0.4073823392391205,
+        0.40705758333206177,
+        0.408539354801178
+      ],
+      "seed_rotation_deg": [
+        0.9813689589500427,
+        0.9808453321456909,
+        0.9787219762802124
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 33,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::3",
+      "task": "close the drawer",
+      "start": 0,
+      "position_cm": 0.2938185930252075,
+      "rotation_deg": 0.6797731518745422,
+      "seed_position_cm": [
+        0.2936394214630127,
+        0.2939392626285553,
+        0.2938770651817322
+      ],
+      "seed_rotation_deg": [
+        0.6792214512825012,
+        0.6792353391647339,
+        0.680862545967102
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 34,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::36",
+      "task": "open the drawer",
+      "start": 0,
+      "position_cm": 0.13873328268527985,
+      "rotation_deg": 0.5541282296180725,
+      "seed_position_cm": [
+        0.13868123292922974,
+        0.13886576890945435,
+        0.13865283131599426
+      ],
+      "seed_rotation_deg": [
+        0.5546653866767883,
+        0.5535260438919067,
+        0.5541931986808777
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 35,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "task": "take broccoli out of pan",
+      "start": 0,
+      "position_cm": 0.19785894453525543,
+      "rotation_deg": 0.9724410176277161,
+      "seed_position_cm": [
+        0.1978980302810669,
+        0.1979750692844391,
+        0.1977037638425827
+      ],
+      "seed_rotation_deg": [
+        0.9742050766944885,
+        0.9711397886276245,
+        0.9719780683517456
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 36,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00000-of-01024::45",
+      "task": "turn lever vertical to front",
+      "start": 0,
+      "position_cm": 0.3466923236846924,
+      "rotation_deg": 0.7313969731330872,
+      "seed_position_cm": [
+        0.34524184465408325,
+        0.34588539600372314,
+        0.34894970059394836
+      ],
+      "seed_rotation_deg": [
+        0.7326138019561768,
+        0.7305771112442017,
+        0.7310000658035278
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 37,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::8",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.31913670897483826,
+      "rotation_deg": 1.0429788827896118,
+      "seed_position_cm": [
+        0.32163333892822266,
+        0.31827473640441895,
+        0.317501962184906
+      ],
+      "seed_rotation_deg": [
+        1.04475736618042,
+        1.0396595001220703,
+        1.0445199012756348
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 38,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::26",
+      "task": "close the drawer",
+      "start": 0,
+      "position_cm": 0.27509793639183044,
+      "rotation_deg": 0.7436721920967102,
+      "seed_position_cm": [
+        0.27489563822746277,
+        0.27506381273269653,
+        0.27533435821533203
+      ],
+      "seed_rotation_deg": [
+        0.7470500469207764,
+        0.7424277067184448,
+        0.7415387034416199
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 39,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::21",
+      "task": "open the drawer",
+      "start": 0,
+      "position_cm": 0.25558629631996155,
+      "rotation_deg": 0.7385268807411194,
+      "seed_position_cm": [
+        0.25682246685028076,
+        0.254513680934906,
+        0.25542283058166504
+      ],
+      "seed_rotation_deg": [
+        0.7377044558525085,
+        0.7418993711471558,
+        0.7359769344329834
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 40,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "task": "take broccoli out of pan",
+      "start": 0,
+      "position_cm": 0.5177688598632812,
+      "rotation_deg": 0.5596417784690857,
+      "seed_position_cm": [
+        0.5165453553199768,
+        0.5186451077461243,
+        0.5181161761283875
+      ],
+      "seed_rotation_deg": [
+        0.5621156692504883,
+        0.556288480758667,
+        0.560521125793457
+      ],
+      "all_three_seeds_pass": false
+    },
+    {
+      "index": 41,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+      "task": "turn lever vertical to front",
+      "start": 0,
+      "position_cm": 0.33762326836586,
+      "rotation_deg": 0.8534809947013855,
+      "seed_position_cm": [
+        0.3375810384750366,
+        0.33824318647384644,
+        0.3370456397533417
+      ],
+      "seed_rotation_deg": [
+        0.8509703874588013,
+        0.8576791286468506,
+        0.8517931699752808
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 42,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::25",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.7236155867576599,
+      "rotation_deg": 1.7231544256210327,
+      "seed_position_cm": [
+        0.7260488271713257,
+        0.7248027324676514,
+        0.7199951410293579
+      ],
+      "seed_rotation_deg": [
+        1.7244751453399658,
+        1.7231427431106567,
+        1.7218451499938965
+      ],
+      "all_three_seeds_pass": false
+    },
+    {
+      "index": 43,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::26",
+      "task": "close the drawer",
+      "start": 0,
+      "position_cm": 0.3065289556980133,
+      "rotation_deg": 1.0111135244369507,
+      "seed_position_cm": [
+        0.3064557909965515,
+        0.30686330795288086,
+        0.30626776814460754
+      ],
+      "seed_rotation_deg": [
+        1.0126829147338867,
+        1.0132125616073608,
+        1.0074448585510254
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 44,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::25",
+      "task": "open the drawer",
+      "start": 0,
+      "position_cm": 0.35200539231300354,
+      "rotation_deg": 0.620064914226532,
+      "seed_position_cm": [
+        0.3514670133590698,
+        0.35280096530914307,
+        0.3517482280731201
+      ],
+      "seed_rotation_deg": [
+        0.6218037605285645,
+        0.6164540648460388,
+        0.6219367980957031
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 45,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "task": "take broccoli out of pan",
+      "start": 0,
+      "position_cm": 0.44024887681007385,
+      "rotation_deg": 1.2003921270370483,
+      "seed_position_cm": [
+        0.43964529037475586,
+        0.4415287971496582,
+        0.4395725727081299
+      ],
+      "seed_rotation_deg": [
+        1.1969153881072998,
+        1.2068032026290894,
+        1.1974576711654663
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 46,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00007-of-01024::7",
+      "task": "turn lever vertical to front",
+      "start": 0,
+      "position_cm": 0.35011008381843567,
+      "rotation_deg": 0.5850853323936462,
+      "seed_position_cm": [
+        0.35021984577178955,
+        0.3496306538581848,
+        0.3504798114299774
+      ],
+      "seed_rotation_deg": [
+        0.5856006145477295,
+        0.5817148089408875,
+        0.5879404544830322
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 47,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::20",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.7944318652153015,
+      "rotation_deg": 1.2997559309005737,
+      "seed_position_cm": [
+        0.7985012531280518,
+        0.7911503314971924,
+        0.7936438322067261
+      ],
+      "seed_rotation_deg": [
+        1.299182415008545,
+        1.300528883934021,
+        1.2995564937591553
+      ],
+      "all_three_seeds_pass": false
+    },
+    {
+      "index": 48,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::17",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.17280173301696777,
+      "rotation_deg": 0.8999854922294617,
+      "seed_position_cm": [
+        0.1733214557170868,
+        0.17302760481834412,
+        0.1720561534166336
+      ],
+      "seed_rotation_deg": [
+        0.9005858898162842,
+        0.900244414806366,
+        0.8991259336471558
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 49,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::22",
+      "task": "close the drawer",
+      "start": 0,
+      "position_cm": 0.23554353415966034,
+      "rotation_deg": 1.291523814201355,
+      "seed_position_cm": [
+        0.23606222867965698,
+        0.23596379160881042,
+        0.2346046268939972
+      ],
+      "seed_rotation_deg": [
+        1.2937159538269043,
+        1.287144660949707,
+        1.293710708618164
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 50,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::2",
+      "task": "open the drawer",
+      "start": 0,
+      "position_cm": 0.248137429356575,
+      "rotation_deg": 0.6440047025680542,
+      "seed_position_cm": [
+        0.2481376826763153,
+        0.24842828512191772,
+        0.24784629046916962
+      ],
+      "seed_rotation_deg": [
+        0.6422913074493408,
+        0.6461513638496399,
+        0.6435713768005371
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 51,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "task": "take broccoli out of pan",
+      "start": 0,
+      "position_cm": 0.3260796070098877,
+      "rotation_deg": 0.8501954078674316,
+      "seed_position_cm": [
+        0.3262444734573364,
+        0.3253587782382965,
+        0.32663553953170776
+      ],
+      "seed_rotation_deg": [
+        0.8505339026451111,
+        0.8510595560073853,
+        0.8489928245544434
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 52,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::35",
+      "task": "turn lever vertical to front",
+      "start": 0,
+      "position_cm": 0.31636419892311096,
+      "rotation_deg": 0.5922684669494629,
+      "seed_position_cm": [
+        0.31732088327407837,
+        0.31584084033966064,
+        0.3159308433532715
+      ],
+      "seed_rotation_deg": [
+        0.5905447602272034,
+        0.5951137542724609,
+        0.5911467671394348
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 53,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::31",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.5378150939941406,
+      "rotation_deg": 0.8837330937385559,
+      "seed_position_cm": [
+        0.5375525951385498,
+        0.5385291576385498,
+        0.5373636484146118
+      ],
+      "seed_rotation_deg": [
+        0.8839775919914246,
+        0.8825751543045044,
+        0.8846464157104492
+      ],
+      "all_three_seeds_pass": false
+    },
+    {
+      "index": 54,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::20",
+      "task": "close the drawer",
+      "start": 0,
+      "position_cm": 0.18417613208293915,
+      "rotation_deg": 0.5652045607566833,
+      "seed_position_cm": [
+        0.184434175491333,
+        0.18449616432189941,
+        0.18359804153442383
+      ],
+      "seed_rotation_deg": [
+        0.5618005990982056,
+        0.5659692287445068,
+        0.5678437948226929
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 55,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::44",
+      "task": "open the drawer",
+      "start": 0,
+      "position_cm": 0.4187581539154053,
+      "rotation_deg": 1.1598072052001953,
+      "seed_position_cm": [
+        0.41816040873527527,
+        0.42025238275527954,
+        0.417861670255661
+      ],
+      "seed_rotation_deg": [
+        1.1579140424728394,
+        1.1588964462280273,
+        1.1626112461090088
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 56,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "task": "take broccoli out of pan",
+      "start": 0,
+      "position_cm": 0.23880243301391602,
+      "rotation_deg": 1.416342854499817,
+      "seed_position_cm": [
+        0.2406366765499115,
+        0.2376875877380371,
+        0.23808306455612183
+      ],
+      "seed_rotation_deg": [
+        1.4138551950454712,
+        1.4187259674072266,
+        1.4164475202560425
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 57,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::33",
+      "task": "turn lever vertical to front",
+      "start": 0,
+      "position_cm": 0.47594186663627625,
+      "rotation_deg": 1.676069736480713,
+      "seed_position_cm": [
+        0.4764162302017212,
+        0.47575920820236206,
+        0.4756501615047455
+      ],
+      "seed_rotation_deg": [
+        1.6732556819915771,
+        1.6788142919540405,
+        1.6761391162872314
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 58,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.5861659646034241,
+      "rotation_deg": 2.1156961917877197,
+      "seed_position_cm": [
+        0.587761402130127,
+        0.5859431028366089,
+        0.5847934484481812
+      ],
+      "seed_rotation_deg": [
+        2.1177380084991455,
+        2.1153488159179688,
+        2.114002227783203
+      ],
+      "all_three_seeds_pass": false
+    },
+    {
+      "index": 59,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00025-of-01024::15",
+      "task": "close the drawer",
+      "start": 0,
+      "position_cm": 0.33428657054901123,
+      "rotation_deg": 1.0447272062301636,
+      "seed_position_cm": [
+        0.33433058857917786,
+        0.3345126211643219,
+        0.3340165615081787
+      ],
+      "seed_rotation_deg": [
+        1.0475703477859497,
+        1.0438557863235474,
+        1.042755365371704
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 60,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::54",
+      "task": "open the drawer",
+      "start": 0,
+      "position_cm": 0.24941696226596832,
+      "rotation_deg": 0.7656249403953552,
+      "seed_position_cm": [
+        0.2483576387166977,
+        0.25083136558532715,
+        0.24906188249588013
+      ],
+      "seed_rotation_deg": [
+        0.7663757801055908,
+        0.7636754512786865,
+        0.7668235301971436
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 61,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "task": "take broccoli out of pan",
+      "start": 0,
+      "position_cm": 0.34295251965522766,
+      "rotation_deg": 0.9476595520973206,
+      "seed_position_cm": [
+        0.344268798828125,
+        0.34172743558883667,
+        0.3428614139556885
+      ],
+      "seed_rotation_deg": [
+        0.9497349262237549,
+        0.9466487169265747,
+        0.9465951919555664
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 62,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::13",
+      "task": "turn lever vertical to front",
+      "start": 0,
+      "position_cm": 0.35030218958854675,
+      "rotation_deg": 0.6599434614181519,
+      "seed_position_cm": [
+        0.35057443380355835,
+        0.3497328758239746,
+        0.3505992293357849
+      ],
+      "seed_rotation_deg": [
+        0.6619819402694702,
+        0.6567167639732361,
+        0.6611316204071045
+      ],
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 63,
+      "group": "added",
+      "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::40",
+      "task": "close microwave",
+      "start": 0,
+      "position_cm": 0.6681907176971436,
+      "rotation_deg": 1.316773772239685,
+      "seed_position_cm": [
+        0.6686869263648987,
+        0.6680276393890381,
+        0.6678575277328491
+      ],
+      "seed_rotation_deg": [
+        1.3158419132232666,
+        1.3197917938232422,
+        1.3146874904632568
+      ],
+      "all_three_seeds_pass": false
+    }
+  ],
+  "draw_counts": [
+    508,
+    513,
+    497,
+    497,
+    518,
+    506,
+    493,
+    498,
+    513,
+    488,
+    491,
+    487,
+    518,
+    492,
+    490,
+    491,
+    508,
+    513,
+    497,
+    497,
+    518,
+    506,
+    493,
+    498,
+    513,
+    488,
+    491,
+    487,
+    518,
+    492,
+    490,
+    491,
+    508,
+    513,
+    497,
+    497,
+    518,
+    506,
+    493,
+    498,
+    513,
+    488,
+    491,
+    487,
+    518,
+    492,
+    490,
+    491,
+    508,
+    513,
+    497,
+    497,
+    518,
+    506,
+    493,
+    498,
+    513,
+    488,
+    491,
+    487,
+    518,
+    492,
+    490,
+    491
+  ],
+  "report_sha256": "2da59845ce5c8ed02d859c2a320431d8a32011243f4f8f79f8fe3a1072319d07",
+  "plan_sha256": "006b8d9c5d4828199e75408b8ed6d1aab33831b5c32b5ea318ba3eb51bebb584",
+  "reference_report_sha256": "23c4965de005e6425af44de5febdc91a6e771e758aa32f77ec49719c9d09e507",
+  "failure_analysis": {
+    "task_summary": [
+      {
+        "task": "close microwave",
+        "windows": 16,
+        "failed": 6,
+        "position_cm": 0.4530693367123604
+      },
+      {
+        "task": "close the drawer",
+        "windows": 12,
+        "failed": 0,
+        "position_cm": 0.29190560802817345
+      },
+      {
+        "task": "open the drawer",
+        "windows": 12,
+        "failed": 0,
+        "position_cm": 0.26966307933131856
+      },
+      {
+        "task": "take broccoli out of pan",
+        "windows": 12,
+        "failed": 1,
+        "position_cm": 0.33895470450321835
+      },
+      {
+        "task": "turn lever vertical to front",
+        "windows": 12,
+        "failed": 0,
+        "position_cm": 0.3441201498111089
+      }
+    ],
+    "failed_windows": [
+      {
+        "index": 5,
+        "group": "common",
+        "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::8",
+        "task": "close microwave",
+        "start": 12,
+        "position_cm": 0.7368216514587402,
+        "rotation_deg": 1.1408683061599731,
+        "seed_position_cm": [
+          0.7369151711463928,
+          0.7369421124458313,
+          0.7366076707839966
+        ],
+        "seed_rotation_deg": [
+          1.1422936916351318,
+          1.1402150392532349,
+          1.1400961875915527
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          -0.34380683302879333,
+          0.613145649433136,
+          -0.04612110182642937
+        ],
+        "path_position_cm_by_horizon": [
+          0.15556573867797852,
+          0.2910526692867279,
+          0.7009651064872742,
+          0.7779757380485535,
+          1.0165024995803833,
+          1.0036811828613281,
+          1.0994378328323364,
+          1.0095478296279907,
+          0.9482929110527039,
+          0.8639981150627136,
+          0.8376805186271667,
+          0.6624581813812256,
+          0.5676649212837219,
+          0.4869314134120941,
+          0.6737743020057678,
+          0.6936177611351013
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.0003344416618347168,
+        "reference_single_timepoint_position_cm": 0.2755710780620575
+      },
+      {
+        "index": 40,
+        "group": "added",
+        "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+        "task": "take broccoli out of pan",
+        "start": 0,
+        "position_cm": 0.5177688598632812,
+        "rotation_deg": 0.5596417784690857,
+        "seed_position_cm": [
+          0.5165453553199768,
+          0.5186451077461243,
+          0.5181161761283875
+        ],
+        "seed_rotation_deg": [
+          0.5621156692504883,
+          0.556288480758667,
+          0.560521125793457
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          0.18486328423023224,
+          -0.07630883902311325,
+          -0.46656033396720886
+        ],
+        "path_position_cm_by_horizon": [
+          0.10895287245512009,
+          0.20477525889873505,
+          0.2956881821155548,
+          0.44826626777648926,
+          0.4316194951534271,
+          0.49119099974632263,
+          0.5368890762329102,
+          0.5853498578071594,
+          0.6285790801048279,
+          0.6649957299232483,
+          0.6555859446525574,
+          0.7147336602210999,
+          0.7165821194648743,
+          0.7010393142700195,
+          0.6051411628723145,
+          0.494913250207901
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.002099752426147461
+      },
+      {
+        "index": 42,
+        "group": "added",
+        "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::25",
+        "task": "close microwave",
+        "start": 0,
+        "position_cm": 0.7236155867576599,
+        "rotation_deg": 1.7231544256210327,
+        "seed_position_cm": [
+          0.7260488271713257,
+          0.7248027324676514,
+          0.7199951410293579
+        ],
+        "seed_rotation_deg": [
+          1.7244751453399658,
+          1.7231427431106567,
+          1.7218451499938965
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          0.11049437522888184,
+          0.1807316541671753,
+          -0.24369780719280243
+        ],
+        "path_position_cm_by_horizon": [
+          0.1940779834985733,
+          0.34083178639411926,
+          0.5547621846199036,
+          0.5570136904716492,
+          0.7450272440910339,
+          0.5628912448883057,
+          0.7679266333580017,
+          0.37563490867614746,
+          0.8589213490486145,
+          0.46484771370887756,
+          0.9423044323921204,
+          0.8097929358482361,
+          1.1039336919784546,
+          1.0440376996994019,
+          1.1253972053527832,
+          1.1304484605789185
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.0060536861419677734
+      },
+      {
+        "index": 47,
+        "group": "added",
+        "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::20",
+        "task": "close microwave",
+        "start": 0,
+        "position_cm": 0.7944318652153015,
+        "rotation_deg": 1.2997559309005737,
+        "seed_position_cm": [
+          0.7985012531280518,
+          0.7911503314971924,
+          0.7936438322067261
+        ],
+        "seed_rotation_deg": [
+          1.299182415008545,
+          1.300528883934021,
+          1.2995564937591553
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          -0.27879175543785095,
+          0.6665006875991821,
+          0.05604179576039314
+        ],
+        "path_position_cm_by_horizon": [
+          0.0718156173825264,
+          0.16404365003108978,
+          0.27957507967948914,
+          0.46337273716926575,
+          0.6088088154792786,
+          0.8055129647254944,
+          0.8929188847541809,
+          0.9970514178276062,
+          1.0754750967025757,
+          1.1755473613739014,
+          1.1754964590072632,
+          1.0960854291915894,
+          0.9853489995002747,
+          0.8673625588417053,
+          1.0664641857147217,
+          0.986029863357544
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.007350921630859375
+      },
+      {
+        "index": 53,
+        "group": "added",
+        "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::31",
+        "task": "close microwave",
+        "start": 0,
+        "position_cm": 0.5378150939941406,
+        "rotation_deg": 0.8837330937385559,
+        "seed_position_cm": [
+          0.5375525951385498,
+          0.5385291576385498,
+          0.5373636484146118
+        ],
+        "seed_rotation_deg": [
+          0.8839775919914246,
+          0.8825751543045044,
+          0.8846464157104492
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          -0.012727193534374237,
+          -0.09461484104394913,
+          -0.48607006669044495
+        ],
+        "path_position_cm_by_horizon": [
+          0.045099999755620956,
+          0.13526402413845062,
+          0.08266130834817886,
+          0.10991667956113815,
+          0.30710214376449585,
+          0.34387362003326416,
+          0.632344663143158,
+          0.6098718643188477,
+          0.8438978791236877,
+          0.8092923164367676,
+          0.9211413860321045,
+          0.8431171774864197,
+          0.8947811722755432,
+          0.7661474347114563,
+          0.677697479724884,
+          0.5828324556350708
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.0011655092239379883
+      },
+      {
+        "index": 58,
+        "group": "added",
+        "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+        "task": "close microwave",
+        "start": 0,
+        "position_cm": 0.5861659646034241,
+        "rotation_deg": 2.1156961917877197,
+        "seed_position_cm": [
+          0.587761402130127,
+          0.5859431028366089,
+          0.5847934484481812
+        ],
+        "seed_rotation_deg": [
+          2.1177380084991455,
+          2.1153488159179688,
+          2.114002227783203
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          -0.03260576352477074,
+          0.13176359236240387,
+          -0.47512444853782654
+        ],
+        "path_position_cm_by_horizon": [
+          0.08533221483230591,
+          0.12250294536352158,
+          0.2843123972415924,
+          0.19056598842144012,
+          0.49671611189842224,
+          0.32660531997680664,
+          0.7367379069328308,
+          0.5950477123260498,
+          0.9857170581817627,
+          0.7453606128692627,
+          0.9605286717414856,
+          0.7715454697608948,
+          0.8852290511131287,
+          0.721832811832428,
+          0.7577778697013855,
+          0.712843656539917
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.0029679536819458008
+      },
+      {
+        "index": 63,
+        "group": "added",
+        "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::40",
+        "task": "close microwave",
+        "start": 0,
+        "position_cm": 0.6681907176971436,
+        "rotation_deg": 1.316773772239685,
+        "seed_position_cm": [
+          0.6686869263648987,
+          0.6680276393890381,
+          0.6678575277328491
+        ],
+        "seed_rotation_deg": [
+          1.3158419132232666,
+          1.3197917938232422,
+          1.3146874904632568
+        ],
+        "all_three_seeds_pass": false,
+        "mean_signed_xyz_error_cm": [
+          0.1421939581632614,
+          0.26085802912712097,
+          -0.5369113087654114
+        ],
+        "path_position_cm_by_horizon": [
+          0.12232605367898941,
+          0.2577177584171295,
+          0.3912030756473541,
+          0.7336378693580627,
+          1.005726933479309,
+          1.089840292930603,
+          1.1873174905776978,
+          0.9414074420928955,
+          0.9386112093925476,
+          0.6745094656944275,
+          0.8522648215293884,
+          0.61788409948349,
+          0.6554465889930725,
+          0.4386459290981293,
+          0.4442734718322754,
+          0.340239018201828
+        ],
+        "sampling_seed_mean_error_spread_cm": 0.0008293986320495605
+      }
+    ],
+    "all_failures_position_only": true,
+    "max_failed_seed_mean_error_spread_cm": 0.007350921630859375
+  }
+}

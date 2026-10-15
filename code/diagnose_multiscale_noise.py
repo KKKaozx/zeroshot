@@ -67,6 +67,218 @@ def traced_ddim(torch, model, context, noise, ddim_sample):
     return final, trace
 
 
+def traced_native(model, context, current, steps):
+    """Observe the production sampler without reimplementing its equations."""
+    trace, calls = {}, []
+    def observe(module, inputs, output):
+        step = int(inputs[1][0])
+        calls.append(step)
+        if step in steps:
+            trace[step] = (inputs[0].detach().cpu().clone(), output.detach().cpu().clone())
+    hook = model.diffusion_decoder.register_forward_hook(observe)
+    try:
+        final = model.sample(context, current)
+    finally:
+        hook.remove()
+    if calls != list(range(model.num_diffusion_steps - 1, -1, -1)) or set(trace) != set(steps):
+        raise ValueError('Production sampler trace does not match the requested steps')
+    return final, trace
+
+
+def capture_native_noise(torch, model, context, current):
+    """Record actual production draws; pass each draw through unchanged."""
+    from unittest.mock import patch
+    trace, noises, active = {}, {}, []
+    original = torch.randn_like
+    def observe(module, inputs, output):
+        step = int(inputs[1][0])
+        active.append(step)
+        trace[step] = (inputs[0].detach().cpu().clone(),output.detach().cpu().clone())
+    def record(tensor, *args, **kwargs):
+        value = original(tensor, *args, **kwargs)
+        if not active or active[-1] in noises:
+            raise ValueError('Unexpected noise draw in production sampler')
+        noises[active[-1]] = value.detach().cpu().clone()
+        return value
+    hook = model.diffusion_decoder.register_forward_hook(observe)
+    try:
+        with patch.object(torch,'randn_like',side_effect=record):
+            final = model.sample(context,current)
+    finally:
+        hook.remove()
+    if active != list(range(model.num_diffusion_steps-1,-1,-1)) or set(noises)!=set(range(1,model.num_diffusion_steps)):
+        raise ValueError('Sampler decoder/noise call contract changed')
+    return final,trace,noises
+
+
+def export_scheduler_inputs(args,model,contexts,current,selected,source):
+    import torch
+    from train import set_seed,trainable_state_dict
+    from run_bridge_official_unet_training import digest
+    from evaluate_bridge_one_step_sampler import sha256
+    if not model.clip_denoised or model.num_diffusion_steps!=100:
+        raise ValueError('Expected clipped archived DDPM100 x0 sampler')
+    before=digest(trainable_state_dict(model))
+    before_clip=digest({k:v for k,v in model.state_dict().items() if k.startswith(('vision_encoder.','text_encoder.'))})
+    if before_clip!=source['protocol']['clip_sha256']:
+        raise ValueError('Frozen CLIP hash differs')
+    shape=(100,len(selected),16,7)
+    inputs=np.empty(shape,np.float32); estimates=np.empty_like(inputs); noises=np.zeros_like(inputs)
+    final_poses=np.empty(shape[1:],np.float32)
+    with torch.inference_mode():
+        for start in range(0,len(selected),2):
+            context=contexts['correct'][start:start+2].cuda(); measured=current[start:start+2].cuda()
+            set_seed(start)
+            final,trace,draws=capture_native_noise(torch,model,context,measured)
+            after_rng=torch.cuda.get_rng_state().clone()
+            set_seed(start)
+            replay=model.sample(context,measured)
+            if not torch.equal(final,replay) or not torch.equal(after_rng,torch.cuda.get_rng_state()):
+                raise ValueError('Noise capture changed production sampling')
+            final_poses[start:start+len(context)]=final[...,:7].cpu().numpy()
+            for step,(latent,x0) in trace.items():
+                inputs[step,start:start+len(context)]=latent.numpy()
+                estimates[step,start:start+len(context)]=x0.numpy()
+                if step: noises[step,start:start+len(context)]=draws[step].numpy()
+    if digest(trainable_state_dict(model))!=before or digest({k:v for k,v in model.state_dict().items() if k.startswith(('vision_encoder.','text_encoder.'))})!=before_clip:
+        raise ValueError('Live model changed')
+    if sha256(args.training_run/'final.pt')!=source['checkpoint']['sha256']:
+        raise ValueError('Saved checkpoint changed')
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    tensors=args.output.with_suffix('.npz')
+    np.savez_compressed(tensors,inputs=inputs,estimates=estimates,noises=noises,final_poses=final_poses,
+                        betas=model.betas.cpu().numpy(),alpha_bars=model.alpha_bars.cpu().numpy(),
+                        variance=model.posterior_variance.cpu().numpy(),
+                        coeff_x0=model.posterior_mean_x0.cpu().numpy(),coeff_xt=model.posterior_mean_xt.cpu().numpy())
+    report={'stage':'production_scheduler_tensor_export','execution_checks_passed':True,
+            'trained':False,'weights_updated':False,'reserved_test_targets_read':False,
+            'checkpoint_sha256':source['checkpoint']['sha256'],'training_report_sha256':sha256(args.training_report),
+            'window_selection':selected,'sampling_seed':0,'tensors_path':str(tensors),'tensors_sha256':sha256(tensors),
+            'position_limit':float(model.max_normalized_position or 3),'capture_replay_exact':True,
+            'clip_unchanged':True,'parameters_unchanged':True,'core_module_sha256':source['protocol']['module_sha256']}
+    args.output.write_text(json.dumps(report,indent=2)+'\n')
+    print('PRODUCTION SCHEDULER TENSORS EXPORTED',tensors,flush=True)
+
+
+def run_input_origin_probe(args, model, contexts, current, targets, selected, source, module_hashes, initial_hash):
+    import torch
+    from train import set_seed, trainable_state_dict
+    from run_bridge_official_unet_training import digest
+    from evaluate_bridge_one_step_sampler import finish_pose, sha256
+    from evaluate_bridge_endpoint_metrics import pose_errors
+
+    if model.num_diffusion_steps != 100:
+        raise ValueError('This diagnostic expects the archived 100-step model')
+    steps = (99, 74, 49, 24, 9, 0)
+    truth = targets[..., :7].numpy()
+    limit = float(model.max_normalized_position or 3)
+    state_hash = digest(trainable_state_dict(model))
+    frozen = lambda: {k:v for k,v in model.state_dict().items()
+                      if k.startswith(('vision_encoder.', 'text_encoder.'))}
+    clip_hash = digest(frozen())
+    if clip_hash != source['protocol']['clip_sha256']:
+        raise ValueError('Frozen CLIP differs from the archived training protocol')
+    groups = {'overall': list(range(len(selected)))}
+    groups.update({'task/'+task: [i for i,r in enumerate(selected) if r['task']==task]
+                   for task in sorted({r['task'] for r in selected})})
+    records = {name: [] for name in groups}
+    per_window = []
+    replay_max = 0.0
+    began = time.monotonic()
+    with torch.inference_mode():
+        for seed in range(3):
+            arrays = {kind: {step: {'input':np.empty_like(truth), 'estimate':np.empty_like(truth)}
+                            for step in steps} for kind in ('forward_noised_truth', 'native_chain')}
+            finals = np.empty_like(truth)
+            for start in range(0, len(selected), 2):
+                context = contexts['correct'][start:start+2].cuda()
+                measured = current[start:start+2].cuda()
+                target = targets[start:start+2, :, :7].cuda()
+                set_seed(seed*10000+start)
+                final, trace = traced_native(model, context, measured, steps)
+                finals[start:start+len(context)] = final[..., :7].cpu().numpy()
+                # Unobserved replay must match the hooked sampler and RNG consumption.
+                rng_after = torch.cuda.get_rng_state().clone()
+                set_seed(seed*10000+start)
+                replay = model.sample(context, measured)
+                replay_max = max(replay_max, float((replay-final).abs().max()))
+                if not torch.equal(rng_after, torch.cuda.get_rng_state()) or replay_max != 0:
+                    raise ValueError('Observing the sampler changed its result or RNG stream')
+                # Independent generator: scoring inputs cannot enter or perturb generation.
+                generator = torch.Generator(device='cuda').manual_seed(700000+seed*10000+start)
+                noise = torch.randn(target.shape, device='cuda', generator=generator)
+                for step in steps:
+                    alpha = model.alpha_bars[step]
+                    noisy = alpha.sqrt()*target+(1-alpha).sqrt()*noise
+                    timestep = torch.full((len(context),),step,device='cuda',dtype=torch.long)
+                    estimate = model.diffusion_decoder(noisy,timestep,context)
+                    for kind, values in (('forward_noised_truth',(noisy,estimate)),('native_chain',trace[step])):
+                        for name,value in zip(('input','estimate'), values):
+                            if not torch.isfinite(value).all():
+                                raise ValueError(f'Nonfinite {kind}/{step}/{name}')
+                            arrays[kind][step][name][start:start+len(context)] = value.cpu().numpy()
+            for group, ids in groups.items():
+                result = {'seed':seed,'steps':{}}
+                for step in steps:
+                    result['steps'][str(step)] = {}
+                    for kind in arrays:
+                        raw = arrays[kind][step]['estimate'][ids]
+                        latent = arrays[kind][step]['input'][ids]
+                        clean = finish_pose(torch,torch.from_numpy(raw),limit).numpy()
+                        position,rotation = pose_errors(clean,truth[ids])
+                        result['steps'][str(step)][kind] = {
+                            'position_cm':float(position.mean()),'rotation_deg':float(rotation.mean()),
+                            'raw_xyz_mse':float(((raw[...,:3]-truth[ids,...,:3])**2).mean()),
+                            'raw_quaternion_mse':float(((raw[...,3:]-truth[ids,...,3:])**2).mean()),
+                            'estimate_xyz_clip_fraction':float((np.abs(raw[...,:3])>limit).mean()),
+                            'input_xyz_mean':latent[...,:3].mean(axis=(0,1)).tolist(),
+                            'input_xyz_std':latent[...,:3].std(axis=(0,1)).tolist(),
+                            'input_quaternion_norm_mean':float(np.linalg.norm(latent[...,3:],axis=-1).mean()),
+                        }
+                pos,rot = pose_errors(finals[ids],truth[ids])
+                result['native_final']={'position_cm':float(pos.mean()),'rotation_deg':float(rot.mean())}
+                records[group].append(result)
+            for i,row in enumerate(selected):
+                window={'seed':seed,'window':row,'steps':{}}
+                for step in steps:
+                    window['steps'][str(step)]={}
+                    for kind in arrays:
+                        clean=finish_pose(torch,torch.from_numpy(arrays[kind][step]['estimate'][i:i+1]),limit).numpy()
+                        pos,rot=pose_errors(clean,truth[i:i+1])
+                        window['steps'][str(step)][kind]={'position_cm':float(pos.mean()),'rotation_deg':float(rot.mean())}
+                per_window.append(window)
+            print('INPUT_ORIGIN seed',seed,'complete',len(selected),'training windows',flush=True)
+    if (digest(trainable_state_dict(model)) != state_hash or digest(frozen()) != clip_hash
+            or sha256(args.training_run/'final.pt') != initial_hash):
+        raise ValueError('Model parameters or checkpoint changed')
+    summary = {}
+    for step in steps:
+        summary[str(step)] = {kind:{key:float(np.mean([r['steps'][str(step)][kind][key] for r in records['overall']]))
+                                   for key in ('position_cm','rotation_deg')}
+                              for kind in arrays}
+        print('INPUT_ORIGIN t'+str(step),json.dumps(summary[str(step)]),flush=True)
+    report={'stage':'frozen_native_ddpm_input_origin','execution_checks_passed':True,
+            'trained':False,'weights_updated':False,'validation_payload_read':False,'reserved_test_targets_read':False,
+            'training_report_sha256':sha256(args.training_report),'checkpoint_sha256':initial_hash,
+            'probe_sha256':sha256(Path(__file__)),
+            'module_sha256':module_hashes,'window_selection':selected,'sampling_seeds':[0,1,2],
+            'trace_steps':list(steps),'sampler':'unchanged production model.sample, DDPM100',
+            'hook_replay_max_difference':replay_max,'parameters_unchanged':True,'clip_unchanged':True,
+            'groups':records,'per_window':per_window,'overall_seed_mean':summary,
+            'target_xyz_outside_sampling_bound_fraction':float((np.abs(truth[...,:3])>limit).mean()),
+            'target_window_any_xyz_outside_bound_fraction':float((np.abs(truth[...,:3])>limit).any(axis=(1,2)).mean()),
+            'elapsed_seconds':time.monotonic()-began,
+            'limits':['Forty training windows, one per demonstration, eight per task; not the full training population.',
+                      'Forward-noised truth uses target actions: reconstruction diagnostic, never a deployable policy.',
+                      'Native chain generation receives only observation context and current gripper, never target actions.',
+                      'Different input origins can explain an error gap; this does not establish a unique causal defect.',
+                      'Statistics describe sampled latents; physical error scores apply to predicted x0 after existing pose constraints.',
+                      'Matched demonstration error cannot adjudicate alternative valid trajectories or task success.']}
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(report,indent=2)+'\n')
+    print('FROZEN INPUT ORIGIN CHECK COMPLETE',args.output,flush=True)
+
+
 def run_tail_probe(args, model, contexts, targets, selected, donors, source, module_hashes, initial_hash):
     import torch
     from train import set_seed
@@ -150,7 +362,10 @@ def main():
     for name in ("pack", "training-run", "training-report", "window-reference", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--reference-probe", type=Path)
-    parser.add_argument("--chain-tail", action="store_true")
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--chain-tail", action="store_true")
+    modes.add_argument("--input-origin", action="store_true")
+    modes.add_argument("--scheduler-export", action="store_true")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
@@ -202,10 +417,10 @@ def main():
                 or prior_probe["checkpoint_sha256"] != source["checkpoint"]["sha256"]):
             raise ValueError("Probe subset or checkpoint differs from 194940")
     items = [dataset[row["dataset_index"]] for row in selected]
-    language, images, _, targets, masks = collate_batch(items)
+    language, images, current, targets, masks = collate_batch(items)
     if not (masks[..., :7] > .5).all():
         raise ValueError("Probe requires fully supervised pose targets")
-    if any(torch.equal(images[i], images[j]) for i, j in enumerate(donors)):
+    if not (args.input_origin or args.scheduler_export) and any(torch.equal(images[i], images[j]) for i, j in enumerate(donors)):
         raise ValueError("A donor image is identical after production preprocessing")
     checkpoint_path = args.training_run / "final.pt"
     initial_hash = sha256(checkpoint_path)
@@ -222,7 +437,7 @@ def main():
     model.load_state_dict(checkpoint["model"], strict=False)
     model.cuda().eval()
     tokenizer = CLIPTokenizer.from_pretrained(checkpoint["config"]["model"]["name"], local_files_only=True)
-    contexts = {"correct": []} if args.chain_tail else {"correct": [], "image_swap": []}
+    contexts = {"correct": []} if args.chain_tail or args.input_origin or args.scheduler_export else {"correct": [], "image_swap": []}
     with torch.inference_mode():
         for start in range(0, len(items), 2):
             ids = list(range(start, min(start + 2, len(items))))
@@ -232,6 +447,12 @@ def main():
                 contexts[kind].append(model.get_context_vector(
                     images[image_ids].cuda(), tokens["input_ids"].cuda(), tokens["attention_mask"].cuda()).cpu())
     contexts = {key: torch.cat(value) for key, value in contexts.items()}
+    if args.scheduler_export:
+        export_scheduler_inputs(args,model,contexts,current,selected,source)
+        return
+    if args.input_origin:
+        run_input_origin_probe(args, model, contexts, current, targets, selected, source, module_hashes, initial_hash)
+        return
     if args.chain_tail:
         run_tail_probe(args, model, contexts, targets, selected, donors, source, module_hashes, initial_hash)
         return

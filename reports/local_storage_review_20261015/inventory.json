@@ -1,0 +1,967 @@
+{
+  "date": "2026-10-15",
+  "scope": "local project only; cluster storage not queried",
+  "deleted_files": 0,
+  "freed_bytes": 0,
+  "drive_free_bytes": 70268018688,
+  "project_bytes_excluding_git": 40872070728,
+  "top_level_bytes": {
+    ".gitattributes": 215,
+    ".gitignore": 687,
+    "data_readme.txt": 138,
+    "environment.yml": 179,
+    "README.md": 30907,
+    "README_运行说明.md": 386,
+    "requirements.txt": 288,
+    ".tmp": 428413,
+    ".vscode": 276,
+    "baselines": 167903,
+    "cluster_packages": 268075361,
+    "code": 2435321,
+    "configs": 424817,
+    "diagnostics": 241281,
+    "docs": 859362,
+    "docx_qa_cluster": 11083080,
+    "docx_qa_fourth": 1293764,
+    "experiments": 9805,
+    "logs": 0,
+    "reports": 2947069820,
+    "results": 29217332862,
+    "scripts": 679966,
+    "tests": 111187,
+    "thesis_tables": 4308,
+    "tools": 13152,
+    "training_cache": 8421807250
+  },
+  "checkpoints": [
+    {
+      "path": "reports/bridge_joint_both_events_1000_local_20261011/final.pt",
+      "bytes": 526176535,
+      "category": "retain for evidence or current checks",
+      "reason": "Explicitly loaded by code/audit_teacher_training_eval_contract.py; retain."
+    },
+    {
+      "path": "reports/bridge_joint_both_events_local_20261011/final.pt",
+      "bytes": 526176535,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "reports/pybullet_fixed_grasp_model_20261011/final.pt",
+      "bytes": 526174935,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "reports/pybullet_hold_pair_20261011/baseline/final.pt",
+      "bytes": 526174935,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "reports/pybullet_hold_pair_20261011/hold/final.pt",
+      "bytes": 526174935,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bcz_balanced_fit_v1/best.pt",
+      "bytes": 28519785,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_balanced_fit_v1/latest.pt",
+      "bytes": 28519981,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_cls_regression_fit_control_v1/best.pt",
+      "bytes": 649913073,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_cls_regression_fit_control_v1/latest.pt",
+      "bytes": 649942357,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_first_command_fit_v1/best.pt",
+      "bytes": 649543345,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_first_command_fit_v1/latest.pt",
+      "bytes": 649572437,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_first_command_pilot_v1/best.pt",
+      "bytes": 649561265,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_first_command_pilot_v1/latest.pt",
+      "bytes": 649590357,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_fusion_adapter_v1/best.pt",
+      "bytes": 649564209,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_fusion_adapter_v1/latest.pt",
+      "bytes": 649593301,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_fusion_simple_v1/best.pt",
+      "bytes": 28534697,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_fusion_simple_v1/latest.pt",
+      "bytes": 28534893,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_generalization_regression_v1/best.pt",
+      "bytes": 649930929,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_generalization_regression_v1/latest.pt",
+      "bytes": 649960725,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_generalization_x0_v1/best.pt",
+      "bytes": 719906913,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_generalization_x0_v1/latest.pt",
+      "bytes": 719947237,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_gripper_head_legacy_400_v1/best.pt",
+      "bytes": 11748289,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_gripper_head_legacy_400_v1/latest.pt",
+      "bytes": 11748413,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_gripper_head_legacy_v1/best.pt",
+      "bytes": 11741953,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_gripper_head_legacy_v1/latest.pt",
+      "bytes": 11742077,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_gripper_head_mlp2_400_v1/best.pt",
+      "bytes": 13330977,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_gripper_head_mlp2_400_v1/latest.pt",
+      "bytes": 13331133,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_gripper_head_mlp2_v1/best.pt",
+      "bytes": 13324641,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_gripper_head_mlp2_v1/latest.pt",
+      "bytes": 13324797,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_gripper_only_fit_v1/best.pt",
+      "bytes": 11740737,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_gripper_only_fit_v1/latest.pt",
+      "bytes": 11740861,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_low_v1/best.pt",
+      "bytes": 651355873,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_low_v1/latest.pt",
+      "bytes": 651385765,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_split_v1/best.pt",
+      "bytes": 651355873,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_split_v1/latest.pt",
+      "bytes": 651385765,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_v1/best.pt",
+      "bytes": 651355809,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_v1/latest.pt",
+      "bytes": 651385701,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_lr_split_v1/best.pt",
+      "bytes": 651382049,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_lr_split_v1/latest.pt",
+      "bytes": 651443429,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_smoke_v1/best.pt",
+      "bytes": 651368673,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_smoke_v1/latest.pt",
+      "bytes": 651398629,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_v1/best.pt",
+      "bytes": 651413473,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_v1/latest.pt",
+      "bytes": 651443365,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_pool_baseline_v1/best.pt",
+      "bytes": 30352401,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_pool_baseline_v1/latest.pt",
+      "bytes": 30384373,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_pool_smoke_v1/best.pt",
+      "bytes": 30339089,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_pool_smoke_v1/latest.pt",
+      "bytes": 30339573,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_native_sequence_fit_v1/best.pt",
+      "bytes": 28743081,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_native_sequence_fit_v1/latest.pt",
+      "bytes": 28743277,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v1/best.pt",
+      "bytes": 719888929,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v2/best.pt",
+      "bytes": 719891041,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v2/latest.pt",
+      "bytes": 719930917,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_overfit_regression_v1/best.pt",
+      "bytes": 649915249,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_overfit_regression_v1/latest.pt",
+      "bytes": 649944533,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_overfit_x0_v1/best.pt",
+      "bytes": 719891617,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_overfit_x0_v1/latest.pt",
+      "bytes": 719931109,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_patch_pool_regression_fit_v1/best.pt",
+      "bytes": 649913073,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_patch_pool_regression_fit_v1/latest.pt",
+      "bytes": 649942357,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_fit_v1/best.pt",
+      "bytes": 651355937,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_fit_v1/latest.pt",
+      "bytes": 651385829,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_rotation4_v1/best.pt",
+      "bytes": 651356001,
+      "category": "optional closed BC-Z experiment",
+      "reason": "Old experiment outside current Bridge audit; deletion loses direct checkpoint replay. Preserve JSON metrics, split/config and code."
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_rotation4_v1/latest.pt",
+      "bytes": 651385893,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_0000.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_0250.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_0500.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_0750.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_1000.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_1250.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_frozen_step_1500.pt",
+      "bytes": 42670979,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_0000.pt",
+      "bytes": 42670850,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_0250.pt",
+      "bytes": 42670850,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_0500.pt",
+      "bytes": 42670914,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_0750.pt",
+      "bytes": 42670914,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_1000.pt",
+      "bytes": 42670914,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_1250.pt",
+      "bytes": 42670914,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/adapter_joint_step_1500.pt",
+      "bytes": 42670914,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_adapter_trainability_v1/batch_schedule.pt",
+      "bytes": 770714,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/batch_schedule.pt",
+      "bytes": 770650,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/current_pose_cache.pt",
+      "bytes": 56381,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_0000.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_0250.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_0500.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_0750.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_1000.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_1250.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/real_pose_step_1500.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_0000.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_0250.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_0500.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_0750.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_1000.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_1250.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_current_pose_input_v1/zero_pose_step_1500.pt",
+      "bytes": 1178253,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_fit_prepare_v1/fixed_context.pt",
+      "bytes": 620276,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_fit_smoke_v2/final_head.pt",
+      "bytes": 6979381,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_full_fit_prepare_v1/full_context.pt",
+      "bytes": 1928531,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_full_fit_prepare_v1/shared_initial_weights.pt",
+      "bytes": 6977494,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_full_fit_smoke_v1/final_head.pt",
+      "bytes": 6979445,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_target_pair_prepare_v1/fixed_context.pt",
+      "bytes": 620276,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_target_pair_smoke_v1/shared_initial_weights.pt",
+      "bytes": 6977921,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_diffusion_target_pair_smoke_v1/sample/final_head.pt",
+      "bytes": 6979381,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_fixed_fit_constant_lr_v1/best.pt",
+      "bytes": 128038225,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_fixed_fit_constant_lr_v1/latest.pt",
+      "bytes": 128044469,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bridge_fixed_fit_v1/best.pt",
+      "bytes": 128038225,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_fixed_fit_v1/latest.pt",
+      "bytes": 128044469,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bridge_gripper_coverage_fit_v1/best.pt",
+      "bytes": 128034001,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_gripper_coverage_fit_v1/latest.pt",
+      "bytes": 128044597,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bridge_head_isolation_v1/frozen_context_diagnostic.pt",
+      "bytes": 2433757,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_head_isolation_v1/train_context_cache.pt",
+      "bytes": 1622613,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_head_isolation_v1/window_id_context_diagnostic.pt",
+      "bytes": 2433829,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_input_neighbors_v1/feature_cache.pt",
+      "bytes": 3042261,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_patch_features_v1/patch_descriptor_cache.pt",
+      "bytes": 30396414,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/batch_schedule.pt",
+      "bytes": 770714,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_0000.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_0250.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_0500.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_0750.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_1000.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_1250.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_patch_mean_step_1500.pt",
+      "bytes": 1140087,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_0000.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_0250.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_0500.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_0750.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_1000.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_1250.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/cls_step_1500.pt",
+      "bytes": 1139706,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_pooling_readout_v1/pooling_context_cache.pt",
+      "bytes": 3424691,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_saved_checkpoints_v1/best_window_predictions.pt",
+      "bytes": 811069,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_saved_checkpoints_v1/latest_window_predictions.pt",
+      "bytes": 811089,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_single_step_v1/best_window_predictions.pt",
+      "bytes": 50597,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_single_step_v1/latest_window_predictions.pt",
+      "bytes": 50613,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_single_step_v1/training/best.pt",
+      "bytes": 127828305,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_single_step_v1/training/latest.pt",
+      "bytes": 127845813,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bridge_single_task_full_validation_v1/best.pt",
+      "bytes": 128012753,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_single_task_full_validation_v1/latest.pt",
+      "bytes": 128031413,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/bridge_single_task_pilot_v1/best.pt",
+      "bytes": 128012113,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/bridge_single_task_pilot_v1/latest.pt",
+      "bytes": 128023221,
+      "category": "optional old latest checkpoint",
+      "reason": "A best.pt exists; deleting latest loses exact last-state replay/resume. Files are not asserted identical."
+    },
+    {
+      "path": "results/oxe_core_8shard_v1/best.pt",
+      "bytes": 719936865,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    },
+    {
+      "path": "results/oxe_core_pilot/best.pt",
+      "bytes": 719901089,
+      "category": "retain for evidence or current checks",
+      "reason": "Not included in the proposed first cleanup batch."
+    }
+  ],
+  "archives": [
+    {
+      "path": "reports/bridge_author_obs_results_203876.tar.gz",
+      "bytes": 106850,
+      "sha256": "cfd43b8a9c721049ce9ef59cb1540f888d1203486752f3f501370744c78e21e5",
+      "verified_members": 2,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "reports/bridge_author_preflight_results_203498.tar.gz",
+      "bytes": 52456,
+      "sha256": "e4040f7e1106115e0a92dfab00e8d6411300eec609e759423540d6b1b6052cd9",
+      "verified_members": 6,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "reports/bridge_author_reference_results_203699.tar.gz",
+      "bytes": 974946,
+      "sha256": "a172f4ad04a2585f8639b24dd4ef301319a04350e373a765f60450be401c2305",
+      "verified_members": 8,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "reports/bridge_history_results_204258.tar.gz",
+      "bytes": 4785430,
+      "sha256": "17c7d178e075d4712fa6b4809731d5ef61bdb730939d8e1d9500d92d899f272b",
+      "verified_members": 17,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "reports/bridge_project_condition_results_204017.tar.gz",
+      "bytes": 371736,
+      "sha256": "ff78e87f2136581fa41c48f85206bf101cbb5ce60aed1e487c5262ce85206180",
+      "verified_members": 2,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "reports/bridge_state_rep_results_202463.tar.gz",
+      "bytes": 14665124,
+      "sha256": "2b0b68acf368e2be6521c6b369434144981c63767b3dca3183b9a797fcc0ea66",
+      "verified_members": 64,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "reports/bridge_state_results_202278.tar.gz",
+      "bytes": 14678062,
+      "sha256": "6099e368c1b0026799d4408a2760947ec4fc7de64908a7c09b3eff4c23bddee9",
+      "verified_members": 64,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "training_cache/exports/bridge_expansion_training_v1.zip",
+      "bytes": 727974763,
+      "sha256": "2a0171d66096df7a9b6941d6b54cc9b7869ec511ea7a0066f9afab2efc724f7b",
+      "verified_members": 221,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    },
+    {
+      "path": "training_cache/exports/multitask_training_v1.zip",
+      "bytes": 101015610,
+      "sha256": "f77b99c46f01d638c093bfdcd969bfda110fb0718dcb0c3800f6ab5acd46e8b0",
+      "verified_members": 36,
+      "missing": [],
+      "different": [],
+      "extracted_copy_complete": true
+    }
+  ],
+  "candidate_bytes": {
+    "verified_redundant_archives": 864624977,
+    "old_latest_checkpoints": 12896013066,
+    "additional_closed_bcz_checkpoints": 12847238981
+  },
+  "caution": "Candidate categories are disjoint; no raw dataset, CLIP assets, environment, current report or current positive-control checkpoint is proposed for deletion. No weights were loaded or retrained."
+}

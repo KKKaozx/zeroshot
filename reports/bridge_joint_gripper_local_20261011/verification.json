@@ -1,0 +1,31 @@
+{
+  "same_selection_as_pose_only_control": true,
+  "initial_generation_identical_if_same_selection": true,
+  "independent_metrics_match": true,
+  "clip_unchanged": true,
+  "gripper_received_gradients_and_changed": true,
+  "production_model_and_parser_source_unchanged": true,
+  "runner_snapshot_matches_execution": true,
+  "joint_observed_fit_passed": true,
+  "release_evaluated": false,
+  "training_seeds": 1,
+  "sampling_seeds": 3,
+  "simulation_executed": false,
+  "files_sha256": {
+    "both_event_selection.json": "1e9589d56f34d06713a58f8de712a3d8129157b4eaecd5c572c1046672651787",
+    "dropout_on_history.json": "72cec121e1b24cc6eb48d232cbb986b6fc852f1af9b3266acfac8c4eb395c2a9",
+    "dropout_on_losses.json": "66ee02384bff167da4a344fee511aba45442ae69c554c3eeb5205d20b7347112",
+    "dropout_on_predictions.npz": "797cbc531183d4d123db14a0ee21d0afa53f1867e953ddcb9849bebc15b507fd",
+    "gripper_timing.png": "45a711e13d566b7f598d9a8ce0c855a58846853b8d1c54ae95132b132a36adb1",
+    "independent_metrics.json": "05a6f5b57beff1edd88b12b947a1e51dba8bfac055bc9ab2aa378784a6e9238b",
+    "joint_overview.png": "3da4bae65029691a30aa3dbb2695a0abe79dd092bfacaf31d34f05ae3681195f",
+    "plan.json": "5725f71034299be4b9cee84edff31819ca09c947c244a7934621f1cc2a531823",
+    "render_verify.py": "fa2fb2c8b8369c262212f402690f59ed9ab0f6acb8ac1821a938bc10ae3577e1",
+    "report.json": "10b5d10a89c1e6a344a20444f77607b648af7b49147da5814bc36f3005995cb1",
+    "runner_snapshot.py": "df5a034ab3e2d8fa7493b226492492efabf92d09af30b73dcb7d5e8e9980cf3e",
+    "update_0_predictions.npz": "abf6672a4c1dd9e3a17191bcd47b78563528fd2c8e6c716a322fc47301cfa1ea",
+    "update_100_predictions.npz": "fccc98075672af705921f5e6bd6dc1aceca5a38c613e5f6ea3f229b9d0f2630c",
+    "update_20_predictions.npz": "dce9c2e5603983b053d303d3439bdfa0b85fa6341c4e69b57d8689f7e6ddddb2",
+    "update_500_predictions.npz": "59fb9f411d21e7ab6c8471a53ff0b64ccbb7275b3fad914b553c564b37109419"
+  }
+}

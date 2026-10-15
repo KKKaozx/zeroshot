@@ -1,0 +1,30 @@
+{
+  "stage": "raw_episode_frozen_feature_and_retained_prediction_audit",
+  "focal_episode": [
+    "bridge_data_v2-train.tfrecord-00008-of-01024",
+    25
+  ],
+  "focal_starts": [
+    0,
+    12
+  ],
+  "reference": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_samecount32_fit_20261011",
+  "reference_plan_sha256": "79c794257808d5e74ac1bf6994b2805b7429e4ed8e894699719d5cd9a9339e37",
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "audit_bridge_repeated_failure.py": "13a77bf464c4e93d75f0941da81c326b0b56fcf09eeca28bc09641b8d425626b"
+  },
+  "trained": false,
+  "simulation_executed": false,
+  "downloads": false,
+  "geometry": "Independent float64 Rz Ry Rx and quaternion-to-matrix conversions",
+  "frozen_features": "All 32 retained training inputs; no future frame conditioning",
+  "limitations": [
+    "Index agreement does not establish hardware timestamp synchronization",
+    "No trained Adapter weights retained for these controls; learned context cannot be inspected",
+    "Feature similarity alone does not prove ambiguity or a defective encoder"
+  ]
+}

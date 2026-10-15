@@ -1,0 +1,1 @@
+Seed42 replication of200600. Same64 training windows,40 development windows,4096 updates, LR1e-4 ->1e-5 at2048; fullDDPM100, frozenCLIP/gripper. Three sampling draws are not three training runs. Original production source files unchanged; runner initialization is the only training edit. Local short preflight is execution/restoration verification, not fitting success.

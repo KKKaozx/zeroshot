@@ -1,0 +1,51 @@
+{
+  "source": "User supplied rounded terminal summary; artifacts not yet available locally",
+  "independently_verified": false,
+  "preflight_job": 202277,
+  "fit_job": 202278,
+  "slurm_completed": true,
+  "exit_code": "0:0",
+  "execution_passed_reported": true,
+  "both_training_fit_reported": true,
+  "zero": {
+    "train_position_mm": 1.83,
+    "train_rotation_deg": 0.58,
+    "path_position_cm": 8.728,
+    "path_rotation_deg": 15.847,
+    "endpoint_position_cm": 11.359,
+    "training_fit": true
+  },
+  "real": {
+    "train_position_mm": 1.69,
+    "train_rotation_deg": 0.6,
+    "path_position_cm": 8.349,
+    "path_rotation_deg": 15.256,
+    "endpoint_position_cm": 10.728,
+    "training_fit": true
+  },
+  "static": {
+    "path_position_cm": 8.212326049804688,
+    "path_rotation_deg": 15.098398208618164,
+    "endpoint_position_cm": 10.56533432006836
+  },
+  "metric_differences": {
+    "path_position_cm": {
+      "real_minus_zero": -0.37899999999999956,
+      "relative_reduction_percent": 4.342346471127401,
+      "real_minus_static": 0.1366739501953127
+    },
+    "path_rotation_deg": {
+      "real_minus_zero": -0.5909999999999993,
+      "relative_reduction_percent": 3.7294125070991315,
+      "real_minus_static": 0.15760179138183616
+    },
+    "endpoint_position_cm": {
+      "real_minus_zero": -0.6310000000000002,
+      "relative_reduction_percent": 5.5550664671185865,
+      "real_minus_static": 0.16266567993164038
+    }
+  },
+  "candidate_screen_demo_count": null,
+  "generalization_passed": false,
+  "next_step": "Retrieve small reports and saved predictions, verify both training gates and paired10 demonstration results; no new training"
+}

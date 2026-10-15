@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "protocol_sha256": "8dadb2937317437a56fc91aaaa4427919f51dc32618f3cd3be8261a27bc540e1",
+  "source_sha256": {
+    "probe_author_observations.py": "044937615f13a433f5b5b85d6db72d9b01205b1e1dbfb130078350110df4b8c8",
+    "probe_helpers.py": "f41d8774ed2f8e2cb33ab9c2ca24ffa5f7ba10f798ced96465a0dc14f94dbf7e",
+    "probe.sh": "e4fc036593ab5727a9918a8ad243b78356e43f31d0405b2cfd6c8b82f493fdd4"
+  },
+  "python39_syntax_passed": true,
+  "fixed9_donor_observation_mutations_checked": true,
+  "original_inputs_and_language_unchanged": true,
+  "cpu_paired_rng_and_next_batch_restoration_passed": true,
+  "native_gpu_replay_locally_executed": false,
+  "pose_difference_cm_and_quaternion_sign_checks_passed": true,
+  "actual_launch_argv": [
+    "--project",
+    "/projects/Zeroshot",
+    "--source",
+    "$SOURCE",
+    "--output",
+    "/projects/Zeroshot/runs/bridge-author-obs-${SLURM_JOB_ID}"
+  ],
+  "author_model_loaded_locally": false,
+  "trained": false,
+  "bash_syntax_passed": true
+}

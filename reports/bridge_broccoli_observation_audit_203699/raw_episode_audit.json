@@ -1,0 +1,542 @@
+{
+  "passed": true,
+  "trained": false,
+  "model_loaded": false,
+  "new_policy_inference": false,
+  "selected_episodes": 14,
+  "selected_shards": 12,
+  "reserved_test_targets_read": false,
+  "all_canonical_instruction_equal": true,
+  "future_frames_used_as_policy_inputs": false,
+  "physical_timestamps_verified": false,
+  "episodes": [
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        12,
+        0
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        12,
+        19,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.22983646392822266,
+        -0.053062401711940765,
+        0.015811124816536903
+      ],
+      "state_xyz_max_m": [
+        0.3573068380355835,
+        0.08419100195169449,
+        0.1193094253540039
+      ],
+      "recorded_position_path_length_cm": 64.52569938984732,
+      "measured_gripper_min_max": [
+        0.6881998181343079,
+        1.0099300146102905
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        12,
+        0
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        12,
+        19,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.19637331366539001,
+        0.026738468557596207,
+        0.01786958798766136
+      ],
+      "state_xyz_max_m": [
+        0.2909354567527771,
+        0.10669493675231934,
+        0.09256620705127716
+      ],
+      "recorded_position_path_length_cm": 41.26779011547338,
+      "measured_gripper_min_max": [
+        0.457809716463089,
+        1.0105689764022827
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "partition": "train",
+      "steps": 25,
+      "input_indices": [
+        8,
+        0
+      ],
+      "saved_frame_indices": [
+        0,
+        6,
+        8,
+        12,
+        18,
+        24
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.29661285877227783,
+        -0.011561037041246891,
+        0.01585635356605053
+      ],
+      "state_xyz_max_m": [
+        0.46587175130844116,
+        0.20217163860797882,
+        0.11274611949920654
+      ],
+      "recorded_position_path_length_cm": 51.94846992857811,
+      "measured_gripper_min_max": [
+        0.748681366443634,
+        0.9809558987617493
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.20826902985572815,
+        -0.06235620751976967,
+        0.006695340387523174
+      ],
+      "state_xyz_max_m": [
+        0.3228784203529358,
+        0.16583126783370972,
+        0.13561569154262543
+      ],
+      "recorded_position_path_length_cm": 69.12881524305905,
+      "measured_gripper_min_max": [
+        0.45967593789100647,
+        1.0112061500549316
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.198125958442688,
+        0.00790103618055582,
+        0.02071644738316536
+      ],
+      "state_xyz_max_m": [
+        0.36152222752571106,
+        0.1598498672246933,
+        0.10838481783866882
+      ],
+      "recorded_position_path_length_cm": 60.988973085526744,
+      "measured_gripper_min_max": [
+        0.4587424397468567,
+        1.0156210660934448
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.21605175733566284,
+        0.015278209932148457,
+        0.015944829210639
+      ],
+      "state_xyz_max_m": [
+        0.3338221609592438,
+        0.17332017421722412,
+        0.14139701426029205
+      ],
+      "recorded_position_path_length_cm": 63.75643911653462,
+      "measured_gripper_min_max": [
+        0.4094836115837097,
+        1.0112061500549316
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.24655359983444214,
+        -0.08085758984088898,
+        0.024008773267269135
+      ],
+      "state_xyz_max_m": [
+        0.2863259017467499,
+        0.11222471296787262,
+        0.09227701276540756
+      ],
+      "recorded_position_path_length_cm": 57.2956567740506,
+      "measured_gripper_min_max": [
+        0.561048150062561,
+        1.0092895030975342
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.22216464579105377,
+        -0.0348975770175457,
+        0.017429836094379425
+      ],
+      "state_xyz_max_m": [
+        0.38247939944267273,
+        0.11090518534183502,
+        0.1274239420890808
+      ],
+      "recorded_position_path_length_cm": 69.31410302229006,
+      "measured_gripper_min_max": [
+        0.6049063205718994,
+        1.0008161067962646
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.20309485495090485,
+        -0.05065814033150673,
+        0.01188642717897892
+      ],
+      "state_xyz_max_m": [
+        0.37217387557029724,
+        0.09625732898712158,
+        0.09973142296075821
+      ],
+      "recorded_position_path_length_cm": 56.05537090397671,
+      "measured_gripper_min_max": [
+        0.5889025926589966,
+        1.0073583126068115
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.19819194078445435,
+        0.04210038483142853,
+        0.011589938774704933
+      ],
+      "state_xyz_max_m": [
+        0.3472059965133667,
+        0.17213112115859985,
+        0.1338157206773758
+      ],
+      "recorded_position_path_length_cm": 63.21088424620982,
+      "measured_gripper_min_max": [
+        0.5256435871124268,
+        1.0067112445831299
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+      "partition": "train",
+      "steps": 38,
+      "input_indices": [
+        0,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        9,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.21889321506023407,
+        0.024938862770795822,
+        0.00766479829326272
+      ],
+      "state_xyz_max_m": [
+        0.3115917146205902,
+        0.1376899927854538,
+        0.103970468044281
+      ],
+      "recorded_position_path_length_cm": 48.416330971162715,
+      "measured_gripper_min_max": [
+        0.7516188621520996,
+        1.0131081342697144
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "partition": "train",
+      "steps": 26,
+      "input_indices": [
+        0,
+        8
+      ],
+      "saved_frame_indices": [
+        0,
+        6,
+        8,
+        13,
+        19,
+        25
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.32298386096954346,
+        0.011527558788657188,
+        0.022195464000105858
+      ],
+      "state_xyz_max_m": [
+        0.4018959105014801,
+        0.19590626657009125,
+        0.12082891166210175
+      ],
+      "recorded_position_path_length_cm": 56.668271627654285,
+      "measured_gripper_min_max": [
+        0.2499733716249466,
+        0.973810613155365
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "partition": "development",
+      "steps": 38,
+      "input_indices": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "saved_frame_indices": [
+        0,
+        4,
+        8,
+        9,
+        12,
+        16,
+        19,
+        20,
+        28,
+        37
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.17867723107337952,
+        -0.052567265927791595,
+        0.016076982021331787
+      ],
+      "state_xyz_max_m": [
+        0.3210960924625397,
+        0.18449950218200684,
+        0.14822104573249817
+      ],
+      "recorded_position_path_length_cm": 60.82807401033473,
+      "measured_gripper_min_max": [
+        0.2752157151699066,
+        1.013738751411438
+      ],
+      "raw_state_and_future_identity_verified": true
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "partition": "development",
+      "steps": 25,
+      "input_indices": [
+        0,
+        4,
+        8
+      ],
+      "saved_frame_indices": [
+        0,
+        4,
+        6,
+        8,
+        12,
+        18,
+        24
+      ],
+      "unique_canonical_instructions": [
+        "take broccoli out of pan"
+      ],
+      "explicit_timestamp_fields": [],
+      "state_xyz_min_m": [
+        0.30907055735588074,
+        -0.032268185168504715,
+        0.02633814699947834
+      ],
+      "state_xyz_max_m": [
+        0.392991304397583,
+        0.1548222005367279,
+        0.11263035237789154
+      ],
+      "recorded_position_path_length_cm": 48.80563997888347,
+      "measured_gripper_min_max": [
+        0.7720533609390259,
+        0.9851709604263306
+      ],
+      "raw_state_and_future_identity_verified": true
+    }
+  ]
+}

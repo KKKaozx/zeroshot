@@ -1,0 +1,181 @@
+{
+  "stage": "fixed_scene_training_only",
+  "trained": true,
+  "simulation_policy_tested": false,
+  "updates": 1000,
+  "windows": 9,
+  "batch_size": 9,
+  "starts": [
+    0,
+    12,
+    24,
+    30,
+    38,
+    46,
+    58,
+    74,
+    74
+  ],
+  "initial_trainable_sha256": "534ee777e3bd38302dd6dd2fc48e41e9c0341832513ad5578504a6f9e8d4fcdf",
+  "final_trainable_sha256": "245ae8a4f1354e3b18b44cb967de7ab769fb783ec5e589fc93235134c0d910e6",
+  "source_sha256": {
+    "fit_pybullet_fixed_grasp.py": "1b656b27765839af20548003ee27f472f15a35eaba30bd6fdb25d5c2c3495af7",
+    "pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+  },
+  "demonstration_sha256": "7a0df115a404d00b364abd5397f664f9c60e97fe8d1cd604a83d115c0e5b4426",
+  "checkpoint_sha256": "7a72cc8c68a2389cbff983b6c5fbba7d9bc7872b2cc6644cc63c72c0dbb0c030",
+  "contract": {
+    "robot": "pybullet_data/franka_panda/panda.urdf",
+    "end_effector_link": 11,
+    "finger_joints": [
+      9,
+      10
+    ],
+    "ticks_per_action": 24,
+    "simulation_hz": 240,
+    "current_gripper": "2*(sum(measured finger joint positions)/0.08)-1",
+    "command_gripper": "negative=closed motor target 0; positive=open target 0.04",
+    "pose": "All 16 future measured EE arrival poses relative to observation EE pose",
+    "scene": "Fixed cube/table/Panda scene in pybullet_fixed_grasp.scene",
+    "success": "Cube >=10cm above initial height for last 10 actions and final two-finger contact",
+    "artificial_attachment": false,
+    "generalization_test": false
+  },
+  "clip_unchanged": true,
+  "history": [
+    {
+      "update": 500,
+      "position_cm": 0.11195652931928635,
+      "rotation_deg": 0.6834856867790222,
+      "endpoint_position_cm": 0.15207912027835846,
+      "endpoint_rotation_deg": 0.4546060860157013,
+      "seed_position_cm": [
+        0.11180321127176285,
+        0.11190085858106613,
+        0.11216550320386887
+      ],
+      "seed_rotation_deg": [
+        0.6835015416145325,
+        0.6838498711585999,
+        0.6831057071685791
+      ],
+      "windows_all_three_seeds_pass": 9,
+      "windows": 9,
+      "static_position_cm": 3.3450284004211426,
+      "static_rotation_deg": 0.0,
+      "pose_fit_passed": true,
+      "gripper": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "seed_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed_balanced_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "open_targets": 38,
+        "closed_targets": 106,
+        "always_open_accuracy": 0.2638888888888889,
+        "always_closed_accuracy": 0.7361111111111112,
+        "open_to_closed": {
+          "target_pairs": 1,
+          "seed_correct_pairs": [
+            1,
+            1,
+            1
+          ],
+          "seed_pair_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "closed_to_open": {
+          "target_pairs": 0,
+          "seed_correct_pairs": [
+            0,
+            0,
+            0
+          ],
+          "seed_pair_accuracy": null
+        },
+        "observed_state_and_events_fit_passed": true,
+        "release_evaluated": false
+      }
+    },
+    {
+      "update": 1000,
+      "position_cm": 0.1519467979669571,
+      "rotation_deg": 0.7694020867347717,
+      "endpoint_position_cm": 0.17457953095436096,
+      "endpoint_rotation_deg": 0.3624086380004883,
+      "seed_position_cm": [
+        0.15179330110549927,
+        0.15191395580768585,
+        0.15213315188884735
+      ],
+      "seed_rotation_deg": [
+        0.7700927257537842,
+        0.7694365382194519,
+        0.7686769962310791
+      ],
+      "windows_all_three_seeds_pass": 9,
+      "windows": 9,
+      "static_position_cm": 3.3450284004211426,
+      "static_rotation_deg": 0.0,
+      "pose_fit_passed": true,
+      "gripper": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "seed_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed_balanced_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "open_targets": 38,
+        "closed_targets": 106,
+        "always_open_accuracy": 0.2638888888888889,
+        "always_closed_accuracy": 0.7361111111111112,
+        "open_to_closed": {
+          "target_pairs": 1,
+          "seed_correct_pairs": [
+            1,
+            1,
+            1
+          ],
+          "seed_pair_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "closed_to_open": {
+          "target_pairs": 0,
+          "seed_correct_pairs": [
+            0,
+            0,
+            0
+          ],
+          "seed_pair_accuracy": null
+        },
+        "observed_state_and_events_fit_passed": true,
+        "release_evaluated": false
+      }
+    }
+  ],
+  "elapsed_seconds": 209.78200000000652
+}

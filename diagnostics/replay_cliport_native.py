@@ -47,6 +47,8 @@ def main():
     parser.add_argument("--dataset-dir", type=Path, required=True)
     parser.add_argument("--output-json", type=Path, required=True)
     parser.add_argument("--max-episodes", type=int, default=1)
+    parser.add_argument("--capture-frames-dir", type=Path,
+                        help="Save front-camera observations at native primitive boundaries; no added physics steps")
     parser.add_argument("--oracle-smoke", action="store_true",
                         help="Execute fresh author oracle actions, not recorded actions")
     parser.add_argument("--restore-recorded-reset", action="store_true",
@@ -106,6 +108,8 @@ def main():
         raise ValueError("Absolute trace control requires a captured trace")
     if args.output_json.exists() or args.max_episodes < 1:
         raise ValueError("Choose a new report path and positive episode count")
+    if args.capture_frames_dir is not None:
+        args.capture_frames_dir.mkdir(parents=True, exist_ok=False)
     if args.oracle_smoke and args.restore_recorded_reset:
         raise ValueError("Oracle smoke and recorded state replay are separate checks")
     if args.restore_before_step is not None and (
@@ -167,6 +171,16 @@ def main():
                   versions={n: importlib.metadata.version(n) for n in
                             ("numpy", "pybullet", "gym", "torch", "opencv-python")}, episodes=[])
     env = Environment(str(author / "cliport/environments/assets"), disp=False, hz=480)
+    def save_observation_frame(observation, episode_index, boundary):
+        if args.capture_frames_dir is None or len(observation["color"]) == 0:
+            return
+        import cv2
+        path = args.capture_frames_dir / f"episode-{episode_index:03d}-boundary-{boundary:03d}.png"
+        if not cv2.imwrite(str(path), cv2.cvtColor(np.asarray(observation["color"][0]), cv2.COLOR_RGB2BGR)):
+            raise IOError(f"Could not write observation frame: {path}")
+        report.setdefault("observation_frames", []).append(dict(
+            episode=episode_index, boundary=boundary, path=str(path.resolve()),
+            sha256=hashlib.sha256(path.read_bytes()).hexdigest(), camera_index=0))
     try:
         for file in files:
             seed = int(file.stem.split("-")[-1])
@@ -182,6 +196,7 @@ def main():
             task.mode = "train"
             env.set_task(task)
             current_obs = env.reset()
+            save_observation_frame(current_obs, len(report["episodes"]), 0)
             if (args.capture_reached_trace or args.replay_reached_trace) and not np.isclose(
                     p.getPhysicsEngineParameters()['fixedTimeStep'],1/480,rtol=0,atol=1e-12):
                 raise ValueError("Actual physics timestep differs from reached-trace clock")
@@ -653,6 +668,7 @@ def main():
                 if args.capture_tcp_trace:
                     trace['primitive_commands'].append(list(tcp_events))
                 current_obs, current_reward = obs, reward
+                save_observation_frame(obs, len(report["episodes"])-1, len(row["steps"])+1)
                 if args.capture_reached_trace:
                     reached['primitive_boundaries'].append(dict(index=step, tick=counted_ticks, reward=float(reward)))
                 row["total_reward"] += float(reward)

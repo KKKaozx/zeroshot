@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "bash_syntax_passed": true,
+  "protocol_sha256": "391ae60b72f420347d22654ad78251b3dbf8def8134d3e2af8aaf2d1ae1f2d40",
+  "source_sha256": {
+    "currents.npz": "cbde5ef12e67f73fdd00acc02f076e5c46b6a36c5ab959e0c8bb57ca6b7d18de",
+    "probe.sh": "3ccd8feb69aec8849a0532235d234c13759ed2275ea51e425ecca98676f28add",
+    "probe_helpers.py": "db05b9cee8ef423993a10617ad14efdf1c28713a48b73801d765a0636020f8ca",
+    "probe_project_conditions.py": "7a5ea9e1272f56b4b2872ed4e74dc2fa1eccd16e7eb84802d0405222e1fbd3f9",
+    "protocol.json": "391ae60b72f420347d22654ad78251b3dbf8def8134d3e2af8aaf2d1ae1f2d40"
+  },
+  "actual_frozen_native_sampler_used_on_cpu": true,
+  "observer_prediction_and_rng_exact": true,
+  "paired_initial_noise_and_rng_exact": true,
+  "untouched_batch_row_exact": true,
+  "parameters_and_buffers_unchanged": true,
+  "pose_units_and_sign_checked": true,
+  "fixed_inputs_verified": true,
+  "cpu_fixture_down_dims": [
+    16,
+    32
+  ],
+  "real_checkpoint_loaded": false,
+  "clip_loaded": false,
+  "gpu_replay_executed": false,
+  "training_executed": false,
+  "scientific_result_available": false,
+  "bash_verification_command": "C:/Program Files/Git/bin/bash.exe -n cluster_packages/bridge_project_condition_probe_v1/probe.sh",
+  "bash_verification_exit_code": 0
+}

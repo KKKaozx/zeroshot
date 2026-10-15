@@ -1,0 +1,33 @@
+{
+  "same_selection_as_pose_only_control": false,
+  "initial_generation_identical_if_same_selection": false,
+  "independent_metrics_match": true,
+  "clip_unchanged": true,
+  "gripper_received_gradients_and_changed": true,
+  "production_model_and_parser_source_unchanged": true,
+  "runner_snapshot_matches_execution": true,
+  "joint_observed_fit_passed": true,
+  "release_evaluated": true,
+  "training_seeds": 1,
+  "sampling_seeds": 3,
+  "simulation_executed": false,
+  "files_sha256": {
+    "dropout_on_history.json": "6e7bb432006d635040110cfd78d4ead92b9ccf6e111fb6f0a3b5b087a3b0a81e",
+    "dropout_on_losses.json": "33e36a6da2f4fc670d74b15bfa67ba72a61c3a33b87c6d7550e775439c8df0f4",
+    "dropout_on_predictions.npz": "ce2f86d615a6593439de67c6d474088308e992cc1003e9f48808d03f8ef9d695",
+    "gripper_timing.png": "15bc65fd64a6ebc584c3e19d4926a3ba74b080a275ade426afdea346f9510524",
+    "independent_metrics.json": "f256d16c0f251b4c9f4bbe6bec13c39e17efbea68857ed24cdd34b179cc66fac",
+    "joint_overview.png": "d5b33330081522d8cfb2f4ff93b216449e7b12d3bd2bfab3a93c3fb4e7b16f9f",
+    "plan.json": "ad1d0970837195cdb24373ef00941c0e4a5c313a0d521947ef62bb482839bd46",
+    "reload_check.py": "ed748415fb13bf9572f9677b71746b7642588eb850269e22b806cb063550d8ee",
+    "reload_report.json": "dc34099ce3b7056a8feb8d870f6b7a4b9f714b98b8d4da5e829a9162da7fdf7c",
+    "report.json": "c532c6140f1f181b32b0d983f4e70a984ebb5e0fc0fd837c26cfa8f36a77dcd4",
+    "runner_snapshot.py": "bb82590adec0af73aa1222f082c62c3fe671ce9f1bff59b22443d4843d8386f7",
+    "update_0_predictions.npz": "8c978b6c87e81f29dd69a765b0dcc15ae208bf5626736d4891b5d1eaf292a215",
+    "update_1000_predictions.npz": "19a168f92fab31b6c0e030d79427b30951503a65b5188f41ff698059e3bba35d",
+    "update_100_predictions.npz": "9497299cd05ae01bb7ccbc27b9cd246837841ce7083037122ea19cd1ef2b5df2",
+    "update_20_predictions.npz": "f92dcaa9c1d5d9eae66f94e7451f175d51ef716dfa66afc3284e95fb0613e010",
+    "update_500_predictions.npz": "cbba4c54d22731ae849f29be9a93bf765331ea9a64862441631e5dc5e7694ddd"
+  },
+  "checkpoint_sha256_verified": true
+}

@@ -1,0 +1,2020 @@
+{
+  "stage": "frozen_multiscale_ddim_tail_probe",
+  "trained": false,
+  "weights_updated": false,
+  "reserved_test_targets_read": false,
+  "validation_payload_read": false,
+  "training_report_sha256": "4931038c913981c2f2d3bee90d36a85e42f9141f894812956ebb66fb33039660",
+  "checkpoint_sha256": "17565858b58c68aaf8c531b24dfb142d5d19739b05bd1779102c63bf3fe66814",
+  "reference_probe_sha256": "4ef475822185afe91f003e22638f0b40a3293265e5d377c20d2b254711e065b6",
+  "module_sha256": {
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9"
+  },
+  "window_selection": [
+    {
+      "dataset_index": 0,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+      "record_index": 45,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 2,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+      "record_index": 21,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 8,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+      "record_index": 39,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 14,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+      "record_index": 8,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 24,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+      "record_index": 3,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 32,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+      "record_index": 36,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 37,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 2,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 39,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 10,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 45,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+      "record_index": 26,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 53,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+      "record_index": 7,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 55,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 25,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 61,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 37,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 76,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 20,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 80,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 21,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 85,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 25,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 92,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+      "record_index": 33,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 98,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 2,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 104,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 17,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 108,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00010-of-01024",
+      "record_index": 40,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 117,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 31,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 123,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 35,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 125,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+      "record_index": 44,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 131,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 33,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 133,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00012-of-01024",
+      "record_index": 54,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 138,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+      "record_index": 6,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 144,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00014-of-01024",
+      "record_index": 33,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 150,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 26,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 155,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 43,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 156,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 7,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 157,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00016-of-01024",
+      "record_index": 23,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 162,
+      "partition": "train",
+      "task": "turn lever vertical to front",
+      "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+      "record_index": 13,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 164,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00017-of-01024",
+      "record_index": 22,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 168,
+      "partition": "train",
+      "task": "take broccoli out of pan",
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 29,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 174,
+      "partition": "train",
+      "task": "open the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 41,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 179,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 4,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 187,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 20,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 202,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00025-of-01024",
+      "record_index": 15,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 232,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+      "record_index": 40,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 242,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00031-of-01024",
+      "record_index": 17,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 293,
+      "partition": "train",
+      "task": "close the drawer",
+      "shard": "bridge_data_v2-train.tfrecord-00041-of-01024",
+      "record_index": 41,
+      "start_index": 0
+    }
+  ],
+  "image_donor_indices": [
+    6,
+    7,
+    3,
+    2,
+    8,
+    13,
+    0,
+    1,
+    4,
+    0,
+    2,
+    1,
+    2,
+    5,
+    5,
+    1,
+    5,
+    2,
+    1,
+    2,
+    0,
+    5,
+    0,
+    5,
+    1,
+    1,
+    4,
+    0,
+    0,
+    5,
+    0,
+    4,
+    1,
+    5,
+    2,
+    4,
+    4,
+    2,
+    4,
+    4
+  ],
+  "sampling_seeds": [
+    0,
+    1,
+    2
+  ],
+  "sampler": "100-step DDIM eta=0, unchanged existing ddim_sample implementation",
+  "trace_steps": [
+    99,
+    49,
+    24,
+    9,
+    0
+  ],
+  "groups": {
+    "overall": [
+      {
+        "seed": 0,
+        "final": {
+          "position_cm": 11.143623352050781,
+          "rotation_deg": 17.802764892578125
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 18.619243621826172,
+              "rotation_deg": 125.1045913696289
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.33439826965332,
+              "rotation_deg": 14.3368558883667
+            },
+            "final_minus_input_position_cm": -7.475620269775391,
+            "final_minus_input_rotation_deg": -107.30182647705078,
+            "final_minus_estimate_position_cm": 2.809225082397461,
+            "final_minus_estimate_rotation_deg": 3.465909004211426,
+            "final_worse_than_input_position_fraction": 0.2015625,
+            "final_worse_than_input_rotation_fraction": 0.0125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.661664009094238,
+              "rotation_deg": 113.6619873046875
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.393665313720703,
+              "rotation_deg": 16.703533172607422
+            },
+            "final_minus_input_position_cm": -4.518040657043457,
+            "final_minus_input_rotation_deg": -95.85922241210938,
+            "final_minus_estimate_position_cm": 0.7499580383300781,
+            "final_minus_estimate_rotation_deg": 1.0992317199707031,
+            "final_worse_than_input_position_fraction": 0.228125,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.999650955200195,
+              "rotation_deg": 79.43257904052734
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.875055313110352,
+              "rotation_deg": 17.163772583007812
+            },
+            "final_minus_input_position_cm": -1.856027603149414,
+            "final_minus_input_rotation_deg": -61.62981414794922,
+            "final_minus_estimate_position_cm": 0.2685680389404297,
+            "final_minus_estimate_rotation_deg": 0.6389923095703125,
+            "final_worse_than_input_position_fraction": 0.296875,
+            "final_worse_than_input_rotation_fraction": 0.0328125
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 11.547048568725586,
+              "rotation_deg": 38.93815231323242
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.987401962280273,
+              "rotation_deg": 17.478351593017578
+            },
+            "final_minus_input_position_cm": -0.4034252166748047,
+            "final_minus_input_rotation_deg": -21.135387420654297,
+            "final_minus_estimate_position_cm": 0.1562213897705078,
+            "final_minus_estimate_rotation_deg": 0.3244132995605469,
+            "final_worse_than_input_position_fraction": 0.390625,
+            "final_worse_than_input_rotation_fraction": 0.10625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 11.048650741577148,
+              "rotation_deg": 18.716716766357422
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.143623352050781,
+              "rotation_deg": 17.799274444580078
+            },
+            "final_minus_input_position_cm": 0.09497261047363281,
+            "final_minus_input_rotation_deg": -0.9139518737792969,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.003490447998046875,
+            "final_worse_than_input_position_fraction": 0.5546875,
+            "final_worse_than_input_rotation_fraction": 0.3921875
+          }
+        }
+      },
+      {
+        "seed": 1,
+        "final": {
+          "position_cm": 10.277933120727539,
+          "rotation_deg": 16.193084716796875
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 18.714595794677734,
+              "rotation_deg": 129.0852508544922
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.402837753295898,
+              "rotation_deg": 14.284461975097656
+            },
+            "final_minus_input_position_cm": -8.436662673950195,
+            "final_minus_input_rotation_deg": -112.89216613769531,
+            "final_minus_estimate_position_cm": 1.8750953674316406,
+            "final_minus_estimate_rotation_deg": 1.9086227416992188,
+            "final_worse_than_input_position_fraction": 0.1875,
+            "final_worse_than_input_rotation_fraction": 0.003125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.402338027954102,
+              "rotation_deg": 115.90397644042969
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.632755279541016,
+              "rotation_deg": 15.44323444366455
+            },
+            "final_minus_input_position_cm": -5.1244049072265625,
+            "final_minus_input_rotation_deg": -99.71089172363281,
+            "final_minus_estimate_position_cm": 0.6451778411865234,
+            "final_minus_estimate_rotation_deg": 0.7498502731323242,
+            "final_worse_than_input_position_fraction": 0.225,
+            "final_worse_than_input_rotation_fraction": 0.003125
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.382225036621094,
+              "rotation_deg": 77.3638916015625
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.089958190917969,
+              "rotation_deg": 15.738058090209961
+            },
+            "final_minus_input_position_cm": -2.1042919158935547,
+            "final_minus_input_rotation_deg": -61.170806884765625,
+            "final_minus_estimate_position_cm": 0.1879749298095703,
+            "final_minus_estimate_rotation_deg": 0.45502662658691406,
+            "final_worse_than_input_position_fraction": 0.30625,
+            "final_worse_than_input_rotation_fraction": 0.0234375
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 10.80400562286377,
+              "rotation_deg": 37.56678771972656
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.17950439453125,
+              "rotation_deg": 15.986401557922363
+            },
+            "final_minus_input_position_cm": -0.5260725021362305,
+            "final_minus_input_rotation_deg": -21.373703002929688,
+            "final_minus_estimate_position_cm": 0.09842872619628906,
+            "final_minus_estimate_rotation_deg": 0.20668315887451172,
+            "final_worse_than_input_position_fraction": 0.384375,
+            "final_worse_than_input_rotation_fraction": 0.1203125
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 10.222763061523438,
+              "rotation_deg": 17.26165771484375
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.277933120727539,
+              "rotation_deg": 16.191028594970703
+            },
+            "final_minus_input_position_cm": 0.05517005920410156,
+            "final_minus_input_rotation_deg": -1.068572998046875,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.002056121826171875,
+            "final_worse_than_input_position_fraction": 0.509375,
+            "final_worse_than_input_rotation_fraction": 0.3421875
+          }
+        }
+      },
+      {
+        "seed": 2,
+        "final": {
+          "position_cm": 10.61319351196289,
+          "rotation_deg": 17.634349822998047
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 19.05466651916504,
+              "rotation_deg": 126.563232421875
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.327679634094238,
+              "rotation_deg": 14.594653129577637
+            },
+            "final_minus_input_position_cm": -8.441473007202148,
+            "final_minus_input_rotation_deg": -108.92888259887695,
+            "final_minus_estimate_position_cm": 2.2855138778686523,
+            "final_minus_estimate_rotation_deg": 3.03969669342041,
+            "final_worse_than_input_position_fraction": 0.190625,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.784469604492188,
+              "rotation_deg": 113.606689453125
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.048919677734375,
+              "rotation_deg": 17.071786880493164
+            },
+            "final_minus_input_position_cm": -5.171276092529297,
+            "final_minus_input_rotation_deg": -95.97233963012695,
+            "final_minus_estimate_position_cm": 0.5642738342285156,
+            "final_minus_estimate_rotation_deg": 0.5625629425048828,
+            "final_worse_than_input_position_fraction": 0.2328125,
+            "final_worse_than_input_rotation_fraction": 0.01875
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.845184326171875,
+              "rotation_deg": 77.87754821777344
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.498346328735352,
+              "rotation_deg": 17.439321517944336
+            },
+            "final_minus_input_position_cm": -2.2319908142089844,
+            "final_minus_input_rotation_deg": -60.24319839477539,
+            "final_minus_estimate_position_cm": 0.11484718322753906,
+            "final_minus_estimate_rotation_deg": 0.19502830505371094,
+            "final_worse_than_input_position_fraction": 0.290625,
+            "final_worse_than_input_rotation_fraction": 0.0359375
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 11.244117736816406,
+              "rotation_deg": 38.817771911621094
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.574389457702637,
+              "rotation_deg": 17.55807876586914
+            },
+            "final_minus_input_position_cm": -0.6309242248535156,
+            "final_minus_input_rotation_deg": -21.183422088623047,
+            "final_minus_estimate_position_cm": 0.038804054260253906,
+            "final_minus_estimate_rotation_deg": 0.07627105712890625,
+            "final_worse_than_input_position_fraction": 0.35,
+            "final_worse_than_input_rotation_fraction": 0.1015625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 10.60856819152832,
+              "rotation_deg": 18.70456314086914
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.61319351196289,
+              "rotation_deg": 17.62957763671875
+            },
+            "final_minus_input_position_cm": 0.0046253204345703125,
+            "final_minus_input_rotation_deg": -1.0702133178710938,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.004772186279296875,
+            "final_worse_than_input_position_fraction": 0.4921875,
+            "final_worse_than_input_rotation_fraction": 0.365625
+          }
+        }
+      }
+    ],
+    "task/close microwave": [
+      {
+        "seed": 0,
+        "final": {
+          "position_cm": 16.59542465209961,
+          "rotation_deg": 16.48186683654785
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 20.305036544799805,
+              "rotation_deg": 124.67261505126953
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.332950592041016,
+              "rotation_deg": 13.33354377746582
+            },
+            "final_minus_input_position_cm": -3.7096118927001953,
+            "final_minus_input_rotation_deg": -108.19074821472168,
+            "final_minus_estimate_position_cm": 4.262474060058594,
+            "final_minus_estimate_rotation_deg": 3.1483230590820312,
+            "final_worse_than_input_position_fraction": 0.359375,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 18.822906494140625,
+              "rotation_deg": 109.71551513671875
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 15.809577941894531,
+              "rotation_deg": 16.633615493774414
+            },
+            "final_minus_input_position_cm": -2.2274818420410156,
+            "final_minus_input_rotation_deg": -93.2336483001709,
+            "final_minus_estimate_position_cm": 0.7858467102050781,
+            "final_minus_estimate_rotation_deg": -0.1517486572265625,
+            "final_worse_than_input_position_fraction": 0.375,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 17.493038177490234,
+              "rotation_deg": 76.01890563964844
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.387622833251953,
+              "rotation_deg": 16.747055053710938
+            },
+            "final_minus_input_position_cm": -0.897613525390625,
+            "final_minus_input_rotation_deg": -59.537038803100586,
+            "final_minus_estimate_position_cm": 0.20780181884765625,
+            "final_minus_estimate_rotation_deg": -0.26518821716308594,
+            "final_worse_than_input_position_fraction": 0.40625,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 16.762893676757812,
+              "rotation_deg": 36.344024658203125
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.386613845825195,
+              "rotation_deg": 16.314313888549805
+            },
+            "final_minus_input_position_cm": -0.16746902465820312,
+            "final_minus_input_rotation_deg": -19.862157821655273,
+            "final_minus_estimate_position_cm": 0.20881080627441406,
+            "final_minus_estimate_rotation_deg": 0.16755294799804688,
+            "final_worse_than_input_position_fraction": 0.453125,
+            "final_worse_than_input_rotation_fraction": 0.125
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 16.467134475708008,
+              "rotation_deg": 17.330503463745117
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.59542465209961,
+              "rotation_deg": 16.477689743041992
+            },
+            "final_minus_input_position_cm": 0.12829017639160156,
+            "final_minus_input_rotation_deg": -0.8486366271972656,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.004177093505859375,
+            "final_worse_than_input_position_fraction": 0.5546875,
+            "final_worse_than_input_rotation_fraction": 0.40625
+          }
+        }
+      },
+      {
+        "seed": 1,
+        "final": {
+          "position_cm": 17.22967529296875,
+          "rotation_deg": 16.864215850830078
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 20.891956329345703,
+              "rotation_deg": 134.97210693359375
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.665101051330566,
+              "rotation_deg": 14.025165557861328
+            },
+            "final_minus_input_position_cm": -3.662281036376953,
+            "final_minus_input_rotation_deg": -118.10789108276367,
+            "final_minus_estimate_position_cm": 4.564574241638184,
+            "final_minus_estimate_rotation_deg": 2.83905029296875,
+            "final_worse_than_input_position_fraction": 0.390625,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 19.5711612701416,
+              "rotation_deg": 119.18022155761719
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.27099609375,
+              "rotation_deg": 16.897037506103516
+            },
+            "final_minus_input_position_cm": -2.3414859771728516,
+            "final_minus_input_rotation_deg": -102.31600570678711,
+            "final_minus_estimate_position_cm": 0.95867919921875,
+            "final_minus_estimate_rotation_deg": -0.0328216552734375,
+            "final_worse_than_input_position_fraction": 0.421875,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 18.109844207763672,
+              "rotation_deg": 79.5495376586914
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.942901611328125,
+              "rotation_deg": 16.702268600463867
+            },
+            "final_minus_input_position_cm": -0.8801689147949219,
+            "final_minus_input_rotation_deg": -62.68532180786133,
+            "final_minus_estimate_position_cm": 0.286773681640625,
+            "final_minus_estimate_rotation_deg": 0.16194725036621094,
+            "final_worse_than_input_position_fraction": 0.484375,
+            "final_worse_than_input_rotation_fraction": 0.0234375
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 17.341312408447266,
+              "rotation_deg": 38.93571472167969
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.999496459960938,
+              "rotation_deg": 16.43304443359375
+            },
+            "final_minus_input_position_cm": -0.11163711547851562,
+            "final_minus_input_rotation_deg": -22.07149887084961,
+            "final_minus_estimate_position_cm": 0.2301788330078125,
+            "final_minus_estimate_rotation_deg": 0.4311714172363281,
+            "final_worse_than_input_position_fraction": 0.5390625,
+            "final_worse_than_input_rotation_fraction": 0.15625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 17.090076446533203,
+              "rotation_deg": 17.794782638549805
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 17.22967529296875,
+              "rotation_deg": 16.85854148864746
+            },
+            "final_minus_input_position_cm": 0.13959884643554688,
+            "final_minus_input_rotation_deg": -0.9305667877197266,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0056743621826171875,
+            "final_worse_than_input_position_fraction": 0.59375,
+            "final_worse_than_input_rotation_fraction": 0.40625
+          }
+        }
+      },
+      {
+        "seed": 2,
+        "final": {
+          "position_cm": 17.055614471435547,
+          "rotation_deg": 17.11615753173828
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 20.483192443847656,
+              "rotation_deg": 125.87094116210938
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.542604446411133,
+              "rotation_deg": 14.058667182922363
+            },
+            "final_minus_input_position_cm": -3.4275779724121094,
+            "final_minus_input_rotation_deg": -108.7547836303711,
+            "final_minus_estimate_position_cm": 4.513010025024414,
+            "final_minus_estimate_rotation_deg": 3.057490348815918,
+            "final_worse_than_input_position_fraction": 0.390625,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 19.165380477905273,
+              "rotation_deg": 116.73676300048828
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 15.830911636352539,
+              "rotation_deg": 17.05204963684082
+            },
+            "final_minus_input_position_cm": -2.1097660064697266,
+            "final_minus_input_rotation_deg": -99.62060546875,
+            "final_minus_estimate_position_cm": 1.2247028350830078,
+            "final_minus_estimate_rotation_deg": 0.06410789489746094,
+            "final_worse_than_input_position_fraction": 0.390625,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 17.733293533325195,
+              "rotation_deg": 80.04342651367188
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.539424896240234,
+              "rotation_deg": 16.772375106811523
+            },
+            "final_minus_input_position_cm": -0.6776790618896484,
+            "final_minus_input_rotation_deg": -62.927268981933594,
+            "final_minus_estimate_position_cm": 0.5161895751953125,
+            "final_minus_estimate_rotation_deg": 0.3437824249267578,
+            "final_worse_than_input_position_fraction": 0.4453125,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 16.97698211669922,
+              "rotation_deg": 40.49530792236328
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 16.693859100341797,
+              "rotation_deg": 16.508777618408203
+            },
+            "final_minus_input_position_cm": 0.07863235473632812,
+            "final_minus_input_rotation_deg": -23.379150390625,
+            "final_minus_estimate_position_cm": 0.36175537109375,
+            "final_minus_estimate_rotation_deg": 0.6073799133300781,
+            "final_worse_than_input_position_fraction": 0.4921875,
+            "final_worse_than_input_rotation_fraction": 0.0859375
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 16.843053817749023,
+              "rotation_deg": 18.20574188232422
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 17.055614471435547,
+              "rotation_deg": 17.099620819091797
+            },
+            "final_minus_input_position_cm": 0.21256065368652344,
+            "final_minus_input_rotation_deg": -1.0895843505859375,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.016536712646484375,
+            "final_worse_than_input_position_fraction": 0.6484375,
+            "final_worse_than_input_rotation_fraction": 0.328125
+          }
+        }
+      }
+    ],
+    "task/close the drawer": [
+      {
+        "seed": 0,
+        "final": {
+          "position_cm": 11.647669792175293,
+          "rotation_deg": 24.200490951538086
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 19.346113204956055,
+              "rotation_deg": 120.45306396484375
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.257177352905273,
+              "rotation_deg": 16.040660858154297
+            },
+            "final_minus_input_position_cm": -7.698443412780762,
+            "final_minus_input_rotation_deg": -96.25257301330566,
+            "final_minus_estimate_position_cm": 3.3904924392700195,
+            "final_minus_estimate_rotation_deg": 8.159830093383789,
+            "final_worse_than_input_position_fraction": 0.1875,
+            "final_worse_than_input_rotation_fraction": 0.03125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.791659355163574,
+              "rotation_deg": 104.22095489501953
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.261165618896484,
+              "rotation_deg": 22.617053985595703
+            },
+            "final_minus_input_position_cm": -4.143989562988281,
+            "final_minus_input_rotation_deg": -80.02046394348145,
+            "final_minus_estimate_position_cm": 1.3865041732788086,
+            "final_minus_estimate_rotation_deg": 1.5834369659423828,
+            "final_worse_than_input_position_fraction": 0.2734375,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.931991577148438,
+              "rotation_deg": 75.71884155273438
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.93651294708252,
+              "rotation_deg": 23.200510025024414
+            },
+            "final_minus_input_position_cm": -1.2843217849731445,
+            "final_minus_input_rotation_deg": -51.51835060119629,
+            "final_minus_estimate_position_cm": 0.7111568450927734,
+            "final_minus_estimate_rotation_deg": 0.9999809265136719,
+            "final_worse_than_input_position_fraction": 0.375,
+            "final_worse_than_input_rotation_fraction": 0.0859375
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 11.62843132019043,
+              "rotation_deg": 41.12806701660156
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.262140274047852,
+              "rotation_deg": 23.48946762084961
+            },
+            "final_minus_input_position_cm": 0.01923847198486328,
+            "final_minus_input_rotation_deg": -16.927576065063477,
+            "final_minus_estimate_position_cm": 0.3855295181274414,
+            "final_minus_estimate_rotation_deg": 0.7110233306884766,
+            "final_worse_than_input_position_fraction": 0.5,
+            "final_worse_than_input_rotation_fraction": 0.1640625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 11.436253547668457,
+              "rotation_deg": 24.677047729492188
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.647669792175293,
+              "rotation_deg": 24.198863983154297
+            },
+            "final_minus_input_position_cm": 0.21141624450683594,
+            "final_minus_input_rotation_deg": -0.47655677795410156,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0016269683837890625,
+            "final_worse_than_input_position_fraction": 0.6171875,
+            "final_worse_than_input_rotation_fraction": 0.4765625
+          }
+        }
+      },
+      {
+        "seed": 1,
+        "final": {
+          "position_cm": 11.201475143432617,
+          "rotation_deg": 18.786285400390625
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 18.97008514404297,
+              "rotation_deg": 126.89015197753906
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.26481819152832,
+              "rotation_deg": 14.621231079101562
+            },
+            "final_minus_input_position_cm": -7.768610000610352,
+            "final_minus_input_rotation_deg": -108.10386657714844,
+            "final_minus_estimate_position_cm": 2.936656951904297,
+            "final_minus_estimate_rotation_deg": 4.1650543212890625,
+            "final_worse_than_input_position_fraction": 0.203125,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.234661102294922,
+              "rotation_deg": 114.51927185058594
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.957120895385742,
+              "rotation_deg": 14.948715209960938
+            },
+            "final_minus_input_position_cm": -4.033185958862305,
+            "final_minus_input_rotation_deg": -95.73298645019531,
+            "final_minus_estimate_position_cm": 1.244354248046875,
+            "final_minus_estimate_rotation_deg": 3.8375701904296875,
+            "final_worse_than_input_position_fraction": 0.2734375,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.394098281860352,
+              "rotation_deg": 78.04472351074219
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.609724998474121,
+              "rotation_deg": 15.875436782836914
+            },
+            "final_minus_input_position_cm": -1.1926231384277344,
+            "final_minus_input_rotation_deg": -59.25843811035156,
+            "final_minus_estimate_position_cm": 0.5917501449584961,
+            "final_minus_estimate_rotation_deg": 2.910848617553711,
+            "final_worse_than_input_position_fraction": 0.34375,
+            "final_worse_than_input_rotation_fraction": 0.03125
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 11.175046920776367,
+              "rotation_deg": 38.92003631591797
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.791213989257812,
+              "rotation_deg": 17.052701950073242
+            },
+            "final_minus_input_position_cm": 0.02642822265625,
+            "final_minus_input_rotation_deg": -20.133750915527344,
+            "final_minus_estimate_position_cm": 0.4102611541748047,
+            "final_minus_estimate_rotation_deg": 1.7335834503173828,
+            "final_worse_than_input_position_fraction": 0.453125,
+            "final_worse_than_input_rotation_fraction": 0.15625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 10.93421745300293,
+              "rotation_deg": 18.976516723632812
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.201475143432617,
+              "rotation_deg": 18.784282684326172
+            },
+            "final_minus_input_position_cm": 0.2672576904296875,
+            "final_minus_input_rotation_deg": -0.1902313232421875,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.002002716064453125,
+            "final_worse_than_input_position_fraction": 0.6328125,
+            "final_worse_than_input_rotation_fraction": 0.40625
+          }
+        }
+      },
+      {
+        "seed": 2,
+        "final": {
+          "position_cm": 10.576566696166992,
+          "rotation_deg": 18.711727142333984
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 19.283658981323242,
+              "rotation_deg": 123.70722961425781
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.154438972473145,
+              "rotation_deg": 15.9317045211792
+            },
+            "final_minus_input_position_cm": -8.70709228515625,
+            "final_minus_input_rotation_deg": -104.99550247192383,
+            "final_minus_estimate_position_cm": 2.4221277236938477,
+            "final_minus_estimate_rotation_deg": 2.780022621154785,
+            "final_worse_than_input_position_fraction": 0.1875,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.8485689163208,
+              "rotation_deg": 108.41514587402344
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.373488426208496,
+              "rotation_deg": 18.1373291015625
+            },
+            "final_minus_input_position_cm": -5.272002220153809,
+            "final_minus_input_rotation_deg": -89.70341873168945,
+            "final_minus_estimate_position_cm": 0.2030782699584961,
+            "final_minus_estimate_rotation_deg": 0.5743980407714844,
+            "final_worse_than_input_position_fraction": 0.265625,
+            "final_worse_than_input_rotation_fraction": 0.0234375
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.993701934814453,
+              "rotation_deg": 74.17507934570312
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.722335815429688,
+              "rotation_deg": 18.430831909179688
+            },
+            "final_minus_input_position_cm": -2.417135238647461,
+            "final_minus_input_rotation_deg": -55.46335220336914,
+            "final_minus_estimate_position_cm": -0.1457691192626953,
+            "final_minus_estimate_rotation_deg": 0.2808952331542969,
+            "final_worse_than_input_position_fraction": 0.3046875,
+            "final_worse_than_input_rotation_fraction": 0.0390625
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 11.416770935058594,
+              "rotation_deg": 37.40266799926758
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.695034980773926,
+              "rotation_deg": 18.558286666870117
+            },
+            "final_minus_input_position_cm": -0.8402042388916016,
+            "final_minus_input_rotation_deg": -18.690940856933594,
+            "final_minus_estimate_position_cm": -0.1184682846069336,
+            "final_minus_estimate_rotation_deg": 0.1534404754638672,
+            "final_worse_than_input_position_fraction": 0.359375,
+            "final_worse_than_input_rotation_fraction": 0.1328125
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 10.668232917785645,
+              "rotation_deg": 19.389291763305664
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.576566696166992,
+              "rotation_deg": 18.70838737487793
+            },
+            "final_minus_input_position_cm": -0.09166622161865234,
+            "final_minus_input_rotation_deg": -0.6775646209716797,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0033397674560546875,
+            "final_worse_than_input_position_fraction": 0.4453125,
+            "final_worse_than_input_rotation_fraction": 0.40625
+          }
+        }
+      }
+    ],
+    "task/open the drawer": [
+      {
+        "seed": 0,
+        "final": {
+          "position_cm": 9.235568046569824,
+          "rotation_deg": 22.040267944335938
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 18.86071014404297,
+              "rotation_deg": 128.1723175048828
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.514001846313477,
+              "rotation_deg": 18.601415634155273
+            },
+            "final_minus_input_position_cm": -9.625142097473145,
+            "final_minus_input_rotation_deg": -106.13204956054688,
+            "final_minus_estimate_position_cm": 1.7215662002563477,
+            "final_minus_estimate_rotation_deg": 3.438852310180664,
+            "final_worse_than_input_position_fraction": 0.109375,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 14.892955780029297,
+              "rotation_deg": 117.87162780761719
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 8.882491111755371,
+              "rotation_deg": 20.030624389648438
+            },
+            "final_minus_input_position_cm": -5.657387733459473,
+            "final_minus_input_rotation_deg": -95.83135986328125,
+            "final_minus_estimate_position_cm": 0.3530769348144531,
+            "final_minus_estimate_rotation_deg": 2.0096435546875,
+            "final_worse_than_input_position_fraction": 0.1484375,
+            "final_worse_than_input_rotation_fraction": 0.0234375
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 11.632680892944336,
+              "rotation_deg": 82.50341796875
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.159915924072266,
+              "rotation_deg": 20.849987030029297
+            },
+            "final_minus_input_position_cm": -2.3971128463745117,
+            "final_minus_input_rotation_deg": -60.46315002441406,
+            "final_minus_estimate_position_cm": 0.0756521224975586,
+            "final_minus_estimate_rotation_deg": 1.1902809143066406,
+            "final_worse_than_input_position_fraction": 0.25,
+            "final_worse_than_input_rotation_fraction": 0.0625
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 9.897233009338379,
+              "rotation_deg": 41.173240661621094
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.235759735107422,
+              "rotation_deg": 22.067493438720703
+            },
+            "final_minus_input_position_cm": -0.6616649627685547,
+            "final_minus_input_rotation_deg": -19.132972717285156,
+            "final_minus_estimate_position_cm": -0.00019168853759765625,
+            "final_minus_estimate_rotation_deg": -0.027225494384765625,
+            "final_worse_than_input_position_fraction": 0.296875,
+            "final_worse_than_input_rotation_fraction": 0.1171875
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 9.230547904968262,
+              "rotation_deg": 22.897510528564453
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.235568046569824,
+              "rotation_deg": 22.03900909423828
+            },
+            "final_minus_input_position_cm": 0.0050201416015625,
+            "final_minus_input_rotation_deg": -0.8572425842285156,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.00125885009765625,
+            "final_worse_than_input_position_fraction": 0.46875,
+            "final_worse_than_input_rotation_fraction": 0.375
+          }
+        }
+      },
+      {
+        "seed": 1,
+        "final": {
+          "position_cm": 7.3389434814453125,
+          "rotation_deg": 21.05528450012207
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 18.306720733642578,
+              "rotation_deg": 125.08602905273438
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.243703842163086,
+              "rotation_deg": 19.499563217163086
+            },
+            "final_minus_input_position_cm": -10.967777252197266,
+            "final_minus_input_rotation_deg": -104.0307445526123,
+            "final_minus_estimate_position_cm": 0.09523963928222656,
+            "final_minus_estimate_rotation_deg": 1.5557212829589844,
+            "final_worse_than_input_position_fraction": 0.0859375,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 13.680378913879395,
+              "rotation_deg": 114.29370880126953
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.113718032836914,
+              "rotation_deg": 21.590126037597656
+            },
+            "final_minus_input_position_cm": -6.341435432434082,
+            "final_minus_input_rotation_deg": -93.23842430114746,
+            "final_minus_estimate_position_cm": 0.22522544860839844,
+            "final_minus_estimate_rotation_deg": -0.5348415374755859,
+            "final_worse_than_input_position_fraction": 0.1328125,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 9.903505325317383,
+              "rotation_deg": 74.52147674560547
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.3336615562438965,
+              "rotation_deg": 21.74298858642578
+            },
+            "final_minus_input_position_cm": -2.5645618438720703,
+            "final_minus_input_rotation_deg": -53.4661922454834,
+            "final_minus_estimate_position_cm": 0.005281925201416016,
+            "final_minus_estimate_rotation_deg": -0.6877040863037109,
+            "final_worse_than_input_position_fraction": 0.234375,
+            "final_worse_than_input_rotation_fraction": 0.0625
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 8.034163475036621,
+              "rotation_deg": 39.9465217590332
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.370461463928223,
+              "rotation_deg": 22.126602172851562
+            },
+            "final_minus_input_position_cm": -0.6952199935913086,
+            "final_minus_input_rotation_deg": -18.891237258911133,
+            "final_minus_estimate_position_cm": -0.031517982482910156,
+            "final_minus_estimate_rotation_deg": -1.0713176727294922,
+            "final_worse_than_input_position_fraction": 0.3125,
+            "final_worse_than_input_rotation_fraction": 0.140625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 7.351194381713867,
+              "rotation_deg": 22.697837829589844
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.3389434814453125,
+              "rotation_deg": 21.05413818359375
+            },
+            "final_minus_input_position_cm": -0.012250900268554688,
+            "final_minus_input_rotation_deg": -1.6425533294677734,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0011463165283203125,
+            "final_worse_than_input_position_fraction": 0.46875,
+            "final_worse_than_input_rotation_fraction": 0.296875
+          }
+        }
+      },
+      {
+        "seed": 2,
+        "final": {
+          "position_cm": 9.819890975952148,
+          "rotation_deg": 24.107784271240234
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 19.43121337890625,
+              "rotation_deg": 130.6136016845703
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 7.318084716796875,
+              "rotation_deg": 18.638225555419922
+            },
+            "final_minus_input_position_cm": -9.611322402954102,
+            "final_minus_input_rotation_deg": -106.50581741333008,
+            "final_minus_estimate_position_cm": 2.5018062591552734,
+            "final_minus_estimate_rotation_deg": 5.4695587158203125,
+            "final_worse_than_input_position_fraction": 0.1484375,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 15.467279434204102,
+              "rotation_deg": 116.25477600097656
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.462396621704102,
+              "rotation_deg": 23.64107322692871
+            },
+            "final_minus_input_position_cm": -5.647388458251953,
+            "final_minus_input_rotation_deg": -92.14699172973633,
+            "final_minus_estimate_position_cm": 0.3574943542480469,
+            "final_minus_estimate_rotation_deg": 0.46671104431152344,
+            "final_worse_than_input_position_fraction": 0.1796875,
+            "final_worse_than_input_rotation_fraction": 0.0390625
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 12.300086975097656,
+              "rotation_deg": 80.00511169433594
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.758638381958008,
+              "rotation_deg": 24.132328033447266
+            },
+            "final_minus_input_position_cm": -2.480195999145508,
+            "final_minus_input_rotation_deg": -55.8973274230957,
+            "final_minus_estimate_position_cm": 0.061252593994140625,
+            "final_minus_estimate_rotation_deg": -0.02454376220703125,
+            "final_worse_than_input_position_fraction": 0.265625,
+            "final_worse_than_input_rotation_fraction": 0.0703125
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 10.547927856445312,
+              "rotation_deg": 43.52919006347656
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.768306732177734,
+              "rotation_deg": 24.5504207611084
+            },
+            "final_minus_input_position_cm": -0.7280368804931641,
+            "final_minus_input_rotation_deg": -19.421405792236328,
+            "final_minus_estimate_position_cm": 0.05158424377441406,
+            "final_minus_estimate_rotation_deg": -0.44263648986816406,
+            "final_worse_than_input_position_fraction": 0.3125,
+            "final_worse_than_input_rotation_fraction": 0.140625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 9.799745559692383,
+              "rotation_deg": 25.36437225341797
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 9.819890975952148,
+              "rotation_deg": 24.10672378540039
+            },
+            "final_minus_input_position_cm": 0.020145416259765625,
+            "final_minus_input_rotation_deg": -1.2565879821777344,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.00106048583984375,
+            "final_worse_than_input_position_fraction": 0.546875,
+            "final_worse_than_input_rotation_fraction": 0.3984375
+          }
+        }
+      }
+    ],
+    "task/take broccoli out of pan": [
+      {
+        "seed": 0,
+        "final": {
+          "position_cm": 14.864779472351074,
+          "rotation_deg": 19.234638214111328
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 18.85234832763672,
+              "rotation_deg": 125.90560913085938
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.662997245788574,
+              "rotation_deg": 17.020490646362305
+            },
+            "final_minus_input_position_cm": -3.9875688552856445,
+            "final_minus_input_rotation_deg": -106.67097091674805,
+            "final_minus_estimate_position_cm": 4.2017822265625,
+            "final_minus_estimate_rotation_deg": 2.2141475677490234,
+            "final_worse_than_input_position_fraction": 0.328125,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 17.314014434814453,
+              "rotation_deg": 119.64984130859375
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 13.734657287597656,
+              "rotation_deg": 16.789642333984375
+            },
+            "final_minus_input_position_cm": -2.449234962463379,
+            "final_minus_input_rotation_deg": -100.41520309448242,
+            "final_minus_estimate_position_cm": 1.130122184753418,
+            "final_minus_estimate_rotation_deg": 2.444995880126953,
+            "final_worse_than_input_position_fraction": 0.3125,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 15.70055866241455,
+              "rotation_deg": 83.7659683227539
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 14.35778522491455,
+              "rotation_deg": 17.165550231933594
+            },
+            "final_minus_input_position_cm": -0.8357791900634766,
+            "final_minus_input_rotation_deg": -64.53133010864258,
+            "final_minus_estimate_position_cm": 0.5069942474365234,
+            "final_minus_estimate_rotation_deg": 2.0690879821777344,
+            "final_worse_than_input_position_fraction": 0.3671875,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 14.749914169311523,
+              "rotation_deg": 40.69407653808594
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 14.469429016113281,
+              "rotation_deg": 17.855998992919922
+            },
+            "final_minus_input_position_cm": 0.11486530303955078,
+            "final_minus_input_rotation_deg": -21.45943832397461,
+            "final_minus_estimate_position_cm": 0.39535045623779297,
+            "final_minus_estimate_rotation_deg": 1.3786392211914062,
+            "final_worse_than_input_position_fraction": 0.5078125,
+            "final_worse_than_input_rotation_fraction": 0.109375
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 14.571812629699707,
+              "rotation_deg": 19.430538177490234
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 14.864779472351074,
+              "rotation_deg": 19.225341796875
+            },
+            "final_minus_input_position_cm": 0.2929668426513672,
+            "final_minus_input_rotation_deg": -0.19589996337890625,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.009296417236328125,
+            "final_worse_than_input_position_fraction": 0.765625,
+            "final_worse_than_input_rotation_fraction": 0.46875
+          }
+        }
+      },
+      {
+        "seed": 1,
+        "final": {
+          "position_cm": 12.48520565032959,
+          "rotation_deg": 17.471759796142578
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 19.277801513671875,
+              "rotation_deg": 130.0978240966797
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.969785690307617,
+              "rotation_deg": 16.88551139831543
+            },
+            "final_minus_input_position_cm": -6.792595863342285,
+            "final_minus_input_rotation_deg": -112.62606430053711,
+            "final_minus_estimate_position_cm": 1.5154199600219727,
+            "final_minus_estimate_rotation_deg": 0.5862483978271484,
+            "final_worse_than_input_position_fraction": 0.21875,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 16.651538848876953,
+              "rotation_deg": 117.84254455566406
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.566411972045898,
+              "rotation_deg": 16.73599624633789
+            },
+            "final_minus_input_position_cm": -4.166333198547363,
+            "final_minus_input_rotation_deg": -100.37078475952148,
+            "final_minus_estimate_position_cm": 0.9187936782836914,
+            "final_minus_estimate_rotation_deg": 0.7357635498046875,
+            "final_worse_than_input_position_fraction": 0.234375,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 14.001194953918457,
+              "rotation_deg": 78.00770568847656
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.069129943847656,
+              "rotation_deg": 17.0770263671875
+            },
+            "final_minus_input_position_cm": -1.5159893035888672,
+            "final_minus_input_rotation_deg": -60.535945892333984,
+            "final_minus_estimate_position_cm": 0.4160757064819336,
+            "final_minus_estimate_rotation_deg": 0.3947334289550781,
+            "final_worse_than_input_position_fraction": 0.3671875,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 12.688026428222656,
+              "rotation_deg": 37.23145294189453
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.239893913269043,
+              "rotation_deg": 17.187625885009766
+            },
+            "final_minus_input_position_cm": -0.2028207778930664,
+            "final_minus_input_rotation_deg": -19.759693145751953,
+            "final_minus_estimate_position_cm": 0.24531173706054688,
+            "final_minus_estimate_rotation_deg": 0.2841339111328125,
+            "final_worse_than_input_position_fraction": 0.484375,
+            "final_worse_than_input_rotation_fraction": 0.125
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 12.354110717773438,
+              "rotation_deg": 18.202281951904297
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.48520565032959,
+              "rotation_deg": 17.470272064208984
+            },
+            "final_minus_input_position_cm": 0.13109493255615234,
+            "final_minus_input_rotation_deg": -0.7305221557617188,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.00148773193359375,
+            "final_worse_than_input_position_fraction": 0.5546875,
+            "final_worse_than_input_rotation_fraction": 0.390625
+          }
+        }
+      },
+      {
+        "seed": 2,
+        "final": {
+          "position_cm": 12.014318466186523,
+          "rotation_deg": 20.726091384887695
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 19.1268253326416,
+              "rotation_deg": 127.37039184570312
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 10.665764808654785,
+              "rotation_deg": 17.82429313659668
+            },
+            "final_minus_input_position_cm": -7.112506866455078,
+            "final_minus_input_rotation_deg": -106.64430046081543,
+            "final_minus_estimate_position_cm": 1.3485536575317383,
+            "final_minus_estimate_rotation_deg": 2.9017982482910156,
+            "final_worse_than_input_position_fraction": 0.1953125,
+            "final_worse_than_input_rotation_fraction": 0.0078125
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 16.11132049560547,
+              "rotation_deg": 115.2406234741211
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.27701187133789,
+              "rotation_deg": 19.521068572998047
+            },
+            "final_minus_input_position_cm": -4.097002029418945,
+            "final_minus_input_rotation_deg": -94.5145320892334,
+            "final_minus_estimate_position_cm": 0.7373065948486328,
+            "final_minus_estimate_rotation_deg": 1.2050228118896484,
+            "final_worse_than_input_position_fraction": 0.2890625,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 13.471284866333008,
+              "rotation_deg": 78.02789306640625
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.782573699951172,
+              "rotation_deg": 20.201519012451172
+            },
+            "final_minus_input_position_cm": -1.4569664001464844,
+            "final_minus_input_rotation_deg": -57.301801681518555,
+            "final_minus_estimate_position_cm": 0.23174476623535156,
+            "final_minus_estimate_rotation_deg": 0.5245723724365234,
+            "final_worse_than_input_position_fraction": 0.3515625,
+            "final_worse_than_input_rotation_fraction": 0.0546875
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 12.278564453125,
+              "rotation_deg": 40.19989013671875
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 11.920586585998535,
+              "rotation_deg": 20.265972137451172
+            },
+            "final_minus_input_position_cm": -0.26424598693847656,
+            "final_minus_input_rotation_deg": -19.473798751831055,
+            "final_minus_estimate_position_cm": 0.09373188018798828,
+            "final_minus_estimate_rotation_deg": 0.46011924743652344,
+            "final_worse_than_input_position_fraction": 0.40625,
+            "final_worse_than_input_rotation_fraction": 0.1328125
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 11.962004661560059,
+              "rotation_deg": 21.658681869506836
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 12.014318466186523,
+              "rotation_deg": 20.724205017089844
+            },
+            "final_minus_input_position_cm": 0.052313804626464844,
+            "final_minus_input_rotation_deg": -0.9325904846191406,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0018863677978515625,
+            "final_worse_than_input_position_fraction": 0.484375,
+            "final_worse_than_input_rotation_fraction": 0.390625
+          }
+        }
+      }
+    ],
+    "task/turn lever vertical to front": [
+      {
+        "seed": 0,
+        "final": {
+          "position_cm": 3.374673843383789,
+          "rotation_deg": 7.056564807891846
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 15.732013702392578,
+              "rotation_deg": 126.31930541992188
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 2.9048619270324707,
+              "rotation_deg": 6.688172340393066
+            },
+            "final_minus_input_position_cm": -12.357339859008789,
+            "final_minus_input_rotation_deg": -119.26274061203003,
+            "final_minus_estimate_position_cm": 0.46981191635131836,
+            "final_minus_estimate_rotation_deg": 0.3683924674987793,
+            "final_worse_than_input_position_fraction": 0.0234375,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 11.48678970336914,
+              "rotation_deg": 116.85205841064453
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.2804362773895264,
+              "rotation_deg": 7.446732521057129
+            },
+            "final_minus_input_position_cm": -8.112115859985352,
+            "final_minus_input_rotation_deg": -109.79549360275269,
+            "final_minus_estimate_position_cm": 0.0942375659942627,
+            "final_minus_estimate_rotation_deg": -0.3901677131652832,
+            "final_worse_than_input_position_fraction": 0.03125,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 7.239984035491943,
+              "rotation_deg": 79.15576934814453
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.5334408283233643,
+              "rotation_deg": 7.855762004852295
+            },
+            "final_minus_input_position_cm": -3.8653101921081543,
+            "final_minus_input_rotation_deg": -72.09920454025269,
+            "final_minus_estimate_position_cm": -0.1587669849395752,
+            "final_minus_estimate_rotation_deg": -0.7991971969604492,
+            "final_worse_than_input_position_fraction": 0.0859375,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 4.696770668029785,
+              "rotation_deg": 35.351356506347656
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.58306884765625,
+              "rotation_deg": 7.664486885070801
+            },
+            "final_minus_input_position_cm": -1.322096824645996,
+            "final_minus_input_rotation_deg": -28.29479169845581,
+            "final_minus_estimate_position_cm": -0.20839500427246094,
+            "final_minus_estimate_rotation_deg": -0.6079220771789551,
+            "final_worse_than_input_position_fraction": 0.1953125,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 3.537504196166992,
+              "rotation_deg": 9.247982025146484
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.374673843383789,
+              "rotation_deg": 7.05545711517334
+            },
+            "final_minus_input_position_cm": -0.16283035278320312,
+            "final_minus_input_rotation_deg": -2.1914172172546387,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0011076927185058594,
+            "final_worse_than_input_position_fraction": 0.3671875,
+            "final_worse_than_input_rotation_fraction": 0.234375
+          }
+        }
+      },
+      {
+        "seed": 1,
+        "final": {
+          "position_cm": 3.134366035461426,
+          "rotation_deg": 6.787870407104492
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 16.12641143798828,
+              "rotation_deg": 128.38018798828125
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 2.870776414871216,
+              "rotation_deg": 6.390834808349609
+            },
+            "final_minus_input_position_cm": -12.992045402526855,
+            "final_minus_input_rotation_deg": -121.59231758117676,
+            "final_minus_estimate_position_cm": 0.26358962059020996,
+            "final_minus_estimate_rotation_deg": 0.3970355987548828,
+            "final_worse_than_input_position_fraction": 0.0390625,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 11.873944282531738,
+              "rotation_deg": 113.68412017822266
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.2555322647094727,
+              "rotation_deg": 7.044291973114014
+            },
+            "final_minus_input_position_cm": -8.739578247070312,
+            "final_minus_input_rotation_deg": -106.89624977111816,
+            "final_minus_estimate_position_cm": -0.12116622924804688,
+            "final_minus_estimate_rotation_deg": -0.2564215660095215,
+            "final_worse_than_input_position_fraction": 0.0625,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 7.502483367919922,
+              "rotation_deg": 76.69601440429688
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.4943742752075195,
+              "rotation_deg": 7.292572021484375
+            },
+            "final_minus_input_position_cm": -4.368117332458496,
+            "final_minus_input_rotation_deg": -69.90814399719238,
+            "final_minus_estimate_position_cm": -0.36000823974609375,
+            "final_minus_estimate_rotation_deg": -0.5047016143798828,
+            "final_worse_than_input_position_fraction": 0.1015625,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 4.7814788818359375,
+              "rotation_deg": 32.800209045410156
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.4964587688446045,
+              "rotation_deg": 7.132038116455078
+            },
+            "final_minus_input_position_cm": -1.6471128463745117,
+            "final_minus_input_rotation_deg": -26.012338638305664,
+            "final_minus_estimate_position_cm": -0.3620927333831787,
+            "final_minus_estimate_rotation_deg": -0.34416770935058594,
+            "final_worse_than_input_position_fraction": 0.1328125,
+            "final_worse_than_input_rotation_fraction": 0.0234375
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 3.3842172622680664,
+              "rotation_deg": 8.636873245239258
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.134366035461426,
+              "rotation_deg": 6.787907123565674
+            },
+            "final_minus_input_position_cm": -0.24985122680664062,
+            "final_minus_input_rotation_deg": -1.8490028381347656,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": -3.6716461181640625e-05,
+            "final_worse_than_input_position_fraction": 0.296875,
+            "final_worse_than_input_rotation_fraction": 0.2109375
+          }
+        }
+      },
+      {
+        "seed": 2,
+        "final": {
+          "position_cm": 3.599574565887451,
+          "rotation_deg": 7.509992599487305
+        },
+        "steps": {
+          "99": {
+            "input_before_step": {
+              "position_cm": 16.948442459106445,
+              "rotation_deg": 125.25401306152344
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 2.957505464553833,
+              "rotation_deg": 6.520383358001709
+            },
+            "final_minus_input_position_cm": -13.348867893218994,
+            "final_minus_input_rotation_deg": -117.74402046203613,
+            "final_minus_estimate_position_cm": 0.6420691013336182,
+            "final_minus_estimate_rotation_deg": 0.9896092414855957,
+            "final_worse_than_input_position_fraction": 0.03125,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "49": {
+            "input_before_step": {
+              "position_cm": 12.329793930053711,
+              "rotation_deg": 111.38621520996094
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.3007922172546387,
+              "rotation_deg": 7.007409572601318
+            },
+            "final_minus_input_position_cm": -8.73021936416626,
+            "final_minus_input_rotation_deg": -103.87622261047363,
+            "final_minus_estimate_position_cm": 0.2987823486328125,
+            "final_minus_estimate_rotation_deg": 0.5025830268859863,
+            "final_worse_than_input_position_fraction": 0.0390625,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "24": {
+            "input_before_step": {
+              "position_cm": 7.727558135986328,
+              "rotation_deg": 77.13621520996094
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.688758373260498,
+              "rotation_deg": 7.659552574157715
+            },
+            "final_minus_input_position_cm": -4.127983570098877,
+            "final_minus_input_rotation_deg": -69.62622261047363,
+            "final_minus_estimate_position_cm": -0.08918380737304688,
+            "final_minus_estimate_rotation_deg": -0.14955997467041016,
+            "final_worse_than_input_position_fraction": 0.0859375,
+            "final_worse_than_input_rotation_fraction": 0.0
+          },
+          "9": {
+            "input_before_step": {
+              "position_cm": 5.000337600708008,
+              "rotation_deg": 32.4618034362793
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.7941646575927734,
+              "rotation_deg": 7.906938552856445
+            },
+            "final_minus_input_position_cm": -1.4007630348205566,
+            "final_minus_input_rotation_deg": -24.951810836791992,
+            "final_minus_estimate_position_cm": -0.19459009170532227,
+            "final_minus_estimate_rotation_deg": -0.3969459533691406,
+            "final_worse_than_input_position_fraction": 0.1796875,
+            "final_worse_than_input_rotation_fraction": 0.015625
+          },
+          "0": {
+            "input_before_step": {
+              "position_cm": 3.7697997093200684,
+              "rotation_deg": 8.904726028442383
+            },
+            "clean_estimate_at_step": {
+              "position_cm": 3.599574565887451,
+              "rotation_deg": 7.508956432342529
+            },
+            "final_minus_input_position_cm": -0.1702251434326172,
+            "final_minus_input_rotation_deg": -1.3947334289550781,
+            "final_minus_estimate_position_cm": 0.0,
+            "final_minus_estimate_rotation_deg": 0.0010361671447753906,
+            "final_worse_than_input_position_fraction": 0.3359375,
+            "final_worse_than_input_rotation_fraction": 0.3046875
+          }
+        }
+      }
+    ]
+  },
+  "elapsed_seconds": 32.89930516900495,
+  "difference_sign": "Positive final-minus-input/estimate means continuing increases target error.",
+  "limits": [
+    "Same forty training windows; no development or test payloads.",
+    "Scoring uses target data, but generation never receives target actions.",
+    "Input snapshot is still a noisy latent with final pose constraints; estimate snapshot is predicted x0.",
+    "These snapshots are offline ablations, not executable early-stop policies.",
+    "Tail results concern this deterministic DDIM chain, not every sampler or training parameterization.",
+    "No timing or checkpoint is chosen as best on these diagnostic results."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "language_variants": [
+    {
+      "raw": "Close the drawer",
+      "canonical": "close the drawer",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "Open the drawer",
+      "canonical": "open the drawer",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "close  the drawer",
+      "canonical": "close the drawer",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "close microwave",
+      "canonical": "close microwave",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "close the  drawer",
+      "canonical": "close the drawer",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "close the drawer",
+      "canonical": "close the drawer",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "open the drawer",
+      "canonical": "open the drawer",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "take broccoli out of pan",
+      "canonical": "take broccoli out of pan",
+      "token_ids_identical": true
+    },
+    {
+      "raw": "turn lever vertical to front",
+      "canonical": "turn lever vertical to front",
+      "token_ids_identical": true
+    }
+  ],
+  "canonical_task_sets_equal": true,
+  "core_source_matches_retained_model_training": {
+    "dataset.py": true,
+    "models.py": true,
+    "adapter.py": true,
+    "diffusion_decoder.py": true,
+    "train.py": true
+  }
+}

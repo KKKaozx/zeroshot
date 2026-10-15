@@ -1,0 +1,158 @@
+{
+  "stage": "fixed_scene_training_only",
+  "trained": true,
+  "simulation_policy_tested": false,
+  "updates": 1000,
+  "windows": 8,
+  "demonstration_sha256": "2bda37509a7aaf32197a27d97ca05d7dd127cc67c0144a304df9e6c640db0d88",
+  "checkpoint_sha256": "c42e5566f914415ee266a7f151ce07e51564a169ef8fb66c2ecf1178c8a51932",
+  "contract": {
+    "robot": "pybullet_data/franka_panda/panda.urdf",
+    "end_effector_link": 11,
+    "finger_joints": [
+      9,
+      10
+    ],
+    "ticks_per_action": 24,
+    "simulation_hz": 240,
+    "current_gripper": "2*(sum(measured finger joint positions)/0.08)-1",
+    "command_gripper": "negative=closed motor target 0; positive=open target 0.04",
+    "pose": "All 16 future measured EE arrival poses relative to observation EE pose",
+    "scene": "Fixed cube/table/Panda scene in pybullet_fixed_grasp.scene",
+    "success": "Cube >=10cm above initial height for last 10 actions and final two-finger contact",
+    "artificial_attachment": false,
+    "generalization_test": false
+  },
+  "clip_unchanged": true,
+  "history": [
+    {
+      "update": 500,
+      "position_cm": 0.12552928924560547,
+      "rotation_deg": 0.6406341195106506,
+      "endpoint_position_cm": 0.12488418817520142,
+      "endpoint_rotation_deg": 0.5893654823303223,
+      "seed_position_cm": [
+        0.12513265013694763,
+        0.12569788098335266,
+        0.1257573366165161
+      ],
+      "seed_rotation_deg": [
+        0.6396013498306274,
+        0.6420313119888306,
+        0.6402697563171387
+      ],
+      "windows_all_three_seeds_pass": 8,
+      "windows": 8,
+      "static_position_cm": 3.6840083599090576,
+      "static_rotation_deg": 0.0,
+      "pose_fit_passed": true,
+      "gripper": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "seed_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed_balanced_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "open_targets": 38,
+        "closed_targets": 90,
+        "always_open_accuracy": 0.296875,
+        "always_closed_accuracy": 0.703125,
+        "open_to_closed": {
+          "target_pairs": 1,
+          "seed_correct_pairs": [
+            1,
+            1,
+            1
+          ],
+          "seed_pair_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "closed_to_open": {
+          "target_pairs": 0,
+          "seed_correct_pairs": [
+            0,
+            0,
+            0
+          ],
+          "seed_pair_accuracy": null
+        },
+        "observed_state_and_events_fit_passed": true,
+        "release_evaluated": false
+      }
+    },
+    {
+      "update": 1000,
+      "position_cm": 0.1416635364294052,
+      "rotation_deg": 0.6023833155632019,
+      "endpoint_position_cm": 0.18180322647094727,
+      "endpoint_rotation_deg": 0.3264232873916626,
+      "seed_position_cm": [
+        0.1416783630847931,
+        0.14168229699134827,
+        0.14162996411323547
+      ],
+      "seed_rotation_deg": [
+        0.602947473526001,
+        0.6016910076141357,
+        0.6025113463401794
+      ],
+      "windows_all_three_seeds_pass": 8,
+      "windows": 8,
+      "static_position_cm": 3.6840083599090576,
+      "static_rotation_deg": 0.0,
+      "pose_fit_passed": true,
+      "gripper": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "seed_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed_balanced_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "open_targets": 38,
+        "closed_targets": 90,
+        "always_open_accuracy": 0.296875,
+        "always_closed_accuracy": 0.703125,
+        "open_to_closed": {
+          "target_pairs": 1,
+          "seed_correct_pairs": [
+            1,
+            1,
+            1
+          ],
+          "seed_pair_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "closed_to_open": {
+          "target_pairs": 0,
+          "seed_correct_pairs": [
+            0,
+            0,
+            0
+          ],
+          "seed_pair_accuracy": null
+        },
+        "observed_state_and_events_fit_passed": true,
+        "release_evaluated": false
+      }
+    }
+  ],
+  "elapsed_seconds": 197.85899999999674
+}

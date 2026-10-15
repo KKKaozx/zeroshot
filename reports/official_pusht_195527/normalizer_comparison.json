@@ -1,0 +1,40 @@
+{
+  "source_sha256": "5a768ac7f1932bab194499317c78e55576428438991dca16a542da934a082f39",
+  "model_and_ema_normalizers_identical": true,
+  "action_transform": "normalized = raw * scale + offset; raw = (normalized - offset) / scale",
+  "action_raw_min": [
+    12.0,
+    25.0
+  ],
+  "action_raw_max": [
+    511.0,
+    511.0
+  ],
+  "action_scale": [
+    0.004008016083389521,
+    0.004115226212888956
+  ],
+  "action_offset": [
+    -1.0480961799621582,
+    -1.1028807163238525
+  ],
+  "normalized_min": [
+    -0.999999986961484,
+    -1.0000000610016286
+  ],
+  "normalized_max": [
+    1.0000000386498868,
+    0.999999878462404
+  ],
+  "normalized_mean": [
+    -0.13330797369449954,
+    0.10695083021349205
+  ],
+  "normalized_std": [
+    0.4072206660187696,
+    0.3952311015494807
+  ],
+  "project_xyz_transform": "relative_tool_delta_m / 0.10; no train-fitted axiswise offset or scale",
+  "normalization_difference_is_proven_cause": false,
+  "actual_checkpoint_contract_retrieved": true
+}

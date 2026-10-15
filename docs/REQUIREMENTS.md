@@ -3,12 +3,12 @@
 Summarized from the project correspondence; private emails are not published.
 The later dataset/version clarification takes precedence over earlier suggestions.
 
-| Requirement | Status on 2026-10-06 |
+| Requirement | Status on 2026-10-15 |
 |---|---|
 | Documented PyTorch codebase on GitHub; commit at least weekly | Actual source and documented diagnostic progress included in this update |
 | One main training and one evaluation entry | `code/train.py`, `code/test.py` (offline evaluation) |
 | Configuration rather than editing hyperparameters in code | Historical `.args` files and recorded JSON configs; some diagnostic export paths remain hard-coded |
-| Frozen CLIP ViT-L/14, eight cross-attention layers, 512 attention channels, DDPM/U-Net | Implementation exists; recent evidence uses smaller/frozen adapter contexts, not complete target-architecture validation |
+| Frozen CLIP ViT-L/14, eight cross-attention layers, 512 attention channels, DDPM/U-Net | Executed in the 128-window pose-fitting diagnostics and the separate seen-scene PyBullet positive control; held-out demonstration prediction has not passed |
 | Four core OXE subsets, justify inclusion/exclusion and versions | Teacher choices documented; formal multi-source action contracts/training incomplete |
 | Four augmentation conditions | Formal controlled study not completed |
 | LIBERO and CLIPort, 100 rollouts per task split | Not completed; offline errors are not task-success rates |

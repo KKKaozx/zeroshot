@@ -7,3 +7,5 @@
 *.yaml text eol=lf
 # Preserve exact bytes of copied numerical evidence and its checksum manifest.
 reports/** -text
+# Frozen execution bundles carry raw-byte fingerprints in their manifests.
+cluster_packages/** -text

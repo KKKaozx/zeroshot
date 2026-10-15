@@ -1,5 +1,9 @@
 # Storage budget for the next decoder comparison
 
+Latest local inventory: [15 October storage review](LOCAL_STORAGE_REVIEW_20261015.md).
+D: had approximately 65.44 GiB free at that check. No files were deleted in the
+review; cluster quota was not queried. The budget below is a historical snapshot.
+
 Snapshot: 2026-10-06. Local capacity checks are read-only; no old artifacts deleted.
 
 Subsequent authorized cleanup: three obsolete final checkpoints and one identical

@@ -1,0 +1,330 @@
+{
+  "stage": "read_only_exploratory_generalization_diagnosis",
+  "trained": false,
+  "new_inference_of_policy": false,
+  "new_frozen_clip_encoding": true,
+  "unseen_tasks": [],
+  "train_episodes": 64,
+  "development_episodes": 10,
+  "train_windows": 128,
+  "development_windows": 40,
+  "ranges": [
+    {
+      "task": "close microwave",
+      "train_windows": 32,
+      "development_windows": 10,
+      "train_xyz_min_cm": [
+        -14.183896780014038,
+        -17.824294567108154,
+        -10.836267471313477
+      ],
+      "train_xyz_max_cm": [
+        25.72734832763672,
+        22.7020263671875,
+        23.080055713653564
+      ],
+      "development_xyz_min_cm": [
+        -8.410922288894653,
+        -10.465458631515503,
+        -10.755395889282227
+      ],
+      "development_xyz_max_cm": [
+        12.74370789527893,
+        20.904247760772705,
+        9.338557124137878
+      ],
+      "targets_outside_same_task_xyz_box_fraction": 0.0,
+      "per_axis_outside_fraction": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "train_relative_rotation_deg_range": [
+        0.0,
+        59.767811364220066
+      ],
+      "development_relative_rotation_deg_range": [
+        0.0,
+        24.117158328492295
+      ],
+      "development_relative_rotation_above_train_max_fraction": 0.0
+    },
+    {
+      "task": "close the drawer",
+      "train_windows": 24,
+      "development_windows": 6,
+      "train_xyz_min_cm": [
+        -17.969231605529785,
+        -21.47317409515381,
+        -24.152562618255615
+      ],
+      "train_xyz_max_cm": [
+        18.563830852508545,
+        19.19558882713318,
+        14.709842205047607
+      ],
+      "development_xyz_min_cm": [
+        -3.5941755771636963,
+        -18.57692837715149,
+        -12.797046899795532
+      ],
+      "development_xyz_max_cm": [
+        15.891975164413452,
+        1.9096511602401733,
+        7.13944137096405
+      ],
+      "targets_outside_same_task_xyz_box_fraction": 0.0,
+      "per_axis_outside_fraction": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "train_relative_rotation_deg_range": [
+        0.0,
+        63.50855184810924
+      ],
+      "development_relative_rotation_deg_range": [
+        0.11874108247644989,
+        128.92101000588548
+      ],
+      "development_relative_rotation_above_train_max_fraction": 0.21875
+    },
+    {
+      "task": "open the drawer",
+      "train_windows": 24,
+      "development_windows": 11,
+      "train_xyz_min_cm": [
+        -15.622531175613403,
+        -12.227745056152344,
+        -17.44598627090454
+      ],
+      "train_xyz_max_cm": [
+        25.18345594406128,
+        15.961236953735352,
+        16.89167618751526
+      ],
+      "development_xyz_min_cm": [
+        -6.083584427833557,
+        -10.801717042922974,
+        -14.093005657196045
+      ],
+      "development_xyz_max_cm": [
+        10.785682201385498,
+        10.00815749168396,
+        8.692190051078796
+      ],
+      "targets_outside_same_task_xyz_box_fraction": 0.0,
+      "per_axis_outside_fraction": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "train_relative_rotation_deg_range": [
+        0.0,
+        57.36836430564284
+      ],
+      "development_relative_rotation_deg_range": [
+        0.0,
+        34.51644736190182
+      ],
+      "development_relative_rotation_above_train_max_fraction": 0.0
+    },
+    {
+      "task": "take broccoli out of pan",
+      "train_windows": 24,
+      "development_windows": 9,
+      "train_xyz_min_cm": [
+        -15.801708698272705,
+        -17.682933807373047,
+        -6.996616721153259
+      ],
+      "train_xyz_max_cm": [
+        12.95103907585144,
+        23.74253749847412,
+        10.409995317459106
+      ],
+      "development_xyz_min_cm": [
+        -8.730605840682983,
+        -18.719602823257446,
+        -13.131099939346313
+      ],
+      "development_xyz_max_cm": [
+        8.799787759780884,
+        14.997419118881226,
+        8.323906064033508
+      ],
+      "targets_outside_same_task_xyz_box_fraction": 0.2222222222222222,
+      "per_axis_outside_fraction": [
+        0.0,
+        0.05555555555555555,
+        0.16666666666666666
+      ],
+      "train_relative_rotation_deg_range": [
+        0.009432934196816222,
+        73.92243719246662
+      ],
+      "development_relative_rotation_deg_range": [
+        0.0,
+        18.04973773054858
+      ],
+      "development_relative_rotation_above_train_max_fraction": 0.0
+    },
+    {
+      "task": "turn lever vertical to front",
+      "train_windows": 24,
+      "development_windows": 4,
+      "train_xyz_min_cm": [
+        -11.62607192993164,
+        -2.179068922996521,
+        -8.40965211391449
+      ],
+      "train_xyz_max_cm": [
+        8.351498246192932,
+        13.527072668075562,
+        10.184109210968018
+      ],
+      "development_xyz_min_cm": [
+        -3.240409195423126,
+        -2.7660712599754333,
+        -3.1287285685539246
+      ],
+      "development_xyz_max_cm": [
+        6.817230582237244,
+        -0.0024895824026316404,
+        1.3385307788848877
+      ],
+      "targets_outside_same_task_xyz_box_fraction": 0.171875,
+      "per_axis_outside_fraction": [
+        0.0,
+        0.171875,
+        0.0
+      ],
+      "train_relative_rotation_deg_range": [
+        0.10783845385545111,
+        25.9546312182376
+      ],
+      "development_relative_rotation_deg_range": [
+        0.4394527376963582,
+        19.02002212970016
+      ],
+      "development_relative_rotation_above_train_max_fraction": 0.0
+    }
+  ],
+  "indexed_phase_coverage": [
+    {
+      "split": "train",
+      "phase": "first",
+      "windows": 64,
+      "episodes": 64,
+      "model_position_cm": 0.19083917101956335,
+      "model_rotation_deg": 0.6301957602888016,
+      "static_position_cm": 9.557362227054373,
+      "static_rotation_deg": 16.06470870232311
+    },
+    {
+      "split": "train",
+      "phase": "middle",
+      "windows": 12,
+      "episodes": 12,
+      "model_position_cm": 0.1916237888405189,
+      "model_rotation_deg": 0.48685696201615297,
+      "static_position_cm": 7.6965493980138815,
+      "static_rotation_deg": 9.952280849453013
+    },
+    {
+      "split": "train",
+      "phase": "last",
+      "windows": 52,
+      "episodes": 52,
+      "model_position_cm": 0.17106510008015838,
+      "model_rotation_deg": 0.536863885576195,
+      "static_position_cm": 8.517051826615049,
+      "static_rotation_deg": 12.104256189917407
+    },
+    {
+      "split": "development",
+      "phase": "first",
+      "windows": 10,
+      "episodes": 10,
+      "model_position_cm": 7.968845915777691,
+      "model_rotation_deg": 15.289534068506963,
+      "static_position_cm": 9.687862329529054,
+      "static_rotation_deg": 18.444849573198272
+    },
+    {
+      "split": "development",
+      "phase": "middle",
+      "windows": 20,
+      "episodes": 7,
+      "model_position_cm": 9.078305347953536,
+      "model_rotation_deg": 16.066791941845416,
+      "static_position_cm": 7.801122731351777,
+      "static_rotation_deg": 15.273583541785907
+    },
+    {
+      "split": "development",
+      "phase": "last",
+      "windows": 10,
+      "episodes": 10,
+      "model_position_cm": 8.784648300995052,
+      "model_rotation_deg": 15.96680056495658,
+      "static_position_cm": 7.559196503328872,
+      "static_rotation_deg": 11.401985071640347
+    }
+  ],
+  "development_target_xyz_outside_same_task_box_fraction": 0.0671875,
+  "episode_weighted_summaries": {
+    "train_leave_same_episode_out": {
+      "model_position_cm": 0.18287951262114466,
+      "model_rotation_deg": 0.5788416738487443,
+      "static_position_cm": 8.960284924153353,
+      "static_rotation_deg": 13.88273475795172,
+      "frozen_visual_cosine": 0.9195834900905073,
+      "learned_context_cosine": 0.8346022365157704,
+      "frozen_visual_position_cm": 9.280818996851686,
+      "frozen_visual_rotation_deg": 17.365598720856035,
+      "learned_context_position_cm": 4.9699322349782395,
+      "learned_context_rotation_deg": 15.573101197854466,
+      "task_mean_position_cm": 8.778784345297847,
+      "task_mean_rotation_deg": 13.82777981810647,
+      "truth_position_oracle_position_cm": 4.573351228724724,
+      "truth_position_oracle_rotation_deg": 16.27412663737085
+    },
+    "development": {
+      "model_position_cm": 7.909057673419431,
+      "model_rotation_deg": 15.296858245374022,
+      "static_position_cm": 7.9601175966494155,
+      "static_rotation_deg": 15.066972166771839,
+      "frozen_visual_cosine": 0.9228174006102954,
+      "learned_context_cosine": 0.9126452567870563,
+      "frozen_visual_position_cm": 8.86630766611745,
+      "frozen_visual_rotation_deg": 17.631844134419897,
+      "learned_context_position_cm": 8.22272683476583,
+      "learned_context_rotation_deg": 17.34133785488983,
+      "task_mean_position_cm": 7.654187407764923,
+      "task_mean_rotation_deg": 14.244776076807886,
+      "truth_position_oracle_position_cm": 4.564366227201466,
+      "truth_position_oracle_rotation_deg": 13.37027881597578
+    }
+  },
+  "contact_sheet_selection": "Four highest frozen-visual similarities, unique development episodes; selected without prediction error",
+  "contact_sheet_windows": [
+    144,
+    141,
+    150,
+    148
+  ],
+  "source_sha256": "f3d211f787da6593ee424c8930a9631642e2be59bac707e520a50686cbbae4e5",
+  "limitations": [
+    "Development data reused for diagnosis, not untouched test",
+    "Overlapping windows are not independent; summaries use episode means",
+    "Nearest-neighbor retrieval uses same task, excludes same episode; a diagnostic, not a trained policy",
+    "Truth-position oracle chooses by true targets, not deployable; position-nearest does not mean rotation-nearest",
+    "Pooled frozen CLIP descriptor is not full tokens or a metric of robot state equality",
+    "Marginal xyz/rotation bounds cannot establish joint/conditional coverage",
+    "Learned-context similarity is post-training and may reflect memorization",
+    "First/middle/last refer to indexed eligible input starts, not semantic task phases; groups differ in episode composition",
+    "No causal fault localization from correlations or nearest neighbors",
+    "No gripper or closed-loop success evaluated"
+  ]
+}

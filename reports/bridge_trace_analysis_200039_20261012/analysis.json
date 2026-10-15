@@ -1,0 +1,84 @@
+{
+  "execution_checks_verified": true,
+  "report_sha256": "4d1fe36e376762c4d7374577264833b90a5d1b6a01839a5a30697d5fbc78fdb2",
+  "manifest_sha256": "a95d9ff6727fba65f045f5c264dc1c03b6abbfdbbcdb03398850aa9419d2ecdb",
+  "input_identity_matches_origin": true,
+  "all_three_pass_at_sampled_update_1024": true,
+  "max_float64_metric_difference": {
+    "path_position_cm": 8.604366819042752e-07,
+    "path_rotation_deg": 0.001292301942840468,
+    "endpoint_position_cm": 1.2035084733241774e-06,
+    "endpoint_rotation_deg": 0.0011540025455275549
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "sampled_updates_passing_gate": [
+        1024
+      ],
+      "final_predictions_exactly_match_origin": true,
+      "windows_position_worse_2048_than_1024": 23,
+      "final_position_ratio_to_1024": 1.527282692002537,
+      "all_logged_module_gradients_finite_nonzero": true,
+      "late_updates_clipped": 0
+    },
+    {
+      "seed": 43,
+      "sampled_updates_passing_gate": [
+        1024,
+        1536
+      ],
+      "final_predictions_exactly_match_origin": true,
+      "windows_position_worse_2048_than_1024": 32,
+      "final_position_ratio_to_1024": 8.16632042024913,
+      "all_logged_module_gradients_finite_nonzero": true,
+      "late_updates_clipped": 0
+    },
+    {
+      "seed": 44,
+      "sampled_updates_passing_gate": [
+        1024,
+        1536,
+        2048
+      ],
+      "final_predictions_exactly_match_origin": true,
+      "windows_position_worse_2048_than_1024": 12,
+      "final_position_ratio_to_1024": 0.9917993467128506,
+      "all_logged_module_gradients_finite_nonzero": true,
+      "late_updates_clipped": 0
+    }
+  ],
+  "artifact_hashes": {
+    "seed42_u0000_train.npz": "a2df79a13c5f08e4fc1afbe6b0fd35bbf46d7468e02a5b1dddaa0b5b0b85b427",
+    "seed42_u0064_train.npz": "954f6ceb891044b6f268ff17ed6d4ef35ba41896dffd4870cf55a4132d0f45fa",
+    "seed42_u0256_train.npz": "23bb1bfe8277ece83362ca86170f09a5701087a935993aee588c18201e06715d",
+    "seed42_u0512_train.npz": "eef5cbccd75adc144441df5a92b672c4777593bbc743cd4a5c92235f28ac30c8",
+    "seed42_u1024_train.npz": "d92805b37c7135320947ba6cec357741474ced379dece1e138c87b9c8cc4c3e3",
+    "seed42_u1536_train.npz": "054c7ef9108d5f217cdbadb9b27f13aeb096a7f27b1ffec76e2f2fba01958ceb",
+    "seed42_u2048_train.npz": "d695183e93f8315095384841bd46f494763c0958808c2135394a6a88fd4285fe",
+    "seed42_u2048_development.npz": "aabdfa8907bc55acdc613d8f456dfd7db9fe4a861ace17c919374c84f5494021",
+    "seed43_u0000_train.npz": "a9935871cc1f610efed4a2610280ce6c4f327fcaed4c9fa012c732a0141a6430",
+    "seed43_u0064_train.npz": "ec07d5ad17b10a0a21c419ccd55e25ed6cc81d5627f61c192e13c9a6e1889a10",
+    "seed43_u0256_train.npz": "aa1a861060405ff9a8aff56786b20b5e3e949a1b74ecd68dc33fac68746b7432",
+    "seed43_u0512_train.npz": "0739101da7ed80d35893c5f5a5acbe7113307debe72fc0928800e5690c340c0c",
+    "seed43_u1024_train.npz": "441aeea84032ce4b430a3d6bfa1738efa355e4e7e75741a7d685e489bdc072cf",
+    "seed43_u1536_train.npz": "e952e38893741aeae2c1e9851db8f838151dcf03cb10fb6e0f578169cdb838a3",
+    "seed43_u2048_train.npz": "9bb4e7ec7228ed05a9f665e7f21ba7e259e982896ceda74ed5e5dba1a5c262f3",
+    "seed43_u2048_development.npz": "a28f0061c3a972c221955e353170f1b90f7a9f2658ae10743f88d0bcddb9e22c",
+    "seed44_u0000_train.npz": "ef4233fa369f8c9ee42a06b3f56720315c8569c3617d61219ef51f8d3bcc5735",
+    "seed44_u0064_train.npz": "8777cc72a34ca5da466abca1f0282f63cc06446e5a7ef5e5d95134bc785118f9",
+    "seed44_u0256_train.npz": "df8fdd5a764ad17a87dc327a727900b0dff404050a03bdfc1034d1298ea5bf11",
+    "seed44_u0512_train.npz": "51f642093f2359fefe610aa1a652a592fa3a8a82d2187ad1f8b3c6ed5eb83b32",
+    "seed44_u1024_train.npz": "9acdd5452271325111ab6ad4fb3d036da593a059fbe3bd8daecbd5c261b48146",
+    "seed44_u1536_train.npz": "8bddf5bef655b751cd324c53cc058d76a497596e7c4d42a3afbd1566c075723c",
+    "seed44_u2048_train.npz": "3b22bc6fe8262a2d33a434cba37af39c388b64991f8e2b10397417e74436ee9c",
+    "seed44_u2048_development.npz": "06940fe48b680663dfd8b24efe299e5820a595ae391d78cc959799bb4e894874"
+  },
+  "limitations": [
+    "Monitoring is sparse; no exact onset of deterioration.",
+    "Intermediate checkpoints were not saved; only predictions and contexts.",
+    "Development evaluated only at 2048; no intermediate generalization evidence.",
+    "Nonzero finite gradients do not identify a unique faulty module.",
+    "Gripper frozen, no robot or simulation task success measured."
+  ]
+}

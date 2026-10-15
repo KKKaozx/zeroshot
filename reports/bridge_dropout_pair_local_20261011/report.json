@@ -1,0 +1,435 @@
+{
+  "stage": "local_current_adapter_dropout_pair",
+  "execution_completed": true,
+  "model_parameters_updated": true,
+  "simulation_executed": false,
+  "validation_evaluated": false,
+  "test_targets_used": false,
+  "gripper_trained": false,
+  "downloads": false,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "groups": {
+    "dropout_off": {
+      "final_metrics": {
+        "position_cm": 0.1259656697511673,
+        "rotation_deg": 0.29480883479118347,
+        "endpoint_position_cm": 0.22660638391971588,
+        "endpoint_rotation_deg": 0.2799626290798187,
+        "seed_position_cm": [
+          0.12588748335838318,
+          0.12637625634670258,
+          0.12563325464725494
+        ],
+        "seed_rotation_deg": [
+          0.2934177815914154,
+          0.2960411310195923,
+          0.2949675917625427
+        ],
+        "windows_all_three_seeds_pass": 8,
+        "windows": 8,
+        "static_position_cm": 7.735259056091309,
+        "static_rotation_deg": 7.785233497619629,
+        "pose_fit_passed": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "elapsed_seconds": 12.063000000023749,
+          "context_change_rms": 0.0,
+          "position_cm": 10.646944046020508,
+          "rotation_deg": 98.9244384765625,
+          "endpoint_position_cm": 13.361995697021484,
+          "endpoint_rotation_deg": 81.83280944824219,
+          "seed_position_cm": [
+            10.647435188293457,
+            10.650456428527832,
+            10.642940521240234
+          ],
+          "seed_rotation_deg": [
+            98.99300384521484,
+            98.84942626953125,
+            98.93087005615234
+          ],
+          "windows_all_three_seeds_pass": 0,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false
+        },
+        {
+          "update": 100,
+          "elapsed_seconds": 31.40700000000652,
+          "context_change_rms": 1.18657386302948,
+          "position_cm": 2.4754979610443115,
+          "rotation_deg": 7.595756530761719,
+          "endpoint_position_cm": 5.704334259033203,
+          "endpoint_rotation_deg": 9.405714988708496,
+          "seed_position_cm": [
+            2.4918160438537598,
+            2.4547319412231445,
+            2.4799458980560303
+          ],
+          "seed_rotation_deg": [
+            7.604988098144531,
+            7.595415115356445,
+            7.58686637878418
+          ],
+          "windows_all_three_seeds_pass": 0,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false
+        },
+        {
+          "update": 500,
+          "elapsed_seconds": 107.23500000004424,
+          "context_change_rms": 1.2437528371810913,
+          "position_cm": 0.1259656697511673,
+          "rotation_deg": 0.29480883479118347,
+          "endpoint_position_cm": 0.22660638391971588,
+          "endpoint_rotation_deg": 0.2799626290798187,
+          "seed_position_cm": [
+            0.12588748335838318,
+            0.12637625634670258,
+            0.12563325464725494
+          ],
+          "seed_rotation_deg": [
+            0.2934177815914154,
+            0.2960411310195923,
+            0.2949675917625427
+          ],
+          "windows_all_three_seeds_pass": 8,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": true
+        }
+      ],
+      "updates": 500,
+      "first_gradients": {
+        "adapter": true,
+        "decoder": true,
+        "clip_vision": false,
+        "clip_text": false
+      },
+      "adapter_changed": true,
+      "decoder_changed": true,
+      "adapter_dropout_enabled_during_training": false,
+      "frozen_gripper_unchanged": true,
+      "mean_warm_update_seconds": 0.17753306613315387,
+      "peak_reserved_gib": 2.935546875,
+      "last_100_mean_loss": 3.398736784220091e-05,
+      "adapter_final_sha256": "851e6b18b9cfb76889557e91062cc35238663027b5a101ba87e08340ef9c1466",
+      "decoder_final_sha256": "2b08ddd8dca26922e53f9d9c1f604bed25854e5bbd3f4826a54ccfa32eb29426"
+    },
+    "dropout_on": {
+      "final_metrics": {
+        "position_cm": 0.10358297824859619,
+        "rotation_deg": 0.5554323792457581,
+        "endpoint_position_cm": 0.17516522109508514,
+        "endpoint_rotation_deg": 0.44448912143707275,
+        "seed_position_cm": [
+          0.10373273491859436,
+          0.10358400642871857,
+          0.10343217849731445
+        ],
+        "seed_rotation_deg": [
+          0.5544052124023438,
+          0.5558847784996033,
+          0.5560070872306824
+        ],
+        "windows_all_three_seeds_pass": 8,
+        "windows": 8,
+        "static_position_cm": 7.735259056091309,
+        "static_rotation_deg": 7.785233497619629,
+        "pose_fit_passed": true
+      },
+      "history": [
+        {
+          "update": 0,
+          "elapsed_seconds": 111.17200000002049,
+          "context_change_rms": 0.0,
+          "position_cm": 10.646944046020508,
+          "rotation_deg": 98.9244384765625,
+          "endpoint_position_cm": 13.361995697021484,
+          "endpoint_rotation_deg": 81.83280944824219,
+          "seed_position_cm": [
+            10.647435188293457,
+            10.650456428527832,
+            10.642940521240234
+          ],
+          "seed_rotation_deg": [
+            98.99300384521484,
+            98.84942626953125,
+            98.93087005615234
+          ],
+          "windows_all_three_seeds_pass": 0,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false
+        },
+        {
+          "update": 100,
+          "elapsed_seconds": 133.21900000004098,
+          "context_change_rms": 1.2047919034957886,
+          "position_cm": 2.26216721534729,
+          "rotation_deg": 6.234128952026367,
+          "endpoint_position_cm": 5.627098083496094,
+          "endpoint_rotation_deg": 8.319026947021484,
+          "seed_position_cm": [
+            2.2659339904785156,
+            2.256237506866455,
+            2.2643303871154785
+          ],
+          "seed_rotation_deg": [
+            6.239843368530273,
+            6.235323905944824,
+            6.22722053527832
+          ],
+          "windows_all_three_seeds_pass": 0,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": false
+        },
+        {
+          "update": 500,
+          "elapsed_seconds": 217.1720000000205,
+          "context_change_rms": 1.2617465257644653,
+          "position_cm": 0.10358297824859619,
+          "rotation_deg": 0.5554323792457581,
+          "endpoint_position_cm": 0.17516522109508514,
+          "endpoint_rotation_deg": 0.44448912143707275,
+          "seed_position_cm": [
+            0.10373273491859436,
+            0.10358400642871857,
+            0.10343217849731445
+          ],
+          "seed_rotation_deg": [
+            0.5544052124023438,
+            0.5558847784996033,
+            0.5560070872306824
+          ],
+          "windows_all_three_seeds_pass": 8,
+          "windows": 8,
+          "static_position_cm": 7.735259056091309,
+          "static_rotation_deg": 7.785233497619629,
+          "pose_fit_passed": true
+        }
+      ],
+      "updates": 500,
+      "first_gradients": {
+        "adapter": true,
+        "decoder": true,
+        "clip_vision": false,
+        "clip_text": false
+      },
+      "adapter_changed": true,
+      "decoder_changed": true,
+      "adapter_dropout_enabled_during_training": true,
+      "frozen_gripper_unchanged": true,
+      "mean_warm_update_seconds": 0.19804609218450872,
+      "peak_reserved_gib": 2.935546875,
+      "last_100_mean_loss": 7.501504092942924e-05,
+      "adapter_final_sha256": "fbcb3b6a3c9ae79d83370b60e540d416b7a39d1b7e92a381d2a5badb14f925db",
+      "decoder_final_sha256": "27b4e32a54b098c265a2ed55ae415e4bcc6a0c7e4e8038dd1b7edef40af2acd7"
+    }
+  },
+  "source_sha256": {
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "fit_bridge_adapter_pair.py": "efa3e86cabe26dd4889ad568fc72fc79d5cc8a36acf1cef0a7f0e227bd4ffc53",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722"
+  },
+  "plan": {
+    "selection": [
+      {
+        "cache_index": 0,
+        "original_dataset_index": 7,
+        "episode": "bridge_data_v2-train.tfrecord-00001-of-01024::29",
+        "start": 0
+      },
+      {
+        "cache_index": 18,
+        "original_dataset_index": 25,
+        "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::22",
+        "start": 0
+      },
+      {
+        "cache_index": 39,
+        "original_dataset_index": 84,
+        "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::38",
+        "start": 0
+      },
+      {
+        "cache_index": 60,
+        "original_dataset_index": 105,
+        "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::57",
+        "start": 0
+      },
+      {
+        "cache_index": 79,
+        "original_dataset_index": 157,
+        "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::39",
+        "start": 0
+      },
+      {
+        "cache_index": 96,
+        "original_dataset_index": 174,
+        "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::25",
+        "start": 0
+      },
+      {
+        "cache_index": 112,
+        "original_dataset_index": 190,
+        "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::35",
+        "start": 0
+      },
+      {
+        "cache_index": 133,
+        "original_dataset_index": 211,
+        "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::1",
+        "start": 0
+      }
+    ],
+    "source_selection_sha256": "623f04f53015547158e6aab835adbc8e551564d0b2374bbc4fabde8c520de2d4",
+    "config": {
+      "action": {
+        "representation": "tool_relative_pose_open_positive_v2",
+        "position_scale_meters": 0.1,
+        "max_normalized_position": 3.0,
+        "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+      },
+      "model": {
+        "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+        "fusion_type": "cross_attention",
+        "adapter_pooling": "cls_patch_mean",
+        "decoder_type": "diffusion",
+        "diffusion_prediction_type": "sample",
+        "num_adapter_layers": 8,
+        "attention_dim": 512,
+        "num_attention_heads": 8,
+        "decoder_hidden_dim": 256,
+        "chunk_size": 16,
+        "action_dim": 8,
+        "num_diffusion_steps": 100,
+        "beta_schedule": "squaredcos_cap_v2",
+        "clip_denoised": true,
+        "dropout": 0.1,
+        "separate_gripper_head": true,
+        "trajectory_conditioned_gripper": true,
+        "gripper_head_type": "legacy",
+        "condition_on_current_gripper": true,
+        "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+        "gripper_loss_weight": 0.25,
+        "gripper_change_weight": 1.0,
+        "gripper_target_mode": "state",
+        "gripper_transition_decode": "cumulative",
+        "gripper_switch_threshold": 0.0,
+        "balanced_gripper_loss": false,
+        "diffusion_architecture": "multiscale",
+        "diffusion_down_dims": [
+          256,
+          512,
+          1024
+        ]
+      },
+      "frozen_context_dim": 1024
+    },
+    "updates_per_arm": 500,
+    "batch_size": 8,
+    "optimizer": "Adam",
+    "learning_rate": 0.0003,
+    "weight_decay": 0,
+    "schedule": "constant",
+    "gradient_clip": 1.0,
+    "checkpoints": [
+      0,
+      100,
+      500
+    ],
+    "training_noise_seed": "420000+update, reset after context computation",
+    "comparison": "dropout",
+    "arms": [
+      "dropout_off",
+      "dropout_on"
+    ],
+    "adapter_mode": "Both jointly updated; off=eval, on=train with p=0.1; both evaluated in eval mode",
+    "dropout_seed": "430000+update, independent of diffusion noise seed",
+    "sampling_steps": 100,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "fit_thresholds": {
+      "all_seed_mean_position_cm": 0.5,
+      "all_seed_mean_rotation_deg": 5.0,
+      "windows_passing_every_seed_fraction": 0.9,
+      "all_seed_endpoint_position_cm": 1.0,
+      "all_seed_endpoint_rotation_deg": 10.0
+    },
+    "train_only": true,
+    "data_scope": "Eight explicitly indexed records via current __getitem__; no full scanner/loader validation",
+    "changing_variable": "Whether Adapter dropout is enabled during joint optimization"
+  },
+  "raw_data_check": {
+    "targets_exactly_match_previous_cache": true,
+    "currents_exactly_match_previous_cache": true,
+    "pose_masks_all_valid": true,
+    "image_sha256": "f068cc1ab8aff0692488c1be5eccef2f0406b9f81ea0d1eec5b25f1d70cb1a47",
+    "target_sha256": "69f135d290fea139ed28cd668cecd5736a2af3160e25e7e4898391eac3d434df",
+    "instructions": [
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile",
+      "sweep into pile"
+    ]
+  },
+  "conditioning": {
+    "visual_shape": [
+      8,
+      257,
+      1024
+    ],
+    "text_shape": [
+      8,
+      5,
+      768
+    ],
+    "context_shape": [
+      8,
+      1024
+    ],
+    "production_context_max_abs_difference": 0.0,
+    "visual_sha256": "b34e3661f289e7da69a7338b01cdb7dc58ed4882c1f6c9ad567be2b519c2fe74",
+    "text_sha256": "7a57d4110247811eb5c9f0be709b4e2dfd2d84c8e864f1b06c16cea41242f884",
+    "initial_context_sha256": "60e380e120f6e9cd8ffa71317ed6565e4e35fe050daaadfc0c62be23f1992411"
+  },
+  "initial_hashes": {
+    "adapter": "39c3fcfde22823c2749e9ede386403700f81d7d98204746c5dd22650affe8f9f",
+    "decoder": "eff5e1366c4297e9987af833ec9dc07aa32273d117f9c5f1b052a8b32ab49399",
+    "clip": [
+      "5b0eed76211f2af365d565f04d6f49d234d3a18872607cb663a0a16f49cd5082",
+      "70a6fe9fb94bd4d0a8e717a4732780b136897e96d5b71467a59b99d2ef8dbd49"
+    ]
+  },
+  "clip_unchanged": true,
+  "elapsed_seconds": 219.78200000000652,
+  "limits": [
+    "Eight training windows, no validation or robot task-success claim.",
+    "Both arms jointly trained; only dropout mode changed; original full-data optimizer not reproduced.",
+    "Only pose loss optimized; frozen gripper predictions do not establish gripper skill.",
+    "One shared training initialization, three sampling seeds, not three training seeds.",
+    "No large checkpoint retained; predictions/settings/hashes retained for bounded reproduction."
+  ]
+}

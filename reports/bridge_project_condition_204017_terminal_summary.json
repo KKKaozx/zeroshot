@@ -1,0 +1,148 @@
+{
+  "job": 204017,
+  "status": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:03:09",
+  "node": "gpu-a6000-1",
+  "evidence": "User terminal excerpt; report and NPZ not yet downloaded or independently recomputed",
+  "attachment_sha256": "ec2a4ec8172566695972f2b0d69f3baa6f3a8ef2eb137b8ebf0b46fee03be89b",
+  "original_replay_gates": [
+    {
+      "seed": 1101,
+      "windows": 40,
+      "max_difference": 0.0
+    },
+    {
+      "seed": 1102,
+      "windows": 40,
+      "max_difference": 0.0
+    },
+    {
+      "seed": 1103,
+      "windows": 40,
+      "max_difference": 0.0
+    }
+  ],
+  "logged_clean_stages": {
+    "99": {
+      "original": {
+        "position_cm": 10.056422853794144,
+        "rotation_deg": 12.34729924733107,
+        "endpoint_position_cm": 12.188986997797963,
+        "endpoint_rotation_deg": 11.95371181903655,
+        "degenerate_quaternions": 0
+      },
+      "donor": {
+        "position_cm": 0.2027341976953761,
+        "rotation_deg": 0.7303380759374428,
+        "endpoint_position_cm": 0.2273128178287467,
+        "endpoint_rotation_deg": 0.9387926275865103,
+        "degenerate_quaternions": 0
+      },
+      "paired_change": {
+        "position_cm": 10.955897668066086,
+        "rotation_deg": 18.76590149924547,
+        "endpoint_position_cm": 16.92798302699751,
+        "endpoint_rotation_deg": 25.2429349861934,
+        "degenerate_quaternions": 0
+      }
+    },
+    "74": {
+      "original": {
+        "position_cm": 10.043643905223577,
+        "rotation_deg": 12.253013241222142,
+        "endpoint_position_cm": 12.158938046911382,
+        "endpoint_rotation_deg": 11.870235287774218,
+        "degenerate_quaternions": 0
+      },
+      "donor": {
+        "position_cm": 0.19264541141396124,
+        "rotation_deg": 0.7184053737341903,
+        "endpoint_position_cm": 0.23875635006097923,
+        "endpoint_rotation_deg": 0.9554960177489784,
+        "degenerate_quaternions": 0
+      },
+      "paired_change": {
+        "position_cm": 10.900505395165927,
+        "rotation_deg": 18.73196911209806,
+        "endpoint_position_cm": 16.858894090057348,
+        "endpoint_rotation_deg": 25.254537329993642,
+        "degenerate_quaternions": 0
+      }
+    },
+    "49": {
+      "original": {
+        "position_cm": 10.09104709842335,
+        "rotation_deg": 12.283103767192094,
+        "endpoint_position_cm": 12.219520088812558,
+        "endpoint_rotation_deg": 11.85159138439447,
+        "degenerate_quaternions": 0
+      },
+      "donor": {
+        "position_cm": 0.19144894099616128,
+        "rotation_deg": 0.6633439385430409,
+        "endpoint_position_cm": 0.2359183639796908,
+        "endpoint_rotation_deg": 0.8853320177453939,
+        "degenerate_quaternions": 0
+      },
+      "paired_change": {
+        "position_cm": 10.937622766966433,
+        "rotation_deg": 18.727136821318844,
+        "endpoint_position_cm": 16.92736629150645,
+        "endpoint_rotation_deg": 25.164559557218702,
+        "degenerate_quaternions": 0
+      }
+    },
+    "24": {
+      "original": {
+        "position_cm": 10.148184711492755,
+        "rotation_deg": 12.343380364892951,
+        "endpoint_position_cm": 12.351003126082583,
+        "endpoint_rotation_deg": 11.99391716840763,
+        "degenerate_quaternions": 0
+      },
+      "donor": {
+        "position_cm": 0.18557153758501088,
+        "rotation_deg": 0.5885609225761955,
+        "endpoint_position_cm": 0.2145738333290477,
+        "endpoint_rotation_deg": 0.6375457314216861,
+        "degenerate_quaternions": 0
+      },
+      "paired_change": {
+        "position_cm": 10.997895368090532,
+        "rotation_deg": 18.97299358605567,
+        "endpoint_position_cm": 17.032028508317417,
+        "endpoint_rotation_deg": 25.41261713839772,
+        "degenerate_quaternions": 0
+      }
+    },
+    "0": {
+      "original": {
+        "position_cm": 10.197140830485772,
+        "rotation_deg": 12.394119193109772,
+        "endpoint_position_cm": 12.428939739103198,
+        "endpoint_rotation_deg": 12.06538299354548,
+        "degenerate_quaternions": 0
+      },
+      "donor": {
+        "position_cm": 0.18193593754381504,
+        "rotation_deg": 0.6320440221830863,
+        "endpoint_position_cm": 0.1949738115167738,
+        "endpoint_rotation_deg": 0.5824317387496198,
+        "degenerate_quaternions": 0
+      },
+      "paired_change": {
+        "position_cm": 11.069580397048016,
+        "rotation_deg": 19.229350376084433,
+        "endpoint_position_cm": 17.11751723460183,
+        "endpoint_rotation_deg": 25.656759320155334,
+        "degenerate_quaternions": 0
+      }
+    }
+  },
+  "updates": 0,
+  "scope": "Nine fixed broccoli development/train observation pairs and three paired draws; not whole validation-stage metrics",
+  "independent_prediction_verification": false,
+  "root_cause_identified": false,
+  "first_to_last_position_error_change_cm": 0.14071797669162756
+}

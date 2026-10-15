@@ -1,0 +1,2949 @@
+{
+  "stage": "same_bridge_author_reference",
+  "execution_passed": true,
+  "training_protocol_sha256": "55ee81e76f310cd7ad5e3f10acacfe64b2881533bfa62d9054ce0b2712ec814b",
+  "trained_updates": 8192,
+  "simulation_executed": false,
+  "reserved_test_used": false,
+  "checkpoint_selection": "fixed final; EMA primary, raw secondary",
+  "source_sha256": {
+    "run_bridge_author_reference.py": "6ceb8f6f161fed28e1dc860a7cddcf4af5c5e2573b563a9a717fb34e62df7f43",
+    "reference_metrics.py": "ff17eafff17d815fcf443d7c2569f021c16e43bc4c32204d6fa874f3269a2b2b",
+    "training_config.yaml": "37fa46ce367fdca510aebd13365a04b386e2902d7be1629850d6f74c969e89f8"
+  },
+  "torch_version": "1.12.1",
+  "gpu": "NVIDIA RTX A6000",
+  "parameters": 283055507,
+  "author_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "raw_input_report_sha256": "0038e8ce91770c8663437279cd3a32c552ffe563cf527992e40b7f9feacf7e8a",
+  "training_statistics_only": true,
+  "validation_loss_is_four_training_rows": true,
+  "primary": "ema",
+  "resource_gate": {
+    "steady_update_seconds": 0.1133391228504479,
+    "estimated_total_seconds": 6382.7333881292725,
+    "limit_seconds": 10800,
+    "passed": true,
+    "first_updates_used_in_final_run": true
+  },
+  "elapsed_seconds": 1105.849722048035,
+  "prefix_loss_max_difference_from_preflight": 1.5616416931152344e-05,
+  "checkpoints": [
+    {
+      "name": "raw_final.pt",
+      "bytes": 1177122717,
+      "sha256": "d9d5d09413b42f757d0192eaf98fb17baa337a07b3441cd7deffb9347f7d7541",
+      "includes_optimizer": false
+    },
+    {
+      "name": "ema_final.pt",
+      "bytes": 1177122717,
+      "sha256": "c5c7401054ffa1fb159d86f136a27e1a62895fbdecb40d81c91449414ec5a975",
+      "includes_optimizer": false
+    }
+  ],
+  "metrics": {
+    "raw": {
+      "train": {
+        "path_position_cm": 0.7019228128227043,
+        "path_rotation_deg": 1.5793254455352044,
+        "endpoint_position_cm": 0.9599572611674027,
+        "endpoint_rotation_deg": 2.062642499818687,
+        "windows": 128,
+        "passing_windows": 5,
+        "pose_fit_passed": false,
+        "static": {
+          "path_position_cm": 8.960284924153353,
+          "path_rotation_deg": 13.88273475795172,
+          "endpoint_position_cm": 12.615988871210611,
+          "endpoint_rotation_deg": 20.33054352452782,
+          "windows": 128,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "per_episode": [
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::39",
+            "path_position_cm": 0.7679284153080226,
+            "path_rotation_deg": 1.6871827670496542,
+            "endpoint_position_cm": 1.5535790788029644,
+            "endpoint_rotation_deg": 2.1663030687486304,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.887550943592991,
+              "path_rotation_deg": 16.64380801473346,
+              "endpoint_position_cm": 14.454546357334634,
+              "endpoint_rotation_deg": 29.009721321835436,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::3",
+            "path_position_cm": 0.6708925375557934,
+            "path_rotation_deg": 1.1217552728169151,
+            "endpoint_position_cm": 1.0165659405384033,
+            "endpoint_rotation_deg": 1.1336614627126165,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 4.7329279404731786,
+              "path_rotation_deg": 5.231167436007549,
+              "endpoint_position_cm": 5.19248904052456,
+              "endpoint_rotation_deg": 6.1842892484596375,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::36",
+            "path_position_cm": 0.7041272527206411,
+            "path_rotation_deg": 3.8259622903488815,
+            "endpoint_position_cm": 1.1168459877016406,
+            "endpoint_rotation_deg": 6.445913997287736,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.099511735527008,
+              "path_rotation_deg": 22.234090033755113,
+              "endpoint_position_cm": 13.03853860133778,
+              "endpoint_rotation_deg": 31.70228733573382,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+            "path_position_cm": 0.676991858422275,
+            "path_rotation_deg": 1.1262065542572488,
+            "endpoint_position_cm": 0.9365935638622868,
+            "endpoint_rotation_deg": 1.3254047931747328,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.64145806205912,
+              "path_rotation_deg": 9.645802536781098,
+              "endpoint_position_cm": 15.592496164798181,
+              "endpoint_rotation_deg": 16.822910690565074,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00000-of-01024::45",
+            "path_position_cm": 0.6433298392248116,
+            "path_rotation_deg": 2.462806641741322,
+            "endpoint_position_cm": 0.7574303177125773,
+            "endpoint_rotation_deg": 3.9889324877728503,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.1150656958680454,
+              "path_rotation_deg": 11.95036370580437,
+              "endpoint_position_cm": 4.110155281733746,
+              "endpoint_rotation_deg": 17.954194265832754,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::8",
+            "path_position_cm": 1.039905199121123,
+            "path_rotation_deg": 2.5976682448557824,
+            "endpoint_position_cm": 1.1185512366663073,
+            "endpoint_rotation_deg": 2.3810294398533705,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.342872875787346,
+              "path_rotation_deg": 7.777729714248464,
+              "endpoint_position_cm": 7.30204010086326,
+              "endpoint_rotation_deg": 8.114685126003657,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::26",
+            "path_position_cm": 0.6004254180939202,
+            "path_rotation_deg": 1.0589501988193533,
+            "endpoint_position_cm": 0.8947226949829418,
+            "endpoint_rotation_deg": 1.2794168272594288,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.634587594924007,
+              "path_rotation_deg": 9.85475156959304,
+              "endpoint_position_cm": 13.075205680482226,
+              "endpoint_rotation_deg": 12.193788147995082,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::21",
+            "path_position_cm": 0.6225312266348869,
+            "path_rotation_deg": 1.0306685999682903,
+            "endpoint_position_cm": 0.8970904393077076,
+            "endpoint_rotation_deg": 1.8117904981299084,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.929929696435353,
+              "path_rotation_deg": 10.484466352982608,
+              "endpoint_position_cm": 14.418865576956048,
+              "endpoint_rotation_deg": 17.9118938814565,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+            "path_position_cm": 0.689251086548718,
+            "path_rotation_deg": 1.1457562096196197,
+            "endpoint_position_cm": 0.9268711083627496,
+            "endpoint_rotation_deg": 1.3094400745833596,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.605787425849971,
+              "path_rotation_deg": 8.82498118968835,
+              "endpoint_position_cm": 5.978671158017601,
+              "endpoint_rotation_deg": 13.092029794034788,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+            "path_position_cm": 0.5465811647256165,
+            "path_rotation_deg": 1.9445012726779922,
+            "endpoint_position_cm": 0.9528457028751377,
+            "endpoint_rotation_deg": 1.3639632832447253,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 2.916428942120682,
+              "path_rotation_deg": 8.386928737254998,
+              "endpoint_position_cm": 3.988989952637203,
+              "endpoint_rotation_deg": 14.277503353492811,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::25",
+            "path_position_cm": 0.6219779678460856,
+            "path_rotation_deg": 0.7645780404757003,
+            "endpoint_position_cm": 1.0019850525532852,
+            "endpoint_rotation_deg": 0.9428943245658806,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.299470219695834,
+              "path_rotation_deg": 11.615218165875536,
+              "endpoint_position_cm": 14.995673714762031,
+              "endpoint_rotation_deg": 13.913208708637791,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::26",
+            "path_position_cm": 0.6677177521226891,
+            "path_rotation_deg": 2.517730452831659,
+            "endpoint_position_cm": 0.7763505780622575,
+            "endpoint_rotation_deg": 3.1427695002597003,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.524670276462996,
+              "path_rotation_deg": 23.854919402244207,
+              "endpoint_position_cm": 11.922268206360949,
+              "endpoint_rotation_deg": 38.4645828431775,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::25",
+            "path_position_cm": 0.5109317263173135,
+            "path_rotation_deg": 0.859876422608139,
+            "endpoint_position_cm": 0.7021675961909791,
+            "endpoint_rotation_deg": 1.909996274513847,
+            "windows": 2,
+            "passing_windows": 1,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.906987479461595,
+              "path_rotation_deg": 6.270759646854117,
+              "endpoint_position_cm": 14.894814843753906,
+              "endpoint_rotation_deg": 11.267290292627157,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+            "path_position_cm": 0.6209871590526194,
+            "path_rotation_deg": 1.0930383169298883,
+            "endpoint_position_cm": 0.6404169872816078,
+            "endpoint_rotation_deg": 0.9855073840618749,
+            "windows": 2,
+            "passing_windows": 1,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.963767817264916,
+              "path_rotation_deg": 12.585108994005298,
+              "endpoint_position_cm": 15.695292264625902,
+              "endpoint_rotation_deg": 15.850835757846749,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00007-of-01024::7",
+            "path_position_cm": 0.6087071539926036,
+            "path_rotation_deg": 1.6190062882117893,
+            "endpoint_position_cm": 0.36605140988937945,
+            "endpoint_rotation_deg": 1.795802460161834,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 4.035271427634589,
+              "path_rotation_deg": 11.539081979499795,
+              "endpoint_position_cm": 1.7391390169679524,
+              "endpoint_rotation_deg": 13.11599193044939,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::20",
+            "path_position_cm": 1.8940838455806723,
+            "path_rotation_deg": 3.7110962833771666,
+            "endpoint_position_cm": 2.2897492304409544,
+            "endpoint_rotation_deg": 3.8625398313295065,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.74727677901734,
+              "path_rotation_deg": 16.171873772256223,
+              "endpoint_position_cm": 14.337948308734696,
+              "endpoint_rotation_deg": 19.63159529851778,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::17",
+            "path_position_cm": 0.9340164007042046,
+            "path_rotation_deg": 1.3755272487488008,
+            "endpoint_position_cm": 1.4069565363596903,
+            "endpoint_rotation_deg": 2.158648216252621,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.397374849601363,
+              "path_rotation_deg": 12.505726328266958,
+              "endpoint_position_cm": 11.015458121907908,
+              "endpoint_rotation_deg": 18.18724879182307,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::31",
+            "path_position_cm": 0.8649195205867408,
+            "path_rotation_deg": 1.6030962965477296,
+            "endpoint_position_cm": 1.1228344814441773,
+            "endpoint_rotation_deg": 1.7185744237122238,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.409837482151383,
+              "path_rotation_deg": 11.036754531266302,
+              "endpoint_position_cm": 14.496737540739762,
+              "endpoint_rotation_deg": 14.185509702032409,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+            "path_position_cm": 0.6238920119894823,
+            "path_rotation_deg": 1.5888020978788269,
+            "endpoint_position_cm": 0.7663606938826396,
+            "endpoint_rotation_deg": 2.2059095964223996,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.658526301705455,
+              "path_rotation_deg": 10.442278191265874,
+              "endpoint_position_cm": 13.394473289031172,
+              "endpoint_rotation_deg": 17.327246190717325,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::40",
+            "path_position_cm": 1.136393605396155,
+            "path_rotation_deg": 2.4754411295044068,
+            "endpoint_position_cm": 1.31444503685836,
+            "endpoint_rotation_deg": 1.849431166429856,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.089948011638448,
+              "path_rotation_deg": 18.347999144185387,
+              "endpoint_position_cm": 5.519931741782353,
+              "endpoint_rotation_deg": 18.051499000937785,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::22",
+            "path_position_cm": 0.6358098858866829,
+            "path_rotation_deg": 1.7517281371372626,
+            "endpoint_position_cm": 0.6699310872459959,
+            "endpoint_rotation_deg": 2.7039342167356253,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 14.640821611057879,
+              "path_rotation_deg": 8.003941474421238,
+              "endpoint_position_cm": 20.289968949258526,
+              "endpoint_rotation_deg": 10.113091013117458,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::20",
+            "path_position_cm": 0.6748584838945225,
+            "path_rotation_deg": 0.9911663057694412,
+            "endpoint_position_cm": 0.9773195508990349,
+            "endpoint_rotation_deg": 1.585894803123793,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 5.909742775590616,
+              "path_rotation_deg": 7.687702794393964,
+              "endpoint_position_cm": 12.210060800322221,
+              "endpoint_rotation_deg": 14.893662820522902,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00025-of-01024::15",
+            "path_position_cm": 0.6910076287227982,
+            "path_rotation_deg": 1.081553579036344,
+            "endpoint_position_cm": 0.8813581903295308,
+            "endpoint_rotation_deg": 1.5479155572454353,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.736849657889186,
+              "path_rotation_deg": 9.209384392664827,
+              "endpoint_position_cm": 18.012248922752374,
+              "endpoint_rotation_deg": 15.469627735371352,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::2",
+            "path_position_cm": 0.7601514535623606,
+            "path_rotation_deg": 2.8269801736705475,
+            "endpoint_position_cm": 1.214979482208478,
+            "endpoint_rotation_deg": 3.9308836349709075,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.746899484068635,
+              "path_rotation_deg": 23.404926953200693,
+              "endpoint_position_cm": 13.72284110193893,
+              "endpoint_rotation_deg": 47.78953444396816,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::44",
+            "path_position_cm": 0.6889461943698354,
+            "path_rotation_deg": 1.12795020830463,
+            "endpoint_position_cm": 0.6430507434759335,
+            "endpoint_rotation_deg": 1.8562603586382709,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.088400918077673,
+              "path_rotation_deg": 7.675702162986816,
+              "endpoint_position_cm": 15.502820871434448,
+              "endpoint_rotation_deg": 13.280145823924014,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::54",
+            "path_position_cm": 0.6357595968629105,
+            "path_rotation_deg": 2.4272468352677024,
+            "endpoint_position_cm": 0.9958317457674054,
+            "endpoint_rotation_deg": 4.028095993288368,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.965662258292312,
+              "path_rotation_deg": 22.76048583524355,
+              "endpoint_position_cm": 16.180205899219523,
+              "endpoint_rotation_deg": 34.74228324860901,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+            "path_position_cm": 0.5658554980545899,
+            "path_rotation_deg": 1.2445060633469733,
+            "endpoint_position_cm": 0.5872479627282898,
+            "endpoint_rotation_deg": 1.8131856757926579,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.50776454983268,
+              "path_rotation_deg": 9.137993428336802,
+              "endpoint_position_cm": 20.598449752657416,
+              "endpoint_rotation_deg": 13.615539572646302,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+            "path_position_cm": 0.677875860843022,
+            "path_rotation_deg": 1.8540595916353748,
+            "endpoint_position_cm": 0.8569550732386905,
+            "endpoint_rotation_deg": 2.960493339962566,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.03220014141289,
+              "path_rotation_deg": 17.98655081486267,
+              "endpoint_position_cm": 16.299429285067365,
+              "endpoint_rotation_deg": 29.971825721622913,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+            "path_position_cm": 0.5872931965154283,
+            "path_rotation_deg": 1.2130485868313456,
+            "endpoint_position_cm": 0.6418933789662162,
+            "endpoint_rotation_deg": 1.4341147036497357,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.119222539101898,
+              "path_rotation_deg": 25.19311186871445,
+              "endpoint_position_cm": 16.17098210578603,
+              "endpoint_rotation_deg": 34.51779657631254,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::35",
+            "path_position_cm": 0.6138930455293302,
+            "path_rotation_deg": 1.776183146813791,
+            "endpoint_position_cm": 0.800121705375326,
+            "endpoint_rotation_deg": 1.8974917488962697,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 5.217072606070257,
+              "path_rotation_deg": 12.12918855154734,
+              "endpoint_position_cm": 4.179302726373831,
+              "endpoint_rotation_deg": 13.548876840789369,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::33",
+            "path_position_cm": 0.4379203486820296,
+            "path_rotation_deg": 0.8890002264637081,
+            "endpoint_position_cm": 0.7837702592584844,
+            "endpoint_rotation_deg": 1.389676871770633,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.620331933384598,
+              "path_rotation_deg": 5.946915341671661,
+              "endpoint_position_cm": 16.683590888243007,
+              "endpoint_rotation_deg": 12.481600755900217,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::13",
+            "path_position_cm": 0.6166110576504326,
+            "path_rotation_deg": 1.6189052384961726,
+            "endpoint_position_cm": 0.7168147068485813,
+            "endpoint_rotation_deg": 1.8837857765426371,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.4820044052152856,
+              "path_rotation_deg": 11.991119800699341,
+              "endpoint_position_cm": 3.0437801157556006,
+              "endpoint_rotation_deg": 13.573284298149698,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00036-of-01024::15",
+            "path_position_cm": 1.0091219489756982,
+            "path_rotation_deg": 2.03923474663824,
+            "endpoint_position_cm": 1.5425848195503848,
+            "endpoint_rotation_deg": 2.640606744418046,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.759680315043468,
+              "path_rotation_deg": 13.559242868827102,
+              "endpoint_position_cm": 9.315979249490404,
+              "endpoint_rotation_deg": 8.213073455511294,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00040-of-01024::37",
+            "path_position_cm": 0.7682907308201289,
+            "path_rotation_deg": 1.4015298527238869,
+            "endpoint_position_cm": 1.1169967157587626,
+            "endpoint_rotation_deg": 1.3577187205486252,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.288106618488786,
+              "path_rotation_deg": 6.906951402771414,
+              "endpoint_position_cm": 11.136508177436374,
+              "endpoint_rotation_deg": 11.793053242387396,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::38",
+            "path_position_cm": 0.8329561040175255,
+            "path_rotation_deg": 1.9578564968973324,
+            "endpoint_position_cm": 1.8084429644399913,
+            "endpoint_rotation_deg": 3.0810625864129846,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.41101225581264,
+              "path_rotation_deg": 12.31973577625709,
+              "endpoint_position_cm": 12.107097159437698,
+              "endpoint_rotation_deg": 18.035851539779173,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00047-of-01024::37",
+            "path_position_cm": 0.8528791460133481,
+            "path_rotation_deg": 1.9015374454428642,
+            "endpoint_position_cm": 1.0466835290999204,
+            "endpoint_rotation_deg": 2.0434022035279322,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.92343726494787,
+              "path_rotation_deg": 10.814139213844772,
+              "endpoint_position_cm": 4.472971251128059,
+              "endpoint_rotation_deg": 14.053782987188882,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00048-of-01024::7",
+            "path_position_cm": 0.8047288834669241,
+            "path_rotation_deg": 1.4274841281364274,
+            "endpoint_position_cm": 0.9083392902839112,
+            "endpoint_rotation_deg": 1.3466077979898816,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 15.459359340832219,
+              "path_rotation_deg": 15.664118961591331,
+              "endpoint_position_cm": 19.644276252060365,
+              "endpoint_rotation_deg": 16.80221860845411,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00053-of-01024::28",
+            "path_position_cm": 0.6865054430388691,
+            "path_rotation_deg": 1.620058776665403,
+            "endpoint_position_cm": 1.0177188511337694,
+            "endpoint_rotation_deg": 2.535074859935637,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 18.529459465957274,
+              "path_rotation_deg": 28.399998101792985,
+              "endpoint_position_cm": 28.103713494501505,
+              "endpoint_rotation_deg": 49.583740726956464,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00057-of-01024::48",
+            "path_position_cm": 0.7339494855416596,
+            "path_rotation_deg": 1.103982223988779,
+            "endpoint_position_cm": 0.9490141331101136,
+            "endpoint_rotation_deg": 1.2343291839594344,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.912761779924853,
+              "path_rotation_deg": 13.714307667486484,
+              "endpoint_position_cm": 15.009044359638462,
+              "endpoint_rotation_deg": 15.805235654842765,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00058-of-01024::40",
+            "path_position_cm": 0.6308553807172289,
+            "path_rotation_deg": 1.355575465478014,
+            "endpoint_position_cm": 0.8988333335321895,
+            "endpoint_rotation_deg": 1.9734605171514898,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.583968670959406,
+              "path_rotation_deg": 15.051384924397949,
+              "endpoint_position_cm": 19.795499804782438,
+              "endpoint_rotation_deg": 21.635201392896562,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00031-of-01024::17",
+            "path_position_cm": 0.8948771787092252,
+            "path_rotation_deg": 1.9560786560387735,
+            "endpoint_position_cm": 1.178697234370753,
+            "endpoint_rotation_deg": 3.0279222186171957,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 5.626418356567413,
+              "path_rotation_deg": 18.061330938467233,
+              "endpoint_position_cm": 11.47399495644502,
+              "endpoint_rotation_deg": 31.045718485490184,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00041-of-01024::41",
+            "path_position_cm": 0.8147348590440213,
+            "path_rotation_deg": 1.7151046554518794,
+            "endpoint_position_cm": 1.2448543229665174,
+            "endpoint_rotation_deg": 2.1141198352444706,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.88503120073275,
+              "path_rotation_deg": 18.469645026877494,
+              "endpoint_position_cm": 12.801460236894531,
+              "endpoint_rotation_deg": 30.525742581525453,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00044-of-01024::26",
+            "path_position_cm": 0.5803207439741374,
+            "path_rotation_deg": 1.236733771754686,
+            "endpoint_position_cm": 0.7223063863483564,
+            "endpoint_rotation_deg": 1.3483649252295613,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 6.636448313276052,
+              "path_rotation_deg": 13.350925263193393,
+              "endpoint_position_cm": 10.35146547648656,
+              "endpoint_rotation_deg": 23.527687657844222,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00048-of-01024::9",
+            "path_position_cm": 0.743894092449643,
+            "path_rotation_deg": 1.2471164438951938,
+            "endpoint_position_cm": 1.3485326631084007,
+            "endpoint_rotation_deg": 1.7284504684961437,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.973029354555406,
+              "path_rotation_deg": 21.758345707138673,
+              "endpoint_position_cm": 15.538360038409397,
+              "endpoint_rotation_deg": 36.483258776887524,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00048-of-01024::11",
+            "path_position_cm": 0.938504723565965,
+            "path_rotation_deg": 2.141934749433921,
+            "endpoint_position_cm": 1.496864291743339,
+            "endpoint_rotation_deg": 2.222754917812969,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.162633382801072,
+              "path_rotation_deg": 22.48863011483587,
+              "endpoint_position_cm": 20.629850296212318,
+              "endpoint_rotation_deg": 32.99640971912114,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00050-of-01024::33",
+            "path_position_cm": 1.1005396105348173,
+            "path_rotation_deg": 2.3438308460047437,
+            "endpoint_position_cm": 1.744983595677266,
+            "endpoint_rotation_deg": 2.5023005428565956,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.540845617084193,
+              "path_rotation_deg": 29.46433023124743,
+              "endpoint_position_cm": 15.108019507471038,
+              "endpoint_rotation_deg": 53.555974945284035,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00016-of-01024::23",
+            "path_position_cm": 0.5730953954467961,
+            "path_rotation_deg": 1.16198249803052,
+            "endpoint_position_cm": 1.1472972308830427,
+            "endpoint_rotation_deg": 1.739961298374123,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.540127933192608,
+              "path_rotation_deg": 21.390585339181786,
+              "endpoint_position_cm": 18.707236559476534,
+              "endpoint_rotation_deg": 28.305618272068244,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::41",
+            "path_position_cm": 0.6682592225911977,
+            "path_rotation_deg": 1.1975727492168033,
+            "endpoint_position_cm": 1.0008065842131602,
+            "endpoint_rotation_deg": 2.1064634286216544,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.2388529836130235,
+              "path_rotation_deg": 11.267310132487076,
+              "endpoint_position_cm": 9.371811346932997,
+              "endpoint_rotation_deg": 11.675679056391019,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00027-of-01024::26",
+            "path_position_cm": 0.5298016961982109,
+            "path_rotation_deg": 1.0209121431406363,
+            "endpoint_position_cm": 0.9326597639559023,
+            "endpoint_rotation_deg": 2.1292723212700193,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.622191320403468,
+              "path_rotation_deg": 10.0731550950365,
+              "endpoint_position_cm": 25.2245854368484,
+              "endpoint_rotation_deg": 17.033684194549025,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00027-of-01024::36",
+            "path_position_cm": 0.5990846411245089,
+            "path_rotation_deg": 1.0643849703106945,
+            "endpoint_position_cm": 0.6773130427408837,
+            "endpoint_rotation_deg": 1.7517596371323894,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.697768410390134,
+              "path_rotation_deg": 5.973352955540173,
+              "endpoint_position_cm": 13.91057095354693,
+              "endpoint_rotation_deg": 7.243219553843414,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00027-of-01024::41",
+            "path_position_cm": 0.6459245129446081,
+            "path_rotation_deg": 1.0150612410190485,
+            "endpoint_position_cm": 1.213837952026609,
+            "endpoint_rotation_deg": 1.3814940124549355,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.4164733424192,
+              "path_rotation_deg": 14.486819014736556,
+              "endpoint_position_cm": 14.749558591779397,
+              "endpoint_rotation_deg": 28.573231020118193,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00033-of-01024::11",
+            "path_position_cm": 0.4891671324007503,
+            "path_rotation_deg": 1.164824855513345,
+            "endpoint_position_cm": 0.7941358612916596,
+            "endpoint_rotation_deg": 1.8605787148117887,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.434332028652474,
+              "path_rotation_deg": 8.141257716169253,
+              "endpoint_position_cm": 9.620018965450871,
+              "endpoint_rotation_deg": 12.299669077068348,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+            "path_position_cm": 0.6293397221886383,
+            "path_rotation_deg": 1.195589230039574,
+            "endpoint_position_cm": 0.6000752005883265,
+            "endpoint_rotation_deg": 1.4956747607643877,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.5281098485497,
+              "path_rotation_deg": 12.214948934766273,
+              "endpoint_position_cm": 17.330117762515048,
+              "endpoint_rotation_deg": 13.594520414310583,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+            "path_position_cm": 0.63666712650483,
+            "path_rotation_deg": 1.2571602499541659,
+            "endpoint_position_cm": 0.7383226541056316,
+            "endpoint_rotation_deg": 1.41110985740185,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.66536813360549,
+              "path_rotation_deg": 29.846492545674927,
+              "endpoint_position_cm": 15.468103500261428,
+              "endpoint_rotation_deg": 43.76335894782234,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+            "path_position_cm": 0.6956352099229909,
+            "path_rotation_deg": 1.0068072703243278,
+            "endpoint_position_cm": 0.7582827484812348,
+            "endpoint_rotation_deg": 1.3593538611890592,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.726182562798165,
+              "path_rotation_deg": 8.829054405977981,
+              "endpoint_position_cm": 14.403838386957872,
+              "endpoint_rotation_deg": 11.384801572382772,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+            "path_position_cm": 0.5838000566521857,
+            "path_rotation_deg": 1.0499834746990404,
+            "endpoint_position_cm": 0.7422060324084572,
+            "endpoint_rotation_deg": 1.1816056119131022,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.898896220582019,
+              "path_rotation_deg": 18.81973605631384,
+              "endpoint_position_cm": 16.202912294898784,
+              "endpoint_rotation_deg": 22.62844888438344,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+            "path_position_cm": 0.6848084144646802,
+            "path_rotation_deg": 2.4681686420541786,
+            "endpoint_position_cm": 0.6367256261044013,
+            "endpoint_rotation_deg": 2.892158421870919,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.366375179998151,
+              "path_rotation_deg": 33.16438600528089,
+              "endpoint_position_cm": 11.742270367095099,
+              "endpoint_rotation_deg": 50.465350670214754,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+            "path_position_cm": 0.6557491305724352,
+            "path_rotation_deg": 1.4063582241244006,
+            "endpoint_position_cm": 0.842029901517559,
+            "endpoint_rotation_deg": 1.2220545668348997,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.393045752741127,
+              "path_rotation_deg": 9.224657704676185,
+              "endpoint_position_cm": 13.597127321155078,
+              "endpoint_rotation_deg": 13.297103683089306,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::11",
+            "path_position_cm": 0.4264516523238259,
+            "path_rotation_deg": 1.3662233684046772,
+            "endpoint_position_cm": 0.6832180042938045,
+            "endpoint_rotation_deg": 1.790245705605705,
+            "windows": 2,
+            "passing_windows": 1,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.1622254870333384,
+              "path_rotation_deg": 13.410889410856907,
+              "endpoint_position_cm": 3.4441858888824504,
+              "endpoint_rotation_deg": 15.540843450305982,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::29",
+            "path_position_cm": 0.4562859183498829,
+            "path_rotation_deg": 1.1580441232795071,
+            "endpoint_position_cm": 0.691200210686676,
+            "endpoint_rotation_deg": 1.4159070993530918,
+            "windows": 2,
+            "passing_windows": 1,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.119407394784436,
+              "path_rotation_deg": 8.736126295474044,
+              "endpoint_position_cm": 5.427759766746766,
+              "endpoint_rotation_deg": 12.306743935987743,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::18",
+            "path_position_cm": 0.4270435388604306,
+            "path_rotation_deg": 1.3521244883422228,
+            "endpoint_position_cm": 0.40810303120554936,
+            "endpoint_rotation_deg": 1.1941329704530905,
+            "windows": 2,
+            "passing_windows": 1,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.161746276022183,
+              "path_rotation_deg": 7.601633881378307,
+              "endpoint_position_cm": 3.725067268669901,
+              "endpoint_rotation_deg": 8.19896136772951,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00036-of-01024::49",
+            "path_position_cm": 0.5631652172795453,
+            "path_rotation_deg": 1.4805684831361603,
+            "endpoint_position_cm": 0.7625526213472374,
+            "endpoint_rotation_deg": 2.9430155489220433,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.2790485396337985,
+              "path_rotation_deg": 5.6421912287806055,
+              "endpoint_position_cm": 5.278203898604357,
+              "endpoint_rotation_deg": 8.254280010905914,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00037-of-01024::33",
+            "path_position_cm": 0.693761377052947,
+            "path_rotation_deg": 1.3318859921776562,
+            "endpoint_position_cm": 0.9381661083728479,
+            "endpoint_rotation_deg": 2.0436725983837216,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 6.309160033500847,
+              "path_rotation_deg": 12.046098539981896,
+              "endpoint_position_cm": 13.198585362100593,
+              "endpoint_rotation_deg": 20.12167654858611,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00043-of-01024::34",
+            "path_position_cm": 0.5412883323870988,
+            "path_rotation_deg": 1.5191395298935249,
+            "endpoint_position_cm": 0.5177924492491024,
+            "endpoint_rotation_deg": 2.1248222597442403,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.2005073236454353,
+              "path_rotation_deg": 11.07241018255554,
+              "endpoint_position_cm": 2.4756774430013033,
+              "endpoint_rotation_deg": 11.155064602744048,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          }
+        ],
+        "position_better_than_static_demos": 64
+      },
+      "development": {
+        "path_position_cm": 8.346771578050564,
+        "path_rotation_deg": 15.131587676338132,
+        "endpoint_position_cm": 12.102456428172953,
+        "endpoint_rotation_deg": 20.668823156006763,
+        "windows": 40,
+        "passing_windows": 0,
+        "pose_fit_passed": false,
+        "static": {
+          "path_position_cm": 8.21232607389037,
+          "path_rotation_deg": 15.098500432102608,
+          "endpoint_position_cm": 10.565334249436834,
+          "endpoint_rotation_deg": 19.986393321428388,
+          "windows": 40,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "per_episode": [
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+            "path_position_cm": 8.789357411065588,
+            "path_rotation_deg": 50.47423224650763,
+            "endpoint_position_cm": 17.139412856775717,
+            "endpoint_rotation_deg": 68.62690452424633,
+            "windows": 4,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.922375906610277,
+              "path_rotation_deg": 57.26360031299835,
+              "endpoint_position_cm": 14.750700707716302,
+              "endpoint_rotation_deg": 78.07093256323728,
+              "windows": 4,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+            "path_position_cm": 7.199484447259184,
+            "path_rotation_deg": 12.890836838605175,
+            "endpoint_position_cm": 7.037798378059613,
+            "endpoint_rotation_deg": 14.543984248441738,
+            "windows": 6,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.74159597899271,
+              "path_rotation_deg": 11.166287890424732,
+              "endpoint_position_cm": 8.320131865085257,
+              "endpoint_rotation_deg": 12.634607290820517,
+              "windows": 6,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+            "path_position_cm": 10.418583422227805,
+            "path_rotation_deg": 8.909199054333747,
+            "endpoint_position_cm": 15.827075749751199,
+            "endpoint_rotation_deg": 12.774517020695875,
+            "windows": 6,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.604473200028156,
+              "path_rotation_deg": 8.053853283316334,
+              "endpoint_position_cm": 12.29107447372099,
+              "endpoint_rotation_deg": 11.75246584958198,
+              "windows": 6,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+            "path_position_cm": 17.24480484379818,
+            "path_rotation_deg": 15.116173254667508,
+            "endpoint_position_cm": 21.75079569366252,
+            "endpoint_rotation_deg": 17.372559689229874,
+            "windows": 3,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.39504001830386,
+              "path_rotation_deg": 9.651660838518607,
+              "endpoint_position_cm": 12.134292956619916,
+              "endpoint_rotation_deg": 12.600150972672763,
+              "windows": 3,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+            "path_position_cm": 4.688010793817698,
+            "path_rotation_deg": 9.786868193198877,
+            "endpoint_position_cm": 7.638999566853072,
+            "endpoint_rotation_deg": 12.844703222318087,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.6525250738797896,
+              "path_rotation_deg": 10.595255434033103,
+              "endpoint_position_cm": 4.080125865538286,
+              "endpoint_rotation_deg": 14.804317723902631,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+            "path_position_cm": 8.543437401119098,
+            "path_rotation_deg": 11.668509112042193,
+            "endpoint_position_cm": 8.90307151374969,
+            "endpoint_rotation_deg": 19.296831558811807,
+            "windows": 4,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.718325680409064,
+              "path_rotation_deg": 10.80366577045326,
+              "endpoint_position_cm": 8.739752430286266,
+              "endpoint_rotation_deg": 11.18415401080077,
+              "windows": 4,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+            "path_position_cm": 2.8375544193012714,
+            "path_rotation_deg": 7.830525392695397,
+            "endpoint_position_cm": 3.963390049005111,
+            "endpoint_rotation_deg": 10.275011979224477,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.0998697775318593,
+              "path_rotation_deg": 10.654170332055509,
+              "endpoint_position_cm": 2.9733327278965462,
+              "endpoint_rotation_deg": 16.688951781382208,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+            "path_position_cm": 5.641999799597207,
+            "path_rotation_deg": 8.54142846049651,
+            "endpoint_position_cm": 11.649645556255775,
+            "endpoint_rotation_deg": 13.532186478286855,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.426329858537727,
+              "path_rotation_deg": 9.684496319261642,
+              "endpoint_position_cm": 15.785931532812565,
+              "endpoint_rotation_deg": 14.471744050817179,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+            "path_position_cm": 6.504762899448135,
+            "path_rotation_deg": 10.700314747232673,
+            "endpoint_position_cm": 12.645591863116298,
+            "endpoint_rotation_deg": 17.357109121286562,
+            "windows": 6,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.108049697598318,
+              "path_rotation_deg": 11.54362178831085,
+              "endpoint_position_cm": 10.995563741175559,
+              "endpoint_rotation_deg": 16.6314350580652,
+              "windows": 6,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+            "path_position_cm": 8.346630940569232,
+            "path_rotation_deg": 12.804854784302451,
+            "endpoint_position_cm": 11.02181325480768,
+            "endpoint_rotation_deg": 16.316567427628897,
+            "windows": 5,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.932590774602391,
+              "path_rotation_deg": 11.253109698346014,
+              "endpoint_position_cm": 11.385855564643549,
+              "endpoint_rotation_deg": 13.318771467990967,
+              "windows": 5,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          }
+        ],
+        "position_better_than_static_demos": 6
+      }
+    },
+    "ema": {
+      "train": {
+        "path_position_cm": 0.8744573922893565,
+        "path_rotation_deg": 2.076650020537067,
+        "endpoint_position_cm": 1.1913626309321759,
+        "endpoint_rotation_deg": 2.7638824840300713,
+        "windows": 128,
+        "passing_windows": 0,
+        "pose_fit_passed": false,
+        "static": {
+          "path_position_cm": 8.960284924153353,
+          "path_rotation_deg": 13.88273475795172,
+          "endpoint_position_cm": 12.615988871210611,
+          "endpoint_rotation_deg": 20.33054352452782,
+          "windows": 128,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "per_episode": [
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::39",
+            "path_position_cm": 0.8819128820249111,
+            "path_rotation_deg": 1.921072518163865,
+            "endpoint_position_cm": 1.649045063431114,
+            "endpoint_rotation_deg": 2.641840742361239,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.887550943592991,
+              "path_rotation_deg": 16.64380801473346,
+              "endpoint_position_cm": 14.454546357334634,
+              "endpoint_rotation_deg": 29.009721321835436,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::3",
+            "path_position_cm": 0.7654653828577991,
+            "path_rotation_deg": 1.3927737698426619,
+            "endpoint_position_cm": 1.1129649932247077,
+            "endpoint_rotation_deg": 1.5880616721745915,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 4.7329279404731786,
+              "path_rotation_deg": 5.231167436007549,
+              "endpoint_position_cm": 5.19248904052456,
+              "endpoint_rotation_deg": 6.1842892484596375,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::36",
+            "path_position_cm": 0.8760237643971446,
+            "path_rotation_deg": 4.993460365237716,
+            "endpoint_position_cm": 1.3172668678855965,
+            "endpoint_rotation_deg": 8.343582051900011,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.099511735527008,
+              "path_rotation_deg": 22.234090033755113,
+              "endpoint_position_cm": 13.03853860133778,
+              "endpoint_rotation_deg": 31.70228733573382,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+            "path_position_cm": 0.8925350217318226,
+            "path_rotation_deg": 1.8249715960264599,
+            "endpoint_position_cm": 1.2837763294712297,
+            "endpoint_rotation_deg": 2.4560248518493757,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.64145806205912,
+              "path_rotation_deg": 9.645802536781098,
+              "endpoint_position_cm": 15.592496164798181,
+              "endpoint_rotation_deg": 16.822910690565074,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00000-of-01024::45",
+            "path_position_cm": 0.7894389547788728,
+            "path_rotation_deg": 2.9816837779007668,
+            "endpoint_position_cm": 0.9939804347756015,
+            "endpoint_rotation_deg": 4.669199501259295,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.1150656958680454,
+              "path_rotation_deg": 11.95036370580437,
+              "endpoint_position_cm": 4.110155281733746,
+              "endpoint_rotation_deg": 17.954194265832754,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::8",
+            "path_position_cm": 1.177387741292821,
+            "path_rotation_deg": 2.9181103431106705,
+            "endpoint_position_cm": 1.1862050289239867,
+            "endpoint_rotation_deg": 2.8039025821504406,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.342872875787346,
+              "path_rotation_deg": 7.777729714248464,
+              "endpoint_position_cm": 7.30204010086326,
+              "endpoint_rotation_deg": 8.114685126003657,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::26",
+            "path_position_cm": 0.7498965108022233,
+            "path_rotation_deg": 1.2719308459742311,
+            "endpoint_position_cm": 1.1590052445634134,
+            "endpoint_rotation_deg": 1.7008091750631629,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.634587594924007,
+              "path_rotation_deg": 9.85475156959304,
+              "endpoint_position_cm": 13.075205680482226,
+              "endpoint_rotation_deg": 12.193788147995082,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::21",
+            "path_position_cm": 0.787189795614513,
+            "path_rotation_deg": 1.427146858325191,
+            "endpoint_position_cm": 1.179053019881646,
+            "endpoint_rotation_deg": 2.654268536100983,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.929929696435353,
+              "path_rotation_deg": 10.484466352982608,
+              "endpoint_position_cm": 14.418865576956048,
+              "endpoint_rotation_deg": 17.9118938814565,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+            "path_position_cm": 0.9165885214432649,
+            "path_rotation_deg": 1.3989203177338148,
+            "endpoint_position_cm": 1.2929498350852233,
+            "endpoint_rotation_deg": 1.6818841372527935,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.605787425849971,
+              "path_rotation_deg": 8.82498118968835,
+              "endpoint_position_cm": 5.978671158017601,
+              "endpoint_rotation_deg": 13.092029794034788,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+            "path_position_cm": 0.6701760820631621,
+            "path_rotation_deg": 2.3924207133518727,
+            "endpoint_position_cm": 1.1093543147596476,
+            "endpoint_rotation_deg": 2.0193542082521456,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 2.916428942120682,
+              "path_rotation_deg": 8.386928737254998,
+              "endpoint_position_cm": 3.988989952637203,
+              "endpoint_rotation_deg": 14.277503353492811,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::25",
+            "path_position_cm": 0.7380864468364178,
+            "path_rotation_deg": 0.9166284350171946,
+            "endpoint_position_cm": 1.1306638027759364,
+            "endpoint_rotation_deg": 1.27315129398528,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.299470219695834,
+              "path_rotation_deg": 11.615218165875536,
+              "endpoint_position_cm": 14.995673714762031,
+              "endpoint_rotation_deg": 13.913208708637791,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::26",
+            "path_position_cm": 0.9026694191541919,
+            "path_rotation_deg": 3.628923400412304,
+            "endpoint_position_cm": 1.009452195325508,
+            "endpoint_rotation_deg": 4.739273823859604,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.524670276462996,
+              "path_rotation_deg": 23.854919402244207,
+              "endpoint_position_cm": 11.922268206360949,
+              "endpoint_rotation_deg": 38.4645828431775,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::25",
+            "path_position_cm": 0.6342810573346026,
+            "path_rotation_deg": 1.107040863829303,
+            "endpoint_position_cm": 0.8151213392780509,
+            "endpoint_rotation_deg": 2.465882504705601,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.906987479461595,
+              "path_rotation_deg": 6.270759646854117,
+              "endpoint_position_cm": 14.894814843753906,
+              "endpoint_rotation_deg": 11.267290292627157,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+            "path_position_cm": 0.751738981145234,
+            "path_rotation_deg": 1.3180826561189722,
+            "endpoint_position_cm": 0.7686585868897707,
+            "endpoint_rotation_deg": 1.289950735333179,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.963767817264916,
+              "path_rotation_deg": 12.585108994005298,
+              "endpoint_position_cm": 15.695292264625902,
+              "endpoint_rotation_deg": 15.850835757846749,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00007-of-01024::7",
+            "path_position_cm": 0.7295055765423029,
+            "path_rotation_deg": 2.002155140064461,
+            "endpoint_position_cm": 0.48005402893992466,
+            "endpoint_rotation_deg": 2.2624773412032884,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 4.035271427634589,
+              "path_rotation_deg": 11.539081979499795,
+              "endpoint_position_cm": 1.7391390169679524,
+              "endpoint_rotation_deg": 13.11599193044939,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::20",
+            "path_position_cm": 2.430553509235766,
+            "path_rotation_deg": 4.832756746389767,
+            "endpoint_position_cm": 2.993039799385365,
+            "endpoint_rotation_deg": 5.233126187534283,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.74727677901734,
+              "path_rotation_deg": 16.171873772256223,
+              "endpoint_position_cm": 14.337948308734696,
+              "endpoint_rotation_deg": 19.63159529851778,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::17",
+            "path_position_cm": 1.223697368631064,
+            "path_rotation_deg": 1.8133601643182702,
+            "endpoint_position_cm": 1.8610524547120342,
+            "endpoint_rotation_deg": 2.669317401244797,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.397374849601363,
+              "path_rotation_deg": 12.505726328266958,
+              "endpoint_position_cm": 11.015458121907908,
+              "endpoint_rotation_deg": 18.18724879182307,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::31",
+            "path_position_cm": 1.1319653035085813,
+            "path_rotation_deg": 2.265490712361247,
+            "endpoint_position_cm": 1.2949102625206008,
+            "endpoint_rotation_deg": 1.9466787099440872,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.409837482151383,
+              "path_rotation_deg": 11.036754531266302,
+              "endpoint_position_cm": 14.496737540739762,
+              "endpoint_rotation_deg": 14.185509702032409,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+            "path_position_cm": 0.7859368575452415,
+            "path_rotation_deg": 1.9182147439802584,
+            "endpoint_position_cm": 0.9738593869648139,
+            "endpoint_rotation_deg": 2.899652016611317,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.658526301705455,
+              "path_rotation_deg": 10.442278191265874,
+              "endpoint_position_cm": 13.394473289031172,
+              "endpoint_rotation_deg": 17.327246190717325,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::40",
+            "path_position_cm": 1.3155933376264362,
+            "path_rotation_deg": 2.8942940823407817,
+            "endpoint_position_cm": 1.5342747593475845,
+            "endpoint_rotation_deg": 2.235444594582779,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.089948011638448,
+              "path_rotation_deg": 18.347999144185387,
+              "endpoint_position_cm": 5.519931741782353,
+              "endpoint_rotation_deg": 18.051499000937785,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::22",
+            "path_position_cm": 0.8209276018186044,
+            "path_rotation_deg": 2.2408443095748884,
+            "endpoint_position_cm": 0.8590858068211115,
+            "endpoint_rotation_deg": 3.4062041874685005,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 14.640821611057879,
+              "path_rotation_deg": 8.003941474421238,
+              "endpoint_position_cm": 20.289968949258526,
+              "endpoint_rotation_deg": 10.113091013117458,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::20",
+            "path_position_cm": 0.9100520354457554,
+            "path_rotation_deg": 1.2932038275212505,
+            "endpoint_position_cm": 1.3943408763170002,
+            "endpoint_rotation_deg": 2.1209441747860214,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 5.909742775590616,
+              "path_rotation_deg": 7.687702794393964,
+              "endpoint_position_cm": 12.210060800322221,
+              "endpoint_rotation_deg": 14.893662820522902,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00025-of-01024::15",
+            "path_position_cm": 0.8165022046332014,
+            "path_rotation_deg": 1.4326289649574357,
+            "endpoint_position_cm": 1.0531209139995439,
+            "endpoint_rotation_deg": 1.94315378798646,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.736849657889186,
+              "path_rotation_deg": 9.209384392664827,
+              "endpoint_position_cm": 18.012248922752374,
+              "endpoint_rotation_deg": 15.469627735371352,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::2",
+            "path_position_cm": 0.8986719386119196,
+            "path_rotation_deg": 4.672240893924954,
+            "endpoint_position_cm": 1.5567109212542298,
+            "endpoint_rotation_deg": 6.529644821467822,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.746899484068635,
+              "path_rotation_deg": 23.404926953200693,
+              "endpoint_position_cm": 13.72284110193893,
+              "endpoint_rotation_deg": 47.78953444396816,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::44",
+            "path_position_cm": 0.8198447799933923,
+            "path_rotation_deg": 1.2603187949797836,
+            "endpoint_position_cm": 0.7146694934162464,
+            "endpoint_rotation_deg": 1.8433562738358862,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.088400918077673,
+              "path_rotation_deg": 7.675702162986816,
+              "endpoint_position_cm": 15.502820871434448,
+              "endpoint_rotation_deg": 13.280145823924014,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::54",
+            "path_position_cm": 0.8192132706673902,
+            "path_rotation_deg": 2.866936070192328,
+            "endpoint_position_cm": 1.2495104968138044,
+            "endpoint_rotation_deg": 4.859755812073436,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.965662258292312,
+              "path_rotation_deg": 22.76048583524355,
+              "endpoint_position_cm": 16.180205899219523,
+              "endpoint_rotation_deg": 34.74228324860901,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+            "path_position_cm": 0.6402711479886479,
+            "path_rotation_deg": 1.524153611780113,
+            "endpoint_position_cm": 0.6160891131315469,
+            "endpoint_rotation_deg": 1.9433624526244995,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.50776454983268,
+              "path_rotation_deg": 9.137993428336802,
+              "endpoint_position_cm": 20.598449752657416,
+              "endpoint_rotation_deg": 13.615539572646302,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+            "path_position_cm": 0.7972348182418342,
+            "path_rotation_deg": 2.416784123612684,
+            "endpoint_position_cm": 1.0531500873998307,
+            "endpoint_rotation_deg": 4.095394946111033,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.03220014141289,
+              "path_rotation_deg": 17.98655081486267,
+              "endpoint_position_cm": 16.299429285067365,
+              "endpoint_rotation_deg": 29.971825721622913,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+            "path_position_cm": 1.1033970544938667,
+            "path_rotation_deg": 4.842257837666016,
+            "endpoint_position_cm": 1.5190609376520605,
+            "endpoint_rotation_deg": 6.62682015838761,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.119222539101898,
+              "path_rotation_deg": 25.19311186871445,
+              "endpoint_position_cm": 16.17098210578603,
+              "endpoint_rotation_deg": 34.51779657631254,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::35",
+            "path_position_cm": 0.7165918399535878,
+            "path_rotation_deg": 2.0829879780895224,
+            "endpoint_position_cm": 0.8679635919838632,
+            "endpoint_rotation_deg": 2.3602636715036627,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 5.217072606070257,
+              "path_rotation_deg": 12.12918855154734,
+              "endpoint_position_cm": 4.179302726373831,
+              "endpoint_rotation_deg": 13.548876840789369,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::33",
+            "path_position_cm": 0.5324757881326457,
+            "path_rotation_deg": 1.1057783818683358,
+            "endpoint_position_cm": 0.8916382421859689,
+            "endpoint_rotation_deg": 1.5605222005499682,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.620331933384598,
+              "path_rotation_deg": 5.946915341671661,
+              "endpoint_position_cm": 16.683590888243007,
+              "endpoint_rotation_deg": 12.481600755900217,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::13",
+            "path_position_cm": 0.7013585599205571,
+            "path_rotation_deg": 1.8206994695857437,
+            "endpoint_position_cm": 0.8680473036010654,
+            "endpoint_rotation_deg": 2.020156504422682,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.4820044052152856,
+              "path_rotation_deg": 11.991119800699341,
+              "endpoint_position_cm": 3.0437801157556006,
+              "endpoint_rotation_deg": 13.573284298149698,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00036-of-01024::15",
+            "path_position_cm": 1.2068779377507253,
+            "path_rotation_deg": 2.8528960034911477,
+            "endpoint_position_cm": 1.846754368945995,
+            "endpoint_rotation_deg": 3.1536794562464645,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.759680315043468,
+              "path_rotation_deg": 13.559242868827102,
+              "endpoint_position_cm": 9.315979249490404,
+              "endpoint_rotation_deg": 8.213073455511294,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00040-of-01024::37",
+            "path_position_cm": 0.9990548328002231,
+            "path_rotation_deg": 1.8287778923428444,
+            "endpoint_position_cm": 1.3447239370994664,
+            "endpoint_rotation_deg": 1.9467886775088692,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.288106618488786,
+              "path_rotation_deg": 6.906951402771414,
+              "endpoint_position_cm": 11.136508177436374,
+              "endpoint_rotation_deg": 11.793053242387396,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::38",
+            "path_position_cm": 0.9834596869038582,
+            "path_rotation_deg": 2.238354340740384,
+            "endpoint_position_cm": 1.942475817922922,
+            "endpoint_rotation_deg": 3.30660920059022,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.41101225581264,
+              "path_rotation_deg": 12.31973577625709,
+              "endpoint_position_cm": 12.107097159437698,
+              "endpoint_rotation_deg": 18.035851539779173,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00047-of-01024::37",
+            "path_position_cm": 1.063845090583986,
+            "path_rotation_deg": 2.1217965695164502,
+            "endpoint_position_cm": 1.2392176327194537,
+            "endpoint_rotation_deg": 2.207420142473533,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.92343726494787,
+              "path_rotation_deg": 10.814139213844772,
+              "endpoint_position_cm": 4.472971251128059,
+              "endpoint_rotation_deg": 14.053782987188882,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00048-of-01024::7",
+            "path_position_cm": 1.0411799372883135,
+            "path_rotation_deg": 1.8798740194143786,
+            "endpoint_position_cm": 1.2753598620496485,
+            "endpoint_rotation_deg": 2.295868760503489,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 15.459359340832219,
+              "path_rotation_deg": 15.664118961591331,
+              "endpoint_position_cm": 19.644276252060365,
+              "endpoint_rotation_deg": 16.80221860845411,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00053-of-01024::28",
+            "path_position_cm": 0.8485104523171524,
+            "path_rotation_deg": 1.8089940197154462,
+            "endpoint_position_cm": 1.2504460043927785,
+            "endpoint_rotation_deg": 2.8776713884088854,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 18.529459465957274,
+              "path_rotation_deg": 28.399998101792985,
+              "endpoint_position_cm": 28.103713494501505,
+              "endpoint_rotation_deg": 49.583740726956464,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00057-of-01024::48",
+            "path_position_cm": 0.8528830569584693,
+            "path_rotation_deg": 1.6013499376636702,
+            "endpoint_position_cm": 1.142838530324317,
+            "endpoint_rotation_deg": 1.7839488677340825,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.912761779924853,
+              "path_rotation_deg": 13.714307667486484,
+              "endpoint_position_cm": 15.009044359638462,
+              "endpoint_rotation_deg": 15.805235654842765,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00058-of-01024::40",
+            "path_position_cm": 0.7680855721409922,
+            "path_rotation_deg": 1.7360213078201365,
+            "endpoint_position_cm": 1.1951031193294488,
+            "endpoint_rotation_deg": 2.4907978471604295,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.583968670959406,
+              "path_rotation_deg": 15.051384924397949,
+              "endpoint_position_cm": 19.795499804782438,
+              "endpoint_rotation_deg": 21.635201392896562,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00031-of-01024::17",
+            "path_position_cm": 1.1906537341072168,
+            "path_rotation_deg": 2.7402889975190416,
+            "endpoint_position_cm": 1.6387009031820001,
+            "endpoint_rotation_deg": 4.590269303071804,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 5.626418356567413,
+              "path_rotation_deg": 18.061330938467233,
+              "endpoint_position_cm": 11.47399495644502,
+              "endpoint_rotation_deg": 31.045718485490184,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00041-of-01024::41",
+            "path_position_cm": 1.0701864467721842,
+            "path_rotation_deg": 2.419725646000646,
+            "endpoint_position_cm": 1.6637941764019428,
+            "endpoint_rotation_deg": 2.8033540166595876,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.88503120073275,
+              "path_rotation_deg": 18.469645026877494,
+              "endpoint_position_cm": 12.801460236894531,
+              "endpoint_rotation_deg": 30.525742581525453,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00044-of-01024::26",
+            "path_position_cm": 0.8070334950900593,
+            "path_rotation_deg": 1.6396595036523995,
+            "endpoint_position_cm": 0.997087882052243,
+            "endpoint_rotation_deg": 1.9781436890135418,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 6.636448313276052,
+              "path_rotation_deg": 13.350925263193393,
+              "endpoint_position_cm": 10.35146547648656,
+              "endpoint_rotation_deg": 23.527687657844222,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00048-of-01024::9",
+            "path_position_cm": 0.9463761139161694,
+            "path_rotation_deg": 1.6061203008392144,
+            "endpoint_position_cm": 1.6565680471230213,
+            "endpoint_rotation_deg": 2.3594744750933394,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.973029354555406,
+              "path_rotation_deg": 21.758345707138673,
+              "endpoint_position_cm": 15.538360038409397,
+              "endpoint_rotation_deg": 36.483258776887524,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00048-of-01024::11",
+            "path_position_cm": 1.155921059499814,
+            "path_rotation_deg": 2.4309017495101792,
+            "endpoint_position_cm": 1.7853603857158535,
+            "endpoint_rotation_deg": 2.886570585539723,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.162633382801072,
+              "path_rotation_deg": 22.48863011483587,
+              "endpoint_position_cm": 20.629850296212318,
+              "endpoint_rotation_deg": 32.99640971912114,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00050-of-01024::33",
+            "path_position_cm": 1.4349626862724991,
+            "path_rotation_deg": 3.0624057069173176,
+            "endpoint_position_cm": 2.2937145774622407,
+            "endpoint_rotation_deg": 3.5062293810985103,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.540845617084193,
+              "path_rotation_deg": 29.46433023124743,
+              "endpoint_position_cm": 15.108019507471038,
+              "endpoint_rotation_deg": 53.555974945284035,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00016-of-01024::23",
+            "path_position_cm": 0.6645274731348259,
+            "path_rotation_deg": 1.6952899598498572,
+            "endpoint_position_cm": 1.1592471563905613,
+            "endpoint_rotation_deg": 2.902944289989719,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.540127933192608,
+              "path_rotation_deg": 21.390585339181786,
+              "endpoint_position_cm": 18.707236559476534,
+              "endpoint_rotation_deg": 28.305618272068244,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::41",
+            "path_position_cm": 0.8073615304728842,
+            "path_rotation_deg": 1.4687532316590657,
+            "endpoint_position_cm": 1.185613022116415,
+            "endpoint_rotation_deg": 2.647781312243214,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.2388529836130235,
+              "path_rotation_deg": 11.267310132487076,
+              "endpoint_position_cm": 9.371811346932997,
+              "endpoint_rotation_deg": 11.675679056391019,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00027-of-01024::26",
+            "path_position_cm": 0.6347567253169357,
+            "path_rotation_deg": 1.3578266913161958,
+            "endpoint_position_cm": 1.1277675468537307,
+            "endpoint_rotation_deg": 2.831963115707141,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 13.622191320403468,
+              "path_rotation_deg": 10.0731550950365,
+              "endpoint_position_cm": 25.2245854368484,
+              "endpoint_rotation_deg": 17.033684194549025,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00027-of-01024::36",
+            "path_position_cm": 0.7556394359857462,
+            "path_rotation_deg": 1.3982374816887806,
+            "endpoint_position_cm": 0.8851076954942791,
+            "endpoint_rotation_deg": 2.2091452583310307,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.697768410390134,
+              "path_rotation_deg": 5.973352955540173,
+              "endpoint_position_cm": 13.91057095354693,
+              "endpoint_rotation_deg": 7.243219553843414,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00027-of-01024::41",
+            "path_position_cm": 0.7320648292985448,
+            "path_rotation_deg": 1.3184761492617916,
+            "endpoint_position_cm": 1.194023032891886,
+            "endpoint_rotation_deg": 1.9100234921439496,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.4164733424192,
+              "path_rotation_deg": 14.486819014736556,
+              "endpoint_position_cm": 14.749558591779397,
+              "endpoint_rotation_deg": 28.573231020118193,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00033-of-01024::11",
+            "path_position_cm": 0.6143807079969702,
+            "path_rotation_deg": 1.4844961127271645,
+            "endpoint_position_cm": 1.0205001802298277,
+            "endpoint_rotation_deg": 2.3566119155180765,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.434332028652474,
+              "path_rotation_deg": 8.141257716169253,
+              "endpoint_position_cm": 9.620018965450871,
+              "endpoint_rotation_deg": 12.299669077068348,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+            "path_position_cm": 0.79691119040694,
+            "path_rotation_deg": 1.4503318041625286,
+            "endpoint_position_cm": 0.8494589604642413,
+            "endpoint_rotation_deg": 1.7637166622126592,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.5281098485497,
+              "path_rotation_deg": 12.214948934766273,
+              "endpoint_position_cm": 17.330117762515048,
+              "endpoint_rotation_deg": 13.594520414310583,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+            "path_position_cm": 0.8101708139676939,
+            "path_rotation_deg": 1.5436195769183392,
+            "endpoint_position_cm": 0.9005519028014964,
+            "endpoint_rotation_deg": 1.569200360523279,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 12.66536813360549,
+              "path_rotation_deg": 29.846492545674927,
+              "endpoint_position_cm": 15.468103500261428,
+              "endpoint_rotation_deg": 43.76335894782234,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+            "path_position_cm": 0.8273525974133032,
+            "path_rotation_deg": 1.160966015861214,
+            "endpoint_position_cm": 0.9347423126520326,
+            "endpoint_rotation_deg": 1.5772011022416847,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.726182562798165,
+              "path_rotation_deg": 8.829054405977981,
+              "endpoint_position_cm": 14.403838386957872,
+              "endpoint_rotation_deg": 11.384801572382772,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+            "path_position_cm": 0.7219238445893569,
+            "path_rotation_deg": 1.3011252772032296,
+            "endpoint_position_cm": 0.9552360089828599,
+            "endpoint_rotation_deg": 1.5134154914326388,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.898896220582019,
+              "path_rotation_deg": 18.81973605631384,
+              "endpoint_position_cm": 16.202912294898784,
+              "endpoint_rotation_deg": 22.62844888438344,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+            "path_position_cm": 1.00814160776399,
+            "path_rotation_deg": 4.231838244522436,
+            "endpoint_position_cm": 1.1002644525540752,
+            "endpoint_rotation_deg": 5.164985010889263,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.366375179998151,
+              "path_rotation_deg": 33.16438600528089,
+              "endpoint_position_cm": 11.742270367095099,
+              "endpoint_rotation_deg": 50.465350670214754,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+            "path_position_cm": 0.7041006233821264,
+            "path_rotation_deg": 1.531055978947018,
+            "endpoint_position_cm": 0.9833867799366146,
+            "endpoint_rotation_deg": 1.5092765985137244,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.393045752741127,
+              "path_rotation_deg": 9.224657704676185,
+              "endpoint_position_cm": 13.597127321155078,
+              "endpoint_rotation_deg": 13.297103683089306,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::11",
+            "path_position_cm": 0.4938723967204428,
+            "path_rotation_deg": 1.5865788444283033,
+            "endpoint_position_cm": 0.7676418059140971,
+            "endpoint_rotation_deg": 1.9821022710236644,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.1622254870333384,
+              "path_rotation_deg": 13.410889410856907,
+              "endpoint_position_cm": 3.4441858888824504,
+              "endpoint_rotation_deg": 15.540843450305982,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::29",
+            "path_position_cm": 0.5149945881132204,
+            "path_rotation_deg": 1.3060936749815888,
+            "endpoint_position_cm": 0.7320958920567082,
+            "endpoint_rotation_deg": 1.2408518560234987,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.119407394784436,
+              "path_rotation_deg": 8.736126295474044,
+              "endpoint_position_cm": 5.427759766746766,
+              "endpoint_rotation_deg": 12.306743935987743,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::18",
+            "path_position_cm": 0.5236063144812454,
+            "path_rotation_deg": 1.5982515853280355,
+            "endpoint_position_cm": 0.5462172737683682,
+            "endpoint_rotation_deg": 1.630096707641462,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.161746276022183,
+              "path_rotation_deg": 7.601633881378307,
+              "endpoint_position_cm": 3.725067268669901,
+              "endpoint_rotation_deg": 8.19896136772951,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00036-of-01024::49",
+            "path_position_cm": 0.7321524350506584,
+            "path_rotation_deg": 2.134615446931601,
+            "endpoint_position_cm": 0.9803956587411543,
+            "endpoint_rotation_deg": 4.271397768100921,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.2790485396337985,
+              "path_rotation_deg": 5.6421912287806055,
+              "endpoint_position_cm": 5.278203898604357,
+              "endpoint_rotation_deg": 8.254280010905914,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00037-of-01024::33",
+            "path_position_cm": 0.8562353191442412,
+            "path_rotation_deg": 1.6504853838159586,
+            "endpoint_position_cm": 1.242790222901253,
+            "endpoint_rotation_deg": 2.395392964146127,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 6.309160033500847,
+              "path_rotation_deg": 12.046098539981896,
+              "endpoint_position_cm": 13.198585362100593,
+              "endpoint_rotation_deg": 20.12167654858611,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00043-of-01024::34",
+            "path_position_cm": 0.6708670164102476,
+            "path_rotation_deg": 1.9421215453730643,
+            "endpoint_position_cm": 0.6219476974703023,
+            "endpoint_rotation_deg": 2.3420859515541896,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.2005073236454353,
+              "path_rotation_deg": 11.07241018255554,
+              "endpoint_position_cm": 2.4756774430013033,
+              "endpoint_rotation_deg": 11.155064602744048,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          }
+        ],
+        "position_better_than_static_demos": 64
+      },
+      "development": {
+        "path_position_cm": 8.377639052780582,
+        "path_rotation_deg": 15.219880778335952,
+        "endpoint_position_cm": 12.146685030172472,
+        "endpoint_rotation_deg": 20.853047255118682,
+        "windows": 40,
+        "passing_windows": 0,
+        "pose_fit_passed": false,
+        "static": {
+          "path_position_cm": 8.21232607389037,
+          "path_rotation_deg": 15.098500432102608,
+          "endpoint_position_cm": 10.565334249436834,
+          "endpoint_rotation_deg": 19.986393321428388,
+          "windows": 40,
+          "passing_windows": 0,
+          "pose_fit_passed": false
+        },
+        "per_episode": [
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+            "path_position_cm": 8.661833391652676,
+            "path_rotation_deg": 50.87834362561458,
+            "endpoint_position_cm": 16.8968027371748,
+            "endpoint_rotation_deg": 69.33542752849425,
+            "windows": 4,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.922375906610277,
+              "path_rotation_deg": 57.26360031299835,
+              "endpoint_position_cm": 14.750700707716302,
+              "endpoint_rotation_deg": 78.07093256323728,
+              "windows": 4,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+            "path_position_cm": 7.248605504033389,
+            "path_rotation_deg": 12.887551627319,
+            "endpoint_position_cm": 7.272203257646301,
+            "endpoint_rotation_deg": 14.562947647605373,
+            "windows": 6,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.74159597899271,
+              "path_rotation_deg": 11.166287890424732,
+              "endpoint_position_cm": 8.320131865085257,
+              "endpoint_rotation_deg": 12.634607290820517,
+              "windows": 6,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+            "path_position_cm": 10.466328749471623,
+            "path_rotation_deg": 8.892653427372899,
+            "endpoint_position_cm": 15.80450534167835,
+            "endpoint_rotation_deg": 12.7992766141192,
+            "windows": 6,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 8.604473200028156,
+              "path_rotation_deg": 8.053853283316334,
+              "endpoint_position_cm": 12.29107447372099,
+              "endpoint_rotation_deg": 11.75246584958198,
+              "windows": 6,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+            "path_position_cm": 17.24553144269908,
+            "path_rotation_deg": 14.98465103408585,
+            "endpoint_position_cm": 21.71902934118811,
+            "endpoint_rotation_deg": 17.08814269630834,
+            "windows": 3,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 10.39504001830386,
+              "path_rotation_deg": 9.651660838518607,
+              "endpoint_position_cm": 12.134292956619916,
+              "endpoint_rotation_deg": 12.600150972672763,
+              "windows": 3,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+            "path_position_cm": 4.762664426454769,
+            "path_rotation_deg": 9.825482144045457,
+            "endpoint_position_cm": 7.666497236531929,
+            "endpoint_rotation_deg": 12.65426961852746,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.6525250738797896,
+              "path_rotation_deg": 10.595255434033103,
+              "endpoint_position_cm": 4.080125865538286,
+              "endpoint_rotation_deg": 14.804317723902631,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+            "path_position_cm": 8.54705814541893,
+            "path_rotation_deg": 11.73334724396809,
+            "endpoint_position_cm": 8.958547377925333,
+            "endpoint_rotation_deg": 19.422079633150975,
+            "windows": 4,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 9.718325680409064,
+              "path_rotation_deg": 10.80366577045326,
+              "endpoint_position_cm": 8.739752430286266,
+              "endpoint_rotation_deg": 11.18415401080077,
+              "windows": 4,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+            "path_position_cm": 2.8946749074796387,
+            "path_rotation_deg": 8.110586490831583,
+            "endpoint_position_cm": 3.9473232428807994,
+            "endpoint_rotation_deg": 10.766404172367075,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 3.0998697775318593,
+              "path_rotation_deg": 10.654170332055509,
+              "endpoint_position_cm": 2.9733327278965462,
+              "endpoint_rotation_deg": 16.688951781382208,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+            "path_position_cm": 5.752917591343532,
+            "path_rotation_deg": 8.811933922571235,
+            "endpoint_position_cm": 12.036910355979956,
+            "endpoint_rotation_deg": 14.26654574128491,
+            "windows": 2,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 11.426329858537727,
+              "path_rotation_deg": 9.684496319261642,
+              "endpoint_position_cm": 15.785931532812565,
+              "endpoint_rotation_deg": 14.471744050817179,
+              "windows": 2,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+            "path_position_cm": 6.540418526145808,
+            "path_rotation_deg": 10.724311800427463,
+            "endpoint_position_cm": 12.509295533959722,
+            "endpoint_rotation_deg": 17.684843088009416,
+            "windows": 6,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.108049697598318,
+              "path_rotation_deg": 11.54362178831085,
+              "endpoint_position_cm": 10.995563741175559,
+              "endpoint_rotation_deg": 16.6314350580652,
+              "windows": 6,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          },
+          {
+            "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+            "path_position_cm": 8.436154221275762,
+            "path_rotation_deg": 12.974281661447401,
+            "endpoint_position_cm": 11.294285250488501,
+            "endpoint_rotation_deg": 16.434118061295706,
+            "windows": 5,
+            "passing_windows": 0,
+            "pose_fit_passed": false,
+            "static": {
+              "path_position_cm": 7.932590774602391,
+              "path_rotation_deg": 11.253109698346014,
+              "endpoint_position_cm": 11.385855564643549,
+              "endpoint_rotation_deg": 13.318771467990967,
+              "windows": 5,
+              "passing_windows": 0,
+              "pose_fit_passed": false
+            }
+          }
+        ],
+        "position_better_than_static_demos": 6
+      }
+    }
+  },
+  "peak_reserved_gib": 5.794921875,
+  "scientific_verdict": "Fixed final reference; independent physical-metric analysis required, no causal module verdict."
+}

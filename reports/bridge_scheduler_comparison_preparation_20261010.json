@@ -1,0 +1,28 @@
+{
+  "stage": "prepared_not_run",
+  "checkpoint_job": 193761,
+  "windows": 40,
+  "sampling_seed": 0,
+  "timesteps": 100,
+  "new_training": false,
+  "packages_installed": false,
+  "local_checks": [
+    "trace and actual noise capture preserve output/RNG",
+    "hook and randn_like cleanup after failure",
+    "archived core module hashes unchanged",
+    "Python and Bash syntax"
+  ],
+  "official_scheduler_runtime_checked_locally": false,
+  "source_sha256": {
+    "diagnose_multiscale_noise.py": "2773f0553d01a17dd61499b554e176cadf22218243065324dbea98eca123d340",
+    "compare_official_ddpm.py": "63ce7212db8f48a505e5398f21ca9173cd8f42d4dc257b1cd098a9ead2a610bd",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "run_bridge_official_unet_training.py": "3dcc6603461c1403d039a13d872308f4b17aa8854a7a1c27b93a9c3d99c7f3a2",
+    "evaluate_bridge_one_step_sampler.py": "e49df63dca4c612bd967d04ea48c1d207028356b33ff084e93edcefdb6ac6ffe",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "evaluate_bridge_ddim_steps.py": "19c938e093fa2536302cfd6c0c03f41041b00250d0e6f2ab853cddab949a50b4",
+    "scheduler_compare.sh": "986d9e93e1cc658be87f0771136e76b39cf2561db27a01c99bc0468586ded23e",
+    "README.md": "702afa605ac58885475f477fc4f51dcfa7da81efc6abcdee612989a062c5b424"
+  }
+}

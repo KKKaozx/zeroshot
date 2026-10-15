@@ -1,0 +1,3 @@
+# 64-window fitting capacity check
+
+Retain32 known train windows; add32 from16 other train episodes with matching task counts. Same40 development windows, no reserved test targets. Fixed seed43, native DDPM100, pose-only training. 4096 updates =512 draw slots/window; reduce LR after256 complete traversals. Unchanged production modules; generated runner adapts only sample size/budget/input checks and removes obsolete same-data comparisons. Reference image tensors are preprocessing audit assets, not new raw data downloads. Preflight includes continuous versus restored Adam-state exact replay; full fit is not executed locally.

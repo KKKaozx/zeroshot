@@ -1,0 +1,373 @@
+{
+  "stage": "preflight",
+  "execution_checks_passed": true,
+  "trained": true,
+  "validation_evaluated": false,
+  "simulation_executed": false,
+  "downloads": false,
+  "gripper_trained": false,
+  "checkpoints_saved": false,
+  "runs": [
+    {
+      "initialization_seed": 42,
+      "arm": "early_alone",
+      "initial_shared_sha256": "5044e154205b284cf96d147d21d7e321d10887e03a25b8542f56d11d67dd3423",
+      "updates": 3,
+      "draw_slots": [
+        24,
+        0
+      ],
+      "first_gradients": {
+        "adapter.": true,
+        "diffusion_decoder.": true,
+        "history_projection.": true
+      },
+      "changed": {
+        "adapter.": true,
+        "diffusion_decoder.": true,
+        "history_projection.": true
+      },
+      "frozen_other_unchanged": true,
+      "mean_warm_update_seconds": 0.2574999999778811,
+      "peak_reserved_gib": 3.755859375,
+      "history": [
+        {
+          "updates_per_window": 0,
+          "draw_slots_per_window": 0,
+          "trained_windows": 1,
+          "training_metrics": {
+            "position_cm": 20.81862449645996,
+            "rotation_deg": 149.46229553222656,
+            "endpoint_position_cm": 21.192214965820312,
+            "endpoint_rotation_deg": 172.3738555908203,
+            "seed_position_cm": [
+              20.821142196655273,
+              20.813255310058594,
+              20.821475982666016
+            ],
+            "seed_rotation_deg": [
+              149.59664916992188,
+              149.434326171875,
+              149.35589599609375
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 17.022686004638672,
+            "static_rotation_deg": 15.345033645629883,
+            "pose_fit_passed": false
+          },
+          "early": {
+            "position_cm": 20.81862449645996,
+            "rotation_deg": 149.46229553222656,
+            "endpoint_position_cm": 21.192214965820312,
+            "endpoint_rotation_deg": 172.3738555908203,
+            "seed_position_cm": [
+              20.821142196655273,
+              20.813255310058594,
+              20.821475982666016
+            ],
+            "seed_rotation_deg": [
+              149.59664916992188,
+              149.434326171875,
+              149.35589599609375
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 17.022686004638672,
+            "static_rotation_deg": 15.345033645629883,
+            "pose_fit_passed": false
+          },
+          "late": {
+            "position_cm": 8.784656524658203,
+            "rotation_deg": 148.36422729492188,
+            "endpoint_position_cm": 8.267949104309082,
+            "endpoint_rotation_deg": 135.27542114257812,
+            "seed_position_cm": [
+              8.782693862915039,
+              8.789239883422852,
+              8.782034873962402
+            ],
+            "seed_rotation_deg": [
+              148.39434814453125,
+              148.15142822265625,
+              148.54690551757812
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 7.576255798339844,
+            "static_rotation_deg": 7.885324954986572,
+            "pose_fit_passed": false
+          },
+          "late_is_training_target": false
+        },
+        {
+          "updates_per_window": 3,
+          "draw_slots_per_window": 24,
+          "trained_windows": 1,
+          "training_metrics": {
+            "position_cm": 3.6470329761505127,
+            "rotation_deg": 37.39945983886719,
+            "endpoint_position_cm": 6.010290622711182,
+            "endpoint_rotation_deg": 62.089324951171875,
+            "seed_position_cm": [
+              3.648120880126953,
+              3.646141529083252,
+              3.646836280822754
+            ],
+            "seed_rotation_deg": [
+              37.411468505859375,
+              37.38902282714844,
+              37.39788818359375
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 17.022686004638672,
+            "static_rotation_deg": 15.345033645629883,
+            "pose_fit_passed": false
+          },
+          "early": {
+            "position_cm": 3.6470329761505127,
+            "rotation_deg": 37.39945983886719,
+            "endpoint_position_cm": 6.010290622711182,
+            "endpoint_rotation_deg": 62.089324951171875,
+            "seed_position_cm": [
+              3.648120880126953,
+              3.646141529083252,
+              3.646836280822754
+            ],
+            "seed_rotation_deg": [
+              37.411468505859375,
+              37.38902282714844,
+              37.39788818359375
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 17.022686004638672,
+            "static_rotation_deg": 15.345033645629883,
+            "pose_fit_passed": false
+          },
+          "late": {
+            "position_cm": 24.333839416503906,
+            "rotation_deg": 44.84499740600586,
+            "endpoint_position_cm": 22.572967529296875,
+            "endpoint_rotation_deg": 76.9316177368164,
+            "seed_position_cm": [
+              24.332698822021484,
+              24.334041595458984,
+              24.33477783203125
+            ],
+            "seed_rotation_deg": [
+              44.84590530395508,
+              44.83910369873047,
+              44.84998321533203
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 7.576255798339844,
+            "static_rotation_deg": 7.885324954986572,
+            "pose_fit_passed": false
+          },
+          "late_is_training_target": false
+        }
+      ],
+      "loss_first": 0.875800609588623,
+      "loss_last": 0.2224787175655365,
+      "final_hashes": {
+        "adapter": "f6cfd3015a7398ffdc43103630aa4230b2c00045fa4ee69a4b4bf3db4b5d2533",
+        "decoder": "522e8328a8dc6501f33552f89f72befa63bb97052481613583c6ecd6b3c10ed5",
+        "history_projection": "4e4001f9db60fac6a9936d56827fd487c62fddaeb7db269ec51db0c7c3a09b0d"
+      },
+      "replay_exact": true
+    },
+    {
+      "initialization_seed": 42,
+      "arm": "early_late_joint",
+      "initial_shared_sha256": "5044e154205b284cf96d147d21d7e321d10887e03a25b8542f56d11d67dd3423",
+      "updates": 6,
+      "draw_slots": [
+        24,
+        24
+      ],
+      "first_gradients": {
+        "adapter.": true,
+        "diffusion_decoder.": true,
+        "history_projection.": true
+      },
+      "changed": {
+        "adapter.": true,
+        "diffusion_decoder.": true,
+        "history_projection.": true
+      },
+      "frozen_other_unchanged": true,
+      "mean_warm_update_seconds": 0.26239999999525027,
+      "peak_reserved_gib": 3.775390625,
+      "history": [
+        {
+          "updates_per_window": 0,
+          "draw_slots_per_window": 0,
+          "trained_windows": 2,
+          "training_metrics": {
+            "position_cm": 14.801640510559082,
+            "rotation_deg": 148.9132537841797,
+            "endpoint_position_cm": 14.730080604553223,
+            "endpoint_rotation_deg": 153.82464599609375,
+            "seed_position_cm": [
+              14.801918029785156,
+              14.801247596740723,
+              14.80175495147705
+            ],
+            "seed_rotation_deg": [
+              148.99551391601562,
+              148.79287719726562,
+              148.95140075683594
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 2,
+            "static_position_cm": 12.299470901489258,
+            "static_rotation_deg": 11.615180015563965,
+            "pose_fit_passed": false
+          },
+          "early": {
+            "position_cm": 20.81862449645996,
+            "rotation_deg": 149.46229553222656,
+            "endpoint_position_cm": 21.192214965820312,
+            "endpoint_rotation_deg": 172.3738555908203,
+            "seed_position_cm": [
+              20.821142196655273,
+              20.813255310058594,
+              20.821475982666016
+            ],
+            "seed_rotation_deg": [
+              149.59664916992188,
+              149.434326171875,
+              149.35589599609375
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 17.022686004638672,
+            "static_rotation_deg": 15.345033645629883,
+            "pose_fit_passed": false
+          },
+          "late": {
+            "position_cm": 8.784656524658203,
+            "rotation_deg": 148.36422729492188,
+            "endpoint_position_cm": 8.267949104309082,
+            "endpoint_rotation_deg": 135.27542114257812,
+            "seed_position_cm": [
+              8.782693862915039,
+              8.789239883422852,
+              8.782034873962402
+            ],
+            "seed_rotation_deg": [
+              148.39434814453125,
+              148.15142822265625,
+              148.54690551757812
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 7.576255798339844,
+            "static_rotation_deg": 7.885324954986572,
+            "pose_fit_passed": false
+          },
+          "late_is_training_target": true
+        },
+        {
+          "updates_per_window": 3,
+          "draw_slots_per_window": 24,
+          "trained_windows": 2,
+          "training_metrics": {
+            "position_cm": 11.572466850280762,
+            "rotation_deg": 20.454042434692383,
+            "endpoint_position_cm": 13.800436973571777,
+            "endpoint_rotation_deg": 47.8901481628418,
+            "seed_position_cm": [
+              11.573219299316406,
+              11.57172966003418,
+              11.572447776794434
+            ],
+            "seed_rotation_deg": [
+              20.46517562866211,
+              20.451101303100586,
+              20.44585609436035
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 2,
+            "static_position_cm": 12.299470901489258,
+            "static_rotation_deg": 11.615180015563965,
+            "pose_fit_passed": false
+          },
+          "early": {
+            "position_cm": 13.88016128540039,
+            "rotation_deg": 20.844083786010742,
+            "endpoint_position_cm": 15.288439750671387,
+            "endpoint_rotation_deg": 53.62062454223633,
+            "seed_position_cm": [
+              13.882567405700684,
+              13.877044677734375,
+              13.880874633789062
+            ],
+            "seed_rotation_deg": [
+              20.865312576293945,
+              20.838703155517578,
+              20.828235626220703
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 17.022686004638672,
+            "static_rotation_deg": 15.345033645629883,
+            "pose_fit_passed": false
+          },
+          "late": {
+            "position_cm": 9.264769554138184,
+            "rotation_deg": 20.06400489807129,
+            "endpoint_position_cm": 12.312432289123535,
+            "endpoint_rotation_deg": 42.15966796875,
+            "seed_position_cm": [
+              9.263872146606445,
+              9.266414642333984,
+              9.264021873474121
+            ],
+            "seed_rotation_deg": [
+              20.06504249572754,
+              20.063499450683594,
+              20.063474655151367
+            ],
+            "windows_all_three_seeds_pass": 0,
+            "windows": 1,
+            "static_position_cm": 7.576255798339844,
+            "static_rotation_deg": 7.885324954986572,
+            "pose_fit_passed": false
+          },
+          "late_is_training_target": true
+        }
+      ],
+      "loss_first": 0.875800609588623,
+      "loss_last": 0.2004733383655548,
+      "final_hashes": {
+        "adapter": "c43c864a5ba145c0cfea2f945fffe2fe122a45a419a1983b6e47f44f625584d0",
+        "decoder": "9c0086d9ce32fbcfac556773674a958d50a7df84f02d247b03081b70aa99d06c",
+        "history_projection": "5d530d07fea39c0087ea9929509e070aa8ef9785d76199f25bebea1b994ff84d"
+      },
+      "replay_exact": true
+    }
+  ],
+  "targets_match_retained": true,
+  "images_match_retained": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "check_bridge_minimal_pair.py": "80ce1d694539143a93dc5491979bffb09a1edd98da7239313349a95fef3dad04"
+  },
+  "first_loss": {
+    "42": 0.875800609588623
+  },
+  "elapsed_seconds": 27.06199999997625,
+  "clip_unchanged": true,
+  "production_source_unchanged": true,
+  "fit_verdict_by_arm": null
+}

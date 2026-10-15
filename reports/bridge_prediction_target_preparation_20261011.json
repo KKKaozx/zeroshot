@@ -1,0 +1,42 @@
+{
+  "stage": "prepared_not_cluster_executed",
+  "experiment": "current_multiscale_sample_x0_vs_epsilon",
+  "source_training_job": 193761,
+  "official_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "core_modules_unchanged": true,
+  "training_windows": 1836,
+  "validation_windows_indexed_only": 40,
+  "train_updates_per_group": 18360,
+  "preflight_updates_per_group": 6,
+  "normalization_changed": false,
+  "ema_added": false,
+  "new_dependencies_or_downloads": false,
+  "local_checks_passed": [
+    "Python source syntax",
+    "Bash syntax",
+    "same timesteps/noisy inputs/training RNG",
+    "correct clean/noise targets",
+    "finite nonzero decoder gradients for both objectives",
+    "known clean full100-step sampling interpretation",
+    "same sampling RNG",
+    "physical clipping and unit quaternion",
+    "five frozen core source hashes"
+  ],
+  "local_torch_version": "2.11.0+cu128",
+  "additional_cluster_checkpoint_gib_approx": 1.1,
+  "files": {
+    "run_bridge_prediction_target.py": "bbc56172eb40367d6086cecc9bca709ae639d61d6d7b1725eefe34cb1795aee8",
+    "run_bridge_target_pair.py": "080a80e907f9af7246a886a0b8cf430a8eeeeb4edaf985b6a2fbaa6fa9ad9f90",
+    "check_bridge_prediction_targets.py": "f03e116174c2e4b19a9ceef827bbacb7bcd90f58eee4d7c2d7e3f1d12d3bc746",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "preflight.sh": "6e05cfe492545d59205bc61287ab99912add989b7987930931e86430c29099ab",
+    "train.sh": "a267c57b300330cf91545c6b9243962324b370d06bf539097523832396db992d",
+    "README.md": "fbc9a632782f6c9048528e5874128bc459c0c6039589a9b8385a128da52f8159"
+  },
+  "archive": "D:\\ntu_related\\dissertation\\GPU cluster\\bridge_prediction_target_v1.zip",
+  "archive_bytes": 26311,
+  "archive_sha256": "ea0140a15fd3c53eb8d9cca26fd38320babab3ca54c9320800446a906bc3e97a",
+  "zip_integrity_passed": true
+}

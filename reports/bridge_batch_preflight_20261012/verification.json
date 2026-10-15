@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "paired_initialization": true,
+  "local_draw_slots_per_arm": 64,
+  "formal_draw_slots_per_window": 512,
+  "local_preflight_checks": [
+    {
+      "arm": "mixed",
+      "split": "train",
+      "float64_metrics": {
+        "path_position_cm": 9.37008525637091,
+        "path_rotation_deg": 16.675791734057892,
+        "endpoint_position_cm": 13.04871129955937,
+        "endpoint_rotation_deg": 19.760996516529655
+      },
+      "absolute_difference": {
+        "path_position_cm": 4.5987664876179224e-07,
+        "path_rotation_deg": 4.863103054830731e-05,
+        "endpoint_position_cm": 4.765002881157443e-07,
+        "endpoint_rotation_deg": 4.261333141286627e-05
+      }
+    },
+    {
+      "arm": "mixed",
+      "split": "development",
+      "float64_metrics": {
+        "path_position_cm": 10.651054293183156,
+        "path_rotation_deg": 61.70857589575479,
+        "endpoint_position_cm": 15.597775564223285,
+        "endpoint_rotation_deg": 87.78408495899036
+      },
+      "absolute_difference": {
+        "path_position_cm": 8.914106253143927e-08,
+        "path_rotation_deg": 1.876684854096311e-05,
+        "endpoint_position_cm": 1.0493373459041777e-07,
+        "endpoint_rotation_deg": 1.9712408331429288e-05
+      }
+    },
+    {
+      "arm": "homogeneous",
+      "split": "train",
+      "float64_metrics": {
+        "path_position_cm": 7.92526768674459,
+        "path_rotation_deg": 33.8528999937785,
+        "endpoint_position_cm": 12.166224526513957,
+        "endpoint_rotation_deg": 24.44295842134905
+      },
+      "absolute_difference": {
+        "path_position_cm": 9.636025311010599e-09,
+        "path_rotation_deg": 2.1423221859606656e-05,
+        "endpoint_position_cm": 9.068356519037479e-07,
+        "endpoint_rotation_deg": 2.8199791433536348e-05
+      }
+    },
+    {
+      "arm": "homogeneous",
+      "split": "development",
+      "float64_metrics": {
+        "path_position_cm": 7.329371368101332,
+        "path_rotation_deg": 72.41062511588564,
+        "endpoint_position_cm": 12.947403086317522,
+        "endpoint_rotation_deg": 85.2719383223018
+      },
+      "absolute_difference": {
+        "path_position_cm": 3.92606946952867e-07,
+        "path_rotation_deg": 1.8731608292910096e-05,
+        "endpoint_position_cm": 1.3221595906998118e-07,
+        "endpoint_rotation_deg": 1.144241899453391e-05
+      }
+    }
+  ],
+  "preflight_elapsed_seconds": 71.95299999997951,
+  "peak_reserved_gib": 3.873046875,
+  "package_bytes": 60534,
+  "python_syntax_passed": true,
+  "lf_shell_files": true,
+  "archive_integrity_passed": true
+}

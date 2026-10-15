@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "initialization_seed": 42,
+  "report_sha256": "caa9b11eb58257c0a15703eb4bd0a99802e1a43f9272cc472b53b57bf37504e4",
+  "verification_sha256": "78dc329904266a664731d09fe11654e21a758b2ce9c7988c9e0be851e2daf2f8",
+  "elapsed_seconds": 845.655999999959,
+  "zero_replay": {
+    "passed": true,
+    "parameters_exact": true,
+    "all_five_snapshots_exact": true,
+    "max_absolute_differences": {
+      "predictions": 0.0,
+      "contexts": 0.0,
+      "targets": 0.0,
+      "losses": 0.0
+    }
+  },
+  "state_interface": {
+    "passed": true,
+    "same_augmented_initialization": true,
+    "same_initial_loss": true,
+    "real_first_state_gradient": 0.11471433937549591,
+    "real_context_max_abs": 0.008912600576877594,
+    "zero_port_remains_zero": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "stage": "design_only_not_packaged_or_submitted",
+  "purpose": "Frozen authorEMA observation sensitivity; not a training or improvement experiment",
+  "scope": "All9 broccoli development windows, all40 development controls replayed",
+  "model": "ema_final.pt",
+  "checkpoint_sha256": "c5c7401054ffa1fb159d86f136a27e1a62895fbdecb40d81c91449414ec5a975",
+  "origin_job": 203699,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "batch": 8,
+  "num_inference_steps": 100,
+  "updates": 0,
+  "donor_method": "Same-task maximum cosine of previously frozenCLIP descriptor; source selection uses no future targets or predicted errors",
+  "cases": [
+    "original_image_original_state",
+    "donor_image_original_state",
+    "original_image_donor_state",
+    "donor_image_donor_state"
+  ],
+  "donors": [
+    {
+      "window": 138,
+      "donor_window": 111
+    },
+    {
+      "window": 139,
+      "donor_window": 111
+    },
+    {
+      "window": 140,
+      "donor_window": 54
+    },
+    {
+      "window": 141,
+      "donor_window": 111
+    },
+    {
+      "window": 142,
+      "donor_window": 113
+    },
+    {
+      "window": 143,
+      "donor_window": 106
+    },
+    {
+      "window": 144,
+      "donor_window": 29
+    },
+    {
+      "window": 145,
+      "donor_window": 115
+    },
+    {
+      "window": 146,
+      "donor_window": 114
+    }
+  ],
+  "replay_requirement": "Original full40 predictions and native batch/RNG schedule must reproduce saved EMA outputs before reading intervention differences",
+  "paired_noise_requirement": "For each original batch, restore identical CPU/CUDA RNG states before every intervention, preserve B8 and restore original post-batch RNG for the next batch",
+  "quality_metrics_valid_for": [
+    "original context versus original target",
+    "both donor context versus donor target"
+  ],
+  "crossed_context_interpretation": "Image/state crosses may be physically inconsistent; report output sensitivity only, not accuracy improvement or task success",
+  "weight_and_source_changes_allowed": false,
+  "reserved_test_used": false,
+  "next_action": "Prepare small cluster probe after design review; no job submitted in this audit"
+}

@@ -1,0 +1,20 @@
+{
+  "evidence_source": "User-pasted rounded console summary and preceding seed44 final log; full report/NPZ not yet available locally",
+  "job_id": 198871,
+  "execution_checks_passed": true,
+  "training_windows": 32,
+  "development_windows": 40,
+  "development_demonstrations": 10,
+  "updates_per_arm": 2048,
+  "draw_slots_per_window": 512,
+  "runs": [
+    {"seed": 42, "arm": "mixed", "train_position_mm": 4.07, "train_rotation_deg": 2.06, "windows_all_sampling_seeds_pass": 25, "development_position_cm": 9.18, "development_rotation_deg": 18.48},
+    {"seed": 42, "arm": "homogeneous", "train_position_mm": 48.67, "train_rotation_deg": 13.38, "windows_all_sampling_seeds_pass": 0, "development_position_cm": 9.52, "development_rotation_deg": 19.18},
+    {"seed": 43, "arm": "mixed", "train_position_mm": 21.86, "train_rotation_deg": 5.24, "windows_all_sampling_seeds_pass": 0, "development_position_cm": 8.72, "development_rotation_deg": 18.19},
+    {"seed": 43, "arm": "homogeneous", "train_position_mm": 85.46, "train_rotation_deg": 15.75, "windows_all_sampling_seeds_pass": 0, "development_position_cm": 11.49, "development_rotation_deg": 19.92},
+    {"seed": 44, "arm": "mixed", "train_position_mm": 3.03, "train_rotation_deg": 1.62, "windows_all_sampling_seeds_pass": 31, "development_position_cm": 9.21, "development_rotation_deg": 19.05, "pose_fit_passed_from_preceding_log": true},
+    {"seed": 44, "arm": "homogeneous", "train_position_mm": 83.69, "train_rotation_deg": 15.41, "windows_all_sampling_seeds_pass": 0, "development_position_cm": 11.44, "development_rotation_deg": 19.79}
+  ],
+  "development_static_baseline": {"position_cm": 8.21, "rotation_deg": 15.10},
+  "interpretation": "Mixed batches outperform homogeneous batches on training position and rotation in all three paired initializations. Only mixed seed44 meets the fitting gate; all development runs remain worse than static on position and rotation. Unique faulty layer and full-data failure cause are not identified."
+}

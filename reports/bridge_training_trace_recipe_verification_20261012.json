@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "unchanged_fields": [
+    "config",
+    "train",
+    "development",
+    "initialization_seeds",
+    "sampling_seeds",
+    "batch_size",
+    "updates_per_arm",
+    "draw_slots_per_window",
+    "optimizer",
+    "lr",
+    "weight_decay",
+    "learning_rate_schedule",
+    "gradient_clip",
+    "loss",
+    "context",
+    "sampling",
+    "retained_train_checks",
+    "input_reference_files_sha256",
+    "input_validation"
+  ],
+  "frozen_files": [
+    "dataset.py",
+    "models.py",
+    "adapter.py",
+    "diffusion_decoder.py",
+    "replay_and_fit_bridge_positive.py",
+    "evaluate_bridge_endpoint_metrics.py",
+    "check_bridge_batch_control.py",
+    "bridge_input_contract.py"
+  ],
+  "manifest_sha256": "a95d9ff6727fba65f045f5c264dc1c03b6abbfdbbcdb03398850aa9419d2ecdb",
+  "local_weights_saved": false
+}

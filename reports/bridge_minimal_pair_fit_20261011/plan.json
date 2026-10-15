@@ -1,0 +1,125 @@
+{
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "bridge_measured_affine_unbounded_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  },
+  "selection": [
+    {
+      "dataset_index": 55,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 25,
+      "start_index": 0
+    },
+    {
+      "dataset_index": 58,
+      "partition": "train",
+      "task": "close microwave",
+      "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+      "record_index": 25,
+      "start_index": 12
+    }
+  ],
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "check_bridge_minimal_pair.py": "80ce1d694539143a93dc5491979bffb09a1edd98da7239313349a95fef3dad04"
+  },
+  "reference_plan_sha256": "79c794257808d5e74ac1bf6994b2805b7429e4ed8e894699719d5cd9a9339e37",
+  "train_initialization_seeds": [
+    42,
+    43,
+    44
+  ],
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "arms": [
+    "early_alone",
+    "early_late_joint"
+  ],
+  "changing_variable": "Add the late window, alternating homogeneous batches; early batches and random keys shared",
+  "batch_size": 8,
+  "batch_policy": "Eight replicas of one window, with independent per-replica diffusion noise/dropout",
+  "updates_per_window": 500,
+  "draw_slots_per_window": 4000,
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "weight_decay": 0,
+  "learning_rate_schedule": "constant",
+  "gradient_clip": 1.0,
+  "loss": "Pose x0 MSE only",
+  "gripper": "Frozen; no success or event verdict",
+  "context": "Same repeated-current two-Adapter-call history projection as previous matched controls; W initialized zero",
+  "sample_steps": 100,
+  "prediction_type": "sample",
+  "schedule": "squaredcos_cap_v2",
+  "evaluation_exposure_milestones": [
+    64,
+    500
+  ],
+  "main_budget": "64 updates/window=512 draw slots, near previous 487..518 slots",
+  "secondary_budget": "500 updates/window=4000 draw slots, fixed before observing results",
+  "pass_criteria": {
+    "each_sampling_seed_path_position_cm": 0.5,
+    "each_sampling_seed_path_rotation_deg": 5,
+    "overall_each_seed_endpoint_position_cm": 1.0,
+    "overall_each_seed_endpoint_rotation_deg": 10.0,
+    "required_windows_fraction": 0.9,
+    "replicated_pass": "Every trained window passes at all three initialization seeds"
+  },
+  "evaluation_batch": "Always both inputs in order t0,t12, preserving early noise draws and GPU shapes. Late output from early-alone is explicitly not a fitted target",
+  "comparison_limits": [
+    "Different batch composition and optimizer update counts from prior 32-window runs",
+    "Joint arm has twice the total optimizer steps; per-window draw slots and batch size match",
+    "Only one seen demonstration; no generalization or unique faulty-layer inference",
+    "CUDA attention backward may be nondeterministic; paired seeds are not bitwise training guarantees"
+  ],
+  "storage_policy": "Small reports, final contexts, predictions only; no checkpoints or cached CLIP tokens"
+}

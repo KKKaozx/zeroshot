@@ -45,6 +45,57 @@ def common_state(state):
     }
 
 
+class TrainableEMA:
+    """Shadow trainable parameters; match the verified author's EMA warmup."""
+
+    def __init__(self, model):
+        import torch
+        if any(isinstance(module, torch.nn.modules.batchnorm._BatchNorm)
+               for module in model.modules()):
+            raise ValueError("This EMA scope assumes the archived model has no BatchNorm")
+        self.shadow = {
+            name: parameter.detach().clone()
+            for name, parameter in model.named_parameters()
+            if parameter.requires_grad
+        }
+        self.optimization_step = 0
+        self.decay = 0.0
+        self.recipe = {
+            "update_after_step": 0, "inv_gamma": 1.0, "power": 0.75,
+            "min_value": 0.0, "max_value": 0.9999,
+            "update_timing": "after_each_optimizer_step",
+            "scope": "all_trainable_parameters; frozen_CLIP_excluded",
+        }
+
+    def step(self, model):
+        import torch
+        parameters = {
+            name: parameter for name, parameter in model.named_parameters()
+            if parameter.requires_grad
+        }
+        if set(parameters) != set(self.shadow):
+            raise ValueError("Trainable parameter set changed during EMA")
+        step = max(0, self.optimization_step - 1)
+        self.decay = min(0.9999, 1 - (1 + step) ** -0.75) if step else 0.0
+        with torch.no_grad():
+            # Separate storage and no random operations: optimizer/RNG unaffected.
+            values = list(self.shadow.values())
+            current = [parameters[name].detach() for name in self.shadow]
+            torch._foreach_mul_(values, self.decay)
+            torch._foreach_add_(values, current, alpha=1 - self.decay)
+        self.optimization_step += 1
+
+    def state_dict(self, raw_state):
+        # Fixed buffers keep the current raw value; only parameters are averaged.
+        if not set(self.shadow).issubset(raw_state):
+            raise ValueError("EMA parameters are not covered by saved trainable state")
+        return {
+            name: self.shadow[name].detach().cpu().clone()
+            if name in self.shadow else value.detach().cpu().clone()
+            for name, value in raw_state.items()
+        }
+
+
 def select_windows(dataset, splits, selection):
     lookup = {(row["shard"], row["record_index"]): row for row in selection}
     rows = []
@@ -83,6 +134,8 @@ def main() -> None:
     parser.add_argument("--window-reference", type=Path, required=True)
     parser.add_argument("--preflight", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--ema", action="store_true", help="Save EMA shadow without changing raw optimization")
+    parser.add_argument("--baseline-report", type=Path, help="Bind EMA run to the original 193761 protocol")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
@@ -113,6 +166,14 @@ def main() -> None:
     source = json.loads(args.head_report.read_text())
     preflight = json.loads(args.preflight.read_text())
     reference = json.loads(args.window_reference.read_text())
+    baseline = json.loads(args.baseline_report.read_text()) if args.baseline_report else None
+    if args.ema and baseline is None:
+        raise ValueError("EMA comparison requires the original training report")
+    if baseline is not None:
+        if not (baseline.get("passed") and baseline.get("stage") == "multiscale_x0_training"):
+            raise ValueError("Unexpected original multiscale baseline report")
+        if sha256(Path(baseline["checkpoint"]["path"])) != baseline["checkpoint"]["sha256"]:
+            raise ValueError("Original checkpoint is missing or changed")
     if not (source.get("passed") and source.get("phase") == "train"):
         raise ValueError("192651 source report did not pass")
     if not (
@@ -225,6 +286,7 @@ def main() -> None:
     parameters = [parameter for parameter in model.parameters() if parameter.requires_grad]
     optimizer = torch.optim.AdamW(parameters, lr=1e-4, weight_decay=1e-4)
     scheduler = build_learning_rate_scheduler(optimizer, "cosine", 20)
+    ema = TrainableEMA(model) if args.ema else None
 
     def batch(indices):
         _, images, current, actions, mask = collate_batch([items[index] for index in indices])
@@ -260,6 +322,17 @@ def main() -> None:
         "gradient_clip_norm": 1.0,
         "evaluation": "separate job after checkpoint is safely saved",
     }
+    if ema is not None:
+        for key in ("module_sha256", "order_sha256", "initial_shared_sha256",
+                    "initial_trainable_sha256", "clip_sha256", "prediction_type",
+                    "architecture", "epochs", "batch_size", "updates", "optimizer",
+                    "learning_rate", "weight_decay", "lr_schedule", "gradient_clip_norm"):
+            if protocol[key] != baseline["protocol"][key]:
+                raise ValueError(f"EMA control differs from baseline: {key}")
+        protocol["ema"] = ema.recipe
+        protocol["baseline_report_sha256"] = sha256(args.baseline_report)
+        protocol["only_intended_change_from_compact_x0"] = "193761 raw training unchanged; EMA shadow added"
+        protocol["runner_sha256"] = sha256(Path(__file__))
     (args.output / "protocol.json").write_text(json.dumps(protocol, indent=2) + "\n")
 
     torch.cuda.reset_peak_memory_stats()
@@ -311,6 +384,8 @@ def main() -> None:
                     raise ValueError(f"Missing first-update gradient: {first_gradient}")
             torch.nn.utils.clip_grad_norm_(parameters, 1.0, error_if_nonfinite=True)
             optimizer.step()
+            if ema is not None:
+                ema.step(model)
             torch.cuda.synchronize()
             durations.append(time.monotonic() - began)
             epoch_losses.append(float(loss))
@@ -350,6 +425,17 @@ def main() -> None:
         {"config": config, "model": final_state, "protocol": protocol}, checkpoint
     )
     checkpoint_hash = sha256(checkpoint)
+    ema_checkpoint = None
+    raw_replay_matches = None
+    if ema is not None:
+        if ema.optimization_step != updates:
+            raise ValueError("EMA update count differs from optimizer update count")
+        ema_checkpoint = args.output / "ema.pt"
+        torch.save({"config": config, "model": ema.state_dict(final_state),
+                    "protocol": protocol, "ema_updates": ema.optimization_step}, ema_checkpoint)
+        original = torch.load(baseline["checkpoint"]["path"], map_location="cpu", weights_only=False)
+        raw_replay_matches = digest(original["model"]) == digest(final_state)
+        del original
     final_groups = {
         "adapter": digest({k: v for k, v in final_state.items() if k.startswith("adapter.")}),
         "decoder": digest({k: v for k, v in final_state.items() if k.startswith("diffusion_decoder.")}),
@@ -361,7 +447,7 @@ def main() -> None:
     clip_unchanged = digest(encoders()) == clip_hash
     passed = bool(clip_unchanged and all(module_changed.values()) and checkpoint.exists())
     report = {
-        "stage": "multiscale_x0_training",
+        "stage": "multiscale_x0_training_with_ema" if ema is not None else "multiscale_x0_training",
         "passed": passed,
         "trained": True,
         "evaluated": False,
@@ -385,9 +471,17 @@ def main() -> None:
         "limits": [
             "Final epoch-20 weights are saved before any evaluation.",
             "No development or held-out test target was used for checkpoint selection.",
-            "Offline one-step evaluation must run as a separate immutable-checkpoint job.",
+            "Offline evaluation must run as a separate immutable-checkpoint job.",
         ],
     }
+    if ema_checkpoint is not None:
+        report["ema_checkpoint"] = {"path": str(ema_checkpoint), "sha256": sha256(ema_checkpoint),
+                                    "bytes": ema_checkpoint.stat().st_size}
+        report["ema_updates"] = ema.optimization_step
+        report["ema_final_decay"] = ema.decay
+        report["raw_final_tensor_replay_matches_193761"] = raw_replay_matches
+        report["limits"].append("Training integrity passing is not an EMA quality improvement result.")
+        print("EMA SAVED", ema_checkpoint, "raw replay matches:", raw_replay_matches, flush=True)
     (args.output / "report.json").write_text(json.dumps(report, indent=2) + "\n")
     print("MULTISCALE X0 TRAINING", "PASSED" if passed else "FAILED")
     print("CHECKPOINT", checkpoint, checkpoint_hash)

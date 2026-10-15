@@ -1,0 +1,25 @@
+{
+  "scope": "synthetic CPU U-Net forward/backward/one-update only",
+  "official_commit": "7fb7891e9f1038ffb66a392b8458a2d836426884",
+  "upstream_hashes_verified": true,
+  "torch": "2.11.0+cu128",
+  "device": "cpu",
+  "passed": true,
+  "parameters": 70927114,
+  "output_shape": [
+    2,
+    16,
+    10
+  ],
+  "loss": 1.2593374252319336,
+  "condition_gradient": true,
+  "parameter_changed": true,
+  "global_condition_width_is_placeholder": true,
+  "real_dataset_read": false,
+  "full_policy_instantiated": false,
+  "scheduler_executed": false,
+  "weights_downloaded": false,
+  "checkpoint_saved": false,
+  "generalization_or_task_success_measured": false,
+  "elapsed_seconds": 2.2189999999827705
+}

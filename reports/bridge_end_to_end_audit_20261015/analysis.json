@@ -1,0 +1,313 @@
+{
+  "stage": "bounded_end_to_end_semantic_and_residual_audit",
+  "trained": false,
+  "model_loaded": false,
+  "new_policy_inference": false,
+  "reserved_test_targets_read": false,
+  "source_snapshot": "bridge_growth128_v1",
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+    "check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+    "fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70",
+    "growth128_input_contract.py": "bde3fd9da5d0ae8f67c1511418600121ae19729b368c732c0982e282c67b14d1"
+  },
+  "verified_shard_sha256": {
+    "bridge_data_v2-train.tfrecord-00002-of-01024": "cde2929229fff8d918293ab805d7eb646bc750893bc63d9bafa15791fa6775a2",
+    "bridge_data_v2-train.tfrecord-00004-of-01024": "90c10525eb91de179a8f7365ed4c38639830ab64894a8893ce92e262e0aeab40",
+    "bridge_data_v2-train.tfrecord-00005-of-01024": "93155ffc3182c2bfa943c56f0b3452d9a392b456279782727469dd165cf30ea4",
+    "bridge_data_v2-train.tfrecord-00000-of-01024": "462a16b1e4a0f4b890ea586cf8f857afc07d1e9389f4e532759975637f8b8e0d",
+    "bridge_data_v2-train.tfrecord-00003-of-01024": "8ac294392a534e486716a5c143f1fb4a093d44f88064234802754e1067f9536f",
+    "bridge_data_v2-train.tfrecord-00006-of-01024": "e5e96362bc34490f87c8998cdac06850ca9614d321066ca5af4e36a43d122788",
+    "bridge_data_v2-train.tfrecord-00009-of-01024": "c7975d5c16a012838bd2f0283f5060fe625c4260ed0b62448fedaa4ed689ea46",
+    "bridge_data_v2-train.tfrecord-00008-of-01024": "51eca8bc0ad437c822710e4e03e7e77aac7c9fa8dd6238edf3decc1e9ce3c8fe",
+    "bridge_data_v2-train.tfrecord-00015-of-01024": "464239bbcd8eab4a998eb49cc22c70a59d13a645015d8c848397b06f78dbe0ef",
+    "bridge_data_v2-train.tfrecord-00007-of-01024": "49439ada886e7b5327405e171d26a41cc5ca2136430d92865836ad8a49a9e4db",
+    "bridge_data_v2-train.tfrecord-00010-of-01024": "aba3b4d54cdfe5e41961b42efd23e7c58cf235661c7cdd562cc8fff3f8c9333d",
+    "bridge_data_v2-train.tfrecord-00011-of-01024": "740442ebffc624b45d14f99f174ee385e4625876029e769b58031a2b57ae50f9",
+    "bridge_data_v2-train.tfrecord-00023-of-01024": "870d6bca34734ed54735ab91981fab7f2afb44edccf0fcccbf3b785bee34b2ab",
+    "bridge_data_v2-train.tfrecord-00029-of-01024": "abd13c29b22197e9f5bb5e996b91d4889b496e3bd1ae81956b6e8b18170ce613",
+    "bridge_data_v2-train.tfrecord-00017-of-01024": "e3bf9ec845c6fe973b80679e23576692c15d059578e8aba14dc21c538183ebd4",
+    "bridge_data_v2-train.tfrecord-00025-of-01024": "a33432dd1de1b62fd62d986819dc28ac29ff96e82a80afdae0ff382e5f6a8ce5",
+    "bridge_data_v2-train.tfrecord-00012-of-01024": "cdfd41faf2db9c0d75190d77526b9f8422f74b3892be88f3a7b57c5b54903697",
+    "bridge_data_v2-train.tfrecord-00014-of-01024": "d93cce8d9f5ed274fcbd68c17318f10a0a0f207f908f30a98f4ebab99ffd5cc8",
+    "bridge_data_v2-train.tfrecord-00036-of-01024": "f97264be7f5597faa882906ea425117ec442c111c4d1faa6dac54b780f239284",
+    "bridge_data_v2-train.tfrecord-00040-of-01024": "4095b70fc4615068a9715dccdc312fe43f10d44868f1d60e8c35eebc34a89a3f",
+    "bridge_data_v2-train.tfrecord-00045-of-01024": "e87f967c91f773a2375e349add2d90b1cca8b1a8e7e6923513e1d77badb89ed0",
+    "bridge_data_v2-train.tfrecord-00047-of-01024": "609da237b1b24896d26679ebaaf62445210540a9a9711a8c7fc2459d2752ade3",
+    "bridge_data_v2-train.tfrecord-00048-of-01024": "ac8119828498b303210b2fcb8750ae13a73f4cec18a0718c340d641c337d83db",
+    "bridge_data_v2-train.tfrecord-00053-of-01024": "e52f11b577249e755d8085a34b12645a88072f507a7e029e16ad9179b6ceedfb",
+    "bridge_data_v2-train.tfrecord-00057-of-01024": "972aba7b0c31f4d60d2358bc35cb1a4dfb4df65a083c7c04704e1994bc9cbe72",
+    "bridge_data_v2-train.tfrecord-00058-of-01024": "349ebc934f06b255e94c0f8f288ff819cdb6b7afbaf68331f59aa6af25b8e7b8",
+    "bridge_data_v2-train.tfrecord-00031-of-01024": "d24594490716932ead4422161bf5fec4197ea09d8a668338f1990275d66ffd78",
+    "bridge_data_v2-train.tfrecord-00041-of-01024": "f89e1ff8577a0fc405712e3804b03bb7029c0014341b5e869b9c3e85e3dc3439",
+    "bridge_data_v2-train.tfrecord-00044-of-01024": "454561e24cce62dabee47e6a32e317b43c158f20f2e073433b77a2d4dc679faa",
+    "bridge_data_v2-train.tfrecord-00050-of-01024": "41bfff788eac59e54f7d3689b8a9f1f05319d92bcd94afe86ad55fe75f24eb44",
+    "bridge_data_v2-train.tfrecord-00016-of-01024": "28ca432fa8ca9a78ee31b02f83cc65580f3bf2b0d406e0518c154c69f85d15b1",
+    "bridge_data_v2-train.tfrecord-00019-of-01024": "48424f5ef210e7ce8008a652ae3ef9ea5ca055e6a4d91b26040445d03b4c24b5",
+    "bridge_data_v2-train.tfrecord-00027-of-01024": "3868e87330e821999ba85ce335486a936f94b7c3ffb87fee3905aced37394851",
+    "bridge_data_v2-train.tfrecord-00033-of-01024": "98683602e33b414dfcc6943fc9b4e76d391dc504f473166e5bb36c19cd0cc0e9",
+    "bridge_data_v2-train.tfrecord-00028-of-01024": "88b43db547299bd2b1e25b594ef2721ed9c7f4bd8b3ee6e1b68a96035522be7a",
+    "bridge_data_v2-train.tfrecord-00035-of-01024": "80a3b382f9688e8013a41554a3662571bf09eccb21bee66a4ad930a838d9da08",
+    "bridge_data_v2-train.tfrecord-00061-of-01024": "41f7c5e362eb7704865911e6021a8cd4676c129a187e5de9a41fc35f6a0bd5b6",
+    "bridge_data_v2-train.tfrecord-00037-of-01024": "5377c590f7e96f2313aab4aad62d616fd176033804c680b615aec7c9eba40853",
+    "bridge_data_v2-train.tfrecord-00043-of-01024": "1e41c7585d384217fb99f56c6b7d2121d0c82fef5a8bbdf7989af3121550eb16",
+    "bridge_data_v2-train.tfrecord-00021-of-01024": "8a5837381f9c5a3152835c15d671da489dfd3155b9cf2d853bb564ff346b0b88",
+    "bridge_data_v2-train.tfrecord-00024-of-01024": "35c50828d5e536b2c9167d96a6a8bf8a8ed5bb76109dc68fc17f0eb149f31c4c",
+    "bridge_data_v2-train.tfrecord-00030-of-01024": "459b4d3984355d32bf1463c24c084963e80205b9629d08b585d8493e297d992d"
+  },
+  "saved_npz_sha256": {
+    "train": "6219cfb072371f6efc6781c9dfed662a6a0659f34ee03a1ee774cc0a90ed37bf",
+    "development": "b822c904ba1dca3fd71b002e685e5398af6788964610a885c56d5090ced1136f"
+  },
+  "training_episodes": 64,
+  "development_episodes": 10,
+  "windows": 168,
+  "all_windows_have_16_real_future_states": true,
+  "maximum_numerical_difference": {
+    "loader_target_component": 4.76837158203125e-07,
+    "restored_world_position_m": 3.2333121235961215e-08,
+    "restored_rotation_matrix": 2.8480865438273995e-07
+  },
+  "residual": {
+    "train": {
+      "path_position_cm": 0.16881285789340109,
+      "path_rotation_deg": 0.5986484606004089,
+      "static_position_cm": 8.960284924153353,
+      "static_rotation_deg": 13.88273475795172,
+      "mean_world_residual_cm": [
+        -0.016816480121133494,
+        0.0006738761640592785,
+        0.02451223348924221
+      ],
+      "world_constant_bias_squared_error_fraction": 0.022300025427831657,
+      "maximum_absolute_predicted_xyz": 2.5737457275390625,
+      "xyz_at_clipping_limit_fraction": 0.0,
+      "predicted_displacement_mean_cm": 8.97757709474748,
+      "target_displacement_mean_cm": 8.960284924153353,
+      "direction_cosine_target_displacement_above_1cm": 0.9996413069285313,
+      "opposite_halfspace_fraction_target_displacement_above_1cm": 0.0,
+      "position_percentiles_cm": {
+        "0": 0.004797990717655581,
+        "50": 0.1517778877516278,
+        "90": 0.3156076104753864,
+        "99": 0.4669302147037509,
+        "100": 0.6554223195911213
+      }
+    },
+    "development": {
+      "path_position_cm": 8.349126682028293,
+      "path_rotation_deg": 15.256048338593287,
+      "static_position_cm": 8.21232607389037,
+      "static_rotation_deg": 15.098500432102608,
+      "mean_world_residual_cm": [
+        -0.4208905206721418,
+        0.6110445901274159,
+        1.6348258444998487
+      ],
+      "world_constant_bias_squared_error_fraction": 0.030817092297795404,
+      "maximum_absolute_predicted_xyz": 1.5318968296051025,
+      "xyz_at_clipping_limit_fraction": 0.0,
+      "predicted_displacement_mean_cm": 6.432067728178268,
+      "target_displacement_mean_cm": 8.21232607389037,
+      "direction_cosine_target_displacement_above_1cm": 0.3163907909776615,
+      "opposite_halfspace_fraction_target_displacement_above_1cm": 0.30158730158730157,
+      "position_percentiles_cm": {
+        "0": 0.16652768536396956,
+        "50": 7.128166569683724,
+        "90": 16.850920339503638,
+        "99": 25.468603153553662,
+        "100": 27.812390202482064
+      }
+    }
+  },
+  "scene_directories": {
+    "train": [
+      "v1/berkeley/toykitchen1",
+      "v1/berkeley/toykitchen5",
+      "v1/berkeley/toykitchen6",
+      "v1/berkeley/toysink2_bww",
+      "v1/berkeley/toysink3_bww",
+      "v1/upenn/toysink5",
+      "v2/datacol2_folding_table",
+      "v2/datacol2_tabletop_dark_wood",
+      "v2/datacol2_toykitchen7",
+      "v2/deepthought_robot_desk",
+      "v2/deepthought_toykitchen1"
+    ],
+    "development": [
+      "v1/berkeley/toykitchen1",
+      "v1/berkeley/toykitchen5",
+      "v2/datacol2_tabletop_dark_wood",
+      "v2/datacol2_toykitchen7"
+    ]
+  },
+  "task_source_directory_groups": [
+    {
+      "task": "close microwave",
+      "source_directory_group": "v1/berkeley/toykitchen1",
+      "train_windows": 10,
+      "development_windows": 0,
+      "train_episodes": 5,
+      "development_episodes": 0
+    },
+    {
+      "task": "close microwave",
+      "source_directory_group": "v1/berkeley/toykitchen5",
+      "train_windows": 10,
+      "development_windows": 10,
+      "train_episodes": 5,
+      "development_episodes": 2,
+      "development_position_cm": 9.785639018217891,
+      "development_rotation_deg": 13.022255727186943
+    },
+    {
+      "task": "close microwave",
+      "source_directory_group": "v1/berkeley/toykitchen6",
+      "train_windows": 8,
+      "development_windows": 0,
+      "train_episodes": 4,
+      "development_episodes": 0
+    },
+    {
+      "task": "close microwave",
+      "source_directory_group": "v2/deepthought_toykitchen1",
+      "train_windows": 4,
+      "development_windows": 0,
+      "train_episodes": 2,
+      "development_episodes": 0
+    },
+    {
+      "task": "close the drawer",
+      "source_directory_group": "v2/datacol2_tabletop_dark_wood",
+      "train_windows": 8,
+      "development_windows": 2,
+      "train_episodes": 4,
+      "development_episodes": 1,
+      "development_position_cm": 5.7191406926459125,
+      "development_rotation_deg": 9.533053434606023
+    },
+    {
+      "task": "close the drawer",
+      "source_directory_group": "v2/datacol2_toykitchen7",
+      "train_windows": 6,
+      "development_windows": 4,
+      "train_episodes": 3,
+      "development_episodes": 1,
+      "development_position_cm": 7.690449419564228,
+      "development_rotation_deg": 39.22917167380951
+    },
+    {
+      "task": "close the drawer",
+      "source_directory_group": "v2/deepthought_robot_desk",
+      "train_windows": 10,
+      "development_windows": 0,
+      "train_episodes": 5,
+      "development_episodes": 0
+    },
+    {
+      "task": "open the drawer",
+      "source_directory_group": "v2/datacol2_folding_table",
+      "train_windows": 4,
+      "development_windows": 0,
+      "train_episodes": 2,
+      "development_episodes": 0
+    },
+    {
+      "task": "open the drawer",
+      "source_directory_group": "v2/datacol2_tabletop_dark_wood",
+      "train_windows": 4,
+      "development_windows": 0,
+      "train_episodes": 2,
+      "development_episodes": 0
+    },
+    {
+      "task": "open the drawer",
+      "source_directory_group": "v2/datacol2_toykitchen7",
+      "train_windows": 8,
+      "development_windows": 11,
+      "train_episodes": 4,
+      "development_episodes": 2,
+      "development_position_cm": 8.228331601799141,
+      "development_rotation_deg": 14.012081019394376
+    },
+    {
+      "task": "open the drawer",
+      "source_directory_group": "v2/deepthought_robot_desk",
+      "train_windows": 8,
+      "development_windows": 0,
+      "train_episodes": 4,
+      "development_episodes": 0
+    },
+    {
+      "task": "take broccoli out of pan",
+      "source_directory_group": "v1/berkeley/toykitchen1",
+      "train_windows": 24,
+      "development_windows": 9,
+      "train_episodes": 12,
+      "development_episodes": 2,
+      "development_position_cm": 10.197197573520036,
+      "development_rotation_deg": 12.394119203284893
+    },
+    {
+      "task": "turn lever vertical to front",
+      "source_directory_group": "v1/berkeley/toykitchen1",
+      "train_windows": 12,
+      "development_windows": 4,
+      "train_episodes": 6,
+      "development_episodes": 2,
+      "development_position_cm": 2.9055430634833,
+      "development_rotation_deg": 9.58915466612744
+    },
+    {
+      "task": "turn lever vertical to front",
+      "source_directory_group": "v1/berkeley/toysink2_bww",
+      "train_windows": 6,
+      "development_windows": 0,
+      "train_episodes": 3,
+      "development_episodes": 0
+    },
+    {
+      "task": "turn lever vertical to front",
+      "source_directory_group": "v1/berkeley/toysink3_bww",
+      "train_windows": 2,
+      "development_windows": 0,
+      "train_episodes": 1,
+      "development_episodes": 0
+    },
+    {
+      "task": "turn lever vertical to front",
+      "source_directory_group": "v1/upenn/toysink5",
+      "train_windows": 4,
+      "development_windows": 0,
+      "train_episodes": 2,
+      "development_episodes": 0
+    }
+  ],
+  "metadata_image0_false_but_nonblank_windows": 168,
+  "timestamp_fields_found": [],
+  "native_action_is_not_reached_trajectory": true,
+  "gripper_target": "binary command, not continuous width",
+  "reviewed_gripper_trained": false,
+  "root_cause_identified": false,
+  "limitations": [
+    "Correctness is relative to exported RLDS records, not independent physical sensor synchronization.",
+    "Metadata scene directories do not certify identical camera extrinsics or robot calibration.",
+    "Time-shift residual check is descriptive; no corrected scoring or best-lag success claim.",
+    "Pose-only diagnostic cannot establish grasp or complete eight-dimensional policy fitting."
+  ],
+  "frozen_source_unchanged_after_audit": true,
+  "script_sha256": "9ffdda7fc0a192181615621eebdc9c606d51b5bc7f857e024da292ce43318be1",
+  "external_references_reviewed": [
+    "https://github.com/google-research/rlds/blob/main/README.md",
+    "https://github.com/rail-berkeley/bridge_data_v2/blob/main/jaxrl_m/data/bridge_dataset.py",
+    "https://github.com/kvablack/dlimp/blob/main/rlds_converters/bridge_dataset/bridge_dataset_dataset_builder.py"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "report_sha256": "ca840f0f10298b9788b12ae0f17f3a1207976335e875f169e23ab038712e1b08",
+  "only_training_change": "64 ->128 windows with matched per-window exposure",
+  "input_checks": 168,
+  "snapshots": 5,
+  "logged_updates": 64,
+  "restored_losses_and_saved_arrays_exact": true,
+  "max_float64_metric_difference": {
+    "path_position_cm": 7.07910174924109e-07,
+    "path_rotation_deg": 9.153475551926249e-05,
+    "endpoint_position_cm": 1.1780195592336895e-06,
+    "endpoint_rotation_deg": 5.4417000992401654e-05
+  },
+  "launcher_arguments": {
+    "preflight": [
+      "fit_bridge_growth128.py",
+      "--manifest",
+      "manifest.json",
+      "--data-root",
+      "/projects/Zeroshot/bridge_expansion_training_v1/data",
+      "--clip",
+      "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "--data-reference",
+      "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+      "--origin-report",
+      "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+      "--retained-report",
+      "/projects/Zeroshot/runs/bridge-growth64-fit-200600/report.json",
+      "--stage",
+      "preflight",
+      "--output",
+      "/projects/Zeroshot/runs/bridge-growth128-preflight-${SLURM_JOB_ID}"
+    ],
+    "fit": [
+      "fit_bridge_growth128.py",
+      "--manifest",
+      "manifest.json",
+      "--data-root",
+      "/projects/Zeroshot/bridge_expansion_training_v1/data",
+      "--clip",
+      "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "--data-reference",
+      "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+      "--origin-report",
+      "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+      "--retained-report",
+      "/projects/Zeroshot/runs/bridge-growth64-fit-200600/report.json",
+      "--stage",
+      "fit",
+      "--output",
+      "/projects/Zeroshot/runs/bridge-growth128-fit-${SLURM_JOB_ID}",
+      "--preflight-reference",
+      "/projects/Zeroshot/runs/bridge-growth128-preflight-${GROWTH_PREFLIGHT_JOB}"
+    ]
+  },
+  "full_fit_executed": false
+}

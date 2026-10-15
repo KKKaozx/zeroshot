@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "report_sha256": "6a5c68ba553d2f15f6a2e12a66db3686c6fc9621c248617ff664a2a910913cef",
+  "only_training_change": "39 window identities within same64 episodes/128 windows",
+  "input_checks": 168,
+  "snapshots": 5,
+  "logged_updates": 64,
+  "restored_losses_and_saved_arrays_exact": true,
+  "max_float64_metric_difference": {
+    "path_position_cm": 9.329844505856499e-07,
+    "path_rotation_deg": 8.159063740187378e-05,
+    "endpoint_position_cm": 7.656631400010383e-07,
+    "endpoint_rotation_deg": 0.00010405987668704597
+  },
+  "launcher_arguments": {
+    "preflight": [
+      "fit_bridge_window_coverage.py",
+      "--manifest",
+      "manifest.json",
+      "--data-root",
+      "/projects/Zeroshot/bridge_expansion_training_v1/data",
+      "--clip",
+      "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "--data-reference",
+      "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+      "--origin-report",
+      "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+      "--retained-report",
+      "/projects/Zeroshot/runs/bridge-growth64-fit-200600/report.json",
+      "--control-report",
+      "/projects/Zeroshot/runs/bridge-growth128-fit-201663/report.json",
+      "--stage",
+      "preflight",
+      "--output",
+      "/projects/Zeroshot/runs/bridge-window-preflight-${SLURM_JOB_ID}"
+    ],
+    "fit": [
+      "fit_bridge_window_coverage.py",
+      "--manifest",
+      "manifest.json",
+      "--data-root",
+      "/projects/Zeroshot/bridge_expansion_training_v1/data",
+      "--clip",
+      "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "--data-reference",
+      "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+      "--origin-report",
+      "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+      "--retained-report",
+      "/projects/Zeroshot/runs/bridge-growth64-fit-200600/report.json",
+      "--control-report",
+      "/projects/Zeroshot/runs/bridge-growth128-fit-201663/report.json",
+      "--stage",
+      "fit",
+      "--output",
+      "/projects/Zeroshot/runs/bridge-window-fit-${SLURM_JOB_ID}",
+      "--preflight-reference",
+      "/projects/Zeroshot/runs/bridge-window-preflight-${WINDOW_PREFLIGHT_JOB}"
+    ]
+  },
+  "full_fit_executed": false
+}

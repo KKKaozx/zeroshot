@@ -1,0 +1,65 @@
+{
+  "training_starts": [
+    0,
+    12,
+    24,
+    30,
+    38,
+    46,
+    58,
+    74
+  ],
+  "training_current_range": [
+    -0.01045145746320486,
+    1.000000238418579
+  ],
+  "training_observation_ee_z_range_m": [
+    0.6550078988075256,
+    0.8536331653594971
+  ],
+  "windows_with_all_future_translation_under_1mm": 0,
+  "episodes": [
+    {
+      "seed": 1101,
+      "model_observations_after_initial": 27,
+      "current_outside_training_range": 2,
+      "ee_z_above_training_max": 9,
+      "switch_actions": [
+        25,
+        33,
+        37
+      ],
+      "minimum_measured_current": -0.9999983412788415,
+      "final_ee_z_m": 0.9759674668312073
+    },
+    {
+      "seed": 1102,
+      "model_observations_after_initial": 27,
+      "current_outside_training_range": 3,
+      "ee_z_above_training_max": 7,
+      "switch_actions": [
+        25,
+        33,
+        37,
+        41,
+        45
+      ],
+      "minimum_measured_current": -0.9999990883136776,
+      "final_ee_z_m": 0.9655669331550598
+    },
+    {
+      "seed": 1103,
+      "model_observations_after_initial": 27,
+      "current_outside_training_range": 1,
+      "ee_z_above_training_max": 9,
+      "switch_actions": [
+        25,
+        29,
+        33
+      ],
+      "minimum_measured_current": -0.9999185234469838,
+      "final_ee_z_m": 0.9473772644996643
+    }
+  ],
+  "interpretation": "Observed training coverage gaps, not established causal root. Test training-state coverage while holding model/loss/sampler/controller fixed."
+}

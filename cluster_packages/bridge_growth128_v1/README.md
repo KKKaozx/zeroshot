@@ -1,0 +1,1 @@
+128-window training capacity check. Retain64 and add64 by identity-only selection. Initialization43,8192 updates,LR reduced at4096,512 exposures/window. Reuse existing bridge_growth64_v1 input references. FrozenCLIP/gripper, nativeDDPM100, pose fitting only; no task-success or generalization claim.

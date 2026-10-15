@@ -1,0 +1,158 @@
+{
+  "stage": "read_existing_input_origin_report",
+  "source_sha256": "13f812f1027b200d3c350ba77a84de9666922afd27911ed09a2961c9dff48e6f",
+  "new_training": false,
+  "checks": {
+    "hook_replay_max_difference": 0.0,
+    "parameters_unchanged": true,
+    "clip_unchanged": true,
+    "target_xyz_outside_sampling_bound_fraction": 0.0,
+    "target_window_any_xyz_outside_bound_fraction": 0.0
+  },
+  "per_step": {
+    "99": {
+      "seed_mean": {
+        "forward_noised_truth": {
+          "position_cm": 8.375025113423666,
+          "rotation_deg": 14.286922136942545
+        },
+        "native_chain": {
+          "position_cm": 8.354971885681152,
+          "rotation_deg": 14.40532366434733
+        }
+      },
+      "chain_position_worse_demonstrations": 18,
+      "total_demonstrations": 40
+    },
+    "74": {
+      "seed_mean": {
+        "forward_noised_truth": {
+          "position_cm": 5.7964480717976885,
+          "rotation_deg": 14.177514712015787
+        },
+        "native_chain": {
+          "position_cm": 9.195185661315918,
+          "rotation_deg": 16.199546813964844
+        }
+      },
+      "chain_position_worse_demonstrations": 35,
+      "total_demonstrations": 40
+    },
+    "49": {
+      "seed_mean": {
+        "forward_noised_truth": {
+          "position_cm": 3.7524744669596353,
+          "rotation_deg": 13.163665135701498
+        },
+        "native_chain": {
+          "position_cm": 10.13060188293457,
+          "rotation_deg": 16.824811299641926
+        }
+      },
+      "chain_position_worse_demonstrations": 39,
+      "total_demonstrations": 40
+    },
+    "24": {
+      "seed_mean": {
+        "forward_noised_truth": {
+          "position_cm": 2.3594934145609536,
+          "rotation_deg": 12.114998817443848
+        },
+        "native_chain": {
+          "position_cm": 10.545520146687826,
+          "rotation_deg": 16.99056053161621
+        }
+      },
+      "chain_position_worse_demonstrations": 40,
+      "total_demonstrations": 40
+    },
+    "9": {
+      "seed_mean": {
+        "forward_noised_truth": {
+          "position_cm": 1.5205236673355103,
+          "rotation_deg": 11.560133616129557
+        },
+        "native_chain": {
+          "position_cm": 10.630410194396973,
+          "rotation_deg": 16.9652582804362
+        }
+      },
+      "chain_position_worse_demonstrations": 40,
+      "total_demonstrations": 40
+    },
+    "0": {
+      "seed_mean": {
+        "forward_noised_truth": {
+          "position_cm": 1.3293100595474243,
+          "rotation_deg": 11.564631462097168
+        },
+        "native_chain": {
+          "position_cm": 10.94170888264974,
+          "rotation_deg": 17.344866434733074
+        }
+      },
+      "chain_position_worse_demonstrations": 40,
+      "total_demonstrations": 40
+    }
+  },
+  "per_task_t0": {
+    "task/close microwave": {
+      "forward_noised_truth": {
+        "position_cm": 1.5102140506108601,
+        "rotation_deg": 12.499417622884115
+      },
+      "native_chain": {
+        "position_cm": 15.47671922047933,
+        "rotation_deg": 14.97061570485433
+      }
+    },
+    "task/close the drawer": {
+      "forward_noised_truth": {
+        "position_cm": 1.4513336817423503,
+        "rotation_deg": 13.539169629414877
+      },
+      "native_chain": {
+        "position_cm": 13.255206108093262,
+        "rotation_deg": 21.477936426798504
+      }
+    },
+    "task/open the drawer": {
+      "forward_noised_truth": {
+        "position_cm": 1.1982347965240479,
+        "rotation_deg": 12.01967748006185
+      },
+      "native_chain": {
+        "position_cm": 8.771987756093344,
+        "rotation_deg": 22.57513682047526
+      }
+    },
+    "task/take broccoli out of pan": {
+      "forward_noised_truth": {
+        "position_cm": 1.3298749526341755,
+        "rotation_deg": 13.711884498596191
+      },
+      "native_chain": {
+        "position_cm": 14.081254323323568,
+        "rotation_deg": 20.561843236287434
+      }
+    },
+    "task/turn lever vertical to front": {
+      "forward_noised_truth": {
+        "position_cm": 1.1568926175435383,
+        "rotation_deg": 6.053005854288737
+      },
+      "native_chain": {
+        "position_cm": 3.123374621073405,
+        "rotation_deg": 7.138801733652751
+      }
+    }
+  },
+  "xyz_clip_fraction_at_recorded_steps": 0.0,
+  "limits": [
+    "Only forty first training windows; not full population.",
+    "Input origins differ intentionally; forward-noised truth has oracle future information.",
+    "Output mismatch with a demonstration does not prove an invalid route.",
+    "Observed gap is not proof of a sampling equation bug or uniquely caused distribution shift.",
+    "Zero clipping applies only to xyz in selected targets and recorded x0 estimates, not all steps or quaternion components."
+  ]
+}

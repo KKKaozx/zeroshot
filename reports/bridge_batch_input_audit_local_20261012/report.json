@@ -1,0 +1,3202 @@
+{
+  "stage": "cpu_input_comparison_only",
+  "trained": false,
+  "clip_loaded": false,
+  "error": null,
+  "comparison_completed": true,
+  "cluster_versions": {
+    "python": "3.10.21",
+    "system": "Windows",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.2.6",
+    "pillow": "12.3.0"
+  },
+  "windows": [
+    {
+      "index": 0,
+      "selection": {
+        "dataset_index": 11,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 39,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 1,
+      "selection": {
+        "dataset_index": 28,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+        "record_index": 3,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 2,
+      "selection": {
+        "dataset_index": 35,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+        "record_index": 36,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 3,
+      "selection": {
+        "dataset_index": 5,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 21,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 4,
+      "selection": {
+        "dataset_index": 1,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+        "record_index": 45,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 5,
+      "selection": {
+        "dataset_index": 17,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 8,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 6,
+      "selection": {
+        "dataset_index": 49,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 26,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 7,
+      "selection": {
+        "dataset_index": 83,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 21,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 8,
+      "selection": {
+        "dataset_index": 42,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 10,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 9,
+      "selection": {
+        "dataset_index": 38,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 2,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 10,
+      "selection": {
+        "dataset_index": 58,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 25,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 11,
+      "selection": {
+        "dataset_index": 153,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 26,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 12,
+      "selection": {
+        "dataset_index": 89,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 25,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 13,
+      "selection": {
+        "dataset_index": 63,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 37,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 14,
+      "selection": {
+        "dataset_index": 54,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 7,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 15,
+      "selection": {
+        "dataset_index": 78,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 20,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 16,
+      "selection": {
+        "dataset_index": 8,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 39,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 17,
+      "selection": {
+        "dataset_index": 24,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+        "record_index": 3,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 18,
+      "selection": {
+        "dataset_index": 32,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+        "record_index": 36,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 19,
+      "selection": {
+        "dataset_index": 2,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+        "record_index": 21,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 20,
+      "selection": {
+        "dataset_index": 0,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+        "record_index": 45,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 21,
+      "selection": {
+        "dataset_index": 14,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 8,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 22,
+      "selection": {
+        "dataset_index": 45,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 26,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 23,
+      "selection": {
+        "dataset_index": 80,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 21,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 24,
+      "selection": {
+        "dataset_index": 39,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 10,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 25,
+      "selection": {
+        "dataset_index": 37,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+        "record_index": 2,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 26,
+      "selection": {
+        "dataset_index": 55,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 25,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 27,
+      "selection": {
+        "dataset_index": 150,
+        "partition": "train",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 26,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 28,
+      "selection": {
+        "dataset_index": 85,
+        "partition": "train",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 25,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 29,
+      "selection": {
+        "dataset_index": 61,
+        "partition": "train",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 37,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 30,
+      "selection": {
+        "dataset_index": 53,
+        "partition": "train",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 7,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 31,
+      "selection": {
+        "dataset_index": 76,
+        "partition": "train",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00009-of-01024",
+        "record_index": 20,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 32,
+      "selection": {
+        "dataset_index": 20,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 33,
+      "selection": {
+        "dataset_index": 21,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 34,
+      "selection": {
+        "dataset_index": 22,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 35,
+      "selection": {
+        "dataset_index": 23,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 36,
+      "selection": {
+        "dataset_index": 64,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 37,
+      "selection": {
+        "dataset_index": 65,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 38,
+      "selection": {
+        "dataset_index": 66,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 39,
+      "selection": {
+        "dataset_index": 67,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 40,
+      "selection": {
+        "dataset_index": 68,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 41,
+      "selection": {
+        "dataset_index": 69,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 38,
+        "start_index": 20
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 42,
+      "selection": {
+        "dataset_index": 70,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 43,
+      "selection": {
+        "dataset_index": 71,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 44,
+      "selection": {
+        "dataset_index": 72,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 45,
+      "selection": {
+        "dataset_index": 73,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 46,
+      "selection": {
+        "dataset_index": 74,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 47,
+      "selection": {
+        "dataset_index": 75,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00008-of-01024",
+        "record_index": 54,
+        "start_index": 20
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 48,
+      "selection": {
+        "dataset_index": 114,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 49,
+      "selection": {
+        "dataset_index": 115,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 50,
+      "selection": {
+        "dataset_index": 116,
+        "partition": "validation",
+        "task": "take broccoli out of pan",
+        "shard": "bridge_data_v2-train.tfrecord-00011-of-01024",
+        "record_index": 24,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 51,
+      "selection": {
+        "dataset_index": 177,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00021-of-01024",
+        "record_index": 19,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 52,
+      "selection": {
+        "dataset_index": 178,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00021-of-01024",
+        "record_index": 19,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 53,
+      "selection": {
+        "dataset_index": 194,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 54,
+      "selection": {
+        "dataset_index": 195,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 55,
+      "selection": {
+        "dataset_index": 196,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 56,
+      "selection": {
+        "dataset_index": 197,
+        "partition": "validation",
+        "task": "close microwave",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 11,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 57,
+      "selection": {
+        "dataset_index": 198,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 34,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 58,
+      "selection": {
+        "dataset_index": 199,
+        "partition": "validation",
+        "task": "turn lever vertical to front",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 34,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 59,
+      "selection": {
+        "dataset_index": 200,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 38,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 60,
+      "selection": {
+        "dataset_index": 201,
+        "partition": "validation",
+        "task": "close the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00024-of-01024",
+        "record_index": 38,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 61,
+      "selection": {
+        "dataset_index": 226,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 62,
+      "selection": {
+        "dataset_index": 227,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 63,
+      "selection": {
+        "dataset_index": 228,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 64,
+      "selection": {
+        "dataset_index": 229,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 65,
+      "selection": {
+        "dataset_index": 230,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 66,
+      "selection": {
+        "dataset_index": 231,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 9,
+        "start_index": 20
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 67,
+      "selection": {
+        "dataset_index": 237,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 0
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 68,
+      "selection": {
+        "dataset_index": 238,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 4
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 69,
+      "selection": {
+        "dataset_index": 239,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 8
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 70,
+      "selection": {
+        "dataset_index": 240,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 12
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    },
+    {
+      "index": 71,
+      "selection": {
+        "dataset_index": 241,
+        "partition": "validation",
+        "task": "open the drawer",
+        "shard": "bridge_data_v2-train.tfrecord-00030-of-01024",
+        "record_index": 39,
+        "start_index": 16
+      },
+      "raw_equal": {
+        "encoded_image_sha256": true,
+        "decoded_rgb_sha256": true,
+        "rgb_shape": true,
+        "state_sha256": true,
+        "action_sha256": true,
+        "instruction_sha256": true
+      },
+      "normalized_image_hash_equal": true,
+      "differences": {
+        "images": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "targets": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        },
+        "currents": {
+          "exact": true,
+          "max_abs": 0.0,
+          "mean_abs": 0.0,
+          "unequal_elements": 0,
+          "above_1e_5": 0
+        }
+      },
+      "max_target_xyz_component_difference_cm": 0.0
+    }
+  ],
+  "original_preflight_job": 198833,
+  "local_versions": {
+    "python": "3.10.21",
+    "system": "Windows",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.2.6",
+    "pillow": "12.3.0"
+  },
+  "summary": {
+    "windows": 72,
+    "all_raw_and_decoded_inputs_equal": true,
+    "normalized_images_exact_count": 72,
+    "max_normalized_image_difference": 0.0,
+    "max_target_component_difference": 0.0,
+    "max_current_gripper_difference": 0.0
+  },
+  "first_image_hash_mismatch": null,
+  "elapsed_seconds": 14.75
+}

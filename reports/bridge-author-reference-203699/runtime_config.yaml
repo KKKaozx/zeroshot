@@ -1,0 +1,111 @@
+name: bridge_author_reference
+policy:
+  _target_: diffusion_policy.policy.diffusion_unet_hybrid_image_policy.DiffusionUnetHybridImagePolicy
+  shape_meta:
+    obs:
+      image:
+        shape:
+        - 3
+        - 224
+        - 224
+        type: rgb
+      ee_state:
+        shape:
+        - 9
+        type: low_dim
+      language:
+        shape:
+        - 768
+        type: low_dim
+    action:
+      shape:
+      - 7
+  noise_scheduler:
+    _target_: diffusers.schedulers.scheduling_ddpm.DDPMScheduler
+    num_train_timesteps: 100
+    beta_start: 0.0001
+    beta_end: 0.02
+    beta_schedule: squaredcos_cap_v2
+    variance_type: fixed_small
+    clip_sample: true
+    prediction_type: epsilon
+  horizon: 16
+  n_action_steps: 16
+  n_obs_steps: 1
+  num_inference_steps: 100
+  obs_as_global_cond: true
+  crop_shape: null
+  diffusion_step_embed_dim: 128
+  down_dims:
+  - 512
+  - 1024
+  - 2048
+  kernel_size: 5
+  n_groups: 8
+  cond_predict_scale: true
+  obs_encoder_group_norm: true
+  eval_fixed_crop: true
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 0.0001
+  betas:
+  - 0.95
+  - 0.999
+  eps: 1.0e-08
+  weight_decay: 1.0e-06
+ema:
+  _target_: diffusion_policy.model.diffusion.ema_model.EMAModel
+  update_after_step: 0
+  inv_gamma: 1.0
+  power: 0.75
+  min_value: 0.0
+  max_value: 0.9999
+task:
+  dataset:
+    _target_: bridge_author_dataset.BridgeAuthorDataset
+    cache: /projects/Zeroshot/runs/bridge-author-preflight-203498/inputs
+    protocol: /projects/Zeroshot/bridge_author_preflight_v1/protocol.json
+  env_runner:
+    _target_: bridge_author_dataset.NoRolloutRunner
+dataloader:
+  batch_size: 8
+  num_workers: 0
+  shuffle: true
+  pin_memory: true
+  persistent_workers: false
+val_dataloader:
+  batch_size: 4
+  num_workers: 0
+  shuffle: false
+  pin_memory: true
+  persistent_workers: false
+training:
+  device: cuda:0
+  seed: 43
+  debug: false
+  resume: false
+  num_epochs: 512
+  gradient_accumulate_every: 1
+  lr_scheduler: cosine
+  lr_warmup_steps: 500
+  use_ema: true
+  rollout_every: 512
+  checkpoint_every: 512
+  val_every: 16
+  sample_every: 5
+  max_train_steps: null
+  max_val_steps: 1
+  tqdm_interval_sec: 30.0
+logging:
+  project: bridge_author_preflight
+  mode: disabled
+  resume: false
+  name: fixed_final_same_bridge_reference
+checkpoint:
+  save_last_ckpt: false
+  save_last_snapshot: false
+  topk:
+    monitor_key: train_loss
+    mode: min
+    k: 0
+    format_str: unused.ckpt

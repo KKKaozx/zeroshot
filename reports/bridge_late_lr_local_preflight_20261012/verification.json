@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "report_sha256": "a8f14c774e85af499beb1a9b44e336d0038721c450cdb980738bc904beb5989b",
+  "continuous_vs_restored_logs_exact": true,
+  "first_intervention_loss_and_gradient_equal": true,
+  "common_state_and_adam_hashes_identical": true,
+  "weights_saved": false,
+  "independent_metrics": [
+    {
+      "file": "common_u0000_train.npz",
+      "position_cm": 11.806696284900143,
+      "rotation_deg": 140.7517713950092
+    },
+    {
+      "file": "common_u0004_train.npz",
+      "position_cm": 8.760609357003583,
+      "rotation_deg": 33.318158148060185
+    },
+    {
+      "file": "constant_u0008_train.npz",
+      "position_cm": 8.422904290551424,
+      "rotation_deg": 24.697865491229724
+    },
+    {
+      "file": "reduced_u0008_train.npz",
+      "position_cm": 7.798416665395403,
+      "rotation_deg": 21.20277017979956
+    },
+    {
+      "file": "restore_same_lr_u0008_train.npz",
+      "position_cm": 8.422904290551424,
+      "rotation_deg": 24.697865491229724
+    }
+  ]
+}

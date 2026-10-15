@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "report_sha256": "a86ecacf6e358cc1814c836572b5ccd2912832b5af67be32c5ff6950745c301d",
+  "verification_sha256": "53acc22511d36cf83af2f673faeffc770d330754d4564a8c20cbc5873fa9e6f9",
+  "elapsed_seconds": 564.405999999959,
+  "zero_replay": {
+    "passed": true,
+    "parameters_exact": true,
+    "all_five_snapshots_exact": true,
+    "max_absolute_differences": {
+      "predictions": 0.0,
+      "contexts": 0.0,
+      "targets": 0.0,
+      "losses": 0.0
+    }
+  },
+  "state_interface": {
+    "passed": true,
+    "same_augmented_initialization": true,
+    "same_initial_loss": true,
+    "real_first_state_gradient": 0.1261644810438156,
+    "real_context_max_abs": 0.007977806031703949,
+    "zero_port_remains_zero": true
+  }
+}

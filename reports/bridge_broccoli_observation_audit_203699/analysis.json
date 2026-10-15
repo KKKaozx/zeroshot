@@ -1,0 +1,2431 @@
+{
+  "passed": true,
+  "stage": "broccoli_shared_observation_target_suitability_audit",
+  "trained": false,
+  "new_model_loaded": false,
+  "new_visual_encoding": false,
+  "fixed_scope": "All24 retained same-task training windows and9 development windows;12 train and2 development episodes",
+  "task_selected_after_observing_errors": true,
+  "independent_test": false,
+  "reserved_test_targets_read": false,
+  "timestamps_available": false,
+  "physical_prediction_duration_verified": false,
+  "label": "16 subsequent recorded states relative to the current tool frame, not16 executed control commands",
+  "visual_neighbor_description": "Previously saved frozenCLIP descriptor; not the author trainable visual encoder",
+  "input_neighbor_selection_uses_future_targets_or_prediction_errors": false,
+  "state_train_same_task_min_m": [
+    0.20746921002864838,
+    -0.06033734604716301,
+    0.012109502218663692
+  ],
+  "state_train_same_task_max_m": [
+    0.46587175130844116,
+    0.1847662329673767,
+    0.099000945687294
+  ],
+  "task_target_xyz_min_cm": [
+    -15.801708221435547,
+    -17.682933807373047,
+    -6.996616840362549
+  ],
+  "task_target_xyz_max_cm": [
+    12.95103645324707,
+    23.742538452148438,
+    10.409995079040527
+  ],
+  "episodes": [
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        12,
+        0
+      ],
+      "input_index_fractions": [
+        0.32432432432432434,
+        0.0
+      ],
+      "ema": {
+        "path_position_cm": 0.8925349876551575,
+        "path_rotation_deg": 1.8249717348741086,
+        "endpoint_position_cm": 1.2837757983106235,
+        "endpoint_rotation_deg": 2.4560258571788784,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 8.641458050601845,
+        "path_rotation_deg": 9.645802451674196,
+        "endpoint_position_cm": 15.592495712004876,
+        "endpoint_rotation_deg": 16.822911481802404,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        12,
+        0
+      ],
+      "input_index_fractions": [
+        0.32432432432432434,
+        0.0
+      ],
+      "ema": {
+        "path_position_cm": 0.9165885122108021,
+        "path_rotation_deg": 1.3989203251545386,
+        "endpoint_position_cm": 1.2929499541376177,
+        "endpoint_rotation_deg": 1.6818841603837502,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 3.6057874403689856,
+        "path_rotation_deg": 8.824981284394234,
+        "endpoint_position_cm": 5.978671235198663,
+        "endpoint_rotation_deg": 13.092030977669559,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "partition": "train",
+      "steps": 25,
+      "starts": [
+        8,
+        0
+      ],
+      "input_index_fractions": [
+        0.3333333333333333,
+        0.0
+      ],
+      "ema": {
+        "path_position_cm": 0.7517389550030731,
+        "path_rotation_deg": 1.3180824314425288,
+        "endpoint_position_cm": 0.7686583944569709,
+        "endpoint_rotation_deg": 1.2899505949566334,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 10.963767806131042,
+        "path_rotation_deg": 12.585108177211072,
+        "endpoint_position_cm": 15.695292143946128,
+        "endpoint_rotation_deg": 15.850834546377499,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 0.640271165997376,
+        "path_rotation_deg": 1.5241536357379666,
+        "endpoint_position_cm": 0.6160889361733733,
+        "endpoint_rotation_deg": 1.9433621632226397,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 13.507764581233864,
+        "path_rotation_deg": 9.13799340851198,
+        "endpoint_position_cm": 20.59844968232682,
+        "endpoint_rotation_deg": 13.615538901380788,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 0.797234782009827,
+        "path_rotation_deg": 2.416783403541085,
+        "endpoint_position_cm": 1.0531498200273905,
+        "endpoint_rotation_deg": 4.0953943866678495,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 11.032200311162308,
+        "path_rotation_deg": 17.98655077346093,
+        "endpoint_position_cm": 16.299429417777105,
+        "endpoint_rotation_deg": 29.971825524010203,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 1.1033971088274894,
+        "path_rotation_deg": 4.8422575875344345,
+        "endpoint_position_cm": 1.5190617167909277,
+        "endpoint_rotation_deg": 6.626820885864478,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 12.119222607249746,
+        "path_rotation_deg": 25.193113401160915,
+        "endpoint_position_cm": 16.170983057426987,
+        "endpoint_rotation_deg": 34.5177986693483,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 0.7969111983471097,
+        "path_rotation_deg": 1.450331775405057,
+        "endpoint_position_cm": 0.8494594155346076,
+        "endpoint_rotation_deg": 1.7637169956392729,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 12.528109882334515,
+        "path_rotation_deg": 12.214949544492905,
+        "endpoint_position_cm": 17.330117605669805,
+        "endpoint_rotation_deg": 13.594521337744109,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 0.810170876071482,
+        "path_rotation_deg": 1.5436196294607558,
+        "endpoint_position_cm": 0.9005519757968857,
+        "endpoint_rotation_deg": 1.5692002452361784,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 12.665368153817822,
+        "path_rotation_deg": 29.846491740970684,
+        "endpoint_position_cm": 15.468103391634683,
+        "endpoint_rotation_deg": 43.76335971725203,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 0.8273525084696972,
+        "path_rotation_deg": 1.1609657649279785,
+        "endpoint_position_cm": 0.9347421393482453,
+        "endpoint_rotation_deg": 1.5772007258589913,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 9.726182582406826,
+        "path_rotation_deg": 8.829054169403769,
+        "endpoint_position_cm": 14.403838341431069,
+        "endpoint_rotation_deg": 11.384801106119017,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 0.7219238476565121,
+        "path_rotation_deg": 1.301124968869398,
+        "endpoint_position_cm": 0.9552360240516902,
+        "endpoint_rotation_deg": 1.513415812293692,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 11.89889623661157,
+        "path_rotation_deg": 18.81973538700553,
+        "endpoint_position_cm": 16.20291227780829,
+        "endpoint_rotation_deg": 22.628449848910478,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+      "partition": "train",
+      "steps": 38,
+      "starts": [
+        0,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 1.0081417638498402,
+        "path_rotation_deg": 4.2318381023960825,
+        "endpoint_position_cm": 1.1002643914543746,
+        "endpoint_rotation_deg": 5.16498309366305,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 8.366375534403897,
+        "path_rotation_deg": 33.16438499048207,
+        "endpoint_position_cm": 11.742270927203744,
+        "endpoint_rotation_deg": 50.465348217647836,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "partition": "train",
+      "steps": 26,
+      "starts": [
+        0,
+        8
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.32
+      ],
+      "ema": {
+        "path_position_cm": 0.7041006352798354,
+        "path_rotation_deg": 1.5310568131160036,
+        "endpoint_position_cm": 0.9833868534663427,
+        "endpoint_rotation_deg": 1.5092763817211334,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 10.39304572192334,
+        "path_rotation_deg": 9.224657312860671,
+        "endpoint_position_cm": 13.59712731699813,
+        "endpoint_rotation_deg": 13.297102718528949,
+        "windows": 2,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 0,
+      "outside_task_targets": 0,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "partition": "development",
+      "steps": 38,
+      "starts": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.10810810810810811,
+        0.21621621621621623,
+        0.32432432432432434,
+        0.43243243243243246,
+        0.5405405405405406
+      ],
+      "ema": {
+        "path_position_cm": 10.46632873541537,
+        "path_rotation_deg": 8.892653477835388,
+        "endpoint_position_cm": 15.804505339392513,
+        "endpoint_rotation_deg": 12.799277340504197,
+        "windows": 6,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 8.60447322233218,
+        "path_rotation_deg": 8.053853218112534,
+        "endpoint_position_cm": 12.291074516601705,
+        "endpoint_rotation_deg": 11.752466907570602,
+        "windows": 6,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 3,
+      "outside_task_targets": 24,
+      "outside_global_targets": 0
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "partition": "development",
+      "steps": 25,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "input_index_fractions": [
+        0.0,
+        0.16666666666666666,
+        0.3333333333333333
+      ],
+      "ema": {
+        "path_position_cm": 17.245531492891722,
+        "path_rotation_deg": 14.984651121423578,
+        "endpoint_position_cm": 21.719029554913067,
+        "endpoint_rotation_deg": 17.088142815761056,
+        "windows": 3,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "static": {
+        "path_position_cm": 10.395040062426906,
+        "path_rotation_deg": 9.651660618418838,
+        "endpoint_position_cm": 12.13429296446062,
+        "endpoint_rotation_deg": 12.600150340646527,
+        "windows": 3,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "outside_current_windows": 1,
+      "outside_task_targets": 8,
+      "outside_global_targets": 0
+    }
+  ],
+  "windows": [
+    {
+      "window": 3,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "start": 12,
+      "steps": 38,
+      "index_fraction": 0.32432432432432434,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.3573068380355835,
+        0.08157075941562653,
+        0.057711366564035416
+      ],
+      "current_measured_gripper": 1.0086473226547241,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 24,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9428836726630222,
+          "current_position_gap_cm": 8.40718179810863,
+          "current_rotation_gap_deg": 23.80092981170865,
+          "future_local_position_gap_cm": 6.730133081955896,
+          "future_local_rotation_gap_deg": 15.41470990778769,
+          "ema_prediction_to_neighbor_target_position_cm": 6.683670381525239,
+          "ema_prediction_to_neighbor_target_rotation_deg": 15.389896158514915
+        },
+        "state": {
+          "window": 110,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.8715165264863949,
+          "current_position_gap_cm": 4.191943828035935,
+          "current_rotation_gap_deg": 20.95768920686285,
+          "future_local_position_gap_cm": 11.34461695040886,
+          "future_local_rotation_gap_deg": 15.784969883812726,
+          "ema_prediction_to_neighbor_target_position_cm": 11.710259834746907,
+          "ema_prediction_to_neighbor_target_rotation_deg": 15.278041128766873
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.9682918152907981,
+        "path_rotation_deg": 2.077387935848046,
+        "endpoint_position_cm": 1.7666929286911415,
+        "endpoint_rotation_deg": 3.254476511931759,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 8,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "start": 12,
+      "steps": 38,
+      "index_fraction": 0.32432432432432434,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.26636600494384766,
+        0.0460117943584919,
+        0.044211193919181824
+      ],
+      "current_measured_gripper": 1.00800359249115,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 112,
+          "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9329413980822081,
+          "current_position_gap_cm": 4.784949783476917,
+          "current_rotation_gap_deg": 15.865183565531824,
+          "future_local_position_gap_cm": 7.893152629980984,
+          "future_local_rotation_gap_deg": 45.35807419482029,
+          "ema_prediction_to_neighbor_target_position_cm": 7.492392476322486,
+          "ema_prediction_to_neighbor_target_rotation_deg": 44.910261589152164
+        },
+        "state": {
+          "window": 54,
+          "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.8782968602536805,
+          "current_position_gap_cm": 3.9851470393057733,
+          "current_rotation_gap_deg": 22.06523588130537,
+          "future_local_position_gap_cm": 11.443514057520895,
+          "future_local_rotation_gap_deg": 24.02932300224773,
+          "ema_prediction_to_neighbor_target_position_cm": 11.949782076865707,
+          "ema_prediction_to_neighbor_target_rotation_deg": 24.509132559906686
+        }
+      },
+      "ema": {
+        "path_position_cm": 1.047210613478434,
+        "path_rotation_deg": 1.1850401897855,
+        "endpoint_position_cm": 1.5257113819068635,
+        "endpoint_rotation_deg": 1.4121155403880072,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 13,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "start": 8,
+      "steps": 25,
+      "index_fraction": 0.3333333333333333,
+      "future_fraction": 0.6666666666666666,
+      "current_xyz_m": [
+        0.31620684266090393,
+        0.059719931334257126,
+        0.0714208111166954
+      ],
+      "current_measured_gripper": 0.9620732665061951,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 115,
+          "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+          "start": 8,
+          "index_fraction": 0.32,
+          "visual_cosine": 0.9465930197080179,
+          "current_position_gap_cm": 12.58247646003908,
+          "current_rotation_gap_deg": 9.229437249150774,
+          "future_local_position_gap_cm": 9.955412841397425,
+          "future_local_rotation_gap_deg": 6.903301384871821,
+          "ema_prediction_to_neighbor_target_position_cm": 9.7452632295237,
+          "ema_prediction_to_neighbor_target_rotation_deg": 6.623618841972387
+        },
+        "state": {
+          "window": 112,
+          "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.8949964797982356,
+          "current_position_gap_cm": 2.4204928419342493,
+          "current_rotation_gap_deg": 15.750331559505401,
+          "future_local_position_gap_cm": 11.521200185900469,
+          "future_local_rotation_gap_deg": 55.36169539178057,
+          "ema_prediction_to_neighbor_target_position_cm": 11.241861361053191,
+          "ema_prediction_to_neighbor_target_rotation_deg": 54.78959460830629
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.968735245522557,
+        "path_rotation_deg": 1.4187394547759593,
+        "endpoint_position_cm": 0.8527211697929387,
+        "endpoint_rotation_deg": 1.2883279540226498,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 19,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2674623131752014,
+        -0.053006093949079514,
+        0.05731409043073654
+      ],
+      "current_measured_gripper": 1.0086473226547241,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 53,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9537348825565237,
+          "current_position_gap_cm": 4.441453822890701,
+          "current_rotation_gap_deg": 9.58667593358838,
+          "future_local_position_gap_cm": 10.632536122830178,
+          "future_local_rotation_gap_deg": 10.485356522722379,
+          "ema_prediction_to_neighbor_target_position_cm": 10.578523599866205,
+          "ema_prediction_to_neighbor_target_rotation_deg": 10.166862582348612
+        },
+        "state": {
+          "window": 104,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9404347018811463,
+          "current_position_gap_cm": 2.348852903806649,
+          "current_rotation_gap_deg": 10.193813472289202,
+          "future_local_position_gap_cm": 8.722661150591366,
+          "future_local_rotation_gap_deg": 11.696154375148975,
+          "ema_prediction_to_neighbor_target_position_cm": 8.428215255370096,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.278193357382909
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.8167781600195169,
+        "path_rotation_deg": 1.5725555339001709,
+        "endpoint_position_cm": 0.8008586679301053,
+        "endpoint_rotation_deg": 1.657575202425998,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 24,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2759304642677307,
+        0.0857437402009964,
+        0.07841263711452484
+      ],
+      "current_measured_gripper": 1.00800359249115,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 107,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9432080625135523,
+          "current_position_gap_cm": 6.4861569630534035,
+          "current_rotation_gap_deg": 76.78162281975042,
+          "future_local_position_gap_cm": 12.43471404027449,
+          "future_local_rotation_gap_deg": 30.19401414473655,
+          "ema_prediction_to_neighbor_target_position_cm": 12.538078195365074,
+          "ema_prediction_to_neighbor_target_rotation_deg": 29.36054434683299
+        },
+        "state": {
+          "window": 52,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9073413127642315,
+          "current_position_gap_cm": 3.7251226849468666,
+          "current_rotation_gap_deg": 22.013321490599704,
+          "future_local_position_gap_cm": 7.1952444554566615,
+          "future_local_rotation_gap_deg": 8.671372657697887,
+          "ema_prediction_to_neighbor_target_position_cm": 7.343834929295515,
+          "ema_prediction_to_neighbor_target_rotation_deg": 8.755064431178875
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.78596641094317,
+        "path_rotation_deg": 1.6128004605235773,
+        "endpoint_position_cm": 1.060188526368372,
+        "endpoint_rotation_deg": 1.9516527803794927,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 29,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "start": 0,
+      "steps": 25,
+      "index_fraction": 0.0,
+      "future_fraction": 0.6666666666666666,
+      "current_xyz_m": [
+        0.46587175130844116,
+        -0.011561037041246891,
+        0.04945376142859459
+      ],
+      "current_measured_gripper": 0.9620732665061951,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 115,
+          "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+          "start": 8,
+          "index_fraction": 0.32,
+          "visual_cosine": 0.9739555560584976,
+          "current_position_gap_cm": 23.98323479494588,
+          "current_rotation_gap_deg": 21.586686845344495,
+          "future_local_position_gap_cm": 18.552071197657746,
+          "future_local_rotation_gap_deg": 19.076921718939154,
+          "ema_prediction_to_neighbor_target_position_cm": 18.405034240695795,
+          "ema_prediction_to_neighbor_target_rotation_deg": 19.24557477998778
+        },
+        "state": {
+          "window": 114,
+          "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.968221975372642,
+          "current_position_gap_cm": 7.4717358554794,
+          "current_rotation_gap_deg": 18.954628456808816,
+          "future_local_position_gap_cm": 10.532429874481043,
+          "future_local_rotation_gap_deg": 14.771328366382683,
+          "ema_prediction_to_neighbor_target_position_cm": 10.536505409304798,
+          "ema_prediction_to_neighbor_target_rotation_deg": 15.03514033186262
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.5347426644835891,
+        "path_rotation_deg": 1.217425408109098,
+        "endpoint_position_cm": 0.6845956191210032,
+        "endpoint_rotation_deg": 1.2915732358906171,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 52,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.30561915040016174,
+        0.10652011632919312,
+        0.0870484933257103
+      ],
+      "current_measured_gripper": 1.0060625076293945,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 56,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9605552270836396,
+          "current_position_gap_cm": 3.6020443569540164,
+          "current_rotation_gap_deg": 17.67236088209292,
+          "future_local_position_gap_cm": 10.1942252605917,
+          "future_local_rotation_gap_deg": 14.83969562715279,
+          "ema_prediction_to_neighbor_target_position_cm": 10.176611529276855,
+          "ema_prediction_to_neighbor_target_rotation_deg": 15.754035467768626
+        },
+        "state": {
+          "window": 56,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9605552270836396,
+          "current_position_gap_cm": 3.6020443569540164,
+          "current_rotation_gap_deg": 17.67236088209292,
+          "future_local_position_gap_cm": 10.1942252605917,
+          "future_local_rotation_gap_deg": 14.83969562715279,
+          "ema_prediction_to_neighbor_target_position_cm": 10.176611529276855,
+          "ema_prediction_to_neighbor_target_rotation_deg": 15.754035467768626
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.5430216645533332,
+        "path_rotation_deg": 1.6492870843671927,
+        "endpoint_position_cm": 0.5368477477667506,
+        "endpoint_rotation_deg": 2.148085431895667,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 53,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.3042512834072113,
+        -0.06033734604716301,
+        0.03353435918688774
+      ],
+      "current_measured_gripper": 0.4624805450439453,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 106,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9565177499312099,
+          "current_position_gap_cm": 9.641894275798865,
+          "current_rotation_gap_deg": 25.7386414797736,
+          "future_local_position_gap_cm": 7.383912682928842,
+          "future_local_rotation_gap_deg": 37.30048964499503,
+          "ema_prediction_to_neighbor_target_position_cm": 7.10016931093111,
+          "ema_prediction_to_neighbor_target_rotation_deg": 37.264156053830206
+        },
+        "state": {
+          "window": 104,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9355529410094561,
+          "current_position_gap_cm": 2.4188575415973257,
+          "current_rotation_gap_deg": 19.750526868172667,
+          "future_local_position_gap_cm": 6.448081914154015,
+          "future_local_rotation_gap_deg": 16.745599902982917,
+          "ema_prediction_to_neighbor_target_position_cm": 6.17258544610115,
+          "ema_prediction_to_neighbor_target_rotation_deg": 16.883331018574463
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.7375206674414189,
+        "path_rotation_deg": 1.3990201871087404,
+        "endpoint_position_cm": 0.695330124579996,
+        "endpoint_rotation_deg": 1.7386388945496123,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 54,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2737116813659668,
+        0.008744164370000362,
+        0.05626542493700981
+      ],
+      "current_measured_gripper": 1.00800359249115,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 106,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9329914482668397,
+          "current_position_gap_cm": 6.297255111048799,
+          "current_rotation_gap_deg": 33.65027557295209,
+          "future_local_position_gap_cm": 5.787962533555228,
+          "future_local_rotation_gap_deg": 53.161310082168384,
+          "ema_prediction_to_neighbor_target_position_cm": 6.013602585210578,
+          "ema_prediction_to_neighbor_target_rotation_deg": 51.99310636744727
+        },
+        "state": {
+          "window": 8,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+          "start": 12,
+          "index_fraction": 0.32432432432432434,
+          "visual_cosine": 0.8782968602536805,
+          "current_position_gap_cm": 3.9851470393057733,
+          "current_rotation_gap_deg": 22.06523588130537,
+          "future_local_position_gap_cm": 11.443514057520895,
+          "future_local_rotation_gap_deg": 24.02932300224773,
+          "ema_prediction_to_neighbor_target_position_cm": 11.972468955254525,
+          "ema_prediction_to_neighbor_target_rotation_deg": 23.08975387704919
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.8311256333198677,
+        "path_rotation_deg": 1.7309694176842119,
+        "endpoint_position_cm": 0.9326181401065448,
+        "endpoint_rotation_deg": 2.2902411913885694,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 55,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.35633584856987,
+        0.13813726603984833,
+        0.029054617509245872
+      ],
+      "current_measured_gripper": 0.9492040276527405,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 112,
+          "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.933608554445247,
+          "current_position_gap_cm": 11.202426221865384,
+          "current_rotation_gap_deg": 38.77962790922507,
+          "future_local_position_gap_cm": 10.502234882855337,
+          "future_local_rotation_gap_deg": 36.03749946922309,
+          "ema_prediction_to_neighbor_target_position_cm": 10.475280734526027,
+          "ema_prediction_to_neighbor_target_rotation_deg": 35.52167188964904
+        },
+        "state": {
+          "window": 3,
+          "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+          "start": 12,
+          "index_fraction": 0.32432432432432434,
+          "visual_cosine": 0.9048480198945555,
+          "current_position_gap_cm": 6.341862312128699,
+          "current_rotation_gap_deg": 26.456658178148,
+          "future_local_position_gap_cm": 8.627023194139309,
+          "future_local_rotation_gap_deg": 14.022553514945422,
+          "ema_prediction_to_neighbor_target_position_cm": 8.46869375301923,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.885529953813887
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.7633439306997865,
+        "path_rotation_deg": 3.102597389397958,
+        "endpoint_position_cm": 1.1736814999482366,
+        "endpoint_rotation_deg": 5.90054758194713,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 56,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.33380526304244995,
+        0.08754238486289978,
+        0.099000945687294
+      ],
+      "current_measured_gripper": 1.0112061500549316,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 52,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9605552270836396,
+          "current_position_gap_cm": 3.6020443569540164,
+          "current_rotation_gap_deg": 17.67236088209292,
+          "future_local_position_gap_cm": 10.1942252605917,
+          "future_local_rotation_gap_deg": 14.83969562715279,
+          "ema_prediction_to_neighbor_target_position_cm": 10.74169877297954,
+          "ema_prediction_to_neighbor_target_rotation_deg": 21.24475023369445
+        },
+        "state": {
+          "window": 110,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9323666156020392,
+          "current_position_gap_cm": 3.2917240661169584,
+          "current_rotation_gap_deg": 21.820976959230197,
+          "future_local_position_gap_cm": 3.444426541329399,
+          "future_local_rotation_gap_deg": 13.685708774487424,
+          "ema_prediction_to_neighbor_target_position_cm": 3.5574015859911987,
+          "ema_prediction_to_neighbor_target_rotation_deg": 18.170572852759936
+        }
+      },
+      "ema": {
+        "path_position_cm": 1.3521385302031217,
+        "path_rotation_deg": 8.196504657883859,
+        "endpoint_position_cm": 1.9473870557527742,
+        "endpoint_rotation_deg": 11.714154408130161,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 57,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2236267626285553,
+        0.029308106750249863,
+        0.02536354586482048
+      ],
+      "current_measured_gripper": 0.4211256504058838,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 107,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9436426288251136,
+          "current_position_gap_cm": 7.197857805647123,
+          "current_rotation_gap_deg": 63.5977516165751,
+          "future_local_position_gap_cm": 26.44881115716605,
+          "future_local_rotation_gap_deg": 22.21925855257701,
+          "ema_prediction_to_neighbor_target_position_cm": 26.56856389125352,
+          "ema_prediction_to_neighbor_target_rotation_deg": 21.829566018948913
+        },
+        "state": {
+          "window": 113,
+          "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9230039932041127,
+          "current_position_gap_cm": 1.6710187236133496,
+          "current_rotation_gap_deg": 53.66970558515444,
+          "future_local_position_gap_cm": 11.553895832344038,
+          "future_local_rotation_gap_deg": 18.303475049045996,
+          "ema_prediction_to_neighbor_target_position_cm": 11.630250723176578,
+          "ema_prediction_to_neighbor_target_rotation_deg": 18.343352815793924
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.8546556874518573,
+        "path_rotation_deg": 1.4880105171850098,
+        "endpoint_position_cm": 1.0907363778290813,
+        "endpoint_rotation_deg": 1.5394873635987942,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 104,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2863259017467499,
+        -0.04809635132551193,
+        0.044207967817783356
+      ],
+      "current_measured_gripper": 1.0092895030975342,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 112,
+          "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.946303720411078,
+          "current_position_gap_cm": 9.253091750061438,
+          "current_rotation_gap_deg": 16.909194990566878,
+          "future_local_position_gap_cm": 10.911422731783361,
+          "future_local_rotation_gap_deg": 60.17377161830902,
+          "ema_prediction_to_neighbor_target_position_cm": 10.975308195186827,
+          "ema_prediction_to_neighbor_target_rotation_deg": 59.21381668963662
+        },
+        "state": {
+          "window": 19,
+          "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9404347018811463,
+          "current_position_gap_cm": 2.348852903806649,
+          "current_rotation_gap_deg": 10.193813472289202,
+          "future_local_position_gap_cm": 8.722661150591366,
+          "future_local_rotation_gap_deg": 11.696154375148975,
+          "ema_prediction_to_neighbor_target_position_cm": 8.595498719290768,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.3117904530385
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.7428196043238507,
+        "path_rotation_deg": 1.5409250104217127,
+        "endpoint_position_cm": 0.8326327204411211,
+        "endpoint_rotation_deg": 1.9890399329611654,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 105,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.25013184547424316,
+        0.11012083292007446,
+        0.02794441021978855
+      ],
+      "current_measured_gripper": 0.561048150062561,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 19,
+          "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9484130168711816,
+          "current_position_gap_cm": 16.665328528475403,
+          "current_rotation_gap_deg": 28.23016876963751,
+          "future_local_position_gap_cm": 21.154290075909046,
+          "future_local_rotation_gap_deg": 16.05959810413981,
+          "ema_prediction_to_neighbor_target_position_cm": 21.437213614712203,
+          "ema_prediction_to_neighbor_target_rotation_deg": 16.007309185032607
+        },
+        "state": {
+          "window": 109,
+          "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9307732687408642,
+          "current_position_gap_cm": 3.475844515711282,
+          "current_rotation_gap_deg": 26.44266666582701,
+          "future_local_position_gap_cm": 5.646060943953987,
+          "future_local_rotation_gap_deg": 14.34523311256077,
+          "ema_prediction_to_neighbor_target_position_cm": 5.797189076889638,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.29692962274124
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.8510027923703688,
+        "path_rotation_deg": 1.359738540388402,
+        "endpoint_position_cm": 0.8662861106280939,
+        "endpoint_rotation_deg": 1.5383940583173803,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 106,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.33235636353492737,
+        0.02208193950355053,
+        0.07493216544389725
+      ],
+      "current_measured_gripper": 1.0008161067962646,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 53,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9565177499312099,
+          "current_position_gap_cm": 9.641894275798865,
+          "current_rotation_gap_deg": 25.7386414797736,
+          "future_local_position_gap_cm": 7.383912682928842,
+          "future_local_rotation_gap_deg": 37.30048964499503,
+          "ema_prediction_to_neighbor_target_position_cm": 7.5085385657447175,
+          "ema_prediction_to_neighbor_target_rotation_deg": 37.23872452891463
+        },
+        "state": {
+          "window": 13,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+          "start": 8,
+          "index_fraction": 0.3333333333333333,
+          "visual_cosine": 0.8982597106196879,
+          "current_position_gap_cm": 4.110663039851374,
+          "current_rotation_gap_deg": 20.862683549612047,
+          "future_local_position_gap_cm": 9.140743027574132,
+          "future_local_rotation_gap_deg": 45.130308995352,
+          "ema_prediction_to_neighbor_target_position_cm": 9.078178552329959,
+          "ema_prediction_to_neighbor_target_rotation_deg": 45.083271102643984
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.8037454605422107,
+        "path_rotation_deg": 2.0146254735136955,
+        "endpoint_position_cm": 1.2774135222057221,
+        "endpoint_rotation_deg": 2.257705177778405,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 107,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2259729653596878,
+        0.09984153509140015,
+        0.039521459490060806
+      ],
+      "current_measured_gripper": 0.6319981217384338,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 111,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9493787694713814,
+          "current_position_gap_cm": 4.58354838843065,
+          "current_rotation_gap_deg": 55.80984289316733,
+          "future_local_position_gap_cm": 24.320964323597455,
+          "future_local_rotation_gap_deg": 11.424805857596642,
+          "ema_prediction_to_neighbor_target_position_cm": 23.753992133673805,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.41986239319867
+        },
+        "state": {
+          "window": 111,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9493787694713814,
+          "current_position_gap_cm": 4.58354838843065,
+          "current_rotation_gap_deg": 55.80984289316733,
+          "future_local_position_gap_cm": 24.320964323597455,
+          "future_local_rotation_gap_deg": 11.424805857596642,
+          "ema_prediction_to_neighbor_target_position_cm": 23.753992133673805,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.41986239319867
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.816596291600753,
+        "path_rotation_deg": 1.072613785407816,
+        "endpoint_position_cm": 0.5236904293880497,
+        "endpoint_rotation_deg": 0.8806953126939517,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 108,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.20746921002864838,
+        -0.05065814033150673,
+        0.05672869086265564
+      ],
+      "current_measured_gripper": 1.0067112445831299,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 107,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9455363876263578,
+          "current_position_gap_cm": 15.260612725333575,
+          "current_rotation_gap_deg": 91.43813139949346,
+          "future_local_position_gap_cm": 24.50672649045822,
+          "future_local_rotation_gap_deg": 32.025017163847906,
+          "ema_prediction_to_neighbor_target_position_cm": 24.653162591288872,
+          "ema_prediction_to_neighbor_target_rotation_deg": 32.009293143676
+        },
+        "state": {
+          "window": 19,
+          "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9139300457064403,
+          "current_position_gap_cm": 6.004188541341398,
+          "current_rotation_gap_deg": 14.928352411703305,
+          "future_local_position_gap_cm": 3.871692050752989,
+          "future_local_rotation_gap_deg": 18.373786865844853,
+          "ema_prediction_to_neighbor_target_position_cm": 4.039008481478667,
+          "ema_prediction_to_neighbor_target_rotation_deg": 18.25504008118146
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.9736812085786916,
+        "path_rotation_deg": 1.047824374424766,
+        "endpoint_position_cm": 1.0718264688032104,
+        "endpoint_rotation_deg": 1.4568488726850772,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 109,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.277955025434494,
+        0.08937011659145355,
+        0.029795879498124123
+      ],
+      "current_measured_gripper": 0.6219554543495178,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 53,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9515580361846461,
+          "current_position_gap_cm": 15.2045367517211,
+          "current_rotation_gap_deg": 12.474445322478578,
+          "future_local_position_gap_cm": 23.590522998035528,
+          "future_local_rotation_gap_deg": 14.3172536721308,
+          "ema_prediction_to_neighbor_target_position_cm": 23.458873467140318,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.471518973304123
+        },
+        "state": {
+          "window": 105,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9307732687408642,
+          "current_position_gap_cm": 3.475844515711282,
+          "current_rotation_gap_deg": 26.44266666582701,
+          "future_local_position_gap_cm": 5.646060943953987,
+          "future_local_rotation_gap_deg": 14.34523311256077,
+          "ema_prediction_to_neighbor_target_position_cm": 5.8552304475533505,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.177763346632872
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.6810238083607029,
+        "path_rotation_deg": 1.2741071554311911,
+        "endpoint_position_cm": 0.7976578098932802,
+        "endpoint_rotation_deg": 1.6975525790329054,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 110,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.3472059965133667,
+        0.11319053918123245,
+        0.08331218361854553
+      ],
+      "current_measured_gripper": 1.0067112445831299,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 52,
+          "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9574463436581109,
+          "current_position_gap_cm": 4.228380684016344,
+          "current_rotation_gap_deg": 7.667447764336305,
+          "future_local_position_gap_cm": 12.928177666965825,
+          "future_local_rotation_gap_deg": 11.404687111383389,
+          "ema_prediction_to_neighbor_target_position_cm": 12.886469907822837,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.23689967400667
+        },
+        "state": {
+          "window": 56,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9323666156020392,
+          "current_position_gap_cm": 3.2917240661169584,
+          "current_rotation_gap_deg": 21.820976959230197,
+          "future_local_position_gap_cm": 3.444426541329399,
+          "future_local_rotation_gap_deg": 13.685708774487424,
+          "ema_prediction_to_neighbor_target_position_cm": 3.4983177509878023,
+          "ema_prediction_to_neighbor_target_rotation_deg": 13.907325975794208
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.7456594847478423,
+        "path_rotation_deg": 0.9986922628580913,
+        "endpoint_position_cm": 1.2109252927136152,
+        "endpoint_rotation_deg": 1.134308342242569,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 111,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.21106454730033875,
+        0.05986452475190163,
+        0.05626867711544037
+      ],
+      "current_measured_gripper": 0.5590677857398987,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 107,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9493787694713814,
+          "current_position_gap_cm": 4.58354838843065,
+          "current_rotation_gap_deg": 55.80984289316733,
+          "future_local_position_gap_cm": 24.320964323597455,
+          "future_local_rotation_gap_deg": 11.424805857596642,
+          "ema_prediction_to_neighbor_target_position_cm": 24.24410149555074,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.065467540519592
+        },
+        "state": {
+          "window": 57,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9372116710978842,
+          "current_position_gap_cm": 4.5239706814503,
+          "current_rotation_gap_deg": 15.886352285636491,
+          "future_local_position_gap_cm": 4.969462820204031,
+          "future_local_rotation_gap_deg": 14.434369042382283,
+          "ema_prediction_to_neighbor_target_position_cm": 5.008658707239638,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.688812076820705
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.6981882105651819,
+        "path_rotation_deg": 1.6035576748807046,
+        "endpoint_position_cm": 0.6995467553897652,
+        "endpoint_rotation_deg": 1.8925232823448148,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 112,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.3115917146205902,
+        0.03975816071033478,
+        0.05853256583213806
+      ],
+      "current_measured_gripper": 1.0086473226547241,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 19,
+          "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.951202775354913,
+          "current_position_gap_cm": 10.273312852604445,
+          "current_rotation_gap_deg": 8.645008800632995,
+          "future_local_position_gap_cm": 14.95741205229365,
+          "future_local_rotation_gap_deg": 54.85122728151624,
+          "ema_prediction_to_neighbor_target_position_cm": 15.173634063653802,
+          "ema_prediction_to_neighbor_target_rotation_deg": 48.53027163136412
+        },
+        "state": {
+          "window": 13,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+          "start": 8,
+          "index_fraction": 0.3333333333333333,
+          "visual_cosine": 0.8949964797982356,
+          "current_position_gap_cm": 2.4204928419342493,
+          "current_rotation_gap_deg": 15.750331559505401,
+          "future_local_position_gap_cm": 11.521200185900469,
+          "future_local_rotation_gap_deg": 55.36169539178057,
+          "ema_prediction_to_neighbor_target_position_cm": 11.816597250460624,
+          "ema_prediction_to_neighbor_target_rotation_deg": 48.89463684596992
+        }
+      },
+      "ema": {
+        "path_position_cm": 1.1602119200557433,
+        "path_rotation_deg": 6.90564856270709,
+        "endpoint_position_cm": 1.2631721724375526,
+        "endpoint_rotation_deg": 7.441187738506907,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 113,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.22250130772590637,
+        0.039422158151865005,
+        0.012109502218663692
+      ],
+      "current_measured_gripper": 0.7826583981513977,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 111,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9463141008985965,
+          "current_position_gap_cm": 4.998722405581484,
+          "current_rotation_gap_deg": 46.50404984113467,
+          "future_local_position_gap_cm": 8.582483674179386,
+          "future_local_rotation_gap_deg": 10.884604483816096,
+          "ema_prediction_to_neighbor_target_position_cm": 8.619621201110592,
+          "ema_prediction_to_neighbor_target_rotation_deg": 11.161493890253368
+        },
+        "state": {
+          "window": 57,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9230039932041127,
+          "current_position_gap_cm": 1.6710187236133496,
+          "current_rotation_gap_deg": 53.66970558515444,
+          "future_local_position_gap_cm": 11.553895832344038,
+          "future_local_rotation_gap_deg": 18.303475049045996,
+          "ema_prediction_to_neighbor_target_position_cm": 11.641235581660808,
+          "ema_prediction_to_neighbor_target_rotation_deg": 19.27106564902571
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.8560716076439373,
+        "path_rotation_deg": 1.5580276420850747,
+        "endpoint_position_cm": 0.9373566104711969,
+        "endpoint_rotation_deg": 2.8887784488191923,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 114,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "start": 0,
+      "steps": 26,
+      "index_fraction": 0.0,
+      "future_fraction": 0.64,
+      "current_xyz_m": [
+        0.3970777988433838,
+        0.011527558788657188,
+        0.031649477779865265
+      ],
+      "current_measured_gripper": 0.973810613155365,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 29,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.968221975372642,
+          "current_position_gap_cm": 7.4717358554794,
+          "current_rotation_gap_deg": 18.954628456808816,
+          "future_local_position_gap_cm": 10.532429874481043,
+          "future_local_rotation_gap_deg": 14.771328366382683,
+          "ema_prediction_to_neighbor_target_position_cm": 10.440900630891157,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.47349802504263
+        },
+        "state": {
+          "window": 29,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.968221975372642,
+          "current_position_gap_cm": 7.4717358554794,
+          "current_rotation_gap_deg": 18.954628456808816,
+          "future_local_position_gap_cm": 10.532429874481043,
+          "future_local_rotation_gap_deg": 14.771328366382683,
+          "ema_prediction_to_neighbor_target_position_cm": 10.440900630891157,
+          "ema_prediction_to_neighbor_target_rotation_deg": 14.47349802504263
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.743966707258415,
+        "path_rotation_deg": 1.452077671423753,
+        "endpoint_position_cm": 0.7674609142395692,
+        "endpoint_rotation_deg": 1.1276399694277777,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 115,
+      "partition": "train",
+      "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "start": 8,
+      "steps": 26,
+      "index_fraction": 0.32,
+      "future_fraction": 0.64,
+      "current_xyz_m": [
+        0.3301136791706085,
+        0.1847662329673767,
+        0.07279694080352783
+      ],
+      "current_measured_gripper": 0.973810613155365,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 29,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9739555560584976,
+          "current_position_gap_cm": 23.98323479494588,
+          "current_rotation_gap_deg": 21.586686845344495,
+          "future_local_position_gap_cm": 18.552071197657746,
+          "future_local_rotation_gap_deg": 19.076921718939154,
+          "ema_prediction_to_neighbor_target_position_cm": 18.22644911792023,
+          "ema_prediction_to_neighbor_target_rotation_deg": 19.21030611523565
+        },
+        "state": {
+          "window": 110,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9191684477732578,
+          "current_position_gap_cm": 7.433570867740633,
+          "current_rotation_gap_deg": 22.788044837203355,
+          "future_local_position_gap_cm": 14.225316406175228,
+          "future_local_rotation_gap_deg": 19.9158791002328,
+          "ema_prediction_to_neighbor_target_position_cm": 13.94719286633753,
+          "ema_prediction_to_neighbor_target_rotation_deg": 20.773086408878054
+        }
+      },
+      "ema": {
+        "path_position_cm": 0.664234563301256,
+        "path_rotation_deg": 1.6100359548082543,
+        "endpoint_position_cm": 1.1993127926931162,
+        "endpoint_rotation_deg": 1.8909127940144888,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 138,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "start": 0,
+      "steps": 38,
+      "index_fraction": 0.0,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.18239125609397888,
+        -0.052567265927791595,
+        0.08782222867012024
+      ],
+      "current_measured_gripper": 1.013738751411438,
+      "current_outside_same_task_train_box": true,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 111,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9410256964096901,
+          "current_position_gap_cm": 12.024430048763604,
+          "current_rotation_gap_deg": 27.055627632682352,
+          "future_local_position_gap_cm": 11.901087264416786,
+          "future_local_rotation_gap_deg": 23.26609000832378,
+          "ema_prediction_to_neighbor_target_position_cm": 11.406661251911034,
+          "ema_prediction_to_neighbor_target_rotation_deg": 17.433554358836084
+        },
+        "state": {
+          "window": 108,
+          "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9373238848621342,
+          "current_position_gap_cm": 3.999195703483421,
+          "current_rotation_gap_deg": 15.820769337282515,
+          "future_local_position_gap_cm": 3.134402922465198,
+          "future_local_rotation_gap_deg": 14.123169405035036,
+          "ema_prediction_to_neighbor_target_position_cm": 4.536088584658947,
+          "ema_prediction_to_neighbor_target_rotation_deg": 17.80446930033961
+        }
+      },
+      "ema": {
+        "path_position_cm": 4.658343174673335,
+        "path_rotation_deg": 7.127922423593844,
+        "endpoint_position_cm": 10.861932119972233,
+        "endpoint_rotation_deg": 10.036169907311887,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 139,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "start": 4,
+      "steps": 38,
+      "index_fraction": 0.10810810810810811,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.19904176890850067,
+        -0.01456750463694334,
+        0.1381808966398239
+      ],
+      "current_measured_gripper": 1.013738751411438,
+      "current_outside_same_task_train_box": true,
+      "target_xyz_outside_same_task_train_count": 10,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 111,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9314837047305653,
+          "current_position_gap_cm": 11.132962726341955,
+          "current_rotation_gap_deg": 24.02712517961509,
+          "future_local_position_gap_cm": 13.703732010428407,
+          "future_local_rotation_gap_deg": 20.681959675932447,
+          "ema_prediction_to_neighbor_target_position_cm": 8.440095432521296,
+          "ema_prediction_to_neighbor_target_rotation_deg": 18.953338827712955
+        },
+        "state": {
+          "window": 108,
+          "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9127285516917685,
+          "current_position_gap_cm": 8.948752748085855,
+          "current_rotation_gap_deg": 17.826307502786662,
+          "future_local_position_gap_cm": 9.761944397831032,
+          "future_local_rotation_gap_deg": 14.591631078689783,
+          "ema_prediction_to_neighbor_target_position_cm": 8.451956215759933,
+          "ema_prediction_to_neighbor_target_rotation_deg": 12.631218168088736
+        }
+      },
+      "ema": {
+        "path_position_cm": 10.775713623962737,
+        "path_rotation_deg": 7.420321740757044,
+        "endpoint_position_cm": 13.802909738140931,
+        "endpoint_rotation_deg": 4.257098803666728,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 140,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "start": 8,
+      "steps": 38,
+      "index_fraction": 0.21621621621621623,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.22288823127746582,
+        0.06771214306354523,
+        0.1260516494512558
+      ],
+      "current_measured_gripper": 1.013738751411438,
+      "current_outside_same_task_train_box": true,
+      "target_xyz_outside_same_task_train_count": 14,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 54,
+          "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9423786741396278,
+          "current_position_gap_cm": 10.454837503306045,
+          "current_rotation_gap_deg": 18.94677812913776,
+          "future_local_position_gap_cm": 15.717262577535397,
+          "future_local_rotation_gap_deg": 24.40487502802567,
+          "ema_prediction_to_neighbor_target_position_cm": 16.657257745865216,
+          "ema_prediction_to_neighbor_target_rotation_deg": 23.733115870820914
+        },
+        "state": {
+          "window": 24,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9341207836051587,
+          "current_position_gap_cm": 7.35397339697397,
+          "current_rotation_gap_deg": 5.245676335804817,
+          "future_local_position_gap_cm": 9.383786240062582,
+          "future_local_rotation_gap_deg": 8.450282276191516,
+          "ema_prediction_to_neighbor_target_position_cm": 5.548698529778258,
+          "ema_prediction_to_neighbor_target_rotation_deg": 10.078025620864873
+        }
+      },
+      "ema": {
+        "path_position_cm": 12.054940586290263,
+        "path_rotation_deg": 9.591728854937154,
+        "endpoint_position_cm": 14.658287812334876,
+        "endpoint_rotation_deg": 11.41228295308695,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 141,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "start": 12,
+      "steps": 38,
+      "index_fraction": 0.32432432432432434,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.25473785400390625,
+        0.09324977546930313,
+        0.04973658174276352
+      ],
+      "current_measured_gripper": 1.013738751411438,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 111,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9642393030416443,
+          "current_position_gap_cm": 5.535883808250836,
+          "current_rotation_gap_deg": 27.449392081815077,
+          "future_local_position_gap_cm": 12.748683592063516,
+          "future_local_rotation_gap_deg": 22.498178323666448,
+          "ema_prediction_to_neighbor_target_position_cm": 10.663077265963304,
+          "ema_prediction_to_neighbor_target_rotation_deg": 16.013558043255156
+        },
+        "state": {
+          "window": 109,
+          "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9096268259660929,
+          "current_position_gap_cm": 3.084996609811986,
+          "current_rotation_gap_deg": 7.628332880493462,
+          "future_local_position_gap_cm": 9.799143766836906,
+          "future_local_rotation_gap_deg": 6.688107356111668,
+          "ema_prediction_to_neighbor_target_position_cm": 2.8698995834387824,
+          "ema_prediction_to_neighbor_target_rotation_deg": 9.24474023797994
+        }
+      },
+      "ema": {
+        "path_position_cm": 9.530340790979587,
+        "path_rotation_deg": 9.667967024494033,
+        "endpoint_position_cm": 14.782355030577973,
+        "endpoint_rotation_deg": 8.673078839639578,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 142,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "start": 16,
+      "steps": 38,
+      "index_fraction": 0.43243243243243246,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2461577206850052,
+        0.06722629070281982,
+        0.02481512539088726
+      ],
+      "current_measured_gripper": 1.013738751411438,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 113,
+          "episode": "bridge_data_v2-train.tfrecord-00045-of-01024::16",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9320592002152941,
+          "current_position_gap_cm": 3.8653958674332807,
+          "current_rotation_gap_deg": 67.0741981811371,
+          "future_local_position_gap_cm": 11.055891631752328,
+          "future_local_rotation_gap_deg": 13.524497919525372,
+          "ema_prediction_to_neighbor_target_position_cm": 6.34972046903335,
+          "ema_prediction_to_neighbor_target_rotation_deg": 18.006165957860038
+        },
+        "state": {
+          "window": 8,
+          "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+          "start": 12,
+          "index_fraction": 0.32432432432432434,
+          "visual_cosine": 0.9144146983492625,
+          "current_position_gap_cm": 3.5137402894693026,
+          "current_rotation_gap_deg": 10.790389323880506,
+          "future_local_position_gap_cm": 7.033439016152435,
+          "future_local_rotation_gap_deg": 10.927223282622599,
+          "ema_prediction_to_neighbor_target_position_cm": 8.390287659459283,
+          "ema_prediction_to_neighbor_target_rotation_deg": 7.316896484084741
+        }
+      },
+      "ema": {
+        "path_position_cm": 12.126797560539345,
+        "path_rotation_deg": 8.296026737512966,
+        "endpoint_position_cm": 21.091022903363452,
+        "endpoint_rotation_deg": 21.68945316437213,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 143,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "start": 20,
+      "steps": 38,
+      "index_fraction": 0.5405405405405406,
+      "future_fraction": 0.43243243243243246,
+      "current_xyz_m": [
+        0.2557885944843292,
+        0.07965338975191116,
+        0.017749138176441193
+      ],
+      "current_measured_gripper": 0.6520930528640747,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 106,
+          "episode": "bridge_data_v2-train.tfrecord-00019-of-01024::29",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9400855149511624,
+          "current_position_gap_cm": 11.156609587395188,
+          "current_rotation_gap_deg": 27.524581412453227,
+          "future_local_position_gap_cm": 8.137737775812523,
+          "future_local_rotation_gap_deg": 44.83154788638758,
+          "ema_prediction_to_neighbor_target_position_cm": 17.56311154714461,
+          "ema_prediction_to_neighbor_target_rotation_deg": 36.4350282761354
+        },
+        "state": {
+          "window": 109,
+          "episode": "bridge_data_v2-train.tfrecord-00028-of-01024::2",
+          "start": 20,
+          "index_fraction": 0.5405405405405406,
+          "visual_cosine": 0.9203900896761572,
+          "current_position_gap_cm": 2.703496658060169,
+          "current_rotation_gap_deg": 5.3593075599875135,
+          "future_local_position_gap_cm": 14.874153926946782,
+          "future_local_rotation_gap_deg": 12.209282274439303,
+          "ema_prediction_to_neighbor_target_position_cm": 2.502007767333811,
+          "ema_prediction_to_neighbor_target_rotation_deg": 8.738276037788692
+        }
+      },
+      "ema": {
+        "path_position_cm": 13.651836676046956,
+        "path_rotation_deg": 11.251954085717282,
+        "endpoint_position_cm": 19.630524431965622,
+        "endpoint_rotation_deg": 20.72758037494791,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 144,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "start": 0,
+      "steps": 25,
+      "index_fraction": 0.0,
+      "future_fraction": 0.6666666666666666,
+      "current_xyz_m": [
+        0.392991304397583,
+        0.1548222005367279,
+        0.07649525254964828
+      ],
+      "current_measured_gripper": 0.9560673832893372,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 8,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 29,
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9733285681303536,
+          "current_position_gap_cm": 18.364689905061084,
+          "current_rotation_gap_deg": 21.482137738858864,
+          "future_local_position_gap_cm": 21.00096639339299,
+          "future_local_rotation_gap_deg": 17.16157166803189,
+          "ema_prediction_to_neighbor_target_position_cm": 13.786613071806528,
+          "ema_prediction_to_neighbor_target_rotation_deg": 19.796853449974964
+        },
+        "state": {
+          "window": 110,
+          "episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9179111760675791,
+          "current_position_gap_cm": 6.225720997980258,
+          "current_rotation_gap_deg": 19.599478985304195,
+          "future_local_position_gap_cm": 11.191292058694458,
+          "future_local_rotation_gap_deg": 15.827384755034945,
+          "ema_prediction_to_neighbor_target_position_cm": 13.964242185515564,
+          "ema_prediction_to_neighbor_target_rotation_deg": 21.310000070336073
+        }
+      },
+      "ema": {
+        "path_position_cm": 19.790302484772948,
+        "path_rotation_deg": 15.253397419456656,
+        "endpoint_position_cm": 27.95394198289223,
+        "endpoint_rotation_deg": 22.02121906014463,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 145,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "start": 4,
+      "steps": 25,
+      "index_fraction": 0.16666666666666666,
+      "future_fraction": 0.6666666666666666,
+      "current_xyz_m": [
+        0.347907692193985,
+        0.06955534964799881,
+        0.11263035237789154
+      ],
+      "current_measured_gripper": 0.9560673832893372,
+      "current_outside_same_task_train_box": true,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 115,
+          "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+          "start": 8,
+          "index_fraction": 0.32,
+          "visual_cosine": 0.9600972217536832,
+          "current_position_gap_cm": 12.31944609646069,
+          "current_rotation_gap_deg": 9.081427056497528,
+          "future_local_position_gap_cm": 9.587318663061598,
+          "future_local_rotation_gap_deg": 13.321247560290928,
+          "ema_prediction_to_neighbor_target_position_cm": 11.256334120342332,
+          "ema_prediction_to_neighbor_target_rotation_deg": 5.582656829505894
+        },
+        "state": {
+          "window": 56,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.881360915952308,
+          "current_position_gap_cm": 2.6611513871515418,
+          "current_rotation_gap_deg": 22.784014878298265,
+          "future_local_position_gap_cm": 9.846017626684718,
+          "future_local_rotation_gap_deg": 23.044871866936298,
+          "ema_prediction_to_neighbor_target_position_cm": 15.563946404631054,
+          "ema_prediction_to_neighbor_target_rotation_deg": 28.131450710553207
+        }
+      },
+      "ema": {
+        "path_position_cm": 16.553783759106825,
+        "path_rotation_deg": 13.77217856027733,
+        "endpoint_position_cm": 17.858537879625285,
+        "endpoint_rotation_deg": 6.6776070838098205,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    },
+    {
+      "window": 146,
+      "partition": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "start": 8,
+      "steps": 25,
+      "index_fraction": 0.3333333333333333,
+      "future_fraction": 0.6666666666666666,
+      "current_xyz_m": [
+        0.30907055735588074,
+        -0.023978115990757942,
+        0.06540492922067642
+      ],
+      "current_measured_gripper": 0.9560673832893372,
+      "current_outside_same_task_train_box": false,
+      "target_xyz_outside_same_task_train_count": 0,
+      "target_xyz_outside_all_train_count": 0,
+      "neighbors": {
+        "visual": {
+          "window": 114,
+          "episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9340322469700224,
+          "current_position_gap_cm": 10.07241678930843,
+          "current_rotation_gap_deg": 4.86770661039582,
+          "future_local_position_gap_cm": 16.48929729757277,
+          "future_local_rotation_gap_deg": 16.09162459237044,
+          "ema_prediction_to_neighbor_target_position_cm": 1.6436658425770505,
+          "ema_prediction_to_neighbor_target_rotation_deg": 2.1787910730251294
+        },
+        "state": {
+          "window": 104,
+          "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::33",
+          "start": 0,
+          "index_fraction": 0.0,
+          "visual_cosine": 0.9053215202842237,
+          "current_position_gap_cm": 3.934869511376816,
+          "current_rotation_gap_deg": 26.828422187596743,
+          "future_local_position_gap_cm": 12.423328872372153,
+          "future_local_rotation_gap_deg": 17.37106983343623,
+          "ema_prediction_to_neighbor_target_position_cm": 5.111947246199162,
+          "ema_prediction_to_neighbor_target_rotation_deg": 17.18007792516728
+        }
+      },
+      "ema": {
+        "path_position_cm": 15.392508234795393,
+        "path_rotation_deg": 15.92837738453675,
+        "endpoint_position_cm": 19.34460880222169,
+        "endpoint_rotation_deg": 22.565602303328717,
+        "windows": 1,
+        "passing_windows": 0,
+        "pose_fit_passed": false
+      },
+      "current_outside_all_train_box": false
+    }
+  ],
+  "train": {
+    "windows": 24,
+    "episodes": 12,
+    "current_outside_same_task_train_box_windows": 0,
+    "current_outside_all_train_box_windows": 0,
+    "target_xyz_outside_same_task_train_count": 0,
+    "target_xyz_outside_all_train_count": 0,
+    "total_action_targets": 384,
+    "neighbor_diagnostics": {
+      "visual": {
+        "visual_cosine": 0.9510589428553128,
+        "current_position_gap_cm": 9.515705131319251,
+        "current_rotation_gap_deg": 30.988735167680343,
+        "future_local_position_gap_cm": 14.102115407653045,
+        "future_local_rotation_gap_deg": 24.98103490657502
+      },
+      "state": {
+        "visual_cosine": 0.9222479359005153,
+        "current_position_gap_cm": 4.011058505600522,
+        "current_rotation_gap_deg": 23.955022906809983,
+        "future_local_position_gap_cm": 9.4194061489707,
+        "future_local_rotation_gap_deg": 20.15538239963786
+      }
+    }
+  },
+  "development": {
+    "windows": 9,
+    "episodes": 2,
+    "current_outside_same_task_train_box_windows": 4,
+    "current_outside_all_train_box_windows": 0,
+    "target_xyz_outside_same_task_train_count": 32,
+    "target_xyz_outside_all_train_count": 0,
+    "total_action_targets": 144,
+    "neighbor_diagnostics": {
+      "visual": {
+        "visual_cosine": 0.9465255700380047,
+        "current_position_gap_cm": 10.547408036924567,
+        "current_rotation_gap_deg": 25.278774891399205,
+        "future_local_position_gap_cm": 13.371330800670702,
+        "future_local_rotation_gap_deg": 21.753510295839394
+      },
+      "state": {
+        "visual_cosine": 0.9147998273838538,
+        "current_position_gap_cm": 4.7139885891548134,
+        "current_rotation_gap_deg": 14.653633221270518,
+        "future_local_position_gap_cm": 9.716389869782919,
+        "future_local_rotation_gap_deg": 13.692558014277486
+      }
+    }
+  },
+  "input_sha256": {
+    "cluster_packages\\bridge_author_reference_v1\\training_protocol.json": "55ee81e76f310cd7ad5e3f10acacfe64b2881533bfa62d9054ce0b2712ec814b",
+    "reports\\bridge_condition_input_audit_20261013\\raw_audit.json": "0502c0ad86c510d3473b7d64398828d77fbb442d3c0ebf052c19f1c8f343c83e",
+    "reports\\bridge_condition_input_audit_20261013\\input_windows.csv": "85d2e184b3f88bb2a6c645f30f9cc278704c9bfa8e5ab4edcdca265b637a525f",
+    "reports\\bridge_condition_input_audit_20261013\\observed_states.npz": "6267c4323cf89b44ba70c57f95cb2df74b95853cc8f0f23d487936c147c9c605",
+    "reports\\bridge_growth128_generalization_201663_20261013\\frozen_visual_descriptors.npz": "f63ce677100754abe628fb5f326877c58ba0b4a6d0acbd8a00ceea93f9cade2c"
+  }
+}

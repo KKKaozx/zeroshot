@@ -1,0 +1,18 @@
+{
+  "evidence_source": "User-pasted cluster log; full report.json has not been downloaded",
+  "job_id": 198856,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:00:23",
+  "summary": {
+    "windows": 72,
+    "all_raw_and_decoded_inputs_equal": true,
+    "normalized_images_exact_count": 0,
+    "max_normalized_image_difference": 4.76837158203125e-7,
+    "max_target_component_difference": 4.470348358154297e-7,
+    "max_current_gripper_difference": 0.0
+  },
+  "local_versions": {"python": "3.10.21", "system": "Windows", "torch": "2.11.0+cu128", "numpy": "2.2.6", "pillow": "12.3.0"},
+  "cluster_versions": {"python": "3.10.21", "system": "Linux", "torch": "2.5.1+cu118", "numpy": "1.26.4", "pillow": "12.3.0"},
+  "interpretation": "Cross-environment exact processed-float hashing caused the preflight false positive. Does not establish a cause of prior poor fitting/generalization."
+}

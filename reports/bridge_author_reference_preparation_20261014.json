@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "training_protocol_sha256": "55ee81e76f310cd7ad5e3f10acacfe64b2881533bfa62d9054ce0b2712ec814b",
+  "source_unchanged_policy_optimizer_ema_and_data_loader": true,
+  "actual_launch_argv": [
+    "--project",
+    "/projects/Zeroshot",
+    "--source",
+    "$SOURCE",
+    "--output",
+    "/projects/Zeroshot/runs/bridge-author-reference-${SLURM_JOB_ID}"
+  ],
+  "python39_syntax_passed": true,
+  "physical_metrics_match_existing_saved_predictions": true,
+  "mm_cm_units_synthetic_check": true,
+  "budget_gate_pass_and_fail_cases": true,
+  "local_training_executed": false,
+  "checkpoint_downloaded": false
+}

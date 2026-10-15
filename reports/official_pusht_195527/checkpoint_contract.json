@@ -1,0 +1,190 @@
+{
+  "training.use_ema": true,
+  "training.seed": 42,
+  "training.num_epochs": 3050,
+  "policy.n_obs_steps": 2,
+  "policy.n_action_steps": 8,
+  "policy.horizon": 16,
+  "policy.down_dims": [
+    512,
+    1024,
+    2048
+  ],
+  "policy.num_inference_steps": 100,
+  "policy.shape_meta": {
+    "obs": {
+      "image": {
+        "shape": [
+          3,
+          96,
+          96
+        ],
+        "type": "rgb"
+      },
+      "agent_pos": {
+        "shape": [
+          2
+        ],
+        "type": "low_dim"
+      }
+    },
+    "action": {
+      "shape": [
+        2
+      ]
+    }
+  },
+  "policy.noise_scheduler": {
+    "_target_": "diffusers.schedulers.scheduling_ddpm.DDPMScheduler",
+    "num_train_timesteps": 100,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "beta_schedule": "squaredcos_cap_v2",
+    "variance_type": "fixed_small",
+    "clip_sample": true,
+    "prediction_type": "epsilon"
+  },
+  "task.env_runner.test_start_seed": 4300000,
+  "task.env_runner.n_test": 50,
+  "task.env_runner.n_train": 6,
+  "dataloader.batch_size": 64,
+  "saved_normalizer_parameters": {
+    "model": {
+      "normalizer.params_dict.action.offset": [
+        -1.0480961799621582,
+        -1.1028807163238525
+      ],
+      "normalizer.params_dict.action.scale": [
+        0.004008016083389521,
+        0.004115226212888956
+      ],
+      "normalizer.params_dict.action.input_stats.max": [
+        511.0,
+        511.0
+      ],
+      "normalizer.params_dict.action.input_stats.mean": [
+        228.23965454101562,
+        293.98907470703125
+      ],
+      "normalizer.params_dict.action.input_stats.min": [
+        12.0,
+        25.0
+      ],
+      "normalizer.params_dict.action.input_stats.std": [
+        101.60155487060547,
+        96.0411605834961
+      ],
+      "normalizer.params_dict.agent_pos.offset": [
+        -1.0557559728622437,
+        -1.1378114223480225
+      ],
+      "normalizer.params_dict.agent_pos.scale": [
+        0.004143448080867529,
+        0.004183928947895765
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.max": [
+        496.14617919921875,
+        510.9578857421875
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.mean": [
+        229.1110382080078,
+        293.3112487792969
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.min": [
+        13.45642375946045,
+        32.93829345703125
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.std": [
+        101.856689453125,
+        96.49136352539062
+      ],
+      "normalizer.params_dict.image.offset": [
+        -1.0
+      ],
+      "normalizer.params_dict.image.scale": [
+        2.0
+      ],
+      "normalizer.params_dict.image.input_stats.max": [
+        1.0
+      ],
+      "normalizer.params_dict.image.input_stats.mean": [
+        0.5
+      ],
+      "normalizer.params_dict.image.input_stats.min": [
+        0.0
+      ],
+      "normalizer.params_dict.image.input_stats.std": [
+        0.28867512941360474
+      ]
+    },
+    "ema_model": {
+      "normalizer.params_dict.action.offset": [
+        -1.0480961799621582,
+        -1.1028807163238525
+      ],
+      "normalizer.params_dict.action.scale": [
+        0.004008016083389521,
+        0.004115226212888956
+      ],
+      "normalizer.params_dict.action.input_stats.max": [
+        511.0,
+        511.0
+      ],
+      "normalizer.params_dict.action.input_stats.mean": [
+        228.23965454101562,
+        293.98907470703125
+      ],
+      "normalizer.params_dict.action.input_stats.min": [
+        12.0,
+        25.0
+      ],
+      "normalizer.params_dict.action.input_stats.std": [
+        101.60155487060547,
+        96.0411605834961
+      ],
+      "normalizer.params_dict.agent_pos.offset": [
+        -1.0557559728622437,
+        -1.1378114223480225
+      ],
+      "normalizer.params_dict.agent_pos.scale": [
+        0.004143448080867529,
+        0.004183928947895765
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.max": [
+        496.14617919921875,
+        510.9578857421875
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.mean": [
+        229.1110382080078,
+        293.3112487792969
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.min": [
+        13.45642375946045,
+        32.93829345703125
+      ],
+      "normalizer.params_dict.agent_pos.input_stats.std": [
+        101.856689453125,
+        96.49136352539062
+      ],
+      "normalizer.params_dict.image.offset": [
+        -1.0
+      ],
+      "normalizer.params_dict.image.scale": [
+        2.0
+      ],
+      "normalizer.params_dict.image.input_stats.max": [
+        1.0
+      ],
+      "normalizer.params_dict.image.input_stats.mean": [
+        0.5
+      ],
+      "normalizer.params_dict.image.input_stats.min": [
+        0.0
+      ],
+      "normalizer.params_dict.image.input_stats.std": [
+        0.28867512941360474
+      ]
+    }
+  },
+  "stage": "read_existing_checkpoint_only"
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "updates": 0,
+    "position_cm": 10.646944046020508,
+    "rotation_deg": 98.9244384765625,
+    "endpoint_position_cm": 13.361995697021484,
+    "endpoint_rotation_deg": 81.83280944824219,
+    "gripper_accuracy": 0.421875,
+    "balanced_accuracy": 0.5595238095238095,
+    "events": {
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "updates": 20,
+    "position_cm": 3.5381762981414795,
+    "rotation_deg": 10.07832145690918,
+    "endpoint_position_cm": 6.554921627044678,
+    "endpoint_rotation_deg": 13.679230690002441,
+    "gripper_accuracy": 0.8984375,
+    "balanced_accuracy": 0.8522727272727272,
+    "events": {
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          3,
+          3,
+          3
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "updates": 100,
+    "position_cm": 0.5030884742736816,
+    "rotation_deg": 2.2125966548919678,
+    "endpoint_position_cm": 0.8363202214241028,
+    "endpoint_rotation_deg": 2.586211919784546,
+    "gripper_accuracy": 0.9921875,
+    "balanced_accuracy": 0.9940476190476191,
+    "events": {
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          7,
+          7,
+          7
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "updates": 500,
+    "position_cm": 0.27336058020591736,
+    "rotation_deg": 2.015606641769409,
+    "endpoint_position_cm": 0.35355642437934875,
+    "endpoint_rotation_deg": 1.281525731086731,
+    "gripper_accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "events": {
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          7,
+          7,
+          7
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "joint_observed_fit_passed": true
+  }
+]

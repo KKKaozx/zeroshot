@@ -1,0 +1,58 @@
+{
+  "stage": "raw_input_index_and_current_state_audit",
+  "passed": true,
+  "trained": false,
+  "model_loaded": false,
+  "new_policy_inference": false,
+  "new_clip_encoding": false,
+  "windows": 168,
+  "train_windows": 128,
+  "development_windows": 40,
+  "selected_episodes": 74,
+  "selected_shards": 42,
+  "raw_identities_verified": 168,
+  "full16_targets_without_padding": 168,
+  "explicit_timestamp_fields": [],
+  "physical_sensor_synchronization_verified": false,
+  "source_index_alignment_verified": true,
+  "independent_geometry_synthetic_checks_passed": true,
+  "max_absolute_differences": {
+    "image": 0.0,
+    "current_gripper": 0.0,
+    "relative_xyz_component": 3.395224599245239e-07,
+    "relative_quaternion_component": 1.379334380359476e-07
+  },
+  "current_state_available": true,
+  "current_state_shape": [
+    168,
+    7
+  ],
+  "current_pose_used_to_construct_targets": true,
+  "current_pose_numerically_supplied_to_pose_network": false,
+  "current_gripper_only_supplied_to_separate_gripper_head": true,
+  "pose_context": "Current CLIP image/text tokens through Adapter; repeated current context, no real previous-frame input in this frozen runner",
+  "units": "Project interpretation: xyz metres; rpy radians; measured gripper raw affine observation, not calibrated probability",
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70"
+  },
+  "manifest_sha256": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+  "reference_sha256": {
+    "reports\\bridge_batch_input_reference_20261012\\arrays.npz": "4bf5d3973470bcbbd03110fd54fdec24ec0049b76c45bdb81970b6516c2b9f12",
+    "cluster_packages\\bridge_growth64_v1\\added_reference\\arrays.npz": "db9603d88179a6bb0eb1ba03222b252adc176614e18cf28ddf10213ad34146bc",
+    "cluster_packages\\bridge_growth128_v1\\new_reference\\arrays.npz": "1d5704a893442a828b400cd653c92c72a8c0ff904a2faff48abfcd3b4240af91"
+  },
+  "observed_states_sha256": "6267c4323cf89b44ba70c57f95cb2df74b95853cc8f0f23d487936c147c9c605",
+  "input_windows_sha256": "85d2e184b3f88bb2a6c645f30f9cc278704c9bfa8e5ab4edcdca265b637a525f",
+  "source_script_sha256": "9547ba91f86956c4a93527e02c1ec9b7ddb2034b0a388639dbf1b5eb3204db8e",
+  "elapsed_seconds": 7.171999999904074,
+  "reserved_test_targets_read": false,
+  "limits": [
+    "Index alignment is not independent proof of hardware sensor synchronization",
+    "Physical calibration/base-frame consistency across episodes not independently supplied",
+    "Source inspection applies to frozen201663 runner, not every project training mode",
+    "A missing explicit pose input is a hypothesis, not proof of faulty vision or unique root cause"
+  ]
+}

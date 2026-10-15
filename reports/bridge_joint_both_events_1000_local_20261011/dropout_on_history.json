@@ -1,0 +1,527 @@
+[
+  {
+    "update": 0,
+    "elapsed_seconds": 12.077999999979511,
+    "context_change_rms": 0.0,
+    "position_cm": 8.69300365447998,
+    "rotation_deg": 105.86870574951172,
+    "endpoint_position_cm": 9.639878273010254,
+    "endpoint_rotation_deg": 90.7474365234375,
+    "seed_position_cm": [
+      8.695033073425293,
+      8.694640159606934,
+      8.689335823059082
+    ],
+    "seed_rotation_deg": [
+      105.78541564941406,
+      105.93610382080078,
+      105.88456726074219
+    ],
+    "windows_all_three_seeds_pass": 0,
+    "windows": 8,
+    "static_position_cm": 6.096284866333008,
+    "static_rotation_deg": 9.561344146728516,
+    "pose_fit_passed": false,
+    "gripper": {
+      "accuracy": 0.5703125,
+      "balanced_accuracy": 0.4775251872901059,
+      "seed_accuracy": [
+        0.5703125,
+        0.5703125,
+        0.5703125
+      ],
+      "seed_balanced_accuracy": [
+        0.4775251872901059,
+        0.4775251872901059,
+        0.4775251872901059
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.5625,
+      "balanced_accuracy": 0.4634461379488504,
+      "seed_accuracy": [
+        0.5625
+      ],
+      "seed_balanced_accuracy": [
+        0.4634461379488504
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 20,
+    "elapsed_seconds": 18.03100000001723,
+    "context_change_rms": 1.2733954191207886,
+    "position_cm": 3.7442023754119873,
+    "rotation_deg": 18.650907516479492,
+    "endpoint_position_cm": 6.060292720794678,
+    "endpoint_rotation_deg": 18.66400718688965,
+    "seed_position_cm": [
+      3.742797374725342,
+      3.7445831298828125,
+      3.7452268600463867
+    ],
+    "seed_rotation_deg": [
+      18.638530731201172,
+      18.658620834350586,
+      18.65556526184082
+    ],
+    "windows_all_three_seeds_pass": 0,
+    "windows": 8,
+    "static_position_cm": 6.096284866333008,
+    "static_rotation_deg": 9.561344146728516,
+    "pose_fit_passed": false,
+    "gripper": {
+      "accuracy": 0.8359375,
+      "balanced_accuracy": 0.8167140273831052,
+      "seed_accuracy": [
+        0.8359375,
+        0.8359375,
+        0.8359375
+      ],
+      "seed_balanced_accuracy": [
+        0.8167140273831052,
+        0.8167140273831052,
+        0.8167140273831052
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.8359375,
+      "balanced_accuracy": 0.8167140273831052,
+      "seed_accuracy": [
+        0.8359375
+      ],
+      "seed_balanced_accuracy": [
+        0.8167140273831052
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 100,
+    "elapsed_seconds": 34.64100000000326,
+    "context_change_rms": 1.2703341245651245,
+    "position_cm": 0.4760017693042755,
+    "rotation_deg": 2.0103919506073,
+    "endpoint_position_cm": 0.6950642466545105,
+    "endpoint_rotation_deg": 3.016584634780884,
+    "seed_position_cm": [
+      0.4767608940601349,
+      0.4753250479698181,
+      0.4759193956851959
+    ],
+    "seed_rotation_deg": [
+      2.0083415508270264,
+      2.0088419914245605,
+      2.0139918327331543
+    ],
+    "windows_all_three_seeds_pass": 5,
+    "windows": 8,
+    "static_position_cm": 6.096284866333008,
+    "static_rotation_deg": 9.561344146728516,
+    "pose_fit_passed": false,
+    "gripper": {
+      "accuracy": 0.921875,
+      "balanced_accuracy": 0.9095840867992765,
+      "seed_accuracy": [
+        0.921875,
+        0.921875,
+        0.921875
+      ],
+      "seed_balanced_accuracy": [
+        0.9095840867992766,
+        0.9095840867992766,
+        0.9095840867992766
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4,
+          4,
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.921875,
+      "balanced_accuracy": 0.9095840867992766,
+      "seed_accuracy": [
+        0.921875
+      ],
+      "seed_balanced_accuracy": [
+        0.9095840867992766
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 500,
+    "elapsed_seconds": 116.43699999997625,
+    "context_change_rms": 1.2296103239059448,
+    "position_cm": 0.12533052265644073,
+    "rotation_deg": 0.8242196440696716,
+    "endpoint_position_cm": 0.1558840125799179,
+    "endpoint_rotation_deg": 0.4178133010864258,
+    "seed_position_cm": [
+      0.12520942091941833,
+      0.12519508600234985,
+      0.1255870759487152
+    ],
+    "seed_rotation_deg": [
+      0.825038731098175,
+      0.8238828182220459,
+      0.8237372040748596
+    ],
+    "windows_all_three_seeds_pass": 8,
+    "windows": 8,
+    "static_position_cm": 6.096284866333008,
+    "static_rotation_deg": 9.561344146728516,
+    "pose_fit_passed": true,
+    "gripper": {
+      "accuracy": 0.9921875,
+      "balanced_accuracy": 0.9897959183673469,
+      "seed_accuracy": [
+        0.9921875,
+        0.9921875,
+        0.9921875
+      ],
+      "seed_balanced_accuracy": [
+        0.9897959183673469,
+        0.9897959183673469,
+        0.9897959183673469
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4,
+          4,
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          3,
+          3,
+          3
+        ],
+        "seed_pair_accuracy": [
+          0.75,
+          0.75,
+          0.75
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.9921875,
+      "balanced_accuracy": 0.9897959183673469,
+      "seed_accuracy": [
+        0.9921875
+      ],
+      "seed_balanced_accuracy": [
+        0.9897959183673469
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          3
+        ],
+        "seed_pair_accuracy": [
+          0.75
+        ]
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": true
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 1000,
+    "elapsed_seconds": 221.51600000000326,
+    "context_change_rms": 1.2143620252609253,
+    "position_cm": 0.1524466723203659,
+    "rotation_deg": 0.9371121525764465,
+    "endpoint_position_cm": 0.14099010825157166,
+    "endpoint_rotation_deg": 0.454890638589859,
+    "seed_position_cm": [
+      0.15260595083236694,
+      0.1522829830646515,
+      0.1524510681629181
+    ],
+    "seed_rotation_deg": [
+      0.9392571449279785,
+      0.936878502368927,
+      0.9352009296417236
+    ],
+    "windows_all_three_seeds_pass": 8,
+    "windows": 8,
+    "static_position_cm": 6.096284866333008,
+    "static_rotation_deg": 9.561344146728516,
+    "pose_fit_passed": true,
+    "gripper": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "seed_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "seed_balanced_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4,
+          4,
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4,
+          4,
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": true,
+      "release_evaluated": true
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "seed_accuracy": [
+        1.0
+      ],
+      "seed_balanced_accuracy": [
+        1.0
+      ],
+      "open_targets": 49,
+      "closed_targets": 79,
+      "always_open_accuracy": 0.3828125,
+      "always_closed_accuracy": 0.6171875,
+      "open_to_closed": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 4,
+        "seed_correct_pairs": [
+          4
+        ],
+        "seed_pair_accuracy": [
+          1.0
+        ]
+      },
+      "observed_state_and_events_fit_passed": true,
+      "release_evaluated": true
+    },
+    "joint_observed_fit_passed": true
+  }
+]

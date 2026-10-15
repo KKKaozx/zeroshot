@@ -1,0 +1,413 @@
+{
+  "execution_verified": true,
+  "source_and_snapshot_hashes_match": true,
+  "raw_common_prefix_identical": true,
+  "initial_parameters_identical": true,
+  "common_batches_and_seed_keys_preserved": true,
+  "paired_draws_per_window": [
+    508,
+    513,
+    497,
+    497,
+    518,
+    506,
+    493,
+    498,
+    513,
+    488,
+    491,
+    487,
+    518,
+    492,
+    490,
+    491,
+    508,
+    513,
+    497,
+    497,
+    518,
+    506,
+    493,
+    498,
+    513,
+    488,
+    491,
+    487,
+    518,
+    492,
+    490,
+    491
+  ],
+  "stages": [
+    {
+      "updates": 80,
+      "mean_exposures_per_window": 20.0,
+      "position_cm": 3.133016586303711,
+      "rotation_deg": 9.511520385742188,
+      "endpoint_position_cm": 4.503515720367432,
+      "endpoint_rotation_deg": 12.6599760055542,
+      "windows_all_seeds_pass": 0
+    },
+    {
+      "updates": 200,
+      "mean_exposures_per_window": 50.0,
+      "position_cm": 1.2206748723983765,
+      "rotation_deg": 4.733811855316162,
+      "endpoint_position_cm": 1.4231823682785034,
+      "endpoint_rotation_deg": 5.886221408843994,
+      "windows_all_seeds_pass": 0
+    },
+    {
+      "updates": 2000,
+      "mean_exposures_per_window": 500.0,
+      "position_cm": 0.2242215871810913,
+      "rotation_deg": 0.9975560307502747,
+      "endpoint_position_cm": 0.2734823226928711,
+      "endpoint_rotation_deg": 0.7405220866203308,
+      "windows_all_seeds_pass": 32
+    }
+  ],
+  "final_windows": [
+    {
+      "index": 0,
+      "partition": "common",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::39",
+      "start": 12,
+      "position_cm": 0.3314017653465271,
+      "rotation_deg": 0.9993734359741211,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 1,
+      "partition": "common",
+      "task": "close the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00004-of-01024::3",
+      "start": 16,
+      "position_cm": 0.20559877157211304,
+      "rotation_deg": 0.6462944149971008,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 2,
+      "partition": "common",
+      "task": "open the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00005-of-01024::36",
+      "start": 12,
+      "position_cm": 0.16789716482162476,
+      "rotation_deg": 1.0842432975769043,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 3,
+      "partition": "common",
+      "task": "take broccoli out of pan",
+      "episode": "bridge_data_v2-train.tfrecord-00002-of-01024::21",
+      "start": 12,
+      "position_cm": 0.19524811208248138,
+      "rotation_deg": 0.9283561706542969,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 4,
+      "partition": "common",
+      "task": "turn lever vertical to front",
+      "episode": "bridge_data_v2-train.tfrecord-00000-of-01024::45",
+      "start": 4,
+      "position_cm": 0.17113558948040009,
+      "rotation_deg": 0.7763641476631165,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 5,
+      "partition": "common",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::8",
+      "start": 12,
+      "position_cm": 0.2755710780620575,
+      "rotation_deg": 1.0752848386764526,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 6,
+      "partition": "common",
+      "task": "close the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::26",
+      "start": 16,
+      "position_cm": 0.17621786892414093,
+      "rotation_deg": 0.8509470820426941,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 7,
+      "partition": "common",
+      "task": "open the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::21",
+      "start": 12,
+      "position_cm": 0.132333904504776,
+      "rotation_deg": 0.8866257071495056,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 8,
+      "partition": "common",
+      "task": "take broccoli out of pan",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::10",
+      "start": 12,
+      "position_cm": 0.1509992778301239,
+      "rotation_deg": 0.6378164887428284,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 9,
+      "partition": "common",
+      "task": "turn lever vertical to front",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+      "start": 4,
+      "position_cm": 0.13016067445278168,
+      "rotation_deg": 0.5621535778045654,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 10,
+      "partition": "common",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::25",
+      "start": 12,
+      "position_cm": 0.32447633147239685,
+      "rotation_deg": 0.7492833137512207,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 11,
+      "partition": "common",
+      "task": "close the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00015-of-01024::26",
+      "start": 12,
+      "position_cm": 0.23523645102977753,
+      "rotation_deg": 1.3759857416152954,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 12,
+      "partition": "common",
+      "task": "open the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::25",
+      "start": 16,
+      "position_cm": 0.19942641258239746,
+      "rotation_deg": 1.223819375038147,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 13,
+      "partition": "common",
+      "task": "take broccoli out of pan",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "start": 8,
+      "position_cm": 0.2565968930721283,
+      "rotation_deg": 1.0168167352676392,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 14,
+      "partition": "common",
+      "task": "turn lever vertical to front",
+      "episode": "bridge_data_v2-train.tfrecord-00007-of-01024::7",
+      "start": 4,
+      "position_cm": 0.22673630714416504,
+      "rotation_deg": 1.443680763244629,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 15,
+      "partition": "common",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::20",
+      "start": 8,
+      "position_cm": 0.3949442207813263,
+      "rotation_deg": 1.405474305152893,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 16,
+      "partition": "added",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::17",
+      "start": 8,
+      "position_cm": 0.23871593177318573,
+      "rotation_deg": 1.226715087890625,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 17,
+      "partition": "added",
+      "task": "close the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::22",
+      "start": 8,
+      "position_cm": 0.358843594789505,
+      "rotation_deg": 0.8536861538887024,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 18,
+      "partition": "added",
+      "task": "open the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::2",
+      "start": 12,
+      "position_cm": 0.10512157529592514,
+      "rotation_deg": 0.7726683616638184,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 19,
+      "partition": "added",
+      "task": "take broccoli out of pan",
+      "episode": "bridge_data_v2-train.tfrecord-00009-of-01024::33",
+      "start": 12,
+      "position_cm": 0.17253823578357697,
+      "rotation_deg": 0.6213175654411316,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 20,
+      "partition": "added",
+      "task": "turn lever vertical to front",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::35",
+      "start": 4,
+      "position_cm": 0.2869812250137329,
+      "rotation_deg": 1.3015533685684204,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 21,
+      "partition": "added",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::31",
+      "start": 12,
+      "position_cm": 0.2835923731327057,
+      "rotation_deg": 1.1209925413131714,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 22,
+      "partition": "added",
+      "task": "close the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::20",
+      "start": 12,
+      "position_cm": 0.13085238635540009,
+      "rotation_deg": 0.9752480387687683,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 23,
+      "partition": "added",
+      "task": "open the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::44",
+      "start": 12,
+      "position_cm": 0.08593391627073288,
+      "rotation_deg": 1.3893241882324219,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 24,
+      "partition": "added",
+      "task": "take broccoli out of pan",
+      "episode": "bridge_data_v2-train.tfrecord-00010-of-01024::40",
+      "start": 12,
+      "position_cm": 0.26705288887023926,
+      "rotation_deg": 0.7030377984046936,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 25,
+      "partition": "added",
+      "task": "turn lever vertical to front",
+      "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::33",
+      "start": 4,
+      "position_cm": 0.3014426529407501,
+      "rotation_deg": 0.5819031596183777,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 26,
+      "partition": "added",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+      "start": 12,
+      "position_cm": 0.19668172299861908,
+      "rotation_deg": 1.23915696144104,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 27,
+      "partition": "added",
+      "task": "close the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00025-of-01024::15",
+      "start": 8,
+      "position_cm": 0.21590040624141693,
+      "rotation_deg": 1.0950134992599487,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 28,
+      "partition": "added",
+      "task": "open the drawer",
+      "episode": "bridge_data_v2-train.tfrecord-00012-of-01024::54",
+      "start": 12,
+      "position_cm": 0.15063321590423584,
+      "rotation_deg": 0.5715833306312561,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 29,
+      "partition": "added",
+      "task": "take broccoli out of pan",
+      "episode": "bridge_data_v2-train.tfrecord-00014-of-01024::6",
+      "start": 12,
+      "position_cm": 0.3147875964641571,
+      "rotation_deg": 1.3481225967407227,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 30,
+      "partition": "added",
+      "task": "turn lever vertical to front",
+      "episode": "bridge_data_v2-train.tfrecord-00017-of-01024::13",
+      "start": 4,
+      "position_cm": 0.17478644847869873,
+      "rotation_deg": 1.018118977546692,
+      "all_three_seeds_pass": true
+    },
+    {
+      "index": 31,
+      "partition": "added",
+      "task": "close microwave",
+      "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::40",
+      "start": 12,
+      "position_cm": 0.31724613904953003,
+      "rotation_deg": 1.4408339262008667,
+      "all_three_seeds_pass": true
+    }
+  ],
+  "prediction_files": [
+    {
+      "name": "update_80_predictions.npz",
+      "sha256": "f0ef3681872d50ae69024301c9fbdf1e36e8af9a4de9a05ef7f6d0392393c209"
+    },
+    {
+      "name": "update_200_predictions.npz",
+      "sha256": "de42ba9c294efb0e3951ac094ec7785d117ea5a5d55c3b7ae5aa8d248e258ab9"
+    },
+    {
+      "name": "update_2000_predictions.npz",
+      "sha256": "929874216aaefe331656de8026e99c9d57d2635a9168eceab9a61bc71e727df0"
+    }
+  ],
+  "selected_episodes_total_available_train_windows": 156,
+  "episode_window_count_range": [
+    2,
+    8
+  ],
+  "report_sha256": "23c4965de005e6425af44de5febdc91a6e771e758aa32f77ec49719c9d09e507",
+  "reference_report_sha256": "fe389adfd658626a14837dbbffaa7ddf1a06e563c02b083d5b9ba87d74827181"
+}

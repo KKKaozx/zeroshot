@@ -1,0 +1,38 @@
+{
+  "stage": "user_supplied_terminal_log_only",
+  "preflight_job": 202068,
+  "fit_job": 202069,
+  "artifact_verification_complete": false,
+  "slurm_completion_state_received": false,
+  "logged_final_update": 8192,
+  "logged_train_fit_gate": true,
+  "logged_train": {
+    "path_position_mm": 2.1033084392547607,
+    "path_rotation_deg": 0.7622701525688171
+  },
+  "logged_development": {
+    "path_position_cm": 9.42038345336914,
+    "path_rotation_deg": 17.267179489135742
+  },
+  "logged_late_train_position_mm": {
+    "6144": 1.9711051881313324,
+    "7168": 2.1563826501369476,
+    "7680": 1.894710510969162,
+    "8192": 2.1033084392547607
+  },
+  "comparison": {
+    "control_job": 201663,
+    "control_verified_development_position_cm": 8.727526228169953,
+    "control_logged_development_rotation_deg": 15.847375869750977,
+    "static_position_cm": 8.212326049804688,
+    "static_rotation_deg": 15.098398208618164
+  },
+  "interpretation": "Train fitting remains supported by final overall log gate. The39-window substitution did not improve the logged development position or rotation. This does not establish or exclude window selection as a unique root cause.",
+  "pending": [
+    "Slurm final states and exit codes",
+    "Preflight report",
+    "Formal13 small artifacts: report/plan/runner/two logs/eight prediction snapshots",
+    "Independent identity, initialization,8192 logs and prediction recomputation",
+    "Unchanged89/substituted39 train groups and held-out per-task/per-demo/indexed-phase comparison"
+  ]
+}

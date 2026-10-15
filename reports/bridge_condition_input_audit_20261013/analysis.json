@@ -1,0 +1,337 @@
+{
+  "stage": "observed_state_and_input_neighbor_diagnosis",
+  "passed": true,
+  "trained": false,
+  "new_policy_inference": false,
+  "new_clip_encoding": false,
+  "current_state_alignment_audit_passed": true,
+  "explicit_pose_input_missing_in_frozen_runner": true,
+  "train_only_state_reference": {
+    "xyz_mean_m": [
+      0.2934349635615945,
+      0.008702661542201895,
+      0.09118151172151556
+    ],
+    "xyz_std_m": [
+      0.07105627376807777,
+      0.08820914637106626,
+      0.06070170950893546
+    ],
+    "fit_windows": 128,
+    "diagnostic_state_distance": "Mean squared xyz difference standardized by128 train-window std + squared geodesic rotation/pi; fixed, no development tuning"
+  },
+  "state_ranges": [
+    {
+      "task": "close microwave",
+      "train_windows": 32,
+      "development_windows": 10,
+      "train_xyz_min_m": [
+        0.14619708061218262,
+        -0.16052618622779846,
+        -0.04974505305290222
+      ],
+      "train_xyz_max_m": [
+        0.3675522804260254,
+        0.14979420602321625,
+        0.18191629648208618
+      ],
+      "development_xyz_min_m": [
+        0.18222551047801971,
+        -0.1243419200181961,
+        0.10527458041906357
+      ],
+      "development_xyz_max_m": [
+        0.30146142840385437,
+        0.0860556960105896,
+        0.186493381857872
+      ],
+      "development_current_xyz_outside_train_box_windows": 1,
+      "development_outside_window_indices": [
+        151
+      ]
+    },
+    {
+      "task": "close the drawer",
+      "train_windows": 24,
+      "development_windows": 6,
+      "train_xyz_min_m": [
+        0.11906175315380096,
+        -0.1320219486951828,
+        0.0016624871641397476
+      ],
+      "train_xyz_max_m": [
+        0.38883158564567566,
+        0.2356748729944229,
+        0.24527670443058014
+      ],
+      "development_xyz_min_m": [
+        0.23855428397655487,
+        0.13715289533138275,
+        0.04033895581960678
+      ],
+      "development_xyz_max_m": [
+        0.31033021211624146,
+        0.23719337582588196,
+        0.15208546817302704
+      ],
+      "development_current_xyz_outside_train_box_windows": 1,
+      "development_outside_window_indices": [
+        155
+      ]
+    },
+    {
+      "task": "open the drawer",
+      "train_windows": 24,
+      "development_windows": 11,
+      "train_xyz_min_m": [
+        0.1792002171278,
+        -0.08811695128679276,
+        0.01618717610836029
+      ],
+      "train_xyz_max_m": [
+        0.39373600482940674,
+        0.2044644057750702,
+        0.2024541050195694
+      ],
+      "development_xyz_min_m": [
+        0.2083602100610733,
+        -0.014999628067016602,
+        0.029594436287879944
+      ],
+      "development_xyz_max_m": [
+        0.3063068687915802,
+        0.1438378393650055,
+        0.1577734351158142
+      ],
+      "development_current_xyz_outside_train_box_windows": 0,
+      "development_outside_window_indices": []
+    },
+    {
+      "task": "take broccoli out of pan",
+      "train_windows": 24,
+      "development_windows": 9,
+      "train_xyz_min_m": [
+        0.20746921002864838,
+        -0.06033734604716301,
+        0.012109502218663692
+      ],
+      "train_xyz_max_m": [
+        0.46587175130844116,
+        0.1847662329673767,
+        0.099000945687294
+      ],
+      "development_xyz_min_m": [
+        0.18239125609397888,
+        -0.052567265927791595,
+        0.017749138176441193
+      ],
+      "development_xyz_max_m": [
+        0.392991304397583,
+        0.1548222005367279,
+        0.1381808966398239
+      ],
+      "development_current_xyz_outside_train_box_windows": 4,
+      "development_outside_window_indices": [
+        138,
+        139,
+        140,
+        145
+      ]
+    },
+    {
+      "task": "turn lever vertical to front",
+      "train_windows": 24,
+      "development_windows": 4,
+      "train_xyz_min_m": [
+        0.27475491166114807,
+        -0.1503443568944931,
+        0.04289046302437782
+      ],
+      "train_xyz_max_m": [
+        0.446610689163208,
+        -0.03480544313788414,
+        0.2611527740955353
+      ],
+      "development_xyz_min_m": [
+        0.3555847704410553,
+        -0.14136560261249542,
+        0.06996408104896545
+      ],
+      "development_xyz_max_m": [
+        0.44424524903297424,
+        -0.05637339502573013,
+        0.08097584545612335
+      ],
+      "development_current_xyz_outside_train_box_windows": 0,
+      "development_outside_window_indices": []
+    }
+  ],
+  "episode_equal_neighbor_summaries": [
+    {
+      "split": "train_leave_same_episode_out",
+      "method": "visual",
+      "episodes": 64,
+      "visual_cosine": 0.9195834900905073,
+      "current_position_gap_cm": 9.62439720763107,
+      "current_rotation_gap_deg": 25.36663506730877,
+      "future_local_position_gap_cm": 9.28081900415542,
+      "future_local_rotation_gap_deg": 17.365598662627086,
+      "future_absolute_base_position_gap_cm": 9.018384733148125
+    },
+    {
+      "split": "train_leave_same_episode_out",
+      "method": "state",
+      "episodes": 64,
+      "visual_cosine": 0.875042154179462,
+      "current_position_gap_cm": 4.463536744876066,
+      "current_rotation_gap_deg": 22.72691467192685,
+      "future_local_position_gap_cm": 8.201832872495071,
+      "future_local_rotation_gap_deg": 17.077239240022596,
+      "future_absolute_base_position_gap_cm": 8.281547002739519
+    },
+    {
+      "split": "development",
+      "method": "visual",
+      "episodes": 10,
+      "visual_cosine": 0.9228174006102954,
+      "current_position_gap_cm": 8.260014959155027,
+      "current_rotation_gap_deg": 23.069794228204973,
+      "future_local_position_gap_cm": 8.86630767030076,
+      "future_local_rotation_gap_deg": 17.631844380721493,
+      "future_absolute_base_position_gap_cm": 8.983990171359718
+    },
+    {
+      "split": "development",
+      "method": "state",
+      "episodes": 10,
+      "visual_cosine": 0.8816934401529762,
+      "current_position_gap_cm": 4.306573607594588,
+      "current_rotation_gap_deg": 20.514416535394197,
+      "future_local_position_gap_cm": 7.396463723768365,
+      "future_local_rotation_gap_deg": 18.134537171788317,
+      "future_absolute_base_position_gap_cm": 7.667038433373486
+    }
+  ],
+  "high_input_similarity_cases": [
+    {
+      "window": 25,
+      "split": "train_leave_same_episode_out",
+      "episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+      "task": "turn lever vertical to front",
+      "phase": "first",
+      "neighbor_method": "visual",
+      "neighbor_window": 117,
+      "neighbor_episode": "bridge_data_v2-train.tfrecord-00023-of-01024::11",
+      "neighbor_start_index": 4,
+      "visual_cosine": 0.9849767157034133,
+      "current_position_gap_cm": 1.963004531969919,
+      "current_rotation_gap_deg": 15.678933616084302,
+      "future_local_position_gap_cm": 2.332026349929695,
+      "future_local_rotation_gap_deg": 8.825865007556004,
+      "future_absolute_base_position_gap_cm": 1.6894969945606089
+    },
+    {
+      "window": 117,
+      "split": "train_leave_same_episode_out",
+      "episode": "bridge_data_v2-train.tfrecord-00023-of-01024::11",
+      "task": "turn lever vertical to front",
+      "phase": "last",
+      "neighbor_method": "visual",
+      "neighbor_window": 25,
+      "neighbor_episode": "bridge_data_v2-train.tfrecord-00006-of-01024::2",
+      "neighbor_start_index": 0,
+      "visual_cosine": 0.9849767157034133,
+      "current_position_gap_cm": 1.963004531969919,
+      "current_rotation_gap_deg": 15.678933616084302,
+      "future_local_position_gap_cm": 2.332026349929695,
+      "future_local_rotation_gap_deg": 8.825865007556004,
+      "future_absolute_base_position_gap_cm": 1.6894969945606089
+    },
+    {
+      "window": 29,
+      "split": "train_leave_same_episode_out",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "task": "take broccoli out of pan",
+      "phase": "first",
+      "neighbor_method": "visual",
+      "neighbor_window": 115,
+      "neighbor_episode": "bridge_data_v2-train.tfrecord-00061-of-01024::25",
+      "neighbor_start_index": 8,
+      "visual_cosine": 0.9739555560584976,
+      "current_position_gap_cm": 23.98323479494588,
+      "current_rotation_gap_deg": 21.586686845344495,
+      "future_local_position_gap_cm": 18.552071197657746,
+      "future_local_rotation_gap_deg": 19.076921718939154,
+      "future_absolute_base_position_gap_cm": 15.171774955242995
+    },
+    {
+      "window": 144,
+      "split": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "task": "take broccoli out of pan",
+      "phase": "first",
+      "neighbor_method": "visual",
+      "neighbor_window": 29,
+      "neighbor_episode": "bridge_data_v2-train.tfrecord-00008-of-01024::37",
+      "neighbor_start_index": 0,
+      "visual_cosine": 0.9733285681303536,
+      "current_position_gap_cm": 18.364689905061084,
+      "current_rotation_gap_deg": 21.482137738858864,
+      "future_local_position_gap_cm": 21.000966393392986,
+      "future_local_rotation_gap_deg": 17.16157166803189,
+      "future_absolute_base_position_gap_cm": 10.78952010758195
+    },
+    {
+      "window": 141,
+      "split": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "task": "take broccoli out of pan",
+      "phase": "middle",
+      "neighbor_method": "visual",
+      "neighbor_window": 111,
+      "neighbor_episode": "bridge_data_v2-train.tfrecord-00035-of-01024::25",
+      "neighbor_start_index": 20,
+      "visual_cosine": 0.9642393030416443,
+      "current_position_gap_cm": 5.535883808250836,
+      "current_rotation_gap_deg": 27.449392081815077,
+      "future_local_position_gap_cm": 12.748683592063516,
+      "future_local_rotation_gap_deg": 22.498178323666448,
+      "future_absolute_base_position_gap_cm": 8.622943551575062
+    },
+    {
+      "window": 150,
+      "split": "development",
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+      "task": "close microwave",
+      "phase": "middle",
+      "neighbor_method": "visual",
+      "neighbor_window": 37,
+      "neighbor_episode": "bridge_data_v2-train.tfrecord-00023-of-01024::4",
+      "neighbor_start_index": 20,
+      "visual_cosine": 0.9549169617656459,
+      "current_position_gap_cm": 2.1245504381734808,
+      "current_rotation_gap_deg": 13.505778116147262,
+      "future_local_position_gap_cm": 8.558565185151036,
+      "future_local_rotation_gap_deg": 13.521430638828875,
+      "future_absolute_base_position_gap_cm": 6.674455141174971
+    }
+  ],
+  "exact_same_task_processed_image_duplicate_pairs": [],
+  "raw_audit_sha256": "0502c0ad86c510d3473b7d64398828d77fbb442d3c0ebf052c19f1c8f343c83e",
+  "source_script_sha256": "9547ba91f86956c4a93527e02c1ec9b7ddb2034b0a388639dbf1b5eb3204db8e",
+  "feature_source_sha256": "f63ce677100754abe628fb5f326877c58ba0b4a6d0acbd8a00ceea93f9cade2c",
+  "development_target_used_as_neighbor_selection_input": false,
+  "same_episode_candidates_excluded": true,
+  "only_same_task_train_candidates": true,
+  "physical_base_frame_calibration_verified": false,
+  "limits": [
+    "Image descriptor pools CLS/patch tokens; similarity does not measure equality of all spatial information",
+    "Nearest-state uses pose but lacks object state/task progress; retrieval is descriptive, not a trained policy",
+    "Neighborhood correlations cannot prove state conditioning will improve a learned policy",
+    "Raw future observations used only for retrospective label/retrieval evaluation, not candidate selection or model input",
+    "Current-state axis boxes do not establish joint spatial/rotational coverage",
+    "No independent timestamp sensor synchronization or calibration supplied",
+    "Within-split overlapping windows are correlated; summary gives each episode equal weight",
+    "Development set reused for diagnosis, not untouched test"
+  ]
+}

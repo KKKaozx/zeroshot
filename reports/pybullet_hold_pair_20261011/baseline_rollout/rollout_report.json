@@ -1,0 +1,113 @@
+{
+  "stage": "own_model_closed_loop_fixed_training_scene",
+  "contract": {
+    "robot": "pybullet_data/franka_panda/panda.urdf",
+    "end_effector_link": 11,
+    "finger_joints": [
+      9,
+      10
+    ],
+    "ticks_per_action": 24,
+    "simulation_hz": 240,
+    "current_gripper": "2*(sum(measured finger joint positions)/0.08)-1",
+    "command_gripper": "negative=closed motor target 0; positive=open target 0.04",
+    "pose": "All 16 future measured EE arrival poses relative to observation EE pose",
+    "scene": "Fixed cube/table/Panda scene in pybullet_fixed_grasp.scene",
+    "success": "Cube >=10cm above initial height for last 10 actions and final two-finger contact",
+    "artificial_attachment": false,
+    "generalization_test": false
+  },
+  "checkpoint_sha256": "7a72cc8c68a2389cbff983b6c5fbba7d9bc7872b2cc6644cc63c72c0dbb0c030",
+  "successes": 3,
+  "episodes": 3,
+  "results": [
+    {
+      "initial_height_m": 0.6449884365991027,
+      "final_height_m": 0.9468944745545752,
+      "lift_m": 0.30190603795547255,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "sampling_seed": 1101,
+      "controller": "own_learned_policy",
+      "replans": 28,
+      "executed_actions": 112,
+      "expert_handoff": false,
+      "object_pose_given_to_model": false,
+      "hold": {
+        "target_object_height_m": 0.849693698871273,
+        "last_two_seconds_max_height_error_cm": 9.720077568330222,
+        "last_two_seconds_height_range_cm": 6.629361881270657,
+        "last_two_seconds_two_finger_contacts": 20,
+        "passed": false
+      }
+    },
+    {
+      "initial_height_m": 0.6449884365991027,
+      "final_height_m": 0.9452243954031977,
+      "lift_m": 0.30023595880409504,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "sampling_seed": 1102,
+      "controller": "own_learned_policy",
+      "replans": 28,
+      "executed_actions": 112,
+      "expert_handoff": false,
+      "object_pose_given_to_model": false,
+      "hold": {
+        "target_object_height_m": 0.849693698871273,
+        "last_two_seconds_max_height_error_cm": 9.55306965319247,
+        "last_two_seconds_height_range_cm": 6.334853449386724,
+        "last_two_seconds_two_finger_contacts": 20,
+        "passed": false
+      }
+    },
+    {
+      "initial_height_m": 0.6449884365991027,
+      "final_height_m": 0.8531910198805075,
+      "lift_m": 0.20820258328140484,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "sampling_seed": 1103,
+      "controller": "own_learned_policy",
+      "replans": 28,
+      "executed_actions": 112,
+      "expert_handoff": false,
+      "object_pose_given_to_model": false,
+      "hold": {
+        "target_object_height_m": 0.849693698871273,
+        "last_two_seconds_max_height_error_cm": 6.130583345344743,
+        "last_two_seconds_height_range_cm": 6.51113931136914,
+        "last_two_seconds_two_finger_contacts": 20,
+        "passed": false
+      }
+    }
+  ],
+  "generalization_test": false,
+  "source_sha256": {
+    "fit_pybullet_fixed_grasp.py": "1b656b27765839af20548003ee27f472f15a35eaba30bd6fdb25d5c2c3495af7",
+    "pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c"
+  },
+  "success_rate_is_training_scene_only": true
+}

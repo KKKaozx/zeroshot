@@ -1,0 +1,90 @@
+{
+  "stage": "prepared_frozen_observation_intervention",
+  "purpose": "Frozen authorEMA observation sensitivity; not a training or improvement experiment",
+  "scope": "All9 broccoli development windows, all40 development controls replayed",
+  "model": "ema_final.pt",
+  "checkpoint_sha256": "c5c7401054ffa1fb159d86f136a27e1a62895fbdecb40d81c91449414ec5a975",
+  "origin_job": 203699,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "batch": 8,
+  "num_inference_steps": 100,
+  "updates": 0,
+  "donor_method": "Same-task maximum cosine of previously frozenCLIP descriptor; source selection uses no future targets or predicted errors",
+  "cases": [
+    "original_image_original_state",
+    "donor_image_original_state",
+    "original_image_donor_state",
+    "donor_image_donor_state"
+  ],
+  "donors": [
+    {
+      "window": 138,
+      "donor_window": 111
+    },
+    {
+      "window": 139,
+      "donor_window": 111
+    },
+    {
+      "window": 140,
+      "donor_window": 54
+    },
+    {
+      "window": 141,
+      "donor_window": 111
+    },
+    {
+      "window": 142,
+      "donor_window": 113
+    },
+    {
+      "window": 143,
+      "donor_window": 106
+    },
+    {
+      "window": 144,
+      "donor_window": 29
+    },
+    {
+      "window": 145,
+      "donor_window": 115
+    },
+    {
+      "window": 146,
+      "donor_window": 114
+    }
+  ],
+  "replay_requirement": "Original full40 predictions and native batch/RNG schedule must reproduce saved EMA outputs before reading intervention differences",
+  "paired_noise_requirement": "For each original batch, restore identical CPU/CUDA RNG states before every intervention, preserve B8 and restore original post-batch RNG for the next batch",
+  "quality_metrics_valid_for": [
+    "original context versus original target",
+    "both donor context versus donor target"
+  ],
+  "crossed_context_interpretation": "Image/state crosses may be physically inconsistent; report output sensitivity only, not accuracy improvement or task success",
+  "weight_and_source_changes_allowed": false,
+  "reserved_test_used": false,
+  "next_action": "One short cluster inference job; no optimizer, training, package installation or checkpoint output",
+  "torch_version": "1.12.1",
+  "required_file_sha256": {
+    "bridge_author_preflight_v1/protocol.json": "cfea31dfa1b06d8653caa832a9ef26e19ccfee899504c0a29c8a4226db867257",
+    "bridge_author_preflight_v1/bridge_author_dataset.py": "e416a591d22c1f1ffc66f00742f2f38ab52391814a54a349da5baa3fc10943af",
+    "bridge_author_preflight_v1/bridge_author_io.py": "822ba8fa887ec571b041f1012c523a04c7b7f75f547139ffcc06bbb5f95a9af2",
+    "bridge_author_reference_v1/training_protocol.json": "55ee81e76f310cd7ad5e3f10acacfe64b2881533bfa62d9054ce0b2712ec814b",
+    "bridge_author_reference_v1/reference_metrics.py": "ff17eafff17d815fcf443d7c2569f021c16e43bc4c32204d6fa874f3269a2b2b",
+    "runs/bridge-author-reference-203699/report.json": "f860b25cb6f34fcdb34d991a453992076a35fa060dac1a147fd5a73ad965bf1e",
+    "runs/bridge-author-reference-203699/runtime_config.yaml": "f94e7fa2e606dcdc7d956de5789d47d00b06928c1c69222cab725f72026cfcf1",
+    "runs/bridge-author-reference-203699/ema_development.npz": "6eb64c5a936bbc6ddea72bc366f5e0e68f13ba6bd06c1055ff0e58eaee4a06fd",
+    "runs/bridge-author-preflight-203498/inputs/export_report.json": "0038e8ce91770c8663437279cd3a32c552ffe563cf527992e40b7f9feacf7e8a"
+  },
+  "replay_tolerance": 0.0001,
+  "tolerance_interpretation": "Maximum raw action-component difference; XYZ units are10cm, so threshold corresponds to0.001cm per XYZ component",
+  "job_wall_seconds": 600,
+  "sampler_calls": 39,
+  "expected_output_limit_mib": 5,
+  "local_model_executed": false,
+  "local_cuda_replay_verified": false
+}

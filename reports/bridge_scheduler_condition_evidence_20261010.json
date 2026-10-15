@@ -1,0 +1,32 @@
+{
+  "stage": "existing_scheduler_and_condition_evidence_review",
+  "new_training": false,
+  "new_cluster_jobs": false,
+  "source_sha256": {
+    "scheduler": "0cb9c33036baa452d6519e115f7c1b48c9c778739190b9084548c6c22df24aeb",
+    "current_image": "4ef475822185afe91f003e22638f0b40a3293265e5d377c20d2b254711e065b6",
+    "old_conditioning": "9239d318866461a153724f8328ce637cace61e02765711e42b60b60a718d9af8",
+    "old_full_image": "ea159f2857220dc778dd48fa8beb9b290c96d3cca7d8f8a85b559dfccec8bbd9"
+  },
+  "scheduler": {
+    "all_updates_within_tolerance": true,
+    "max_update_absolute_difference": 3.7550926208496094e-06,
+    "max_update_xyz_difference_cm": 3.695487976074219e-05,
+    "independent_cosine_beta_max_difference": 0.0
+  },
+  "current_multiscale": {
+    "checkpoint_sha256": "17565858b58c68aaf8c531b24dfb142d5d19739b05bd1779102c63bf3fe66814",
+    "correct_position_cm": 8.354971885681152,
+    "swapped_position_cm": 8.425411542256674,
+    "correct_rotation_deg": 14.405325571695963,
+    "swapped_rotation_deg": 15.64994748433431,
+    "paired_prediction_position_change_cm": 1.1960811167955399,
+    "language_swap_tested_on_this_checkpoint": false
+  },
+  "limits": [
+    "Image sensitivity is not visual localization correctness.",
+    "Small error increase after swap is not proof that images are ignored.",
+    "Older compact checkpoint language swap cannot establish current multiscale language use.",
+    "Numerical update agreement is conditional on recorded x_t, x0 and noise, not free-running policy equivalence."
+  ]
+}

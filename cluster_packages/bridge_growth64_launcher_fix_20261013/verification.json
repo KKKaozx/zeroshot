@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "original_sha256": "5031987d2bf923d0ee4c6d22a16c7a499235f341f9e6edf95044d6e954200241",
+  "corrected_sha256": "0d126c075f7751f87c24d656c156a29dc32bed026034643bb970be20baee4edf",
+  "arguments": [
+    "fit_bridge_growth64.py",
+    "--manifest",
+    "manifest.json",
+    "--data-root",
+    "/projects/Zeroshot/bridge_expansion_training_v1/data",
+    "--clip",
+    "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+    "--data-reference",
+    "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+    "--origin-report",
+    "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+    "--stage",
+    "fit",
+    "--output",
+    "/projects/Zeroshot/runs/bridge-growth64-fit-${SLURM_JOB_ID}",
+    "--preflight-reference",
+    "/projects/Zeroshot/runs/bridge-growth64-preflight-${GROWTH_PREFLIGHT_JOB}"
+  ],
+  "training_executed": false
+}

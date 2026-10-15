@@ -1,0 +1,43 @@
+{
+  "source_job": 196693,
+  "training_windows": 1836,
+  "targets": 29376,
+  "episodes": 405,
+  "axis_std_ratio_max_to_min": 1.2030359143795282,
+  "out_of_range_windows": 2,
+  "out_of_range_components": [
+    2,
+    8,
+    0
+  ],
+  "task_std_cm": {
+    "close microwave": [
+      6.974359304040567,
+      6.930830116776089,
+      6.8930684964917655
+    ],
+    "close the drawer": [
+      5.5666315378934215,
+      5.665909032219002,
+      4.518862101280609
+    ],
+    "open the drawer": [
+      4.502506779030046,
+      6.001411299164163,
+      4.792939067182436
+    ],
+    "take broccoli out of pan": [
+      6.364619840068074,
+      7.163488072099859,
+      4.489975258336423
+    ],
+    "turn lever vertical to front": [
+      3.1507656998710116,
+      3.5334636362837206,
+      2.6587680994935186
+    ]
+  },
+  "normalization_not_ruled_out": true,
+  "noise_or_optimization_effect_not_tested": true,
+  "new_training_executed": false
+}

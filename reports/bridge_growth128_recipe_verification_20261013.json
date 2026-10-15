@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "manifest_sha256": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+  "retained64_and_development40_unchanged": true,
+  "production10_sources_unchanged": true,
+  "train_windows": 128,
+  "train_episodes": 64,
+  "task_counts": {
+    "close microwave": 32,
+    "close the drawer": 24,
+    "open the drawer": 24,
+    "take broccoli out of pan": 24,
+    "turn lever vertical to front": 24
+  },
+  "updates": 8192,
+  "lr_change_update": 4096,
+  "draw_slots_per_window": 512,
+  "train_partition_only_and_protected_episodes_excluded": true,
+  "raw_data_or_model_downloads": false,
+  "full_training_executed": false
+}

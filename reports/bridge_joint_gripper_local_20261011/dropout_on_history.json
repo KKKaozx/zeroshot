@@ -1,0 +1,398 @@
+[
+  {
+    "update": 0,
+    "elapsed_seconds": 11.735000000044238,
+    "context_change_rms": 0.0,
+    "position_cm": 10.646944046020508,
+    "rotation_deg": 98.9244384765625,
+    "endpoint_position_cm": 13.361995697021484,
+    "endpoint_rotation_deg": 81.83280944824219,
+    "seed_position_cm": [
+      10.647435188293457,
+      10.650456428527832,
+      10.642940521240234
+    ],
+    "seed_rotation_deg": [
+      98.99300384521484,
+      98.84942626953125,
+      98.93087005615234
+    ],
+    "windows_all_three_seeds_pass": 0,
+    "windows": 8,
+    "static_position_cm": 7.735259056091309,
+    "static_rotation_deg": 7.785233497619629,
+    "pose_fit_passed": false,
+    "gripper": {
+      "accuracy": 0.421875,
+      "balanced_accuracy": 0.5595238095238095,
+      "seed_accuracy": [
+        0.421875,
+        0.421875,
+        0.421875
+      ],
+      "seed_balanced_accuracy": [
+        0.5595238095238095,
+        0.5595238095238095,
+        0.5595238095238095
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": false
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.3828125,
+      "balanced_accuracy": 0.5297619047619048,
+      "seed_accuracy": [
+        0.3828125
+      ],
+      "seed_balanced_accuracy": [
+        0.5297619047619048
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": [
+          0.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": false
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 20,
+    "elapsed_seconds": 17.64100000000326,
+    "context_change_rms": 1.231629490852356,
+    "position_cm": 3.5381762981414795,
+    "rotation_deg": 10.07832145690918,
+    "endpoint_position_cm": 6.554921627044678,
+    "endpoint_rotation_deg": 13.679230690002441,
+    "seed_position_cm": [
+      3.5557103157043457,
+      3.542989492416382,
+      3.5158283710479736
+    ],
+    "seed_rotation_deg": [
+      10.085006713867188,
+      10.071048736572266,
+      10.078907012939453
+    ],
+    "windows_all_three_seeds_pass": 0,
+    "windows": 8,
+    "static_position_cm": 7.735259056091309,
+    "static_rotation_deg": 7.785233497619629,
+    "pose_fit_passed": false,
+    "gripper": {
+      "accuracy": 0.8984375,
+      "balanced_accuracy": 0.8522727272727272,
+      "seed_accuracy": [
+        0.8984375,
+        0.8984375,
+        0.8984375
+      ],
+      "seed_balanced_accuracy": [
+        0.8522727272727273,
+        0.8522727272727273,
+        0.8522727272727273
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          3,
+          3,
+          3
+        ],
+        "seed_pair_accuracy": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": false
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.890625,
+      "balanced_accuracy": 0.8463203463203464,
+      "seed_accuracy": [
+        0.890625
+      ],
+      "seed_balanced_accuracy": [
+        0.8463203463203464
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          2
+        ],
+        "seed_pair_accuracy": [
+          0.2857142857142857
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": false,
+      "release_evaluated": false
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 100,
+    "elapsed_seconds": 34.14100000000326,
+    "context_change_rms": 1.2167874574661255,
+    "position_cm": 0.5030884742736816,
+    "rotation_deg": 2.2125966548919678,
+    "endpoint_position_cm": 0.8363202214241028,
+    "endpoint_rotation_deg": 2.586211919784546,
+    "seed_position_cm": [
+      0.5027546882629395,
+      0.504589319229126,
+      0.5019212961196899
+    ],
+    "seed_rotation_deg": [
+      2.2149689197540283,
+      2.209350109100342,
+      2.213470935821533
+    ],
+    "windows_all_three_seeds_pass": 5,
+    "windows": 8,
+    "static_position_cm": 7.735259056091309,
+    "static_rotation_deg": 7.785233497619629,
+    "pose_fit_passed": false,
+    "gripper": {
+      "accuracy": 0.9921875,
+      "balanced_accuracy": 0.9940476190476191,
+      "seed_accuracy": [
+        0.9921875,
+        0.9921875,
+        0.9921875
+      ],
+      "seed_balanced_accuracy": [
+        0.9940476190476191,
+        0.9940476190476191,
+        0.9940476190476191
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          7,
+          7,
+          7
+        ],
+        "seed_pair_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": true,
+      "release_evaluated": false
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 0.9921875,
+      "balanced_accuracy": 0.9940476190476191,
+      "seed_accuracy": [
+        0.9921875
+      ],
+      "seed_balanced_accuracy": [
+        0.9940476190476191
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          7
+        ],
+        "seed_pair_accuracy": [
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": true,
+      "release_evaluated": false
+    },
+    "joint_observed_fit_passed": false
+  },
+  {
+    "update": 500,
+    "elapsed_seconds": 113.56300000002375,
+    "context_change_rms": 1.1942620277404785,
+    "position_cm": 0.27336058020591736,
+    "rotation_deg": 2.015606641769409,
+    "endpoint_position_cm": 0.35355642437934875,
+    "endpoint_rotation_deg": 1.281525731086731,
+    "seed_position_cm": [
+      0.27362582087516785,
+      0.27327826619148254,
+      0.2731776237487793
+    ],
+    "seed_rotation_deg": [
+      2.0147488117218018,
+      2.0165581703186035,
+      2.0155129432678223
+    ],
+    "windows_all_three_seeds_pass": 8,
+    "windows": 8,
+    "static_position_cm": 7.735259056091309,
+    "static_rotation_deg": 7.785233497619629,
+    "pose_fit_passed": true,
+    "gripper": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "seed_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "seed_balanced_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          7,
+          7,
+          7
+        ],
+        "seed_pair_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0,
+          0,
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": true,
+      "release_evaluated": false
+    },
+    "teacher_forced_gripper": {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "seed_accuracy": [
+        1.0
+      ],
+      "seed_balanced_accuracy": [
+        1.0
+      ],
+      "open_targets": 84,
+      "closed_targets": 44,
+      "always_open_accuracy": 0.65625,
+      "always_closed_accuracy": 0.34375,
+      "open_to_closed": {
+        "target_pairs": 7,
+        "seed_correct_pairs": [
+          7
+        ],
+        "seed_pair_accuracy": [
+          1.0
+        ]
+      },
+      "closed_to_open": {
+        "target_pairs": 0,
+        "seed_correct_pairs": [
+          0
+        ],
+        "seed_pair_accuracy": null
+      },
+      "observed_state_and_events_fit_passed": true,
+      "release_evaluated": false
+    },
+    "joint_observed_fit_passed": true
+  }
+]

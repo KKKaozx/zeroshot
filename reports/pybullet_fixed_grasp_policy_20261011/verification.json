@@ -1,0 +1,38 @@
+{
+  "checkpoint_hash_matches": true,
+  "all_three_traces_verified": true,
+  "results": [
+    {
+      "seed": 1101,
+      "trace_height_consistent": true,
+      "final_lift_cm": 30.852534684570855,
+      "first_close_action": 25,
+      "lift_at_expert_end_cm": 22.341448542863528,
+      "additional_height_after_expert_end_cm": 8.511086141707324,
+      "last_ten_actions_two_finger_contact_reported": true
+    },
+    {
+      "seed": 1102,
+      "trace_height_consistent": true,
+      "final_lift_cm": 29.852274912690447,
+      "first_close_action": 25,
+      "lift_at_expert_end_cm": 21.04698138978526,
+      "additional_height_after_expert_end_cm": 8.805293522905188,
+      "last_ten_actions_two_finger_contact_reported": true
+    },
+    {
+      "seed": 1103,
+      "trace_height_consistent": true,
+      "final_lift_cm": 27.62052152230178,
+      "first_close_action": 25,
+      "lift_at_expert_end_cm": 20.90313511806199,
+      "additional_height_after_expert_end_cm": 6.7173864042397895,
+      "last_ten_actions_two_finger_contact_reported": true
+    }
+  ],
+  "limitations": [
+    "Same training scene, single initialization, not independent generalization.",
+    "Continued rollout after demonstration end exhibits upward drift; precise hover is not established.",
+    "Contact counts are original online simulator measurements in rollout_report, not reconstructed from height."
+  ]
+}

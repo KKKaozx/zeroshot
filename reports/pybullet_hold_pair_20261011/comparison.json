@@ -1,0 +1,113 @@
+{
+  "initial_parameters_identical": true,
+  "training_source_identical": true,
+  "original_eight_inputs_identical": true,
+  "all_gripper_target_labels_identical": true,
+  "same_batch_and_update_budget": true,
+  "groups": {
+    "baseline": {
+      "pose_fit_passed": true,
+      "observed_gripper_fit_passed": true,
+      "offline_position_mm": 1.519467979669571,
+      "offline_rotation_deg": 0.7694020867347717,
+      "grasp_passes": 3,
+      "hold_passes": 0,
+      "mean_max_hold_height_error_cm": 8.467910188955814,
+      "cases": [
+        {
+          "seed": 1101,
+          "grasp_passed": true,
+          "hold_passed": false,
+          "max_hold_height_error_cm": 9.720077568330233,
+          "hold_height_range_cm": 6.629361881270657,
+          "two_finger_contact_actions": 20,
+          "command_switch_actions": [
+            29
+          ],
+          "close_to_open_switches": 0
+        },
+        {
+          "seed": 1102,
+          "grasp_passed": true,
+          "hold_passed": false,
+          "max_hold_height_error_cm": 9.55306965319248,
+          "hold_height_range_cm": 6.334853449386724,
+          "two_finger_contact_actions": 20,
+          "command_switch_actions": [
+            29
+          ],
+          "close_to_open_switches": 0
+        },
+        {
+          "seed": 1103,
+          "grasp_passed": true,
+          "hold_passed": false,
+          "max_hold_height_error_cm": 6.130583345344731,
+          "hold_height_range_cm": 6.51113931136914,
+          "two_finger_contact_actions": 20,
+          "command_switch_actions": [
+            29,
+            45,
+            53
+          ],
+          "close_to_open_switches": 1
+        }
+      ]
+    },
+    "hold": {
+      "pose_fit_passed": true,
+      "observed_gripper_fit_passed": true,
+      "offline_position_mm": 1.1004557460546494,
+      "offline_rotation_deg": 0.8137065768241882,
+      "grasp_passes": 2,
+      "hold_passes": 0,
+      "mean_max_hold_height_error_cm": 7.613091251730012,
+      "cases": [
+        {
+          "seed": 1101,
+          "grasp_passed": true,
+          "hold_passed": false,
+          "max_hold_height_error_cm": 3.3430668534625396,
+          "hold_height_range_cm": 3.745329411641962,
+          "two_finger_contact_actions": 20,
+          "command_switch_actions": [
+            29
+          ],
+          "close_to_open_switches": 0
+        },
+        {
+          "seed": 1102,
+          "grasp_passed": false,
+          "hold_passed": false,
+          "max_hold_height_error_cm": 16.91955411696837,
+          "hold_height_range_cm": 8.285720074057966,
+          "two_finger_contact_actions": 20,
+          "command_switch_actions": [
+            29,
+            53,
+            61,
+            73,
+            77,
+            81,
+            85
+          ],
+          "close_to_open_switches": 3
+        },
+        {
+          "seed": 1103,
+          "grasp_passed": true,
+          "hold_passed": false,
+          "max_hold_height_error_cm": 2.576652784759126,
+          "hold_height_range_cm": 2.6360666270189403,
+          "two_finger_contact_actions": 20,
+          "command_switch_actions": [
+            29
+          ],
+          "close_to_open_switches": 0
+        }
+      ]
+    }
+  },
+  "both_fit_gates_passed": true,
+  "scope": "One paired training initialization, same seen scene, three sampling seeds; no generalization claim."
+}

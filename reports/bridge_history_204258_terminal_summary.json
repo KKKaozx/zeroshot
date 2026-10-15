@@ -1,0 +1,27 @@
+{
+  "job": 204258,
+  "status": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "01:30:29",
+  "node": "gpu-a6000-1",
+  "evidence": "User terminal log; paired report/predictions pending download",
+  "independent_recomputation": false,
+  "real_previous": {
+    "updates": 8192,
+    "train_position_mm": 1.964845061302185,
+    "train_rotation_deg": 0.5420092940330505,
+    "training_gate_passed": true,
+    "development_position_cm": 8.748923301696777,
+    "development_rotation_deg": 15.61353874206543
+  },
+  "prior_202278_reference": {
+    "position_cm": 8.349126815795898,
+    "rotation_deg": 15.255946159362793
+  },
+  "current_control_position_range_implied_by_successful_wrapper": [
+    8.249126815795899,
+    8.449126815795898
+  ],
+  "candidate_position_improvement_10_percent_impossible_if_wrapper_checks_passed": true,
+  "scientific_status": "Close history configuration under preregistered rule; retrieve paired arrays for independent final summary. No more training/seeds/frame-lag tuning."
+}

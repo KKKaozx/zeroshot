@@ -1,0 +1,84 @@
+{
+  "stage": "own_model_closed_loop_fixed_training_scene",
+  "contract": {
+    "robot": "pybullet_data/franka_panda/panda.urdf",
+    "end_effector_link": 11,
+    "finger_joints": [
+      9,
+      10
+    ],
+    "ticks_per_action": 24,
+    "simulation_hz": 240,
+    "current_gripper": "2*(sum(measured finger joint positions)/0.08)-1",
+    "command_gripper": "negative=closed motor target 0; positive=open target 0.04",
+    "pose": "All 16 future measured EE arrival poses relative to observation EE pose",
+    "scene": "Fixed cube/table/Panda scene in pybullet_fixed_grasp.scene",
+    "success": "Cube >=10cm above initial height for last 10 actions and final two-finger contact",
+    "artificial_attachment": false,
+    "generalization_test": false
+  },
+  "checkpoint_sha256": "c42e5566f914415ee266a7f151ce07e51564a169ef8fb66c2ecf1178c8a51932",
+  "successes": 3,
+  "episodes": 3,
+  "results": [
+    {
+      "initial_height_m": 0.6449884365991027,
+      "final_height_m": 0.9535137834448112,
+      "lift_m": 0.30852534684570854,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "sampling_seed": 1101,
+      "controller": "own_learned_policy",
+      "replans": 28,
+      "executed_actions": 112,
+      "expert_handoff": false,
+      "object_pose_given_to_model": false
+    },
+    {
+      "initial_height_m": 0.6449884365991027,
+      "final_height_m": 0.9435111857260071,
+      "lift_m": 0.29852274912690446,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "sampling_seed": 1102,
+      "controller": "own_learned_policy",
+      "replans": 28,
+      "executed_actions": 112,
+      "expert_handoff": false,
+      "object_pose_given_to_model": false
+    },
+    {
+      "initial_height_m": 0.6449884365991027,
+      "final_height_m": 0.9211936518221204,
+      "lift_m": 0.2762052152230178,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "sampling_seed": 1103,
+      "controller": "own_learned_policy",
+      "replans": 28,
+      "executed_actions": 112,
+      "expert_handoff": false,
+      "object_pose_given_to_model": false
+    }
+  ],
+  "generalization_test": false,
+  "success_rate_is_training_scene_only": true
+}

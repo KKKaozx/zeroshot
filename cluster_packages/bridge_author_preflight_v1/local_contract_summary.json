@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "protocol_sha256": "cfea31dfa1b06d8653caa832a9ef26e19ccfee899504c0a29c8a4226db867257",
+  "export_report_sha256": "b0328a702cbbf6de00188a3bb55596e7f734745aede079166fcabe9abe4b6686",
+  "raw_windows": 168,
+  "training_statistics_only": true,
+  "author_normalizer_functions_executed": true,
+  "author_normalizer_roundtrip_max_difference": 2.384185791015625e-07,
+  "independent_limits_formula_checked": true,
+  "development_perturbation_does_not_change_fit": true,
+  "image_conversion_roundtrip_max_difference": 2.384185791015625e-07,
+  "author_workspace_gpu_executed_locally": false,
+  "packages_installed": false,
+  "new_weight_downloads": false,
+  "actual_launchers_parsed": [
+    {
+      "entry": "export_bridge_author_inputs.py",
+      "argv": [
+        "--project",
+        "/projects/Zeroshot",
+        "--data-root",
+        "/projects/Zeroshot/bridge_expansion_training_v1/data",
+        "--output",
+        "$OUT/inputs"
+      ]
+    },
+    {
+      "entry": "preflight_bridge_author_workspace.py",
+      "argv": [
+        "--source",
+        "$SOURCE",
+        "--cache",
+        "$OUT/inputs",
+        "--output",
+        "$OUT/author"
+      ]
+    }
+  ],
+  "full_training_or_simulation_executed": false
+}

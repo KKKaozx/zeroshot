@@ -1,0 +1,148 @@
+{
+  "stage": "report_and_plan_only",
+  "metadata_checks_passed": true,
+  "independent_predictions_recomputed": false,
+  "update_logs_verified": false,
+  "runner_snapshot_verified": false,
+  "required_files": [
+    "report.json",
+    "plan.json",
+    "runner_snapshot.py",
+    "common_updates.jsonl",
+    "reduced_updates.jsonl",
+    "common_u0000_train.npz",
+    "common_u2048_train.npz",
+    "common_u4096_train.npz",
+    "reduced_u6144_train.npz",
+    "reduced_u7168_train.npz",
+    "reduced_u7680_train.npz",
+    "reduced_u8192_train.npz",
+    "reduced_u8192_development.npz"
+  ],
+  "missing_files": [
+    "runner_snapshot.py",
+    "common_updates.jsonl",
+    "reduced_updates.jsonl",
+    "common_u0000_train.npz",
+    "common_u2048_train.npz",
+    "common_u4096_train.npz",
+    "reduced_u6144_train.npz",
+    "reduced_u7168_train.npz",
+    "reduced_u7680_train.npz",
+    "reduced_u8192_train.npz",
+    "reduced_u8192_development.npz"
+  ],
+  "received_files_sha256": {
+    "report.json": "d6d31fff27f7c8e40af3f66e962918e993583d44697da1dd96371d541e3ade00",
+    "plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928"
+  },
+  "reported_final": {
+    "overall": {
+      "path_position_cm": 0.1828795224428177,
+      "path_rotation_deg": 0.5771979689598083,
+      "endpoint_position_cm": 0.2417348027229309,
+      "endpoint_rotation_deg": 0.7227088809013367,
+      "fit_gate": {
+        "position_cm": 0.1828795224428177,
+        "rotation_deg": 0.5771979689598083,
+        "endpoint_position_cm": 0.2417348027229309,
+        "endpoint_rotation_deg": 0.7227088809013367,
+        "seed_position_cm": [
+          0.18234553933143616,
+          0.1830214112997055,
+          0.183271586894989
+        ],
+        "seed_rotation_deg": [
+          0.5767682790756226,
+          0.5764490962028503,
+          0.5783763527870178
+        ],
+        "windows_all_three_seeds_pass": 128,
+        "windows": 128,
+        "static_position_cm": 8.960285186767578,
+        "static_rotation_deg": 13.882542610168457,
+        "pose_fit_passed": true
+      }
+    },
+    "retained_train": {
+      "path_position_cm": 0.18848806619644165,
+      "path_rotation_deg": 0.5676857829093933,
+      "endpoint_position_cm": 0.24332422018051147,
+      "endpoint_rotation_deg": 0.7072451710700989,
+      "fit_gate": {
+        "position_cm": 0.18848806619644165,
+        "rotation_deg": 0.5676857829093933,
+        "endpoint_position_cm": 0.24332422018051147,
+        "endpoint_rotation_deg": 0.7072451710700989,
+        "seed_position_cm": [
+          0.18763349950313568,
+          0.18864166736602783,
+          0.18918906152248383
+        ],
+        "seed_rotation_deg": [
+          0.5664830207824707,
+          0.5674558877944946,
+          0.5691183805465698
+        ],
+        "windows_all_three_seeds_pass": 64,
+        "windows": 64,
+        "static_position_cm": 8.656444549560547,
+        "static_rotation_deg": 12.703901290893555,
+        "pose_fit_passed": true
+      }
+    },
+    "added_train": {
+      "path_position_cm": 0.17727094888687134,
+      "path_rotation_deg": 0.5867100358009338,
+      "endpoint_position_cm": 0.24014538526535034,
+      "endpoint_rotation_deg": 0.738172709941864,
+      "fit_gate": {
+        "position_cm": 0.17727094888687134,
+        "rotation_deg": 0.5867100358009338,
+        "endpoint_position_cm": 0.24014538526535034,
+        "endpoint_rotation_deg": 0.738172709941864,
+        "seed_position_cm": [
+          0.17705759406089783,
+          0.17740115523338318,
+          0.177354097366333
+        ],
+        "seed_rotation_deg": [
+          0.5870535969734192,
+          0.585442304611206,
+          0.5876343250274658
+        ],
+        "windows_all_three_seeds_pass": 64,
+        "windows": 64,
+        "static_position_cm": 9.264124870300293,
+        "static_rotation_deg": 15.06118392944336,
+        "pose_fit_passed": true
+      }
+    }
+  },
+  "reported_late_group_coverage": [
+    {
+      "update": 6144,
+      "overall": 128,
+      "retained": 64,
+      "added": 64
+    },
+    {
+      "update": 7168,
+      "overall": 128,
+      "retained": 64,
+      "added": 64
+    },
+    {
+      "update": 7680,
+      "overall": 127,
+      "retained": 64,
+      "added": 63
+    },
+    {
+      "update": 8192,
+      "overall": 128,
+      "retained": 64,
+      "added": 64
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "stage": "preflight",
+  "passed": true,
+  "protocol_sha256": "d5ffce03facd4f010ff6f0c8283e50530577b69613db91dfb6d128c06d15b59a",
+  "source_sha256": {
+    "baseline_observed.py": "e18e61b04d9caf8509e8d61f544089ac29d432880b0e3422dfdce93a5a8ccceb",
+    "fit_state_arm.py": "03dd5abf13022a3b8616d6727507164dead3bbdae7bb4bb3967d13685f03a89e",
+    "state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+    "run_state_pair.py": "4ab545e9216e3c8abf8f34635364afa85223ed5b069f66340a16076f4adeb59d"
+  },
+  "original_control_report_sha256": "d6d31fff27f7c8e40af3f66e962918e993583d44697da1dd96371d541e3ade00",
+  "runs": {
+    "legacy": {
+      "report_sha256": "bcf1ebc8cac14427e10d0562c81092eab69d1ef6ca9f69fc586ef5a41c1ca200",
+      "execution_checks_passed": true
+    },
+    "zero": {
+      "report_sha256": "ebd76e470bca6a9646f9170e3cca99e2509fb60c33dd94c4ec5f33f71f2ae5fc",
+      "execution_checks_passed": true
+    },
+    "real": {
+      "report_sha256": "a993b5ef992f72d3c0c905e78727828861b99fe31f10ef191deb3896dc380ad5",
+      "execution_checks_passed": true
+    }
+  },
+  "trained": false,
+  "short_updates_executed": true,
+  "new_downloads": false,
+  "simulation_executed": false,
+  "elapsed_seconds": 1099.6335137549322,
+  "zero_replay": {
+    "passed": true,
+    "parameters_exact": true,
+    "all_five_snapshots_exact": true,
+    "max_absolute_differences": {
+      "predictions": 0.0,
+      "contexts": 0.0,
+      "targets": 0.0,
+      "losses": 0.0
+    }
+  },
+  "state_interface": {
+    "passed": true,
+    "same_augmented_initialization": true,
+    "same_initial_loss": true,
+    "real_first_state_gradient": 0.1169678121805191,
+    "real_context_max_abs": 0.008464889600872993,
+    "zero_port_remains_zero": true
+  }
+}

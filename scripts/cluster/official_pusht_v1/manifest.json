@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/real-stanford/diffusion_policy",
+  "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "checkpoint_bytes": 4293295813,
+  "local_execution": "static_syntax_and_config_checks_only",
+  "cluster_setup_executed": false,
+  "evaluation_executed": false,
+  "files": {
+    "author_config.yaml": "a335ac5d4fda88ef53b4c04788b58966e2a72c7540abb5465a22d4edac2e6f9b",
+    "environment.yaml": "b3840c15ae056b109ce0b433db298870ed8dd0f4e0b0cba3cacd6b12082eaed6",
+    "evaluate.sh": "9f82e3c273e695c021459c31171229bbce1d292a9da6194e75ac23d9e906183b",
+    "README.md": "98a1a7b92b168c95611f73d4ce897567d89a17e56831ae8f33c4ec75d0717ed4",
+    "repair_gl.sh": "6725dfce4ac1c70caa26efcc2a0ab54dade77ad51bf341d1e3853e830437c0d2",
+    "setup.sh": "0878193e2cdce5397e3ea176fc6e24060862c8ee5c0a5e8197d933daa01bfb83"
+  },
+  "known_cluster_issue_fixed": "195216: pandas installed; cv2 missing libGL.so.1; libgl repair prepared, not executed"
+}

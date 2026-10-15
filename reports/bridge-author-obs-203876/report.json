@@ -1,0 +1,168 @@
+{
+  "stage": "frozen_author_observation_intervention",
+  "execution_passed": true,
+  "trained_updates": 0,
+  "origin_job": 203699,
+  "primary": "fixed finalEMA",
+  "simulation_executed": false,
+  "reserved_test_used": false,
+  "protocol_sha256": "8dadb2937317437a56fc91aaaa4427919f51dc32618f3cd3be8261a27bc540e1",
+  "mixed_observation_accuracy_evaluated": false,
+  "torch_version": "1.12.1",
+  "gpu": "NVIDIA RTX A6000",
+  "checkpoint_sha256": "c5c7401054ffa1fb159d86f136a27e1a62895fbdecb40d81c91449414ec5a975",
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "normalizer_matches_training_statistics": true,
+  "source_verified": true,
+  "original_replay_max_absolute_difference": 0.0,
+  "replay_tolerance": 0.0001,
+  "original_full40_metrics": {
+    "path_position_cm": 8.377639052780582,
+    "path_rotation_deg": 15.219880778335952,
+    "endpoint_position_cm": 12.146685030172472,
+    "endpoint_rotation_deg": 20.853047255118682,
+    "windows": 40,
+    "passing_windows": 0,
+    "pose_fit_passed": false
+  },
+  "elapsed_seconds": 85.58023469801992,
+  "unchanged_batch_rows_max_absolute_difference": 0.0,
+  "output_changes": {
+    "image_only": {
+      "position_cm": 10.042649629909729,
+      "rotation_deg": 16.09364600328329,
+      "per_window_position_cm": [
+        11.3281781213606,
+        8.122192900433499,
+        16.518810652945508,
+        9.153604960432029,
+        5.091052580671704,
+        16.34886535648653,
+        12.918971440322558,
+        9.486243448322655,
+        1.4159272082124694
+      ],
+      "per_window_rotation_deg": [
+        15.753307495669581,
+        18.053044200736718,
+        23.696279795273593,
+        14.234750089207987,
+        16.6050768193368,
+        32.40550566654071,
+        17.40209889857336,
+        4.520127703072419,
+        2.172623361138447
+      ],
+      "per_draw_position_cm": [
+        10.059984382098513,
+        9.953482725193297,
+        10.114481782437373
+      ],
+      "per_draw_rotation_deg": [
+        16.708003278612154,
+        15.84633220240682,
+        15.726602528830893
+      ]
+    },
+    "state_only": {
+      "position_cm": 1.2729546758846455,
+      "rotation_deg": 1.938844175218121,
+      "per_window_position_cm": [
+        1.0456782358564707,
+        0.7801310470153863,
+        1.2151024606890226,
+        1.0575061132317898,
+        1.2512596873532165,
+        1.312978197184527,
+        1.6984760258297793,
+        1.6139756790796114,
+        1.4814846367220083
+      ],
+      "per_window_rotation_deg": [
+        1.442318968188841,
+        0.6364636131447664,
+        2.401997588014655,
+        1.7753177306133257,
+        2.877785725129186,
+        2.4901282353728056,
+        2.7720609631403836,
+        1.2324104315858688,
+        1.8211143217732577
+      ],
+      "per_draw_position_cm": [
+        1.328706399230987,
+        1.2228584267224365,
+        1.2672992017005136
+      ],
+      "per_draw_rotation_deg": [
+        2.0151452677581676,
+        1.8751581501878556,
+        1.9262291077083402
+      ]
+    },
+    "both": {
+      "position_cm": 10.654406419955144,
+      "rotation_deg": 16.781557903875044,
+      "per_window_position_cm": [
+        11.505200993287986,
+        8.166294688058702,
+        17.081942628448097,
+        10.094493271827059,
+        5.991087544267572,
+        17.25534564336657,
+        14.045113754857397,
+        10.747015271396767,
+        1.0031639840861457
+      ],
+      "per_window_rotation_deg": [
+        16.55351730480973,
+        18.560549119820575,
+        23.86616286651869,
+        15.675519999494776,
+        17.99536536391372,
+        31.940728462196148,
+        20.254137803099418,
+        4.963230542353795,
+        1.2248096726685134
+      ],
+      "per_draw_position_cm": [
+        10.670214957794805,
+        10.585517561459476,
+        10.70748674061115
+      ],
+      "per_draw_rotation_deg": [
+        17.41539443251266,
+        16.520374077098623,
+        16.40890520201384
+      ]
+    }
+  },
+  "valid_context_quality": {
+    "original": {
+      "path_position_cm": 12.726062980547443,
+      "path_rotation_deg": 10.923319296277217,
+      "endpoint_position_cm": 17.776013341514936,
+      "endpoint_rotation_deg": 14.22889864151558,
+      "windows": 9,
+      "passing_windows": 0,
+      "pose_fit_passed": false
+    },
+    "both_donor": {
+      "path_position_cm": 0.8679790504281492,
+      "path_rotation_deg": 1.9693531823015793,
+      "endpoint_position_cm": 0.9393914289029084,
+      "endpoint_rotation_deg": 2.3075824954817725,
+      "windows": 9,
+      "passing_windows": 0,
+      "pose_fit_passed": false
+    }
+  },
+  "parameters_unchanged": true,
+  "sampler_calls": 39,
+  "peak_reserved_gib": 1.33203125,
+  "scientific_verdict": "Sensitivity under fixed weights; crossed contexts are not valid task-success or improvement tests."
+}

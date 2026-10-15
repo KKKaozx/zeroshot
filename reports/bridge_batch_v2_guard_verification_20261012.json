@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "cases": [
+    "reject_raw_encoded_image_sha256",
+    "reject_raw_decoded_rgb_sha256",
+    "reject_raw_state_sha256",
+    "reject_raw_action_sha256",
+    "reject_raw_instruction_sha256",
+    "reject_raw_rgb_shape",
+    "accept_observed_images",
+    "reject_substantial_images",
+    "reject_nan_images",
+    "accept_observed_targets",
+    "reject_substantial_targets",
+    "reject_nan_targets",
+    "reject_gripper_label_change",
+    "reject_current_gripper_change"
+  ],
+  "recipe_and_production_sources_unchanged": true,
+  "thresholds": {
+    "images": 1e-06,
+    "targets": 1e-06,
+    "currents": 0
+  },
+  "rtol": 0
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "CPU algebra audit, toy outputs; not trained-model evaluation or execution of diffusers package",
+  "torch": "2.11.0+cu128",
+  "source_hash_matches": {
+    "models.py": true,
+    "adapter.py": true,
+    "diffusion_decoder.py": true,
+    "dataset.py": true,
+    "train.py": true
+  },
+  "cosine_beta_max_absolute_difference": 0.0,
+  "ddim_100step_max_absolute_difference_from_independently_transcribed_official_eta0_equations": {
+    "sample": 0.0,
+    "epsilon": 0.0
+  },
+  "ddpm_x0_reconstruction_t99_max_absolute_numerical_error_toy": 0.0002330392599105835,
+  "new_packages_installed": false,
+  "weights_loaded": false,
+  "training_run": false
+}

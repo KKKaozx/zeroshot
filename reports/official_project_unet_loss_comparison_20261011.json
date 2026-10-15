@@ -1,0 +1,67 @@
+{
+  "stage": "official_project_unet_loss_direct_comparison",
+  "execution_checks_passed": true,
+  "trained": false,
+  "weights_downloaded": false,
+  "data_downloaded": false,
+  "torch_version": "2.11.0+cu128",
+  "official_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+  "unet": {
+    "matched_actual_architecture_state_keys": 148,
+    "matched_actual_parameters": 77670023,
+    "actual_width_shape_mapping_passed": true,
+    "numeric_test_widths": [
+      32,
+      64,
+      128
+    ],
+    "forward_max_abs_difference": 0.0,
+    "action_input_gradient_max_abs_difference": 0.0,
+    "context_gradient_max_abs_difference": 0.0,
+    "parameter_gradient_max_abs_difference": 0.0
+  },
+  "loss": [
+    {
+      "prediction_type": "sample",
+      "official_loss": 1.8805389404296875,
+      "project_loss": 1.8805389404296875,
+      "prediction_gradient_max_difference": 0.0,
+      "valid_pose_components": "all",
+      "observation_features": "synthetic_global_condition; no encoder instantiated",
+      "gripper_loss_included": false
+    },
+    {
+      "prediction_type": "epsilon",
+      "official_loss": 2.100175380706787,
+      "project_loss": 2.100175380706787,
+      "prediction_gradient_max_difference": 0.0,
+      "valid_pose_components": "all",
+      "observation_features": "synthetic_global_condition; no encoder instantiated",
+      "gripper_loss_included": false
+    }
+  ],
+  "epsilon_x0_effective_weight_alpha_over_one_minus_alpha": {
+    "0": 1583.1011962890625,
+    "24": 5.536464691162109,
+    "49": 0.9756736755371094,
+    "74": 0.16859574615955353,
+    "99": 2.428541279186902e-07
+  },
+  "limits": [
+    "Full-width mapping is parameter shape/schema comparison; forward/backward numerical run uses smaller equal widths.",
+    "Same weights and architecture tests implementation equivalence, not learned behavior or training quality.",
+    "Loss test uses synthetic global observations, fully valid pose entries and no gripper BCE; mask/observation encoders not fully reproduced.",
+    "Different prediction types are valid supported objectives; equality within a type does not equate epsilon and x0 optimization."
+  ],
+  "source_sha256": {
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "code/train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9",
+    "code/compare_official_unet_and_loss.py": "9eecffc412e2bc51cc979667a931dd88bbe0f406f935ee9fde3921cbeb6cf596",
+    "baselines/diffusion_policy_data_reference/diffusion_policy/model/diffusion/conditional_unet1d.py": "8a95014f8aa52ade086f967c9018a66bf0c68f2133969c8f7a8522da01b472ac",
+    "baselines/diffusion_policy_data_reference/diffusion_policy/model/diffusion/conv1d_components.py": "ea2aa10e297cf253bc1a1919ba47fe6ae32049b5eaaab292ed9cc145d8d2adc0",
+    "baselines/diffusion_policy_data_reference/diffusion_policy/model/diffusion/positional_embedding.py": "2266c75ecc9c9ac8ca126839d39a7bafbdd7af8800d6de903f66815e64cc366c",
+    "baselines/diffusion_policy_data_reference/diffusion_policy/policy/diffusion_unet_hybrid_image_policy.py": "d8ead767ed3b1501c358aa3dd97ab479ebdf77a62ec9ab7081d6a2211c2d2e76",
+    "reports/official_pusht_195527/checkpoint_config.yaml": "5fc467ea821b26afa743aad1b7e41206540b3665271be7c688d4cc52cc82dbd6"
+  }
+}

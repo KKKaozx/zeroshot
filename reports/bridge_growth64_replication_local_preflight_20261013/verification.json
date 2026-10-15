@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "report_sha256": "a445c5548d4872855ca165f13ad6bdb252b4136c161056e4c3a45b1f30bf34ba",
+  "only_training_change": "initialization43 ->42",
+  "input_checks": 104,
+  "snapshots": 5,
+  "logged_updates": 32,
+  "restored_losses_and_saved_arrays_exact": true,
+  "max_float64_metric_difference": {
+    "path_position_cm": 7.11388720375794e-07,
+    "path_rotation_deg": 9.056735797230431e-05,
+    "endpoint_position_cm": 1.2849511872303765e-06,
+    "endpoint_rotation_deg": 5.673308292841739e-05
+  },
+  "launcher_arguments": {
+    "preflight": [
+      "fit_bridge_growth64.py",
+      "--manifest",
+      "manifest.json",
+      "--data-root",
+      "/projects/Zeroshot/bridge_expansion_training_v1/data",
+      "--clip",
+      "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "--data-reference",
+      "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+      "--origin-report",
+      "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+      "--stage",
+      "preflight",
+      "--output",
+      "/projects/Zeroshot/runs/bridge-growth64-rep-preflight-${SLURM_JOB_ID}"
+    ],
+    "fit": [
+      "fit_bridge_growth64.py",
+      "--manifest",
+      "manifest.json",
+      "--data-root",
+      "/projects/Zeroshot/bridge_expansion_training_v1/data",
+      "--clip",
+      "/projects/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+      "--data-reference",
+      "/projects/Zeroshot/bridge_batch_input_audit_v1/reference",
+      "--origin-report",
+      "/projects/Zeroshot/runs/bridge-trace-fit-200039/report.json",
+      "--stage",
+      "fit",
+      "--output",
+      "/projects/Zeroshot/runs/bridge-growth64-rep-fit-${SLURM_JOB_ID}",
+      "--preflight-reference",
+      "/projects/Zeroshot/runs/bridge-growth64-rep-preflight-${GROWTH_PREFLIGHT_JOB}"
+    ]
+  },
+  "full_fit_executed": false
+}

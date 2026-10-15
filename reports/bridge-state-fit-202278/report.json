@@ -1,0 +1,29 @@
+{
+  "stage": "fit",
+  "passed": true,
+  "protocol_sha256": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82",
+  "source_sha256": {
+    "baseline_observed.py": "5f145ddee3d457e8a1605584abd86aa29caf8326c19a45f8e0317b5655a7ae62",
+    "fit_state_arm.py": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa",
+    "state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+    "run_state_pair.py": "ac0d76e962003a64a634af3e6ad0c0730552c45ab65e0856934840798e12f598"
+  },
+  "original_control_report_sha256": "d6d31fff27f7c8e40af3f66e962918e993583d44697da1dd96371d541e3ade00",
+  "runs": {
+    "zero": {
+      "report_sha256": "0223181b109ac850a69f70f2bb6da4e20dde169af126cff370cdc9152d0a13ba",
+      "execution_checks_passed": true
+    },
+    "real": {
+      "report_sha256": "69dd96d24241f3cef8733c4cbc8a985157b06e62616da32aefd8332268302ed1",
+      "execution_checks_passed": true
+    }
+  },
+  "trained": true,
+  "short_updates_executed": false,
+  "new_downloads": false,
+  "simulation_executed": false,
+  "elapsed_seconds": 4683.755711581791,
+  "both_training_fit": true,
+  "scientific_verdict": "Execution complete; require independent paired metric analysis. No improvement verdict here."
+}

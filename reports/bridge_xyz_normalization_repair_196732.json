@@ -1,0 +1,22 @@
+{
+  "failed_job": 196732,
+  "repair_scope": "numeric check only",
+  "changed_files": [
+    "check_bridge_xyz_normalization.py",
+    "manifest.json",
+    "SHA256SUMS"
+  ],
+  "original_baseline_bitwise_requirement_retained": true,
+  "custom_identity_atol": 1e-06,
+  "custom_identity_rtol": 1e-06,
+  "rng_parity_required": true,
+  "training_model_dataset_unchanged": true,
+  "local_cpu_checks_passed": true,
+  "local_torch_version": "2.11.0+cu128",
+  "cluster_torch_version_known": "2.5.1+cu118",
+  "cluster_max_differences_not_yet_observed": true,
+  "archive": "D:\\ntu_related\\dissertation\\GPU cluster\\bridge_xyz_normalization_v1_r1.zip",
+  "bytes": 33072,
+  "sha256": "daba3d689849be9cffaf84ed8699371d0f64d8bb2b5ecc5c0aa0d51f93a4dce9",
+  "zip_integrity_passed": true
+}

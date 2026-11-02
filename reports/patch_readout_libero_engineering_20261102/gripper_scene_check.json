@@ -1,0 +1,105 @@
+{
+  "other_scenes": 63,
+  "fixed": "Bridge median pose18, history masked, own task instruction",
+  "results": {
+    "other_scenes_initial__unknown": {
+      "mean_first_waypoint_m": [
+        -0.00039999998989515007,
+        -0.000699999975040555,
+        -0.0017000000225380063
+      ],
+      "mean_plus_y_m": -0.0007,
+      "fraction_plus_y": 0.365,
+      "fraction_up_and_plus_y": 0.032,
+      "gripper_open_fraction": 1.0
+    },
+    "other_scenes_initial__open": {
+      "mean_first_waypoint_m": [
+        -0.002899999963119626,
+        0.0032999999821186066,
+        0.001500000013038516
+      ],
+      "mean_plus_y_m": 0.0033,
+      "fraction_plus_y": 0.651,
+      "fraction_up_and_plus_y": 0.333,
+      "gripper_open_fraction": 1.0
+    },
+    "other_scenes_initial__closed": {
+      "mean_first_waypoint_m": [
+        -0.003000000026077032,
+        -0.010900000110268593,
+        0.008200000040233135
+      ],
+      "mean_plus_y_m": -0.0109,
+      "fraction_plus_y": 0.079,
+      "fraction_up_and_plus_y": 0.048,
+      "gripper_open_fraction": 0.0
+    },
+    "scene10_initial__unknown": {
+      "mean_first_waypoint_m": [
+        -0.0017000000225380063,
+        -0.0017999999690800905,
+        -0.000699999975040555
+      ],
+      "mean_plus_y_m": -0.0018,
+      "fraction_plus_y": 0.0,
+      "fraction_up_and_plus_y": 0.0,
+      "gripper_open_fraction": 1.0
+    },
+    "scene10_initial__open": {
+      "mean_first_waypoint_m": [
+        -0.002400000113993883,
+        0.010900000110268593,
+        0.006200000178068876
+      ],
+      "mean_plus_y_m": 0.0109,
+      "fraction_plus_y": 1.0,
+      "fraction_up_and_plus_y": 1.0,
+      "gripper_open_fraction": 1.0
+    },
+    "scene10_initial__closed": {
+      "mean_first_waypoint_m": [
+        -0.008999999612569809,
+        -0.012299999594688416,
+        0.008200000040233135
+      ],
+      "mean_plus_y_m": -0.0123,
+      "fraction_plus_y": 0.0,
+      "fraction_up_and_plus_y": 0.0,
+      "gripper_open_fraction": 0.0
+    },
+    "scene10_drifted__unknown": {
+      "mean_first_waypoint_m": [
+        -0.0019000000320374966,
+        -0.0026000000070780516,
+        -0.00019999999494757503
+      ],
+      "mean_plus_y_m": -0.0026,
+      "fraction_plus_y": 0.0,
+      "fraction_up_and_plus_y": 0.0,
+      "gripper_open_fraction": 1.0
+    },
+    "scene10_drifted__open": {
+      "mean_first_waypoint_m": [
+        -0.00279999990016222,
+        0.008200000040233135,
+        0.0012000000569969416
+      ],
+      "mean_plus_y_m": 0.0082,
+      "fraction_plus_y": 1.0,
+      "fraction_up_and_plus_y": 0.667,
+      "gripper_open_fraction": 1.0
+    },
+    "scene10_drifted__closed": {
+      "mean_first_waypoint_m": [
+        -0.008299999870359898,
+        -0.009200000204145908,
+        0.006599999964237213
+      ],
+      "mean_plus_y_m": -0.0092,
+      "fraction_plus_y": 0.0,
+      "fraction_up_and_plus_y": 0.0,
+      "gripper_open_fraction": 0.0
+    }
+  }
+}

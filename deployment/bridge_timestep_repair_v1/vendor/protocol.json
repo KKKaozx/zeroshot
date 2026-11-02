@@ -1,0 +1,130 @@
+{
+  "format": "fresh-bridge-full-capability-protocol-v1",
+  "training_seed": 42,
+  "total_updates": 65536,
+  "batch_size": 8,
+  "train_windows": 10352,
+  "train_episodes": 1151,
+  "target": "sample",
+  "pose_port": [
+    18,
+    1024
+  ],
+  "initialization": "fresh; no learned checkpoint loaded",
+  "checkpoint_every": 4096,
+  "training_cap_seconds": 25200,
+  "job_cap_seconds": 28800,
+  "torch": "2.5.1+cu118",
+  "cuda": "11.8",
+  "gpu": "NVIDIA A40",
+  "project_reserve_gib": 8,
+  "schedule": {
+    "total_updates": 65536,
+    "base_lrs": [
+      0.0002,
+      0.0002,
+      0.0002
+    ],
+    "warmup_updates": 1024,
+    "kind": "cosine"
+  },
+  "data_binding": {
+    "train": {
+      "format": "oxe-nominal-target-binding-v1",
+      "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+      "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+      "label_family": "nominal_resampled_observed_reached_pose",
+      "clock_basis": "user_selected_published_nominal_frequency_assumption",
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "source_units_or_formal_training_admitted": false
+    },
+    "validation": {
+      "format": "oxe-nominal-target-binding-v1",
+      "dataset_identity": "e4cd9b9f6c528170cbdd1dd6f8227a2da9d764ae81a47767fab9319b5f20db5e",
+      "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+      "label_family": "nominal_resampled_observed_reached_pose",
+      "clock_basis": "user_selected_published_nominal_frequency_assumption",
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "source_units_or_formal_training_admitted": false,
+      "partition": "validation"
+    }
+  },
+  "plan_sha256": "09cb6db54d9b590eb70d884fc378cc4ffbd315fbd1ca6441060f918c891548b7",
+  "stats_sha256": "ff153f5e19f16c3b5458466f929f1926857b1f545a3f86c9465c09c3acbaaa17",
+  "selection_sha256": "88a5f82609f959e3c59fa4c055c88adf85ac96f44abcb90254895497c2ef6f2f",
+  "evaluation_reference_sha256": "535396beec76d2a7ad20be275258891ee08df1a24d88a1b871a8cffba97e6454",
+  "source_snapshot": {
+    "code/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code/cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "code/completed_policy_export.py": "175e66a87f865d569e952e7051c376de60f8905e66d374ec019d398b371532e1",
+    "code/dataset.py": "424e5d0610cf4822a96416d98cc5b655c580bdfc73047f3c815fa9c70c69c4dd",
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/frozen_identity_failure.py": "f19803f58d59221ac0eefba02463875d939bb3a2a64e85b4fbd59b910caa5b91",
+    "code/frozen_visual_backbone.py": "11750ee52a018495256a11c4971bc9ba48f060a02973343170bab77da62fa317",
+    "code/language_training_conditions.py": "e4f115bdae73c51b567b1e2225c797ebb901f04fb0359273d3f6e76c9c455fa2",
+    "code/libero_action_interface.py": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+    "code/libero_project_policy.py": "92503e51d308aa011d718b2b2bdca084e824714d5aff4ace3235c6a3e0dacc96",
+    "code/libero_waypoint_execution.py": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986",
+    "code/models.py": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+    "code/oxe_formal_protocol.py": "2515130954b72146089696bfb5df49abba8f609c53ac6612c980b58126ff3387",
+    "code/oxe_nominal_dataset.py": "49339af5575dfd719848342c5c762b158ce87e5890d66471e42b71274e948923",
+    "code/oxe_nominal_target_store.py": "a4d3691244b054f4f7f3a4ec789567a2f1c30cdb5bfb7ccb969a549a2f20b7ff",
+    "code/oxe_nominal_timing.py": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+    "code/oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981",
+    "code/oxe_window_index.py": "00c13a24ba33bc1299a6634e688194ac45a815744d228faf5263dc6431112aaf",
+    "code/step_training_runner.py": "7dda16ccb466160cd82f6983b98064475f43aba394da439a06f69488b56e7d10",
+    "code/step_training_state.py": "e2029456c3840e63879de5eecaa75f869989ee419b168916d1888f5d362f0e6d",
+    "code/train.py": "4d1893073fd1f9696e1ded0ad02cc50d8f47fd5db20cf308cdbd90e7d9acb28a",
+    "code/window_target_protocol.py": "b9a3b12dad9d37de585c90ba3caccfd3c537267797440a161c5cd048b9cb29f9"
+  },
+  "source_pose_features_sha256": "596a980947c9f8cbbc7b4380fd4585d19960abc36075813684907b2c43e52df5",
+  "source_profile_sha256": "824719667055d65e58e549d8747babef3a315600d09fe61819481927fc993bd1",
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "generation_steps": 100,
+  "evaluation_count": {
+    "train": 128,
+    "validation": 64
+  },
+  "gate": "Each role: all4pose means strictly better static AND path-position paired-group-bootstrap95 upper<0",
+  "causal_mixing_experiment": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false
+}

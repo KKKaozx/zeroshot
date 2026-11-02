@@ -1,0 +1,172 @@
+{
+  "stage": "joint_adapter_unet_population_condition",
+  "source_sha256": {
+    "scripts\\joint_panda_condition_transform_20261015.py": "ea07f71f9b94f0525ee54c792c89d08d36d3e2ee8f8edd903c86cad002615903",
+    "code\\population_condition_transform.py": "38d773de23f3f290751f12aecd0cfe82adfb9b5c552b7c1a33eb711202e55980",
+    "reports\\panda_frozen_condition_heads_20261015\\adapter_initial_only_updates.jsonl": "74b0860cfa21b41d86bfd5db0465a2fa5f3d28ff5af5910212efca85b4192362",
+    "reports\\panda_initial_only_fit_20261015\\plan.json": "c2ede788db32ec5fbe1f7b956768ddee57c2c4b44006ac86655b203c92d7c40c",
+    "reports\\panda_initial_only_fit_20261015\\report.json": "1537acc401c25b3c6d00b3f1e9092a688196c73ef8dde2e59b0d6db62affdccc",
+    "reports\\panda_initial_only_fit_20261015\\updates.jsonl": "40508d7822b1f169d27446eca73c72b94c8ce08b24f19c3a7b2f397d336c6914",
+    "reports\\panda_initial_only_fit_20261015\\final_train_predictions.npz": "3455ae1e4c543f95488de815549534f3146a147f2bf695c35a33c435f4f63f5c"
+  },
+  "production_source_sha256": {
+    "code/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "code/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "code/train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9",
+    "code/replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "code/fit_bridge_adapter_pair.py": "a2798c873783e7b1adbb3573876c96c3ceda45c23b53f28a28a4989526f64914",
+    "code/evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "code/pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "scripts/run_panda_spatial_fixed_trial_20261015.py": "1d7763e06fe2b7b44d9cac560fa0379a2f0c8f5600027f6b2a3dc677771bc271",
+    "scripts/preflight_panda_minimal_generalization_20261015.py": "2601c8eaab821608e54a312c4a2dec7eef9e983df0516ca8d00a34f4484416a5"
+  },
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "panda_measured_finger_width_affine_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  },
+  "selection": [
+    {
+      "episode": "xy_0_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_3",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_3",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_3",
+      "start": 0,
+      "split": "train"
+    }
+  ],
+  "reused_raw_joint_run": "reports\\panda_initial_only_fit_20261015",
+  "reused_control_retrained": false,
+  "initialization": 43,
+  "updates": 1024,
+  "batch_size": 8,
+  "draws_per_window": 512,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "learning_rate": "First512 at1e-4,last512 at1e-5; unchanged Adam,clip1,dropout0.1 and joint gripper loss",
+  "only_changed_interface": "U-Net condition=(raw Adapter context - current train-population eval mean)/one global RMS. Raw context still enters the gripper head.",
+  "calibration": "Before each update, eval-mode Adapter on all16 training observations, no gradients, no RNG consumption; detached stats. Final recalibration at final weights, saved and frozen at inference.",
+  "encoder_cache": "Original token sequences were not retained; encode16 once, check existing pooled cache, and retain tokens to avoid future re-encoding.",
+  "final_selection": "Final fixed update only; no intermediate action evaluation or development selection",
+  "stopping": "One1024-update new arm; no budget/seed/normalizer variants or physics after results",
+  "candidate": "Original pose fit gate; otherwise partial/failure, no automatic extension",
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false,
+  "checkpoint_limit_bytes": 629145600
+}

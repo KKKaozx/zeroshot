@@ -1,0 +1,376 @@
+{
+  "format": "local-language-text-review-v1",
+  "review_type": "Codex explicit per-candidate text review, not human sign-off or scene validation",
+  "raw_outputs_sha256": "f5c53b15ae1fb63d67b1b2ad9c89acb996674723b85fcd7e3826a4793c85c9fa",
+  "instructions": 8,
+  "candidates_reviewed": 40,
+  "structural_passed_groups": 8,
+  "text_decisions": {
+    "accept_text": 25,
+    "reject_text": 15
+  },
+  "complete_five_text_accepted_count": 1,
+  "complete_instruction_ids": [
+    "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943"
+  ],
+  "admitted_training_instructions": 0,
+  "training_bank_created": false,
+  "automatic_full_catalog_generation_admitted": false,
+  "decision": "Retain useful candidates; close this qualification without retries. Structural generation works, but semantic completeness is insufficient for full-catalog release.",
+  "comparison_limit": "Model size, quantization, runtime and schema changed together; not an isolated capacity effect.",
+  "lexical_screen_limit": "Spaced Red Bull triggers red-color flags even though the product name is preserved. No keyword flag substitutes for text review.",
+  "rows": [
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "source": "Bridge",
+      "original_instruction": "put the silver pot to the lower right of the burner",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "place the silver pot in the lower right position relative to the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Same silver pot, burner and lower-right destination; grammatical placement restatement.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "move the silver pot to the lower right side of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Same silver pot, burner and lower-right destination; grammatical placement restatement.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "set the silver pot to the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Same silver pot, burner and lower-right destination; grammatical placement restatement.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "position the silver pot to the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Same silver pot, burner and lower-right destination; grammatical placement restatement.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "put the silver pot at the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Same silver pot, burner and lower-right destination; grammatical placement restatement.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "source": "Bridge",
+      "original_instruction": "move the yellow object from the table to the top of the drawer",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "transfer the yellow item from the table to the upper part of the drawer",
+          "text_review_decision": "reject_text",
+          "evidence": "Upper part of the drawer can differ from the original top-of-drawer destination.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "slide the yellow object from the table to the highest level of the drawer",
+          "text_review_decision": "reject_text",
+          "evidence": "Adds sliding and changes the destination description to a highest level.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "move the yellow thing from the table to the topmost section of the drawer",
+          "text_review_decision": "reject_text",
+          "evidence": "Topmost section of the drawer need not preserve the original top-of-drawer relation.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "carry the yellow object from the table to the peak of the drawer",
+          "text_review_decision": "reject_text",
+          "evidence": "Adds carrying and uses the unnatural peak-of-drawer destination.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "shift the yellow item from the table to the very top of the drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Same yellow item, table origin and very-top-of-drawer goal; retains original ambiguity.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "source": "Language Table",
+      "original_instruction": "push the green circle closer to the yellow hexagon and blue triangle",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "move the green circle nearer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "reject_text",
+          "evidence": "Move omits the explicitly required pushing action.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "push the green circle so it is closer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "accept_text",
+          "evidence": "Preserves push and becoming closer to both the yellow hexagon and blue triangle.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "slide the green circle toward the yellow hexagon and the blue triangle to make it closer",
+          "text_review_decision": "reject_text",
+          "evidence": "Sliding can result from pulling as well as pushing; explicit push is not preserved.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "advance the green circle towards the yellow hexagon and the blue triangle to bring it nearer",
+          "text_review_decision": "reject_text",
+          "evidence": "Advance/bring nearer omits the explicit pushing requirement.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "nudge the green circle so that it is positioned closer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "reject_text",
+          "evidence": "Nudge narrows the action to a small/gentle push absent from the original; conservatively reject.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "source": "Language Table",
+      "original_instruction": "move the blue triangle left side of the blue cube",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "shift the blue triangle to the left side of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Shift preserves the same moved triangle and left-of-cube goal.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "slide the blue triangle so it's beside the blue cube on the left side",
+          "text_review_decision": "reject_text",
+          "evidence": "Adds sliding and beside/adjacency instead of only left-of.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "transfer the blue triangle to the left side relative to the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Transfer preserves the same object and left-of-cube goal.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "move the blue triangle to the left of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Same move and left-of relation with a grammatical destination phrase.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "reposition the blue triangle to the left side of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Reposition preserves the moved triangle and left-of-cube goal.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "source": "BC-Z",
+      "original_instruction": "place grapes in purple bowl",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "put the grapes inside the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Put inside preserves grapes and purple-bowl containment.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "insert the grapes into the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Insert into preserves grapes and purple-bowl containment without adding quantities.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "move the grapes into the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Move into preserves the required final containment, unlike move to.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "deposit the grapes in the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Deposit in preserves placement inside the same purple bowl.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "transfer the grapes to the purple bowl",
+          "text_review_decision": "reject_text",
+          "evidence": "Transfer to does not preserve the explicit in-bowl containment constraint.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "source": "BC-Z",
+      "original_instruction": "wipe purple bowl with towel",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "use a towel to wipe the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Preserves wiping the purple bowl with the towel.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "clean the purple bowl using a towel",
+          "text_review_decision": "reject_text",
+          "evidence": "Clean is broader than the specified wiping action.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "take a towel and wipe the purple bowl",
+          "text_review_decision": "reject_text",
+          "evidence": "Adds a separate take-a-towel command before wiping; conservatively reject.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "with a towel, wipe the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Reorders the towel phrase while preserving the wiping action.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "wipe the purple bowl by using a towel",
+          "text_review_decision": "accept_text",
+          "evidence": "Preserves wiping, purple bowl and towel tool.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "source": "Fractal",
+      "original_instruction": "move apple near redbull can",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "move the apple close to the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "Close to preserves near; red bull is the spaced product name Red Bull, not a new red object.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "place the apple nearby the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "Place nearby preserves the apple and proximity goal; spaced Red Bull preserves product identity.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "slide the apple next to the red bull can",
+          "text_review_decision": "reject_text",
+          "evidence": "Adds sliding and next-to/adjacency, a narrower relation than near.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "put the apple in proximity to the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "In proximity to preserves near and the same apple and Red Bull can.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "shift the apple so it is near the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "Shift so it is near preserves the original relocation goal and objects.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "source": "Fractal",
+      "original_instruction": "place rxbar blueberry into top drawer",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "put the rxbar blueberry inside the top drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Preserves RXBAR Blueberry, containment and the top drawer.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "insert the blueberry rxbar into the upper drawer",
+          "text_review_decision": "reject_text",
+          "evidence": "Upper drawer need not be the top drawer when more than two drawers exist.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "move the blueberry rxbar into the topmost drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Reordered flavor/brand preserves Blueberry RXBAR; topmost preserves top, into preserves containment.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "slide the blueberry rxbar into the top drawer",
+          "text_review_decision": "reject_text",
+          "evidence": "Adds a sliding mechanism absent from the original placement instruction.",
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "deposit the blueberry rxbar into the highest drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Highest drawer preserves top drawer and into preserves containment; brand/flavor retained.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    }
+  ]
+}

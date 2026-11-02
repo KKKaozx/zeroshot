@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-18",
+  "stage": "preflight_release_only",
+  "objective": "Does learned patch weighting after frozen CLIP improve near-term new-demonstration pose prediction without losing full16 performance?",
+  "checkpoint": {
+    "relative_path": "runs/bridge-coverage-rep-fit-207558/final_trainable.pt",
+    "sha256": "926030039ac9d32634bf193e989a44a5b891882c503cb8b40fd7b5091ac98ed6",
+    "bytes": 529379298
+  },
+  "hard_constraints": {
+    "CLIP_visual_and_text_frozen": true,
+    "diffusion_required": true,
+    "gripper_frozen": true,
+    "final25_closed": true,
+    "original207558_unchanged": true
+  },
+  "difference": {
+    "control": "Original equal patch weights; new score parameters fixed at zero",
+    "candidate": "Only1026 new post-Adapter score parameters learn; same base trainables",
+    "same_new_module_in_both_arms": true,
+    "content_or_coordinate_variants_allowed": false
+  },
+  "planned_formal": {
+    "start": "same207558, zero score port, fresh Adam per arm; no optimizer state guessed",
+    "arms": [
+      "control",
+      "candidate"
+    ],
+    "updates_each": 4096,
+    "batch_size": 8,
+    "learning_rate": 1e-05,
+    "optimizer": "Adam",
+    "weight_decay": 0.0,
+    "gradient_clip": 1.0,
+    "train_mode": "same original model.train(), frozenCLIP.eval()",
+    "original_base_trainables": [
+      "adapter",
+      "diffusion_decoder",
+      "history_projection",
+      "state_projection"
+    ],
+    "input_windows": 1836,
+    "training_episodes": 405,
+    "horizon": 16,
+    "schedule": "Exact original207558 batches4097..8192 reused as a new paired continuation schedule",
+    "context_seed": "430000 + (8192 + update)",
+    "diffusion_seed": "420000 + (8192 + update)",
+    "no_partial_future_or_request_port": true,
+    "final_weights_only": true,
+    "no_selection_or_early_stopping": true,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "sampling_steps": 100,
+    "validation": "Same already-used209481 new10 development episodes/50 original full16 windows, including all start0; NOT a fresh final test",
+    "unchanged_baseline": "Reuse209481 saved original207558 full16 predictions after input/replay checks; no repeat old1836 scoring",
+    "primary": "Episode-equal FIRST target position and rotation, within original full16 outputs",
+    "full16_and_endpoint": "Must not worsen position/rotation versus control and original207558",
+    "admission_gates": [
+      "FIRST target episode-equal position strictly lower than control, original207558 AND no-motion",
+      "FIRST target episode-equal rotation no worse than control, original207558 AND no-motion",
+      "At least6 of the SAME10 episodes have FIRST target position lower than BOTH control and original207558",
+      "Full16 path and endpoint position/rotation episode-equal no worse than BOTH control and original207558",
+      "Window-weighted FIRST target and full16 path position/rotation no worse than BOTH control and original207558"
+    ],
+    "fail": "Retain207558; close this readout branch, no extra seeds/budget/variants/final25 scoring",
+    "pass_decision": "Development candidate only; any final25 assessment is separate and not automatic"
+  },
+  "preflight": {
+    "updates_each": 8,
+    "development_scoring": false,
+    "final25_payload_read": false,
+    "original_replay_windows": [
+      0,
+      32,
+      64,
+      96
+    ],
+    "original_replay_seed": 1101,
+    "context_atol": 0.0001,
+    "prediction_atol": 0.0001,
+    "rtol": 0.0,
+    "second_replay": "Zero initialized new readout through same original full16 sampler",
+    "restore": "Each arm after4 updates: save/reload weights+Adam and compare next calculation",
+    "frozen_parameters": "CLIP and all original nontrainables hash unchanged; no gradients",
+    "new_parameters": "Candidate first gradients finite nonzero; score weights changed. Control zeros unchanged",
+    "peak_reserved_gib_limit": 7.5,
+    "estimated_formal_seconds_limit": 7200,
+    "no_new_encoding": true,
+    "no_new_persistent_weights": true,
+    "no_automatic_formal_submit": true
+  },
+  "schedule_sha256": "3f9c14ec680855202611aa44ca2900986682a97547426c9adb975c6772180d26",
+  "source_provenance": {
+    "frozen/adapter.py": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\frozen\\adapter.py",
+      "sha256": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa"
+    },
+    "frozen/models.py": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\frozen\\models.py",
+      "sha256": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4"
+    },
+    "frozen/diffusion_decoder.py": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\frozen\\diffusion_decoder.py",
+      "sha256": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c"
+    },
+    "frozen/dataset.py": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\frozen\\dataset.py",
+      "sha256": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c"
+    },
+    "frozen/state_input_contract.py": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\frozen\\state_input_contract.py",
+      "sha256": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493"
+    },
+    "bridge_spatial_readout_prototype_v1.py": {
+      "source": "scripts\\bridge_spatial_readout_prototype_v1.py",
+      "sha256": "e22463b833febe3094a3b5b34cd180bfe9d5700c28de3f2500e5454e0852c99e"
+    },
+    "bridge_spatial_readout_interface_v1.py": {
+      "source": "scripts\\bridge_spatial_readout_interface_v1.py",
+      "sha256": "70b2d47ff0c49ddb1a3e54b4d39345cc879399a777dfe9d965bce56dc0ea8b76"
+    },
+    "run_preflight.py": {
+      "source": "scripts\\run_bridge_spatial_preflight_v1.py",
+      "sha256": "be8b668a22f129e45d79bfb0580f40a3d5b7003820db2e0ad681117cdc2520f5"
+    },
+    "bridge_prefix_input_contract_v1.py": {
+      "source": "scripts\\bridge_prefix_input_contract_v1.py",
+      "sha256": "ea55cacb04b60642e041ad28433ff90035b0f674f2895c3eec86ebbf7b7b91fb"
+    },
+    "bridge_partial_future_contract_v1.py": {
+      "source": "scripts\\bridge_partial_future_contract_v1.py",
+      "sha256": "4c22738deeaa2a845d1e914d6444150d8bf386249d4e3b31a2167e3f0ecf1eb1"
+    },
+    "old_rows.json": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\old_rows.json",
+      "sha256": "910174741b0464a472e27c542ece929c874b9edabf13a99d76d52a50d1055ada"
+    },
+    "train_manifest.json": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\train_manifest.json",
+      "sha256": "bcd80954a895580068485f7f665d58b07e179341c8c07c161ec2bc6c0caec0b2"
+    },
+    "state_protocol.json": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\state_protocol.json",
+      "sha256": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82"
+    },
+    "base_protocol.json": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\base_protocol.json",
+      "sha256": "ab71de20c672180223df4497ebe3548f8b1ecbcc9974c86b817b36fa0031989a"
+    },
+    "old_report.json": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\old_report.json",
+      "sha256": "10d13e43d90f2b1d6b1b87a6d64803806a2d383ecf4fdab517646599b786246f"
+    },
+    "input_audit.json": {
+      "source": "cluster_packages\\bridge_prefix_pair_v1\\input_reference\\report.json",
+      "sha256": "6ddae8bfb447f922e2bb3aff60ad05e0ccdb81d01b33555585790db5e1c0f2e8"
+    }
+  },
+  "training_reference": {
+    "relative_path": "runs/bridge-coverage-rep-fit-207558/reduced_u8192_train.npz",
+    "sha256": "61ff5b41bd4102b470db230cae60aad9c0a7d19178d66e9339b7005d0929a7ca"
+  }
+}

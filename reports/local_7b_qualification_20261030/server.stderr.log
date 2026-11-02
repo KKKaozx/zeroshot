@@ -1,0 +1,12 @@
+warn: LLAMA_ARG_OFFLINE environment variable is set, but will be overwritten by command line argument --offline
+0.00.268.428 I srv  llama_server: initializing ...
+0.00.268.436 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.268.706 I srv  init_listene: The UI is disabled
+0.00.268.710 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.268.842 W srv  server_setup: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.272.648 I srv    load_model: loading model 'D:\ntu_related\dissertation\Zero_shot\baselines\qwen25_7b_gguf_assets_20261030\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf'
+0.00.367.995 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.04.159.949 I cmn          init: llama threadpool init, n_threads = 4
+0.05.818.372 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+0.05.822.291 I srv  server_run_i: model loaded
+0.05.822.297 I srv  server_on_li: listening on http://127.0.0.1:50106

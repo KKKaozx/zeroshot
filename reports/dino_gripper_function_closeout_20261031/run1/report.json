@@ -1,0 +1,48 @@
+{
+  "execution_complete": true,
+  "native_steps": 200,
+  "policy_calls": 50,
+  "head_mode": "event_aware",
+  "training_updates": 0,
+  "source_pose_updates": 0,
+  "formal_scoring_admitted": false,
+  "errors": [],
+  "automatic_following_action": false,
+  "policy_metadata": {
+    "head_format": "gripper-event-repair-head-v1",
+    "head_mode": "event_aware",
+    "total_head_updates": 4096,
+    "head_sha256": "7e21315f5de00d34e67cf58f93b3d7fe37184eaf3f0be313b069007dd21e14c2",
+    "offline_head_admitted": false,
+    "paired_selected_head": null,
+    "explicit_unadmitted_engineering_mode": true,
+    "formal_scoring_admitted": false,
+    "original_receipt_not_rewritten": true,
+    "source_pose_sha256": "730f06ecb417ff98d7e5270c114c2b062ce38347f0987c136b9d0359e8c4a6f5",
+    "source_pose_updated": false,
+    "source_state_port_width": 9,
+    "source_current_semantics": "measured continuous opening2*x-1",
+    "online_context_not_claimed_bitwise_equal_to_archived_A6000_cache": true,
+    "physical_mapping_calibrated": false
+  },
+  "stop_reason": "200ticks_or50calls",
+  "native_goal_final": false,
+  "native_goal_components_final": [
+    {
+      "predicate": [
+        "close",
+        "wooden_cabinet_1_top_region"
+      ],
+      "value": false
+    },
+    {
+      "predicate": [
+        "on",
+        "akita_black_bowl_1",
+        "wooden_cabinet_1_top_side"
+      ],
+      "value": false
+    }
+  ],
+  "elapsed_seconds": 74.9210000000021
+}

@@ -1,0 +1,729 @@
+{
+  "job": 209481,
+  "date": "2026-10-18",
+  "saved_arrays_only": true,
+  "GPU_used": false,
+  "model_loaded": false,
+  "weights_available_locally": false,
+  "training_or_inference_executed": false,
+  "raw_dataset_read": false,
+  "final25_payloads_read": false,
+  "episodes": 10,
+  "windows": 50,
+  "source_sha256": {
+    "candidate_full16.npz": "aab9006ad28993419baf8e3dbe8f148850355aa7d85e2b38f87a81e16d083e88",
+    "candidate_K1_auxiliary.npz": "9b472d9738e78d03fee3ec5ea7ab90b242523a3a522f9d0206d75450f34d180a",
+    "candidate_losses.npz": "4fb5b2e9119c65b883d42fa37556bbfd75a9597c071750f4e74bfb381ff281f6",
+    "control_full16.npz": "0c093a64d708befa187106ecdeb04c6d507c17c7af3c09f64968f21afecd98f8",
+    "control_K1_auxiliary.npz": "1b22d8549d3e945c8794c8e6cab6205ea7653ccf601312ef57beca58df3d055e",
+    "control_losses.npz": "fdcf13516406ec9703c4ccd8655fb0f63f9a605c7de1f5cf6b95174146c8b2f8",
+    "report.json": "95aea3f7ef9f56432bcfab5d84bdb336eb5bf14238c1adf9bbe6f2b78c5cff16",
+    "unchanged207558_full16.npz": "d8b4a5e1070baf68fd4df0d44b16288c6d5e6b709b74b69c96038ed555c27b96",
+    "validation_inputs.npz": "9674850ad4056a07d3563b3ba4703a9554724b0583e71800fa21a757ab35d59d",
+    "validation_rows.json": "37e0642e0be6a21fc85f254966c6d60e1da4c21aa6b50965e5c64469cfd64cb6"
+  },
+  "maximum_recomputed_summary_difference": 1.0658141036401503e-14,
+  "weighting": "episode-equal; window-weighted also saved",
+  "summaries": {
+    "unchanged207558": {
+      "first1": {
+        "position_cm": 1.4461413906408727,
+        "rotation_deg": 2.7740070772762415,
+        "window_position_cm": 1.4593890117570956,
+        "window_rotation_deg": 2.803286982972739
+      },
+      "first4": {
+        "position_cm": 3.2686223371424568,
+        "rotation_deg": 6.159821903571808,
+        "window_position_cm": 3.318150221636552,
+        "window_rotation_deg": 6.2962860712449125
+      },
+      "full16": {
+        "position_cm": 5.986335115116556,
+        "rotation_deg": 13.78152965127272,
+        "window_position_cm": 6.279517528011914,
+        "window_rotation_deg": 14.42699682461321
+      },
+      "target16": {
+        "position_cm": 7.523540816140809,
+        "rotation_deg": 18.70876586335695,
+        "window_position_cm": 7.93917780450926,
+        "window_rotation_deg": 19.77543145843057
+      }
+    },
+    "control": {
+      "first1": {
+        "position_cm": 1.5940030593503767,
+        "rotation_deg": 2.7093936217912638,
+        "window_position_cm": 1.6120468553713614,
+        "window_rotation_deg": 2.7420042311596715
+      },
+      "first4": {
+        "position_cm": 3.478086354022617,
+        "rotation_deg": 6.188544430895281,
+        "window_position_cm": 3.547732172658216,
+        "window_rotation_deg": 6.315682199377046
+      },
+      "full16": {
+        "position_cm": 6.3061310402476325,
+        "rotation_deg": 13.922042664182179,
+        "window_position_cm": 6.558715938178495,
+        "window_rotation_deg": 14.614622766212424
+      },
+      "target16": {
+        "position_cm": 7.728660128444417,
+        "rotation_deg": 18.246329426718635,
+        "window_position_cm": 8.150560640607269,
+        "window_rotation_deg": 19.55623989222874
+      }
+    },
+    "candidate": {
+      "first1": {
+        "position_cm": 1.6011576763371826,
+        "rotation_deg": 2.7058149281643105,
+        "window_position_cm": 1.6482395307096036,
+        "window_rotation_deg": 2.690033960773148
+      },
+      "first4": {
+        "position_cm": 3.514964650596427,
+        "rotation_deg": 6.2043298312446415,
+        "window_position_cm": 3.637808264558695,
+        "window_rotation_deg": 6.306840230466863
+      },
+      "full16": {
+        "position_cm": 6.2399779684299075,
+        "rotation_deg": 13.66464454560583,
+        "window_position_cm": 6.519368914462435,
+        "window_rotation_deg": 14.276486365561528
+      },
+      "target16": {
+        "position_cm": 7.724863487369365,
+        "rotation_deg": 17.823151139842043,
+        "window_position_cm": 8.135061040060727,
+        "window_rotation_deg": 18.94840322319921
+      }
+    },
+    "static": {
+      "first1": {
+        "position_cm": 1.2268812930144994,
+        "rotation_deg": 2.4400986199536856,
+        "window_position_cm": 1.2558183317226936,
+        "window_rotation_deg": 2.418838109412536
+      },
+      "first4": {
+        "position_cm": 3.133200993597063,
+        "rotation_deg": 6.266228956772219,
+        "window_position_cm": 3.1528252005237727,
+        "window_rotation_deg": 6.130066263263139
+      },
+      "full16": {
+        "position_cm": 8.110599583259136,
+        "rotation_deg": 15.517002139750979,
+        "window_position_cm": 8.174173799807065,
+        "window_rotation_deg": 15.375872587978561
+      },
+      "target16": {
+        "position_cm": 11.516271535829054,
+        "rotation_deg": 21.91093577780961,
+        "window_position_cm": 11.694220678005957,
+        "window_rotation_deg": 22.183206057951384
+      }
+    }
+  },
+  "per_target": {
+    "unchanged207558": {
+      "position_cm": [
+        1.4461413906408727,
+        2.8044306879670295,
+        3.941132500684128,
+        4.882784769277795,
+        5.493422369860693,
+        6.0243134726789975,
+        6.271325550030613,
+        6.625829637875945,
+        6.848680015022276,
+        7.12174416006336,
+        7.313943615999361,
+        7.328024366106539,
+        7.3015007048004605,
+        7.383852289591387,
+        7.470695495124633,
+        7.523540816140809
+      ],
+      "rotation_deg": [
+        2.7740070772762415,
+        5.282193281103058,
+        7.367119557030068,
+        9.215967698877863,
+        11.002817946278137,
+        12.77789133423439,
+        14.131684830156955,
+        15.106818834087123,
+        16.21920129465545,
+        17.01116135734636,
+        17.827849877799846,
+        18.215295615465507,
+        18.37976937541635,
+        18.243303498266904,
+        18.240626979012326,
+        18.70876586335695
+      ]
+    },
+    "control": {
+      "position_cm": [
+        1.5940030593503767,
+        2.9292847071096766,
+        4.168065583109787,
+        5.220992066520629,
+        5.939871488766116,
+        6.633518931016712,
+        6.875528666641497,
+        7.193842765724601,
+        7.266627032642297,
+        7.451618743334944,
+        7.537425871072824,
+        7.49860925303429,
+        7.4754433731716405,
+        7.640469135497161,
+        7.744135838525174,
+        7.728660128444417
+      ],
+      "rotation_deg": [
+        2.7093936217912638,
+        5.235192816261326,
+        7.307892640069995,
+        9.50169864545854,
+        11.15901370779685,
+        13.180891983832401,
+        14.393637480747367,
+        15.445484633933072,
+        16.3329501135409,
+        17.279661553591318,
+        18.18516287871674,
+        18.44796820088919,
+        18.606265866418536,
+        18.474982117435733,
+        18.24615693971298,
+        18.246329426718635
+      ]
+    },
+    "candidate": {
+      "position_cm": [
+        1.6011576763371826,
+        2.9788678109715057,
+        4.269339165314172,
+        5.210493949762847,
+        5.9135888036195565,
+        6.481399784541381,
+        6.7336732844128235,
+        6.975911121867046,
+        7.105845027586544,
+        7.289026150729762,
+        7.442342497763899,
+        7.396516084827208,
+        7.427883054252141,
+        7.584377848442326,
+        7.704361747080753,
+        7.724863487369365
+      ],
+      "rotation_deg": [
+        2.7058149281643105,
+        5.310400239655656,
+        7.317722564598469,
+        9.483381592560123,
+        11.146130801410663,
+        13.074485315073934,
+        14.184084745314044,
+        15.12067064005344,
+        16.017423921449446,
+        16.862204703222286,
+        17.696165845733734,
+        17.95051332369751,
+        18.133875355518096,
+        17.995264160987613,
+        17.813023452411876,
+        17.823151139842043
+      ]
+    },
+    "static": {
+      "position_cm": [
+        1.2268812930144994,
+        2.6084255953445257,
+        3.739310827183267,
+        4.95818625884596,
+        6.059295172326514,
+        7.11446984512919,
+        8.049579625350825,
+        8.855242219994004,
+        9.566845126553629,
+        10.143936641773115,
+        10.730052859042328,
+        11.062688739497853,
+        11.256523264422317,
+        11.376336426737728,
+        11.50554790110136,
+        11.516271535829054
+      ],
+      "rotation_deg": [
+        2.4400986199536856,
+        5.1750124389858065,
+        7.584360775415389,
+        9.865443992733994,
+        12.037959951503868,
+        13.989493606002704,
+        15.707894762399745,
+        17.110221050392806,
+        18.339765715137236,
+        19.25387933952525,
+        20.2328683650632,
+        20.948321869102397,
+        21.33718651617717,
+        21.290326766438625,
+        21.048264689374168,
+        21.91093577780961
+      ]
+    }
+  },
+  "original_vs_static_episode_wins": {
+    "position": 8,
+    "rotation": 6,
+    "both": 5
+  },
+  "original_vs_static_task_wins": {
+    "position": 5,
+    "rotation": 3,
+    "both": 3
+  },
+  "candidate_vs_original_episode_wins": {
+    "position": 5,
+    "rotation": 4,
+    "both": 2
+  },
+  "motion_diagnostics": {
+    "unchanged207558": {
+      "first1": {
+        "mean_predicted_displacement_cm": 1.0387493749459547,
+        "mean_true_displacement_cm": 1.2268812930144997,
+        "signed_tool_axis_residual_cm": [
+          -0.12305314964422803,
+          0.31562926530144375,
+          0.25621820304724374
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          0.5337096584598839,
+          0.7637056699972568,
+          0.8493357230429511
+        ],
+        "position_RMSE_cm": 1.7697606571295115,
+        "squared_position_error_cm2": 3.1320527835234806,
+        "sampling_spread_cm2": 0.4688809252450807,
+        "sampling_spread_fraction": 0.14970403044025377,
+        "seed_mean_position_error_cm2": 2.6631718582783996,
+        "global_tool_offset_squared_error_fraction": 0.05760173623954509,
+        "direction_eligible_weight": 0.9708333333333333,
+        "direction_eligible_observations": 144,
+        "direction_cosine": 0.19674727058522068,
+        "opposite_direction_fraction": 0.41373390557939915
+      },
+      "first4": {
+        "mean_predicted_displacement_cm": 2.953060938905575,
+        "mean_true_displacement_cm": 3.133200993597063,
+        "signed_tool_axis_residual_cm": [
+          -0.44138934515510514,
+          0.8537636292824066,
+          0.6022409124157612
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          1.380103021243187,
+          1.7154696858575944,
+          1.7413083111926868
+        ],
+        "position_RMSE_cm": 4.194383964510263,
+        "squared_position_error_cm2": 17.59285684174083,
+        "sampling_spread_cm2": 3.0132386551058166,
+        "sampling_spread_fraction": 0.17127625616532066,
+        "seed_mean_position_error_cm2": 14.579618186635006,
+        "global_tool_offset_squared_error_fraction": 0.07312234828382734,
+        "direction_eligible_weight": 0.9927083333333337,
+        "direction_eligible_observations": 594,
+        "direction_cosine": 0.3575417908844752,
+        "opposite_direction_fraction": 0.29171038824763895
+      },
+      "full16": {
+        "mean_predicted_displacement_cm": 7.630041775780796,
+        "mean_true_displacement_cm": 8.110599583259134,
+        "signed_tool_axis_residual_cm": [
+          -0.5373894458645762,
+          0.8840887828482108,
+          0.8895925209668757
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          3.106124839495879,
+          3.363065401580151,
+          2.419030382348818
+        ],
+        "position_RMSE_cm": 7.465329109016714,
+        "squared_position_error_cm2": 55.731138705932295,
+        "sampling_spread_cm2": 9.79965868268272,
+        "sampling_spread_fraction": 0.1758381204875614,
+        "seed_mean_position_error_cm2": 45.93148002324957,
+        "global_tool_offset_squared_error_fraction": 0.03340637369117117,
+        "direction_eligible_weight": 0.9981770833333337,
+        "direction_eligible_observations": 2394,
+        "direction_cosine": 0.5974462129565361,
+        "opposite_direction_fraction": 0.14688233759457342
+      },
+      "target16": {
+        "mean_predicted_displacement_cm": 10.504918869135304,
+        "mean_true_displacement_cm": 11.516271535829055,
+        "signed_tool_axis_residual_cm": [
+          -0.271490294156946,
+          0.16945732964668414,
+          0.39141087234925687
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          4.1509173069503555,
+          4.1711352740957715,
+          2.929604788914892
+        ],
+        "position_RMSE_cm": 8.809398784428138,
+        "squared_position_error_cm2": 77.60550694308397,
+        "sampling_spread_cm2": 13.871987519433011,
+        "sampling_spread_fraction": 0.17875004063315705,
+        "seed_mean_position_error_cm2": 63.73351942365095,
+        "global_tool_offset_squared_error_fraction": 0.0032939059024908158,
+        "direction_eligible_weight": 1.0,
+        "direction_eligible_observations": 150,
+        "direction_cosine": 0.7282389623196242,
+        "opposite_direction_fraction": 0.08027777777777777
+      }
+    },
+    "control": {
+      "first1": {
+        "mean_predicted_displacement_cm": 1.3800532263448229,
+        "mean_true_displacement_cm": 1.2268812930144997,
+        "signed_tool_axis_residual_cm": [
+          -0.19584602652794278,
+          0.5432961992291288,
+          0.08638762147328029
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          0.6289354665463988,
+          0.8451882451894764,
+          0.9019183989538812
+        ],
+        "position_RMSE_cm": 1.8250150022485283,
+        "squared_position_error_cm2": 3.3306797584321957,
+        "sampling_spread_cm2": 0.39756023253328504,
+        "sampling_spread_fraction": 0.1193630914310486,
+        "seed_mean_position_error_cm2": 2.9331195258989107,
+        "global_tool_offset_squared_error_fraction": 0.10237827473029729,
+        "direction_eligible_weight": 0.9708333333333333,
+        "direction_eligible_observations": 144,
+        "direction_cosine": 0.18187781973299988,
+        "opposite_direction_fraction": 0.3836909871244636
+      },
+      "first4": {
+        "mean_predicted_displacement_cm": 3.42873569186216,
+        "mean_true_displacement_cm": 3.133200993597063,
+        "signed_tool_axis_residual_cm": [
+          -0.28817604914140954,
+          1.4860522262197262,
+          0.3423966202575697
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          1.3459288156018223,
+          2.0831436212541425,
+          1.6506374639940924
+        ],
+        "position_RMSE_cm": 4.341716665440815,
+        "squared_position_error_cm2": 18.850503602966516,
+        "sampling_spread_cm2": 1.8922294869467933,
+        "sampling_spread_fraction": 0.10038084535041344,
+        "seed_mean_position_error_cm2": 16.958274116019723,
+        "global_tool_offset_squared_error_fraction": 0.1277754775493698,
+        "direction_eligible_weight": 0.9927083333333337,
+        "direction_eligible_observations": 594,
+        "direction_cosine": 0.33362333882435413,
+        "opposite_direction_fraction": 0.2900314795383
+      },
+      "full16": {
+        "mean_predicted_displacement_cm": 8.519626115361522,
+        "mean_true_displacement_cm": 8.110599583259134,
+        "signed_tool_axis_residual_cm": [
+          -0.08339331235357028,
+          2.103989648144938,
+          0.9083970159595389
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          2.8382783762044403,
+          3.8727474784145115,
+          2.517889501362347
+        ],
+        "position_RMSE_cm": 7.950280941490301,
+        "squared_position_error_cm2": 63.2069670486239,
+        "sampling_spread_cm2": 5.2851018769264595,
+        "sampling_spread_fraction": 0.08361581204902195,
+        "seed_mean_position_error_cm2": 57.92186517169743,
+        "global_tool_offset_squared_error_fraction": 0.0832014612978499,
+        "direction_eligible_weight": 0.9981770833333337,
+        "direction_eligible_observations": 2394,
+        "direction_cosine": 0.579423571976893,
+        "opposite_direction_fraction": 0.16124880424384724
+      },
+      "target16": {
+        "mean_predicted_displacement_cm": 11.73900993273864,
+        "mean_true_displacement_cm": 11.516271535829055,
+        "signed_tool_axis_residual_cm": [
+          0.2941875607208607,
+          1.0087426151409293,
+          0.8806272341455851
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          4.135818555147206,
+          4.113997027293631,
+          3.166285995745825
+        ],
+        "position_RMSE_cm": 8.98507443119293,
+        "squared_position_error_cm2": 80.73156253407696,
+        "sampling_spread_cm2": 9.422233753112918,
+        "sampling_spread_fraction": 0.11671065760848831,
+        "seed_mean_position_error_cm2": 71.30932878096405,
+        "global_tool_offset_squared_error_fraction": 0.02328224861509111,
+        "direction_eligible_weight": 1.0,
+        "direction_eligible_observations": 150,
+        "direction_cosine": 0.7451368407974183,
+        "opposite_direction_fraction": 0.04583333333333334
+      }
+    },
+    "candidate": {
+      "first1": {
+        "mean_predicted_displacement_cm": 1.3483211073453243,
+        "mean_true_displacement_cm": 1.2268812930144997,
+        "signed_tool_axis_residual_cm": [
+          -0.2591601756892892,
+          0.5103848538286304,
+          0.11591815739149447
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          0.6157514784388088,
+          0.8378360834796492,
+          0.9228676561615986
+        ],
+        "position_RMSE_cm": 1.8521524952968216,
+        "squared_position_error_cm2": 3.4304688658342424,
+        "sampling_spread_cm2": 0.43614255223463405,
+        "sampling_spread_fraction": 0.12713788385558492,
+        "seed_mean_position_error_cm2": 2.994326313599608,
+        "global_tool_offset_squared_error_fraction": 0.09943064001866862,
+        "direction_eligible_weight": 0.9708333333333333,
+        "direction_eligible_observations": 144,
+        "direction_cosine": 0.12212761240260765,
+        "opposite_direction_fraction": 0.4103004291845493
+      },
+      "first4": {
+        "mean_predicted_displacement_cm": 3.449467167920297,
+        "mean_true_displacement_cm": 3.133200993597063,
+        "signed_tool_axis_residual_cm": [
+          -0.29380096612955336,
+          1.395448033915798,
+          0.21590559024937062
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          1.3796590447014951,
+          2.0468071546108253,
+          1.716177192727642
+        ],
+        "position_RMSE_cm": 4.36715133797868,
+        "squared_position_error_cm2": 19.072010808808976,
+        "sampling_spread_cm2": 2.2807601694826416,
+        "sampling_spread_fraction": 0.11958676997127145,
+        "seed_mean_position_error_cm2": 16.791250639326336,
+        "global_tool_offset_squared_error_fraction": 0.10907132277831175,
+        "direction_eligible_weight": 0.9927083333333337,
+        "direction_eligible_observations": 594,
+        "direction_cosine": 0.313632873466393,
+        "opposite_direction_fraction": 0.30332284015389976
+      },
+      "full16": {
+        "mean_predicted_displacement_cm": 8.499400925407317,
+        "mean_true_displacement_cm": 8.110599583259134,
+        "signed_tool_axis_residual_cm": [
+          -0.13240534653333122,
+          1.8029577439105449,
+          0.47781270851170254
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          2.9056325315160567,
+          3.764598242130104,
+          2.4620131096397206
+        ],
+        "position_RMSE_cm": 7.809177863573893,
+        "squared_position_error_cm2": 60.98325890493251,
+        "sampling_spread_cm2": 5.877809409415991,
+        "sampling_spread_fraction": 0.09638398332530858,
+        "seed_mean_position_error_cm2": 55.105449495516524,
+        "global_tool_offset_squared_error_fraction": 0.05733528921410423,
+        "direction_eligible_weight": 0.9981770833333337,
+        "direction_eligible_observations": 2394,
+        "direction_cosine": 0.5832181270554331,
+        "opposite_direction_fraction": 0.15509174710844414
+      },
+      "target16": {
+        "mean_predicted_displacement_cm": 11.826345270367128,
+        "mean_true_displacement_cm": 11.516271535829055,
+        "signed_tool_axis_residual_cm": [
+          0.13256659290184167,
+          0.6906177415926423,
+          0.6226453047953933
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          4.230351028914771,
+          4.087378947405765,
+          3.109361135916616
+        ],
+        "position_RMSE_cm": 8.959356023313575,
+        "squared_position_error_cm2": 80.27006035248523,
+        "sampling_spread_cm2": 10.477048529120546,
+        "sampling_spread_fraction": 0.13052249472734037,
+        "seed_mean_position_error_cm2": 69.79301182336468,
+        "global_tool_offset_squared_error_fraction": 0.010990572802186243,
+        "direction_eligible_weight": 1.0,
+        "direction_eligible_observations": 150,
+        "direction_cosine": 0.7459666359460075,
+        "opposite_direction_fraction": 0.04027777777777778
+      }
+    },
+    "static": {
+      "first1": {
+        "mean_predicted_displacement_cm": 0.0,
+        "mean_true_displacement_cm": 1.2268812930144997,
+        "signed_tool_axis_residual_cm": [
+          -0.08199611610907598,
+          0.047761168590174444,
+          0.23013268103209156
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          0.42572421536412247,
+          0.6644204715584541,
+          0.7065405047171984
+        ],
+        "position_RMSE_cm": 1.5768419608489985,
+        "squared_position_error_cm2": 2.4864305694941145,
+        "sampling_spread_cm2": 0.0,
+        "sampling_spread_fraction": 0.0,
+        "seed_mean_position_error_cm2": 2.4864305694941145,
+        "global_tool_offset_squared_error_fraction": 0.024921485410187,
+        "direction_eligible_weight": 0.0,
+        "direction_eligible_observations": 0,
+        "direction_cosine": null,
+        "opposite_direction_fraction": null
+      },
+      "first4": {
+        "mean_predicted_displacement_cm": 0.0,
+        "mean_true_displacement_cm": 3.133200993597063,
+        "signed_tool_axis_residual_cm": [
+          -0.22794295644392454,
+          0.053705965648805434,
+          0.6622827257116228
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          1.0903081670871568,
+          1.72031237826468,
+          1.7414171155251894
+        ],
+        "position_RMSE_cm": 4.048043739266779,
+        "squared_position_error_cm2": 16.38665811501697,
+        "sampling_spread_cm2": 0.0,
+        "sampling_spread_fraction": 0.0,
+        "seed_mean_position_error_cm2": 16.38665811501697,
+        "global_tool_offset_squared_error_fraction": 0.030113567235681184,
+        "direction_eligible_weight": 0.0,
+        "direction_eligible_observations": 0,
+        "direction_cosine": null,
+        "opposite_direction_fraction": null
+      },
+      "full16": {
+        "mean_predicted_displacement_cm": 0.0,
+        "mean_true_displacement_cm": 8.110599583259134,
+        "signed_tool_axis_residual_cm": [
+          -0.1707412313270349,
+          -0.702672953147991,
+          1.548555296105507
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          3.143711399360776,
+          4.9060282953183405,
+          3.90037736456266
+        ],
+        "position_RMSE_cm": 9.786837324138974,
+        "squared_position_error_cm2": 95.7821848091597,
+        "sampling_spread_cm2": 0.0,
+        "sampling_spread_fraction": 0.0,
+        "seed_mean_position_error_cm2": 95.7821848091597,
+        "global_tool_offset_squared_error_fraction": 0.030495497237581028,
+        "direction_eligible_weight": 0.0,
+        "direction_eligible_observations": 0,
+        "direction_cosine": null,
+        "opposite_direction_fraction": null
+      },
+      "target16": {
+        "mean_predicted_displacement_cm": 0.0,
+        "mean_true_displacement_cm": 11.516271535829055,
+        "signed_tool_axis_residual_cm": [
+          -0.17992283886608984,
+          -1.593488949164748,
+          1.7490063038344186
+        ],
+        "tool_axis_mean_absolute_error_cm": [
+          4.57241894067265,
+          6.9676658440381285,
+          5.715129277917246
+        ],
+        "position_RMSE_cm": 12.57376564193987,
+        "squared_position_error_cm2": 158.09958241842753,
+        "sampling_spread_cm2": 0.0,
+        "sampling_spread_fraction": 0.0,
+        "seed_mean_position_error_cm2": 158.09958241842753,
+        "global_tool_offset_squared_error_fraction": 0.03561427692456737,
+        "direction_eligible_weight": 0.0,
+        "direction_eligible_observations": 0,
+        "direction_cosine": null,
+        "opposite_direction_fraction": null
+      }
+    }
+  },
+  "K1_auxiliary": {
+    "control": {
+      "position_cm": 1.285247362425921,
+      "rotation_deg": 2.438239009428428
+    },
+    "candidate": {
+      "position_cm": 1.3430724892130979,
+      "rotation_deg": 2.5428791679190965
+    }
+  },
+  "adoption_unchanged": {
+    "gates": {
+      "episode_position_better_than_all": false,
+      "episode_rotation_no_worse_than_all": true,
+      "same_at_least_six_episodes_improve_both": false,
+      "window_position_and_rotation_no_worse": false
+    },
+    "jointly_improved_episode_ids": [
+      "bridge_data_v2-train.tfrecord-00870-of-01024::56",
+      "bridge_data_v2-train.tfrecord-00844-of-01024::16",
+      "bridge_data_v2-train.tfrecord-00732-of-01024::16"
+    ],
+    "development_admission_passed": false,
+    "decision": "Retain207558 and close this branch; no extra budget/seeds or final25 access."
+  },
+  "caveats": [
+    "No new independent test: these10 are consumed development data.",
+    "Target index is future horizon, not a semantic grasp/release phase.",
+    "Jointly predicted relative poses: increasing horizon error is not evidence of recursive integration drift.",
+    "Signed residuals are in each input tool frame; no world-camera calibration inferred.",
+    "Mean-prediction/spread decomposition is descriptive, not a deployed ensemble, refit or improvement verdict.",
+    "Three sampling seeds are not three training seeds; no causal root-cause proof from residuals."
+  ]
+}

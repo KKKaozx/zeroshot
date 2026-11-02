@@ -1,0 +1,43 @@
+{
+  "local_source_and_import_checks_passed": true,
+  "python_files_compiled": 23,
+  "core_inherited_hashes_match_old": true,
+  "original_a6000_bundle_unchanged": true,
+  "shared_real_input_loader_ast_unchanged": true,
+  "context_training_and_metric_nested_functions_ast_unchanged": true,
+  "correct_frozen_import_paths": true,
+  "synthetic_guard_cases": [
+    {
+      "name": "source_good",
+      "passed": true
+    },
+    {
+      "name": "source_bad_helper",
+      "passed": true
+    },
+    {
+      "name": "source_bad_initial",
+      "passed": true
+    },
+    {
+      "name": "source_not_passed",
+      "passed": true
+    },
+    {
+      "name": "reject_different_gpu_allocation",
+      "passed": true
+    },
+    {
+      "name": "reject_different_initial_weights",
+      "passed": true
+    }
+  ],
+  "synthetic_same_prediction_pair_zero_difference": true,
+  "shell_lf_only": true,
+  "bash_not_executed": true,
+  "real_models_loaded": 0,
+  "model_forward_calls": 0,
+  "optimizer_updates": 0,
+  "cluster_submitted": false,
+  "scope": "Local code/import/saved-prediction/synthetic guard checks; not an actual A40 result"
+}

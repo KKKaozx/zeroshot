@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-22",
+  "evidence": [
+    {
+      "part": "Data/splits/train-only normalization",
+      "status": "checked_in_existing_paths",
+      "finding": "Native and project use the same90 episodes,10726 windows,11356 frames and training-only statistics.",
+      "limit": "Does not certify all datasets or exclude distribution differences in unexamined cases.",
+      "action": "Do not rerun generic preprocessing checks."
+    },
+    {
+      "part": "Diffusion loss/schedule and U-Net conditioning",
+      "status": "checked_in_existing_paths",
+      "finding": "Pinned author epsilon loss and DDPM100 are used; conditioning already reaches down/mid/up FiLM blocks.",
+      "limit": "Correct interfaces do not imply the denoiser has learned accurate conditional actions.",
+      "action": "Do not propose adding already-present multilevel FiLM."
+    },
+    {
+      "part": "Cached CLIP versus live CLIP, freezing, EMA/restoration",
+      "status": "checked_in_existing_paths",
+      "finding": "Reference replay, frozen weights, live wiring and complete restore were checked in existing jobs.",
+      "limit": "Not an unconditional proof that every future entry is correct.",
+      "action": "Reuse pinned code and existing evidence, do not repeat qualification without a change."
+    },
+    {
+      "part": "Whole frontend",
+      "status": "performance_gap_observed",
+      "finding": "Native mean reward0.845878 versus project0.445488 on the same reused development20.",
+      "limit": "One source training seed; includes encoder/preprocessing/Adapter/readout/projection differences.",
+      "action": "Keep whole frontend as priority, do not claim a unique defective module."
+    },
+    {
+      "part": "Frozen CLIP spatial representation",
+      "status": "spatial_information_accessible_under_probe",
+      "finding": "CLIP spatial readout17.10px block-position error; shuffled-label74.23px and mean72.47px.",
+      "limit": "Linear accessibility is not sufficient evidence of a good control representation.",
+      "action": "Keep CLIP frozen; do not say it has no spatial information."
+    },
+    {
+      "part": "Adapter transformation and pooling/projection",
+      "status": "suspected_not_causally_isolated",
+      "finding": "Matched4096-dimensional readout worsens after Adapter8 on38/40 position and36/40 angle episodes.",
+      "limit": "May reflect nonlinear re-encoding; output64 dimensions alone are not proof of a bottleneck.",
+      "action": "Separate representation probes from actual action-prediction evidence."
+    },
+    {
+      "part": "Raw CLIP spatial-moment bypass217820",
+      "status": "closed_negative_policy_result",
+      "finding": "Spatial0.390775 versus global0.281801; unchanged source0.445488; adoption failed.",
+      "limit": "Both new groups resumed training; no unchanged continuation group. No conclusion about all spatial methods.",
+      "action": "No extra seeds, budgets, variants or final50 access for this branch."
+    },
+    {
+      "part": "Frozen trained endpoints: train versus unseen-demo action prediction",
+      "status": "evidence_gap_in_reviewed_pusht_records",
+      "finding": "Existing spatial probes measure state readout, and rollouts measure closed-loop reward; neither supplies this matched action diagnostic.",
+      "limit": "Earlier Bridge small-sample fitting is a different dataset and does not fill the Push-T gap.",
+      "action": "One bounded read-only endpoint diagnostic; no optimization or retraining."
+    }
+  ],
+  "source_sha256": {
+    "reports/pusht_project_endpoint_analysis_20261021/report.json": "f52b76b739d9fd3853a600cb9864e537887614688e4f80ec4e533401dc1aa971",
+    "reports/pusht_spatial_analysis_217660_20261021/report.json": "51ff11e9e19aabee7b269b73ace01d287fcd83bb46252429c7456876b7243317",
+    "reports/pusht_bypass_analysis_217820_20261022/report.json": "d4cfdfe790d06c7c0339e75b661cecfca01368619c6ac75cf2056163e2d6a572",
+    "docs/TEACHER_EMAIL6_PRIORITIES_20261020.md": "c266a7fa566db6bbd50ba610fca1521646db0bd38026c45ddc5d902c34c91520",
+    "docs/DIFFUSION_CODE_AUDIT_20261009.md": "df9b238dec835f8884172abe77b91543a88659932253e8ca377472dae06793d5",
+    "reports/pusht_float_data_210690.json": "c6f4f8f2e1e2de7118c92f497f3ad49d2a51031d5ec52895cb6031104bc49879",
+    "scripts/cluster/pusht_spatial_diagnostic_v1/protocol.json": "a01b0b0b8cbe1527c7001969a12505d7e1ba251b245c26d1a3d3e58db1590b62",
+    "scripts/cluster/pusht_project_training_v1/project_frontend.py": "fe2670da5542fb61753aa1851d77eef06ad8c76ffce43d7e7c74339bf6501441",
+    "scripts/cluster/pusht_project_training_v1/frozen_adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa"
+  },
+  "next_diagnostic": {
+    "stage": "design_only_not_an_executable_cluster_package",
+    "goal": "Distinguish endpoint action learning and unseen-demonstration mismatch before changing modules",
+    "checkpoints": {
+      "native212158": "runs/pusht-native84k-212158/latest.pt",
+      "project215999": "runs/pusht-project-part2-215999/latest.pt"
+    },
+    "endpoint_updates": 84168,
+    "selection": "Fixed endpoint EMA, eval mode, all parameters frozen",
+    "clip_frozen": true,
+    "new_training_updates": 0,
+    "new_policy_rollouts": 0,
+    "final50_access": false,
+    "selected_episode_ids": {
+      "train": [
+        16,
+        27,
+        42,
+        56,
+        65,
+        81,
+        84,
+        128,
+        131,
+        156,
+        166,
+        170,
+        174,
+        179,
+        184,
+        194
+      ],
+      "unseen_demo": [
+        15,
+        23,
+        39,
+        45,
+        62,
+        64,
+        87,
+        88,
+        92,
+        107,
+        127,
+        152,
+        164,
+        180,
+        204,
+        205
+      ]
+    },
+    "selection_rule": "16 per role by deterministic SHA256, only from existing diagnostic90/40 roles; no labels or rewards used for selection",
+    "windows": {
+      "per_episode": 2,
+      "total": 64,
+      "training": 32,
+      "unseen_demo": 32,
+      "rule": "Within each selected episode generate the existing author create_indices(horizon16,pad_before1,pad_after7) rows; select zero-based ranks floor(n/3) and floor(2*n/3). Require n>=3 and distinct rows; otherwise stop, do not substitute episodes.",
+      "exact_window_manifest_status": "Not yet generated from server episode_ends; this is an episode selection and row rule only"
+    },
+    "primary_readouts": [
+      "Generated action-coordinate L2 error in simulation pixels for full16 and executed8, equal episode weighting",
+      "No-motion baseline repeats current agent position; separate training-only mean-action baseline",
+      "Fixed two matched sampling seeds1001/1002; report separately and averaged, never best-of-seed"
+    ],
+    "execution_slice": "Original author start=n_obs_steps-1=1, end=9; align labels to same indices",
+    "secondary_readouts": {
+      "type": "Forward-noised expert-action epsilon MSE, matched noise/time for both frozen policies",
+      "timesteps": [
+        0,
+        49,
+        99
+      ],
+      "purpose": "Separate supervised denoising from free reverse-chain behavior; cannot substitute for generation"
+    },
+    "output_requirements": [
+      "Exact episode/window/frame manifest, checkpoint/protocol hashes",
+      "Per-window/per-seed predictions and expert targets, valid/padding and executed-slice metadata",
+      "Per-role/per-episode action metrics and same-window native-project differences",
+      "Representative original-context replay using existing saved reference where available, no repeated full qualification"
+    ],
+    "engineering_budget": {
+      "gpu_job_wall_time_limit_minutes": 30,
+      "measured_runtime_available": false,
+      "execution": "Serial endpoint loading, reuse fixed CLIP worker/cache; no new cache of trainable modules",
+      "if_limit_or_memory_failure": "Mark incomplete and preserve partial artifacts; do not interpret timeout as a model failure or automatically extend/retry"
+    },
+    "interpretation": {
+      "project_poor_on_train": "Prioritize conditional action learning/optimization/front-end usability, not merely unseen-data overfitting",
+      "project_good_on_train_but_unseen_gap": "Prioritize representation reliance and distribution coverage/generalization",
+      "both_similar_on_expert_windows_but_rollout_gap": "Prioritize evidence about off-expert inputs and accumulated closed-loop errors; offline similarity alone cannot establish equivalence",
+      "multimodality": "A different action trajectory may also succeed; expert-coordinate error is diagnostic, not a task success metric",
+      "short_check": "Not a new policy improvement verdict; no threshold relaxed or formal run automatically triggered"
+    },
+    "cluster_package_ready": false,
+    "cluster_job_submitted": false,
+    "exclusions": [
+      "No further bypass217820 variant",
+      "No schedule/normalization/cache consistency reruns without a changed path",
+      "No new backbone, no CLIP unfreezing",
+      "No new fitting sweep",
+      "No final-scene access"
+    ]
+  },
+  "new_model_execution": false,
+  "new_training": false,
+  "new_cluster_submission": false
+}

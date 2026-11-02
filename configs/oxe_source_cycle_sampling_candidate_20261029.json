@@ -1,0 +1,124 @@
+{
+  "format": "source-slots-preserved-window-cycle-candidate-v1",
+  "status": "cpu_coverage_design_only_not_submittable",
+  "date": "2026-10-29",
+  "motivation": "Full source-balanced replacement training left24389BC-Zeligible windows unseen despite131204BC-Zdraws",
+  "example_training_seed": 42,
+  "fixed_pool_windows": 145812,
+  "source_slots_and_counts_unchanged": true,
+  "batch_lengths_and65536update_budget_unchanged": true,
+  "original_actual_lr_values_unchanged": true,
+  "intervention": "Within each source, shuffled eligible-window cycles without replacement until its cycle finishes",
+  "training_window_filter_or_eval_selection_changed": false,
+  "labels_or_predictions_used_for_schedule": false,
+  "cpu_example": {
+    "coverage_summary": {
+      "updates": 65536,
+      "total_presentations": 524276,
+      "sources": {
+        "Bridge": {
+          "windows": 10352,
+          "presentations": 131244,
+          "mean_presentations": 12.678129829984544,
+          "never_sampled": 0,
+          "sampled_fraction": 1.0,
+          "min": 12,
+          "p25": 12.0,
+          "median": 13.0,
+          "p75": 13.0,
+          "p95": 13.0,
+          "max": 13,
+          "late_presentations_at_lr_at_most1e_5": 18716,
+          "late_low_lr_presentations_per_window": 1.8079598145285936
+        },
+        "Language Table": {
+          "windows": 12214,
+          "presentations": 131033,
+          "mean_presentations": 10.728098902898314,
+          "never_sampled": 0,
+          "sampled_fraction": 1.0,
+          "min": 10,
+          "p25": 10.0,
+          "median": 11.0,
+          "p75": 11.0,
+          "p95": 11.0,
+          "max": 11,
+          "late_presentations_at_lr_at_most1e_5": 18164,
+          "late_low_lr_presentations_per_window": 1.4871458981496644
+        },
+        "BC-Z": {
+          "windows": 95796,
+          "presentations": 131204,
+          "mean_presentations": 1.3696187732264395,
+          "never_sampled": 0,
+          "sampled_fraction": 1.0,
+          "min": 1,
+          "p25": 1.0,
+          "median": 1.0,
+          "p75": 2.0,
+          "p95": 2.0,
+          "max": 2,
+          "late_presentations_at_lr_at_most1e_5": 18589,
+          "late_low_lr_presentations_per_window": 0.1940477681740365
+        },
+        "Fractal": {
+          "windows": 27450,
+          "presentations": 130795,
+          "mean_presentations": 4.764845173041894,
+          "never_sampled": 0,
+          "sampled_fraction": 1.0,
+          "min": 4,
+          "p25": 5.0,
+          "median": 5.0,
+          "p75": 5.0,
+          "p95": 5.0,
+          "max": 5,
+          "late_presentations_at_lr_at_most1e_5": 18619,
+          "late_low_lr_presentations_per_window": 0.678287795992714
+        }
+      },
+      "lr": {
+        "first_used": 1.953125e-07,
+        "last_used": 1.1857379522695056e-13,
+        "min_all": 1.1857379522695056e-13,
+        "max_all": 0.0002,
+        "min_after_warmup": 1.1857379522695056e-13,
+        "late_steps_at_most1e_5": 9261
+      },
+      "warning": "Raw exposure and LR clock only; not effective gradients, Adam step magnitudes, independent samples or proof of sufficiency"
+    },
+    "metadata": {
+      "seed": 42,
+      "source_rng_seed_sequence": "[seed,20261029,source_index]",
+      "cycles_started": {
+        "Bridge": 13,
+        "Language Table": 11,
+        "BC-Z": 2,
+        "Fractal": 5
+      },
+      "uses_labels_or_predictions_for_selection": false,
+      "model_rng_stream_identity_claimed": false,
+      "rng_warning": "Different text batch lengths may change dropout/noise RNG consumption in a future actual run; no forward or RNG equivalence tested here"
+    },
+    "plan_path": "reports\\oxe_exposure_schedule_review_20261029\\candidate_source_cycle_plan.npz",
+    "plan_sha256": "874b5e9f0df2618ad56e92d0e2f2844898bbca9460166dd85e29d616ab4012fb",
+    "plan_bytes": 1974281,
+    "source_slots_batch_lengths_total_budget_lr_exactly_preserved": true,
+    "all_sources_all_eligible_windows_covered": true,
+    "training_or_inference_executed": false,
+    "scope": "Counterfactual coverage calculation only, not a trained result or revision to the frozen main protocol"
+  },
+  "common_condition_requirement": "Any eventual training comparison must declare common protocol/budget per seed and thesis condition; preserve old models",
+  "model_noise_or_dropout_stream_bit_identity_proven": false,
+  "model_or_learning_protocol_admitted_by_this_candidate": false,
+  "remaining": [
+    "Choose a bounded experimental question and compute budget before any training implementation",
+    "Separate sampling-policy effect from LR-horizon/architecture/objective changes",
+    "Qualify actual data entry and stochastic-flow comparison; source slots alone do not guarantee same CUDA RNG stream",
+    "Demonstrate learning/development effect rather than equating coverage with convergence"
+  ],
+  "no_new_variant_on_closed_fixed8_run": true,
+  "package_created": false,
+  "training_submitted": false,
+  "automatic_following_action": false
+}

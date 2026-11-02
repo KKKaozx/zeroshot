@@ -8,7 +8,7 @@ The later dataset/version clarification takes precedence over earlier suggestion
 | Documented PyTorch codebase on GitHub; commit at least weekly | Actual source and documented diagnostic progress included in this update |
 | One main training and one evaluation entry | `code/train.py`, `code/test.py` (offline evaluation) |
 | Configuration rather than editing hyperparameters in code | Historical `.args` files and recorded JSON configs; some diagnostic export paths remain hard-coded |
-| Frozen CLIP ViT-L/14, eight cross-attention layers, 512 attention channels, DDPM/U-Net | Executed in the 128-window pose-fitting diagnostics and the separate seen-scene PyBullet positive control; held-out demonstration prediction has not passed |
+| Frozen CLIP ViT-L/14, eight cross-attention layers, 512 attention channels, DDPM/U-Net | Updated 2026-10-17: active207558 has same-task held-out offline pose gains on completed208056 assessment; gripper frozen, full learned benchmark policy unfinished. See [active reference](ACTIVE_BASELINE_207558_20261017.md) and [scheme review](ACTIVE_TRAINING_SCHEME_REVIEW_20261017.md) |
 | Four core OXE subsets, justify inclusion/exclusion and versions | Teacher choices documented; formal multi-source action contracts/training incomplete |
 | Four augmentation conditions | Formal controlled study not completed |
 | LIBERO and CLIPort, 100 rollouts per task split | Not completed; offline errors are not task-success rates |

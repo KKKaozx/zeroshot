@@ -1,0 +1,43 @@
+{
+  "format": "bridge-command8-fresh-scaled-preparation-validation-v1",
+  "date": "2026-10-31",
+  "cpu_checks_passed": 11,
+  "cpu_check_log_sha256": "f37ba9c591723236a367efe2661f9681983c572b9e9529733c6939ba945d5139",
+  "scope": "CPU ToyModel/native loss and synthetic reader/executor; actual100-step archived DDPM schedule with oracle decoder. No real encoder/policy construction or training/physics.",
+  "source_only_normalizer_unique_commands": 39572,
+  "motion_std": [
+    0.10411886242567416,
+    0.14395870458551283,
+    0.12645784034151852,
+    0.015038875967714227,
+    0.01590782307693636,
+    0.025837100812439933,
+    0.0011792281518660953
+  ],
+  "source_role_data_and_plan_byte_identical_to_closed237424": true,
+  "python_ast_files": 46,
+  "unchanged_vendor_files": 43,
+  "original237424_snapshot_unchanged": true,
+  "shell_lf_shebang_checked": true,
+  "bash_syntax_or_cluster_execution_tested": false,
+  "dependency_check": {
+    "numpy": "1.26.4",
+    "torch": "2.11.0+cu128",
+    "tensorflow": "2.21.0",
+    "training_imports_passed": true,
+    "cuda_initialized": false,
+    "model_constructed": false,
+    "online_scipy_libero_dependencies_required_only_in_local_evaluation": true
+  },
+  "remote_full_admission_executed": false,
+  "preparation_notes": [
+    "First numeric preparation interrupted due to repeated NPZ decompression; fixed by materializing arrays once. No extra raw/image read or training.",
+    "100-step oracle uses original a0=1.0000139474868774,b0=0. Initial exact-identity reference was incorrect; test now checks independent analytic original-coefficient output at1e-7 and physical deviation<5e-6. Sampler/constants unchanged to pass."
+  ],
+  "source_learned_policy_checkpoints_loaded": false,
+  "new_real_training_updates": 0,
+  "new_physics_episodes": 0,
+  "tiny_optimizer_steps_per_completed_cpu_test_invocation": 3,
+  "source_ability_block_resolved": false,
+  "physical_transfer_block_resolved": false
+}

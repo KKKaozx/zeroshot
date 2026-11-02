@@ -1,0 +1,59 @@
+{
+  "job_id": 230933,
+  "evidence_source": "User evaluation log attachment",
+  "reported_date": "2026-10-28",
+  "status": "all_six_draws_logged_report_written_metrics_not_yet_read",
+  "complete_draws_logged": [
+    {
+      "group": "mixed",
+      "seed": 1101,
+      "windows": 64
+    },
+    {
+      "group": "mixed",
+      "seed": 1102,
+      "windows": 64
+    },
+    {
+      "group": "mixed",
+      "seed": 1103,
+      "windows": 64
+    },
+    {
+      "group": "bridge_supervision",
+      "seed": 1101,
+      "windows": 64
+    },
+    {
+      "group": "bridge_supervision",
+      "seed": 1102,
+      "windows": 64
+    },
+    {
+      "group": "bridge_supervision",
+      "seed": 1103,
+      "windows": 64
+    }
+  ],
+  "sampled_learned_trajectories_logged": 384,
+  "frozen_identity_event": {
+    "profile_path": "/projects/_ssd/Zeroshot/oxe_bridge_supervision_frozen_repair_v1/training_frozen_profile.json",
+    "profile_file_sha256": "0ad6ce3e3681a5f97fd31c805bd2e4f24458eb13c5651a69df7079c998b3a1bf",
+    "frozen_sha256_before": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "frozen_sha256_after": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "restored_buffer_names": [],
+    "differences": {},
+    "encoder_parameters_written": false,
+    "learned_parameters_written": false,
+    "exact_original_training_digest_verified": true,
+    "identity_tolerance_used": false
+  },
+  "report_path": "/projects/_ssd/Zeroshot/runs/oxe-bridge-supervision-eval-230933/report.json",
+  "actual_report_execution_complete_flag_observed": false,
+  "evaluation_complete_confirmed": false,
+  "metrics_available_locally": false,
+  "report_or_predictions_downloaded": false,
+  "generalization_verdict": null,
+  "scope": "Existing inference output only; no new training or repeat evaluation submitted",
+  "next_step": "Read summary metrics/completion/frozen identity from existing cluster report with standard-library Python only"
+}

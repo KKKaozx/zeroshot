@@ -1,0 +1,64 @@
+{
+  "recorded_date": "2026-10-18",
+  "job": 209481,
+  "source": "User-provided Slurm summary, terminal metrics and successful cluster verify_formal.py output; complete artifact files not received locally",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:28:18",
+  "node": "gpu-a6000-1",
+  "weighting": "episode_equal",
+  "development_episodes": 10,
+  "development_windows": 50,
+  "full16_metrics": {
+    "unchanged207558": {
+      "path_position_cm": 5.986335115116556,
+      "path_rotation_deg": 13.781529651272724,
+      "endpoint_position_cm": 7.523540816140807,
+      "endpoint_rotation_deg": 18.70876586335695
+    },
+    "control": {
+      "path_position_cm": 6.306131040247633,
+      "path_rotation_deg": 13.922042664182177,
+      "endpoint_position_cm": 7.728660128444415,
+      "endpoint_rotation_deg": 18.24632942671864
+    },
+    "candidate": {
+      "path_position_cm": 6.239977968429907,
+      "path_rotation_deg": 13.66464454560583,
+      "endpoint_position_cm": 7.724863487369366,
+      "endpoint_rotation_deg": 17.823151139842047
+    },
+    "static": {
+      "path_position_cm": 8.110599583259136,
+      "path_rotation_deg": 15.51700213975099,
+      "endpoint_position_cm": 11.516271535829057,
+      "endpoint_rotation_deg": 21.91093577780962
+    }
+  },
+  "admission_gates_reported": {
+    "episode_position_better_than_all": false,
+    "episode_rotation_no_worse_than_all": true,
+    "same_at_least_six_episodes_improve_both": false,
+    "window_position_and_rotation_no_worse": false
+  },
+  "jointly_improved_episode_ids": [
+    "bridge_data_v2-train.tfrecord-00870-of-01024::56",
+    "bridge_data_v2-train.tfrecord-00844-of-01024::16",
+    "bridge_data_v2-train.tfrecord-00732-of-01024::16"
+  ],
+  "development_admission_passed": false,
+  "decision": "Retain207558 and close this branch; no extra budget/seeds or final25 access",
+  "static_metrics_in_user_excerpt": true,
+  "K1_auxiliary_metrics_in_user_excerpt": false,
+  "complete_output_verifier_run_confirmed": true,
+  "local_model_inference_or_training": false,
+  "limits": "One fixed paired continuation, one new10-episode development set, same five tasks; no unique-root-cause or closed-loop grasp conclusion",
+  "verification_provenance": "User ran the packaged verifier on the cluster and pasted its successful output; not independently rerun locally",
+  "unchanged207558_relative_error_reduction_vs_static": {
+    "path_position_cm": 0.2619121368692908,
+    "path_rotation_deg": 0.11184328473039162
+  },
+  "complete_report_and_numeric_arrays_downloaded": true,
+  "weights_downloaded": false,
+  "subsequent_CPU_failure_analysis": "reports/bridge_prefix_failure_analysis_209481_20261018/analysis.json"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "A4_cls_hist_future",
+  "description": "未来位姿标签下的CLS对照，分离读出的作用",
+  "target": "future_pose",
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "cls",
+    "history": [
+      "state_delta",
+      "prev_command"
+    ]
+  }
+}

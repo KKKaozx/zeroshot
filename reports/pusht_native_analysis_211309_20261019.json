@@ -1,0 +1,41 @@
+{
+  "full_small_artifacts_verified_locally": true,
+  "cluster_full_output_verifier_pass_reported_by_user": true,
+  "checkpoint_loaded_or_hashed_locally": false,
+  "checkpoint_sha256_from_report_and_sidecar": "a9b28a1f09f7d733b8cd1936403ee3e650a4fdfdfcd64cc4ab7fd8f0a3f63551",
+  "startup_complete_disk_replay_exact": true,
+  "device_repair_record_matches": true,
+  "development_reward_series_recomputed": true,
+  "mean_score": 0.795885648722669,
+  "full_reward_fraction": 0.15,
+  "reference_competence_gate_passed": false,
+  "mean_score_bootstrap_95_interval": [
+    0.6765876636516237,
+    0.8988388336633734
+  ],
+  "full_reward_wilson_95_interval": [
+    0.052368745896216595,
+    0.36041886474075696
+  ],
+  "videos": [
+    {
+      "name": "development_seed_5000000.mp4",
+      "bytes": 46253,
+      "sha256": "db7acaf656133fcd8c25956b275a38a05424a4cae275e76e0f81301c9f4267c6"
+    },
+    {
+      "name": "development_seed_5000001.mp4",
+      "bytes": 44874,
+      "sha256": "7f9b9fb5a6cb6f2d48ef6e1bc2a04b6318dd8de26e589d070f520ed13642dd07"
+    }
+  ],
+  "video_frames_decoded_locally": false,
+  "small_file_sha256": {
+    "development.json": "2f94e9769ddcb55465b2e16dc3bcef8731b99d64850045c5a5102f321b6d2c4b",
+    "device_repair.json": "6ca6ccf034e03888eb0dc424a74681d6c28fabb7ad4b43a0ed6cc11e6f7f1acd",
+    "latest.json": "1818540973ae133115b98f4746a139a09cb071acb3779cf1927e72adf8069ec0",
+    "report.json": "317120f9fad180cc75a1b988f301339d372b7306155a4e5c3602b518fdab0ab0",
+    "startup_checks.json": "fda181a62b63942136f8b37cdecdc7f01b40dc4f93d150caf217f3b224b5719e"
+  },
+  "next": "Prepare continuation from20000 to predeclared84168 cap; preserve full training state, one endpoint dev eval, no project/final run"
+}

@@ -1,0 +1,69 @@
+{
+  "execution_complete": true,
+  "target_supervised": true,
+  "zero_shot": false,
+  "formal_matrix_admitted": false,
+  "task": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet",
+  "episodes": [
+    {
+      "demo_id": 25,
+      "success": true,
+      "native_ticks": 84,
+      "policy_calls": 21,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0
+    },
+    {
+      "demo_id": 26,
+      "success": true,
+      "native_ticks": 72,
+      "policy_calls": 18,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0
+    },
+    {
+      "demo_id": 27,
+      "success": true,
+      "native_ticks": 72,
+      "policy_calls": 18,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0
+    },
+    {
+      "demo_id": 28,
+      "success": true,
+      "native_ticks": 72,
+      "policy_calls": 18,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0
+    },
+    {
+      "demo_id": 29,
+      "success": true,
+      "native_ticks": 64,
+      "policy_calls": 16,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0
+    }
+  ],
+  "training_updates": 0,
+  "expert_actions_read": false,
+  "automatic_following_action": false,
+  "errors": [],
+  "checkpoint_sha256": "cb79d8333de212aa95810050908dba90e543ccf0f76560e70fc29deb4d824bd8",
+  "successes": 5,
+  "trials": 5,
+  "success_fraction": 1.0,
+  "scope": "Five fixed initial states for one target-supervised task; not zero-shot/general benchmark success",
+  "elapsed_seconds": 113.14100000000326
+}

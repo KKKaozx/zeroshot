@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "dependencies": {
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cu118",
+    "tensorflow": "2.15.0",
+    "training_imports_passed": true,
+    "cuda_initialized": false,
+    "model_constructed": false,
+    "online_scipy_libero_dependencies_required_only_in_local_evaluation": true
+  },
+  "source_inputs": {
+    "passed": true,
+    "bridge_input_files_present": 37,
+    "old_token_or_reached_pose_target_cache_required": false,
+    "project_bytes_du_estimate": 147022130688,
+    "reserve_bytes": 8589934592
+  },
+  "source_weights_readback_checked": true,
+  "effective_action_representation": "bridge_controller_increment_pose8_candidate_v1",
+  "source_semantics_status": "Public collector-family hypothesis; exact cached0.0.1 exporter/config not recovered",
+  "source_units_status": "Existing disclosed raw XYZ-as-meter assumption; not new physical calibration",
+  "label_rows": 10416,
+  "target_supervised": false,
+  "new_model_or_training_updates": 0
+}

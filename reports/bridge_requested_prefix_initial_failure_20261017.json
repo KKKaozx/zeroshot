@@ -1,0 +1,9 @@
+{
+  "stage": "CPU prototype validation before output directory creation",
+  "failure": "Full16 loss compatibility assertion: nested window means changed float32 reduction order",
+  "repair": "Full16 branch uses the original flattened F.mse_loss reduction; no tolerance relaxation",
+  "baseline_modified": false,
+  "GPU_used": false,
+  "training_updates": 0,
+  "root_cause_of_generalization_claimed": false
+}

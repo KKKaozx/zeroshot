@@ -1,0 +1,48 @@
+{
+  "format": "bridge-controller-increment8-candidate-definition-v1",
+  "source_record_only": "bridge_data_v2-train.tfrecord-00667-of-01024::0",
+  "representation": "bridge_controller_increment_pose8_candidate_v1",
+  "output_dim": 8,
+  "order": [
+    "dx/divisor",
+    "dy/divisor",
+    "dz/divisor",
+    "delta_qx",
+    "delta_qy",
+    "delta_qz",
+    "delta_qw",
+    "binary_open_positive_or_masked"
+  ],
+  "physical_meaning": "One world-axis rigid increment about measured EEF pivot applied to previous desired target; not a future measured pose",
+  "rotation": "R_delta=Rz(raw_dyaw)*Ry(raw_dpitch)*Rx(raw_droll), premultiplies previous desired rotation",
+  "goal_update": "p_new=c+d+R_delta*(p_previous_goal-c); R_new=R_delta*R_previous_goal, then explicit workspace clipping if specified",
+  "deployment_rule_candidate": "Update desired goal once per source command; reuse fixed goal with measured native feedback between updates. Do not add the increment four times for one nominal5Hz command.",
+  "source_absolute_goal_reconstruction_admitted": false,
+  "direct_increment_encoding_requires_no_future_measured_pose_or_previous_desired_target": true,
+  "use_with_existing_reached_pose_checkpoint_or_old_executor_contract": false,
+  "source_rows_encoded_for_numeric_example": 44,
+  "gripper_fraction_rows_masked_not_reinterpreted_as_native_velocity": 2,
+  "nonterminal_row_convention": "Only first44 rows of the one45-row record; inherited conservative convention, no new terminal qualification",
+  "new_training_dataset_created": false,
+  "formal_training_admitted": false,
+  "zero_shot_objective_changed": false,
+  "libero_demonstrations_or_supervised_weights_used": false,
+  "missing_facts": [
+    {
+      "fact": "Cached0.0.1 action/observation export binding to collector behavior",
+      "needed_for": "Treating stored raw actions as the documented control increments without hidden alignment/preprocessing changes",
+      "known": "Public conversion family copies policy_out actions; inspected RLDS builder declares1.0.0, not cached0.0.1"
+    },
+    {
+      "fact": "Recorded previous desired_state or equivalent initial desired target + exact reset/workspace/action-clipping settings",
+      "needed_for": "Unique absolute control-goal reconstruction; not required to encode the recorded increment itself",
+      "known": "Public collector records desired_state, but the inspected conversion/cached schema does not retain it"
+    },
+    {
+      "fact": "Explicit deployment command-update time and common control-frame/point convention",
+      "needed_for": "Executing a future trained increment policy, separate from old fixed-reference reached-pose executor",
+      "known": "Nominal5Hz and meter interpretation remain disclosed assumptions; no new clock, gain or calibration is proved"
+    }
+  ],
+  "next_training_submitted": false
+}

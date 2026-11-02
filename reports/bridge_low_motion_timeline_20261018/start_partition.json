@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-18",
+  "first_target": true,
+  "summary": {
+    "train": {
+      "source_sha256": "61ff5b41bd4102b470db230cae60aad9c0a7d19178d66e9339b7005d0929a7ca",
+      "windows": 1836,
+      "low_windows": 520,
+      "low_at_start0": 374,
+      "low_later": 146
+    },
+    "new_development": {
+      "source_sha256": "d8b4a5e1070baf68fd4df0d44b16288c6d5e6b709b74b69c96038ed555c27b96",
+      "windows": 50,
+      "low_windows": 13,
+      "low_at_start0": 9,
+      "low_later": 4
+    }
+  },
+  "rows": [
+    {
+      "domain": "train",
+      "group": "all",
+      "windows": 1836,
+      "original_weight_mass": 1.0,
+      "model_first_position_cm": 1.3063933625586832,
+      "static_first_position_cm": 1.282389140877022,
+      "model_first_rotation_deg": 2.7867867996970923,
+      "static_first_rotation_deg": 2.2966695234289802,
+      "model_first_squared_position_cm2": 2.5717891170957174,
+      "static_first_squared_position_cm2": 2.877506059064459
+    },
+    {
+      "domain": "train",
+      "group": "start0",
+      "windows": 405,
+      "original_weight_mass": 0.2831196254014803,
+      "model_first_position_cm": 0.9195269404372525,
+      "static_first_position_cm": 0.19544876758848884,
+      "model_first_rotation_deg": 2.224592959017325,
+      "static_first_rotation_deg": 0.31437319855529056,
+      "model_first_squared_position_cm2": 1.2122875943754206,
+      "static_first_squared_position_cm2": 0.10157372295882783
+    },
+    {
+      "domain": "train",
+      "group": "later",
+      "windows": 1431,
+      "original_weight_mass": 0.7168803745985198,
+      "model_first_position_cm": 1.459179629825061,
+      "static_first_position_cm": 1.7116576244668222,
+      "model_first_rotation_deg": 3.00881562795929,
+      "static_first_rotation_deg": 3.0795435046664745,
+      "model_first_squared_position_cm2": 3.108700958294986,
+      "static_first_squared_position_cm2": 3.973812989740623
+    },
+    {
+      "domain": "train",
+      "group": "low_start0",
+      "windows": 374,
+      "original_weight_mass": 0.2441362431922916,
+      "model_first_position_cm": 0.9205458865264805,
+      "static_first_position_cm": 0.11090528861128797,
+      "model_first_rotation_deg": 2.279075755441744,
+      "static_first_rotation_deg": 0.20981602237299796,
+      "model_first_squared_position_cm2": 1.1627443857155795,
+      "static_first_squared_position_cm2": 0.029112913822653817
+    },
+    {
+      "domain": "train",
+      "group": "low_later",
+      "windows": 146,
+      "original_weight_mass": 0.06022869594563143,
+      "model_first_position_cm": 0.6523417309938875,
+      "static_first_position_cm": 0.3185211522770563,
+      "model_first_rotation_deg": 1.5570256017845825,
+      "static_first_rotation_deg": 1.1627078054413558,
+      "model_first_squared_position_cm2": 0.6324007851852276,
+      "static_first_squared_position_cm2": 0.11505420658017884
+    },
+    {
+      "domain": "new_development",
+      "group": "all",
+      "windows": 50,
+      "original_weight_mass": 1.0,
+      "model_first_position_cm": 1.4461413906408727,
+      "static_first_position_cm": 1.2268812930144997,
+      "model_first_rotation_deg": 2.7740070772762415,
+      "static_first_rotation_deg": 2.4400986199536856,
+      "model_first_squared_position_cm2": 3.13205278352348,
+      "static_first_squared_position_cm2": 2.4864305694941153
+    },
+    {
+      "domain": "new_development",
+      "group": "start0",
+      "windows": 10,
+      "original_weight_mass": 0.2533333333333333,
+      "model_first_position_cm": 0.8816764917590748,
+      "static_first_position_cm": 0.2204935532078678,
+      "model_first_rotation_deg": 2.019747573064054,
+      "static_first_rotation_deg": 0.36584779786809485,
+      "model_first_squared_position_cm2": 1.2125028746676056,
+      "static_first_squared_position_cm2": 0.11430571904908438
+    },
+    {
+      "domain": "new_development",
+      "group": "later",
+      "windows": 40,
+      "original_weight_mass": 0.7466666666666666,
+      "model_first_position_cm": 1.6376562670471972,
+      "static_first_position_cm": 1.5683342761631784,
+      "model_first_rotation_deg": 3.029916551919662,
+      "static_first_rotation_deg": 3.1438622917327255,
+      "model_first_squared_position_cm2": 3.7833286454567236,
+      "static_first_squared_position_cm2": 3.2912586437522506
+    },
+    {
+      "domain": "new_development",
+      "group": "low_start0",
+      "windows": 9,
+      "original_weight_mass": 0.2033333333333333,
+      "model_first_position_cm": 0.9327719666601086,
+      "static_first_position_cm": 0.10526135489804259,
+      "model_first_rotation_deg": 2.0785209826132776,
+      "static_first_rotation_deg": 0.2180739628070179,
+      "model_first_squared_position_cm2": 1.232271370150381,
+      "static_first_squared_position_cm2": 0.0256436002231916
+    },
+    {
+      "domain": "new_development",
+      "group": "low_later",
+      "windows": 4,
+      "original_weight_mass": 0.05416666666666667,
+      "model_first_position_cm": 1.1013804867232626,
+      "static_first_position_cm": 0.36443015275287394,
+      "model_first_rotation_deg": 1.9793736655039342,
+      "static_first_rotation_deg": 1.9225557316659083,
+      "model_first_squared_position_cm2": 1.770154701874045,
+      "static_first_squared_position_cm2": 0.14953869991654065
+    }
+  ],
+  "selected_low_cases_at_start0": 5,
+  "selected_start0_native_motion_raw_norms": [
+    7.122057901829335e-07,
+    5.776620976061043e-07,
+    4.227482741468925e-07,
+    5.281979075241381e-07,
+    1.1400496026685394e-07
+  ],
+  "original_overall_scores_preserved": true,
+  "policy_or_labels_modified": false,
+  "final25_payloads_read": false,
+  "official_comparison": {
+    "url": "https://github.com/openvla/openvla/blob/main/prismatic/vla/datasets/rlds/oxe/transforms.py",
+    "accessed": "2026-10-18",
+    "functions": [
+      "bridge_orig_dataset_transform",
+      "bridge_oxe_dataset_transform"
+    ],
+    "finding": "Both remove the first timestep before relabeling; project currently retains start0.",
+    "source_version": "main as viewed; no claim this is the frozen Diffusion Policy checkpoint preprocessing"
+  },
+  "root_cause_proven": false,
+  "physical_control_delay_identified": false
+}

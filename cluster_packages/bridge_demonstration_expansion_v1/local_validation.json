@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "stage": "local_cpu_transfer_and_source_adaptation_checks",
+  "gpu_used": false,
+  "actual_model_loaded": false,
+  "new_inference": false,
+  "training": false,
+  "actual_data_archives": 13,
+  "actual_subset_shards": 305,
+  "actual_added_records": 401,
+  "all_transferred_nonempty_records_match_source_audit": true,
+  "original_record_numbers_preserved": true,
+  "future_or_consumed_test_payloads_exported": false,
+  "all65536_task_slots_match": true,
+  "training_advance_ast_identical": true,
+  "context_function_ast_identical": true,
+  "dimension_replacements": {
+    "7.5": 1,
+    "9000": 1,
+    "1876": 4,
+    "1836": 2
+  },
+  "old_cache_row_remap_synthetic_cpu_check": true,
+  "full_new_numeric_reference_valid": true,
+  "bash_syntax_checked": true,
+  "local_full_token_cache_written": false,
+  "protocol_sha256": "cf00fb00a4dcc99612f270df09f6366d8c404a5afff2809bba2125732d98c132",
+  "helper_sha256": "3be5dc1303fcfd8b8aad8f4b82741c728990ca2235775e4c5e015e5164b7fcab",
+  "wrapper_sha256": "fc7b954affe0d904b85a8e946b5783278e9a2ba68860a3c0e132d49cd35d5249",
+  "limits": "No actual CLIP/Adapter/decoder or CUDA execution locally. Cluster must check complete inputs, actual old4 checkpoint replay, gradients, cache, resources and16 operational updates before formal training."
+}

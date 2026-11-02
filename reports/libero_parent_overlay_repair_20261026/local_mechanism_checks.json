@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": {
+    "nested_child_does_not_automatically_inherit_parent_overlay": true,
+    "fresh_child_sees_parent_packages_after_explicit_overlay": true,
+    "child_simulator_packages_keep_priority_over_parent": true,
+    "overlay_does_not_write_parent_packages": true
+  },
+  "model_forwards": 0,
+  "GPU_use": 0,
+  "training_updates": 0,
+  "cluster_files_modified": false
+}

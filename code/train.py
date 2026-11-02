@@ -7,6 +7,7 @@ import argparse
 from contextlib import nullcontext
 import hashlib
 import json
+import math
 import random
 import sys
 from collections import Counter, defaultdict
@@ -26,6 +27,7 @@ from dataset import (
     UnifiedRobotDataset,
 )
 from models import RobotAdapterModel
+from cartesian_action_contract import representation_for_frame
 
 
 # Windows 重定向日志时可能仍使用系统编码；统一成 UTF-8，避免中文提示乱码。
@@ -74,6 +76,14 @@ def split_by_trajectory(
 
 def dataset_split_identity(dataset, *, target_override=None, chunk_override=None, gripper_override=None):
     """标识扫描窗口及源文件元信息；同样本数不等于同一份训练数据。"""
+    if getattr(dataset, "nominal_target_binding", None) is not None:
+        if any(x is not None for x in (target_override, chunk_override, gripper_override)):
+            raise ValueError("名义时间标签不能重解释为原始未来行号或原生命令")
+        return dataset.nominal_target_binding["dataset_identity"]
+    if getattr(dataset, "oxe_window_manifest", None) is not None:
+        if any(x is not None for x in (target_override, chunk_override, gripper_override)):
+            raise ValueError("固定OXE窗口身份不能重解释为另一目标或原生诊断")
+        return dataset.oxe_window_manifest["dataset_identity"]
     paths = sorted({str(Path(s["file_path"]).resolve()) for s in dataset.samples})
     files = []
     for path in paths:
@@ -81,7 +91,9 @@ def dataset_split_identity(dataset, *, target_override=None, chunk_override=None
         files.append([path, stat.st_size, stat.st_mtime_ns])
     payload = {"samples": dataset.samples, "files": files,
                "chunk_size": dataset.chunk_size if chunk_override is None else chunk_override, "stride": dataset.stride,
-               "action_representation": ACTION_REPRESENTATION}
+               "action_representation": getattr(dataset, "action_representation", ACTION_REPRESENTATION)}
+    if getattr(dataset, "language_table_groups_sha256", None):
+        payload["language_table_groups_sha256"] = dataset.language_table_groups_sha256
     # 默认 reached 的指纹保持与已有划分清单兼容；控制命令是另一监督契约。
     target = dataset.bcz_target if target_override is None else target_override
     gripper = getattr(dataset, "bcz_current_gripper", "binary") if gripper_override is None else gripper_override
@@ -99,6 +111,8 @@ def dataset_split_identity(dataset, *, target_override=None, chunk_override=None
         payload["bridge_episode_selection"] = dataset.bridge_episode_selection
     if getattr(dataset, "bridge_window_horizon", None) is not None:
         payload["bridge_window_horizon"] = dataset.bridge_window_horizon
+    if getattr(dataset, "oxe_command_input", False):
+        payload["oxe_command_input"] = "last_command_with_availability_v1"
     if (getattr(dataset, "rt1_gripper_policy", "legacy_threshold_v1") != "legacy_threshold_v1"
             and any(s["source"] == "tfrecord_rt1_pose" for s in dataset.samples)):
         payload["rt1_gripper_policy"] = dataset.rt1_gripper_policy
@@ -107,6 +121,21 @@ def dataset_split_identity(dataset, *, target_override=None, chunk_override=None
         payload["bcz_reached_gripper_policy"] = dataset.bcz_reached_gripper_policy
     encoded = json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
     return hashlib.sha256(encoded).hexdigest()
+
+
+def validate_frame_resume(checkpoint, dataset, action_frame):
+    """New-frame resume binds samples and LT alias groups before model loading."""
+    if checkpoint is None:
+        return
+    saved = checkpoint.get("data_config", {})
+    if action_frame == "tool" and saved.get("action_frame", "tool") == "tool":
+        return  # Preserve the existing default-mode checks.
+    expected = representation_for_frame(action_frame)
+    if (saved.get("action_frame") != action_frame
+            or checkpoint.get("config", {}).get("action", {}).get("representation") != expected
+            or saved.get("language_table_groups_sha256") != dataset.language_table_groups_sha256
+            or checkpoint.get("dataset_identity") != dataset_split_identity(dataset)):
+        raise ValueError("新坐标模式恢复必须匹配动作表示、全部窗口身份与Language Table重叠组清单")
 
 
 def bridge_plan_selection(path, dataset_dir=None):
@@ -199,6 +228,10 @@ def select_bridge_gripper_candidates(dataset, train_indices, report_path):
 
 def validate_split_indices(dataset, splits):
     """对照必须覆盖全部窗口，且同一完整演示不能跨分区。"""
+    if getattr(dataset, "nominal_target_binding", None) is not None:
+        if splits != dataset.frozen_nominal_splits:
+            raise ValueError("名义输入必须保留全部冻结train/validation角色；不能随机制造或交换分区")
+        return
     seen_indices, seen_groups = set(), set()
     for name in ("train", "validation", "test"):
         indices = splits[name]
@@ -546,6 +579,7 @@ def evaluate_action_metrics(
     gripper_correct: List[torch.Tensor] = []
     gripper_persistence_correct: List[torch.Tensor] = []
     persistence_open_values: List[torch.Tensor] = []
+    persistence_eligible_values: List[torch.Tensor] = []
     predicted_open_values: List[torch.Tensor] = []
     target_open_values: List[torch.Tensor] = []
     absolute_errors: List[torch.Tensor] = []
@@ -628,12 +662,21 @@ def evaluate_action_metrics(
                 context = model.get_context_vector(images, text["input_ids"], text.get("attention_mask"))
                 teacher_open = model.predict_gripper_logits(context, targets[..., :7], current_grippers) >= 0
                 teacher_pose_gripper_correct.append((teacher_open[valid_gripper] == target_open[valid_gripper]).float())
-        persistence_open = (current_grippers >= 0.0).expand_as(target_open)
+        if getattr(model, "current_gripper_feature_dim", 1) == 2:
+            from oxe_source_semantics import validate_command_feature_tensor
+            validate_command_feature_tensor(current_grippers, sample_count)
+            persistence_open = (current_grippers[:, :1] > 0).expand_as(target_open)
+            persistence_eligible = current_grippers[:, 1:2].bool().expand_as(target_open)
+        else:
+            persistence_open = (current_grippers >= 0.0).expand_as(target_open)
+            persistence_eligible = torch.ones_like(target_open, dtype=torch.bool)
         if valid_gripper.any():
-            gripper_persistence_correct.append(
-                (persistence_open[valid_gripper] == target_open[valid_gripper]).float()
-            )
+            eligible = valid_gripper & persistence_eligible
+            if eligible.any():
+                gripper_persistence_correct.append(
+                    (persistence_open[eligible] == target_open[eligible]).float())
             persistence_open_values.append(persistence_open[valid_gripper].cpu())
+            persistence_eligible_values.append(persistence_eligible[valid_gripper].cpu())
             predicted_open_values.append(predicted_open[valid_gripper].cpu())
             target_open_values.append(target_open[valid_gripper].cpu())
         # q 与 -q 表示同一旋转；计算 MAE 前先把预测四元数翻到目标同一半球。
@@ -655,6 +698,7 @@ def evaluate_action_metrics(
         predicted_open = torch.cat(predicted_open_values).reshape(-1)
         target_open = torch.cat(target_open_values).reshape(-1)
         persistence_open = torch.cat(persistence_open_values).reshape(-1)
+        persistence_eligible = torch.cat(persistence_eligible_values).reshape(-1)
         true_open_rate = float(target_open.float().mean().item())
         predicted_open_rate = float(predicted_open.float().mean().item())
         majority_baseline = max(true_open_rate, 1.0 - true_open_rate)
@@ -675,8 +719,8 @@ def evaluate_action_metrics(
             if open_mask.any() and closed_mask.any()
             else float("nan")
         )
-        change_mask = target_open != persistence_open
-        hold_mask = ~change_mask
+        change_mask = (target_open != persistence_open) & persistence_eligible
+        hold_mask = (target_open == persistence_open) & persistence_eligible
         change_accuracy = (
             float((predicted_open[change_mask] == target_open[change_mask]).float().mean())
             if change_mask.any()
@@ -688,16 +732,18 @@ def evaluate_action_metrics(
             else float("nan")
         )
         gripper_accuracy = float(torch.cat(gripper_correct).mean().item())
-        persistence_accuracy = float(
-            torch.cat(gripper_persistence_correct).mean().item()
-        )
-        change_rate = float(change_mask.float().mean().item())
+        persistence_accuracy = float(torch.cat(gripper_persistence_correct).mean().item()) if gripper_persistence_correct else float("nan")
+        persistence_count = int(persistence_eligible.sum())
+        change_rate = (float(change_mask.float().mean().item())
+                       if getattr(model, "current_gripper_feature_dim", 1) == 1
+                       else float(change_mask.sum().item() / persistence_count) if persistence_count else float("nan"))
         gripper_step_count = target_open.numel()
     else:
         true_open_rate = predicted_open_rate = majority_baseline = float("nan")
         balanced_accuracy = change_accuracy = hold_accuracy = float("nan")
         gripper_accuracy = persistence_accuracy = change_rate = float("nan")
         gripper_step_count = 0
+        persistence_count = 0
     return {
         "position_error_cm": float(
             torch.cat(position_errors).mean().item() * POSITION_SCALE_METERS * 100.0
@@ -714,6 +760,8 @@ def evaluate_action_metrics(
         "gripper_balanced_accuracy": balanced_accuracy,
         "gripper_majority_baseline": majority_baseline,
         "gripper_persistence_baseline": persistence_accuracy,
+        "gripper_persistence_eligible_steps": float(persistence_count),
+        "gripper_persistence_coverage": persistence_count / gripper_step_count if gripper_step_count else float("nan"),
         "gripper_change_rate": change_rate,
         "gripper_change_accuracy": change_accuracy,
         "gripper_hold_accuracy": hold_accuracy,
@@ -729,15 +777,25 @@ def evaluate_action_metrics(
 
 
 def build_config(args: argparse.Namespace) -> Dict[str, Dict[str, object]]:
+    position_limit = float(getattr(args, "max_normalized_position", 3.0))
+    if not math.isfinite(position_limit) or position_limit <= 0:
+        raise ValueError("--max-normalized-position must be finite and positive")
+    visual_config = {}
+    if getattr(args, "visual_backbone", "clip") == "dinov2":
+        from frozen_visual_backbone import dino_config
+        visual_config = dino_config(getattr(args, "dino_assets", None))
     return {
         "action": {
-            "representation": ACTION_REPRESENTATION,
+            "representation": representation_for_frame(getattr(args, "action_frame", "tool")),
             "position_scale_meters": POSITION_SCALE_METERS,
-            "max_normalized_position": 3.0,
-            "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper",
+            "max_normalized_position": position_limit,
+            "dimensions": ("source_dx_dy_dz+left_dqx_dqy_dqz_dqw+gripper"
+                           if getattr(args, "action_frame", "tool") == "source_cartesian"
+                           else "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"),
         },
         "model": {
             "name": args.model_name,
+            **visual_config,
             "fusion_type": args.fusion_type,
             "adapter_pooling": args.adapter_pooling,
             "decoder_type": args.decoder_type,
@@ -758,6 +816,9 @@ def build_config(args: argparse.Namespace) -> Dict[str, Dict[str, object]]:
             "condition_on_current_gripper": True,
             "current_gripper_encoding": ("bridge_measured_affine_unbounded_v1"
                 if getattr(args, "bridge_current_gripper", "binary") == "continuous" else args.bcz_current_gripper),
+            **({"current_gripper_encoding": "last_command_with_availability_v1",
+                "current_gripper_semantics": "last_command_open_positive_with_availability_v1"}
+               if getattr(args, "oxe_command_input", False) else {}),
             "gripper_loss_weight": args.gripper_loss_weight,
             "gripper_change_weight": args.gripper_change_weight,
             "gripper_target_mode": args.gripper_target_mode,
@@ -866,6 +927,61 @@ def validate_native_experiment(args):
 
 
 def train(args: argparse.Namespace) -> None:
+    from oxe_nominal_dataset import validate_options as validate_nominal_options
+    validate_nominal_options(args)
+    if getattr(args, "oxe_nominal_targets", None) and args.prepare_only:
+        from oxe_nominal_dataset import prepare_inputs
+        return prepare_inputs(args)
+    visual_backbone = getattr(args, "visual_backbone", "clip")
+    if visual_backbone == "dinov2":
+        from frozen_visual_backbone import dino_config
+        dino_config(getattr(args, "dino_assets", None))
+        if any(getattr(args, name, None) for name in ("init_from", "pool_fit_from", "gripper_only_fit_from",
+                "overfit_samples", "bridge_task_plan", "bridge_gripper_fit_report", "offline_command_experiment")):
+            raise ValueError("DINO主入口不混用旧拟合/迁移/原生命令诊断；不能把CLIP权重改名恢复为DINO")
+    elif getattr(args, "dino_assets", None):
+        raise ValueError("--dino-assets requires --visual-backbone dinov2")
+    if getattr(args, "oxe_window_manifest", None):
+        if not args.prepare_only:
+            raise ValueError("当前OXE窗口索引仅允许 --prepare-only；来源单位/时间/TCP及数值目标资格尚未完成，不加载模型或训练")
+        if any(getattr(args, name, None) for name in ("resume", "init_from", "step_resume", "overfit_samples",
+                "bridge_task_plan", "bridge_gripper_fit_report", "pool_fit_from", "offline_command_experiment",
+                "total_updates", "step_diffusion_architecture", "stop_after_updates")):
+            raise ValueError("固定OXE窗口准备不能混用权重恢复、旧Bridge选择或拟合诊断")
+        destination = Path(args.output_dir)
+        if destination.exists() and any(destination.iterdir()):
+            raise ValueError("固定OXE窗口准备须使用新的输出目录，不能覆盖旧清单")
+    if getattr(args, "total_updates", None) is not None:
+        from step_training_runner import train_fixed_updates
+        return train_fixed_updates(args, sys.modules[__name__])
+    if any(getattr(args, key, None) is not None for key in (
+            "step_resume", "stop_after_updates", "step_diffusion_architecture")):
+        raise ValueError("固定更新模式选项必须同时指定 --total-updates")
+    if (getattr(args, "warmup_updates", 0) != 0
+            or getattr(args, "checkpoint_every_updates", 1000) != 1000
+            or getattr(args, "validate_every_updates", 1000) != 1000):
+        raise ValueError("按更新次数的调度选项必须同时指定 --total-updates")
+    action_frame = getattr(args, "action_frame", "tool")
+    expected_action_representation = representation_for_frame(action_frame)
+    if action_frame != "tool" and not getattr(args, "oxe_command_input", False):
+        raise ValueError("新笛卡尔表示必须显式开启 --oxe-command-input")
+    if getattr(args, "oxe_command_input", False):
+        if (args.gripper_target_mode != "state" or args.gripper_change_weight != 1.0
+                or args.init_from or args.gripper_only_fit_from or args.pool_fit_from
+                or args.overfit_samples or args.offline_command_experiment or args.bridge_task_plan):
+            raise ValueError("新命令输入用于完整state目标训练，不能混用旧迁移/拟合/切换加权分支")
+    language_mode = getattr(args, "language_condition", "disabled")
+    from language_training_conditions import validate_language_inputs
+    validate_language_inputs(language_mode,getattr(args,"language_bank",None),
+        getattr(args,"original_instruction_catalog",None),getattr(args,"counterfactual_fraction",None))
+    if language_mode != "disabled":
+        if not args.split_manifest:
+            raise ValueError("四条件训练必须绑定相同的 --split-manifest")
+        if (args.decoder_type != "diffusion" or args.overfit_samples or args.init_from
+                or args.gripper_only_fit_from or args.pool_fit_from or args.prepare_only):
+            raise ValueError("语言增强入口用于完整扩散训练；不能混用拟合、迁移或仅准备模式")
+    elif getattr(args, "language_bank", None) or getattr(args, "counterfactual_fraction", None) is not None:
+        raise ValueError("语言库/反事实比例需要显式选择 --language-condition")
     bridge_selection = bridge_plan_selection(args.bridge_task_plan, args.dataset_dir) if args.bridge_task_plan else None
     multitask_pilot = bool(args.bridge_task_plan and json.loads(Path(args.bridge_task_plan).read_text(encoding="utf-8")).get("purpose") == "bridge_multitask_offline_pilot_manifest_v1")
     if multitask_pilot:
@@ -955,10 +1071,13 @@ def train(args: argparse.Namespace) -> None:
         print("[指标限制] persistence/change仍使用0.5候选阈值，只是描述性基线，不是物理开闭事件")
     if args.offline_command_experiment:
         print("[实验性质] 独立演示离线原生控制目标试验；物理时序/执行接口未确认，不用于闭环成功率")
-    print(
-        f"[训练] 动作表示：{ACTION_REPRESENTATION}，"
-        f"位移缩放={POSITION_SCALE_METERS:.3f}m"
-    )
+    if getattr(args, "oxe_window_manifest", None):
+        print(f"[窗口准备] 动作表示：{expected_action_representation}，数值除数={POSITION_SCALE_METERS:.3f}；来源到米的换算和物理时间尚未验收")
+    else:
+        print(
+            f"[训练] 动作表示：{expected_action_representation}，"
+            f"位移缩放={POSITION_SCALE_METERS:.3f}m"
+        )
     print(
         f"[训练] 图文融合：{args.fusion_type}；"
         f"夹爪监督：{args.gripper_target_mode}；"
@@ -990,6 +1109,10 @@ def train(args: argparse.Namespace) -> None:
         bridge_window_horizon=args.bridge_window_horizon,
         rt1_gripper_policy=args.rt1_gripper_policy,
         bcz_reached_gripper_policy=args.bcz_reached_gripper_policy,
+        oxe_command_input=getattr(args, "oxe_command_input", False),
+        action_frame=action_frame,
+        language_table_groups=getattr(args, "language_table_groups", None),
+        **({"oxe_window_manifest": args.oxe_window_manifest} if getattr(args, "oxe_window_manifest", None) else {}),
     )
     if (any(s["source"] == "tfrecord_rt1_pose" for s in dataset.samples)
             and args.rt1_gripper_policy == "legacy_threshold_v1"
@@ -1054,6 +1177,9 @@ def train(args: argparse.Namespace) -> None:
         raise ValueError("Bridge输入测量编码不同，不能恢复或初始化为同一实验")
     if split_checkpoint and split_checkpoint.get("data_config", {}).get("bcz_target", "reached") != args.bcz_target:
         raise ValueError("BC-Z实际状态与控制目标监督不同，不能恢复或迁移为同一实验")
+    if split_checkpoint and bool(split_checkpoint.get("data_config", {}).get("oxe_command_input", False)) != bool(getattr(args, "oxe_command_input", False)):
+        raise ValueError("不能在旧测量输入与新命令/可用性输入之间恢复或迁移")
+    validate_frame_resume(split_checkpoint, dataset, action_frame)
     use_saved_splits = split_checkpoint is not None and "split_indices" in split_checkpoint
     if use_saved_splits:
         saved_splits = split_checkpoint["split_indices"]
@@ -1106,6 +1232,10 @@ def train(args: argparse.Namespace) -> None:
         if saved_manifest["dataset_identity"] != identity:
             raise ValueError("数据窗口、源文件元信息或动作窗口设置改变，不能复用对照划分")
         saved_splits = saved_manifest["split_indices"]
+        if getattr(dataset, "oxe_window_manifest", None) is not None:
+            if (saved_splits != dataset.oxe_window_splits
+                    or saved_manifest.get("target_binding") != dataset.oxe_window_manifest["target_binding"]):
+                raise ValueError("对照窗口必须保持冻结演示分区和完整目标绑定")
         validate_split_indices(dataset, saved_splits)
         if bridge_selection and saved_splits != bridge_plan_splits(dataset):
             raise ValueError("对照清单与固定Bridge计划分区不一致")
@@ -1117,6 +1247,10 @@ def train(args: argparse.Namespace) -> None:
         print(f"[数据划分] 精确复用对照清单：{args.split_manifest}")
         if native_fit:
             print("[隔离] 只复用源文件/观测窗口/演示分区；标签长度和输入编码已变，不作为同任务公平对照")
+    if getattr(dataset, "oxe_window_manifest", None) is not None:
+        train_indices, validation_indices, test_indices = (
+            list(dataset.oxe_window_splits[name]) for name in ("train", "validation", "test"))
+        print("[数据划分] 使用已冻结OXE整演示角色，不随训练seed重新分配")
     if not args.overfit_samples:
         splits = {"train": train_indices, "validation": validation_indices, "test": test_indices}
         validate_split_indices(dataset, splits)
@@ -1124,6 +1258,10 @@ def train(args: argparse.Namespace) -> None:
                           "bcz_target": dataset.bcz_target, "chunk_size": dataset.chunk_size,
                           "dataset_size": len(dataset), "dataset_identity": dataset_split_identity(dataset),
                           "split_indices": splits,
+                          **({"target_binding": dataset.oxe_window_manifest["target_binding"],
+                              "oxe_window_manifest_sha256": dataset.oxe_window_manifest_sha256,
+                              "engineering_only": True, "formal_training_admitted": False}
+                             if getattr(dataset, "oxe_window_manifest", None) is not None else {}),
                           **({"bridge_current_gripper": args.bridge_current_gripper,
                               "bridge_gripper_policy": args.bridge_gripper_policy,
                               "bridge_episode_selection": bridge_selection,
@@ -1255,6 +1393,27 @@ def train(args: argparse.Namespace) -> None:
         f"[训练 3/6] 按完整轨迹划分：训练={len(train_indices)}，"
         f"验证={len(validation_indices)}，测试={len(test_indices)}"
     )
+    language_augmentor = None
+    language_condition_counts = Counter()
+    if language_mode != "disabled":
+        from language_training_conditions import build_language_control
+        if any(not str(dataset.samples[i]["source"]).startswith("tfrecord_") for i in train_indices):
+            raise ValueError("主四条件入口只使用OXE训练源，不将LIBERO/CLIPort测试演示混入训练")
+        language_augmentor = build_language_control(
+            language_mode, args.seed, dataset_split_identity(dataset),
+            train_indices, {i: dataset.group_key(i) for i in train_indices},
+            bank_path=args.language_bank,
+            original_catalog_path=getattr(args,"original_instruction_catalog",None),
+            negative_fraction=getattr(args, "counterfactual_fraction", None),
+        )
+    if resume_checkpoint is not None:
+        from language_training_conditions import validate_resume_contract
+        validate_resume_contract(resume_checkpoint.get("language_condition"),
+                                 language_augmentor.contract if language_augmentor else None)
+        language_condition_counts.update(resume_checkpoint.get("language_condition_counts", {}))
+    if language_augmentor is not None:
+        (output_dir / "language_condition.json").write_text(
+            json.dumps(language_augmentor.contract, ensure_ascii=False, indent=2), encoding="utf-8")
     generator = torch.Generator().manual_seed(args.seed)
     train_schema_counts = Counter(
         str(dataset.samples[index]["source"]) for index in train_indices
@@ -1270,7 +1429,7 @@ def train(args: argparse.Namespace) -> None:
         + ("按 schema 均衡抽样" if train_sampler is not None else "按全部片段普通随机抽样")
     )
     train_subset = Subset(dataset, train_indices)
-    if args.offline_command_experiment:
+    if args.offline_command_experiment or language_augmentor is not None:
         train_subset = IndexedTrainingSubset(dataset, train_indices)
     if overfit_items is not None:
         train_subset = overfit_items  # 一次解码后缓存；每轮不再重读 TFRecord。
@@ -1282,7 +1441,7 @@ def train(args: argparse.Namespace) -> None:
         shuffle=train_sampler is None,
         sampler=train_sampler,
         generator=generator if train_sampler is None else None,
-        collate_fn=collate_indexed_training if (args.offline_command_experiment or args.gripper_only_fit_from) else collate_batch,
+        collate_fn=collate_indexed_training if (args.offline_command_experiment or args.gripper_only_fit_from or language_augmentor is not None) else collate_batch,
         drop_last=False,
         num_workers=args.workers,
         pin_memory=torch.cuda.is_available(),
@@ -1350,18 +1509,30 @@ def train(args: argparse.Namespace) -> None:
         )
     )
 
-    print(f"[训练 4/6] 加载冻结的 CLIP 主干：{args.model_name}")
-    tokenizer = CLIPTokenizer.from_pretrained(args.model_name, cache_dir=args.cache_dir)
+    print(f"[训练 4/6] 冻结视觉={visual_backbone}；冻结CLIP文本={args.model_name}")
+    tokenizer = CLIPTokenizer.from_pretrained(args.model_name, cache_dir=args.cache_dir,
+        **({"local_files_only": True} if visual_backbone == "dinov2" else {}))
     config = (
         resume_checkpoint["config"]
         if resume_checkpoint is not None
         else build_config(args)
     )
+    if config["model"].get("visual_backbone", "clip") != visual_backbone:
+        raise ValueError("恢复检查点的视觉骨干与当前入口不同，禁止CLIP/DINO隐式切换")
+    if visual_backbone == "dinov2":
+        requested_visual = build_config(args)["model"]
+        for key in ("name", "visual_input_contract", "visual_asset_identity", "dino_assets"):
+            if config["model"].get(key) != requested_visual.get(key):
+                raise ValueError("DINO恢复视觉/文本配置不同：" + key)
+        if config["action"].get("max_normalized_position") != build_config(args)["action"]["max_normalized_position"]:
+            raise ValueError("DINO恢复时不能改变位置输出限制")
+    if (config.get("model", {}).get("current_gripper_encoding") == "last_command_with_availability_v1") != bool(getattr(args, "oxe_command_input", False)):
+        raise ValueError("检查点模型的夹爪输入配置与当前数据输入模式不同")
     checkpoint_representation = config.get("action", {}).get("representation")
-    if checkpoint_representation != ACTION_REPRESENTATION:
+    if checkpoint_representation != expected_action_representation:
         raise ValueError(
-            "checkpoint 使用旧的绝对坐标动作，不能与新的相对动作数据继续训练。"
-            f"期望={ACTION_REPRESENTATION!r}，实际={checkpoint_representation!r}。"
+            "checkpoint动作坐标表示与当前数据不一致，不能自动转换权重。"
+            f"期望={expected_action_representation!r}，实际={checkpoint_representation!r}。"
             "请不要使用 --resume，重新训练到新的输出目录。"
         )
     if not bool(config.get("model", {}).get("separate_gripper_head", False)):
@@ -1407,7 +1578,7 @@ def train(args: argparse.Namespace) -> None:
         source_representation = (
             init_checkpoint["config"].get("action", {}).get("representation")
         )
-        if source_representation != ACTION_REPRESENTATION:
+        if source_representation != expected_action_representation:
             raise ValueError("--init-from 的动作表示与当前相对动作不兼容")
         current_state = model.state_dict()
         compatible_state = {}
@@ -1575,6 +1746,11 @@ def train(args: argparse.Namespace) -> None:
             instructions, images, current_grippers, actions, supervision_masks = batch[:5]
             if (args.max_steps_per_epoch or (20 if args.overfit_samples else 0)) and step_count >= (args.max_steps_per_epoch or 20):
                 break
+            if language_augmentor is not None:
+                instructions, actions, supervision_masks, choices = language_augmentor.apply(
+                    instructions, actions, supervision_masks, batch[5], epoch=epoch, step=step_count)
+                from language_training_conditions import language_record_counts
+                language_condition_counts.update(language_record_counts(choices))
             text = tokenise(tokenizer, instructions, device)
             device_actions = actions.to(device, non_blocking=True)
             model_output = model(
@@ -1728,6 +1904,8 @@ def train(args: argparse.Namespace) -> None:
             print(f"[基线] 保持位置误差={action_metrics['zero_motion_position_error_cm']:.2f}cm；保持姿态误差={action_metrics['identity_rotation_error_deg']:.2f}°")
 
         checkpoint = {
+            **({"language_condition": language_augmentor.contract,
+                "language_condition_counts": dict(language_condition_counts)} if language_augmentor else {}),
             "epoch": epoch,
             "trainable_state_dict": trainable_state_dict(model),
             "optimizer_state_dict": optimizer.state_dict(),
@@ -1762,6 +1940,9 @@ def train(args: argparse.Namespace) -> None:
                 "bcz_current_gripper": args.bcz_current_gripper,
                 "bridge_gripper_policy": args.bridge_gripper_policy,
                 "bridge_current_gripper": args.bridge_current_gripper,
+                **({"oxe_command_input": True} if getattr(args, "oxe_command_input", False) else {}),
+                **({"action_frame": action_frame, "language_table_groups_sha256": dataset.language_table_groups_sha256}
+                   if action_frame != "tool" else {}),
                 "rt1_gripper_policy": args.rt1_gripper_policy,
                 "bcz_reached_gripper_policy": args.bcz_reached_gripper_policy,
                 "bridge_episode_selection": bridge_selection,
@@ -1770,7 +1951,7 @@ def train(args: argparse.Namespace) -> None:
                                 "bridge_single_task_offline_diagnostic" if bridge_selection else
                                 "training_fit_diagnostic" if args.overfit_samples else
                                 "offline_command_pilot" if args.offline_command_experiment else "held_out_training"),
-            **({"dataset_identity": dataset_split_identity(dataset)} if bridge_selection else {}),
+            **({"dataset_identity": dataset_split_identity(dataset)} if bridge_selection or action_frame != "tool" else {}),
             "run_arguments": vars(args),
             "gripper_only_fit_from": args.gripper_only_fit_from,
             "pool_fit_from": args.pool_fit_from,
@@ -1800,6 +1981,30 @@ def train(args: argparse.Namespace) -> None:
 def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
     project_root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="训练冻结 CLIP + Adapter + 动作解码器", fromfile_prefix_chars="@")
+    parser.add_argument("--oxe-nominal-targets", help="显式新名义5Hz目标目录；不替换旧raw-row标签")
+    parser.add_argument("--oxe-nominal-source-map", help="可选逻辑分片到本地D/E盘实际位置映射；集群默认dataset-dir下逻辑路径")
+    parser.add_argument("--oxe-nominal-validation-targets", help="可选独立冻结validation角色标签目录；不从train随机划分")
+    parser.add_argument("--oxe-input-preflight", action="store_true", help="名义训练输入接线短检查，至多8更新、无验证/性能结论，不能冒充正式训练")
+    parser.add_argument("--oxe-formal-protocol", help="显式有界OXE离线训练协议；披露名义时间/单位与跨机器人假设，独立于短预检")
+    parser.add_argument("--oxe-preflight-binding", help="实际通过的集群预检元数据绑定；不加载预检学习权重")
+    parser.add_argument("--total-updates", type=int,
+                        help="显式启用固定总更新模式；不使用epochs/max-steps-per-epoch截断。")
+    parser.add_argument("--step-resume", help="只恢复固定更新模式的完整状态；不能与旧resume/init-from混用。")
+    parser.add_argument("--stop-after-updates", type=int,
+                        help="本段停止时的全局更新数；不改变总预算或学习率时域。")
+    parser.add_argument("--checkpoint-every-updates", type=int, default=1000)
+    parser.add_argument("--validate-every-updates", type=int, default=1000)
+    parser.add_argument("--warmup-updates", type=int, default=0)
+    parser.add_argument("--step-diffusion-architecture", choices=("compact", "multiscale"),
+                        help="固定更新模式须显式选择结构；旧入口默认结构不变。")
+    parser.add_argument("--language-condition", default="disabled",
+                        choices=("disabled", "no_augmentation", "paraphrase_only", "counterfactual_only", "combined"),
+                        help="显式四条件入口；默认不改变既有训练行为")
+    parser.add_argument("--language-bank", help="仅训练分区的已审阅语言增强库JSON")
+    parser.add_argument("--original-instruction-catalog",
+                        help="no_augmentation可单独绑定原始训练指令目录，不等待同义/反事实语言库")
+    parser.add_argument("--counterfactual-fraction", type=float,
+                        help="仅反事实/组合条件必须显式固定同一比例，不从验证表现调节")
     parser.add_argument(
         "--dataset-dir",
         default=str(project_root / "training_cache" / "oxe_core"),
@@ -1839,6 +2044,11 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument("--model-name", default="openai/clip-vit-large-patch14")
+    parser.add_argument("--visual-backbone", choices=("clip", "dinov2"), default="clip",
+                        help="主LIBERO显式选择dinov2；clip默认保留旧实验兼容性，文本仍使用model-name")
+    parser.add_argument("--dino-assets", help="已校验的本地DINOv2 ViT-L/14资产目录；无自动下载")
+    parser.add_argument("--max-normalized-position", type=float, default=3.0,
+                        help="显式归一化位置输出限制；旧默认3保持兼容，正式值仅按已资格训练标签及最终尺度确定")
     parser.add_argument(
         "--fusion-type",
         choices=("cross_attention", "simple_concat"),
@@ -1850,6 +2060,11 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
                         help="Fixed Bridge plan only: retain window starts from this horizon while predicting a shorter chunk.")
     parser.add_argument("--bcz-target", choices=("reached", "first_command", "native_commands"), default="reached", help="默认未来实际状态；native_commands仅用于固定窗口诊断或显式完整池离线基线。")
     parser.add_argument("--bcz-current-gripper", choices=("binary", "continuous"), default="binary", help="默认不变；continuous仅用于native_commands诊断/离线基线，从头训练。")
+    parser.add_argument("--oxe-command-input", action="store_true", help="显式新模式：上一已知命令+可用性两维输入；不兼容旧测量输入，Language Table仍需坐标验收。")
+    parser.add_argument("--action-frame", choices=("tool", "source_cartesian"), default="tool",
+                        help="默认保持旧工具坐标；新模式统一源笛卡尔位移/左乘相对旋转，不转换旧模型。")
+    parser.add_argument("--language-table-groups", help="新笛卡尔模式中真实Language Table身份与共享帧组清单。")
+    parser.add_argument("--oxe-window-manifest", help="显式固定OXE窗口/整演示分区；当前仅支持prepare-only，不代表物理来源已验收。")
     parser.add_argument("--bridge-gripper-policy", choices=("threshold_v1", "reverse_scan_v1", "reverse_scan_valid_steps_v2"), default="threshold_v1", help="旧默认不变；v2先排除无效末步再扫描，新策略须显式启用并从头建立实验。")
     parser.add_argument("--offline-command-experiment", action="store_true", help="显式开放固定演示分区的BC-Z一步或原生10步回归离线基线；不作为闭环模型。")
     parser.add_argument("--native-adapter-comparison", action="store_true", help="仅原生10步离线完整池：显式启用CLS+patch交叉注意力对照；不改变动作语义或闭环限制。")

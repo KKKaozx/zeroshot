@@ -1,0 +1,8 @@
+{
+  "stage": "preflight_launcher_only",
+  "updates": 0,
+  "model_loaded": false,
+  "error": "CPU preparation wrapper set CUDA_VISIBLE_DEVICES=-1 before GPU module import",
+  "resolution": "Invoke the existing GPU preflight module directly in a fresh process; do not import the CPU collection wrapper",
+  "production_model_changed": false
+}

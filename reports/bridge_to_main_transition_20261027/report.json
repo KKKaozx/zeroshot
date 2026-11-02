@@ -1,0 +1,291 @@
+{
+  "scope": "Existing code/metadata and recorded gradients only; no causal ablation",
+  "model_or_raw_dataset_loaded": false,
+  "training_updates": 0,
+  "neural_forward_calls": 0,
+  "simulator_steps": 0,
+  "cluster_jobs_submitted": 0,
+  "source_evidence": [
+    {
+      "path": "reports/bridge-coverage-rep-fit-207558/runner_snapshot.py",
+      "sha256": "9f1ae8751bac9fea32c4c72fa3b6d5267efe003a8f4b354b704e7695e241ab3a",
+      "line": 99,
+      "text": "return now+model.history_projection(repeated-now)+model.state_projection(state[indices])"
+    },
+    {
+      "path": "cluster_packages/bridge_state_conditioning_v1/state_input_contract.py",
+      "sha256": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+      "line": 17,
+      "text": "out=np.concatenate([xyz,columns],axis=1).astype('<f4')"
+    },
+    {
+      "path": "code/models.py",
+      "sha256": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+      "line": 270,
+      "text": "def get_context_vector("
+    },
+    {
+      "path": "code/models.py",
+      "sha256": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+      "line": 320,
+      "text": "training_target = diffusion_targets if self.diffusion_prediction_type == \"sample\" else noise"
+    },
+    {
+      "path": "code/models.py",
+      "sha256": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+      "line": 391,
+      "text": "if self.diffusion_prediction_type == \"sample\":"
+    },
+    {
+      "path": "code/adapter.py",
+      "sha256": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "line": 108,
+      "text": "if self.pooling == \"cls_patch_mean\":"
+    },
+    {
+      "path": "cluster_packages/bridge_growth128_v1/dataset.py",
+      "sha256": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+      "line": 141,
+      "text": "local_delta = rotate_vector(target_position - reference_position, inverse_reference)"
+    },
+    {
+      "path": "code/oxe_nominal_timing.py",
+      "sha256": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+      "line": 115,
+      "text": "target[:count,:width]=((target_position-p[start])/position_divisor).astype(np.float32)"
+    },
+    {
+      "path": "code/step_training_runner.py",
+      "sha256": "7dda16ccb466160cd82f6983b98064475f43aba394da439a06f69488b56e7d10",
+      "line": 291,
+      "text": "output = model(images.to(device), text['input_ids'], attention_mask=text.get('attention_mask'),"
+    }
+  ],
+  "configuration_comparison": {
+    "adapter_pooling": {
+      "old": "cls_patch_mean",
+      "current": "cls"
+    },
+    "diffusion_prediction_type": {
+      "old": "sample",
+      "current": "epsilon"
+    },
+    "clip_denoised": {
+      "old": true,
+      "current": true
+    },
+    "diffusion_architecture": {
+      "old": "multiscale",
+      "current": "multiscale"
+    },
+    "num_diffusion_steps": {
+      "old": 100,
+      "current": 100
+    },
+    "beta_schedule": {
+      "old": "squaredcos_cap_v2",
+      "current": "squaredcos_cap_v2"
+    },
+    "current_gripper_encoding": {
+      "old": "bridge_measured_affine_unbounded_v1",
+      "current": "last_command_with_availability_v1"
+    },
+    "num_adapter_layers": {
+      "old": 8,
+      "current": 8
+    }
+  },
+  "old_action": {
+    "representation": "tool_relative_pose_open_positive_v2",
+    "position_scale_meters": 0.1,
+    "max_normalized_position": 3.0,
+    "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+  },
+  "current_action": {
+    "representation": "source_cartesian_delta_pose_open_positive_v1",
+    "position_scale_meters": 0.1,
+    "max_normalized_position": 8.0,
+    "dimensions": "source_dx_dy_dz+left_dqx_dqy_dqz_dqw+gripper",
+    "nominal_target_binding": {
+      "format": "oxe-nominal-target-set-v1",
+      "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+      "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+      "label_family": "nominal_resampled_observed_reached_pose",
+      "clock_basis": "user_selected_published_nominal_frequency_assumption",
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "source_units_or_formal_training_admitted": false,
+      "partition_bindings": {
+        "train": {
+          "format": "oxe-nominal-target-binding-v1",
+          "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+          "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+          "label_family": "nominal_resampled_observed_reached_pose",
+          "clock_basis": "user_selected_published_nominal_frequency_assumption",
+          "target_times_seconds": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1.0,
+            1.2,
+            1.4,
+            1.6,
+            1.8,
+            2.0,
+            2.2,
+            2.4,
+            2.6,
+            2.8,
+            3.0,
+            3.2
+          ],
+          "source_units_or_formal_training_admitted": false
+        },
+        "validation": {
+          "format": "oxe-nominal-target-binding-v1",
+          "dataset_identity": "e4cd9b9f6c528170cbdd1dd6f8227a2da9d764ae81a47767fab9319b5f20db5e",
+          "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+          "label_family": "nominal_resampled_observed_reached_pose",
+          "clock_basis": "user_selected_published_nominal_frequency_assumption",
+          "target_times_seconds": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1.0,
+            1.2,
+            1.4,
+            1.6,
+            1.8,
+            2.0,
+            2.2,
+            2.4,
+            2.6,
+            2.8,
+            3.0,
+            3.2
+          ],
+          "source_units_or_formal_training_admitted": false,
+          "partition": "validation"
+        }
+      }
+    },
+    "source_position_to_meters_verified": false
+  },
+  "old_pose_input": {
+    "features": "normalized measured XYZ plus6D rotation columns",
+    "input_row": "current start row only",
+    "projected_to_context": true,
+    "gradients": [
+      {
+        "update": 1,
+        "state_projection_gradient_norm": 0.10402243584394455
+      },
+      {
+        "update": 4096,
+        "state_projection_gradient_norm": 0.007229711394757032
+      },
+      {
+        "update": 4097,
+        "state_projection_gradient_norm": 0.012492910958826542
+      },
+      {
+        "update": 8192,
+        "state_projection_gradient_norm": 0.009964123368263245
+      }
+    ]
+  },
+  "current_pose_input": {
+    "measured_xyz_orientation_to_neural_context": false,
+    "pose_denoiser_current_gripper_input": false,
+    "current_command_features": "last command and availability, separate gripper head only",
+    "execution_reference_pose_is_not_neural_input": true
+  },
+  "image_prepare_function_ast_equal": true,
+  "bridge_timing": {
+    "old": "rows start+1 through start+16",
+    "current": "same integer future rows under nominal Bridge5Hz to output5Hz; partial tails masked",
+    "interpolated_bridge_targets_at_noninteger_rows": false,
+    "measured_frame_timestamps_verified": false
+  },
+  "sampling": {
+    "old": "3 DDPM draws per window, average errors; not average trajectories",
+    "current_diagnostic": "one predetermined draw per window; not seed matched to old",
+    "steps_both": 100,
+    "beta_schedule_both": "squaredcos_cap_v2"
+  },
+  "population_overlap": {
+    "train": {
+      "bridge_episodes": 1151,
+      "bridge_windows": 10352,
+      "old_roles": {
+        "train": {
+          "old_episodes": 405,
+          "old_windows": 1836,
+          "exact_episode_key_overlap": 10,
+          "exact_window_key_overlap": 51
+        },
+        "development": {
+          "old_episodes": 10,
+          "old_windows": 40,
+          "exact_episode_key_overlap": 0,
+          "exact_window_key_overlap": 0
+        },
+        "independent_heldout": {
+          "old_episodes": 13,
+          "old_windows": 60,
+          "exact_episode_key_overlap": 0,
+          "exact_window_key_overlap": 0
+        }
+      },
+      "selected8_exact_old_window_overlap": 0
+    },
+    "validation": {
+      "bridge_episodes": 144,
+      "bridge_windows": 1287,
+      "old_roles": {
+        "train": {
+          "old_episodes": 405,
+          "old_windows": 1836,
+          "exact_episode_key_overlap": 1,
+          "exact_window_key_overlap": 6
+        },
+        "development": {
+          "old_episodes": 10,
+          "old_windows": 40,
+          "exact_episode_key_overlap": 0,
+          "exact_window_key_overlap": 0
+        },
+        "independent_heldout": {
+          "old_episodes": 13,
+          "old_windows": 60,
+          "exact_episode_key_overlap": 0,
+          "exact_window_key_overlap": 0
+        }
+      },
+      "selected8_exact_old_window_overlap": 0
+    }
+  },
+  "exact_key_overlap_does_not_prove_or_exclude_duplicate_payload_origin": true,
+  "causal_backbone_effect_identified": false,
+  "main_weights_labels_and_sampler_modified": false,
+  "conclusion": "Multiple substantive changes separate old Bridge from current main. Neither a DINO regression nor a unique cause is established. Pose-input removal, x0-to-epsilon objective and CLS pooling are concrete differences, not proof any one caused the error.",
+  "next_scope": "Review traceable reasons for the three substantive changes and existing generation evidence; no automatic retraining, backbone rollback, or repeat of the prior spatial branch."
+}

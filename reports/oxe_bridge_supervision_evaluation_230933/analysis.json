@@ -1,0 +1,45 @@
+{
+  "job_id": 230933,
+  "arithmetic_recomputed_from_pasted_means": true,
+  "comparisons": {
+    "path_position_normalized": {
+      "candidate_improvement_vs_mixed_percent": 2.890830173393237,
+      "candidate_error_above_static_percent": 37.750355623739196,
+      "mixed_error_above_static_percent": 41.85102794071794,
+      "candidate_minus_mixed_interval_excludes_zero": true
+    },
+    "path_rotation_deg": {
+      "candidate_improvement_vs_mixed_percent": -0.13782746036213023,
+      "candidate_error_above_static_percent": 44.02525597356549,
+      "mixed_error_above_static_percent": 43.82702284066973,
+      "candidate_minus_mixed_interval_excludes_zero": false
+    },
+    "endpoint_position_normalized": {
+      "candidate_improvement_vs_mixed_percent": 4.636838633343024,
+      "candidate_error_above_static_percent": 41.15640722224996,
+      "mixed_error_above_static_percent": 48.01984875430551,
+      "candidate_minus_mixed_interval_excludes_zero": true
+    },
+    "endpoint_rotation_deg": {
+      "candidate_improvement_vs_mixed_percent": 1.6593746986282403,
+      "candidate_error_above_static_percent": 47.08118888419811,
+      "mixed_error_above_static_percent": 49.56299945567508,
+      "candidate_minus_mixed_interval_excludes_zero": false
+    }
+  },
+  "position_gap_to_static_closed_fraction": 0.09798259490274303,
+  "all_four_candidate_metrics_still_worse_than_static": true,
+  "conclusion": "Removing non-Bridge supervised numerators yields modest position improvement at fixed Bridge exposure, with group-bootstrap intervals below zero; rotation effect unresolved. Both policies remain worse than static on all four metrics.",
+  "causal_scope": "Supports a limited harmful contribution of other-source supervision in this bounded run, not a universal conclusion about dataset mixing or training-seed robustness.",
+  "not_excluded": [
+    "Bridge exposure/coverage insufficiency",
+    "Changes in state conditioning, denoising target or readout",
+    "Source label/action semantics and their interactions"
+  ],
+  "decision": "Close this bounded supervision-removal diagnostic without extra training, seeds or reruns; retain both complete results. Keep main LIBERO paused.",
+  "next_proposed_control": "Isolate old sample/x0 versus epsilon under the known effective Bridge+DINO recipe, preserving state conditioning/readout/data/optimizer; inspect archived implementation before any new bounded run.",
+  "new_training_submitted": false,
+  "new_control_implemented": false,
+  "main_policy_replaced": false,
+  "libero_success_claim": false
+}

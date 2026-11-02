@@ -1,0 +1,258 @@
+{
+  "date": "2026-10-15",
+  "status": "completed",
+  "root": "D:\\ntu_related\\dissertation\\Zero_shot",
+  "plan_sha256": "126540131d15260e541ddfdc8627eccfea7a52072afea9f5f7c2921bd9de56e0",
+  "free_bytes_before": 70181220352,
+  "deleted": [
+    {
+      "path": "results/bcz_balanced_fit_v1/latest.pt",
+      "bytes": 28519981,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.6595049Z"
+    },
+    {
+      "path": "results/bcz_cls_regression_fit_control_v1/latest.pt",
+      "bytes": 649942357,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.6714407Z"
+    },
+    {
+      "path": "results/bcz_first_command_fit_v1/latest.pt",
+      "bytes": 649572437,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.6773620Z"
+    },
+    {
+      "path": "results/bcz_first_command_pilot_v1/latest.pt",
+      "bytes": 649590357,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.6828971Z"
+    },
+    {
+      "path": "results/bcz_fusion_adapter_v1/latest.pt",
+      "bytes": 649593301,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.6893598Z"
+    },
+    {
+      "path": "results/bcz_fusion_simple_v1/latest.pt",
+      "bytes": 28534893,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.6951020Z"
+    },
+    {
+      "path": "results/bcz_generalization_regression_v1/latest.pt",
+      "bytes": 649960725,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7021445Z"
+    },
+    {
+      "path": "results/bcz_generalization_x0_v1/latest.pt",
+      "bytes": 719947237,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7085254Z"
+    },
+    {
+      "path": "results/bcz_gripper_head_legacy_400_v1/latest.pt",
+      "bytes": 11748413,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7141167Z"
+    },
+    {
+      "path": "results/bcz_gripper_head_legacy_v1/latest.pt",
+      "bytes": 11742077,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7197888Z"
+    },
+    {
+      "path": "results/bcz_gripper_head_mlp2_400_v1/latest.pt",
+      "bytes": 13331133,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7253105Z"
+    },
+    {
+      "path": "results/bcz_gripper_head_mlp2_v1/latest.pt",
+      "bytes": 13324797,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7311535Z"
+    },
+    {
+      "path": "results/bcz_gripper_only_fit_v1/latest.pt",
+      "bytes": 11740861,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7366210Z"
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_low_v1/latest.pt",
+      "bytes": 651385765,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7431293Z"
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_split_v1/latest.pt",
+      "bytes": 651385765,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7498563Z"
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_v1/latest.pt",
+      "bytes": 651385701,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7558446Z"
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_lr_split_v1/latest.pt",
+      "bytes": 651443429,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7620994Z"
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_smoke_v1/latest.pt",
+      "bytes": 651398629,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7688699Z"
+    },
+    {
+      "path": "results/bcz_native_pool_adapter_v1/latest.pt",
+      "bytes": 651443365,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7754132Z"
+    },
+    {
+      "path": "results/bcz_native_pool_baseline_v1/latest.pt",
+      "bytes": 30384373,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7830667Z"
+    },
+    {
+      "path": "results/bcz_native_pool_smoke_v1/latest.pt",
+      "bytes": 30339573,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7885278Z"
+    },
+    {
+      "path": "results/bcz_native_sequence_fit_v1/latest.pt",
+      "bytes": 28743277,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.7943910Z"
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v2/latest.pt",
+      "bytes": 719930917,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8010376Z"
+    },
+    {
+      "path": "results/bcz_overfit_regression_v1/latest.pt",
+      "bytes": 649944533,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8075067Z"
+    },
+    {
+      "path": "results/bcz_overfit_x0_v1/latest.pt",
+      "bytes": 719931109,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8137220Z"
+    },
+    {
+      "path": "results/bcz_patch_pool_regression_fit_v1/latest.pt",
+      "bytes": 649942357,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8203355Z"
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_fit_v1/latest.pt",
+      "bytes": 651385829,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8267922Z"
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_rotation4_v1/latest.pt",
+      "bytes": 651385893,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8327198Z"
+    },
+    {
+      "path": "results/bridge_fixed_fit_constant_lr_v1/latest.pt",
+      "bytes": 128044469,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8381055Z"
+    },
+    {
+      "path": "results/bridge_fixed_fit_v1/latest.pt",
+      "bytes": 128044469,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8435058Z"
+    },
+    {
+      "path": "results/bridge_single_step_v1/training/latest.pt",
+      "bytes": 127845813,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8496369Z"
+    },
+    {
+      "path": "results/bridge_single_task_pilot_v1/latest.pt",
+      "bytes": 128023221,
+      "category": "old latest checkpoint",
+      "time_utc": "2026-10-15T05:14:51.8553212Z"
+    },
+    {
+      "path": "reports/bridge_author_obs_results_203876.tar.gz",
+      "bytes": 106850,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8610934Z"
+    },
+    {
+      "path": "reports/bridge_author_preflight_results_203498.tar.gz",
+      "bytes": 52456,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8666995Z"
+    },
+    {
+      "path": "reports/bridge_author_reference_results_203699.tar.gz",
+      "bytes": 974946,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8727997Z"
+    },
+    {
+      "path": "reports/bridge_history_results_204258.tar.gz",
+      "bytes": 4785430,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8787839Z"
+    },
+    {
+      "path": "reports/bridge_project_condition_results_204017.tar.gz",
+      "bytes": 371736,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8850302Z"
+    },
+    {
+      "path": "reports/bridge_state_rep_results_202463.tar.gz",
+      "bytes": 14665124,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8923579Z"
+    },
+    {
+      "path": "reports/bridge_state_results_202278.tar.gz",
+      "bytes": 14678062,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.8994264Z"
+    },
+    {
+      "path": "training_cache/exports/bridge_expansion_training_v1.zip",
+      "bytes": 727974763,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.9618067Z"
+    },
+    {
+      "path": "training_cache/exports/multitask_training_v1.zip",
+      "bytes": 101015610,
+      "category": "verified redundant archive",
+      "time_utc": "2026-10-15T05:14:51.9764314Z"
+    }
+  ],
+  "deleted_bytes": 13504562033,
+  "error": null,
+  "free_bytes_after": 83685855232
+}

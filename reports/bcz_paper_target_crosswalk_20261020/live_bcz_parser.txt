@@ -1,0 +1,108 @@
+    def _get_tfrecord_bc_z_pose(
+        self, sample: Dict[str, Any]
+    ) -> Tuple[str, torch.Tensor, torch.Tensor, torch.Tensor]:
+        """Read BC-Z reached poses and convert them to the common 8-D target.
+
+        BC-Z observations expose absolute tool position, an absolute axis-angle
+        orientation and sensed gripper closedness.  The dataset also contains
+        ten future residual targets. Default mode predicts reached observations;
+        first_command is a diagnostic using only native target zero, NOT the
+        next observed state. The sensed closedness threshold of 0.5 remains an
+        explicit project convention, not an officially verified calibration.
+        native_commands keeps all ten matching native targets and continuous
+        sensed closure; it is enabled only for isolated training-fit diagnosis.
+        """
+        from PIL import Image
+
+        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"])
+        feature = example.features.feature
+        language_key = "steps/observation/natural_language_instruction"
+        image_key = "steps/observation/image"
+        languages = feature[language_key].bytes_list.value
+        images = feature[image_key].bytes_list.value
+        step_count = len(languages)
+        xyz = np.asarray(
+            feature["steps/observation/present/xyz"].float_list.value,
+            dtype=np.float32,
+        )
+        axis_angle = np.asarray(
+            feature["steps/observation/present/axis_angle"].float_list.value,
+            dtype=np.float32,
+        )
+        sensed_close = np.asarray(
+            feature["steps/observation/present/sensed_close"].float_list.value,
+            dtype=np.float32,
+        )
+        if (
+            step_count == 0
+            or len(images) != step_count
+            or xyz.size != step_count * 3
+            or axis_angle.size != step_count * 3
+            or sensed_close.size != step_count
+        ):
+            raise ValueError("BC-Z TFRecord fields have inconsistent lengths")
+        xyz = xyz.reshape(step_count, 3)
+        axis_angle = axis_angle.reshape(step_count, 3)
+        sensed_close = sensed_close.reshape(step_count)
+
+        start = int(sample["start_index"])
+        reference_position = xyz[start]
+        reference_quaternion = rotation_vector_to_quaternion(axis_angle[start])
+        current_gripper = 1.0 if float(sensed_close[start]) < 0.5 else -1.0
+        if self.bcz_target in {"first_command", "native_commands"}:
+            def command_values(key):
+                field = feature[key]
+                kind = field.WhichOneof("kind")
+                return np.asarray(getattr(field, kind).value, dtype=np.float32) if kind else np.asarray([])
+            residual = command_values("steps/action/future/xyz_residual")
+            angular = command_values("steps/action/future/axis_angle_residual")
+            close = command_values("steps/action/future/target_close")
+            if residual.size != step_count * 30 or angular.size != step_count * 30 or close.size != step_count * 10:
+                raise ValueError("BC-Z first-command fields must contain 10 targets per observation")
+            residual = residual.reshape(step_count, 10, 3)[start]
+            angular = angular.reshape(step_count, 10, 3)[start]
+            close = close.reshape(step_count, 10)[start]
+            if self.bcz_target == "native_commands":
+                actions = torch.from_numpy(bcz_native_command_chunk(xyz[start], axis_angle[start], residual, angular, close))
+                current_gripper = float(bcz_continuous_gripper_observation(sensed_close[start]))
+            else:
+                actions = torch.from_numpy(bcz_first_command_action(xyz[start], axis_angle[start], residual[0], angular[0], close[0])).unsqueeze(0)
+            image = np.asarray(Image.open(io.BytesIO(images[start])).convert("RGB"))
+            return (languages[start].decode("utf-8", errors="replace"), prepare_image(image),
+                    torch.tensor([current_gripper], dtype=torch.float32), actions)
+        stop = min(step_count, start + self.chunk_size + 1)
+        actions: List[np.ndarray] = []
+        for target_index in range(start + 1, stop):
+            target_quaternion = rotation_vector_to_quaternion(axis_angle[target_index])
+            if getattr(self, "bcz_reached_gripper_policy", "future_measured_v1") == "preceding_command_v2":
+                field = feature["steps/action/future/target_close"]
+                kind = field.WhichOneof("kind")
+                commands = np.asarray(getattr(field, kind).value, dtype=np.float32) if kind else np.asarray([])
+                if commands.size != step_count * 10 or not np.isfinite(commands).all():
+                    raise ValueError("BC-Z reached-pose labels require finite first commands")
+                closed = commands.reshape(step_count, 10)[target_index - 1, 0]
+            else:
+                closed = sensed_close[target_index]
+            gripper = 1.0 if float(closed) < 0.5 else -1.0
+            actions.append(
+                self._encode_oxe_reached_pose(
+                    reference_position,
+                    reference_quaternion,
+                    xyz[target_index],
+                    target_quaternion,
+                    gripper,
+                )
+            )
+
+        image = np.asarray(Image.open(io.BytesIO(images[start])).convert("RGB"))
+        instruction = languages[start].decode("utf-8", errors="replace")
+        current_input = torch.tensor([current_gripper], dtype=torch.float32)
+        if getattr(self, "oxe_command_input", False):
+            from oxe_source_semantics import last_command_features
+            field = feature["steps/action/future/target_close"]
+            kind = field.WhichOneof("kind")
+            commands = np.asarray(getattr(field, kind).value, dtype=np.float32) if kind else np.asarray([])
+            if commands.size != step_count * 10:
+                raise ValueError("BC-Z命令输入要求每观测10个原生夹爪命令")
+            current_input = torch.from_numpy(last_command_features("bc_z", commands.reshape(step_count, 10)[:start, 0]))
+        return (instruction, prepare_image(image), current_input, pad_action_chunk(actions, self.chunk_size))

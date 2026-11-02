@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "optimizer_updates": 0,
+  "repeat_loss_gradient_rng_exact": true,
+  "first_step": {
+    "loss": 0.02926858514547348,
+    "pose_loss": 0.01834685541689396,
+    "gripper_loss": 0.04368692263960838,
+    "unweighted_pose_loss": 0.03625645115971565,
+    "timesteps": [
+      30,
+      58,
+      41,
+      67,
+      35,
+      22,
+      49,
+      77
+    ],
+    "noisy_input_sha256": "0771a33ed21fb3916d1451f2e56d8e1f1479ada0a2e5ed6d46b3e73ec5ac29c0",
+    "rng_after_backward_sha256": "adbdecb05fb068465fbffcbbc39e4cd35dcea04799f6ff5ff90682fd63172e56",
+    "timestep_weight_mean": 0.9077154397964478,
+    "timestep_weight_min": 0.06430511176586151,
+    "timestep_weight_max": 2.523367404937744,
+    "gradients": "f65cdd7420ae91e366f48c8bbda244cd454bce0b6e9e3f786824169c729ba5d7",
+    "rng": "adbdecb05fb068465fbffcbbc39e4cd35dcea04799f6ff5ff90682fd63172e56"
+  }
+}

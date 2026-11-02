@@ -1,0 +1,89 @@
+{
+  "format": "bridge-timestep-repair-pair-v1",
+  "status": "prepared_for_review_not_submitted",
+  "source_job": 234100,
+  "source_checkpoint": "runs/bridge-full-capability-234100/final_policy.pt",
+  "source_checkpoint_sha256": "03682dc1760973bcc55b2baee1de2762561129d97c86fe495ad5f30734b1c554",
+  "source_report_sha256": "9e950be6a4eea01efe45f451273017f251d7cb9084af9a2d3b51bd473fb4af35",
+  "frozen_source_protocol_sha256": "d75110b351744833c18f536f8bed905f8a6165f65c59d3bc53a8c723389f964d",
+  "hypothesis": "Rebalance x0 denoising timestep objective to reduce local reconstruction bias while preserving learned positions; not an established root cause",
+  "arms": [
+    "uniform",
+    "min_snr5_grid_mean_one"
+  ],
+  "weights": "SNR=alpha_bar/(1-alpha_bar); candidate min(SNR,5)/mean_over_fixed100step_grid(min(SNR,5)); original valid-element denominator",
+  "gamma": 5,
+  "weight_normalization": "fixed_schedule_mean_one_not_batch_or_development_fit",
+  "initialization": "both arms same65536-step base+pose-port weights; new empty3group AdamW; no source Adam continuation",
+  "paired_training_seed": 42,
+  "batch_plan_seed": 20261030,
+  "train_windows": 10352,
+  "train_episodes": 1151,
+  "batch_size": 8,
+  "additional_updates_per_arm": 8192,
+  "total_optimizer_updates": 16384,
+  "schedule": {
+    "kind": "constant",
+    "base_lrs": [
+      1e-05,
+      1e-05,
+      1e-05
+    ],
+    "warmup_updates": 0
+  },
+  "unchanged": [
+    "source_label_units_and_nominal5Hz",
+    "H16_left_relative_xyzw",
+    "frozenDINO_and_CLIP_text",
+    "adapter_and_diffusion_and_gripper_architecture",
+    "current_pose_port_and_training_stats",
+    "gripper_loss_and_weight",
+    "100step_native_sampler",
+    "full_Bridge_train_subpool_and_existing_evaluation_groups"
+  ],
+  "paired_randomness": "same indices/LR/timesteps/noised_targets/post-backward RNG verified on every update",
+  "evaluation": {
+    "train": 128,
+    "validation": 64,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "source_endpoint_predictions": "reuse archived arrays; no resampling",
+    "checkpoint_selection": "final8192_only"
+  },
+  "acceptance": "Both roles inherited4pose means<static and path-position CIupper<0; both rotation means<cotrained control; dev path-rotation candidate-control CIupper<0; both position means<=234100*1.05 in both roles",
+  "hardware": "one NVIDIA A40",
+  "estimated_gpu_minutes": [
+    95,
+    110
+  ],
+  "slurm_hard_seconds": 7200,
+  "parent_process_cap_seconds": 6900,
+  "training_cap_seconds_per_arm": 3000,
+  "checkpoint_every": 2048,
+  "storage_reserve_gib": 8,
+  "checkpoint_retention": "one atomic latest Adam/RNG state plus one final policy per arm",
+  "on_stop": "retain evidence/checkpoint; no automatic retry/resume/extra updates or seed/weight sweep",
+  "formal_models_completed_by_this_pair": 0,
+  "libero_runs": 0,
+  "new_language_generation": 0,
+  "automatic_submission": false,
+  "method_reference": {
+    "paper": "https://openaccess.thecvf.com/content/ICCV2023/html/Hang_Efficient_Diffusion_Training_via_Min-SNR_Weighting_Strategy_ICCV_2023_paper.html",
+    "author_implementation": "https://github.com/TiankaiHang/Min-SNR-Diffusion-Training/blob/main/guided_diffusion/gaussian_diffusion.py",
+    "difference": "Our fixed-grid mean-one normalization is explicit; image-domain evidence does not prove robot improvement"
+  },
+  "missing_physical_registration_blocks_this_source_training_preparation": false,
+  "runtime_revision": "v1r1_complete_cpu_dependency_and_input_preflight",
+  "predecessor_status": "prepared_then_shelved_never_submitted",
+  "review_date": "2026-10-31",
+  "target_supervised": false,
+  "zero_shot_transfer_proven": false,
+  "output_action_dim": 8,
+  "label_family": "nominal_resampled_observed_reached_pose",
+  "scientific_method_and_budget_unchanged_from_v1": true,
+  "successful_libero_reference": "236840 target-supervised5/5, separate evidence; not a cause proof",
+  "no_source_capability_or_execution_improvement_claimed_before_results": true
+}

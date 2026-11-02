@@ -1,0 +1,674 @@
+{
+  "verified": true,
+  "job_id": "206274",
+  "archive_sha256": "da9254d39deed8c928e5b2fcd728cd92ef69a8cb2aa4e3aaba33fd5066c57347",
+  "inventory": [
+    {
+      "path": "bridge-visual-fit-206274/reduced_u7680_train.npz",
+      "bytes": 700441,
+      "sha256": "eedbfc0a50624f997f9d137806302dfd64aa2c120faf237691021715f6605100"
+    },
+    {
+      "path": "bridge-visual-fit-206274/common_u2048_train.npz",
+      "bytes": 704965,
+      "sha256": "daff9788821751b73d30d8fde26a90f7262fb9a116fc249f860423213947863f"
+    },
+    {
+      "path": "bridge-visual-fit-206274/effective_runner.py",
+      "bytes": 21100,
+      "sha256": "8f2973ac61eb4bffacd5a7dc05c9937354282bda2c3932c7f87337aa558771cf"
+    },
+    {
+      "path": "bridge-visual-fit-206274/report.json",
+      "bytes": 996427,
+      "sha256": "f68ad68fc3744ce11d24900ccb13346e82c345152edf4cf12e236c14419e35ab"
+    },
+    {
+      "path": "bridge-visual-fit-206274/plan.json",
+      "bytes": 56814,
+      "sha256": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928"
+    },
+    {
+      "path": "bridge-visual-fit-206274/runner_snapshot.py",
+      "bytes": 19821,
+      "sha256": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa"
+    },
+    {
+      "path": "bridge-visual-fit-206274/reduced_u7168_train.npz",
+      "bytes": 700347,
+      "sha256": "cef1b8ff9aea9da7c7059abf21f361a0c8779964b83a2eeac1b33bc6f68dc74c"
+    },
+    {
+      "path": "bridge-visual-fit-206274/common_updates.jsonl",
+      "bytes": 1332241,
+      "sha256": "0227378a3d53aac66ea9ecdca6f6d90bfd427a430d7e1de6bb39f709537d8911"
+    },
+    {
+      "path": "bridge-visual-fit-206274/reduced_updates.jsonl",
+      "bytes": 1342921,
+      "sha256": "f7a80721ee0f331dc7153f15b5a3791b9ed92cf7a44d0c0cab5d5a991b49ec73"
+    },
+    {
+      "path": "bridge-visual-fit-206274/common_u0000_train.npz",
+      "bytes": 279652,
+      "sha256": "1c3e8b5fc5294b5e7c9e5d16969740523d30fef84ee4f430d14f8d8fadb72818"
+    },
+    {
+      "path": "bridge-visual-fit-206274/common_u4096_train.npz",
+      "bytes": 701771,
+      "sha256": "94204fb864cca20d12c9cb3f14f92b0d28e2790697f3db281b7eab44c68d5e18"
+    },
+    {
+      "path": "bridge-visual-fit-206274/reduced_u8192_train.npz",
+      "bytes": 700329,
+      "sha256": "64751e612ebe58608d1d1998dc3f87aec7611b2f1ccb6493e7bd93ccee03e7e8"
+    },
+    {
+      "path": "bridge-visual-fit-206274/reduced_u6144_train.npz",
+      "bytes": 700717,
+      "sha256": "67e9820efe61ae8aa430c17eca2e1ba39b16fe1eae9ab5ca2550f0285c449f2f"
+    },
+    {
+      "path": "bridge-visual-fit-206274/reduced_u8192_development.npz",
+      "bytes": 219025,
+      "sha256": "fce26918ddb50b0a88e7aafb96ce98a105248abe7bcf2e56def6d04401a1aaa4"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/restore_same_lr_u0008_train.npz",
+      "bytes": 22807,
+      "sha256": "5fcdae196a2845e3ece6f2dac53728cdff22df15bcdbb1318ac10fd859ca4a03"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/effective_runner.py",
+      "bytes": 21100,
+      "sha256": "8f2973ac61eb4bffacd5a7dc05c9937354282bda2c3932c7f87337aa558771cf"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/report.json",
+      "bytes": 351408,
+      "sha256": "f8585faebfa708ec5e4ba25fbe2f5a5446b2303700aa37b511df48c034ef5f21"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/plan.json",
+      "bytes": 56814,
+      "sha256": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/restore_same_lr_updates.jsonl",
+      "bytes": 1278,
+      "sha256": "fbe2115e51f73888a2762fb190e9d52aa9c4481c54e6ee40ad69bb924bb9e32d"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/runner_snapshot.py",
+      "bytes": 19821,
+      "sha256": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/common_updates.jsonl",
+      "bytes": 1266,
+      "sha256": "20aff956878448425c1a81bc8af201a522ea3cfb14a1738af1cf312370788bc1"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/reduced_updates.jsonl",
+      "bytes": 1274,
+      "sha256": "c0713ea8f14592cc4a809d4108ecce8169e019297030c55ef0bd066df223be84"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/common_u0000_train.npz",
+      "bytes": 15555,
+      "sha256": "03620a1d1abaf40d989005f429f550ae0fad5971624a9de95f4289c8e79527b0"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/constant_updates.jsonl",
+      "bytes": 1278,
+      "sha256": "fbe2115e51f73888a2762fb190e9d52aa9c4481c54e6ee40ad69bb924bb9e32d"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/constant_u0008_train.npz",
+      "bytes": 22807,
+      "sha256": "5fcdae196a2845e3ece6f2dac53728cdff22df15bcdbb1318ac10fd859ca4a03"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/common_u0004_train.npz",
+      "bytes": 22869,
+      "sha256": "5154fa912fa353e2a488f2a80dd496f787bfa57908d2371ba55725c90394c454"
+    },
+    {
+      "path": "bridge-visual-preflight-206269/reduced_u0008_train.npz",
+      "bytes": 22840,
+      "sha256": "747ffe9a7fb425dd9c6310220cddf1004b86d8863a7d9e820d9d363d04e7b8ee"
+    }
+  ],
+  "saved_prediction_snapshots": 13,
+  "snapshots": [
+    {
+      "stage": "bridge-visual-preflight-206269",
+      "arm": "common",
+      "update": 0,
+      "split": "train",
+      "sha256": "03620a1d1abaf40d989005f429f550ae0fad5971624a9de95f4289c8e79527b0",
+      "path_position_cm": 17.03199653288046,
+      "path_rotation_deg": 146.85366235218268,
+      "endpoint_position_cm": 18.295937590670885,
+      "endpoint_rotation_deg": 118.84685430227931,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-preflight-206269",
+      "arm": "common",
+      "update": 4,
+      "split": "train",
+      "sha256": "5154fa912fa353e2a488f2a80dd496f787bfa57908d2371ba55725c90394c454",
+      "path_position_cm": 12.93933740839661,
+      "path_rotation_deg": 33.622497180655735,
+      "endpoint_position_cm": 17.477674041064475,
+      "endpoint_rotation_deg": 42.70700625502636,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-preflight-206269",
+      "arm": "constant",
+      "update": 8,
+      "split": "train",
+      "sha256": "5fcdae196a2845e3ece6f2dac53728cdff22df15bcdbb1318ac10fd859ca4a03",
+      "path_position_cm": 12.56160613454392,
+      "path_rotation_deg": 28.305405894651738,
+      "endpoint_position_cm": 18.04227522246095,
+      "endpoint_rotation_deg": 35.74793089552663,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-preflight-206269",
+      "arm": "restore_same_lr",
+      "update": 8,
+      "split": "train",
+      "sha256": "5fcdae196a2845e3ece6f2dac53728cdff22df15bcdbb1318ac10fd859ca4a03",
+      "path_position_cm": 12.56160613454392,
+      "path_rotation_deg": 28.305405894651738,
+      "endpoint_position_cm": 18.04227522246095,
+      "endpoint_rotation_deg": 35.74793089552663,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-preflight-206269",
+      "arm": "reduced",
+      "update": 8,
+      "split": "train",
+      "sha256": "747ffe9a7fb425dd9c6310220cddf1004b86d8863a7d9e820d9d363d04e7b8ee",
+      "path_position_cm": 12.181552527491895,
+      "path_rotation_deg": 21.42640429155138,
+      "endpoint_position_cm": 17.51257195991562,
+      "endpoint_rotation_deg": 41.223545283012655,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "common",
+      "update": 0,
+      "split": "train",
+      "sha256": "1c3e8b5fc5294b5e7c9e5d16969740523d30fef84ee4f430d14f8d8fadb72818",
+      "path_position_cm": 13.029916470097726,
+      "path_rotation_deg": 151.43546811090766,
+      "endpoint_position_cm": 13.071976973252953,
+      "endpoint_rotation_deg": 136.4280746283579,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "common",
+      "update": 2048,
+      "split": "train",
+      "sha256": "daff9788821751b73d30d8fde26a90f7262fb9a116fc249f860423213947863f",
+      "path_position_cm": 8.522635203363988,
+      "path_rotation_deg": 13.45577909148704,
+      "endpoint_position_cm": 11.499792384677741,
+      "endpoint_rotation_deg": 18.245441160079494,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "common",
+      "update": 4096,
+      "split": "train",
+      "sha256": "94204fb864cca20d12c9cb3f14f92b0d28e2790697f3db281b7eab44c68d5e18",
+      "path_position_cm": 3.760724442509208,
+      "path_rotation_deg": 8.628868939377993,
+      "endpoint_position_cm": 4.762203943069056,
+      "endpoint_rotation_deg": 11.948692391346961,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "reduced",
+      "update": 6144,
+      "split": "train",
+      "sha256": "67e9820efe61ae8aa430c17eca2e1ba39b16fe1eae9ab5ca2550f0285c449f2f",
+      "path_position_cm": 0.9509694405096994,
+      "path_rotation_deg": 4.013677815944536,
+      "endpoint_position_cm": 1.2848883496057024,
+      "endpoint_rotation_deg": 6.101158089566668,
+      "passing_windows": 22,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "reduced",
+      "update": 7168,
+      "split": "train",
+      "sha256": "cef1b8ff9aea9da7c7059abf21f361a0c8779964b83a2eeac1b33bc6f68dc74c",
+      "path_position_cm": 0.7256943874444515,
+      "path_rotation_deg": 3.394503487919104,
+      "endpoint_position_cm": 0.9105643604653197,
+      "endpoint_rotation_deg": 5.137093200753401,
+      "passing_windows": 45,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "reduced",
+      "update": 7680,
+      "split": "train",
+      "sha256": "eedbfc0a50624f997f9d137806302dfd64aa2c120faf237691021715f6605100",
+      "path_position_cm": 0.7099400487696377,
+      "path_rotation_deg": 3.183490818088583,
+      "endpoint_position_cm": 0.9736407251988219,
+      "endpoint_rotation_deg": 4.89827850695451,
+      "passing_windows": 55,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "reduced",
+      "update": 8192,
+      "split": "train",
+      "sha256": "64751e612ebe58608d1d1998dc3f87aec7611b2f1ccb6493e7bd93ccee03e7e8",
+      "path_position_cm": 0.8437097237585288,
+      "path_rotation_deg": 3.15986900190171,
+      "endpoint_position_cm": 1.0467304758130915,
+      "endpoint_rotation_deg": 4.7744714296328645,
+      "passing_windows": 51,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-visual-fit-206274",
+      "arm": "reduced",
+      "update": 8192,
+      "split": "development",
+      "sha256": "fce26918ddb50b0a88e7aafb96ce98a105248abe7bcf2e56def6d04401a1aaa4",
+      "path_position_cm": 6.966390492930758,
+      "path_rotation_deg": 17.396043719376916,
+      "endpoint_position_cm": 8.982843463868583,
+      "endpoint_rotation_deg": 22.897032209709916,
+      "passing_windows": 0,
+      "fit_gate": false
+    }
+  ],
+  "metrics": {
+    "train": {
+      "original_visual": {
+        "path_position_cm": 0.16881285789340109,
+        "path_rotation_deg": 0.5986484606004089,
+        "endpoint_position_cm": 0.21749852922249083,
+        "endpoint_rotation_deg": 0.6885199204769008
+      },
+      "constant_visual": {
+        "path_position_cm": 0.8437097237585288,
+        "path_rotation_deg": 3.15986900190171,
+        "endpoint_position_cm": 1.0467304758130915,
+        "endpoint_rotation_deg": 4.7744714296328645
+      },
+      "static": {
+        "path_position_cm": 8.960284924153353,
+        "path_rotation_deg": 13.88273475795172,
+        "endpoint_position_cm": 12.615988871210611,
+        "endpoint_rotation_deg": 20.33054352452782
+      },
+      "passing_windows": 51,
+      "pose_fit_passed": false,
+      "episode_equal": {
+        "original_visual": {
+          "position_cm": 0.1688128578934011,
+          "rotation_deg": 0.598648460600409
+        },
+        "constant_visual": {
+          "position_cm": 0.8437097237585289,
+          "rotation_deg": 3.1598690019017104
+        },
+        "static": {
+          "position_cm": 8.960284924153353,
+          "rotation_deg": 13.88273475795172
+        }
+      }
+    },
+    "development": {
+      "original_visual": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593287,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554033
+      },
+      "constant_visual": {
+        "path_position_cm": 6.966390492930758,
+        "path_rotation_deg": 17.396043719376916,
+        "endpoint_position_cm": 8.982843463868583,
+        "endpoint_rotation_deg": 22.897032209709916
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "passing_windows": 0,
+      "pose_fit_passed": false,
+      "episode_equal": {
+        "original_visual": {
+          "position_cm": 7.692468140144546,
+          "rotation_deg": 14.825867044893112
+        },
+        "constant_visual": {
+          "position_cm": 6.689557813683725,
+          "rotation_deg": 17.425196969388068
+        },
+        "static": {
+          "position_cm": 7.9601175966494155,
+          "rotation_deg": 15.066972166771839
+        }
+      }
+    }
+  },
+  "episode_counts": {
+    "train": {
+      "position_better_old": 0,
+      "rotation_better_old": 0,
+      "position_better_static": 64,
+      "rotation_better_static": 63
+    },
+    "development": {
+      "position_better_old": 6,
+      "rotation_better_old": 4,
+      "position_better_static": 8,
+      "rotation_better_static": 1
+    }
+  },
+  "max_report_metric_difference": {
+    "position_cm": 1.2822718815641565e-06,
+    "rotation_deg": 0.0006356261339135472
+  },
+  "source_input_initialization_state_target_and_protocol_matched": true,
+  "constant_visual_hash_matches_preflight": true,
+  "constant_visual_hash": "1a3c659ff19b7cfca181128518f39e7cae5919083e88cbd37c8b2070426f7c15",
+  "constant_visual_mean_fit_rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127
+  ],
+  "formal_first4_updates_exactly_replay_preflight": true,
+  "constant_visual_token_values_independently_reconstructed": false,
+  "weights_downloaded": false,
+  "token_cache_downloaded": false,
+  "checkpoint_metadata": [
+    {
+      "path": "reduced_u8192_trainable.pt",
+      "sha256": "a7312dc60fce2d593d4bb34f0a8a4bcbe136d95e1b988eb400ef142cf1ed5d1c",
+      "bytes": 530437264,
+      "includes_optimizer": false,
+      "roundtrip_exact": true
+    }
+  ],
+  "peak_reserved_gib": 3.73828125,
+  "elapsed_seconds": 2227.1861434211023,
+  "position_improvement_vs_static_percent": 15.171530815378153,
+  "position_improvement_vs_old_percent": 16.561446984316454,
+  "total_development_rotation_change_deg": 2.1399953807836294,
+  "development_task_decomposition": [
+    {
+      "split": "development",
+      "group": "close the drawer",
+      "task": "close the drawer",
+      "windows": 6,
+      "original_visual_position_cm": 7.033346510591457,
+      "original_visual_rotation_deg": 29.330465594075022,
+      "original_visual_endpoint_position_cm": 10.483502023886844,
+      "original_visual_endpoint_rotation_deg": 40.54882787418173,
+      "constant_visual_position_cm": 7.289411075510612,
+      "constant_visual_rotation_deg": 44.59760429191774,
+      "constant_visual_endpoint_position_cm": 10.852413468902691,
+      "constant_visual_endpoint_rotation_deg": 57.654000547651876,
+      "static_position_cm": 9.757027223919428,
+      "static_rotation_deg": 41.40389898175278,
+      "static_endpoint_position_cm": 15.095777649415057,
+      "static_endpoint_rotation_deg": 56.87120305909725,
+      "new_minus_old_position_cm": 0.2560645649191553,
+      "new_minus_old_rotation_deg": 15.267138697842718,
+      "contribution_to_total_rotation_change_deg": 2.290070804676408
+    },
+    {
+      "split": "development",
+      "group": "close microwave",
+      "task": "close microwave",
+      "windows": 10,
+      "original_visual_position_cm": 9.785639018217891,
+      "original_visual_rotation_deg": 13.022255727186943,
+      "original_visual_endpoint_position_cm": 7.669050111790118,
+      "original_visual_endpoint_rotation_deg": 18.152089456523104,
+      "constant_visual_position_cm": 8.096038789048032,
+      "constant_visual_rotation_deg": 13.477576850394737,
+      "constant_visual_endpoint_position_cm": 8.870519155986377,
+      "constant_visual_endpoint_rotation_deg": 17.65688728077033,
+      "static_position_cm": 9.132287859559252,
+      "static_rotation_deg": 11.021239042436141,
+      "static_endpoint_position_cm": 8.487980091165658,
+      "static_endpoint_rotation_deg": 12.05442597881262,
+      "new_minus_old_position_cm": -1.6896002291698586,
+      "new_minus_old_rotation_deg": 0.45532112320779383,
+      "contribution_to_total_rotation_change_deg": 0.11383028080194846
+    },
+    {
+      "split": "development",
+      "group": "take broccoli out of pan",
+      "task": "take broccoli out of pan",
+      "windows": 9,
+      "original_visual_position_cm": 10.197197573520036,
+      "original_visual_rotation_deg": 12.394119203284893,
+      "original_visual_endpoint_position_cm": 12.429024902275174,
+      "original_visual_endpoint_rotation_deg": 12.065383086233881,
+      "constant_visual_position_cm": 9.18591669643899,
+      "constant_visual_rotation_deg": 12.923592323034498,
+      "constant_visual_endpoint_position_cm": 11.747010191452928,
+      "constant_visual_endpoint_rotation_deg": 18.182792672801302,
+      "static_position_cm": 9.201328806120054,
+      "static_rotation_deg": 8.586455801717092,
+      "static_endpoint_position_cm": 12.23881396802063,
+      "static_endpoint_rotation_deg": 12.035027557278907,
+      "new_minus_old_position_cm": -1.0112808770810453,
+      "new_minus_old_rotation_deg": 0.5294731197496052,
+      "contribution_to_total_rotation_change_deg": 0.11913145194366118
+    },
+    {
+      "split": "development",
+      "group": "turn lever vertical to front",
+      "task": "turn lever vertical to front",
+      "windows": 4,
+      "original_visual_position_cm": 2.9055430634833,
+      "original_visual_rotation_deg": 9.58915466612744,
+      "original_visual_endpoint_position_cm": 4.132910257014166,
+      "original_visual_endpoint_rotation_deg": 11.948134821728646,
+      "constant_visual_position_cm": 3.1526103998794475,
+      "constant_visual_rotation_deg": 8.90067544296962,
+      "constant_visual_endpoint_position_cm": 4.073597257403496,
+      "constant_visual_endpoint_rotation_deg": 10.694190355435419,
+      "static_position_cm": 3.3761974257058243,
+      "static_rotation_deg": 10.624712883044307,
+      "static_endpoint_position_cm": 3.5267292967174164,
+      "static_endpoint_rotation_deg": 15.746634752642422,
+      "new_minus_old_position_cm": 0.2470673363961473,
+      "new_minus_old_rotation_deg": -0.6884792231578203,
+      "contribution_to_total_rotation_change_deg": -0.06884792231578203
+    },
+    {
+      "split": "development",
+      "group": "open the drawer",
+      "task": "open the drawer",
+      "windows": 11,
+      "original_visual_position_cm": 8.228331601799141,
+      "original_visual_rotation_deg": 14.012081019394376,
+      "original_visual_endpoint_position_cm": 14.649970840470775,
+      "original_visual_endpoint_rotation_deg": 22.744150388074583,
+      "constant_visual_position_cm": 5.334097591474331,
+      "constant_visual_rotation_deg": 12.869574712766724,
+      "constant_visual_endpoint_position_cm": 7.588780493524826,
+      "constant_visual_endpoint_rotation_deg": 16.996956074348084,
+      "static_position_cm": 7.482841096236533,
+      "static_rotation_deg": 11.411570838326835,
+      "static_endpoint_position_cm": 11.17296911547919,
+      "static_endpoint_rotation_deg": 15.125678880758732,
+      "new_minus_old_position_cm": -2.8942340103248103,
+      "new_minus_old_rotation_deg": -1.1425063066276522,
+      "contribution_to_total_rotation_change_deg": -0.31418923432260437
+    }
+  ],
+  "candidate_passed": false,
+  "stopping": "Fixed visual-variation arm closed; no fitting extension,seeds or mean-strength variants.",
+  "new_training_encoding_model_inference_simulation": false,
+  "limitations": [
+    "One training initialization; reused development set,not untouched test or unseen-task result.",
+    "Full control reused from202278; data and initial source/parameters match,not a replicated training-seed study.",
+    "Runtime assertions verify constant tokens,parameter freezing and saved checkpoint round-trip. Actual mean-token tensor and PT weights were not downloaded; no independent tensor reconstruction here.",
+    "Task decomposition is descriptive; all40 windows remain primary. No excluding failed tasks or declaring a unique faulty module.",
+    "Frozen gripper and offline measured-pose targets; no grasp success claim."
+  ]
+}

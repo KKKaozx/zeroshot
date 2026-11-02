@@ -1,0 +1,589 @@
+{
+  "passed": true,
+  "scope": "synthetic dependencies through real train(parse_args) entry",
+  "device": "cuda",
+  "resumed_paths": [
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    },
+    {
+      "sampling": "weighted",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "checkpoint_and_forward_trace_exact": true
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "total_updates",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "batch_size",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "warmup_updates",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "learning_rate",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "language_condition",
+      "error": "Explicit language conditions require the reviewed training-only bank"
+    },
+    {
+      "case": "workers",
+      "error": "Fixed-update runner requires positive U/B and workers=0"
+    },
+    {
+      "case": "resume",
+      "error": "Do not mix epoch checkpoints/transfer/diagnostic branches with fixed updates"
+    },
+    {
+      "case": "epochs",
+      "error": "Epoch/diagnostic option is not used in fixed mode: epochs"
+    },
+    {
+      "case": "step_diffusion_architecture",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "tokenizer_changed",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "frozen_encoder_changed",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "source_bytes_changed_same_metadata",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "window_roles_changed",
+      "error": "Checkpoint training contract differs"
+    },
+    {
+      "case": "step_option_without_mode",
+      "error": "\u56fa\u5b9a\u66f4\u65b0\u6a21\u5f0f\u9009\u9879\u5fc5\u987b\u540c\u65f6\u6307\u5b9a --total-updates"
+    },
+    {
+      "case": "step_option_without_mode",
+      "error": "\u6309\u66f4\u65b0\u6b21\u6570\u7684\u8c03\u5ea6\u9009\u9879\u5fc5\u987b\u540c\u65f6\u6307\u5b9a --total-updates"
+    }
+  ],
+  "synthetic_language_resume_paths": [
+    {
+      "condition": "no_augmentation",
+      "exact": true,
+      "counts": {
+        "original": 27
+      }
+    },
+    {
+      "condition": "paraphrase_only",
+      "exact": true,
+      "counts": {
+        "paraphrase": 24,
+        "original": 3
+      }
+    },
+    {
+      "condition": "counterfactual_only",
+      "exact": true,
+      "counts": {
+        "original": 17,
+        "counterfactual": 10
+      }
+    },
+    {
+      "condition": "combined",
+      "exact": true,
+      "counts": {
+        "paraphrase": 15,
+        "counterfactual": 10,
+        "original": 2
+      }
+    }
+  ],
+  "legacy_functions_and_parser_ast_unchanged_except_explicit_dispatch_flags": true,
+  "actual_cached_clip_tokenizer_contract": {
+    "class": "transformers.models.clip.tokenization_clip.CLIPTokenizer",
+    "vocabulary_sha256": "f9190aead40a965a09db1ba2e556dccac0eda8423cb4926bcd994722899ec68e",
+    "rules_sha256": "7f9c7a007705969889918c87008f406f886b04833119356ee4083193295e2747",
+    "special_tokens": {
+      "bos_token": "<|startoftext|>",
+      "eos_token": "<|endoftext|>",
+      "unk_token": "<|endoftext|>",
+      "pad_token": "<|endoftext|>"
+    },
+    "settings": {
+      "model_max_length": 77,
+      "padding_side": "right",
+      "truncation_side": "right",
+      "clean_up_tokenization_spaces": false
+    }
+  },
+  "synthetic_artifacts": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\step_main_runner_cuda_20261020\\attempt_e5_ihkos",
+  "partial_masks_real_policy_loss_used": true,
+  "heldout_test_indices_read": false,
+  "real_clip_or_robot_training": false,
+  "generalization_verdict": null,
+  "sha256": {
+    "code/train.py": "e4baddb33efec7ef864f6be5adfab3b7825f5f80aecd29379b892240b9fb0833",
+    "code/step_training_runner.py": "37916a469126800d8b543e779e616f8551421c6514ae57899a0559497778f9aa",
+    "code/step_training_state.py": "e2029456c3840e63879de5eecaa75f869989ee419b168916d1888f5d362f0e6d",
+    "scripts/check_step_main_runner_20261020.py": "fb962d1a75c9e9c52af3babc6ae55cae1142b110da4c7f6c915cfc7948127d8c"
+  },
+  "cuda_peak_reserved_gib": 0.06640625
+}

@@ -1,0 +1,143 @@
+{
+  "format": "libero90-native-supervised-protocol-v1",
+  "date": "2026-10-31",
+  "preparation_authorized": true,
+  "training_submitted": false,
+  "task": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet",
+  "instruction": "close the top drawer of the cabinet",
+  "target_supervised": true,
+  "zero_shot": false,
+  "formal_matrix_admitted": false,
+  "source_oxe_model_preserved_and_not_loaded": true,
+  "train_demos": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "development_demos": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "rollout_demos": [
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "model": {
+    "context_dim": 1024,
+    "text_dim": 768,
+    "adapter_layers": 8,
+    "attention_dim": 512,
+    "heads": 8,
+    "dropout": 0.1,
+    "down_dims": [
+      256,
+      512,
+      1024
+    ],
+    "step_embed_dim": 128,
+    "state_features": "7 measured Panda joint angles +2 measured finger positions,train-only mean/std",
+    "history_projection": false,
+    "initialization": "Fresh seed42 Adapter/state/native decoder; frozen pretrained DINO/CLIP text, no OXE weight migration"
+  },
+  "action_contract": "native_osc_pose7_close_positive_20hz_v1",
+  "action_order": [
+    "native_dx",
+    "native_dy",
+    "native_dz",
+    "native_drot_x",
+    "native_drot_y",
+    "native_drot_z",
+    "native_close_positive_gripper"
+  ],
+  "action_target": "Recorded next native command after the input observation, no pose decoding",
+  "chunk_size": 16,
+  "native_control_hz": 20,
+  "chunk_seconds": 0.8,
+  "execute_native_commands_before_reobserve": 4,
+  "observation_alignment": "obs[i] is post action[i], so first target is action[i+1]",
+  "training_updates": 4096,
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "lr": 0.0001,
+  "weight_decay": 0,
+  "clip_norm": 1.0,
+  "sampling_steps": 100,
+  "prediction_type": "sample/x0",
+  "beta_schedule": "squaredcos_cap_v2",
+  "training_seed": 42,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "checkpoint_selection": "Last4096 only; no best-development selection",
+  "trainable_modules": [
+    "adapter",
+    "state_projection",
+    "diffusion_decoder"
+  ],
+  "encoder_updates": 0,
+  "input_camera": "agentview_rgb/rawOpenGL128,fliponce,canonical224CLIPnorm->DINOImageNet conversion",
+  "dino_assets": "dinov2_large_frozen_assets_20261023",
+  "clip_assets": "baseline_setup/clip-vit-large-patch14-v1",
+  "cached_old_features_required": false,
+  "fresh_encodings": "1888 current train/dev images encoded once inside allocated job; token bank stays in RAM/GPU, no disk cache",
+  "slurm_hard_seconds": 3600,
+  "process_cap_after_admission_seconds": 3300,
+  "estimated_minutes": [
+    20,
+    40
+  ],
+  "peak_gpu_memory_estimate_gib": [
+    6,
+    10
+  ],
+  "host_memory_gib": 24,
+  "disk_reserve_gib": 8,
+  "checkpoint_interval": 512,
+  "automatic_rollout": false,
+  "offline_metrics_do_not_block_registered_finite_endpoint_rollouts": true,
+  "local_evaluation": {
+    "episodes": 5,
+    "native_ticks_per_episode": 200,
+    "policy_calls_per_episode": 50,
+    "wall_seconds_total": 600,
+    "initial_state_index": 0,
+    "expert_actions_used": 0,
+    "state_restores_per_episode": 1,
+    "state_corrections_during_rollout": 0,
+    "readiness_default": true,
+    "explicit_run_required": true
+  },
+  "stop": "At4096 or hard budget/error; keep complete checkpoint; no automatic retry/extension/seed/task/threshold sweep",
+  "scope_limitations": [
+    "One task target-domain supervised engineering reference, not zero-shot or the13-model matrix.",
+    "Native action supervision, target robot state and fresh initialization differ from OXE pose-policy experiments; not a one-variable comparison to229116.",
+    "Single instruction cannot establish language generalization or augmentation effects.",
+    "Fixed heldout demonstration IDs do not establish unseen-task or independent-scene generalization.",
+    "Closing drawer training grip is constant open; decoding a constant learned data dimension is not a new gripper timing achievement."
+  ]
+}

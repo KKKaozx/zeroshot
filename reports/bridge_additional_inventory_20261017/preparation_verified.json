@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-17",
+  "preparation_verified": true,
+  "training": false,
+  "inference": false,
+  "gpu_used": false,
+  "source_data_exported": false,
+  "weights_downloaded": false,
+  "training_episodes": 806,
+  "training_windows": 3624,
+  "additional_episodes": 401,
+  "additional_windows": 1788,
+  "original_train_preserved": true,
+  "original_development_preserved": true,
+  "all65536_task_slots_preserved": true,
+  "no_repeated_window_within_batch": true,
+  "new_source_audit_passed": true,
+  "old_sources_not_reaudited": true,
+  "consumed13_excluded": true,
+  "new25_test_candidates_target_arrays_not_read": true,
+  "metadata_new_shard_counts_checked_against_tfds": 768,
+  "metadata_reader_official_protobuf_comparisons": 6,
+  "source_geometry_max_position_error_m": 6.42656417665366e-08,
+  "source_geometry_max_rotation_matrix_error": 3.23680203972998e-07,
+  "artifacts": {
+    "configs/bridge_demonstration_expansion_eligible_20261017.json": {
+      "sha256": "36f86aa9720777bc99ab0f9184b175e871df155c94b763168bc3a08ba31c362a",
+      "bytes": 457596
+    },
+    "configs/bridge_demonstration_expansion_candidates_20261017.json": {
+      "sha256": "b1f02a00346c929cd79a7e5297382974766e782d4675301ea2da41f67faac6e8",
+      "bytes": 457207
+    },
+    "reports/bridge_additional_inventory_20261017/inventory.json": {
+      "sha256": "cdbeae3f6d2b87978fb2c5bb3da840d1496b68f2775728e54c65a43bce8e0096",
+      "bytes": 527537
+    },
+    "reports/bridge_additional_inventory_20261017/source_audit.json": {
+      "sha256": "8e9633caf5c9d40ae56179856a43fb6274dc9688590aeddfb41f93eea8959669",
+      "bytes": 315959
+    },
+    "reports/bridge_additional_inventory_20261017/eligible_window_rows.json": {
+      "sha256": "4dbcb6b7e89110950a2d301d6ce9f9250004fe916ffdf23db5dc067121b6ce59",
+      "bytes": 719023
+    },
+    "reports/bridge_additional_inventory_20261017/eligible_schedule.npz": {
+      "sha256": "ff89b8e730bcc34a39e4f691930f11d1debc442b89d450ad7610dcdac927c9bb",
+      "bytes": 150057
+    },
+    "reports/bridge_additional_inventory_20261017/selected_training_payload_sizes.json": {
+      "sha256": "bf8fc2627cb44a6d75023b6ac753ea7f813140e59f1290aa738b467b2cec01c8",
+      "bytes": 66315
+    },
+    "scripts/inventory_bridge_additional_demonstrations_20261017.py": {
+      "sha256": "8a34c798dd19eecfa13e813791daa51d0619854d2bd97a7d97f3eb2f9201820c",
+      "bytes": 11311
+    },
+    "scripts/prepare_bridge_demonstration_expansion_plan_20261017.py": {
+      "sha256": "71041940d0a038f15962bbe97ec49976f152731295f32b4ffa7e958de6496aa2",
+      "bytes": 12048
+    },
+    "scripts/audit_bridge_additional_training_sources_20261017.py": {
+      "sha256": "3f0ea0ff735f3f28993aa732b2f486dc2e1d28c8441cca236273945a487dc36a",
+      "bytes": 8862
+    },
+    "scripts/finalize_bridge_demonstration_expansion_preparation_20261017.py": {
+      "sha256": "477c150c4a67782fcc2268efb5931af83ffe92a1a33b5ace8990929d0e773688",
+      "bytes": 7766
+    }
+  },
+  "local_preparation_bytes": 2452942,
+  "next_step": "Prepare dynamic-sized data/cache integration and one bounded cluster preflight; do not launch formal training until preflight passes. This turn prepared data evidence and comparison plan only."
+}

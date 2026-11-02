@@ -1,0 +1,32 @@
+{
+  "job_id": 210631,
+  "state": "FAILED",
+  "exit_code": "1:0",
+  "elapsed": "00:08:32",
+  "node": "cpu-2",
+  "evidence": "User terminal output only; complete report not downloaded locally",
+  "active_environment": {
+    "python": "3.10.21",
+    "environment": "multitask-preflight-v1",
+    "torch": "2.5.1+cu118",
+    "numpy": "1.26.4",
+    "transformers": "5.17.0",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0",
+    "Pillow": "12.3.0",
+    "torchvision": null,
+    "zarr": null,
+    "numcodecs": null,
+    "diffusers": null,
+    "dill": null,
+    "omegaconf": null
+  },
+  "error": "ValueError: Expected uint8 [N,96,96,3] images",
+  "download_completed": true,
+  "download_basis": "Code reaches validate_zarr only after download, ZIP member/CRC checks and staging extraction",
+  "full_data_integrity_verified": false,
+  "actual_raw_image_shape_and_dtype_known": false,
+  "next_action": "Read cached ZIP .zarray metadata and prior report archive fields only; no new download, extraction, training, install or GPU job",
+  "training_updates": 0,
+  "baseline_207558_changed": false
+}

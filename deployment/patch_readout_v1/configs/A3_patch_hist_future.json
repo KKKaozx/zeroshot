@@ -1,0 +1,14 @@
+{
+  "name": "A3_patch_hist_future",
+  "description": "同A2，但标签换回234100未来到达位姿",
+  "target": "future_pose",
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "spatial",
+    "history": [
+      "state_delta",
+      "prev_command"
+    ]
+  }
+}

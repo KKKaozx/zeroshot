@@ -1,0 +1,87 @@
+{
+  "verified": true,
+  "metric_recomputation": true,
+  "input_identity_and_hash_checks": true,
+  "dual_svd_max_prediction_difference_m": 1.765254609153999e-13,
+  "representations": {
+    "clip_pooled": {
+      "positions_better_than_fold_mean": 14,
+      "positions": 16,
+      "normalized_centered_singular_values": [
+        2.191558070811809,
+        1.8109458979663802,
+        1.2208768304567608,
+        1.1264992262496971,
+        1.0714501944939778,
+        0.965687783855993,
+        0.8636036452495257,
+        0.7130369611807378,
+        0.6491596323619607,
+        0.5793780269298389,
+        0.5369530953991541,
+        0.5059819551371527,
+        0.44170910865554697,
+        0.4125793899610195,
+        0.395555146714801,
+        2.448145927209295e-16
+      ],
+      "fixed_ridge_effective_degrees_of_freedom": 14.96281058028228,
+      "first_component_variance_fraction": 0.30018292360877374,
+      "rms_between_image_variation_norm": 0.6630526427600704,
+      "mean_feature_vector_norm": 10.700470453158497
+    },
+    "adapter_mixed": {
+      "positions_better_than_fold_mean": 9,
+      "positions": 16,
+      "normalized_centered_singular_values": [
+        3.9779340949103634,
+        0.32780215034133736,
+        0.23721993150002837,
+        0.07568448669206625,
+        0.053458794518199626,
+        0.03451755771579958,
+        0.030248353867299228,
+        0.021751328704383465,
+        0.019199082715893975,
+        0.015376202015114459,
+        0.011688207530836877,
+        0.011336504857295796,
+        0.011032896782811625,
+        0.009269985281995866,
+        0.00833314458665932,
+        4.74965491674169e-16
+      ],
+      "fixed_ridge_effective_degrees_of_freedom": 6.8552661634570455,
+      "first_component_variance_fraction": 0.9889974789656457,
+      "rms_between_image_variation_norm": 5.0756758200748875,
+      "mean_feature_vector_norm": 31.993268118770793
+    },
+    "adapter_initial_only": {
+      "positions_better_than_fold_mean": 16,
+      "positions": 16,
+      "normalized_centered_singular_values": [
+        3.963263870328116,
+        0.4745945637838557,
+        0.199073974352597,
+        0.13757877509487956,
+        0.06120392109486665,
+        0.04128249240355544,
+        0.03049255325344923,
+        0.024003742134283156,
+        0.021569373460012118,
+        0.020209021354144888,
+        0.01796041401164488,
+        0.013812624007511027,
+        0.013029098275776438,
+        0.011025922478692059,
+        0.010327252456084127,
+        6.984208271879496e-17
+      ],
+      "fixed_ridge_effective_degrees_of_freedom": 7.549095075047431,
+      "first_component_variance_fraction": 0.9817162816155123,
+      "rms_between_image_variation_norm": 10.647496638280332,
+      "mean_feature_vector_norm": 32.14195132721217
+    }
+  },
+  "interpretation_limit": "Fixed regularization responds differently to singular spectra; differences do not prove irreversible information loss."
+}

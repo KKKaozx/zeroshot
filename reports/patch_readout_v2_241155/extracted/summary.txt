@@ -1,0 +1,7 @@
+config	role	steps	single_pos1	point_pos1	zero_pos1	marg_pos1	point_path	zero_path	point_rot1	zero_rot1	gate
+B1_vision_only.json	train	10000	0.086	0.079	0.155	0.241	0.124	0.774	1.432	2.539	True
+B1_vision_only.json	validation	10000	0.184	0.182	0.187	0.276	0.777	1.024	2.791	2.664	False
+B2_vision_delta.json	train	10000	0.076	0.072	0.155	0.241	0.127	0.774	1.294	2.539	True
+B2_vision_delta.json	validation	10000	0.127	0.123	0.187	0.276	0.690	1.024	2.141	2.664	True
+B3_vision_delta_aug.json	train	10000	0.083	0.074	0.155	0.241	0.199	0.774	1.497	2.539	True
+B3_vision_delta_aug.json	validation	10000	0.115	0.108	0.187	0.276	0.650	1.024	2.147	2.664	True

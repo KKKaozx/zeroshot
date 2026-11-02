@@ -1,0 +1,98 @@
+{
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "panda_measured_finger_width_affine_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  },
+  "selection": [
+    {
+      "episode": "xy_0_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_2",
+      "start": 12,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_3",
+      "start": 24,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_0",
+      "start": 36,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_2",
+      "start": 44,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_4",
+      "start": 52,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_0",
+      "start": 68,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_1",
+      "start": 86,
+      "split": "train"
+    }
+  ],
+  "source_sha256": {
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9",
+    "scripts/preflight_panda_minimal_generalization_20261015.py": "2601c8eaab821608e54a312c4a2dec7eef9e983df0516ca8d00a34f4484416a5"
+  },
+  "protocol_sha256": "30f10e36923f41cc0286046e87e8e52bf2aacd3eacebbaf837d54c8dbdfc8813",
+  "training_only": true,
+  "updates": 6
+}

@@ -1,0 +1,203 @@
+{
+  "scope": "One excluded native20Hz engineering desired-goal/8D execution diagnostic; not a learned-policy or generalization result",
+  "attempts": [
+    {
+      "attempt": 1,
+      "execution_complete": false,
+      "errors": [
+        "EOFError: EOF when reading a line"
+      ],
+      "note": "Config/import ordering error; EOF before environment construction.",
+      "wall_seconds": 1.422000000020489,
+      "rollout_ticks": null,
+      "partial_rows_retained": null,
+      "task_success": null,
+      "all_original_gates_passed": false,
+      "report_sha256": "7667b2e6a825417903d18df08c7e395ec35d532daa1f0865a03084475d049aa4"
+    },
+    {
+      "attempt": 2,
+      "execution_complete": true,
+      "errors": [],
+      "note": "Diagnostic absolute controller-site target mixed with observed hand-body orientation; failed.",
+      "wall_seconds": 22.343999999924563,
+      "rollout_ticks": 197,
+      "partial_rows_retained": null,
+      "task_success": false,
+      "all_original_gates_passed": false,
+      "report_sha256": "768aded9e6c5749192710894f2b6e1c3ed82353cd58cffd299501caf7dc905db"
+    },
+    {
+      "attempt": 3,
+      "execution_complete": true,
+      "errors": [],
+      "note": "Frame mapping and initial cache refresh; task success but strict goals did not match.",
+      "wall_seconds": 20.313000000081956,
+      "rollout_ticks": 186,
+      "partial_rows_retained": null,
+      "task_success": true,
+      "all_original_gates_passed": false,
+      "report_sha256": "9e9b386bb213a4dcf3b0c9ade8ec144b6a4c855a8248415e6d7ef428cd47d6e1"
+    },
+    {
+      "attempt": 4,
+      "execution_complete": true,
+      "errors": [],
+      "note": "Derived-pose snapshot feedback; task success but strict goals did not match.",
+      "wall_seconds": 20.79700000002049,
+      "rollout_ticks": 186,
+      "partial_rows_retained": null,
+      "task_success": true,
+      "all_original_gates_passed": false,
+      "report_sha256": "3f26acc722569abae9b4a4bc8c97c8b3e88cfa63431ee02dfe6d994b477faa58"
+    },
+    {
+      "attempt": 5,
+      "execution_complete": false,
+      "errors": [
+        "AssertionError: "
+      ],
+      "note": "Controller refresh assertion exposed snapshot taken before forward; incomplete ticks were not persisted.",
+      "wall_seconds": 10.702999999979511,
+      "rollout_ticks": null,
+      "partial_rows_retained": null,
+      "task_success": null,
+      "all_original_gates_passed": false,
+      "report_sha256": "8e02e217eeb6576f8c0a3e17afa9f9f1e699223826f92645639374c57ce4dd3b"
+    },
+    {
+      "attempt": 6,
+      "execution_complete": false,
+      "errors": [
+        "AssertionError: "
+      ],
+      "note": "A diagnostic bitwise qpos-invariance assertion stopped after2 retained rows; forward normalizes quaternions.",
+      "wall_seconds": 10.64000000001397,
+      "rollout_ticks": null,
+      "partial_rows_retained": 2,
+      "task_success": null,
+      "all_original_gates_passed": false,
+      "report_sha256": "26a10657ba16be388c5eb7b308c0f20c81be1e7eb0c16da126c869316f1666d4"
+    },
+    {
+      "attempt": 7,
+      "execution_complete": true,
+      "errors": [],
+      "note": "Read forward-refreshed pose and synchronize controller kinematics; all original goal/behavior gates passed.",
+      "wall_seconds": 20.280999999959022,
+      "rollout_ticks": 186,
+      "partial_rows_retained": null,
+      "task_success": true,
+      "all_original_gates_passed": true,
+      "report_sha256": "665a93870e1bcb05ebdbec1c03c7117d5fdb3c7e59ceda9ef6ca40c72bdd6c13"
+    }
+  ],
+  "total_recorded_wall_seconds": 106.5,
+  "known_complete_rollout_ticks": 755,
+  "incomplete_attempt5_tick_count_not_persisted": true,
+  "incomplete_attempt6_rows_retained": 2,
+  "final_successful_attempt": "attempt7",
+  "final_all_original_gates_passed": true,
+  "original_goal_admission_thresholds_unchanged": true,
+  "corrected_frame_goal_labels_identical_across_feedback_controls": {
+    "3": "9ad82c67df8fc40e6c00baaf37d031a6f7fbab97632eb17cf7a4fb644469765f",
+    "4": "9ad82c67df8fc40e6c00baaf37d031a6f7fbab97632eb17cf7a4fb644469765f",
+    "7": "9ad82c67df8fc40e6c00baaf37d031a6f7fbab97632eb17cf7a4fb644469765f"
+  },
+  "constant_right_frame_offset_cancellation_max_matrix_abs": 1.2698318369031014e-09,
+  "secondary_summary_matrix_check_note": "Initial summary writer expected1e-12 after reprojecting recorded matrices to rotations; actual1.27e-9 is recorded, not used as an admission gate. Original rollout/goal gates unchanged.",
+  "original_main_geometry_or_executor_modified": false,
+  "frozen_core_sha256": {
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "libero_action_interface.py": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+    "libero_waypoint_execution.py": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986"
+  },
+  "final_metrics": {
+    "execution_complete": true,
+    "errors": [],
+    "scope": "Native20Hz desired-goal conversion only; cannot establish5Hz information sufficiency, learned performance, or OXE cross-robot calibration",
+    "models_loaded": 0,
+    "training_updates": 0,
+    "primary40_episodes": 0,
+    "new_native_command_baseline_rollouts": 0,
+    "goal_conversion_qualified": true,
+    "initial_cache_position_difference_m": 0.017013187114135866,
+    "initial_cache_orientation_difference_rad": 0.0528132995478913,
+    "controller_body_to_grip_site_rotation": [
+      [
+        -6.5052130349130266e-18,
+        1.0000000000000007,
+        -4.163336342344337e-17
+      ],
+      [
+        -1.0000000000000002,
+        2.721347452938616e-17,
+        -1.734723475976807e-18
+      ],
+      [
+        1.734723475976807e-18,
+        1.3877787807814457e-17,
+        1.0000000000000004
+      ]
+    ],
+    "controller_body_to_grip_site_angle_deg": 90.0,
+    "gates": {
+      "native_final_goal_success": true,
+      "executed_controller_position_goals_match": true,
+      "executed_controller_orientation_goals_match": true,
+      "numeric_pose_roundtrip": true,
+      "numeric_orientation_roundtrip": true,
+      "actual_gripper_sequence_exact": true,
+      "no_saturated_native_ticks": true
+    },
+    "extracted_labels": 197,
+    "offline_extraction_state_restores": 197,
+    "offline_extraction_physics_steps": 0,
+    "rollout_initial_restores": 1,
+    "rollout_mid_state_corrections": 0,
+    "rollout_steps": 186,
+    "success_any": true,
+    "success_final": true,
+    "final_goal_components": [
+      {
+        "predicate": [
+          "close",
+          "wooden_cabinet_1_top_region"
+        ],
+        "value": true
+      },
+      {
+        "predicate": [
+          "on",
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_side"
+        ],
+        "value": true
+      }
+    ],
+    "max_executed_controller_goal_position_error_m": 1.8314856197837247e-09,
+    "max_executed_controller_goal_orientation_error_rad": 3.091844193179399e-09,
+    "max_offline_pose_roundtrip_error_m": 1.7621007792789282e-09,
+    "max_offline_orientation_roundtrip_error_rad": 2.3401765035874784e-09,
+    "max_observation_vs_current_control_position_m": 0.0010756952752661306,
+    "max_observation_vs_current_control_orientation_rad": 0.000759962592606942,
+    "max_pre_command_controller_cache_vs_current_position_m": 0.0005364318711501665,
+    "max_forward_qpos_numeric_change": 2.220446049250313e-16,
+    "path_position_mean_mm": 0.2828561544920379,
+    "path_position_max_mm": 0.5392640279669119,
+    "saturated_native_ticks": 0,
+    "data_action_sha256": "a99815b4a83300cff24185a8c2137bb67d2f09394fc43d884418948827ce486e",
+    "native_baseline_reused": true,
+    "training_or_generalization_verdict": null,
+    "elapsed_seconds": 20.280999999959022
+  },
+  "source_units_or_cross_robot_calibration_qualified": false,
+  "current5hz_learned_policy_qualified": false,
+  "main_policy_replaced": false,
+  "models_loaded": 0,
+  "training_updates": 0,
+  "formal40_episodes": 0,
+  "decision": "Stop engineering branch; review source-specific desired-goal availability/frame/time before any new labels or training.",
+  "provenance_note": "Absolute site/body orientation mix-up was introduced by this diagnostic; it is not evidence of a blanket90degree error in the original relative-rotation policy.",
+  "integration_limit": "A learned-policy implementation must separately retain the image-time reference pose and refresh the current control feedback pose; this privileged oracle is not a direct policy replacement."
+}

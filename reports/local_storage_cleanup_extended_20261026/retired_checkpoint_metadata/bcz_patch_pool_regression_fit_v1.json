@@ -1,0 +1,5768 @@
+{
+  "epoch": 10,
+  "trainable_state_dict": {
+    "adapter.layers.0.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.0.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.1.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.2.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.3.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.4.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.5.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.6.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.query_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.query_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.text_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.text_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.query_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.query_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.text_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        768
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.text_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.attention.in_proj_weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.attention.in_proj_bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1536
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.attention.out_proj.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        512,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.attention.out_proj.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.output_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        512
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.output_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.ffn_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.ffn_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.ffn.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.ffn.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.ffn.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.layers.7.ffn.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.output_norm.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "adapter.output_norm.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "regression_head.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "regression_head.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "regression_head.1.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        256,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "regression_head.1.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "regression_head.3.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        112,
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "regression_head.3.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        112
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_context_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        256,
+        1024
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_context_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_pose_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        256,
+        7
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_pose_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "current_gripper_projection.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        256,
+        1
+      ],
+      "dtype": "torch.float32"
+    },
+    "current_gripper_projection.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_time_embedding.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        16,
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_head.0.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_head.0.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_head.2.weight": {
+      "tensor_values_retired": true,
+      "shape": [
+        1,
+        256
+      ],
+      "dtype": "torch.float32"
+    },
+    "gripper_head.2.bias": {
+      "tensor_values_retired": true,
+      "shape": [
+        1
+      ],
+      "dtype": "torch.float32"
+    }
+  },
+  "optimizer_state_dict": {
+    "state": {
+      "0": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "1": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "2": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "3": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "4": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "5": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "6": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "7": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "8": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "9": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "10": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "11": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "12": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "13": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "14": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "15": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "16": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "17": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "18": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "19": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "20": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "21": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "22": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "23": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "24": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "25": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "26": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "27": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "28": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "29": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "30": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "31": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "32": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "33": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "34": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "35": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "36": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "37": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "38": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "39": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "40": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "41": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "42": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "43": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "44": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "45": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "46": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "47": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "48": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "49": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "50": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "51": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "52": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "53": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "54": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "55": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "56": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "57": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "58": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "59": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "60": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "61": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "62": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "63": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "64": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "65": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "66": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "67": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "68": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "69": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "70": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "71": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "72": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "73": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "74": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "75": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "76": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "77": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "78": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "79": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "80": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "81": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "82": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "83": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "84": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "85": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "86": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "87": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "88": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "89": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "90": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "91": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "92": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "93": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "94": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "95": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "96": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "97": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "98": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "99": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "100": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "101": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "102": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "103": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "104": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "105": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "106": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "107": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "108": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "109": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "110": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "111": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "112": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "113": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "114": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "115": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "116": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "117": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "118": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "119": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "120": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "121": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "122": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "123": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "124": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "125": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "126": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "127": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "128": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "129": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "130": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "131": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "132": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "133": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "134": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "135": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "136": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "137": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "138": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "139": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "140": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "141": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "142": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "143": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "144": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "145": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "146": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "147": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "148": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "149": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1536
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "150": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "151": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "152": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            512
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "153": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "154": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "155": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "156": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "157": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "158": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024,
+            2048
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "159": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "160": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "161": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "162": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "163": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "164": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "165": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "166": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            112,
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            112,
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "167": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            112
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            112
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "168": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            1024
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            1024
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "169": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "170": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            7
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            7
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "171": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "172": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256,
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "173": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "174": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            16,
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            16,
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "175": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "176": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "177": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1,
+            256
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1,
+            256
+          ],
+          "dtype": "torch.float32"
+        }
+      },
+      "178": {
+        "step": {
+          "tensor_values_retired": true,
+          "shape": [],
+          "dtype": "torch.float32"
+        },
+        "exp_avg": {
+          "tensor_values_retired": true,
+          "shape": [
+            1
+          ],
+          "dtype": "torch.float32"
+        },
+        "exp_avg_sq": {
+          "tensor_values_retired": true,
+          "shape": [
+            1
+          ],
+          "dtype": "torch.float32"
+        }
+      }
+    },
+    "param_groups": [
+      {
+        "lr": 0.0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.0003,
+        "params": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167
+        ]
+      },
+      {
+        "lr": 0.0,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.0003,
+        "params": [
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178
+        ]
+      }
+    ]
+  },
+  "scheduler_state_dict": {
+    "T_max": 10,
+    "eta_min": 0.0,
+    "base_lrs": [
+      0.0003,
+      0.0003
+    ],
+    "last_epoch": 10,
+    "_step_count": 11,
+    "_is_initial": false,
+    "_get_lr_called_within_step": false,
+    "_last_lr": [
+      0.0,
+      0.0
+    ]
+  },
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "openai/clip-vit-large-patch14",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "regression",
+      "diffusion_prediction_type": "epsilon",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.0,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "condition_on_current_gripper": true,
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false
+    }
+  },
+  "validation_loss": 0.10343978554010391,
+  "best_validation_loss": 0.10343978554010391,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4560238081216812,
+      "validation_loss": 0.3782973736524582,
+      "learning_rate": 0.00029265847744427303,
+      "position_error_cm": 6.814461946487427,
+      "zero_motion_position_error_cm": 7.253817558288574,
+      "identity_rotation_error_deg": 9.07332706451416,
+      "rotation_error_deg": 14.010061264038086,
+      "gripper_accuracy": 0.71875,
+      "gripper_teacher_pose_accuracy": 0.734375,
+      "gripper_balanced_accuracy": 0.7107903063297272,
+      "gripper_majority_baseline": 0.5234375,
+      "gripper_persistence_baseline": 0.6640625,
+      "gripper_change_rate": 0.3359375,
+      "gripper_change_accuracy": 0.5581395626068115,
+      "gripper_hold_accuracy": 0.800000011920929,
+      "gripper_true_open_rate": 0.4765625,
+      "gripper_predicted_open_rate": 0.3203125,
+      "metric_trajectories": 8.0,
+      "metric_action_steps": 128.0,
+      "action_mae": 0.21911977231502533,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.355939034819603,
+      "validation_loss": 0.3618975132703781,
+      "learning_rate": 0.0002713525491562421,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.34501562297344207,
+      "validation_loss": 0.3525149077177048,
+      "learning_rate": 0.00023816778784387096,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.32528299927711485,
+      "validation_loss": 0.32032793015241623,
+      "learning_rate": 0.0001963525491562421,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.28968034625053407,
+      "validation_loss": 0.2512710765004158,
+      "learning_rate": 0.00015,
+      "position_error_cm": 4.906282424926759,
+      "zero_motion_position_error_cm": 7.253817558288574,
+      "identity_rotation_error_deg": 9.07332706451416,
+      "rotation_error_deg": 10.729838371276855,
+      "gripper_accuracy": 0.7734375,
+      "gripper_teacher_pose_accuracy": 0.78125,
+      "gripper_balanced_accuracy": 0.7674333453178406,
+      "gripper_majority_baseline": 0.5234375,
+      "gripper_persistence_baseline": 0.6640625,
+      "gripper_change_rate": 0.3359375,
+      "gripper_change_accuracy": 0.604651153087616,
+      "gripper_hold_accuracy": 0.8588235378265381,
+      "gripper_true_open_rate": 0.4765625,
+      "gripper_predicted_open_rate": 0.359375,
+      "metric_trajectories": 8.0,
+      "metric_action_steps": 128.0,
+      "action_mae": 0.16259625554084778,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.20663322985172272,
+      "validation_loss": 0.16972487419843674,
+      "learning_rate": 0.0001036474508437579,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.1358486968278885,
+      "validation_loss": 0.11600782722234726,
+      "learning_rate": 6.183221215612905e-05,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.10795365333557129,
+      "validation_loss": 0.11164112016558647,
+      "learning_rate": 2.86474508437579e-05,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.10292302042245866,
+      "validation_loss": 0.10461772605776787,
+      "learning_rate": 7.341522555726971e-06,
+      "diagnostic_training_fit": true
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.1132130552828312,
+      "validation_loss": 0.10343978554010391,
+      "learning_rate": 0.0,
+      "position_error_cm": 1.572442948818207,
+      "zero_motion_position_error_cm": 7.253817558288574,
+      "identity_rotation_error_deg": 9.07332706451416,
+      "rotation_error_deg": 4.9418182373046875,
+      "gripper_accuracy": 0.8203125,
+      "gripper_teacher_pose_accuracy": 0.8203125,
+      "gripper_balanced_accuracy": 0.821017861366272,
+      "gripper_majority_baseline": 0.5234375,
+      "gripper_persistence_baseline": 0.6640625,
+      "gripper_change_rate": 0.3359375,
+      "gripper_change_accuracy": 0.604651153087616,
+      "gripper_hold_accuracy": 0.929411768913269,
+      "gripper_true_open_rate": 0.4765625,
+      "gripper_predicted_open_rate": 0.5,
+      "metric_trajectories": 8.0,
+      "metric_action_steps": 128.0,
+      "action_mae": 0.08177436888217926,
+      "diagnostic_training_fit": true
+    }
+  ],
+  "dataset_size": 512,
+  "split_indices": {
+    "train": [
+      188,
+      40,
+      487,
+      103,
+      70,
+      71,
+      324,
+      22
+    ],
+    "validation": [
+      41,
+      97,
+      142,
+      143,
+      223,
+      265,
+      288,
+      310,
+      366,
+      414,
+      430,
+      479,
+      480,
+      484,
+      485,
+      486,
+      489,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      499,
+      500,
+      502,
+      503,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511
+    ],
+    "test": [
+      74,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      92,
+      94,
+      96,
+      98,
+      99,
+      100,
+      102,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      121,
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      16,
+      27,
+      46,
+      63,
+      75,
+      84,
+      119,
+      127,
+      149,
+      174,
+      193,
+      194,
+      220,
+      224,
+      225,
+      241,
+      248,
+      277,
+      281,
+      282,
+      332,
+      340,
+      343,
+      380,
+      429,
+      436,
+      461,
+      498,
+      504
+    ]
+  },
+  "data_config": {
+    "dataset_dir": "training_cache/oxe_core/bc_z",
+    "chunk_size": 16,
+    "stride": 4,
+    "sources": [
+      "auto"
+    ],
+    "max_samples": null,
+    "max_samples_per_schema": 512,
+    "max_tfrecord_episodes": null,
+    "max_tfrecord_episodes_per_schema": 24,
+    "min_trajectory_steps": 10,
+    "exclude_path_parts": [
+      "LIBERO",
+      "bridge",
+      "bridge_data_msr",
+      "old1.0.1",
+      "language_table_sim*",
+      "language_table*oracle*",
+      "VIOLA-dataset",
+      "fanuc_manipulation",
+      "cliport"
+    ],
+    "exclude_schemas": [
+      "hdf5_position3_action4"
+    ],
+    "tfrecord_splits": [
+      "train"
+    ]
+  },
+  "experiment_kind": "training_fit_diagnostic"
+}

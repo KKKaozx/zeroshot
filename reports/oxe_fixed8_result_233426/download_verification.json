@@ -1,0 +1,33 @@
+{
+  "format": "fixed8-download-independent-audit-receipt-v1",
+  "job_id": 233426,
+  "date": "2026-10-29",
+  "files": {
+    "report.json": {
+      "bytes": 423591,
+      "sha256": "e31b5d03b6e6afb0f2130d8886f212569bf1f836e3a8f67263f1660edbae7530"
+    },
+    "predictions_and_targets.npz": {
+      "bytes": 24339,
+      "sha256": "853ff9cfbbc1cdb414e7a3afc5ee8f2e2c611748d65f15da9373dcd5192318a8"
+    }
+  },
+  "total_downloaded_bytes": 447930,
+  "cpu_tests_passed": 3,
+  "test_source_sha256": "a36148db9ff8b82de990294548844113dc64013fd1545b87a8c0b6794bb57e3a",
+  "coverage": [
+    "Actual original NPZ/report: all means/per-window metrics and predeclared gate independently recomputed",
+    "512batch/LR/history/noise-record consistency checked with exact archived Linux reference",
+    "Target/mask exact match to immutable numeric references; repair/protocol/source binding checked",
+    "Quaternion sign/normalization/known rotations and invalid tail endpoint/dispersion unit fixtures",
+    "8window rotation residuals and3draw pairwise dispersion, masked gripper label accuracy"
+  ],
+  "cross_platform_metric_atol": 1e-10,
+  "identity_guards_or_training_tolerances_changed": false,
+  "source_and_final_policy_weights_downloaded": false,
+  "new_model_calls": 0,
+  "new_training_updates": 0,
+  "new_sampling_calls": 0,
+  "audit": "reports/oxe_fixed8_result_233426/cluster/independent_audit.json",
+  "scope": "CPU saved-result validation; source/final weight identities not independently verified from weight bytes"
+}

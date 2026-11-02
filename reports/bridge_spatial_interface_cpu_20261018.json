@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "scope": "Eight small32D archived cross-attention blocks with synthetic tokens; production1024D trained model NOT executed",
+  "original_parameter_keys_preserved": true,
+  "new_state_keys": [
+    "adapter.spatial_readout.content_score",
+    "adapter.spatial_readout.patch_xy",
+    "adapter.spatial_readout.position_score"
+  ],
+  "deltas": {
+    "eval": {
+      "context_max_abs": 0.0,
+      "base_gradient_max_abs": 0.0
+    },
+    "train_with_dropout": {
+      "context_max_abs": 0.0,
+      "base_gradient_max_abs": 0.0
+    }
+  },
+  "parameters_not_updated": true,
+  "optimizer_created": false,
+  "training_updates": 0,
+  "CLIP_loaded": false,
+  "old207558_weights_loaded": false,
+  "real_data_read": false,
+  "GPU_initialized": false,
+  "source_sha256": {
+    "cluster_packages\\bridge_prefix_pair_v1\\frozen\\adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "scripts\\check_bridge_spatial_interface_cpu_20261018.py": "4521f2488adf9fc14de58051958272109649f3874643a68437e1782fcb34993d",
+    "scripts\\bridge_spatial_readout_interface_v1.py": "70b2d47ff0c49ddb1a3e54b4d39345cc879399a777dfe9d965bce56dc0ea8b76"
+  }
+}

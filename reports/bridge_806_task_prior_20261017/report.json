@@ -1,0 +1,399 @@
+{
+  "verified": true,
+  "plan_sha256": "cf6e1ed3e9d4668d85fec8f885b95be6396cde8bd428c21465fab7bac2255a1d",
+  "source_sha256": "02be98fa67b1af0f748199470d209972e91a6bf8dc0de517d23062af3f448a00",
+  "summaries": {
+    "task_only_mean": {
+      "window_weighted": {
+        "path_position_cm": 7.687429820261715,
+        "endpoint_position_cm": 10.191616471563476
+      },
+      "episode_equal": {
+        "path_position_cm": 7.4073516365294125,
+        "endpoint_position_cm": 9.904930471021576
+      },
+      "per_episode": [
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+          "task": "close the drawer",
+          "windows": 4,
+          "path_position_cm": 7.324206066198452,
+          "endpoint_position_cm": 13.304584714938931
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+          "task": "close microwave",
+          "windows": 6,
+          "path_position_cm": 8.62841315949757,
+          "endpoint_position_cm": 8.504483588819504
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+          "task": "take broccoli out of pan",
+          "windows": 6,
+          "path_position_cm": 8.165035734807697,
+          "endpoint_position_cm": 11.319199676209832
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+          "task": "take broccoli out of pan",
+          "windows": 3,
+          "path_position_cm": 10.509883010676656,
+          "endpoint_position_cm": 11.867612889771687
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+          "task": "turn lever vertical to front",
+          "windows": 2,
+          "path_position_cm": 3.402927366026798,
+          "endpoint_position_cm": 4.907701618513894
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+          "task": "close microwave",
+          "windows": 4,
+          "path_position_cm": 9.41599971739226,
+          "endpoint_position_cm": 7.880392231805061
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+          "task": "turn lever vertical to front",
+          "windows": 2,
+          "path_position_cm": 2.7933002211624745,
+          "endpoint_position_cm": 4.606781955125699
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+          "task": "close the drawer",
+          "windows": 2,
+          "path_position_cm": 9.872912607618092,
+          "endpoint_position_cm": 14.785124500718762
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+          "task": "open the drawer",
+          "windows": 6,
+          "path_position_cm": 6.30355447905886,
+          "endpoint_position_cm": 10.413478995793383
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+          "task": "open the drawer",
+          "windows": 5,
+          "path_position_cm": 7.657284002855263,
+          "endpoint_position_cm": 11.459944538518993
+        }
+      ],
+      "per_task": [
+        {
+          "task": "close microwave",
+          "windows": 10,
+          "path_position_cm": 8.943447782655445,
+          "endpoint_position_cm": 8.254847046013726
+        },
+        {
+          "task": "close the drawer",
+          "windows": 6,
+          "path_position_cm": 8.173774913338333,
+          "endpoint_position_cm": 13.798097976865542
+        },
+        {
+          "task": "open the drawer",
+          "windows": 11,
+          "path_position_cm": 6.918886080784497,
+          "endpoint_position_cm": 10.889145151577752
+        },
+        {
+          "task": "take broccoli out of pan",
+          "windows": 9,
+          "path_position_cm": 8.946651493430684,
+          "endpoint_position_cm": 11.502004080730451
+        },
+        {
+          "task": "turn lever vertical to front",
+          "windows": 4,
+          "path_position_cm": 3.098113793594636,
+          "endpoint_position_cm": 4.757241786819797
+        }
+      ]
+    },
+    "readout_8192": {
+      "window_weighted": {
+        "path_position_cm": 5.662489410892246,
+        "endpoint_position_cm": 6.6654080321070905
+      },
+      "episode_equal": {
+        "path_position_cm": 5.4620467910550214,
+        "endpoint_position_cm": 6.6697371701424375
+      },
+      "per_episode": [
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+          "task": "close the drawer",
+          "windows": 4,
+          "path_position_cm": 4.777985116015821,
+          "endpoint_position_cm": 7.670002879563873
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+          "task": "close microwave",
+          "windows": 6,
+          "path_position_cm": 6.740376116531347,
+          "endpoint_position_cm": 6.8016349645742595
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+          "task": "take broccoli out of pan",
+          "windows": 6,
+          "path_position_cm": 5.3385597144203984,
+          "endpoint_position_cm": 7.2759122302936845
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+          "task": "take broccoli out of pan",
+          "windows": 3,
+          "path_position_cm": 9.07912329950116,
+          "endpoint_position_cm": 8.606288253261937
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+          "task": "turn lever vertical to front",
+          "windows": 2,
+          "path_position_cm": 4.218481096986089,
+          "endpoint_position_cm": 6.08828981119215
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+          "task": "close microwave",
+          "windows": 4,
+          "path_position_cm": 5.9789758788339,
+          "endpoint_position_cm": 4.274851517540959
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+          "task": "turn lever vertical to front",
+          "windows": 2,
+          "path_position_cm": 2.869087235501269,
+          "endpoint_position_cm": 4.349812933290399
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+          "task": "close the drawer",
+          "windows": 2,
+          "path_position_cm": 4.366510838965251,
+          "endpoint_position_cm": 8.673246967603665
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+          "task": "open the drawer",
+          "windows": 6,
+          "path_position_cm": 4.595746160196842,
+          "endpoint_position_cm": 5.543395622181175
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+          "task": "open the drawer",
+          "windows": 5,
+          "path_position_cm": 6.655622453598141,
+          "endpoint_position_cm": 7.413936521922269
+        }
+      ],
+      "per_task": [
+        {
+          "task": "close microwave",
+          "windows": 10,
+          "path_position_cm": 6.435816021452368,
+          "endpoint_position_cm": 5.790921585760939
+        },
+        {
+          "task": "close the drawer",
+          "windows": 6,
+          "path_position_cm": 4.640827023665632,
+          "endpoint_position_cm": 8.004417575577138
+        },
+        {
+          "task": "open the drawer",
+          "windows": 11,
+          "path_position_cm": 5.532053566288341,
+          "endpoint_position_cm": 6.393641485699853
+        },
+        {
+          "task": "take broccoli out of pan",
+          "windows": 9,
+          "path_position_cm": 6.585414242780653,
+          "endpoint_position_cm": 7.719370904616436
+        },
+        {
+          "task": "turn lever vertical to front",
+          "windows": 4,
+          "path_position_cm": 3.5437841662436793,
+          "endpoint_position_cm": 5.219051372241275
+        }
+      ]
+    },
+    "readout_16170": {
+      "window_weighted": {
+        "path_position_cm": 5.635064817516692,
+        "endpoint_position_cm": 6.65374212628385
+      },
+      "episode_equal": {
+        "path_position_cm": 5.572171557794772,
+        "endpoint_position_cm": 6.802148156041549
+      },
+      "per_episode": [
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+          "task": "close the drawer",
+          "windows": 4,
+          "path_position_cm": 5.4159743077993685,
+          "endpoint_position_cm": 7.633598975375161
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+          "task": "close microwave",
+          "windows": 6,
+          "path_position_cm": 6.700532712558949,
+          "endpoint_position_cm": 6.970379107118428
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+          "task": "take broccoli out of pan",
+          "windows": 6,
+          "path_position_cm": 5.756280466496711,
+          "endpoint_position_cm": 7.961256948047439
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+          "task": "take broccoli out of pan",
+          "windows": 3,
+          "path_position_cm": 9.80360815993492,
+          "endpoint_position_cm": 9.074109183799766
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+          "task": "turn lever vertical to front",
+          "windows": 2,
+          "path_position_cm": 4.906275417495353,
+          "endpoint_position_cm": 7.009438425733459
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+          "task": "close microwave",
+          "windows": 4,
+          "path_position_cm": 5.565903393660371,
+          "endpoint_position_cm": 4.316653513021946
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+          "task": "turn lever vertical to front",
+          "windows": 2,
+          "path_position_cm": 3.9672032273782523,
+          "endpoint_position_cm": 5.763403430649284
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+          "task": "close the drawer",
+          "windows": 2,
+          "path_position_cm": 4.258072716147217,
+          "endpoint_position_cm": 8.585141826730144
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+          "task": "open the drawer",
+          "windows": 6,
+          "path_position_cm": 4.320949736265513,
+          "endpoint_position_cm": 5.283063099445994
+        },
+        {
+          "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+          "task": "open the drawer",
+          "windows": 5,
+          "path_position_cm": 5.026915440211069,
+          "endpoint_position_cm": 5.424437050493866
+        }
+      ],
+      "per_task": [
+        {
+          "task": "close microwave",
+          "windows": 10,
+          "path_position_cm": 6.246680984999517,
+          "endpoint_position_cm": 5.908888869479836
+        },
+        {
+          "task": "close the drawer",
+          "windows": 6,
+          "path_position_cm": 5.030007110581985,
+          "endpoint_position_cm": 7.950779925826821
+        },
+        {
+          "task": "open the drawer",
+          "windows": 11,
+          "path_position_cm": 4.641843238058948,
+          "endpoint_position_cm": 5.347323986285937
+        },
+        {
+          "task": "take broccoli out of pan",
+          "windows": 9,
+          "path_position_cm": 7.10538969764278,
+          "endpoint_position_cm": 8.332207693298214
+        },
+        {
+          "task": "turn lever vertical to front",
+          "windows": 4,
+          "path_position_cm": 4.436739322436802,
+          "endpoint_position_cm": 6.386420928191372
+        }
+      ]
+    }
+  },
+  "gates": {
+    "8192": {
+      "window_better": true,
+      "episode_equal_better": true,
+      "episodes_better": 8,
+      "incremental_evidence": true
+    },
+    "16170": {
+      "window_better": true,
+      "episode_equal_better": true,
+      "episodes_better": 8,
+      "incremental_evidence": true
+    }
+  },
+  "residual_decomposition": {
+    "8192": {
+      "task_prior_mse_cm2": 83.5223258333115,
+      "readout_departure_mse_cm2": 45.6878754714657,
+      "twice_residual_alignment_cm2": 85.20368722407673,
+      "readout_mse_cm2": 44.006514080700484,
+      "identity_max_abs_difference_cm2": 1.1368683772161603e-13,
+      "scope": "Finite40-window640-target identity,not a causal or population variance decomposition."
+    },
+    "16170": {
+      "task_prior_mse_cm2": 83.5223258333115,
+      "readout_departure_mse_cm2": 48.58259629255964,
+      "twice_residual_alignment_cm2": 89.1012407567417,
+      "readout_mse_cm2": 43.003681369129424,
+      "identity_max_abs_difference_cm2": 1.4210854715202004e-13,
+      "scope": "Finite40-window640-target identity,not a causal or population variance decomposition."
+    }
+  },
+  "training_windows_per_task": {
+    "close microwave": 667,
+    "close the drawer": 964,
+    "open the drawer": 1054,
+    "take broccoli out of pan": 603,
+    "turn lever vertical to front": 336
+  },
+  "neural_training": false,
+  "ridge_refit": false,
+  "new_inference": false,
+  "gpu_used": false,
+  "reserved_test_read": false,
+  "limitations": [
+    "Reused development set,not independent final testing.",
+    "Context also includes current state and history; advantage cannot be uniquely attributed to image or Adapter.",
+    "A task-only prior ignores actual scene; lower mean error alone does not make it a valid executable controller.",
+    "XYZ only; no rotation/gripper/closed-loop claims."
+  ]
+}

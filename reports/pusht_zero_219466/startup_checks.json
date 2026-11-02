@@ -1,0 +1,19 @@
+{
+  "loss_audit": {
+    "original_compute_loss_used": true,
+    "common_noise_exact": true,
+    "common_timesteps_exact": true,
+    "epsilon_objective_loss_exact": true,
+    "representative_backend_gradient_exact": true,
+    "frontend_and_backend_gradients_valid": true,
+    "adapter_gradients_valid": true,
+    "projection_gradients_valid": true
+  },
+  "disk_resume_replay_exact": true,
+  "loss_before_restore": 1.0593066662549973,
+  "loss_after_restore": 1.0593066662549973,
+  "state_digest_before_restore": "c86b3a2a611c3d12d880e3755020b714ad4747edbb7b051f31dd113f705ef2a7",
+  "state_digest_after_restore": "c86b3a2a611c3d12d880e3755020b714ad4747edbb7b051f31dd113f705ef2a7",
+  "audit_recomputed_updates_excluded_from_training_budget": 1,
+  "scope": "Raw,EMA,Adam,LR,EMA counter,Python/NumPy/CPU/CUDA RNG"
+}

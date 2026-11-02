@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "training_windows": 35933,
+  "training_episode_records": 3363,
+  "unique_canonical_instructions": 2447,
+  "windows_by_source": {
+    "Bridge": 2156,
+    "Language Table": 10000,
+    "BC-Z": 18016,
+    "Fractal": 5761
+  },
+  "instructions_with_replacement_characters": 0,
+  "full_training_window_coverage": true,
+  "source_validation_or_holdout_records_read": 0,
+  "libero_or_cliport_task_instructions_read": false,
+  "payload_bytes_read": 4309890256,
+  "no_image_decoding": true,
+  "no_action_target_construction": true,
+  "reviewed_bank_created": false,
+  "local_language_model_run": false,
+  "paraphrases_generated": false,
+  "grounded_counterfactuals_generated": false,
+  "model_training_updates": 0,
+  "simulation_steps": 0,
+  "dataset_identity": "a1c8338600926bbba2920d8e67b7c26cc9ec52940cf609a9b33c6155264e8abe",
+  "catalog_sha256": "37ea692609c7518490abc68908d392d86f3e2fc3b0e92e64fe035d81384c81fe",
+  "generation_inputs_sha256": "db6750417851daded283c87cdda6469195503b7e68db70b54f759c5b6f5f3c83",
+  "elapsed_seconds": 12.64000000001397,
+  "source_code_sha256": "9dd4822bc83464f9b19a37b43ad64837341d7cc4a289a3b3da00dd7ebad58df0",
+  "remaining": [
+    "Select and pin existing/local language model; generate exactly5 candidates per original",
+    "Semantic review preserving objects, spatial relations, goal and action",
+    "Training-scene grounded mismatch and known-hold-command evidence before counterfactual labels",
+    "Formal source and budget admission; engineering catalog is not a reviewed bank"
+  ]
+}

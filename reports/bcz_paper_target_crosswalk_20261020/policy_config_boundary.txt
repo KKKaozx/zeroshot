@@ -1,0 +1,35 @@
+    def __init__(self, model, tokenizer, config, execution_contract, *, device, sampling_seed):
+        self.config = copy.deepcopy(config)
+        action, settings = self.config['action'], self.config['model']
+        pair_input = settings.get('current_gripper_encoding') == 'last_command_with_availability_v1'
+        expected_semantics = ('last_command_open_positive_with_availability_v1' if pair_input
+                              else 'last_command_open_positive_v1')
+        execution_contract.ticks()
+        if (action.get('representation') not in (TOOL_REPRESENTATION, SOURCE_REPRESENTATION)
+                or action.get('representation') != execution_contract.action_representation
+                or action.get('position_scale_meters') != execution_contract.position_scale_meters
+                or settings.get('action_dim') != 8
+                or settings.get('chunk_size') != len(execution_contract.target_times_seconds)
+                or settings.get('decoder_type') != 'diffusion'
+                or not settings.get('separate_gripper_head')
+                or not settings.get('trajectory_conditioned_gripper')
+                or not settings.get('condition_on_current_gripper')
+                or settings.get('current_gripper_encoding') not in ('binary', 'last_command_with_availability_v1')
+                or settings.get('current_gripper_semantics') != expected_semantics
+                or getattr(model, 'current_gripper_feature_dim', 1) != (2 if pair_input else 1)):
+            raise ValueError('Need matching 8-D diffusion config and explicit last-command semantics; binary alone is insufficient')
+        if (model.action_dim != 8 or model.chunk_size != settings['chunk_size']
+                or model.decoder_type != 'diffusion'
+                or model.num_diffusion_steps != settings['num_diffusion_steps']
+                or model.beta_schedule != settings['beta_schedule']
+                or model.diffusion_prediction_type != settings['diffusion_prediction_type']):
+            raise ValueError('Loaded model and checkpoint inference settings differ')
+        if type(sampling_seed) is not int or not 0 <= sampling_seed < 2 ** 63 - 1:
+            raise ValueError('Explicit nonnegative integer sampling seed required')
+        self.model, self.tokenizer = model, tokenizer
+        self.action_representation = action['representation']
+        self.command_pair_input = pair_input
+        self.device = torch.device(device)
+        self.sampling_seed, self.calls, self.last_inference = sampling_seed, 0, None
+        self._check_frozen_clip()
+        self.model.to(self.device).eval()

@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "legacy default config has no added visual fields",
+      "passed": true
+    },
+    {
+      "check": "canonical normalization matches actual Dataset constants",
+      "passed": true
+    },
+    {
+      "check": "wrong image contract",
+      "passed": true,
+      "rejection": "DINO checkpoint/config visual binding differs: visual_input_contract"
+    },
+    {
+      "check": "wrong checkpoint backbone identity",
+      "passed": true,
+      "rejection": "DINO checkpoint/config visual binding differs: visual_asset_identity"
+    },
+    {
+      "check": "no implicit asset download",
+      "passed": true,
+      "rejection": "Existing local DINO asset directory required"
+    },
+    {
+      "check": "corrupt weight bytes",
+      "passed": true,
+      "rejection": "DINO asset identity differs: model.safetensors"
+    },
+    {
+      "check": "analytic white image uses one DINO normalization",
+      "passed": true,
+      "max_abs": 0.0
+    },
+    {
+      "check": "actual pretrained vision/text frozen; new main loss backpropagates to learned heads",
+      "passed": true
+    },
+    {
+      "check": "DINO checkpoint without explicit DINO assets",
+      "passed": true,
+      "rejection": "DINO checkpoint requires explicit local_dino_path; no CLIP fallback"
+    },
+    {
+      "check": "actual main checkpoint reload and live callback exactly match direct main inference; caller RNG unchanged",
+      "passed": true
+    },
+    {
+      "check": "runtime CLIP/DINO mismatch",
+      "passed": true,
+      "rejection": "Runtime visual backbone differs from checkpoint config"
+    },
+    {
+      "check": "no optimizer constructed or stepped; no target tasks or physics accessed",
+      "passed": true
+    }
+  ],
+  "actual_pretrained_dinov2_loaded": true,
+  "actual_pretrained_clip_text_loaded": true,
+  "visual_identity": {
+    "repository": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "sha256": {
+      "model.safetensors": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+      "config.json": "12df51c069a2dc1305e34ba71ef58bc2407ea553b75f4722a1715c1bce3bbed0",
+      "preprocessor_config.json": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+    }
+  },
+  "visual_input_contract": "canonical_clip_224_letterbox_to_dino_imagenet_v1",
+  "image_geometry": "Existing main bilinear letterbox224 and CLIP-mean padding, shared by Dataset and live policy; not Push-T PIL preprocessing",
+  "fixture_adapter_layers": 1,
+  "fixture_attention_dim": 32,
+  "fixture_decoder_hidden_dim": 32,
+  "fixture_sampling_steps": 4,
+  "fixture_images_and_text": "Synthetic RGB and language; no source or target evaluation data",
+  "actual_eight_layer_formal_resources_qualified": false,
+  "load_seconds": 2.7660000000032596,
+  "peak_reserved_gib": 3.349609375,
+  "total_seconds": 13.545999999972992,
+  "backward_only_loss": 0.4444853365421295,
+  "optimization_updates": 0,
+  "physics_steps": 0,
+  "new_cluster_jobs": 0,
+  "formal_training_ready": false,
+  "policy_generalization_verdict": null,
+  "code_sha256": {
+    "frozen_visual_backbone.py": "11750ee52a018495256a11c4971bc9ba48f060a02973343170bab77da62fa317",
+    "models.py": "0c460e8d18f10676f87be15aa89c0d71056725d0bb902da0b32c30ebd00aacf7",
+    "train.py": "3b9b1dbd337d688eb970a45820fad412d898dcb03fc9f9840f1d8eb10ca862cf",
+    "step_training_runner.py": "5ad74c9171a3a9db02deea0ccede1eaf64fe4296d8e2dff67d2384227c4e94e8",
+    "libero_project_policy.py": "19b701ab06a3ffbc386a38944560d82001c2ce57e595ebf0f628a6fd897b49e0"
+  }
+}

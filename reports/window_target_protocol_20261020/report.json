@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "scope": "synthetic protocol and artifact compatibility only",
+  "positive_checks": [
+    "Observed pose and preceding-command rows explicit; unknown times preserved",
+    "Native slots use the same input row and matching gripper slot",
+    "Short tails carry no padded supervision or invented deadlines",
+    "Recorded per-window times remain per-window, not a shared inference grid",
+    "Window/config/checkpoint/runtime identity matches, without claiming calibration/success",
+    "Mixed partial supervision does not invent gripper labels or deny a full model prediction"
+  ],
+  "rejected_cases": [
+    {
+      "case": "unknown_time",
+      "reason": "A source-backed common target grid must match runtime; no default rate"
+    },
+    {
+      "case": "native_unknown_time",
+      "reason": "A source-backed common target grid must match runtime; no default rate"
+    },
+    {
+      "case": "irregular_not_shared",
+      "reason": "A source-backed common target grid must match runtime; no default rate"
+    },
+    {
+      "case": "native_family_disguised_as_reached",
+      "reason": "Native slots and observed reached states cannot silently share an output family"
+    },
+    {
+      "case": "native_slots_disguised_as_rows",
+      "reason": "This reached-row contract explicitly uses t+1 through t+H"
+    },
+    {
+      "case": "boolean_horizon",
+      "reason": "Supported fixed-reference 8D output declaration required"
+    },
+    {
+      "case": "incremental_reference_not_fixed",
+      "reason": "Supported fixed-reference 8D output declaration required"
+    },
+    {
+      "case": "incoherent_quaternion_mask",
+      "reason": "Explicit nonempty binary 8D supervision; quaternion mask must be coherent"
+    },
+    {
+      "case": "invented_gripper_on_planar_mask",
+      "reason": "Gripper rule must match family and availability mask"
+    },
+    {
+      "case": "negative_unit_factor",
+      "reason": "Unknown unit is null; documented conversion must be positive and finite"
+    },
+    {
+      "case": "known_unit_without_evidence",
+      "reason": "Explicit evidence references required for a documented declaration"
+    },
+    {
+      "case": "known_time_without_evidence",
+      "reason": "Explicit evidence references required for a documented declaration"
+    },
+    {
+      "case": "source_grid_conflict",
+      "reason": "A declared common grid must match every source; nominal rates cannot substitute"
+    },
+    {
+      "case": "nonfinite_time",
+      "reason": "Target times must be H positive, finite, strictly increasing offsets"
+    },
+    {
+      "case": "duplicate_time",
+      "reason": "Target times must be H positive, finite, strictly increasing offsets"
+    },
+    {
+      "case": "synthetic_evidence_in_real_scope",
+      "reason": "Synthetic evidence cannot qualify a recorded source"
+    },
+    {
+      "case": "unfrozen_dataset_identity",
+      "reason": "Frozen actual-window dataset identity SHA256 required, not an episode-only draft"
+    },
+    {
+      "case": "wrong_native_pose_row",
+      "reason": "Window pose/gripper indices, masks or times differ from the target protocol"
+    },
+    {
+      "case": "gripper_native_slot_mismatch",
+      "reason": "Window pose/gripper indices, masks or times differ from the target protocol"
+    },
+    {
+      "case": "float_row_index",
+      "reason": "Window row/slot indices must be nullable nonnegative integers"
+    },
+    {
+      "case": "boolean_slot_index",
+      "reason": "Window row/slot indices must be nullable nonnegative integers"
+    },
+    {
+      "case": "preceding_command_replaced_by_target_row",
+      "reason": "Window pose/gripper indices, masks or times differ from the target protocol"
+    },
+    {
+      "case": "padding_became_label",
+      "reason": "Window pose/gripper indices, masks or times differ from the target protocol"
+    },
+    {
+      "case": "boolean_window_mask",
+      "reason": "Window masks must be an explicit H by 8 binary array"
+    },
+    {
+      "case": "empty_all_padding_window",
+      "reason": "At least one measured target required; padding is not supervision"
+    },
+    {
+      "case": "padding_native_slots",
+      "reason": "Native slots are not padded with fabricated future targets"
+    },
+    {
+      "case": "guess_0_1_seconds",
+      "reason": "Unknown source timing cannot be filled by a guessed runtime interval"
+    },
+    {
+      "case": "different_runtime_digest",
+      "reason": "Runtime target identity/geometry differs from checkpoint"
+    },
+    {
+      "case": "different_runtime_times",
+      "reason": "A source-backed common target grid must match runtime; no default rate"
+    },
+    {
+      "case": "different_runtime_scale",
+      "reason": "Runtime target identity/geometry differs from checkpoint"
+    },
+    {
+      "case": "different_runtime_frame",
+      "reason": "Runtime target identity/geometry differs from checkpoint"
+    },
+    {
+      "case": "different_runtime_reference",
+      "reason": "Runtime target identity/geometry differs from checkpoint"
+    },
+    {
+      "case": "label_placeholder_used_as_prediction",
+      "reason": "A source label/placeholder is not a complete model prediction"
+    },
+    {
+      "case": "fractional_native_tick",
+      "reason": "Targets must coincide with native ticks; no implicit resampling"
+    },
+    {
+      "case": "execution_prefix_over_horizon",
+      "reason": "Positive native frequency and explicit bounded execution prefix required"
+    },
+    {
+      "case": "boolean_execution_prefix",
+      "reason": "Positive native frequency and explicit bounded execution prefix required"
+    },
+    {
+      "case": "unqualified_pose_gripper_association",
+      "reason": "Pose/gripper association evidence is unresolved"
+    },
+    {
+      "case": "unqualified_units",
+      "reason": "Unresolved source units cannot qualify execution compatibility"
+    },
+    {
+      "case": "tampered_protocol_kept_old_digest",
+      "reason": "Target binding digest/version differs"
+    },
+    {
+      "case": "checkpoint_horizon_changed",
+      "reason": "Actual model geometry/horizon differs from the protocol"
+    },
+    {
+      "case": "checkpoint_digest_missing",
+      "reason": "Missing target digest in checkpoint configuration or manifest"
+    },
+    {
+      "case": "manifest_changed_dataset",
+      "reason": "Window manifest identity differs"
+    },
+    {
+      "case": "overwrite_native_with_reached",
+      "reason": "Cannot overwrite a different existing manifest binding"
+    }
+  ],
+  "source_sha256": {
+    "code/window_target_protocol.py": "b9a3b12dad9d37de585c90ba3caccfd3c537267797440a161c5cd048b9cb29f9",
+    "scripts/check_window_target_protocol_20261020.py": "4de121ba2e9039ffca23e1a16473c58c7894c92ece4841e2e669bfeed5c685a0"
+  },
+  "existing_runner_and_execution_sources_unchanged": {
+    "code/train.py": "e4baddb33efec7ef864f6be5adfab3b7825f5f80aecd29379b892240b9fb0833",
+    "code/step_training_runner.py": "37916a469126800d8b543e779e616f8551421c6514ae57899a0559497778f9aa",
+    "code/step_training_state.py": "e2029456c3840e63879de5eecaa75f869989ee419b168916d1888f5d362f0e6d",
+    "scripts/check_step_main_runner_20261020.py": "fb962d1a75c9e9c52af3babc6ae55cae1142b110da4c7f6c915cfc7948127d8c",
+    "code/dataset.py": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445",
+    "code/models.py": "36ebcea308786eb8bd0ea1df97655d4ca8aaa8bd25b810c2aa17e33fa7c69083",
+    "code/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/libero_project_policy.py": "1ea0657d200b55224b4a1231d8208cf4e0837a91187a9a7333b31a686501b4d8",
+    "code/libero_waypoint_execution.py": "5d183a6720f1a8303d4766b2cad139e24d33367a51b1675cf279cad18892acb8",
+    "code/libero_action_interface.py": "6302101e77efb3d3c8ac76d5e2086fe86f72e0b12e625e59ffe414d69d9b8c50",
+    "code/oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981"
+  },
+  "actual_main_window_manifest_created": false,
+  "production_runner_integration_complete": false,
+  "physical_qualification_proven": false,
+  "models_or_simulation_executed": false,
+  "new_jobs_submitted": false,
+  "generalization_verdict": null
+}

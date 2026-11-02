@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "checks_passed": 20,
+  "checks": [
+    "Real frozen window index and parser fingerprints validate",
+    "Exact pre-change Dataset recovered at previously qualified CRLF SHA; numerical parser operations unchanged",
+    "Legacy defaults and absent opt-in preserved",
+    "Every45049 indexed window has one fixed role",
+    "Original roles were not rerandomized",
+    "Reject changed window content without a matching identity",
+    "Reject resealed target count inconsistent with raw episode bounds",
+    "Reject fabricated training admission",
+    "Unknown source timing/units cannot qualify LIBERO execution",
+    "Actual main entry consumes real indexed windows with no model/tokenizer/record scan",
+    "Changing training seed to44 preserves all split indices and target binding",
+    "Reject real training before data/model initialization",
+    "Prepare-only cannot dispatch into the fixed-update training runner",
+    "Prepare-only cannot overwrite an existing output",
+    "Portable content identity matches actual Dataset",
+    "All known shared content/origin groups stay together in actual Dataset group_key",
+    "Eight actual train-window payload/image/target reads match new index and partial/tail masks",
+    "Actual3D parser read rejects wrong payload SHA",
+    "Reject invented LT gripper supervision",
+    "Indexed prepare log explicitly reports unqualified physical units; all output split metadata unchanged"
+  ],
+  "pre_change_dataset_sha256": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445",
+  "dataset_identity": "a1c8338600926bbba2920d8e67b7c26cc9ec52940cf609a9b33c6155264e8abe",
+  "window_manifest_sha256": "55b62e336bcdee3af19c3497e87833759b3b4fcdbae48a4e3864a22b7dd7c57f",
+  "actual_main_prepare_output": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\oxe_window_index_20261025\\main_prepare_seed42",
+  "actual_sampled_train_reads": [
+    {
+      "source": "tfrecord_bridge_state_action",
+      "index": 0,
+      "record_index": 1,
+      "start_index": 0,
+      "valid_targets": 16,
+      "supervised_components": 128,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_bridge_state_action",
+      "index": 9,
+      "record_index": 1,
+      "start_index": 36,
+      "valid_targets": 1,
+      "supervised_components": 8,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_language_table_xy",
+      "index": 2670,
+      "record_index": 0,
+      "start_index": 0,
+      "valid_targets": 16,
+      "supervised_components": 32,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_language_table_xy",
+      "index": 2676,
+      "record_index": 0,
+      "start_index": 24,
+      "valid_targets": 2,
+      "supervised_components": 4,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_bc_z_pose",
+      "index": 15207,
+      "record_index": 2,
+      "start_index": 0,
+      "valid_targets": 16,
+      "supervised_components": 128,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_bc_z_pose",
+      "index": 15256,
+      "record_index": 2,
+      "start_index": 196,
+      "valid_targets": 4,
+      "supervised_components": 32,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_rt1_pose",
+      "index": 37560,
+      "record_index": 1,
+      "start_index": 0,
+      "valid_targets": 16,
+      "supervised_components": 128,
+      "partition": "train"
+    },
+    {
+      "source": "tfrecord_rt1_pose",
+      "index": 37576,
+      "record_index": 1,
+      "start_index": 64,
+      "valid_targets": 1,
+      "supervised_components": 8,
+      "partition": "train"
+    }
+  ],
+  "prepare_only_main_entry_checked": true,
+  "training_seed_change_preserves_roles": true,
+  "source_heldout_numeric_targets_read": false,
+  "libero_test_tasks_read": false,
+  "full_numeric_pool_eligibility_checked": false,
+  "source_units_time_tcp_qualified": false,
+  "model_loaded": false,
+  "training_updates": 0,
+  "physics_steps": 0,
+  "generalization_verdict": null,
+  "source_sha256": {
+    "dataset.py": "424e5d0610cf4822a96416d98cc5b655c580bdfc73047f3c815fa9c70c69c4dd",
+    "oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981",
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "window_target_protocol.py": "b9a3b12dad9d37de585c90ba3caccfd3c537267797440a161c5cd048b9cb29f9",
+    "oxe_window_index.py": "00c13a24ba33bc1299a6634e688194ac45a815744d228faf5263dc6431112aaf",
+    "train.py": "8489a0a4fff75625760af1dc26903dd1ecde71dc1c2b3a05879e100fe519e79d"
+  }
+}

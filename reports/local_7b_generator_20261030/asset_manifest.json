@@ -1,0 +1,308 @@
+{
+  "complete": true,
+  "model_repository": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+  "model_revision": "bb5d59e06d9551d752d08b292a50eb208b07ab1f",
+  "runtime_tag": "b11960",
+  "runtime_backend": "Vulkan",
+  "assets": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030",
+  "files": [
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\LICENSE",
+      "size": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\README.md",
+      "size": 5633,
+      "sha256": "b813de546b5f0a1d8c49307d428582fd649be627d9b33a60ecf807a3381af05e"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+      "size": 3993201344,
+      "sha256": "dfce12e3862a5283ccfb88221b48480e58745165de856439950d0f22590580db"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\qwen2.5-7b-instruct-q4_k_m-00002-of-00002.gguf",
+      "size": 689872288,
+      "sha256": "539cf93f78e887edea1c04e2d7d8cdaca9d01dae9c9025bcb8accbe29df3d72a"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\llama-b11960-bin-win-vulkan-x64.zip",
+      "size": 37345851,
+      "sha256": "bac6914b5e83523eb008c6789eaa12669f93fbc196c3b9e8237b6672323b33e9"
+    }
+  ],
+  "runtime_files": [
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-vulkan.dll",
+      "size": 41986048,
+      "sha256": "429b5dc6931cfc51121f05a43b4fb0b7dbf49d8c2ce38c0f72f848b308c592c8"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\mtmd.dll",
+      "size": 2142720,
+      "sha256": "e82d563ae9dad225a3d15d0f189e046909713e26759ae9a046f89430bc845bd3"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama.exe",
+      "size": 104960,
+      "sha256": "e07130143528e649d08bcbbe191ff630e5f12317b9ea13efd4b95e5c32b627f1"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama.dll",
+      "size": 3695616,
+      "sha256": "af13ed8cb1454a80689dbd390310995b6c4b23333e096152453fe6d0fef17356"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-tts.exe",
+      "size": 45056,
+      "sha256": "eb76a870d616bfd36a21870efabcb93e34d399ab444d2e4e374e881c9856bf68"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-tokenize.exe",
+      "size": 58880,
+      "sha256": "9b4ab318e9842c08f0a349b7da18108090ff7ee53733b8524df3be0894ff6d90"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-server.exe",
+      "size": 9216,
+      "sha256": "81f65c6681d66099e5d48757aa2c050ba958dc43816e584f0bb4181eb7c910d8"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-server-impl.dll",
+      "size": 10076672,
+      "sha256": "0b329dcfdece6a43f34d0554dec5ca0cc2efe6ee23d5aabd8141c51487668564"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-results.exe",
+      "size": 47104,
+      "sha256": "7b01c2871c209f8e610207bcc6992d551d843603fbc2e78e9117fd4fafc5f23f"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-qwen2vl-cli.exe",
+      "size": 27136,
+      "sha256": "f440829cbea406f0911739bc8c506026d21e7903208ec953103bcda06b4555a0"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-quantize.exe",
+      "size": 9216,
+      "sha256": "3c045bd055736deba6713cd577552917e556e90f4de8757beb42396891cb91d0"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-quantize-impl.dll",
+      "size": 137216,
+      "sha256": "42a1ac2b1b2d4db4d4cfa389b64e57dc08e3f7f7f0b2bbadf65196696e2b0e9f"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-perplexity.exe",
+      "size": 9216,
+      "sha256": "a5392a06bb9163caa54b6ccae3f17c6868c6279d2d15a2e8114533aeb159a9d8"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-perplexity-impl.dll",
+      "size": 198144,
+      "sha256": "c74f4c51d927e626528dc14c1a82e488e408478d2cfe506cb55848aaf863d570"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-mtmd-debug.exe",
+      "size": 56320,
+      "sha256": "ee9e0025689fb28a3433e019f98cd57d5eb4f12f97c21795965945cf0a75808d"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-mtmd-cli.exe",
+      "size": 96768,
+      "sha256": "5073109b15d7d19fd3cc4c23bdbdc2f3dfdae39a6410d80ea6e7b6929eb30b3a"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-minicpmv-cli.exe",
+      "size": 27136,
+      "sha256": "15c385e5b02617acf9b776d2f376897037e03fc8f94af1b67c8f59fce4e30773"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-llava-cli.exe",
+      "size": 27136,
+      "sha256": "15c385e5b02617acf9b776d2f376897037e03fc8f94af1b67c8f59fce4e30773"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-imatrix.exe",
+      "size": 253440,
+      "sha256": "c61923126281f1abf6f505123761ea344cdedbaff09cac2c15e8250e7a27e476"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-gguf-split.exe",
+      "size": 60416,
+      "sha256": "bc1e7236104fb7afc8bd2594c3dab583b7f251e81eed6ef2fed3b094435b7ad1"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-gemma3-cli.exe",
+      "size": 27136,
+      "sha256": "15c385e5b02617acf9b776d2f376897037e03fc8f94af1b67c8f59fce4e30773"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-fit-params.exe",
+      "size": 9216,
+      "sha256": "e6682185f02e0bbf00121cc33081fdacdb8db2f79307585de33de21fca39a5de"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-fit-params-impl.dll",
+      "size": 43520,
+      "sha256": "afaa9591c4112bcd6cc419a323c6d7aed5ec2134e0a2fcf5abf0915beaead2a9"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-connect.exe",
+      "size": 11473920,
+      "sha256": "9f2bdd778f96971995a80add8d6b2478c156f799933337a19dbf80cdaad21b1d"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-completion.exe",
+      "size": 9216,
+      "sha256": "2b4759ec5f0343d7421cae98fadd6d2de1c9bdae64cb128da52628606ab35090"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-completion-impl.dll",
+      "size": 138752,
+      "sha256": "db9ea9071f4fa4954a05dd91ebb4c70d6294ff359437a2e2fe639c0b17374601"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-common.dll",
+      "size": 8337920,
+      "sha256": "34370fd48c31112b2ebe4e7bb234747c1a9b39325a29e61302659c525a6049d9"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-cli.exe",
+      "size": 9216,
+      "sha256": "02c8fcdbf3e89c0c36757ee0cffb091844181a43d15995699bb6f3400f932de0"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-cli-impl.dll",
+      "size": 3365376,
+      "sha256": "2e4aa4b28dffe02fdc1022621e1ce1955bed33f4b2de96732d01992fbc5ae42f"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-bench.exe",
+      "size": 9216,
+      "sha256": "b815771c315315b0dd179d5057262112035683308d0cf4eebcf3bf418de39e6c"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-bench-impl.dll",
+      "size": 404480,
+      "sha256": "a2ce853eaae3c165da85643d6cb92c3bb043f1aab4ac3c3da60bacab3871752e"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-batched-bench.exe",
+      "size": 9216,
+      "sha256": "a2b698b5f78e036324b799036fa9f0bf8cead4c2714f4dbe731edf984b9c569d"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\llama-batched-bench-impl.dll",
+      "size": 61952,
+      "sha256": "f826a0ec3f4ea79d19c4c16594bd5e0e1e7941d845b65b6580be926548fff389"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\LICENSE-LLVM-OpenMP",
+      "size": 19741,
+      "sha256": "fdad1758a9e1f9d5a81e18879b3406772115edc92c24bfa36b70c654f325e8e4"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\libomp.dll",
+      "size": 768000,
+      "sha256": "a12116ba72d1d6820407cf30be23da04ce79d6bb8a71a5ee71759c5a1faa6f1c"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml.dll",
+      "size": 78848,
+      "sha256": "d2e63157b90c0fd15f010fb2952d032d9f3296b8406b78ff0950211cc144705b"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-rpc.dll",
+      "size": 231424,
+      "sha256": "c28c2da0de23d39a7aca2dbccf20215087bbab2bd26caea38dc782698f6dc070"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-rpc-server.exe",
+      "size": 117248,
+      "sha256": "8dbeb59b8772d101443f11d1fbe230fd59e98b2d4c1e6eb52d8c0e96e2505eef"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-zen4.dll",
+      "size": 1602560,
+      "sha256": "4ebbee0eb0c5a4e9e3c3b437d7a2876ede8f1d3e00526dad33db50f39f46e831"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-x64.dll",
+      "size": 910848,
+      "sha256": "af7233344eec5587d531b4e875ec5bf2b1aa62c2be57b657f69cca503f0db918"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-sse42.dll",
+      "size": 918016,
+      "sha256": "00efeb321bb728616cde5719bab06ea575679f7ca4967367faa70fd5ca1c8ba6"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-skylakex.dll",
+      "size": 1606656,
+      "sha256": "da5c7c86df8409c08fb748ed5596eba65285ead7747581daa124a7fff2f65704"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-sapphirerapids.dll",
+      "size": 1872384,
+      "sha256": "cdfdc20cb7f953f87e61ab90e234c864df4e2c2615f5651bd83a4cf27fdc4e3d"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-sandybridge.dll",
+      "size": 1292800,
+      "sha256": "6251d2dc50745bad1d0f16ea95a4484ef5d8c7cb49b5a4a33af85d199c08be61"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-piledriver.dll",
+      "size": 1296384,
+      "sha256": "340c9dc4c5618fa4f89e6311c31f2f472d3277a87858c79b3c44890b0e92d1e7"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-ivybridge.dll",
+      "size": 1303552,
+      "sha256": "52f262a610ac189d0375472c66c46b7b366d618916ed67a2b119e69023c3f943"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-icelake.dll",
+      "size": 1592832,
+      "sha256": "81f86f655c82dfe330f9ee269b97a2b21352e5e876bd385d48bc61d9a6ca230b"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-haswell.dll",
+      "size": 1422336,
+      "sha256": "0bc8209ebe520b43d8549db7d45ca87382df88c3a8b238f3dda42d96e2af178e"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-cooperlake.dll",
+      "size": 1595392,
+      "sha256": "c0b3f9445cbd4490504c13d06e89b25bdbe9dea73784fc62c0c10ae7069de6cb"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-cascadelake.dll",
+      "size": 1585664,
+      "sha256": "71f6275d8aa7df86545975e02510e10280abfcc274ae419dee898746a5b2ce1b"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-cannonlake.dll",
+      "size": 1612800,
+      "sha256": "779a9d0ede6215fba8a00fb680c1295dd62836f9d8a124437d48f9c086fc1f07"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-cpu-alderlake.dll",
+      "size": 1416704,
+      "sha256": "8ae4c14de9eeb5528e42cff69ed8485e6cd0e3f8601837add873a9d12199ca95"
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\qwen25_7b_gguf_assets_20261030\\runtime\\ggml-base.dll",
+      "size": 805888,
+      "sha256": "200cd9b6f0a7934c2e1c85e55289d5498332713321b03e83eb2ae3da5eeb6137"
+    }
+  ],
+  "disk_footprint_bytes": 4825454088,
+  "elapsed_seconds": 91.67199999999139,
+  "model_loaded": false,
+  "project_data_sent_to_network": false,
+  "system_or_python_environment_changed": false,
+  "training_updates": 0
+}

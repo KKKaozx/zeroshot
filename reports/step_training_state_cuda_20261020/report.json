@@ -1,0 +1,500 @@
+{
+  "passed": true,
+  "scope": "Isolated cuda:0 synthetic-network optimizer/checkpoint fixture",
+  "resumed_paths": 48,
+  "path_results": [
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "shuffle",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "constant",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 42,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        1
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        3
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        4
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        8
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    },
+    {
+      "mode": "weighted_replacement",
+      "schedule": "cosine",
+      "seed": 43,
+      "cuts": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "sample_noise_loss_optimizer_parameters_rng_exact": true
+    }
+  ],
+  "exact_items": [
+    "batch indices including short tails",
+    "pass/cursor",
+    "Python/NumPy draws",
+    "diffusion-like noise and timestep draws",
+    "learning rates",
+    "losses",
+    "head parameters",
+    "AdamW state",
+    "sampling RNG",
+    "training RNG"
+  ],
+  "rejected_before_model_or_rng_mutation": [
+    "total_budget",
+    "batch_size",
+    "index_order",
+    "sampling_weights",
+    "schedule",
+    "language_condition"
+  ],
+  "pending_update_checkpoint_rejected": true,
+  "fixed_budget_exhaustion_rejected": true,
+  "checkpoint_save_rng_neutral": true,
+  "isolated_metric_draws_rng_neutral": true,
+  "discarded_rng_negative_control_detected": true,
+  "synthetic_frozen_encoder_unchanged_and_omitted_from_model_payload": true,
+  "cuda_rng_runtime_tested": true,
+  "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "peak_reserved_gib": 0.064453125,
+  "real_clip_or_robot_model_loaded": false,
+  "source_data_read": false,
+  "main_training_entrypoint_integrated": false,
+  "original_production_sources_unchanged": true,
+  "training_ready": false,
+  "generalization_verdict": null,
+  "component_sha256": "e2029456c3840e63879de5eecaa75f869989ee419b168916d1888f5d362f0e6d",
+  "verification_script_sha256": "53cf19229ef4f50f751eabb22c256e1da782663f043e1d9dc812f4345505f13b"
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": {
+    "one_high_level_request_four_native_ticks": true,
+    "world_subtargets_do_not_drift_with_measured_tracking_lag": true,
+    "same_original_endpoint_and_deadline": true,
+    "original5hz_target_clock_retained": true,
+    "native_success_stops_without_finishing_remaining_ticks": true,
+    "short_budget_rejected_before_high_level_request": true
+  },
+  "synthetic_native_steps": 6,
+  "real_physics_steps": 0,
+  "learning_model_forwards": 0,
+  "initial_report_serialization_issue": "NumPy bool converted to Python bool; no real execution occurred in that check"
+}

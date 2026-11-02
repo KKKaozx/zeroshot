@@ -1,0 +1,58 @@
+{
+  "format": "oxe-bridge-supervision-stage2-terminal-result-v1",
+  "job_id": 230276,
+  "stage": 2,
+  "result_reported_date": "2026-10-28",
+  "evidence_source": "User pasted completed diagnostic receipt, policy export and successful verify.py output",
+  "terminal_verified": true,
+  "slurm_state_independently_observed": null,
+  "full_cluster_history_download_verified": false,
+  "completed_updates": 65536,
+  "full_budget": 65536,
+  "source_supervision_state": {
+    "done": 65536,
+    "bridge_draws": 131244,
+    "all_draws": 524276,
+    "no_bridge": 6617,
+    "last_committed_keep": 4
+  },
+  "independent_original_schedule_counters_match": true,
+  "first_reference_replay": {
+    "passed": true,
+    "actual": {
+      "loss": 1.4397112131118774,
+      "pose_loss": 1.2741793394088745,
+      "gripper_loss": 0.6621274948120117,
+      "gradient_norm": 7.065093994140625
+    },
+    "expected": {
+      "loss": 1.4397112131118774,
+      "pose_loss": 1.2741793394088745,
+      "gripper_loss": 0.6621274948120117,
+      "gradient_norm": 7.065093994140625
+    },
+    "optimizer_steps_before_replay": 0,
+    "parameter_versions_unchanged": true,
+    "rng_unchanged": true
+  },
+  "initial_learned_sha256": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+  "gpu": "NVIDIA A40",
+  "peak_reserved_gib": 4.626953125,
+  "elapsed_seconds": 9756.278386256658,
+  "policy_export": {
+    "passed": true,
+    "completed_updates": 65536,
+    "all_learned_tensors_preserved_sha256": "30bcedfefb305ba2332d0e124dfd5943a4adb0c9cce49a3dc653291e48ef7fdb",
+    "policy_file": "/projects/_ssd/Zeroshot/runs/oxe-bridge-supervision-s42/final_policy.pt",
+    "policy_bytes": 526913072,
+    "training_contract_sha256": "3abce3a306c838ee04e39eba5e6bfa03e18583b127a636cf532cc93eeea38a98",
+    "full_checkpoint_before_compaction_bytes": 1596621570,
+    "full_optimizer_state_discarded": true,
+    "generalization_verdict": null
+  },
+  "local_final_policy_downloaded": false,
+  "evaluation_submitted": false,
+  "generalization_verdict": null,
+  "mixed_source_harm_established": false,
+  "next_step": "Manual evaluate from oxe_bridge_supervision_frozen_repair_v1; both frozen endpoints on64predeclared Bridge validation groups, three identical sampling seeds and static baseline; zero optimization"
+}

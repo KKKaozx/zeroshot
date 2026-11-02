@@ -1,0 +1,229 @@
+{
+  "format": "oxe-moderate-pool-competence-protocol-v1",
+  "source_job": 232587,
+  "source_start_update": 10240,
+  "source_endpoint_update": 14336,
+  "source_identity": {
+    "role": "real_pose",
+    "completed_update": 10240,
+    "additional_updates": 2048,
+    "base_learned_sha256": "b53adab691250aeeaaee5234f15d4e7ba54da6f9207b27975098ac2116db71f9",
+    "port_sha256": "a3ca92257eb417c82c5f5dc7a5f781eb05d66581c0557a3fc177b4ed0eaca6ef",
+    "contract_sha256": "079e989b79e4282dd7e3a688fb7d6f51a7868403972f14114220327d25857b71",
+    "frozen_state_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "formal_contract_sha256": "c97f9e5ffbdb271fe3922e63f86e50e1d23ee6f7134996e4de6af687e74b6a01"
+  },
+  "target_binding": {
+    "format": "oxe-nominal-target-binding-v1",
+    "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+    "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+    "label_family": "nominal_resampled_observed_reached_pose",
+    "clock_basis": "user_selected_published_nominal_frequency_assumption",
+    "target_times_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "source_units_or_formal_training_admitted": false
+  },
+  "sources": [
+    "Bridge",
+    "Language Table",
+    "BC-Z",
+    "Fractal"
+  ],
+  "updates_each": 4096,
+  "batch_size": 8,
+  "checkpoint_every": 2048,
+  "arm_training_cap_seconds": 1800,
+  "job_cap_minutes": 35,
+  "user_selected_expected_minutes": 26,
+  "expected_runtime": {
+    "torch": "2.5.1+cu118",
+    "cuda_runtime": "11.8",
+    "gpu": "NVIDIA A40"
+  },
+  "training_seed": 42,
+  "training_text_padding": 77,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "generation_steps": 100,
+  "pool_rows_sha256": "8a7afcc793917bedd121b2cf9bd1eac9a30d31b35e38f49c0bd80c577a93f515",
+  "plans_sha256": "68ea076f9351ac6b03c75cda1289eed061618818ca134edc9d776960f1cde14f",
+  "evaluation_selection_sha256": "eb9d9ff1362218d393dc579a50dbd73ff15ad503e3892b7b02dc818c97b4e151",
+  "inherited_pair_files": {
+    "README.md": "61694fcfc8526c54972f190d2d01a7b6c7a4468496fc47dd6c3a19e0fa9e4edc",
+    "coverage_plan.json": "478114e9b77d2b6a30a0c14b5d26bc5394e0003507933a0afbc6a1b472322073",
+    "job.sh": "d78cfa1ea2604c2f185679a1e87ffd84ae60b9d643553f5ed41757e530cdec51",
+    "pair_qualification.py": "37d2149525300e9e8434282f217666b6c5ae50cc01875db3a319e605d30d1a60",
+    "pair_state.py": "7e09fe80d8c8d47b773cada4c9ddd042f78370230c6367392fd4305912f0ea63",
+    "pair_steps.py": "ff6832cb6422aa4a1fd71648e4b45fc2ab2ba4951f42986d36852156d8125c01",
+    "plans.npz": "bbb1d48176136e7feb45424ff9362b03896837a78b10a77716fad6d7c72aa683",
+    "protocol.json": "1cc4f794816cd70349938b4db784539cbaaa2d0c500fc269edff975e4b805007",
+    "run_pair.py": "fb3941ffca4356453efc9ebb617027f41a7287da3634fd051f125ed58009415f",
+    "sampling_metrics.py": "e0f43b0848a7b796b641c9495237ba5bafeb14eb1b746b15808fb8b6e236def7",
+    "sampling_verify.py": "2a820310d84a855b182f86e75cf5c85b1ff977ab57bf120c5c7dd18765d7e781",
+    "submit_once.sh": "09108bb6142af28fa9626464951a8d741845e004362dab6ca2e39f1fed4cd5bc",
+    "SHA256SUMS": "7c9d763c4cc54ba611af257a776e924774d9d8b4dd9775d9b80ff9a57d0ce855"
+  },
+  "control_files": {
+    "report.json": "befcc8c0331c8151a6bf6280e5b55dc3fbab0264ffaa8d26765fc5ad516b1d33",
+    "predictions_and_targets.npz": "2e1718a58d5d7b8b2056810e161088eb1107c8e17f8b70871f6afd50ac9d40ba",
+    "paired_zero_update_guard.json": "876578c2a21e09ae22147b190f0fc6ed61e9b54d29b20834d972de52ea7902fd",
+    "replacement/receipt.json": "bec406bee425eeef69e2ac3a4f94a6e58e984d095d4e66cfacb2cdecda96933f"
+  },
+  "control_receipt": {
+    "training_passed": true,
+    "role": "replacement",
+    "updates_each": 4096,
+    "completed_source_schedule": 14336,
+    "initial_identity": {
+      "base_learned_sha256": "b53adab691250aeeaaee5234f15d4e7ba54da6f9207b27975098ac2116db71f9",
+      "port_sha256": "a3ca92257eb417c82c5f5dc7a5f781eb05d66581c0557a3fc177b4ed0eaca6ef",
+      "adam_sha256": "903192db3f03782ff86c6da99f8f3537cbaac1d35006409114dc4acdb31ee4e5",
+      "source_rng_sha256": "e6308123328cf8a2b2d95c610255de3543ece2ec8a1cd4ac9ffc24ccf218daea"
+    },
+    "base_learned_sha256": "242be04bb0c45e1a068cf782bcefc59faac4f54c097dbb44c7eebd3050cd82e7",
+    "port_sha256": "acfc02a960ab33810dbc537af42ff102c46d6cb1b978a07b6ba4cf4a9dc6660c",
+    "contract_sha256": "5ab6e001bd6c3fb1330f867933e92e9355e62e50401cf1f3648efa41f7fa7725",
+    "frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "new_updates_this_segment": 4096,
+    "training_elapsed_seconds": 1317.2053262740374,
+    "peak_reserved_gib": 4.5703125,
+    "training_job_ids": [
+      "233531"
+    ],
+    "prediction_file_sha256": "95e2a5437119d14050014f5939c3bed9dd7408a1406b2171359c2b015620191c",
+    "source_file_size_mtime_unchanged": true
+  },
+  "control_job": 233531,
+  "control_role": "replacement",
+  "retrain_control": false,
+  "pool_selection": "128distinct training groups per source: original8frozen train-evaluation rows plus120groups selected with fixed seeded RNG, one window/group; no validation group or target-driven choice",
+  "pool_counts": {
+    "Bridge": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "presentations_4096": 8287,
+      "mean_presentations": 64.7421875,
+      "min_presentations": 45,
+      "max_presentations": 95,
+      "never_sampled": 0
+    },
+    "Language Table": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        13277,
+        10935,
+        13164,
+        16660,
+        13098,
+        16986,
+        17591,
+        13648
+      ],
+      "presentations_4096": 8091,
+      "mean_presentations": 63.2109375,
+      "min_presentations": 46,
+      "max_presentations": 85,
+      "never_sampled": 0
+    },
+    "BC-Z": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        79920,
+        54575,
+        108107,
+        86732,
+        28371,
+        65872,
+        61103,
+        26231
+      ],
+      "presentations_4096": 8081,
+      "mean_presentations": 63.1328125,
+      "min_presentations": 42,
+      "max_presentations": 83,
+      "never_sampled": 0
+    },
+    "Fractal": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        134205,
+        122820,
+        122450,
+        142181,
+        122881,
+        137083,
+        144137,
+        130640
+      ],
+      "presentations_4096": 8309,
+      "mean_presentations": 64.9140625,
+      "min_presentations": 47,
+      "max_presentations": 86,
+      "never_sampled": 0
+    }
+  },
+  "source_internal_sampling": "Uniform with replacement in both new candidate and existing control; no new cycle variant",
+  "changes": "Pool membership/diversity and resulting exposure per member; not a clean exposure-count-only causal intervention at fixed full pool",
+  "unchanged": [
+    "DINOv2-L/14 and CLIP text frozen",
+    "Adapter/readout/U-Net/current pose port",
+    "x0/native100DDPM/targets/masks",
+    "joint gripper loss/three Adam groups/clip norm",
+    "original actual4096LR values and source slots",
+    "both new roles train77token padding"
+  ],
+  "causal_limits": [
+    "A smaller pool is easier and changes the training distribution; success does not prove exposure is the sole full-pool bottleneck",
+    "Original32seen-train anchors measure training competence, not independent generalization",
+    "Existing88validation windows may be reported but cannot select pool/budget/endpoint",
+    "One starting checkpoint/training seed; old control and new candidate would be different allocations",
+    "All4096actual model RNG/noise/t matches must be qualified against saved control; no new stochastic identity claimed by this CPU design"
+  ],
+  "decision_rules": {
+    "learning_evidence": "Report masked per-source original32training-window generation vs unchanged source/control/static; all-four means below static required where rotation available; LT XY only",
+    "not_main_admission": "Even positive training fit is not main-model, final generalization or LIBERO admission",
+    "failed": "No automatic extension, seed, smaller pool, removed source, changed loss, LR or backbone"
+  },
+  "source_replay120_required_exact": true,
+  "zero_optimizer_probe_required": true,
+  "actual_all4096_primitive_noise_timesteps_and_rng_matching_required": true,
+  "training_pool_windows": 512,
+  "training_evaluation_windows": 32,
+  "development_evaluation_windows": 88,
+  "new_budget_selected_by_user": true,
+  "training_submitted": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false
+}

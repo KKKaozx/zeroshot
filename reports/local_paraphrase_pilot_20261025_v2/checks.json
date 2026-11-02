@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "five distinct candidates accepted as unreviewed drafts",
+    "wrong_count rejected",
+    "unchanged_original rejected",
+    "duplicate_candidate rejected",
+    "extra_key rejected",
+    "markdown rejected",
+    "duplicate_json_key rejected",
+    "valid format never grants semantic approval",
+    "changed colors directions and identifiers flagged for review",
+    "quoted input and stable per-instruction seed",
+    "all eight inputs match fixed train-only catalog selection",
+    "pilot remains isolated from training and full-catalog generation"
+  ],
+  "pilot_candidates_sha256": "30e65ca4616c58bf19cdf89d50ee7f4b6b1be95df37a28c420f95e13bc760a0d",
+  "semantic_review_performed_by_this_check": false,
+  "training_updates": 0
+}

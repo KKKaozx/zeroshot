@@ -1,0 +1,72 @@
+[
+  {
+    "before": "\"\"\"Native Push-T reference: 20k updates then fixed EMA development rollouts.",
+    "after": "\"\"\"Native Push-T continuation: verified20k to predeclared84168, fixed endpoint EMA rollouts.",
+    "occurrences": 1
+  },
+  {
+    "before": "        protocol = json.loads(protocol_path.read_text())",
+    "after": "        protocol = json.loads(protocol_path.read_text())\n        extension_path = bundle / \"extension_contract.json\"\n        extension = json.loads(extension_path.read_text())\n        target_updates = extension[\"target_updates\"]\n        assert target_updates == protocol[\"native_upper_cap_updates\"] == 84168\n        if args.resume is None:\n            raise ValueError(\"Extension requires an explicit complete-state checkpoint\")\n        result[\"extension_contract_sha256\"] = sha(extension_path)\n        result[\"source20k_checkpoint_sha256\"] = extension[\"source_checkpoint_sha256\"]\n        result[\"stage\"] = \"native_continuation_to_predeclared_cap\"",
+    "occurrences": 1
+  },
+  {
+    "before": "            completed = restore(payload, policy, averaged, optimizer, scheduler, ema, protocol_sha, plan_sha)",
+    "after": "            completed = restore(payload, policy, averaged, optimizer, scheduler, ema, protocol_sha, plan_sha)\n            expected_resume_digest = tree_digest(payload)\n            restored_resume_digest = tree_digest(capture(policy, averaged, optimizer, scheduler, ema,\n                                                        completed, protocol_sha, plan_sha))\n            if expected_resume_digest != restored_resume_digest:\n                raise ValueError(\"Full restored state differs from source checkpoint\")\n            result[\"complete_resume_state_exact\"] = True\n            result[\"resume_state_digest\"] = restored_resume_digest\n            print(\"PUSHT_NATIVE_EXTENSION_RESUME PASSED\", completed, \"/\", target_updates, flush=True)",
+    "occurrences": 1
+  },
+  {
+    "before": "        assert 0 <= completed <= protocol[\"first_checkpoint_updates\"]",
+    "after": "        assert 20000 <= completed <= target_updates\n        result[\"completed_updates\"] = completed",
+    "occurrences": 1
+  },
+  {
+    "before": "plan.batch(completed if completed < 20000 else 19999)",
+    "after": "plan.batch(min(completed, target_updates - 1))",
+    "occurrences": 1
+  },
+  {
+    "before": "            while completed < protocol[\"first_checkpoint_updates\"]:",
+    "after": "            while completed < target_updates:",
+    "occurrences": 1
+  },
+  {
+    "before": "\"/20000 loss\"",
+    "after": "\"/84168 loss\"",
+    "occurrences": 1
+  },
+  {
+    "before": "                if completed % 2000 == 0 or completed == 20000:",
+    "after": "                if completed % 2000 == 0 or completed == target_updates:",
+    "occurrences": 1
+  },
+  {
+    "before": "\"protocol_sha256\": protocol_sha, \"sample_plan_sha256\": plan_sha,\n                               \"startup_checks\"",
+    "after": "\"protocol_sha256\": protocol_sha, \"sample_plan_sha256\": plan_sha,\n                               \"extension_contract_sha256\": sha(extension_path),\n                               \"startup_checks\"",
+    "occurrences": 2
+  },
+  {
+    "before": "\"EMA at exactly20000 updates; no best-of-development selection\"",
+    "after": "\"EMA at exactly84168 updates; no best-of-development selection\"",
+    "occurrences": 1
+  },
+  {
+    "before": "\"Review native result before preparing a matched project run\"",
+    "after": "\"Native cap competent; review before preparing matched84168 frozen-CLIP project group\"",
+    "occurrences": 1
+  },
+  {
+    "before": "\"Native reference not established at20k; inspect evidence before any predefined-cap continuation; no project attribution\"",
+    "after": "\"Native cap not competent; stop this module-comparison branch, no extra budget or project attribution\"",
+    "occurrences": 1
+  },
+  {
+    "before": "PUSHT_NATIVE_20K COMPLETE",
+    "after": "PUSHT_NATIVE_84168 COMPLETE",
+    "occurrences": 1
+  },
+  {
+    "before": "# Resume-at20k has no new checkpoint;",
+    "after": "# Resume-at-cap has no new checkpoint;",
+    "occurrences": 1
+  }
+]

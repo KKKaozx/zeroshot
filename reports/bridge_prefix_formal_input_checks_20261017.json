@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "formal_source_sha256": "2629d6c8071be733614b4c69dbf09d06b2d1ab290b065d50a2541d24cfc5b107",
+  "train_rows": 3394,
+  "training_images_decoded": 0,
+  "training_policy_inference": false,
+  "training_numeric_payloads": 405,
+  "validation_rows": 50,
+  "validation_episodes": 10,
+  "actual_tokenizer_used": true,
+  "CLIP_loaded": false,
+  "validation_encoder": "CPU shape fixture only, not CLIP tokens",
+  "GPU_used": false,
+  "optimizer_updates": 0,
+  "development_policy_scored": false,
+  "final25_payloads_read": false,
+  "verifies": "Actual formal native numeric loading matches frozen tolerances; raw-text token reuse guard passes locally"
+}

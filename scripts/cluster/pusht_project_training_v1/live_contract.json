@@ -1,0 +1,18 @@
+{
+  "resource_job": 210763,
+  "resource_report_sha256": "8abf8b546590b8b33ed8190c2381e8b919d987199808b69add0c6a6f0f9b44bb",
+  "fixed_text": "Push the T-shaped block into the target pose.",
+  "tolerances": {
+    "token_atol": 0.0001,
+    "token_rtol": 1e-05,
+    "context_atol": 0.0001,
+    "context_rtol": 1e-05,
+    "action_pixel_atol": 0.05
+  },
+  "smoke_seed": 20261018,
+  "training_updates": 0,
+  "full_episode_scoring_allowed": false,
+  "formal_training_submission_allowed": false,
+  "image_conversion": "Only invert documented author rendered uint8 -> float32/255; round within1e-4 restores pixel grid, no offline data rewritten",
+  "closed_loop_scope": "Untrained wiring only: at most2 decisions/16 environment steps; no reward/success scoring"
+}

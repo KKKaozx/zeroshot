@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "Only two derived buffers restored, exact full digest recovered, all learned/encoder parameters unchanged",
+    "encoder rejected without a retained state edit",
+    "value rejected without a retained state edit",
+    "shape rejected without a retained state edit",
+    "order rejected without a retained state edit",
+    "config rejected without a retained state edit",
+    "digest_rollback rejected without a retained state edit"
+  ],
+  "real_pretrained_models_loaded": 0,
+  "forward_calls": 0,
+  "optimizer_updates": 0,
+  "original_training_guard_changed": false,
+  "fixture": ".tmp\\frozen_portability_73f5cc527b",
+  "source_python_syntax_passed": true,
+  "legacy_checkpoint_cannot_silently_accept_profile": true
+}

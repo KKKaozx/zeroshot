@@ -1,0 +1,29 @@
+{
+  "xyz_mean": [
+    0.17199618576491657,
+    0.05902733740571036,
+    0.7248872648131731
+  ],
+  "xyz_std": [
+    0.272208010918331,
+    0.13226051580030318,
+    0.23336329531820263
+  ],
+  "observed_xyz_counts": [
+    145812,
+    145812,
+    133598
+  ],
+  "fit_partition": "train",
+  "fit_window_count": 145812,
+  "fit_weighting": "one current observation per eligible training window, no validation",
+  "raw_training_current_rows_sha256": "47762db243115e35d3f0269e5ef8c20c6ec6c10643e424255819c69d668d3e81",
+  "source_window_counts": {
+    "Bridge": 10352,
+    "Language Table": 12214,
+    "BC-Z": 95796,
+    "Fractal": 27450
+  },
+  "position_units": "unchanged recorded source units",
+  "orientation": "unitxyzw to concatenated first two rotation columns; no normalization of rotation columns"
+}

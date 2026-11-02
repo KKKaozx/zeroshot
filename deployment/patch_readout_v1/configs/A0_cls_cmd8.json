@@ -1,0 +1,11 @@
+{
+  "name": "A0_cls_cmd8",
+  "description": "对照：复现旧CLS读出瓶颈（缓存版），命令增量标签",
+  "target": "command8",
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "cls",
+    "history": []
+  }
+}

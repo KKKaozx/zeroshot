@@ -1,0 +1,30 @@
+{
+  "job_id": 229597,
+  "status": "failed_before_first_forward_or_update",
+  "actual_updates": 0,
+  "cuda_health_passed": true,
+  "tokenizer_matches": true,
+  "frozen_matches": false,
+  "actual_frozen_sha256": "fc5316b4b1efba56b942d2f78d896e8a26ab0f5ae6c7226977163f8544c0daa4",
+  "expected_frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "same_aggregate_as_prior227815": true,
+  "prior_named_changed_buffers": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "current_saved_named_profile_compared": true,
+  "guard_bypassed": false,
+  "packaging_omission": "New candidate wrapper omitted the previously successful exact constant-constructor restoration",
+  "repair_package": "cluster_packages/oxe_bridge_supervision_frozen_repair_v1.zip",
+  "current_profile_comparison_required_before_resubmission": true,
+  "automatic_retry_submitted": false,
+  "generalization_verdict": null,
+  "loss_or_training_failure_inferred": false,
+  "named_comparison_evidence": "reports/oxe_bridge_supervision_failure_229597/named_profile_comparison_terminal.json",
+  "current_named_changed_buffers": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "current_named_encoder_tensors_equal_reported": true,
+  "profile_comparison_locally_recomputed": false
+}

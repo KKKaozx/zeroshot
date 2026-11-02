@@ -1,0 +1,171 @@
+{
+  "format": "bridge-libero-frame-facts-v1",
+  "complete": true,
+  "scope": "One fixed existing source training record plus one existing excluded-task XML; static extraction only",
+  "source": {
+    "dataset": "bridge_data_v2",
+    "version": "0.0.1",
+    "metadata_sha256": "075e2ee1896bee3aa07397149960864c16a27b5ca83b97d2fc9eab0f624975ff",
+    "features_sha256": "0de9f7b8a358762407f7a4351e424973eec1c1059ca6e9d2ed20e44d5e1bcfcf",
+    "episode_key": "bridge_data_v2-train.tfrecord-00667-of-01024::0",
+    "payload_sha256": "5a00e99d952e42d17e67d570d238115b0e56ca97cc060aa7027e293f98a550f7",
+    "all_field_names": [
+      "episode_metadata/episode_id",
+      "episode_metadata/file_path",
+      "episode_metadata/has_image_0",
+      "episode_metadata/has_image_1",
+      "episode_metadata/has_image_2",
+      "episode_metadata/has_image_3",
+      "episode_metadata/has_language",
+      "steps/action",
+      "steps/discount",
+      "steps/is_first",
+      "steps/is_last",
+      "steps/is_terminal",
+      "steps/language_embedding",
+      "steps/language_instruction",
+      "steps/observation/image_0",
+      "steps/observation/image_1",
+      "steps/observation/image_2",
+      "steps/observation/image_3",
+      "steps/observation/state",
+      "steps/reward"
+    ],
+    "episode_metadata": {
+      "episode_metadata/has_image_1": [
+        0
+      ],
+      "episode_metadata/has_image_2": [
+        0
+      ],
+      "episode_metadata/has_language": [
+        1
+      ],
+      "episode_metadata/episode_id": [
+        10
+      ],
+      "episode_metadata/has_image_3": [
+        0
+      ],
+      "episode_metadata/file_path": [
+        "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/rss/toykitchen2/pnp_sweep/99/train/out.npy"
+      ],
+      "episode_metadata/has_image_0": [
+        0
+      ]
+    },
+    "record_contains_explicit_unit_or_frame_or_calibration_field": false,
+    "record_level_absence_is_not_a_claim_about_every_original_episode": true,
+    "physical_specification_added_by_local_metadata": false,
+    "prior_lineage_report": "reports\\oxe_conversion_lineage_20261020\\report.json",
+    "prior_lineage_report_sha256": "ad4199d5bd8a0ec4140f9e182de2f017abab832d9a5c194bd011d7056a573818",
+    "prior_bridge_finding_reused": {
+      "cached_dataset_name": "bridge_data_v2",
+      "cached_version": "0.0.1",
+      "cached_builder_module": "__main__",
+      "metadata_sha256": "075e2ee1896bee3aa07397149960864c16a27b5ca83b97d2fc9eab0f624975ff",
+      "features_sha256": "0de9f7b8a358762407f7a4351e424973eec1c1059ca6e9d2ed20e44d5e1bcfcf",
+      "position_unit_to_meters_bound_to_exact_export": false,
+      "exported_observation_spacing_seconds_verified": false,
+      "nominal_controller_hz_only": 5,
+      "local_per_frame_timestamp_available": false,
+      "formal_training_admitted_by_this_review": false,
+      "converter_family_support": "Matching original paths, metadata construction and direct array copies; exact version/commit remains unbound",
+      "orientation_support": "Public collector records default-adjusted XYZ Euler angles; recorded axes are not automatically physical TCP axes",
+      "time_recovery_route": "Matching original numpy observation time_stamp or raw obs_dict.pkl; field omitted by the inspected numpy-to-RLDS converter",
+      "do_not_reapply_camera_latency_shift": true,
+      "metadata_flags_caution": "Inspected numpy converter tests image keys against the observation list rather than its dictionary; consistent with previously observed false flags. No new payloads read and no global correction inferred."
+    },
+    "raw_xyz_as_meters_remains_user_disclosed_assumption": true,
+    "nominal5hz_remains_user_disclosed_assumption": true
+  },
+  "target_observation_definition": {
+    "format": "libero-eef-observation-frame-definition-v1",
+    "position_site_name": "gripper0_grip_site",
+    "quaternion_body_name": "robot0_right_hand",
+    "position_site_in_quaternion_body_model_units": [
+      0.0,
+      0.0,
+      0.09700000000000003
+    ],
+    "controller_site_axes_in_quaternion_body_xyzw": [
+      0.0,
+      0.0,
+      -0.7071067811865476,
+      0.7071067811865476
+    ],
+    "fixed_path_names": [
+      "gripper0_right_gripper",
+      "gripper0_eef",
+      "gripper0_grip_site"
+    ],
+    "observation_frame": "origin at position site; axes parallel to quaternion body",
+    "controller_frame": "origin and axes both at position site",
+    "observation_to_controller_orientation": "R_world_site = R_world_observation * R_body_site",
+    "left_relative_rotation_rule": "R_future_site * R_current_site.T = R_future_body * R_current_body.T",
+    "cross_robot_tool_alignment_proven": false,
+    "status": "target_internal_geometry_only_not_cross_robot_registration",
+    "origin_name": "gripper0_grip_site",
+    "axes_name": "robot0_right_hand",
+    "quaternion_order": "xyzw",
+    "quaternion_input_basis": "world",
+    "offset_meaning": "0.097 is hand-body origin to measured grip-site origin; NOT an extra offset to add to robot0_eef_pos",
+    "lengths": "XML model units; existing LIBERO execution convention calls them metres; this proves no Bridge scale",
+    "scope": {
+      "task": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+      "demo": "demo_0",
+      "model_xml_sha256": "2e0924ffc94d7ba7b5f51edcdca35668eb5b790f21c670a372498cf735770e19",
+      "no_other_task_model_or_robot_asserted": true
+    },
+    "installed_source_sha256": {
+      "observation": "d233b1b785e8f88ffb5df1357666b02a397ae930ce98181b079e0496ab35fc57",
+      "controller": "61f99a2daeb4eb6e39bfb996d94c5a5689ef3bc771d030d070193ea56d6a8332",
+      "robot_model": "ac21ce0b004a1ee93cb8b728c00b9c18c38ecabb2dedca370de80602ad26f059"
+    },
+    "source_to_target_mapping_parameters_supplied": false,
+    "physical_correspondence_point_shared_with_bridge": null
+  },
+  "conclusion": {
+    "target_observation_origin_and_axes_resolved_for_this_xml": true,
+    "body_site_difference_requires_executor_fix": false,
+    "reason": "Constant right orientation factor cancels in world left-relative rotations; position already observes grip site. Do not add0.097 again or rotate existing left deltas by-90deg.",
+    "source_default_rotation_blocks_source_left_relative_rotation_supervision": false,
+    "source_default_rotation_still_matters_for_absolute_pose_port_and_correspondence": true,
+    "cross_robot_mapping_resolved": false,
+    "B1_source_joint_capability_resolved": false,
+    "formal_matrix_admitted": false
+  },
+  "missing_facts": [
+    {
+      "field": "cached_export_to_collector_binding",
+      "needed": "The exact bridge_data_v2/0.0.1 converter/release commit or specification; matching numpy family alone is insufficient"
+    },
+    {
+      "field": "source_recorded_point_and_axes",
+      "needed": "Collector config/URDF and EEF/TCP identity for the corresponding original trajectory, including normal_base_angle/default rotation if absolute tool axes are required"
+    },
+    {
+      "field": "common_frame_transfer_definition",
+      "needed": "An explicit source/target base/workspace correspondence convention and applicable scope; separate scenes do not supply a unique physical registration"
+    },
+    {
+      "field": "matching_physical_point",
+      "needed": "A declared common control/contact point and source EEF-to-point geometry; target hand-to-site geometry alone cannot identify this"
+    }
+  ],
+  "work_budget": {
+    "wall_minutes_limit": 45,
+    "source_records_limit": 1,
+    "target_xml_limit": 1,
+    "models": 0,
+    "simulations": 0,
+    "training_updates": 0,
+    "remote_actions": 0
+  },
+  "source_code_sha256": {
+    "tools\\extract_bridge_libero_frame_facts_20261030.py": "e5d4c8aeb931c6fdd075d584a569a70d4296882af431f0200c1cb0a847d4174c",
+    "code\\libero_eef_frame_definition.py": "e66128cdc823eae5b2439fbe546d3655e81aaad777d146560f9b931b1b985667"
+  },
+  "extractor_elapsed_seconds": 6.889999999984866,
+  "stop": "bounded_fact_pass_closed; no automatic coordinate sweep, rollout or training"
+}

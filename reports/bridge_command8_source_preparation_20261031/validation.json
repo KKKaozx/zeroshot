@@ -1,0 +1,29 @@
+{
+  "format": "bridge-command8-source-preparation-validation-v1",
+  "date": "2026-10-31",
+  "cpu_checks_passed": 7,
+  "cpu_check_log_sha256": "d81b3a84024c7b378311626d9bb3bf115f71d9e5c58323d80768bf65285e11ed",
+  "scope": "TinyModel/native loss, synthetic TFRecord and synthetic executor; no real-model training or physics",
+  "first_local_harness_interrupted": true,
+  "harness_correction": "Single Torch thread and project-local temporary directory; final tests passed",
+  "dependency_check": {
+    "numpy": "1.26.4",
+    "torch": "2.11.0+cu128",
+    "tensorflow": "2.21.0",
+    "training_imports_passed": true,
+    "cuda_initialized": false,
+    "model_constructed": false,
+    "online_scipy_libero_dependencies_required_only_in_local_evaluation": true
+  },
+  "python_ast_files": 45,
+  "vendor_byte_identical_files": 43,
+  "shell_lf_shebang_checked": true,
+  "bash_syntax_or_cluster_execution_tested": false,
+  "remote_full_admission_executed": false,
+  "physical_mapping_calibrated": false,
+  "new_real_policy_training_updates": 0,
+  "new_physics_episodes": 0,
+  "tiny_model_optimizer_steps_per_completed_test_invocation": 3,
+  "automatic_submission": false,
+  "formal_matrix_admitted": false
+}

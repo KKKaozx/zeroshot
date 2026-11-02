@@ -1,0 +1,23 @@
+{
+  "sha256": "a9b28a1f09f7d733b8cd1936403ee3e650a4fdfdfcd64cc4ab7fd8f0a3f63551",
+  "completed_updates": 20000,
+  "protocol_sha256": "78405a674443df59e6946b3aa86a6d7cbc2b9b22b6b12213b5169fafb2c02911",
+  "sample_plan_sha256": "4c7224b54a7e986576444564bab79f7dae55f01e3b474eeae96b8eba9554d64c",
+  "startup_checks": {
+    "loss_audit": {
+      "original_compute_loss_used": true,
+      "common_noise_exact": true,
+      "common_timesteps_exact": true,
+      "epsilon_objective_loss_exact": true,
+      "representative_backend_gradient_exact": true,
+      "frontend_and_backend_gradients_valid": true
+    },
+    "disk_resume_replay_exact": true,
+    "loss_before_restore": 1.074407547712326,
+    "loss_after_restore": 1.074407547712326,
+    "state_digest_before_restore": "4f3852effa3d2f7cf1e338bbfddad1ffd1599b11772ae8ce3fcd9ea8f7f6fae3",
+    "state_digest_after_restore": "4f3852effa3d2f7cf1e338bbfddad1ffd1599b11772ae8ce3fcd9ea8f7f6fae3",
+    "state_scope": "raw,EMA,Adam,LR,EMA counter,Python/NumPy/CPU/CUDA RNG",
+    "audit_recomputed_updates_excluded_from_training_budget": 1
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "complete": true,
+  "dataset_identity": "e4cd9b9f6c528170cbdd1dd6f8227a2da9d764ae81a47767fab9319b5f20db5e",
+  "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+  "frozen_validation_candidates": 1291,
+  "eligible_validation_episodes": 1136,
+  "validation_windows": 17949,
+  "by_source": {
+    "Bridge": {
+      "windows": 1287,
+      "valid_targets": 16084,
+      "position_components_outside_train_candidate8": 0,
+      "unknown_current_gripper_windows": 174,
+      "episodes": 144,
+      "source_rows": 5029
+    },
+    "Language Table": {
+      "windows": 1582,
+      "valid_targets": 15695,
+      "position_components_outside_train_candidate8": 0,
+      "unknown_current_gripper_windows": 1582,
+      "episodes": 341,
+      "source_rows": 6274
+    },
+    "BC-Z": {
+      "windows": 11442,
+      "valid_targets": 164181,
+      "position_components_outside_train_candidate8": 0,
+      "unknown_current_gripper_windows": 325,
+      "episodes": 325,
+      "source_rows": 45981
+    },
+    "Fractal": {
+      "windows": 3638,
+      "valid_targets": 52405,
+      "position_components_outside_train_candidate8": 0,
+      "unknown_current_gripper_windows": 1448,
+      "episodes": 326,
+      "source_rows": 14409
+    }
+  },
+  "excluded_reasons": {
+    "Bridge": {
+      "ValueError:prior_structure:empty_candidate_instruction": 40
+    },
+    "Language Table": {
+      "ValueError:trajectory_too_short": 108
+    },
+    "BC-Z": {
+      "ValueError:trajectory_too_short": 3
+    },
+    "Fractal": {
+      "ValueError:trajectory_too_short": 4
+    }
+  },
+  "zero_valid_tail_windows_omitted": {
+    "Bridge": 0,
+    "Language Table": 0,
+    "BC-Z": 47,
+    "Fractal": 0
+  },
+  "first_tail_target_checks_by_source": {
+    "Bridge": 288,
+    "Language Table": 682,
+    "BC-Z": 650,
+    "Fractal": 652
+  },
+  "max_abs_normalized_position_by_source": {
+    "Bridge": 4.002649307250977,
+    "Language Table": 5.877793312072754,
+    "BC-Z": 6.169611930847168,
+    "Fractal": 6.167531490325928
+  },
+  "training_position_bound_not_refit_from_validation": true,
+  "source_payload_bytes_read": 1554454504,
+  "source_payload_records_read": 1136,
+  "test_or_quarantine_payload_records_read": 0,
+  "training_targets_rebuilt": false,
+  "source_files_modified": false,
+  "roles_unchanged": true,
+  "images_decoded": 0,
+  "models_loaded": 0,
+  "optimizer_updates": 0,
+  "new_cluster_jobs": 0,
+  "generalization_verdict": null,
+  "formal_training_ready": false,
+  "elapsed_seconds": 27.01600000000326
+}

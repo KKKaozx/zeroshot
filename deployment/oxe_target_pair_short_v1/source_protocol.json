@@ -1,0 +1,80 @@
+{
+  "format": "bounded-oxe-dino-training-protocol-v1",
+  "scope": "bounded_oxe_offline_training_with_disclosed_assumptions",
+  "status": "frozen_before_formal_generalization_scores",
+  "full_oxe_training_claim": false,
+  "formal_libero_performance_already_proven": false,
+  "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+  "training_windows": 145812,
+  "validation_windows": 17949,
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "currently_admitted_conditions": [
+    "no_augmentation"
+  ],
+  "planned_matched_conditions": [
+    "no_augmentation",
+    "paraphrase_only",
+    "counterfactual_only",
+    "combined",
+    "clip_combined"
+  ],
+  "fixed_cli_values": {
+    "total_updates": 65536,
+    "batch_size": 8,
+    "workers": 0,
+    "step_diffusion_architecture": "multiscale",
+    "visual_backbone": "dinov2",
+    "adapter_layers": 8,
+    "attention_dim": 512,
+    "attention_heads": 8,
+    "adapter_pooling": "cls",
+    "fusion_type": "cross_attention",
+    "dropout": 0.1,
+    "diffusion_steps": 100,
+    "diffusion_prediction_type": "epsilon",
+    "beta_schedule": "squaredcos_cap_v2",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gripper_learning_rate": null,
+    "lr_schedule": "cosine",
+    "warmup_updates": 1024,
+    "balanced_sampling": true,
+    "gripper_loss_weight": 0.25,
+    "balanced_gripper_loss": false,
+    "gripper_target_mode": "state",
+    "gripper_change_weight": 1.0,
+    "max_normalized_position": 8.0,
+    "validate_every_updates": 32768,
+    "max_validation_batches": 0,
+    "checkpoint_every_updates": 2048
+  },
+  "segment_endpoints": [
+    32768,
+    65536
+  ],
+  "input_file_sha256": {
+    "split_manifest": "20ea2e2293b297760846d39a634908034b017164bc303b4490388c5add0433c0",
+    "original_instruction_catalog": "b05a2a84cdb548139ac31ceba26b8ee0bf168a08db4f2fdd3d3d011adc423e56"
+  },
+  "target_manifest_sha256": {
+    "train": "63a67fca2097d4157fe4f412da56c17fcb927e9ffb2999e635f87b90df63a5ac",
+    "validation": "38988e436493fa7ed142288362ff5874970bb020a3904e56fbbfbb1a3faf9033"
+  },
+  "assumptions": {
+    "clock": "Published nominal5/5/10/3Hz mapped to5Hz; no measured timestamps",
+    "raw_source_xyz_treated_as_meters_for_shared_scale": true,
+    "exact_export_units_verified_for_all_sources": false,
+    "source_cartesian_frames_preserved": true,
+    "cross_robot_base_or_tcp_registration_proven": false,
+    "libero_execution": "Separate uncalibrated shared-Cartesian convention; no physical target evaluation in this training entry"
+  },
+  "model_selection": "Final65536-update endpoint only; full source validation at32768 and65536, no early stopping or best-checkpoint search",
+  "sampling": "Inverse-source-window-count weighted replacement; batch8 except real short pass tails, no padding or dropped samples",
+  "initialization": "Fresh per seed; preflight contributes frozen asset/tokenizer identity only, never learned weights",
+  "augmentation_design": "All conditions share data/window order by seed and full update budget. Future paraphrases need five reviewed alternatives. Counterfactual negative exposure requires reviewed scene mismatch and explicit command eligibility; banks not admitted by this release.",
+  "retention": "Active runs keep latest full resume state. Completed runs export and verify all learned tensors/provenance, then retire only that completed optimizer checkpoint."
+}

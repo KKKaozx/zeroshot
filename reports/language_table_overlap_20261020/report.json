@@ -1,0 +1,123 @@
+{
+  "complete": true,
+  "all_record_structures_valid": true,
+  "candidate_manifest_sha256": "ae7c906d3717648435c6e9434305b8ab2815bf769dc634832b2fe7377e0fb324",
+  "source_metadata_sha256": "f9c24bb59cc3dd66bc655d78762ed2a4c47b6628d187d684c29c8c886f7dd938",
+  "script_sha256": "599d95cf3c1cb71f4e08f371e0e3cc8fc272ef27ef8b74575209444a03e9c522",
+  "group_manifest_sha256": "247c0799c2f0817833e089c5a397b2262ccada9e6a14961d87a1a6f2bd772a5c",
+  "records": 3436,
+  "frame_occurrences": 55155,
+  "unique_encoded_frames": 54742,
+  "shared_encoded_frames": 413,
+  "groups": 3370,
+  "multi_episode_groups": 64,
+  "episodes_in_multi_episode_groups": 130,
+  "groups_with_multiple_language_labels": 64,
+  "largest_group_episodes": 3,
+  "group_size_histogram": {
+    "1": 3306,
+    "2": 62,
+    "3": 2
+  },
+  "records_with_full16_candidate": 1414,
+  "full16_candidate_windows_stride4": 3760,
+  "input_gripper_features": [
+    0,
+    0
+  ],
+  "supervised_dimensions": [
+    "source_x",
+    "source_y"
+  ],
+  "gripper_supervision": false,
+  "rotation_supervision": false,
+  "height_supervision": false,
+  "setpoint_phase_diagnostic_by_action_row_offset": {
+    "-1": {
+      "max_abs": 0.23475220054388046,
+      "components": 96566,
+      "rmse_native_units": 0.027719876058988152
+    },
+    "0": {
+      "max_abs": 0.0670272447168827,
+      "components": 103438,
+      "rmse_native_units": 0.01204837264766947
+    },
+    "1": {
+      "max_abs": 0.2729667201638222,
+      "components": 96566,
+      "rmse_native_units": 0.03601620341343413
+    }
+  },
+  "paper_collection_frequency_hz": 5,
+  "per_record_timestamps_available": false,
+  "real_tool_frame_calibration_obtained": false,
+  "main_mixed_training_admitted": false,
+  "grouping_fixture_transitive_and_order_invariance_passed": true,
+  "shared_encoded_frame_never_crosses_groups": true,
+  "partitions_assigned": false,
+  "images_decoded": 0,
+  "models_loaded": 0,
+  "training_updates": 0,
+  "final_benchmark_access": false,
+  "file_checks": [
+    {
+      "shard": "language_table-train.tfrecord-00000-of-01024",
+      "records": 445,
+      "length_delimited_payload_sha256": "478219d2aa381b52a72f5954d27f91d4e725d2f48a68f9006ea7a8d5d7883b3c",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00001-of-01024",
+      "records": 413,
+      "length_delimited_payload_sha256": "fbcc4bb6e77d12616d0b2d11bab77666a92a78f17f90a7199a193fdc8d8aa45b",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00002-of-01024",
+      "records": 433,
+      "length_delimited_payload_sha256": "3f30e5396314ae421e3302508445c494829ca007c3c45d4d144d785106b9db97",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00003-of-01024",
+      "records": 434,
+      "length_delimited_payload_sha256": "7a1a0ac4300d179ca89b2c73669f3cc3dce567b19259718cf038fb6e81094f06",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00004-of-01024",
+      "records": 442,
+      "length_delimited_payload_sha256": "16685ff7ab43b52a6dd4f99b5574c90d982b596f8cfbb767bb3d575daf5b0fd1",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00005-of-01024",
+      "records": 420,
+      "length_delimited_payload_sha256": "fcbea01abfdd96d34b8814c3699b266f1a3f47ea1e8a904f3834444584b3284f",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00006-of-01024",
+      "records": 416,
+      "length_delimited_payload_sha256": "d54b560474d6602766edffb47855bf2cedebffabeff6143c75ce1efead6ab7fc",
+      "tfrecord_reader_crc_checks_completed": true
+    },
+    {
+      "shard": "language_table-train.tfrecord-00007-of-01024",
+      "records": 433,
+      "length_delimited_payload_sha256": "464f597456ad4ce01430bc24d48e76c1adb9442e8b1d437107dc31c57c355482",
+      "tfrecord_reader_crc_checks_completed": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Only eight existing train shards, not full Language Table",
+    "Different JPEG encodings of the same image are not detected",
+    "No original collection/session IDs exist in the released local schema",
+    "A static identical frame may conservatively connect separate episodes",
+    "Components must be recomputed when extending the pool; new edges can merge groups",
+    "Do not split these groups yet: no complete physical-origin independence guarantee"
+  ],
+  "elapsed_seconds": 8.857413500008988
+}

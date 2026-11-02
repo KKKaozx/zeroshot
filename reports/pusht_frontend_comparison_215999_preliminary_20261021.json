@@ -1,0 +1,156 @@
+{
+  "status": "endpoint_server_verifier_passed_requested_small_artifacts_and_videos_reviewed_locally",
+  "scope": "Single matched training run per frontend; fixed dev20 endpoint overlap rewards only, not robot grasp success",
+  "updates_each": 84168,
+  "native_job": 212158,
+  "project_jobs": [
+    214273,
+    215999
+  ],
+  "native_mean_score": 0.8458782546929152,
+  "project_mean_score": 0.44548841481267654,
+  "project_minus_native_mean": -0.4003898398802387,
+  "project_relative_mean_change": -0.4733421596534537,
+  "native_full_reward_count": 10,
+  "project_full_reward_count": 5,
+  "development_episodes": 20,
+  "project_better_episodes": 3,
+  "project_worse_episodes": 14,
+  "equal_episodes": 3,
+  "paired": [
+    {
+      "environment_seed": 5000000,
+      "native_score": 1.0,
+      "project_score": 0.3637322550695917,
+      "project_minus_native": -0.6362677449304083
+    },
+    {
+      "environment_seed": 5000001,
+      "native_score": 1.0,
+      "project_score": 1.0,
+      "project_minus_native": 0.0
+    },
+    {
+      "environment_seed": 5000002,
+      "native_score": 0.9876781797734817,
+      "project_score": 0.0,
+      "project_minus_native": -0.9876781797734817
+    },
+    {
+      "environment_seed": 5000003,
+      "native_score": 1.0,
+      "project_score": 0.9874557207637781,
+      "project_minus_native": -0.012544279236221922
+    },
+    {
+      "environment_seed": 5000004,
+      "native_score": 1.0,
+      "project_score": 1.0,
+      "project_minus_native": 0.0
+    },
+    {
+      "environment_seed": 5000005,
+      "native_score": 1.0,
+      "project_score": 0.02879175888484829,
+      "project_minus_native": -0.9712082411151517
+    },
+    {
+      "environment_seed": 5000006,
+      "native_score": 0.0,
+      "project_score": 0.0,
+      "project_minus_native": 0.0
+    },
+    {
+      "environment_seed": 5000007,
+      "native_score": 1.0,
+      "project_score": 0.42546546465641466,
+      "project_minus_native": -0.5745345353435853
+    },
+    {
+      "environment_seed": 5000008,
+      "native_score": 0.9929088405709702,
+      "project_score": 0.9871157088135433,
+      "project_minus_native": -0.005793131757426906
+    },
+    {
+      "environment_seed": 5000009,
+      "native_score": 1.0,
+      "project_score": 0.0027810690949989832,
+      "project_minus_native": -0.997218930905001
+    },
+    {
+      "environment_seed": 5000010,
+      "native_score": 0.9206067350770438,
+      "project_score": 1.0,
+      "project_minus_native": 0.07939326492295617
+    },
+    {
+      "environment_seed": 5000011,
+      "native_score": 0.4811852791782408,
+      "project_score": 0.04688149302566976,
+      "project_minus_native": -0.43430378615257104
+    },
+    {
+      "environment_seed": 5000012,
+      "native_score": 0.9359121706883831,
+      "project_score": 0.5341460756519678,
+      "project_minus_native": -0.40176609503641525
+    },
+    {
+      "environment_seed": 5000013,
+      "native_score": 1.0,
+      "project_score": 0.05340065111143002,
+      "project_minus_native": -0.94659934888857
+    },
+    {
+      "environment_seed": 5000014,
+      "native_score": 1.0,
+      "project_score": 0.29364770282660235,
+      "project_minus_native": -0.7063522971733976
+    },
+    {
+      "environment_seed": 5000015,
+      "native_score": 1.0,
+      "project_score": 0.16046960640743033,
+      "project_minus_native": -0.8395303935925696
+    },
+    {
+      "environment_seed": 5000016,
+      "native_score": 0.840749640865179,
+      "project_score": 0.02588078994725578,
+      "project_minus_native": -0.8148688509179233
+    },
+    {
+      "environment_seed": 5000017,
+      "native_score": 0.9889069961956148,
+      "project_score": 1.0,
+      "project_minus_native": 0.01109300380438516
+    },
+    {
+      "environment_seed": 5000018,
+      "native_score": 0.2481273361558994,
+      "project_score": 1.0,
+      "project_minus_native": 0.7518726638441006
+    },
+    {
+      "environment_seed": 5000019,
+      "native_score": 0.5214899153534908,
+      "project_score": 0.0,
+      "project_minus_native": -0.5214899153534908
+    }
+  ],
+  "comparison_scope": "Frontend family: visual encoder/preprocessing plus Adapter/readout/projection; not an Adapter-only or CLIP-only causal attribution",
+  "inference": "Under the fixed recipe/budget, this project frontend performs substantially below the native frontend; inspect the frontend evidence before new training. Not proof of an intrinsic frozen-CLIP ceiling or Bridge root cause.",
+  "independent_training_seeds_per_group": 1,
+  "final50_accessed_for_this_analysis": false,
+  "full_project_report_verified": true,
+  "full_project_report_verification_location": "server; unchanged verify_segment.py success supplied by user",
+  "full_project_artifacts_received_locally": false,
+  "requested_small_artifacts_received_locally": true,
+  "available_small_artifacts_verified_locally": true,
+  "local_endpoint_analysis": "reports/pusht_project_endpoint_analysis_20261021/report.json",
+  "comparison_note": "docs/PUSHT_FRONTEND_COMPARISON_215999_20261021.md",
+  "native_development_sha256": "42a83f5c0afa24137f0f9598975e7ce7e60786fe777ff60dd17e7db39415a89d",
+  "project_terminal_sha256": "780112fbb225f267606078c3d760c514cdfadde578c5a424d6c745af27dc4011",
+  "new_training_or_rollouts_executed": false
+}

@@ -1,0 +1,47 @@
+{
+  "format": "oxe-bridge-supervision-stage1-terminal-result-v1",
+  "job_id": 229800,
+  "stage": 1,
+  "evidence_source": "User pasted completed diagnostic receipt and successful verify.py output",
+  "terminal_verified": true,
+  "full_cluster_history_download_verified": false,
+  "completed_updates": 32768,
+  "full_budget": 65536,
+  "source_supervision_state": {
+    "done": 32768,
+    "bridge_draws": 65531,
+    "all_draws": 262140,
+    "no_bridge": 3300,
+    "last_committed_keep": 0
+  },
+  "independent_reference_counter_recalculation": true,
+  "first_reference_replay": {
+    "passed": true,
+    "actual": {
+      "loss": 1.4397112131118774,
+      "pose_loss": 1.2741793394088745,
+      "gripper_loss": 0.6621274948120117,
+      "gradient_norm": 7.065093994140625
+    },
+    "expected": {
+      "loss": 1.4397112131118774,
+      "pose_loss": 1.2741793394088745,
+      "gripper_loss": 0.6621274948120117,
+      "gradient_norm": 7.065093994140625
+    },
+    "optimizer_steps_before_replay": 0,
+    "parameter_versions_unchanged": true,
+    "rng_unchanged": true
+  },
+  "initial_learned_sha256": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+  "gpu": "NVIDIA A40",
+  "peak_reserved_gib": 4.603515625,
+  "elapsed_seconds": 9515.882705356926,
+  "frozen_identity_guard_passed_inferred_from_completed_guarded_training": true,
+  "restore_event_report_downloaded": false,
+  "independent_named_failure_profile_downloaded": false,
+  "stage2_submitted": false,
+  "generalization_verdict": null,
+  "next_step": "User submits stage2 from oxe_bridge_supervision_frozen_repair_v1; resume32768 to65536, not fresh training",
+  "tail_ctrl_c_not_interpreted_as_job_cancellation": true
+}

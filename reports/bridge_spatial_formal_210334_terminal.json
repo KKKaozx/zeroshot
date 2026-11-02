@@ -1,0 +1,77 @@
+{
+  "job": 210334,
+  "evidence": "User supplied complete published cluster-verifier stdout; original report/NPZ/checkpoints not locally received",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:25:44",
+  "node": "gpu-a6000-1",
+  "control": {
+    "first_position_cm": 1.4469464226697777,
+    "first_rotation_deg": 2.783725619558832,
+    "path_position_cm": 5.958811384783914,
+    "path_rotation_deg": 13.83413871586094,
+    "endpoint_position_cm": 7.418657995005776,
+    "endpoint_rotation_deg": 18.354296021162845
+  },
+  "candidate": {
+    "first_position_cm": 1.4325184593264197,
+    "first_rotation_deg": 2.787264291833293,
+    "path_position_cm": 5.847064976073567,
+    "path_rotation_deg": 13.7874048652943,
+    "endpoint_position_cm": 7.308304100212301,
+    "endpoint_rotation_deg": 18.370850265432992
+  },
+  "original207558": {
+    "first_position_cm": 1.4461413906408727,
+    "first_rotation_deg": 2.7740070772762486,
+    "path_position_cm": 5.986335115116556,
+    "path_rotation_deg": 13.781529651272724,
+    "endpoint_position_cm": 7.523540816140807,
+    "endpoint_rotation_deg": 18.70876586335695
+  },
+  "no_motion": {
+    "first_position_cm": 1.2268812930144997,
+    "first_rotation_deg": 2.4400986199538766,
+    "path_position_cm": 8.110599583259136,
+    "path_rotation_deg": 15.51700213975099,
+    "endpoint_position_cm": 11.516271535829057,
+    "endpoint_rotation_deg": 21.91093577780962
+  },
+  "first_reference_values_rounded_from_existing_audit": false,
+  "development_episodes": 10,
+  "development_windows": 50,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "updates_per_arm": 4096,
+  "admission_gates_all_false": true,
+  "joint_improved_episodes": 3,
+  "development_admission_passed": false,
+  "decision": "Retain207558; close this readout branch. No extra budget/seeds/variants/final25 access.",
+  "full_report_verified": true,
+  "new_training_started": false,
+  "remote_report": "/projects/Zeroshot/runs/bridge-spatial-formal-210334/report.json",
+  "deltas": {
+    "candidate_first_position_gain_vs_control_mm": 0.1442796334335794,
+    "candidate_first_position_worse_than_static_percent": 16.76096680932031,
+    "candidate_path_position_gain_vs_original_percent": 2.3264674690748
+  },
+  "full_report_verified_on_cluster_by_user": true,
+  "full_report_verified_locally": false,
+  "branch_closed": true,
+  "verification_pending": false,
+  "admission_gates": {
+    "first_episode_position_better_than_all": false,
+    "first_episode_rotation_no_worse_than_all": false,
+    "same_six_episodes_first_position_better_than_both": false,
+    "full16_path_and_endpoint_episode_no_worse": false,
+    "first_and_full16_window_no_worse": false
+  },
+  "jointly_improved_episode_ids": [
+    "bridge_data_v2-train.tfrecord-00352-of-01024::18",
+    "bridge_data_v2-train.tfrecord-00529-of-01024::17",
+    "bridge_data_v2-train.tfrecord-00732-of-01024::16"
+  ]
+}

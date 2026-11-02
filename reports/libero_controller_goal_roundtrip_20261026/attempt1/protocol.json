@@ -1,0 +1,42 @@
+{
+  "task": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "demo": "demo_0",
+  "native_hz": 20,
+  "native_rollout_tick_cap": 197,
+  "controller_goal_source": "Actual unchanged OSC set_goal on recorded pre-action simulator states and original expert commands",
+  "offline_state_restores": 197,
+  "rollout_state_restores": 1,
+  "rollout_mid_state_corrections": 0,
+  "pose_reference": "Fixed expert world controller goal, encoded against each actual rollout input EEF pose",
+  "representation": "source_cartesian_delta_pose_open_positive_v1",
+  "position_scale_meters": 0.1,
+  "diagnostic_output_shape": [
+    1,
+    8
+  ],
+  "high_level_goal_hz": 20,
+  "native_ticks_per_goal": 1,
+  "clock_changed_from_native_demonstration": false,
+  "trained5hz_model_or_horizon_changed": false,
+  "prediction": "No model. Privileged engineering goal sequence only",
+  "early_stop": "Original executor stops if native done; final and any success reported",
+  "gates": {
+    "native_final_goal_success": true,
+    "max_executed_controller_position_goal_error_m": 1e-06,
+    "max_executed_controller_orientation_goal_error_rad": 1e-05,
+    "max_numeric_pose_roundtrip_error_m": 1e-06,
+    "max_numeric_orientation_roundtrip_error_rad": 1e-05,
+    "actual_gripper_sequence_exact": true,
+    "no_saturated_native_ticks": true
+  },
+  "excluded_from_primary40": true,
+  "automatic_training_or_variants": false,
+  "limitation": "Native20Hz desired-goal conversion only; cannot establish5Hz information sufficiency, learned performance, or OXE cross-robot calibration",
+  "native_reference": "reports/libero_native_replay_20261020/report.json",
+  "frozen_core_sha256": {
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "libero_action_interface.py": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+    "libero_waypoint_execution.py": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986"
+  },
+  "script_sha256": "eec7c081b2b94572c829a44b5c58891a615f1a20d2eae6ed0fc41b02df29f889"
+}

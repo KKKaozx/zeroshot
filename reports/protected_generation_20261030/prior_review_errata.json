@@ -1,0 +1,17 @@
+{
+  "format": "language-review-erratum-v1",
+  "prior_review": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+  "prior_review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+  "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+  "candidate": "place the apple nearby the red bull can",
+  "slot": 1,
+  "prior_decision": "accept_text",
+  "effective_decision": "reject_grammar",
+  "reason": "Earlier text acceptance missed the nearby+NP grammaticality issue. Preserve the original report; apply this explicit correction.",
+  "prior_text_accept_count": 25,
+  "corrected_text_accept_count": 24,
+  "prior_complete_five_count": 1,
+  "corrected_complete_five_count": 1,
+  "reference": "https://dictionary.cambridge.org/grammar/british-grammar/nearby",
+  "old_files_rewritten": false
+}

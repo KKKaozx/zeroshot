@@ -1,0 +1,52 @@
+{
+  "format": "oxe-nominal-reached-grid-v1",
+  "label_family": "nominal_resampled_observed_reached_pose",
+  "clock_basis": "user_selected_published_nominal_frequency_assumption",
+  "source_hz": {
+    "Bridge": 5,
+    "Language Table": 5,
+    "BC-Z": 10,
+    "Fractal": 3
+  },
+  "output_hz": 5,
+  "horizon": 16,
+  "target_times_seconds": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2,
+    1.4,
+    1.6,
+    1.8,
+    2.0,
+    2.2,
+    2.4,
+    2.6,
+    2.8,
+    3.0,
+    3.2
+  ],
+  "timestamp_origin": "relative to the actual input observation row",
+  "measured_timestamps_used": false,
+  "exact_export_row_spacing_verified": false,
+  "position_interpolation": "linear in recorded source Cartesian frame",
+  "orientation_interpolation": "shortest-path unit xyzw SLERP",
+  "gripper_rule": "right-closed source interval command: ceil(source_row_time)-1; zero-order hold, no interpolation",
+  "current_gripper_rule": "original causal history strictly before the input row",
+  "tail_rule": "no extrapolation; repeat last valid target for storage and zero all padded supervision",
+  "zero_valid_target_rule": "omit window; never supervise a fabricated target",
+  "reference": "fixed_input_observation",
+  "action_representation": "source_cartesian_delta_pose_open_positive_v1",
+  "position_divisor_in_recorded_units": 0.1,
+  "source_position_to_meters": {
+    "Bridge": null,
+    "Language Table": null,
+    "BC-Z": null,
+    "Fractal": null
+  },
+  "missing_dimensions": "Language Table observes XY only; z,orientation,gripper masked",
+  "input_images_or_observation_rows_resampled": false,
+  "physical_calibration_or_formal_training_admission_granted": false
+}

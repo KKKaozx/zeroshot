@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-16",
+  "job_id": "207746",
+  "stage": "cluster_formal",
+  "source": "user_reported_formal_job_id_after_conditional_validator_command",
+  "preflight_job_id": "207722",
+  "preflight_validator_passed": true,
+  "validator_evidence_level": "inferred_from_successful_conditional_submission_not_full_output",
+  "preflight_report_independently_downloaded_and_verified": true,
+  "slurm_state_verified": true,
+  "report_verified": true,
+  "generalization_result_available": true,
+  "protocol_sha256": "5a5fb791966a1b67be95d95644d577ce2434de3e619d2a3d019ac4465919e862",
+  "initialization_seed": 42,
+  "rotation_loss_weight": 35.444970688934426,
+  "train_windows": 1836,
+  "train_episodes": 405,
+  "development_windows": 40,
+  "development_episodes": 10,
+  "fixed_updates": 8192,
+  "batch_size": 8,
+  "baseline_control_reused_job": "207558",
+  "baseline_retrained": false,
+  "screen": {
+    "rotation_at_most_deg": 14.381946234906252,
+    "position_at_most_cm": 6.808207638142424,
+    "episodes_rotation_better_than_control_at_least": 6,
+    "all40windows_and_all10episodes_included": true,
+    "all5tasks_reported": true
+  },
+  "cluster_output": "/projects/Zeroshot/runs/bridge-rotation-weight-fit-207746",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-rotation-weight-fit-207746.out",
+  "next_step": "Fixed coefficient trial closed after saved-array audit; no weight sweep, extra seed, extension or repeated fit.",
+  "slurm_evidence_source": "user_pasted_sacct_and_terminal_log",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "01:07:37",
+  "node": "gpu-a6000-1",
+  "generalization_evidence_level": "independent_float64_saved_array_audit",
+  "terminal_metrics": {
+    "train_position_cm": 6.631537914276123,
+    "train_rotation_deg": 10.544790267944336,
+    "development_position_cm": 7.30127477645874,
+    "development_rotation_deg": 12.275748252868652
+  },
+  "terminal_mean_gates": {
+    "rotation_threshold": true,
+    "position_protection": false,
+    "episode_rotation_majority": null
+  },
+  "complete_candidate_passed_from_terminal": false,
+  "terminal_changes": {
+    "rotation_improvement_percent_vs_control": 18.91249869978925,
+    "position_increase_percent_vs_control": 7.2422458967606795,
+    "position_improvement_percent_vs_static": 11.093705842101853,
+    "rotation_improvement_percent_vs_static": 18.695579683080222
+  },
+  "artifact_audit_sha256": "dccd07ba02f4d829599a132800fd7f3213b0da19a828c83a0084df33b82460a9",
+  "new_job_submitted": false,
+  "verified_metrics": {
+    "coverage": {
+      "path_position_cm": 7.301274492734441,
+      "path_rotation_deg": 12.275859922484797,
+      "endpoint_position_cm": 8.653702759196438,
+      "endpoint_rotation_deg": 16.242081441603048
+    },
+    "static": {
+      "path_position_cm": 8.21232607389037,
+      "path_rotation_deg": 15.098500432102608,
+      "endpoint_position_cm": 10.565334249436834,
+      "endpoint_rotation_deg": 19.986393321428388
+    },
+    "original": {
+      "path_position_cm": 6.808207638142424,
+      "path_rotation_deg": 15.13889077358553,
+      "endpoint_position_cm": 8.221684348444295,
+      "endpoint_rotation_deg": 19.0321697518528
+    },
+    "episode_equal": {
+      "coverage": {
+        "position_cm": 6.8965606120288125,
+        "rotation_deg": 11.96525854091976
+      },
+      "static": {
+        "position_cm": 7.9601175966494155,
+        "rotation_deg": 15.066972166771839
+      },
+      "original": {
+        "position_cm": 6.449931664438651,
+        "rotation_deg": 15.21329269860035
+      }
+    }
+  },
+  "gates": {
+    "position_threshold": false,
+    "rotation_threshold": true,
+    "position_better_old": false,
+    "rotation_better_old": true,
+    "episode_rotation_majority": true
+  },
+  "candidate_passed": false
+}

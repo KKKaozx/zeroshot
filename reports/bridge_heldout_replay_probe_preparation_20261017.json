@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-17",
+  "stage": "ready_for_old_window_diagnostic",
+  "failure_job": "208005",
+  "archive_bytes": 9068,
+  "archive_sha256": "70faa2ee8a8e2c48eefbaa749efb8d4b25ffc4aa1656a4f66bb01f9d9c63048f",
+  "protocol_sha256": "dc54e243850142a7c0e39697ad96ca718edcc2db62af6ed502e3a8119499f1f5",
+  "entry_sha256": "44bd4f364c8717b947b1f73036453e7d78d7cfc35edcfdc14c31603ad5eeff7d",
+  "local_cpu_validation_passed": true,
+  "bash_syntax_passed": true,
+  "new_gpu_execution": false,
+  "new_holdout_inference": false,
+  "new_training": false,
+  "new_job_submitted": true,
+  "old_tolerance_unchanged": true,
+  "original_heldout_protocol_unchanged": true,
+  "suspected_source_differences": [
+    "cached versus recomputed CLIP tokens",
+    "no_grad/original requires_grad flags versus inference_mode/all requires_grad=False"
+  ],
+  "root_cause_confirmed": false,
+  "next_step": "Track208034 only; retain all component comparisons. No resubmission, training, tolerance change or new13episode scoring.",
+  "job_id": "208034"
+}

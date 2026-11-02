@@ -1,0 +1,21 @@
+{
+  "checks_passed": 13,
+  "checks": [
+    "Python3.9 syntax",
+    "Matching qualified cleanup engine reused",
+    "Only six named optimizer-state candidates",
+    "207558 and207746 and author Bridge never targeted",
+    "All eight standalone inference weights retained",
+    "Read-only Bridge profile sees six states and eight finals",
+    "Changed source report stops cleanup",
+    "Missing standalone final checkpoint stops cleanup",
+    "Six optimizer fixtures retired",
+    "All eight final weights byte-identical",
+    "All other original files and main references untouched",
+    "Repeated Bridge plan is idempotent",
+    "Bridge-only audit receipt written"
+  ],
+  "scope": "Bridge profile only, tiny synthetic checkpoints; prior20 engine guards reused, no repeated real data/model experiments",
+  "actual_cluster_deletion_executed": false,
+  "script_sha256": "1a5cdc79ea55660af5a020e1473149b83bfcaeb1372345bd0f7d2833ed457f5d"
+}

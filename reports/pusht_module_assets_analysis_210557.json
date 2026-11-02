@@ -1,0 +1,47 @@
+{
+  "source_report_sha256": "ff1336c570334c055af9aa809185d368e6879a46e3020f69ff8ab8e1b52899f7",
+  "inventory_execution_verified": true,
+  "fixed_local_source_matches": {
+    "diffusion_policy/policy/diffusion_unet_hybrid_image_policy.py": true,
+    "diffusion_policy/workspace/train_diffusion_unet_hybrid_workspace.py": true,
+    "diffusion_policy/model/diffusion/conditional_unet1d.py": true,
+    "diffusion_policy/dataset/pusht_image_dataset.py": true,
+    "diffusion_policy/common/sampler.py": true
+  },
+  "saved_progress": {
+    "global_step": 84167,
+    "epoch": 500
+  },
+  "interface": {
+    "weight_key": "model.down_modules.0.0.cond_encoder.1.weight",
+    "resolved": true,
+    "weight_shape": [
+      1024,
+      260
+    ],
+    "global_condition_dim": 132,
+    "per_observation_feature_dim": 66,
+    "rgb_feature_dim": 64,
+    "preserved_agent_pos_dim": 2
+  },
+  "dataset_candidates_found": [],
+  "dataset_absence_scope": "Only the six listed paths; not a whole-cluster search",
+  "active_project_environment": "/projects/Zeroshot/envs/multitask-preflight-v1",
+  "active_environment_metadata_collected": false,
+  "inventory_omission": "bridge-diffusion was queried instead of the current multitask-preflight-v1; null packages are not evidence current project dependencies are absent",
+  "official_training_archive": {
+    "url": "https://diffusion-policy.cs.columbia.edu/data/training/pusht.zip",
+    "directory_listed_size": "29 MB",
+    "size_kind": "Rounded web directory listing; not a verified exact Content-Length",
+    "checked_on": "2026-10-18",
+    "downloaded": false
+  },
+  "formal_training_ready": false,
+  "next_requirements": [
+    "Acquire/check the training data if no other existing location is supplied",
+    "Read metadata from actual active environment; decide isolated CLIP interface without modifying official env",
+    "Fix matched training/split/normalizer protocol and bounded resource measurement"
+  ],
+  "bridge_root_cause_identified": false,
+  "new_training_submitted": false
+}

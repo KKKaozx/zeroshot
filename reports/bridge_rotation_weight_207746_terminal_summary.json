@@ -1,0 +1,41 @@
+{
+  "job_id": "207746",
+  "source": "user_terminal_only",
+  "artifacts_verified": false,
+  "metrics": {
+    "train_position_cm": 6.631537914276123,
+    "train_rotation_deg": 10.544790267944336,
+    "development_position_cm": 7.30127477645874,
+    "development_rotation_deg": 12.275748252868652
+  },
+  "matched_control207558": {
+    "path_position_cm": 6.808207638142424,
+    "path_rotation_deg": 15.13889077358553,
+    "endpoint_position_cm": 8.221684348444295,
+    "endpoint_rotation_deg": 19.0321697518528
+  },
+  "static": {
+    "position_cm": 8.21232607389037,
+    "rotation_deg": 15.098500432102608
+  },
+  "screen": {
+    "rotation_at_most_deg": 14.381946234906252,
+    "position_at_most_cm": 6.808207638142424,
+    "episodes_rotation_better_than_control_at_least": 6,
+    "all40windows_and_all10episodes_included": true,
+    "all5tasks_reported": true
+  },
+  "mean_gates": {
+    "rotation_threshold": true,
+    "position_protection": false,
+    "episode_rotation_majority": null
+  },
+  "complete_candidate_passed_from_terminal": false,
+  "changes": {
+    "rotation_improvement_percent_vs_control": 18.91249869978925,
+    "position_increase_percent_vs_control": 7.2422458967606795,
+    "position_improvement_percent_vs_static": 11.093705842101853,
+    "rotation_improvement_percent_vs_static": 18.695579683080222
+  },
+  "new_neural_execution": false
+}

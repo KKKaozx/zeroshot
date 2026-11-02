@@ -1,0 +1,19 @@
+{
+  "format": "source-target-pose-mapping-v1",
+  "source": "Bridge",
+  "status": "missing_facts_not_an_identity_calibration",
+  "target_meters_per_source_unit": null,
+  "source_axes_to_target": null,
+  "source_origin_in_target_m": null,
+  "right_tool_alignment": null,
+  "source_eef_to_point_source_units": null,
+  "target_eef_to_point_m": null,
+  "evidence": null,
+  "parameter_semantics": {
+    "position": "p_point_target_m = source_origin_in_target_m + target_meters_per_source_unit * source_axes_to_target * p_point_source",
+    "orientation": "R_target_eef = source_axes_to_target * R_source_eef * right_tool_alignment",
+    "source_offset": "Vector from recorded source EEF to corresponding physical point, in source EEF local axes/source units",
+    "target_offset": "Vector from measured target EEF to corresponding physical point, in target EEF local axes/meters"
+  },
+  "why_null": "Exact cached-source unit/frame/TCP and target registration facts have not been supplied. An explicit zero offset also needs a physical basis. The loader rejects this template before loading weights or running inference."
+}

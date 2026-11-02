@@ -1,0 +1,117 @@
+{
+  "scores": {
+    "dino8": {
+      "mean_score": 0.8298577066775906,
+      "full_reward_fraction": 0.35,
+      "reference_competence_gate_passed": false
+    },
+    "clip8_215999": {
+      "mean_score": 0.44548841481267654,
+      "full_reward_fraction": 0.25,
+      "reference_competence_gate_passed": false
+    },
+    "native212158": {
+      "mean_score": 0.8458782546929152,
+      "full_reward_fraction": 0.5,
+      "reference_competence_gate_passed": true
+    }
+  },
+  "dino_minus_clip_mean": 0.3843692918649141,
+  "paired_scene_bootstrap95": [
+    0.2006358682271091,
+    0.5753083376846504
+  ],
+  "dino_better_worse_equal": [
+    12,
+    2,
+    6
+  ],
+  "native_gap_closed_fraction": 0.9599876260093999,
+  "per_scene_gain": [
+    {
+      "environment_seed": 5000000,
+      "dino_minus_clip": 0.04391859326416625
+    },
+    {
+      "environment_seed": 5000001,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000002,
+      "dino_minus_clip": 1.0
+    },
+    {
+      "environment_seed": 5000003,
+      "dino_minus_clip": -0.017733527429956486
+    },
+    {
+      "environment_seed": 5000004,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000005,
+      "dino_minus_clip": 0.7167126572951188
+    },
+    {
+      "environment_seed": 5000006,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000007,
+      "dino_minus_clip": 0.17373313550619196
+    },
+    {
+      "environment_seed": 5000008,
+      "dino_minus_clip": 0.005391015630166196
+    },
+    {
+      "environment_seed": 5000009,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000010,
+      "dino_minus_clip": -0.04978451484419344
+    },
+    {
+      "environment_seed": 5000011,
+      "dino_minus_clip": 0.9418391491086157
+    },
+    {
+      "environment_seed": 5000012,
+      "dino_minus_clip": 0.4658539243480322
+    },
+    {
+      "environment_seed": 5000013,
+      "dino_minus_clip": 0.9427363402827029
+    },
+    {
+      "environment_seed": 5000014,
+      "dino_minus_clip": 0.7063522971733976
+    },
+    {
+      "environment_seed": 5000015,
+      "dino_minus_clip": 0.8284855301553568
+    },
+    {
+      "environment_seed": 5000016,
+      "dino_minus_clip": 0.9301719944974136
+    },
+    {
+      "environment_seed": 5000017,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000018,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000019,
+      "dino_minus_clip": 0.9997092423112691
+    }
+  ],
+  "scope": "Reused dev20, one training seed; original CLIP onA6000 versus DINO onA40. Visual backbone and native representation normalization differ. Scene bootstrap excludes training-seed uncertainty; not final50 or robot grasp success.",
+  "main_clip_model_replaced": false,
+  "final50_accessed": false,
+  "automatic_following_action": false,
+  "interpretation": "Report paired effect size and uncertainty; no automatic extra training, variant or seed"
+}

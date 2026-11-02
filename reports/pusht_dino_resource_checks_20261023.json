@@ -1,0 +1,30 @@
+{
+  "checks_passed": 20,
+  "checks": [
+    "All protocol source hashes",
+    "Five original source modules byte-identical; no native or CLIP rerun",
+    "All twelve package checksums",
+    "Exact archive members and bytes; no weight payload",
+    "Python3.9 syntax including new entry",
+    "Bash syntax",
+    "A40 twenty-minute hard cap and no requeue",
+    "Isolated existing runtimes",
+    "Actual pretrained frozen backbone and existing Adapter check available",
+    "Metadata fixture admitted without a performance or formal-readiness verdict",
+    "Reject changed encoding all_frozen",
+    "Reject changed encoding weights_unchanged",
+    "Reject changed encoding raw_online_roundtrip_passed",
+    "Reject changed encoding fixed_original_text_bytes",
+    "Reject changed encoding backbone_weights_sha256",
+    "Reject changed measurement updates",
+    "Reject changed measurement trainable_parameters",
+    "Reject changed measurement initial_backend_sha256",
+    "Reject changed measurement peak_reserved_gib",
+    "Reject token byte corruption"
+  ],
+  "scope": "New probe packaging, byte-identical reuse and synthetic metadata validators; actual pretrained-backbone interface evidence reused",
+  "new_model_inference_executed": false,
+  "policy_training_executed": false,
+  "new_jobs_submitted": false,
+  "archive_sha256": "717640da566b8b603f8af0ddd031460e804d95f367985af39038a844f0868e88"
+}

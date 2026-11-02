@@ -1,0 +1,549 @@
+{
+  "date": "2026-10-17",
+  "status": "frozen_design_pending_new_input_and_cluster_checkpoint_checks",
+  "objective": "Within the SAME requested-horizon model and compute, does adding late CURRENT observations improve NEW-demonstration full16 pose errors?",
+  "active_baseline": {
+    "kind": "active_research_reference_not_a_runnable_training_config",
+    "date": "2026-10-17",
+    "user_instruction": "Return to the previously effective baseline; park subsequent improvement branches.",
+    "primary_job": "207558",
+    "training_episodes": 405,
+    "training_windows": 1836,
+    "updates": 8192,
+    "remote_checkpoint": "/projects/Zeroshot/runs/bridge-coverage-rep-fit-207558/final_trainable.pt",
+    "checkpoint_sha256": "926030039ac9d32634bf193e989a44a5b891882c503cb8b40fd7b5091ac98ed6",
+    "checkpoint_bytes": 529379298,
+    "checkpoint_last_runtime_roundtrip_verified": true,
+    "remote_current_existence_or_hash_not_rechecked": true,
+    "checkpoint_downloaded": false,
+    "model_loaded_during_reference_restore": false,
+    "new_training_or_inference": false,
+    "configuration_policy": "Use the original checkpoint config and pinned207558 protocol/source. This manifest does not change production defaults, load weights or authorize retraining.",
+    "local_pinned_files": {
+      "reports\\bridge-coverage-rep-fit-207558\\report.json": "10d13e43d90f2b1d6b1b87a6d64803806a2d383ecf4fdab517646599b786246f",
+      "reports\\bridge_coverage_replication_analysis_207558\\analysis.json": "6a8f4b075dfd1376d99a9f5daeec704d7b21a218c4a37496f6b3159e5f35ddf9",
+      "reports\\bridge_heldout_analysis_208056\\analysis.json": "1d938276d1af210cfa7dbc82e8f31e5c1a8bbc5731ec1c8c622567eabec4908d",
+      "cluster_packages\\bridge_coverage_replication_v1\\protocol.json": "ab71de20c672180223df4497ebe3548f8b1ecbcc9974c86b817b36fa0031989a",
+      "reports\\bridge-coverage-rep-fit-207558\\runner_snapshot.py": "9f1ae8751bac9fea32c4c72fa3b6d5267efe003a8f4b354b704e7695e241ab3a"
+    },
+    "recipe": {
+      "initialization_seed": 42,
+      "batch_size": 8,
+      "updates": 8192,
+      "learning_rates": [
+        0.0001,
+        1e-05
+      ],
+      "switch_after": 4096,
+      "sampling_seeds": [
+        1101,
+        1102,
+        1103
+      ],
+      "sampling_steps": 100,
+      "optimizer": "Adam",
+      "weight_decay": 0,
+      "gradient_clip": 1
+    },
+    "development": {
+      "episodes": 10,
+      "windows": 40,
+      "metrics": {
+        "coverage": {
+          "path_position_cm": 6.808207638142424,
+          "path_rotation_deg": 15.13889077358553,
+          "endpoint_position_cm": 8.221684348444295,
+          "endpoint_rotation_deg": 19.0321697518528
+        },
+        "static": {
+          "path_position_cm": 8.21232607389037,
+          "path_rotation_deg": 15.098500432102608,
+          "endpoint_position_cm": 10.565334249436834,
+          "endpoint_rotation_deg": 19.986393321428388
+        },
+        "original": {
+          "path_position_cm": 8.381654748014052,
+          "path_rotation_deg": 15.99391770130639,
+          "endpoint_position_cm": 10.71061926355253,
+          "endpoint_rotation_deg": 22.287617579078972
+        },
+        "episode_equal": {
+          "coverage": {
+            "position_cm": 6.449931664438651,
+            "rotation_deg": 15.21329269860035
+          },
+          "static": {
+            "position_cm": 7.9601175966494155,
+            "rotation_deg": 15.066972166771839
+          },
+          "original": {
+            "position_cm": 7.689168462444688,
+            "rotation_deg": 15.515146104002692
+          }
+        }
+      },
+      "caveat": "Position improves over no-motion; rotation is not lower on this reused development set."
+    },
+    "completed_independent_assessment": {
+      "job": "208056",
+      "episodes": 13,
+      "windows": 60,
+      "weighting": "episode_equal",
+      "model": {
+        "path_position_cm": 4.766097395114668,
+        "path_rotation_deg": 12.044763297672516,
+        "endpoint_position_cm": 6.165393548978249,
+        "endpoint_rotation_deg": 16.76868826665392
+      },
+      "no_motion": {
+        "path_position_cm": 7.779046148478036,
+        "path_rotation_deg": 12.74222960100123,
+        "endpoint_position_cm": 10.781805771575641,
+        "endpoint_rotation_deg": 17.60518392506076
+      },
+      "policy": "Completed assessment retained as evidence; do not score it again for tuning or mix with development means."
+    },
+    "secondary_reference": {
+      "job": "207746",
+      "purpose": "Previously evaluated rotation-weight candidate retained as secondary evidence; not the active default."
+    },
+    "parked_branches": [
+      "806-demo expansion208207",
+      "Additional budget208586",
+      "Frozen-context continuation208964",
+      "Auxiliary readout/coordinate-representation diagnostics"
+    ],
+    "next_action": "Use207558 as the stable reference. Stop automatic incremental experiments. No new GPU submission or rerun until a concrete end-to-end objective and protocol are explicitly agreed.",
+    "limits": [
+      "Offline same-task pose generalization evidence,not unseen-task or closed-loop grasp success.",
+      "Current reference diagnostic froze the gripper; it is not an accepted complete grasp policy."
+    ]
+  },
+  "training_episodes": 405,
+  "arms": {
+    "prefix_control": {
+      "K16_rows": "old1836",
+      "K1_rows": "old1836"
+    },
+    "prefix_added": {
+      "K16_rows": "same old1836",
+      "K1_rows": "all3394 including1558 late observations"
+    }
+  },
+  "comparison_meaning": "Added-current-input coverage at fixed compute inside the new two-request training scheme. Compare to untouched207558 separately; not a pure architecture comparison to207558.",
+  "initialization": {
+    "source_job": 207558,
+    "source_checkpoint": "/projects/Zeroshot/runs/bridge-coverage-rep-fit-207558/final_trainable.pt",
+    "sha256": "926030039ac9d32634bf193e989a44a5b891882c503cb8b40fd7b5091ac98ed6",
+    "base_parameters": "Same trained207558 in BOTH arms, no random restart",
+    "request_projection": "Zero-init,16384 new parameters, RNG protected, same in BOTH arms",
+    "optimizer": "FreshAdam for BOTH arms; old final_trainable.pt contains no optimizer state, not a resume of the oldAdam trajectory"
+  },
+  "recipe": {
+    "new_updates_per_arm": 4096,
+    "arms": 2,
+    "total_new_optimizer_updates": 8192,
+    "batch_size": 8,
+    "K16_updates_per_arm": 2048,
+    "K1_updates_per_arm": 2048,
+    "request_order": "Odd1-indexed updatesK16, even updatesK1",
+    "learning_rate": 1e-05,
+    "learning_rate_schedule": "constant",
+    "weight_decay": 0,
+    "gradient_clip": 1.0,
+    "context_dropout_seed_rule": "620000+update",
+    "diffusion_noise_seed_rule": "610000+update",
+    "draw_tensor_shape": [
+      4096,
+      8
+    ],
+    "task_slots": "Original207558 first4096 batches; all slots matched exactly across arms",
+    "K16_schedule": "Identical original indices in both arms",
+    "K1_control_schedule": "Original indices",
+    "K1_added_schedule": "Fixed task-matched per-task shuffled streams across3394 rows; no duplicate row in batch",
+    "early_stopping": false,
+    "checkpoint_selection": "Final update4096 only",
+    "sampling_steps": 100,
+    "diffusion_sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ]
+  },
+  "frozen": {
+    "CLIP": true,
+    "gripper": true,
+    "state_statistics": "Original128 training observations only",
+    "current_observation_history": "Same-current double Adapter calls, unchanged207558",
+    "image_preprocessing": "Pinned frozen dataset.py; no augmentation",
+    "action": "Fixed-input tool frame XYZ/.1m +xyzw reached pose",
+    "target_prediction": "x0/sample",
+    "pose_loss": "K16 original flattenedMSE;K1 only first real7D pose"
+  },
+  "sampler_checks": {
+    "candidate_K1_all3394_seen": true,
+    "K1_min_draws": 3,
+    "K1_max_draws": 8,
+    "K1_added_late_draws": 7627,
+    "K16_across_arm_exact": true,
+    "all_task_slots_across_arm_exact": true,
+    "task_draw_counts": {
+      "close microwave": 8192,
+      "turn lever vertical to front": 6144,
+      "open the drawer": 6144,
+      "close the drawer": 6144,
+      "take broccoli out of pan": 6144
+    }
+  },
+  "validation": {
+    "kind": "New development; metadata-only qualifications pending",
+    "episodes": [
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00870-of-01024",
+        "record_index": 56,
+        "steps": 34,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy",
+        "episode_id": 37
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00533-of-01024",
+        "record_index": 31,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/close_microwave/train/out.npy",
+        "episode_id": 87
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00352-of-01024",
+        "record_index": 18,
+        "steps": 30,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/11/train/out.npy",
+        "episode_id": 39
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00529-of-01024",
+        "record_index": 17,
+        "steps": 28,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_folding_table/drawer_pnp/00/train/out.npy",
+        "episode_id": 22
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00811-of-01024",
+        "record_index": 33,
+        "steps": 48,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/05/train/out.npy",
+        "episode_id": 11
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00857-of-01024",
+        "record_index": 8,
+        "steps": 48,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/14/train/out.npy",
+        "episode_id": 40
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00844-of-01024",
+        "record_index": 16,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy",
+        "episode_id": 14
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00363-of-01024",
+        "record_index": 23,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy",
+        "episode_id": 39
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00739-of-01024",
+        "record_index": 18,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/upenn/toysink5/turn_lever_vertical_to_front/train/out.npy",
+        "episode_id": 1
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00732-of-01024",
+        "record_index": 16,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+        "episode_id": 241
+      }
+    ],
+    "episodes_per_task": 2,
+    "full16_windows_from_metadata": 50,
+    "window_rule": "All stride4 starts with16 real future observations",
+    "selection_uses_model_errors": false,
+    "excludes_known810_training_proposal_and_prior_dev_and_consumed13_and_reserved25": true,
+    "numeric_or_images_read": false,
+    "checkpoint_or_hyperparameter_selection": false
+  },
+  "final_assessment": {
+    "kind": "Previously reserved25 same-task episode candidates, NOT LIBERO/CLIPort benchmark",
+    "metadata_only_episodes": [
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00512-of-01024",
+        "record_index": 50,
+        "steps": 22,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/39/train/out.npy",
+        "episode_id": 14
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00969-of-01024",
+        "record_index": 19,
+        "steps": 37,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/08/train/out.npy",
+        "episode_id": 3
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00840-of-01024",
+        "record_index": 5,
+        "steps": 48,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/08/train/out.npy",
+        "episode_id": 18
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00983-of-01024",
+        "record_index": 11,
+        "steps": 23,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/28/train/out.npy",
+        "episode_id": 15
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00664-of-01024",
+        "record_index": 21,
+        "steps": 26,
+        "instruction": "open the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/21/train/out.npy",
+        "episode_id": 8
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00894-of-01024",
+        "record_index": 34,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/upenn/toysink5/turn_lever_vertical_to_front/train/out.npy",
+        "episode_id": 82
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00751-of-01024",
+        "record_index": 38,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+        "episode_id": 9
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00488-of-01024",
+        "record_index": 0,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/upenn/toysink5/turn_lever_vertical_to_front/train/out.npy",
+        "episode_id": 4
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00643-of-01024",
+        "record_index": 27,
+        "steps": 20,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toysink3_bww/turn_lever_vertical_to_front/train/out.npy",
+        "episode_id": 37
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00981-of-01024",
+        "record_index": 42,
+        "steps": 23,
+        "instruction": "turn lever vertical to front",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+        "episode_id": 26
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00283-of-01024",
+        "record_index": 22,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy",
+        "episode_id": 13
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00998-of-01024",
+        "record_index": 27,
+        "steps": 38,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy",
+        "episode_id": 133
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00775-of-01024",
+        "record_index": 53,
+        "steps": 28,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan/train/out.npy",
+        "episode_id": 5
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-01022-of-01024",
+        "record_index": 23,
+        "steps": 28,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan/train/out.npy",
+        "episode_id": 13
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00594-of-01024",
+        "record_index": 14,
+        "steps": 27,
+        "instruction": "take broccoli out of pan",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan/train/out.npy",
+        "episode_id": 23
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00572-of-01024",
+        "record_index": 46,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy",
+        "episode_id": 29
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00611-of-01024",
+        "record_index": 13,
+        "steps": 27,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy",
+        "episode_id": 67
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00866-of-01024",
+        "record_index": 14,
+        "steps": 24,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy",
+        "episode_id": 58
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00715-of-01024",
+        "record_index": 43,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/close_microwave/train/out.npy",
+        "episode_id": 70
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00754-of-01024",
+        "record_index": 32,
+        "steps": 38,
+        "instruction": "close microwave",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy",
+        "episode_id": 71
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00898-of-01024",
+        "record_index": 38,
+        "steps": 48,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/15/train/out.npy",
+        "episode_id": 5
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-01004-of-01024",
+        "record_index": 41,
+        "steps": 35,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/07/train/out.npy",
+        "episode_id": 11
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00259-of-01024",
+        "record_index": 25,
+        "steps": 36,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/18/train/out.npy",
+        "episode_id": 6
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00770-of-01024",
+        "record_index": 23,
+        "steps": 34,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/10/train/out.npy",
+        "episode_id": 9
+      },
+      {
+        "shard": "bridge_data_v2-train.tfrecord-00399-of-01024",
+        "record_index": 41,
+        "steps": 34,
+        "instruction": "close the drawer",
+        "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_folding_table/drawer_pnp/01/train/out.npy",
+        "episode_id": 12
+      }
+    ],
+    "episode_count": 25,
+    "targets_or_predictions_read": false,
+    "policy": "Only after new-development pass and final weights/config frozen; evaluate BOTH paired arms and207558 once, same full16 protocol; no tuning/retest/drop-on-error"
+  },
+  "evaluation": {
+    "primary": "Full16 path pose errors, episode-equal; do not substituteK1 error",
+    "report_all": "Window-weighted, all episodes/tasks, endpoints and first-target diagnostics; no cherry-picking",
+    "methods": [
+      "unchanged207558",
+      "prefix_control",
+      "prefix_added",
+      "static"
+    ],
+    "admission_rule": [
+      "Candidate episode-equal full16 path position strictly lower than control,207558,and static",
+      "Candidate episode-equal full16 path rotation no higher than control,207558,and static",
+      "At least6of10 development episodes improve full16 position versus control AND versus207558",
+      "Window-weighted full16 path position/rotation no higher than control and207558"
+    ],
+    "K1": "Separate auxiliary result; cannot satisfy full16 admission",
+    "old40_and_consumed13": "Do not rescore for selection"
+  },
+  "preflight_before_any_formal": {
+    "actual_source207558_hash_and_key_check": true,
+    "original_old_window_mode_and_prediction_replay": "Pinned no_grad/eval semantics and saved original4-window references; no tolerance changes",
+    "added1558_inputs": "Numeric, image/language, real-next-action and current-state features audited on training records; no padded supervision",
+    "development10": "Qualify schema/real-label/image eligibility without policy scores before training; any incompatibility stops, no error-based replacement",
+    "one_resource_check": "One fixed8-update-per-arm operational run, no development scoring or fitted-performance gate; verify matched initial base/new port, Adam/RNG restore, gradients/freeze, save/load, memory/time",
+    "resource_acceptance": "<=7.5GiB peakreserved and <=2h estimated paired formal run; otherwise stop before formal; no automatic architecture/batch/seed changes"
+  },
+  "stopping": "One paired4096-new-update continuation per arm. If new-development admission fails, retain207558, close branch; no extra rounds/seeds/K/crop/freeze/budget sweep. Final set remains closed on failure.",
+  "not_done": [
+    "All1558 added real image/token inputs",
+    "New10 numeric eligibility",
+    "Actual207558 trainedcheckpoint replay and migration",
+    "Clusterresource check",
+    "Runnable training/evaluation launchers",
+    "Training/generalization/grasp results"
+  ],
+  "training_authorized_or_submitted": false,
+  "new_GPU_job_prepared": false,
+  "source_sha256": {
+    "scripts\\prepare_bridge_prefix_pair_protocol_20261017.py": "0138027e29bdaeec93cc0dbc562d61e20873c8fa7f97181631b6ab683f53eea6",
+    "configs\\active_experiment_reference.json": "04609cc030ec8d0b9a871e54faa2ebe50d0786208b78b79f6d3add41d3b9ef61",
+    "cluster_packages\\bridge_coverage_replication_v1\\protocol.json": "ab71de20c672180223df4497ebe3548f8b1ecbcc9974c86b817b36fa0031989a",
+    "cluster_packages\\bridge_coverage_replication_v1\\rows.json": "910174741b0464a472e27c542ece929c874b9edabf13a99d76d52a50d1055ada",
+    "cluster_packages\\bridge_coverage_replication_v1\\schedule.npz": "ca4c48d0e2a6ed40b1d0a1f32571c8227aa289c478ae9df7ff9ee05e697abd4b",
+    "reports\\bridge_partial_future_contract_20261017\\candidate_rows.json": "f592bff26aff611c8ad428e69e22e6ac354152a3e9c1cf4890cd36cd3240960c",
+    "reports\\bridge_prefix_full_interface_20261017\\report.json": "f20afcbff6a7aea5365f793e90cd586fab3f0df3f756d2facc9eb59afc4fa268",
+    "scripts\\bridge_prefix_model_interface_v1.py": "a8939757f2b1dc34efe7e9d779f2ed4900d2a4c1b6ea43803b9653fd3305cd10",
+    "scripts\\bridge_requested_prefix_diffusion_v1.py": "b84770cc9fdece2b86c66fb34b3c7e907bbf8d8681c4a8ca8021919393c172d6",
+    "reports\\bridge_additional_inventory_20261017\\inventory.json": "cdbeae3f6d2b87978fb2c5bb3da840d1496b68f2775728e54c65a43bce8e0096",
+    "configs\\bridge_demonstration_expansion_candidates_20261017.json": "b1f02a00346c929cd79a7e5297382974766e782d4675301ea2da41f67faac6e8"
+  },
+  "matched_schedule_sha256": "9a5c09bc61f303f470e258c3b54c4adf99a2b70137dc087c376a72329d0b9529"
+}

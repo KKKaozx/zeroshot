@@ -1,0 +1,75 @@
+{
+  "job_id": 231050,
+  "reported_date": "2026-10-28",
+  "evidence_source": "User pasted comparison.json terminal tail; epsilon path means reconstructed from x0 plus reported differences",
+  "scores": {
+    "x0": {
+      "path_position_cm": 5.64326286315918,
+      "path_rotation_deg": 12.849230766296387,
+      "endpoint_position_cm": 7.430886268615723,
+      "endpoint_rotation_deg": 16.268421173095703,
+      "episode_mean_path_position_cm": 5.4992966771125795,
+      "episode_mean_path_rotation_deg": 12.991049671173096
+    },
+    "epsilon": {
+      "path_position_cm": 9.001360893249512,
+      "path_rotation_deg": 17.02611541748047,
+      "endpoint_position_cm": 11.017834663391113,
+      "endpoint_rotation_deg": 22.588407516479492,
+      "episode_mean_path_position_cm": 8.457422876358033,
+      "episode_mean_path_rotation_deg": 16.78368854522705
+    },
+    "static": {
+      "path_position_cm": 8.212326049804688,
+      "path_rotation_deg": 15.098398208618164,
+      "endpoint_position_cm": 10.56533432006836,
+      "endpoint_rotation_deg": 19.98635482788086
+    }
+  },
+  "epsilon_minus_x0": {
+    "path_position_cm": 3.358098030090332,
+    "path_rotation_deg": 4.176884651184082,
+    "endpoint_position_cm": 3.5869483947753906,
+    "endpoint_rotation_deg": 6.319986343383789,
+    "episode_mean_path_position_cm": 2.958126199245453,
+    "episode_mean_path_rotation_deg": 3.7926388740539547
+  },
+  "path_means_reconstructed_fields": [
+    "epsilon.path_position_cm",
+    "epsilon.path_rotation_deg"
+  ],
+  "episode_equal_difference_bootstrap95": {
+    "path_position_cm": [
+      1.7546905112266542,
+      4.147610651552677
+    ],
+    "path_rotation_deg": [
+      -0.236787633895874,
+      8.514385838508598
+    ],
+    "endpoint_position_cm": [
+      1.1293662285804749,
+      4.954547760486603
+    ],
+    "endpoint_rotation_deg": [
+      0.503796079158783,
+      14.385123574733733
+    ]
+  },
+  "episode_equal_mean_difference": {
+    "path_position_cm": 2.958126199245453,
+    "path_rotation_deg": 3.792638874053955,
+    "endpoint_position_cm": 3.0171651363372805,
+    "endpoint_rotation_deg": 6.477227640151978
+  },
+  "same_feature_cache_and_initial_parameters_reported": true,
+  "historical_baseline_replay_exact_reported": true,
+  "new_x0_training": false,
+  "training_updates": 8192,
+  "main_oxe_model_replaced": false,
+  "automatic_following_action": false,
+  "scope": "Conditional target effect under fixed positive DINO+9Dpose recipe; reuseddev40/10episodes, one trainingseed; scene bootstrap not seed robustness",
+  "raw_report_or_predictions_downloaded": false,
+  "train_metrics_pasted": false,
+  "independent_prediction_rescoring_done": false
+}

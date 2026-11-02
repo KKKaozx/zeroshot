@@ -1,0 +1,1 @@
+Read-only source snapshot of workspace tools/prepare_libero_native_supervised_20261031.py. To reproduce preparation, restore that workspace-relative path. Not imported by cluster training; HDF5/safetensors/tokenizer preparation dependencies are local only.

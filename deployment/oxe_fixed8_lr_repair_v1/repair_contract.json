@@ -1,0 +1,64 @@
+{
+  "format": "fixed8-actual-linux-lr-reference-repair-v1",
+  "failed_job": 233339,
+  "original_package_sha256": "79fe529afe994d7b3b0671a13725b82a23f8116e930110a56eea28b9f82e0c2b",
+  "original_bundle_files": {
+    "README.md": "9c4d0f8512961329080c94619ffc16516353907da95be8215092e0ebce96ccd1",
+    "SHA256SUMS": "61eca815c3a4acf526250b9d7208827aa4dd7bee582dc1a119f4460b36fac946",
+    "engine.py": "83bdbed3210b2412ee90e2aa9b4505a25717dca21bc50d84820ac259dbec7efb",
+    "fixed_inputs.py": "7bde2b1db8e06a05f6ef54928c3d56e8a7f3f69e50ab08f8873dc01cc0fd65b2",
+    "job.sh": "a2f46ca31228aacef24364b584a92139242b3a4342752a69936ef997ee021b4b",
+    "numeric_reference.npz": "ced86fb381e4c249401e1e54e4ecae15d78a82a18de78b51c0741bae0aba7e49",
+    "positive_reference.json": "a3b70976185b85c9c112cdbbf217c735021e782ca52fb45051077f9f9306195f",
+    "protocol.json": "b2d104d041fcfd1c8c7c5fd93816fef66502e8b53952858253915b9f5b66fd56",
+    "qualification.py": "22ce1fe5e7f2993efe299d98a589cc912085e1a29a0526103d44bd3952529205",
+    "reference_lrs.npz": "6abb9b3f6f47843ba3eae86aa1cd5aca3983ccbe4e93828f7d3a24b9d7ba7a28",
+    "run_check.py": "3ebdc364d01f5eb303c5bbf4f6cfc0261fbc91fb58ea6d2d31f8ac108ab3a377",
+    "selection.json": "7f8be8e930e0f6dc339bf3952a2f21840329f3b34f43c8720b9d8a4c0189e6e2",
+    "submit_once.sh": "fbf04523efbd591de812aad7fb48c112379ba0259ee529c3ef665f9334607040",
+    "verify_output.py": "c63007eb9f7632d7f7d1255440cf89a385d26dac1a6f2086bb5a2c167bd35ab0"
+  },
+  "original_function_sha256": {
+    "load_source": "3fec9706090af53b0883f3b615f0292b3c01b39e08f8a823f4ebe74959988683",
+    "run": "9a077492bed5c9813a627eedeb20d09f6e3bebf9905cccd6c6a1fbc2c49e92a0",
+    "verify": "6607bbd00adefb041d7d5228de950b2894cc1b62817f474c8a855442ee8f6e95"
+  },
+  "archived_linux_step_report_sha256": "528aeba5a4c2d69169d9915bf50f240b1ed87e1fcb460edc0dccb66ff2628eac",
+  "archived_history_updates": [
+    10241,
+    10752
+  ],
+  "reference_source": "Exact floats from existing completed65536Linux update history; first LR copied to third pose-port group as in passed232587",
+  "different_update_numbers": [
+    10258,
+    10301,
+    10405,
+    10492,
+    10552
+  ],
+  "different_scalar_entries": 15,
+  "max_absolute_difference": 2.710505431213761e-20,
+  "archived_replacement_sha256": "f1fb40a3e536b6d6652a9f3bc09847eb9577585b8c6b6d0f81f259b110464f55",
+  "expected_schedule": {
+    "total_updates": 65536,
+    "base_lrs": [
+      0.0002,
+      0.0002,
+      0.0002
+    ],
+    "kind": "cosine",
+    "warmup_updates": 1024
+  },
+  "only_reference_and_preallocation_check_repaired": true,
+  "identity_tolerances_changed": false,
+  "new_or_additional_training_budget": false,
+  "fixed_updates": 512,
+  "source_weights_changed": false,
+  "automatic_resubmission": false,
+  "actual_cluster_metadata_check_run": false,
+  "repaired_function_sha256": {
+    "load_source": "d03cecc9043a765586732c5ee0eddd71493b6a5350954c7e7a3018b80d9b34bf",
+    "run": "f0ad04974694153cc6bdcc3f98491545aa7a314311092cb543b6a1c51f1e65f3",
+    "verify": "9c20b83f03347d22b7e9acfe842830d8bb320a2c660fbcaabcebfb542a7c573c"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "format": "bridge-matched-a40-backbone-pair-v1",
+  "authorization": "User explicitly selected A40 matched CLIP+DINO route on2026-10-27",
+  "arms": [
+    "clip",
+    "dino"
+  ],
+  "allowed_training_runs": 2,
+  "total_updates_per_arm": 8192,
+  "seed": 42,
+  "same_allocated_gpu_required": true,
+  "training_gpu": "NVIDIA A40",
+  "source_feature_cache_gpu": "NVIDIA RTX A6000 for both",
+  "source_dino_only_contract_sha256": "3098bc92eaa8a195aa280a05139705d49e90a85eea0cb98c7cbd2bedaebd18c3",
+  "source_dino_helper_sha256": "211292a52a720728ef734b3648c1f344b23aaa995ee39f0d54230983d60de838",
+  "source_preflight_job": 228978,
+  "dino_settings": {
+    "visual_backbone": "dinov2",
+    "dino_assets": "/projects/Zeroshot/dinov2_large_frozen_assets_20261023",
+    "visual_input_contract": "canonical_clip_224_letterbox_to_dino_imagenet_v1",
+    "visual_asset_identity": {
+      "repository": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "sha256": {
+        "model.safetensors": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+        "config.json": "12df51c069a2dc1305e34ba71ef58bc2407ea553b75f4722a1715c1bce3bbed0",
+        "preprocessor_config.json": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+      }
+    }
+  },
+  "stopping": "One paired budget only; no automatic retries/seeds/variants or main benchmark release",
+  "bundle_inputs": {
+    "admission.py": "d28482f1defddfb0ea59247a18694dad645de62ccaf8dec16326b7b2d5f682f9",
+    "check_assets.py": "01b29f7e07ced3fcb7efe8c8874509dbbeb146c10a2317cea66daefd35f2748a",
+    "clip207558_development.npz": "07d64957f885243dadf32a5769f22301558872678bd20aec4f77525ac0f4ee38",
+    "clip207558_report.json": "10d13e43d90f2b1d6b1b87a6d64803806a2d383ecf4fdab517646599b786246f",
+    "frozen/bridge_coverage_replication_v1/coverage_inputs.py": "ce1975c13513b20ac5c9780d29e420cf1952b3d8bc668b06b629711fb836688a",
+    "frozen/bridge_coverage_replication_v1/episode_reference.json": "0c3e9f8a0242e958a62f116407a4f8e26ff5b80844f820851b6b1e3a009b4d7a",
+    "frozen/bridge_coverage_replication_v1/protocol.json": "ab71de20c672180223df4497ebe3548f8b1ecbcc9974c86b817b36fa0031989a",
+    "frozen/bridge_coverage_replication_v1/rows.json": "910174741b0464a472e27c542ece929c874b9edabf13a99d76d52a50d1055ada",
+    "frozen/bridge_coverage_replication_v1/run_training_coverage.py": "9f1ae8751bac9fea32c4c72fa3b6d5267efe003a8f4b354b704e7695e241ab3a",
+    "frozen/bridge_coverage_replication_v1/schedule.npz": "ca4c48d0e2a6ed40b1d0a1f32571c8227aa289c478ae9df7ff9ee05e697abd4b",
+    "frozen/bridge_growth128_v1/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "frozen/bridge_growth128_v1/bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "frozen/bridge_growth128_v1/check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "frozen/bridge_growth128_v1/check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+    "frozen/bridge_growth128_v1/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "frozen/bridge_growth128_v1/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "frozen/bridge_growth128_v1/evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "frozen/bridge_growth128_v1/fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70",
+    "frozen/bridge_growth128_v1/growth128_input_contract.py": "bde3fd9da5d0ae8f67c1511418600121ae19729b368c732c0982e282c67b14d1",
+    "frozen/bridge_growth128_v1/manifest.json": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+    "frozen/bridge_growth128_v1/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "frozen/bridge_growth128_v1/replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "frozen/bridge_growth128_v1/trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+    "frozen/bridge_inner_selection_v1/selection_contract.py": "e51aaea52530bda8e98638d5e01bb8f07e37aed604322ae689271652ce5960ab",
+    "frozen/bridge_state_conditioning_v1/current_pose.npz": "d8246fec1901054d92f20b4340ce65cffe2c18c0a2e714a673d5f74879d6ab7f",
+    "frozen/bridge_state_conditioning_v1/fit_state_arm.py": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa",
+    "frozen/bridge_state_conditioning_v1/protocol.json": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82",
+    "frozen/bridge_state_conditioning_v1/state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+    "frozen_visual_backbone.py": "11750ee52a018495256a11c4971bc9ba48f060a02973343170bab77da62fa317",
+    "initial_control_report.json": "0907f80091a55979c4b60c782527698aad5fb8ce15b1415c4d32c9c494d01eeb",
+    "job.sh": "e23c64a11d8a51f6eb082abb52047ba59a87daf0153503311afa52f948023bbb",
+    "README.md": "0f2ca4c43526579c3286516793d33326ba8edf1f17e66d0dd241c8c7a9aab8b8",
+    "run_arm.py": "7ef17e37e2d453f8d52518b64e95568dfa4afd437c08b7ec79aa4f89dec66ca3",
+    "run_pair.py": "7a1efe5e210a1c20d310390c1b67a1e714439d3a80ba8baf33f4642dd31bb425",
+    "source_dino_only_contract.json": "3098bc92eaa8a195aa280a05139705d49e90a85eea0cb98c7cbd2bedaebd18c3",
+    "submit_once.sh": "8ea08370326b93711723b248808b6db0785b3150443da41ef763450a7927ae19",
+    "verify_pair.py": "309c1566da395a5008b1dcf44ceefdc0b6da7f66f42071030f65978774e33862"
+  }
+}

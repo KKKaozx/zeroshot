@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-17",
+  "status": "transfer_and_preflight_bundle_prepared_not_submitted",
+  "package": "bridge_demonstration_expansion_v1",
+  "training_episodes": 806,
+  "training_windows": 3624,
+  "added_training_episodes": 401,
+  "new_test_candidates": 25,
+  "new_test_targets_exported": false,
+  "consumed208056_targets_exported": false,
+  "actual_local_model_executed": false,
+  "actual_local_gpu_executed": false,
+  "cluster_preflight_verified": false,
+  "new_job_submitted": false,
+  "new_training_started": false,
+  "code_archive": {
+    "path": "cluster_packages/bridge_demo806_code_v1.zip",
+    "bytes": 1977493,
+    "sha256": "e042a356731dfbe7934d7a1cd8b483583459378ded89fe5c81f26d5755bcb7a9"
+  },
+  "data_archives": [
+    {
+      "file": "bridge_demo806_data_01.zip",
+      "bytes": 56905121,
+      "sha256": "e1a128111c0d92032a36379eff70b398635e0da8d9eb7099f9d7fdf24fa99d74"
+    },
+    {
+      "file": "bridge_demo806_data_02.zip",
+      "bytes": 51463389,
+      "sha256": "f774a50f9e1ec890e369ace04cadf4773ce5da73014c1b473e7512326bb3723b"
+    },
+    {
+      "file": "bridge_demo806_data_03.zip",
+      "bytes": 55679061,
+      "sha256": "eb0dc3615b0f6d2530448671434f860d9594112e6f2b9cc19706f2d06ac49b32"
+    },
+    {
+      "file": "bridge_demo806_data_04.zip",
+      "bytes": 55638361,
+      "sha256": "7c32bc175ab0096511ff392c19df96c8c8da896744173950736d01b576b4cefd"
+    },
+    {
+      "file": "bridge_demo806_data_05.zip",
+      "bytes": 53579357,
+      "sha256": "cef3ca205306217243018222bb5a368e828c1ebdfd376130a7f1821a8e300164"
+    },
+    {
+      "file": "bridge_demo806_data_06.zip",
+      "bytes": 56231410,
+      "sha256": "f68c932812227c80dd861fcd3e2b66e73d9c727f4fbffc3202e81097bb39ff29"
+    },
+    {
+      "file": "bridge_demo806_data_07.zip",
+      "bytes": 53030653,
+      "sha256": "3d8c176308015ec2d7e0b36bcc349423dc914fc0e1792ce23d89e97f7eeb4434"
+    },
+    {
+      "file": "bridge_demo806_data_08.zip",
+      "bytes": 55811870,
+      "sha256": "c849c507e61e98851ce3474770c841b6d316eb7529d185da82ee64ae30ae88e0"
+    },
+    {
+      "file": "bridge_demo806_data_09.zip",
+      "bytes": 54711793,
+      "sha256": "0bcd14900a90b181911c4e55abb625b1f772dcf5eae8775207e20060f7b920cf"
+    },
+    {
+      "file": "bridge_demo806_data_10.zip",
+      "bytes": 55188578,
+      "sha256": "243737077388384670ddd68abf8e1135b0607fbff8291a8bb89f8ff24761801f"
+    },
+    {
+      "file": "bridge_demo806_data_11.zip",
+      "bytes": 55965292,
+      "sha256": "45d07c6a1cafd5bef1c2f4d0b3dfad3dbd25b15d7e68c6df55e4d3d5978ff28a"
+    },
+    {
+      "file": "bridge_demo806_data_12.zip",
+      "bytes": 54649936,
+      "sha256": "3ccbb5e132373976cfc77a940658e5a486fda25fbdf2480fbf5a46df8d941b63"
+    },
+    {
+      "file": "bridge_demo806_data_13.zip",
+      "bytes": 29646394,
+      "sha256": "b6c3e837a828f58ef5a9eb5b442d2cb3dc72d910fbb5670bfbae823350ed7f24"
+    }
+  ],
+  "compressed_transfer_bytes": 690478708,
+  "checksum_file": "cluster_packages/bridge_demo806_v1.sha256",
+  "protocol_sha256": "cf00fb00a4dcc99612f270df09f6366d8c404a5afff2809bba2125732d98c132",
+  "effective_runner_sha256": "1200d521646d3b9dd3fecc629095d946df31884217868aceadb02749be6104a3",
+  "helper_sha256": "3be5dc1303fcfd8b8aad8f4b82741c728990ca2235775e4c5e015e5164b7fcab",
+  "wrapper_sha256": "fc7b954affe0d904b85a8e946b5783278e9a2ba68860a3c0e132d49cd35d5249",
+  "local_validation_sha256": "301f9842ddfa7241cf3f6188a6a4f03a8f4ed5d05f2eedf482e6b61b05a9e890",
+  "all_data_archives_actual_payload_verified": true,
+  "raw_export_intermediates_removed_after_hash_verification": true,
+  "next_step": "User uploads14 archives plus checksum file, verifies and unpacks the isolated401-record additions, submits only preflight.sh, then provides its job ID and report. Formal training is gated and not submitted yet."
+}

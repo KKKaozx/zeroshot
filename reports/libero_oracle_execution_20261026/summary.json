@@ -1,0 +1,106 @@
+{
+  "scope": "Three new execution-only conditions on one pre-excluded LIBERO90 demo; not model or primary40 benchmark results",
+  "conditions": {
+    "attempt1": {
+      "native_goal_success": false,
+      "steps": 200,
+      "wall_seconds": 20.35999999998603,
+      "path_position_mean_mm": 11.111187500464398,
+      "path_position_max_mm": 27.864004794828872,
+      "deadline_position_mean_mm": 11.499098648875208,
+      "saturated_ticks": 14,
+      "gripper_switch_ticks": [
+        117,
+        189
+      ]
+    },
+    "exactgrip5hz": {
+      "native_goal_success": false,
+      "steps": 200,
+      "wall_seconds": 19.625,
+      "path_position_mean_mm": 11.128105363836506,
+      "path_position_max_mm": 27.865147768328598,
+      "deadline_position_mean_mm": 11.515551018662329,
+      "saturated_ticks": 14,
+      "gripper_switch_ticks": [
+        118,
+        190
+      ],
+      "final_goal_components": [
+        {
+          "predicate": [
+            "close",
+            "wooden_cabinet_1_top_region"
+          ],
+          "value": false
+        },
+        {
+          "predicate": [
+            "on",
+            "akita_black_bowl_1",
+            "wooden_cabinet_1_top_side"
+          ],
+          "value": true
+        }
+      ],
+      "first_satisfied_tick_per_predicate": {
+        "['close', 'wooden_cabinet_1_top_region']": null,
+        "['on', 'akita_black_bowl_1', 'wooden_cabinet_1_top_side']": 191
+      }
+    },
+    "exactgrip20hz": {
+      "native_goal_success": true,
+      "steps": 190,
+      "wall_seconds": 17.68700000003446,
+      "path_position_mean_mm": 21.182100446667633,
+      "path_position_max_mm": 41.08771892571991,
+      "deadline_position_mean_mm": 21.18210052525302,
+      "saturated_ticks": 0,
+      "gripper_switch_ticks": [
+        118,
+        190
+      ],
+      "final_goal_components": [
+        {
+          "predicate": [
+            "close",
+            "wooden_cabinet_1_top_region"
+          ],
+          "value": true
+        },
+        {
+          "predicate": [
+            "on",
+            "akita_black_bowl_1",
+            "wooden_cabinet_1_top_side"
+          ],
+          "value": true
+        }
+      ],
+      "first_satisfied_tick_per_predicate": {
+        "['close', 'wooden_cabinet_1_top_region']": 72,
+        "['on', 'akita_black_bowl_1', 'wooden_cabinet_1_top_side']": 190
+      }
+    }
+  },
+  "comparability_checks": {
+    "same_geometry_executor_encoding_files": true,
+    "unmodified_executor_matches_frozen_formal_bundle": true,
+    "exact_gripper_controls_match_each_other_for_shared_ticks": true,
+    "before_first_gripper_difference_pose_controls_identical": true,
+    "one_initial_restore_no_midtrajectory_corrections": true
+  },
+  "comparability_passed": true,
+  "new_simulator_control_ticks": 590,
+  "new_execution_wall_seconds": 57.67200000002049,
+  "learning_model_instances": 0,
+  "training_updates": 0,
+  "primary40_task_episodes": 0,
+  "native197action_success_reference_reused": true,
+  "finding": "5Hz future reached-pose requests fail; restoring only native gripper times does not fix drawer closure;20Hz oracle pose updates with the same native gripper timing succeed",
+  "not_a_pose_error_improvement_claim": "20Hz success has larger mean/max expert-path position error than5Hz; aggregate error does not describe contact outcome",
+  "not_a_model_fix": "20Hz oracle uses denser privileged future poses; current learned checkpoint predicts5Hz targets and was not changed/tested here",
+  "not_an_overall_root_cause_claim": "Does not prove every LIBERO failure has this cause, source-to-LIBERO calibration, or higher generalization",
+  "diagnostic_branch_stopped_after_declared_controls": true,
+  "next_question_only": "Using exactly the existing5Hz endpoint information, can a different low-level trajectory execution preserve contact success? Freeze a single comparison before running; do not retrain or change main frozen model now"
+}

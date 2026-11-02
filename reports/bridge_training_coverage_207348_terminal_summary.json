@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-16",
+  "job_id": "207348",
+  "evidence_level": "user_terminal_summary_pending_artifact_audit",
+  "train_position_cm": 5.336860656738281,
+  "train_rotation_deg": 12.442168235778809,
+  "development_position_cm": 7.07941198348999,
+  "development_rotation_deg": 14.559741020202637,
+  "old_control": {
+    "path_position_cm": 8.349126682028293,
+    "path_rotation_deg": 15.256048338593287,
+    "endpoint_position_cm": 10.72835144137335,
+    "endpoint_rotation_deg": 20.784512578554033
+  },
+  "static": {
+    "path_position_cm": 8.21232607389037,
+    "path_rotation_deg": 15.098500432102608,
+    "endpoint_position_cm": 10.565334249436834,
+    "endpoint_rotation_deg": 19.986393321428388
+  },
+  "position_improvement_vs_static_percent": 13.795288694177387,
+  "rotation_improvement_vs_static_percent": 3.5682974896927844,
+  "position_improvement_vs_old_percent": 15.207754617873936,
+  "rotation_improvement_vs_old_percent": 4.564139434647685,
+  "mean_metric_screen_passed": true,
+  "episodes_at_least6_better_old_verified": false,
+  "complete_candidate_passed": null,
+  "independent_artifact_audit_complete": false,
+  "grasp_success_evaluated": false
+}

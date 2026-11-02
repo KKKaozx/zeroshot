@@ -1,0 +1,14 @@
+{
+  "scope": "frozen_train_roles_only",
+  "minimum_episode_steps": 10,
+  "stride": 4,
+  "horizon": 16,
+  "arrays": "finite used reached positions/orientations, source-declared commands; reject missing orientation, do not repair",
+  "instructions": "strict UTF8 and nonempty at every existing stride4 input start",
+  "bridge_terminal_command": "excluded as in reverse_scan_valid_steps_v2",
+  "pixel_decoding": "stubbed only during numeric parser probes; image bytes were hashed in identity phase",
+  "probe_scope": "actual Dataset first and tail window per eligible train episode",
+  "large_motion": "reported against existing normalized3 bound, never an exclusion criterion",
+  "validation_test_quarantine_numeric_labels": "not read",
+  "source_units_or_time_guessed": false
+}

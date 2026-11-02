@@ -1,0 +1,38 @@
+{
+  "identity": {
+    "base": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+    "pose_port": "7948a6aa3df4da34f2147fa89554b4df5faac1842f7eb518422a179efaf21458"
+  },
+  "empty_adam": true,
+  "pose_port_zero": true,
+  "admission": {
+    "passed": true,
+    "protocol_sha256": "d75110b351744833c18f536f8bed905f8a6165f65c59d3bc53a8c723389f964d",
+    "plan_sha256": "09cb6db54d9b590eb70d884fc378cc4ffbd315fbd1ca6441060f918c891548b7",
+    "bridge_train_windows": 10352,
+    "bridge_train_episodes": 1151,
+    "evaluation_windows": 192,
+    "model_constructed": false,
+    "optimizer_updates": 0,
+    "cuda_initialized": false,
+    "source_learned_checkpoints_read": false,
+    "project_allocated_bytes": 135020063232,
+    "reserve_bytes": 8589934592,
+    "quota_scope": "du estimate; not authoritative user quota"
+  },
+  "frozen_restore_events": [
+    {
+      "profile_path": "/projects/_ssd/Zeroshot/bridge_full_capability_v1/profile_sample.json",
+      "profile_file_sha256": "824719667055d65e58e549d8747babef3a315600d09fe61819481927fc993bd1",
+      "frozen_sha256_before": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+      "frozen_sha256_after": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+      "restored_buffer_names": [],
+      "differences": {},
+      "encoder_parameters_written": false,
+      "learned_parameters_written": false,
+      "exact_original_training_digest_verified": true,
+      "identity_tolerance_used": false
+    }
+  ],
+  "source_learned_checkpoints_read": false
+}

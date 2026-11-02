@@ -1,0 +1,645 @@
+{
+  "job_id": 232587,
+  "source_summary": {
+    "train": {
+      "Bridge": {
+        "mask_control": [
+          1.951139321645127,
+          16.949910778795676,
+          2.7031819563239896,
+          22.667854745405943
+        ],
+        "real_pose": [
+          1.6726405329108665,
+          16.120382305602796,
+          2.38945094014149,
+          21.152069035082423
+        ],
+        "unchanged231297": [
+          1.314392274562481,
+          10.887854250590621,
+          1.884096015529845,
+          15.875349478993565
+        ],
+        "static": [
+          0.8854155122030833,
+          9.915310143340463,
+          1.3268808784454649,
+          14.783837884331922
+        ]
+      },
+      "Language Table": {
+        "mask_control": [
+          1.3931253423671595,
+          null,
+          1.6189297053791387,
+          null
+        ],
+        "real_pose": [
+          1.1161200226886783,
+          null,
+          1.3328686456945729,
+          null
+        ],
+        "unchanged231297": [
+          1.0215335793741758,
+          null,
+          1.3282250456519114,
+          null
+        ],
+        "static": [
+          0.6229287497194318,
+          null,
+          0.8655653908885874,
+          null
+        ]
+      },
+      "BC-Z": {
+        "mask_control": [
+          1.4153585726062765,
+          13.347860103847516,
+          1.9808206292239419,
+          15.77764725046833
+        ],
+        "real_pose": [
+          1.3241604098864963,
+          13.338113835091029,
+          2.0606529699997176,
+          16.929831241705624
+        ],
+        "unchanged231297": [
+          1.038351788801805,
+          9.276217567575467,
+          1.5764505699477143,
+          14.297103359075141
+        ],
+        "static": [
+          0.5464564176414228,
+          8.251046109774062,
+          1.0883822188208625,
+          14.003761859199567
+        ]
+      },
+      "Fractal": {
+        "mask_control": [
+          2.3606381936680974,
+          20.488497162229812,
+          3.5699960159820208,
+          32.105174809329064
+        ],
+        "real_pose": [
+          2.214211360140416,
+          19.54950560324358,
+          3.559399597307467,
+          31.85007846604151
+        ],
+        "unchanged231297": [
+          1.9396089424204497,
+          18.697979098101115,
+          2.7000492719919125,
+          29.462367075470173
+        ],
+        "static": [
+          1.257950527150177,
+          16.639596305852248,
+          2.1487310962251023,
+          28.359996471821844
+        ]
+      }
+    },
+    "validation": {
+      "Bridge": {
+        "mask_control": [
+          1.993955504701118,
+          15.936593106820087,
+          2.675574765675049,
+          21.154878806891688
+        ],
+        "real_pose": [
+          1.7026795821340763,
+          15.178584054151134,
+          2.3432171994867774,
+          20.017150405663845
+        ],
+        "unchanged231297": [
+          1.5568879102451203,
+          13.698360515024278,
+          1.9936525162469771,
+          18.754033075173815
+        ],
+        "static": [
+          1.0241369636028934,
+          12.063044075899477,
+          1.3696822176356824,
+          16.297180059569865
+        ]
+      },
+      "Language Table": {
+        "mask_control": [
+          1.5591373270486253,
+          null,
+          2.4044200334738455,
+          null
+        ],
+        "real_pose": [
+          1.2490348630530395,
+          null,
+          2.024455544791139,
+          null
+        ],
+        "unchanged231297": [
+          1.2731304624572228,
+          null,
+          1.8029494832709685,
+          null
+        ],
+        "static": [
+          0.6827143278000158,
+          null,
+          1.0162528899426584,
+          null
+        ]
+      },
+      "BC-Z": {
+        "mask_control": [
+          1.4620675761195707,
+          17.29515974168895,
+          2.2766262360154434,
+          25.406341117090612
+        ],
+        "real_pose": [
+          1.227233255079443,
+          15.818688110815463,
+          1.9105201524173703,
+          23.327549787644585
+        ],
+        "unchanged231297": [
+          1.0131137185985815,
+          13.298112827128037,
+          1.5203133921405776,
+          20.707510416071994
+        ],
+        "static": [
+          0.5245805207697813,
+          11.667968476820029,
+          0.9618863421188525,
+          18.83411722945797
+        ]
+      },
+      "Fractal": {
+        "mask_control": [
+          2.0217686723398773,
+          23.269813913977824,
+          2.7618496747552896,
+          39.250653714834975
+        ],
+        "real_pose": [
+          1.648660266511965,
+          22.049882337540957,
+          2.2759397708286313,
+          37.93890122030761
+        ],
+        "unchanged231297": [
+          1.4564341559123406,
+          18.465351835566047,
+          1.9518830071130997,
+          34.035396224342676
+        ],
+        "static": [
+          0.6168962028154785,
+          17.50272600216995,
+          1.0695237966621607,
+          33.015322714101046
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "train": {
+      "Bridge": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.2784987887342605,
+          "path_rotation_deg": -0.8295284731928803,
+          "endpoint_position_normalized": -0.31373101618249954,
+          "endpoint_rotation_deg": -1.5157857103235202
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.3582482583483855,
+          "path_rotation_deg": 5.232528055012175,
+          "endpoint_position_normalized": 0.5053549246116451,
+          "endpoint_rotation_deg": 5.2767195560888585
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.7872250207077831,
+          "path_rotation_deg": 6.205072162262333,
+          "endpoint_position_normalized": 1.0625700616960252,
+          "endpoint_rotation_deg": 6.368231150750502
+        }
+      },
+      "Language Table": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.2770053196784812,
+          "path_rotation_deg": null,
+          "endpoint_position_normalized": -0.28606105968456585,
+          "endpoint_rotation_deg": null
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.0945864433145025,
+          "path_rotation_deg": null,
+          "endpoint_position_normalized": 0.004643600042661511,
+          "endpoint_rotation_deg": null
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.4931912729692465,
+          "path_rotation_deg": null,
+          "endpoint_position_normalized": 0.46730325480598545,
+          "endpoint_rotation_deg": null
+        }
+      },
+      "BC-Z": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.09119816271978021,
+          "path_rotation_deg": -0.009746268756487098,
+          "endpoint_position_normalized": 0.07983234077577572,
+          "endpoint_rotation_deg": 1.152183991237294
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.2858086210846913,
+          "path_rotation_deg": 4.0618962675155625,
+          "endpoint_position_normalized": 0.4842024000520033,
+          "endpoint_rotation_deg": 2.6327278826304834
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.7777039922450735,
+          "path_rotation_deg": 5.087067725316967,
+          "endpoint_position_normalized": 0.9722707511788551,
+          "endpoint_rotation_deg": 2.926069382506057
+        }
+      },
+      "Fractal": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.1464268335276815,
+          "path_rotation_deg": -0.9389915589862312,
+          "endpoint_position_normalized": -0.010596418674553743,
+          "endpoint_rotation_deg": -0.2550963432875548
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.2746024177199662,
+          "path_rotation_deg": 0.8515265051424663,
+          "endpoint_position_normalized": 0.8593503253155546,
+          "endpoint_rotation_deg": 2.3877113905713365
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.9562608329902389,
+          "path_rotation_deg": 2.9099092973913336,
+          "endpoint_position_normalized": 1.4106685010823647,
+          "endpoint_rotation_deg": 3.490081994219665
+        }
+      }
+    },
+    "validation": {
+      "Bridge": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.2912759225670416,
+          "path_rotation_deg": -0.7580090526689531,
+          "endpoint_position_normalized": -0.3323575661882714,
+          "endpoint_rotation_deg": -1.137728401227843
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.14579167188895603,
+          "path_rotation_deg": 1.4802235391268557,
+          "endpoint_position_normalized": 0.3495646832398003,
+          "endpoint_rotation_deg": 1.2631173304900294
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.6785426185311829,
+          "path_rotation_deg": 3.1155399782516575,
+          "endpoint_position_normalized": 0.973534981851095,
+          "endpoint_rotation_deg": 3.71997034609398
+        }
+      },
+      "Language Table": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.31010246399558583,
+          "path_rotation_deg": null,
+          "endpoint_position_normalized": -0.3799644886827065,
+          "endpoint_rotation_deg": null
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": -0.024095599404183377,
+          "path_rotation_deg": null,
+          "endpoint_position_normalized": 0.2215060615201705,
+          "endpoint_rotation_deg": null
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.5663205352530236,
+          "path_rotation_deg": null,
+          "endpoint_position_normalized": 1.0082026548484806,
+          "endpoint_rotation_deg": null
+        }
+      },
+      "BC-Z": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.2348343210401278,
+          "path_rotation_deg": -1.476471630873485,
+          "endpoint_position_normalized": -0.3661060835980732,
+          "endpoint_rotation_deg": -2.0787913294460267
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.21411953648086146,
+          "path_rotation_deg": 2.5205752836874264,
+          "endpoint_position_normalized": 0.3902067602767927,
+          "endpoint_rotation_deg": 2.6200393715725916
+        },
+        "real_minus_static": {
+          "path_position_normalized": 0.7026527343096616,
+          "path_rotation_deg": 4.150719633995434,
+          "endpoint_position_normalized": 0.9486338102985178,
+          "endpoint_rotation_deg": 4.4934325581866155
+        }
+      },
+      "Fractal": {
+        "real_minus_mask_control": {
+          "path_position_normalized": -0.3731084058279124,
+          "path_rotation_deg": -1.219931576436867,
+          "endpoint_position_normalized": -0.48590990392665834,
+          "endpoint_rotation_deg": -1.3117524945273615
+        },
+        "real_minus_unchanged231297": {
+          "path_position_normalized": 0.19222611059962436,
+          "path_rotation_deg": 3.5845305019749105,
+          "endpoint_position_normalized": 0.3240567637155316,
+          "endpoint_rotation_deg": 3.903504995964937
+        },
+        "real_minus_static": {
+          "path_position_normalized": 1.0317640636964864,
+          "path_rotation_deg": 4.547156335371007,
+          "endpoint_position_normalized": 1.2064159741664706,
+          "endpoint_rotation_deg": 4.923578506206567
+        }
+      }
+    }
+  },
+  "metric_counts": {
+    "train": {
+      "real_better_control": 12,
+      "real_worse_control": 2,
+      "real_better_unchanged": 0,
+      "real_worse_unchanged": 14,
+      "real_worse_static": 14
+    },
+    "validation": {
+      "real_better_control": 14,
+      "real_worse_control": 0,
+      "real_better_unchanged": 1,
+      "real_worse_unchanged": 13,
+      "real_worse_static": 14
+    }
+  },
+  "units": "Normalized recorded position units, divisor0.1; LT XY and no orientation",
+  "source_summary_observation_basis": "User pasted existing report aggregates; no new raw prediction arrays downloaded",
+  "old_sample_and_static_means_match_downloaded232091_report_atol1e_12": true,
+  "exposure": [
+    {
+      "source": "Bridge",
+      "window_index": 9759,
+      "prefix_presentations": 3,
+      "additional_presentations": 0,
+      "total_presentations": 3
+    },
+    {
+      "source": "Bridge",
+      "window_index": 5333,
+      "prefix_presentations": 2,
+      "additional_presentations": 0,
+      "total_presentations": 2
+    },
+    {
+      "source": "Bridge",
+      "window_index": 2514,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Bridge",
+      "window_index": 497,
+      "prefix_presentations": 1,
+      "additional_presentations": 1,
+      "total_presentations": 2
+    },
+    {
+      "source": "Bridge",
+      "window_index": 251,
+      "prefix_presentations": 5,
+      "additional_presentations": 0,
+      "total_presentations": 5
+    },
+    {
+      "source": "Bridge",
+      "window_index": 3550,
+      "prefix_presentations": 3,
+      "additional_presentations": 0,
+      "total_presentations": 3
+    },
+    {
+      "source": "Bridge",
+      "window_index": 2188,
+      "prefix_presentations": 2,
+      "additional_presentations": 0,
+      "total_presentations": 2
+    },
+    {
+      "source": "Bridge",
+      "window_index": 4103,
+      "prefix_presentations": 2,
+      "additional_presentations": 2,
+      "total_presentations": 4
+    },
+    {
+      "source": "Language Table",
+      "window_index": 13277,
+      "prefix_presentations": 1,
+      "additional_presentations": 1,
+      "total_presentations": 2
+    },
+    {
+      "source": "Language Table",
+      "window_index": 10935,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Language Table",
+      "window_index": 13164,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Language Table",
+      "window_index": 16660,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Language Table",
+      "window_index": 13098,
+      "prefix_presentations": 2,
+      "additional_presentations": 0,
+      "total_presentations": 2
+    },
+    {
+      "source": "Language Table",
+      "window_index": 16986,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Language Table",
+      "window_index": 17591,
+      "prefix_presentations": 2,
+      "additional_presentations": 2,
+      "total_presentations": 4
+    },
+    {
+      "source": "Language Table",
+      "window_index": 13648,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 79920,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 54575,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 108107,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 86732,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 28371,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 65872,
+      "prefix_presentations": 2,
+      "additional_presentations": 0,
+      "total_presentations": 2
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 61103,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "BC-Z",
+      "window_index": 26231,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Fractal",
+      "window_index": 134205,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Fractal",
+      "window_index": 122820,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Fractal",
+      "window_index": 122450,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Fractal",
+      "window_index": 142181,
+      "prefix_presentations": 2,
+      "additional_presentations": 0,
+      "total_presentations": 2
+    },
+    {
+      "source": "Fractal",
+      "window_index": 122881,
+      "prefix_presentations": 2,
+      "additional_presentations": 0,
+      "total_presentations": 2
+    },
+    {
+      "source": "Fractal",
+      "window_index": 137083,
+      "prefix_presentations": 3,
+      "additional_presentations": 0,
+      "total_presentations": 3
+    },
+    {
+      "source": "Fractal",
+      "window_index": 144137,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    },
+    {
+      "source": "Fractal",
+      "window_index": 130640,
+      "prefix_presentations": 1,
+      "additional_presentations": 0,
+      "total_presentations": 1
+    }
+  ],
+  "selected_training_windows": 32,
+  "selected_windows_not_redrawn_in2048_suffix": 28,
+  "prefix_exposure_range": [
+    1,
+    5
+  ],
+  "exposure_basis": "Immutable actual source8192 and matched2048suffix reference schedules; full current run ledger not downloaded",
+  "conclusions": [
+    "Selected seen-training means are worse than static in all sources; not only an unseen-data failure",
+    "Real pose improves all available validation means versus control; BC-Z training endpoints are two exceptions",
+    "All real train means worse than original8192; only LT validation path position improves versus original",
+    "Sparse exposure means seen-training windows are not a repeated memorization test; no proof of universal underfitting or pure overfitting"
+  ],
+  "next_candidate": "Bounded fixed-few-window source generation memorization check; same model/labels/conditioning, no LIBERO training",
+  "next_candidate_training_submitted": false,
+  "new_model_executions": 0,
+  "automatic_extension_or_libero_submission": false
+}

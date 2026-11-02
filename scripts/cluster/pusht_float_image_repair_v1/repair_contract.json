@@ -1,0 +1,62 @@
+{
+  "origin_job": 210631,
+  "schema_evidence": "User read-only cached ZIP .zarray output",
+  "observed_schema": {
+    "data/img": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "dtype": "<f4",
+      "chunks": [
+        161,
+        96,
+        96,
+        3
+      ]
+    },
+    "data/action": {
+      "shape": [
+        25650,
+        2
+      ],
+      "dtype": "<f4",
+      "chunks": [
+        161,
+        2
+      ]
+    },
+    "data/state": {
+      "shape": [
+        25650,
+        5
+      ],
+      "dtype": "<f4",
+      "chunks": [
+        161,
+        5
+      ]
+    },
+    "meta/episode_ends": {
+      "shape": [
+        206
+      ],
+      "dtype": "<i8",
+      "chunks": [
+        208
+      ]
+    }
+  },
+  "author_dataset_config": {
+    "task.dataset.zarr_path": "data/pusht/pusht_cchi_v7_replay.zarr",
+    "task.dataset.horizon": 16,
+    "task.dataset.pad_before": 1,
+    "task.dataset.pad_after": 7,
+    "task.dataset.seed": 42,
+    "task.dataset.val_ratio": 0.02,
+    "task.dataset.max_train_episodes": 90
+  },
+  "changes": "Only the preparation image dtype assumption; no data/model changes"
+}

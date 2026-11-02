@@ -1,0 +1,321 @@
+{
+  "review_type": "Codex explicit text-equivalence review; not human or scene validation",
+  "pilot_candidates_sha256": "30e65ca4616c58bf19cdf89d50ee7f4b6b1be95df37a28c420f95e13bc760a0d",
+  "counts": {
+    "accept_text": 22,
+    "pending_source": 5,
+    "reject": 8,
+    "reject_format": 5
+  },
+  "complete_five_text_accepted_instructions": 2,
+  "reviewed_training_bank_created": false,
+  "usable_for_training": false,
+  "full_generation_admitted": false,
+  "decision": "Do not expand this pilot to the full catalog yet; preserve all failures and resolve quality and ambiguous-source review first.",
+  "rows": [
+    {
+      "instruction_id": "012b1057affa6af2bc68b838c7ba54a7843d9a8a906edb0228283fc5dc5be47e",
+      "source": "Bridge",
+      "original": "place the metal pot on the back left corner of the table.",
+      "candidates": [
+        {
+          "candidate": "Place the metal pot at the back left corner of the table.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same pot, table, back-left corner and placement goal.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "At the back left corner of the table, place the metal pot.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same pot, table, back-left corner and placement goal.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "The metal pot should be placed at the back left corner of the table.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same pot, table, back-left corner and placement goal.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "On the back left corner of the table, put the metal pot.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same pot, table, back-left corner and placement goal.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Put the metal pot in the back left corner of the table.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same pot, table, back-left corner and placement goal.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true
+    },
+    {
+      "instruction_id": "01e79c8c50abeb888cb23f819bf66d13fcd38e9b4d31411fd66b74996c0a0536",
+      "source": "Bridge",
+      "original": "put up the blue glass",
+      "candidates": [
+        {
+          "candidate": "Place the blue glass in place.",
+          "text_review_decision": "pending_source",
+          "evidence": "Original \"put up\" is ambiguous; no video grounding was inspected. Do not choose raise/place/above on its behalf.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Raise the blue glass.",
+          "text_review_decision": "pending_source",
+          "evidence": "Original \"put up\" is ambiguous; no video grounding was inspected. Do not choose raise/place/above on its behalf.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Position the blue glass upward.",
+          "text_review_decision": "pending_source",
+          "evidence": "Original \"put up\" is ambiguous; no video grounding was inspected. Do not choose raise/place/above on its behalf.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Bring the blue glass to an elevated position.",
+          "text_review_decision": "pending_source",
+          "evidence": "Original \"put up\" is ambiguous; no video grounding was inspected. Do not choose raise/place/above on its behalf.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Ensure the blue glass is positioned above.",
+          "text_review_decision": "pending_source",
+          "evidence": "Original \"put up\" is ambiguous; no video grounding was inspected. Do not choose raise/place/above on its behalf.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false
+    },
+    {
+      "instruction_id": "0038d818d1b5798ba536039f75cc559a25ad14513d34ce914ed8d8b24f4d5372",
+      "source": "Language Table",
+      "original": "place your arm to the bottom right of the red star",
+      "candidates": [
+        {
+          "candidate": "Place your arm at the bottom right of the red star.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same arm position relative to bottom-right of red star.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "At the bottom right of the red star, place your arm.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same arm position relative to bottom-right of red star.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "The bottom right of the red star, place your arm.",
+          "text_review_decision": "reject",
+          "evidence": "Sentence fragment; missing relation between arm and red star.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Place your arm in the bottom right position relative to the red star.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same arm position relative to bottom-right of red star.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "At the bottom right of the red star, position your arm.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same arm position relative to bottom-right of red star.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false
+    },
+    {
+      "instruction_id": "004aac2cd87d4ca0d83c8501ed0ec5b03b36806671b7b9ae9bcf9286f167b235",
+      "source": "Language Table",
+      "original": "move the red star to left of blue triangle",
+      "candidates": [
+        {
+          "candidate": "Move the red star to the left side of the blue triangle.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same moved red star and left-of-blue-triangle destination.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Shift the red star to the left of the blue triangle.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same moved red star and left-of-blue-triangle destination.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Position the red star to the left of the blue triangle.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same moved red star and left-of-blue-triangle destination.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Move the red star to the left of the blue triangle.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same moved red star and left-of-blue-triangle destination.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Place the red star to the left of the blue triangle.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same moved red star and left-of-blue-triangle destination.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true
+    },
+    {
+      "instruction_id": "02c70cc035d2430cbe5158ec177c136b368e2c853006c9acd73f949372d60e16",
+      "source": "BC-Z",
+      "original": "place apple in tray",
+      "candidates": [
+        {
+          "candidate": "Put the apple on the tray.",
+          "text_review_decision": "reject",
+          "evidence": "Changes in-tray containment to on-tray support.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Place the apple inside the tray.",
+          "text_review_decision": "accept_text",
+          "evidence": "Inside the tray preserves containment.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Move the apple to the tray.",
+          "text_review_decision": "reject",
+          "evidence": "To the tray does not preserve in-tray containment.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Position the apple on the tray.",
+          "text_review_decision": "reject",
+          "evidence": "Changes in-tray containment to on-tray support.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Insert the apple into the tray.",
+          "text_review_decision": "accept_text",
+          "evidence": "Into the tray preserves the placement goal.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false
+    },
+    {
+      "instruction_id": "031fdb8f4d91951b3e990beb3441a486757d84aa48b1fec023571add3a479389",
+      "source": "BC-Z",
+      "original": "place brush in tray",
+      "candidates": [
+        {
+          "candidate": "Place the brush on the tray.",
+          "text_review_decision": "reject",
+          "evidence": "Changes in-tray containment to on-tray support.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Put the brush in the tray.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same brush-in-tray placement.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Transfer the brush to the tray.",
+          "text_review_decision": "reject",
+          "evidence": "To the tray weakens in-tray containment.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Position the brush within the tray.",
+          "text_review_decision": "accept_text",
+          "evidence": "Within the tray preserves containment.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Insert the brush into the tray.",
+          "text_review_decision": "accept_text",
+          "evidence": "Into the tray preserves the placement goal.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false
+    },
+    {
+      "instruction_id": "00353f04ee3bd0a3cea97b8d73e4183d5ec0b56e39988ee323f915b130ac33a5",
+      "source": "Fractal",
+      "original": "move sponge near rxbar blueberry",
+      "candidates": [
+        {
+          "candidate": "Sponge should be near the rxbar blueberry.",
+          "text_review_decision": "reject",
+          "evidence": "Static description drops the requested movement action.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Move the sponge close to the rxbar blueberry.",
+          "text_review_decision": "accept_text",
+          "evidence": "Close to is an acceptable near relation with same object identifier.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Near the rxbar blueberry, place the sponge.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same moved sponge and near-rxbar-blueberry placement goal.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "The sponge needs to be adjacent to the rxbar blueberry.",
+          "text_review_decision": "reject",
+          "evidence": "Static description and adjacent is stronger than unspecified near.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Move the sponge to be near the rxbar blueberry.",
+          "text_review_decision": "accept_text",
+          "evidence": "Same movement to near rxbar blueberry.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false
+    },
+    {
+      "instruction_id": "01512104c9189af61035a89c8895ee621c82ff63e39941d931b499ec66659026",
+      "source": "Fractal",
+      "original": "move pepsi can near 7up can",
+      "candidates": [
+        {
+          "candidate": "Bring the Pepsi can close to the 7Up can.",
+          "text_review_decision": "reject_format",
+          "evidence": "Repeated first/fifth output violates five-distinct-candidate requirement; retain failed group without repairing it.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Place the Pepsi can next to the 7Up can.",
+          "text_review_decision": "reject_format",
+          "evidence": "Repeated first/fifth output violates five-distinct-candidate requirement; retain failed group without repairing it.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Move the Pepsi can beside the 7Up can.",
+          "text_review_decision": "reject_format",
+          "evidence": "Repeated first/fifth output violates five-distinct-candidate requirement; retain failed group without repairing it.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Position the Pepsi can near the 7Up can.",
+          "text_review_decision": "reject_format",
+          "evidence": "Repeated first/fifth output violates five-distinct-candidate requirement; retain failed group without repairing it.",
+          "usable_for_training": false
+        },
+        {
+          "candidate": "Bring the Pepsi can close to the 7Up can.",
+          "text_review_decision": "reject_format",
+          "evidence": "Repeated first/fifth output violates five-distinct-candidate requirement; retain failed group without repairing it.",
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false
+    }
+  ]
+}

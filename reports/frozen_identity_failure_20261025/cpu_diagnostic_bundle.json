@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "local_comparator_checks": [
+    "same tensor state",
+    "order-only mismatch",
+    "encoder tensor mismatch",
+    "schedule buffer mismatch"
+  ],
+  "real_cluster_cause_not_assumed": true,
+  "zip": "cluster_packages\\oxe_frozen_identity_diag_v1.zip",
+  "zip_bytes": 5443,
+  "zip_sha256": "3c1bf65cc96573439faa8f707777943f1a8ffb88dc905452662d82bee8a20905",
+  "gpu_requested": false,
+  "model_forward_calls": 0,
+  "optimizer_updates": 0,
+  "existing_training_package_modified": false,
+  "previous_zip_sha256": "697af251f2c5e3b20c3a15357ec69571249a00a66e79d0838704021c58a01e84",
+  "submission_fix": {
+    "old_script_sha256": "76ec510a0628ad226e437c62b866219123d7ce89ffb102e9b50046e5d4d76c9e",
+    "new_script_sha256": "2470bec947cb2348a8aebee921004a4f6883afa4312dafeaf8755beaf15cb1aa",
+    "change": "Remove untyped zero-GPU GRES directive; CPU-only job with no GPU resource request",
+    "previous_submission_rejected": true,
+    "job_id_created": false,
+    "agent_submitted_jobs": 0
+  }
+}

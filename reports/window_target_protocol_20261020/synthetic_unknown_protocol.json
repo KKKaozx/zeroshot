@@ -1,0 +1,43 @@
+{
+  "format": "window-target-protocol-v1",
+  "scope": "synthetic_fixture",
+  "dataset_identity": "12798b12f29f0f631902627abdabeb85e50a286ebcb963120e5056a5bbdf5d8b",
+  "output": {
+    "family": "observed_future_reached_pose",
+    "horizon": 3,
+    "action_dim": 8,
+    "representation": "source_cartesian_delta_pose_open_positive_v1",
+    "reference": "fixed_input_observation",
+    "position_scale_meters": 0.1,
+    "shared_target_times_seconds": null
+  },
+  "sources": {
+    "synthetic_bcz": {
+      "family": "observed_future_reached_pose",
+      "target_indices": [
+        1,
+        2,
+        3
+      ],
+      "gripper_rule": "preceding_observation_first_command",
+      "supervision_mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "position_to_meters": null,
+      "unit_evidence": [],
+      "timing": {
+        "kind": "unknown",
+        "offsets_seconds": null,
+        "evidence": []
+      },
+      "pairing_evidence": []
+    }
+  }
+}

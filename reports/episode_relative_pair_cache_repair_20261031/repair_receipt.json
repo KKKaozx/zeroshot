@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-31",
+  "v1_failure": "Missing runs/bridge-dino-only-cache-v1/full_tokens.pt during CPU admit before sbatch",
+  "source": "User pasted archive/checksum pass and FileNotFoundError traceback",
+  "v1_training_submitted_by_this_script": false,
+  "sbatch_not_reached_inferred_from_script_order": true,
+  "slurm_state_independently_queried": false,
+  "old_v1_preserved": true,
+  "repair": "v2 ships original1876 eval contexts; trains decoder/state only; Adapter/history frozen in both arms",
+  "contexts_sha256": "0ca96e4894167b393065d3b44269a14f98b40d1fb089858b6b934a31c2e9a27b",
+  "contexts_overlap_with_original_reference_exact": true,
+  "new_distinct_cpu_cases_passed": 6,
+  "synthetic_cpu_updates": 4,
+  "actual_model_sampling": false,
+  "actual_training_updates": 0,
+  "new_image_encoding": 0,
+  "automatic_submit": false
+}

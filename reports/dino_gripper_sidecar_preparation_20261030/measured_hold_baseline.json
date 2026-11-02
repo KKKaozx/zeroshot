@@ -1,0 +1,27 @@
+{
+  "accuracy": 0.6765625,
+  "class_recall": {
+    "open": 0.9785202863961814,
+    "closed": 0.10407239819004525
+  },
+  "balanced_accuracy": 0.5412963422931133,
+  "whole_window_exact_rate": 0.375,
+  "transitions": {
+    "opening": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 24,
+      "true_events": 24,
+      "f1": 0.0
+    },
+    "closing": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 60,
+      "true_events": 60,
+      "f1": 0.0
+    }
+  },
+  "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success",
+  "metric_status": "new head input baseline only; no policy inference or training"
+}

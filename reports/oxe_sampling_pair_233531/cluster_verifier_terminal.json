@@ -1,0 +1,178 @@
+{
+  "verified": true,
+  "updates_each": 4096,
+  "actual_noise_t_model_rng_matched": true,
+  "primary_bridge64": {
+    "source232587": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.7026795821340763,
+      "path_rotation_deg": 15.178584054151134,
+      "endpoint_position_normalized": 2.3432171994867774,
+      "endpoint_rotation_deg": 20.01715040566384
+    },
+    "static": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0241369636028934,
+      "path_rotation_deg": 12.063044075899477,
+      "endpoint_position_normalized": 1.3696822176356824,
+      "endpoint_rotation_deg": 16.297180059569865
+    },
+    "replacement": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0964773418140894,
+      "path_rotation_deg": 12.522369791730771,
+      "endpoint_position_normalized": 1.4877090381004268,
+      "endpoint_rotation_deg": 16.844135845240494
+    },
+    "cycle": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0794249074007691,
+      "path_rotation_deg": 12.67554706205471,
+      "endpoint_position_normalized": 1.4343498657513922,
+      "endpoint_rotation_deg": 17.122206757108284
+    }
+  },
+  "paired_comparisons": {
+    "cycle_minus_replacement": {
+      "path_position_normalized": {
+        "mean_difference": -0.0170524344133202,
+        "paired_group_bootstrap95": [
+          -0.0651992040300949,
+          0.030642495856344605
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": 0.1531772703239393,
+        "paired_group_bootstrap95": [
+          -0.27219432377891833,
+          0.6073654497738779
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": -0.05335917234903462,
+        "paired_group_bootstrap95": [
+          -0.1284873196461146,
+          0.02012206019029248
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": 0.2780709118677872,
+        "paired_group_bootstrap95": [
+          -0.525520149118553,
+          1.112143300839279
+        ]
+      }
+    },
+    "cycle_minus_source232587": {
+      "path_position_normalized": {
+        "mean_difference": -0.6232546747333072,
+        "paired_group_bootstrap95": [
+          -0.7036734147630386,
+          -0.541958258450771
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": -2.5030369920964244,
+        "paired_group_bootstrap95": [
+          -3.265779472129687,
+          -1.7550674201260748
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": -0.9088673337353853,
+        "paired_group_bootstrap95": [
+          -1.0359501714291748,
+          -0.7811575986023168
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": -2.8949436485555586,
+        "paired_group_bootstrap95": [
+          -3.9988767320339615,
+          -1.8090700761604965
+        ]
+      }
+    },
+    "cycle_minus_static": {
+      "path_position_normalized": {
+        "mean_difference": 0.05528794379787581,
+        "paired_group_bootstrap95": [
+          0.01157457633576487,
+          0.0981486384402569
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": 0.612502986155233,
+        "paired_group_bootstrap95": [
+          0.2573274240092451,
+          0.9868845971521221
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": 0.06466764811570966,
+        "paired_group_bootstrap95": [
+          -0.017514274680990854,
+          0.14598402656829895
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": 0.8250266975384195,
+        "paired_group_bootstrap95": [
+          0.18564642356020336,
+          1.5166904678490063
+        ]
+      }
+    }
+  },
+  "sampling_effect_gates": {
+    "bridge_path_position_better_control": true,
+    "bridge_other_three_metrics_no_worse_control": false,
+    "bridge_path_position_difference_ci_upper_negative": false
+  },
+  "basic_competence_gates": {
+    "bridge_all_four_better_static": false,
+    "bridge_all_four_no_worse_source": true
+  },
+  "validation_source_regression_flags": {
+    "Bridge": [
+      "path_rotation_deg",
+      "endpoint_rotation_deg"
+    ],
+    "Language Table": [
+      "path_position_normalized",
+      "endpoint_position_normalized"
+    ],
+    "BC-Z": [
+      "path_rotation_deg",
+      "endpoint_rotation_deg"
+    ],
+    "Fractal": [
+      "path_position_normalized",
+      "path_rotation_deg",
+      "endpoint_rotation_deg"
+    ]
+  },
+  "candidate_for_review_only": false,
+  "scope": "One source training seed/checkpoint; repeateddev64groups/3sampling draws; source10240is unequal-budget regression reference, not causal arm",
+  "automatic_following_action": false
+}

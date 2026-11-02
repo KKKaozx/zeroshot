@@ -1,0 +1,45 @@
+{
+  "job": 210291,
+  "evidence": "User-pasted terminal output only; full report not locally received or verified",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:01:56",
+  "node": "gpu-a6000-1",
+  "terminal_pass_marker": true,
+  "losses": {
+    "control": [
+      0.035673804581165314,
+      0.032026879489421844,
+      0.02296614833176136,
+      0.012383690103888512,
+      0.04400571063160896,
+      0.018919656053185463,
+      0.03185193985700607,
+      0.019878413528203964
+    ],
+    "candidate": [
+      0.035673804581165314,
+      0.03202654421329498,
+      0.02296624705195427,
+      0.012383881025016308,
+      0.044006843119859695,
+      0.01891966164112091,
+      0.03185209259390831,
+      0.019879262894392014
+    ]
+  },
+  "first_loss_identical": true,
+  "full_report_verified": false,
+  "local_GPU_executed": false,
+  "generalization_verdict_available": false,
+  "formal_submitted": false,
+  "remote_report": "/projects/Zeroshot/runs/bridge-spatial-preflight-210291/report.json",
+  "attachment_sha256": "35941dbc5bd1fc70b130ff8fbc310192e3c11c86467dbce12a8cd4665f6ae31c",
+  "full_report_verified_on_cluster_by_user": true,
+  "full_report_received_locally": false,
+  "user_reported_resources": {
+    "peak_reserved_gib": 3.77734375,
+    "warm_update_seconds": 0.16032358317170292,
+    "estimated_paired_formal_seconds": 1956.0530471117818
+  }
+}

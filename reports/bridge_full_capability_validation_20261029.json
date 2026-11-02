@@ -1,0 +1,28 @@
+{
+  "package_verified": true,
+  "archive_sha256": "d7382354af27203be40659b2467eca98b4b2f8815233643a35309655dd66fa38",
+  "archive_bytes": 1613715,
+  "archive_members": 43,
+  "python_files_ast_checked": 31,
+  "shell_lf_shebang_static_checked": true,
+  "bash_execution_performed": false,
+  "new_cpu_tests_passed": 5,
+  "cpu_tests": "tests/test_bridge_full_capability.py; final observed run5passed in16.348seconds",
+  "test_scope": [
+    "real target stores,Bridge membership,normalization,evaluation identity and CPU admission; wrong role/missing source rejected",
+    "native x0 loss with toy CPU networks; zero-update exact gradient/RNG guard; all3Adam groups and RNG exactly resume",
+    "real192targets with native100DDPM; evaluation preserves training RNG; perfect/static gate checks",
+    "source contamination and stop-cap rejected without added update",
+    "small-result verifier recomputes metrics and rejects altered targets"
+  ],
+  "production_imports_checked": [
+    "vendored train.py",
+    "vendored models.py"
+  ],
+  "real_dino_or_cuda_model_calls": 0,
+  "cluster_calls": 0,
+  "training_submitted": false,
+  "full_real_endpoint_verifier_executed": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false
+}

@@ -1,0 +1,77 @@
+{
+  "execution_complete": true,
+  "errors": [],
+  "scope": "Native20Hz desired-goal conversion only; cannot establish5Hz information sufficiency, learned performance, or OXE cross-robot calibration",
+  "models_loaded": 0,
+  "training_updates": 0,
+  "primary40_episodes": 0,
+  "new_native_command_baseline_rollouts": 0,
+  "goal_conversion_qualified": false,
+  "initial_cache_position_difference_m": 0.017013187114135866,
+  "initial_cache_orientation_difference_rad": 0.0528132995478913,
+  "controller_body_to_grip_site_rotation": [
+    [
+      -6.5052130349130266e-18,
+      1.0000000000000007,
+      -4.163336342344337e-17
+    ],
+    [
+      -1.0000000000000002,
+      2.721347452938616e-17,
+      -1.734723475976807e-18
+    ],
+    [
+      1.734723475976807e-18,
+      1.3877787807814457e-17,
+      1.0000000000000004
+    ]
+  ],
+  "controller_body_to_grip_site_angle_deg": 90.0,
+  "gates": {
+    "native_final_goal_success": true,
+    "executed_controller_position_goals_match": false,
+    "executed_controller_orientation_goals_match": false,
+    "numeric_pose_roundtrip": true,
+    "numeric_orientation_roundtrip": true,
+    "actual_gripper_sequence_exact": true,
+    "no_saturated_native_ticks": true
+  },
+  "extracted_labels": 197,
+  "offline_extraction_state_restores": 197,
+  "offline_extraction_physics_steps": 0,
+  "rollout_initial_restores": 1,
+  "rollout_mid_state_corrections": 0,
+  "rollout_steps": 186,
+  "success_any": true,
+  "success_final": true,
+  "final_goal_components": [
+    {
+      "predicate": [
+        "close",
+        "wooden_cabinet_1_top_region"
+      ],
+      "value": true
+    },
+    {
+      "predicate": [
+        "on",
+        "akita_black_bowl_1",
+        "wooden_cabinet_1_top_side"
+      ],
+      "value": true
+    }
+  ],
+  "max_executed_controller_goal_position_error_m": 0.0005369638409814601,
+  "max_executed_controller_goal_orientation_error_rad": 0.00042402882886971057,
+  "max_offline_pose_roundtrip_error_m": 1.7621007792789282e-09,
+  "max_offline_orientation_roundtrip_error_rad": 2.3401765035874784e-09,
+  "max_observation_vs_current_control_position_m": 0.0005397968044531263,
+  "max_observation_vs_current_control_orientation_rad": 0.0003821362410461502,
+  "path_position_mean_mm": 0.10262595610525095,
+  "path_position_max_mm": 0.22512763074512726,
+  "saturated_native_ticks": 0,
+  "data_action_sha256": "a99815b4a83300cff24185a8c2137bb67d2f09394fc43d884418948827ce486e",
+  "native_baseline_reused": true,
+  "training_or_generalization_verdict": null,
+  "elapsed_seconds": 20.79700000002049
+}

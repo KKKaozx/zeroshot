@@ -1,0 +1,87 @@
+{
+  "format": "current-pose-bounded-formal-protocol-v1",
+  "source_job": 231297,
+  "source_update": 8192,
+  "source_contract_sha256": "9cd86ab798175775aa908f31b3ab9a9ff3867c3bc7f03cc45b7605c9340844ae",
+  "source_learned_sha256": "9be1b13dfa746d19c96f13c746c9fe50355505b2532a28dfbf25dde4a6c121fd",
+  "frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "qualified_preflight_job": 232371,
+  "qualified_preflight_files": {
+    "common.py": "f7be7cf6b8b9a6b4169d62875099f19bb0e37732133411d3b93ed47c84eb00db",
+    "job.sh": "20a6465e746de540a71a42d52837a5b2143625740e55ce552957212853a72d4e",
+    "pose_features.py": "596a980947c9f8cbbc7b4380fd4585d19960abc36075813684907b2c43e52df5",
+    "pose_runtime.py": "db0729801f18e6e1bb21e562a99ada7313bdc88083f28c40d70094bca51ae4ca",
+    "protocol.json": "0f695639fe421a60344794de32129fa6f881b1e3c23bfe7b26423b7b5f826795",
+    "README.md": "dff5044399757243255f0d4e601f926c694388b76b0eb2606b411e31c04333e1",
+    "reference_suffix.npz": "f01933ae8f152b51ca613423d06310ba111642810192073662bacb5cb66ba70b",
+    "run_preflight.py": "a2c3f3a81b89ccbacb395a12ef5331f18a92c502acd167a3f98597678b100dae",
+    "selected_state_reference.npz": "bef018321e5809136b61ee2278930a3efe46b6a8eb52189ff8011a63f82e3c3a",
+    "state_stats.json": "a6be34e1274431a6a3b6a82dc255d75061b1571a98ec72dd856b0d9ffd670438",
+    "submit_once.sh": "0711f7031e75e75fff23df9b17d85d2fd5323cea18cc18854397b421cf8b4505",
+    "verify_preflight.py": "f2c91322c4797b83d3dc229863b59a990e772e9649bf2cbd65d8e08f9e4b6e5c",
+    "SHA256SUMS": "a72101c164caa506ea23b0d575d824fdeafd56f4ea69783932cbde1ce7efeccf"
+  },
+  "passed_run_arm_sha256": "646fff343bf4850288661127806dbb62b323d5b11c10b150d466be179bce3e99",
+  "passed_replay_source_sha256": "07efa7303f6e5bd63b1cafb4bac22ba24c48698a738d199f81d205aa8ed39f0e",
+  "groups": [
+    "mask_control",
+    "real_pose"
+  ],
+  "additional_updates_each": 2048,
+  "endpoint_update": 10240,
+  "lr_horizon": 65536,
+  "native_training_target": "sample",
+  "source_adam_rng_batch_schedule_retained": true,
+  "engineering_weights_reused": false,
+  "new_port": {
+    "dimensions": [
+      18,
+      1024
+    ],
+    "parameters": 18432,
+    "bias": false,
+    "initialization": "all_zero",
+    "optimizer_group": "cold_third"
+  },
+  "selection_sha256": "eb9d9ff1362218d393dc579a50dbd73ff15ad503e3892b7b02dc818c97b4e151",
+  "reference_suffix_sha256": "f01933ae8f152b51ca613423d06310ba111642810192073662bacb5cb66ba70b",
+  "generation_steps": 100,
+  "generation_batch_size": 8,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "matched_contrast": "real10240 minus mask10240; unchanged8192 is only regression reference",
+  "gates": [
+    "position_path_endpoint_better_than_control",
+    "rotation_path_endpoint_no_worse_control",
+    "path_position_paired_group_CI_upper_below_zero",
+    "all_four_no_worse_unchanged",
+    "all_four_better_static"
+  ],
+  "retain_full_formal_state": true,
+  "save_every_new_updates": 1024,
+  "checkpoint_reserve_gib": 6,
+  "gpu": "NVIDIA A40",
+  "wall_limit_minutes": 60,
+  "resource_estimate": {
+    "engineering_verified": true,
+    "source_update": 8192,
+    "physical_disposable_optimizer_calls": 6,
+    "same_initial_core_loss_gradients_noise": true,
+    "full_branch_and_core_adam_rng_restore_exact": true,
+    "peak_reserved_gib": {
+      "mask_control": 4.6953125,
+      "real_pose": 4.734375
+    },
+    "estimated_pair_update_minutes_excluding_replay_eval_io": 21.71445647875468,
+    "formal_training_submitted": false,
+    "generalization_verdict": null,
+    "automatic_following_action": false
+  },
+  "training_submitted": false,
+  "automatic_following_action": false,
+  "main_model_replaced": false,
+  "scope": "One training seed; reused source validation windows; no task-success or generalization verdict"
+}

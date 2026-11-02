@@ -1,0 +1,14 @@
+{
+  "format": "source-target-pose-mapping-v1",
+  "source": "Bridge",
+  "status": "explicit_uncalibrated_engineering_convention_only",
+  "target_meters_per_source_unit": 1.0,
+  "source_axes_to_target": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+  "source_origin_in_target_m": [0, 0, 0],
+  "right_tool_alignment": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+  "source_eef_to_point_source_units": [0, 0, 0],
+  "target_eef_to_point_m": [0, 0, 0],
+  "evidence": "User-approved limited engineering trial, following configs/libero_nominal_execution_candidate_20261025.json: assume raw source XYZ meters, coincident world axes/origins and EEF frames/points. These are deliberately uncalibrated assumptions, not measured registrations. Includes absolute-state input as well as relative-action output; may give out-of-distribution source pose features.",
+  "physical_calibration_verified": false,
+  "formal_scoring_admitted": false
+}

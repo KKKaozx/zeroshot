@@ -1,0 +1,5 @@
+    def _encode_oxe_reached_pose(self, *args):
+        if getattr(self, "action_frame", "tool") == "source_cartesian":
+            from cartesian_action_contract import encode_source_pose
+            return encode_source_pose(*args, position_scale_meters=POSITION_SCALE_METERS)
+        return relative_pose_action(*args)

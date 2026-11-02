@@ -1,0 +1,26 @@
+{
+  "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\bridge_low_noise_pair_v1.zip",
+  "bytes": 10387,
+  "sha256": "c594db0725647077ca310d46df012b9a78872b05de8ba69e63a326e0c4910a86",
+  "members": 8,
+  "actual_model_calls": 0,
+  "actual_optimizer_updates": 0,
+  "actual_cluster_calls": 0,
+  "submitted": false,
+  "package_verified": true,
+  "cpu_tests_passed": 3,
+  "cpu_test_observation": "3passed in16.800seconds; real numeric targets/native functions with CPU toy networks",
+  "test_scope": [
+    "native diffusion_loss fixedt0/noise input and raw output exact equivalence; no parameter/gradient/Adam change",
+    "initial Gaussian reconstruction exact against native100step CPU reference, wrong source noise rejection",
+    "real-source array formula/metrics verification with synthetic perfect response; altered report rejected"
+  ],
+  "shell_lf_shebang_checked": true,
+  "bash_executed": false,
+  "real_dino_cuda_tested": false,
+  "actual_source_policy_cpu_admission_executed": false,
+  "optimizer_updates": 0,
+  "new_full_sampling_runs": 0,
+  "actual_gpu_calls": 0,
+  "automatic_following_action": false
+}

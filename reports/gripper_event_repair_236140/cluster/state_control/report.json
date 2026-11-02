@@ -1,0 +1,230 @@
+{
+  "roles": {
+    "train": {
+      "candidate": {
+        "accuracy": 0.9408133623819899,
+        "class_recall": {
+          "open": 0.9624912548495834,
+          "closed": 0.8867887145347916
+        },
+        "balanced_accuracy": 0.9246399846921876,
+        "whole_window_exact_rate": 0.6089324618736384,
+        "transitions": {
+          "opening": {
+            "true_positive": 189,
+            "false_positive": 798,
+            "false_negative": 783,
+            "true_events": 972,
+            "f1": 0.19295558958652373
+          },
+          "closing": {
+            "true_positive": 608,
+            "false_positive": 1476,
+            "false_negative": 1459,
+            "true_events": 2067,
+            "f1": 0.29294145988918335
+          }
+        },
+        "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+      },
+      "baselines": {
+        "always_open": {
+          "accuracy": 0.7136437908496732,
+          "class_recall": {
+            "open": 1.0,
+            "closed": 0.0
+          },
+          "balanced_accuracy": 0.5,
+          "whole_window_exact_rate": 0.4918300653594771,
+          "transitions": {
+            "opening": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 972,
+              "true_events": 972,
+              "f1": 0.0
+            },
+            "closing": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 2067,
+              "true_events": 2067,
+              "f1": 0.0
+            }
+          },
+          "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+        },
+        "always_closed": {
+          "accuracy": 0.2863562091503268,
+          "class_recall": {
+            "open": 0.0,
+            "closed": 1.0
+          },
+          "balanced_accuracy": 0.5,
+          "whole_window_exact_rate": 0.023965141612200435,
+          "transitions": {
+            "opening": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 972,
+              "true_events": 972,
+              "f1": 0.0
+            },
+            "closing": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 2067,
+              "true_events": 2067,
+              "f1": 0.0
+            }
+          },
+          "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+        },
+        "threshold_current_measurement_held": {
+          "accuracy": 0.738630174291939,
+          "class_recall": {
+            "open": 0.9709502003434459,
+            "closed": 0.1596528768426058
+          },
+          "balanced_accuracy": 0.5653015385930259,
+          "whole_window_exact_rate": 0.5049019607843137,
+          "transitions": {
+            "opening": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 972,
+              "true_events": 972,
+              "f1": 0.0
+            },
+            "closing": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 2067,
+              "true_events": 2067,
+              "f1": 0.0
+            }
+          },
+          "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+        }
+      }
+    },
+    "development": {
+      "candidate": {
+        "accuracy": 0.8932291666666666,
+        "class_recall": {
+          "open": 0.9260143198090692,
+          "closed": 0.8310708898944194
+        },
+        "balanced_accuracy": 0.8785426048517443,
+        "whole_window_exact_rate": 0.44166666666666665,
+        "transitions": {
+          "opening": {
+            "true_positive": 1,
+            "false_positive": 13,
+            "false_negative": 23,
+            "true_events": 24,
+            "f1": 0.05263157894736842
+          },
+          "closing": {
+            "true_positive": 11,
+            "false_positive": 52,
+            "false_negative": 49,
+            "true_events": 60,
+            "f1": 0.17886178861788618
+          }
+        },
+        "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+      },
+      "baselines": {
+        "always_open": {
+          "accuracy": 0.6546875,
+          "class_recall": {
+            "open": 1.0,
+            "closed": 0.0
+          },
+          "balanced_accuracy": 0.5,
+          "whole_window_exact_rate": 0.375,
+          "transitions": {
+            "opening": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 24,
+              "true_events": 24,
+              "f1": 0.0
+            },
+            "closing": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 60,
+              "true_events": 60,
+              "f1": 0.0
+            }
+          },
+          "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+        },
+        "always_closed": {
+          "accuracy": 0.3453125,
+          "class_recall": {
+            "open": 0.0,
+            "closed": 1.0
+          },
+          "balanced_accuracy": 0.5,
+          "whole_window_exact_rate": 0.025,
+          "transitions": {
+            "opening": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 24,
+              "true_events": 24,
+              "f1": 0.0
+            },
+            "closing": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 60,
+              "true_events": 60,
+              "f1": 0.0
+            }
+          },
+          "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+        },
+        "threshold_current_measurement_held": {
+          "accuracy": 0.6765625,
+          "class_recall": {
+            "open": 0.9785202863961814,
+            "closed": 0.10407239819004525
+          },
+          "balanced_accuracy": 0.5412963422931133,
+          "whole_window_exact_rate": 0.375,
+          "transitions": {
+            "opening": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 24,
+              "true_events": 24,
+              "f1": 0.0
+            },
+            "closing": {
+              "true_positive": 0,
+              "false_positive": 0,
+              "false_negative": 60,
+              "true_events": 60,
+              "f1": 0.0
+            }
+          },
+          "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"
+        }
+      }
+    }
+  },
+  "offline_gripper_admitted": false,
+  "closed_loop_success_proven": false,
+  "formal_matrix_admitted": false,
+  "measurement_threshold_baseline_is_not_a_past_command": true,
+  "execution_complete": true,
+  "mode": "state_control",
+  "additional_updates": 2048,
+  "total_head_updates": 4096,
+  "source_pose_updates": 0,
+  "source_head_sha256": "61bfbe190185892901fdc6c808a0531e2d0499b285ee01243753920a24c9117d"
+}

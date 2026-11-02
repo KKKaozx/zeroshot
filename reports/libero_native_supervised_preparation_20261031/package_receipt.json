@@ -1,0 +1,38 @@
+{
+  "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\libero_native_supervised_v1_20261031.zip",
+  "bytes": 38292813,
+  "sha256": "f58ea3a888f18762bb304cfa30f8489a7f66b17e7ee01b019c495df5cb0037a8",
+  "members": 22,
+  "all_members_verified": true,
+  "source_syntax_checked_without_execution": true,
+  "shell_static_lf_checked_not_bash_executed": true,
+  "target_supervised": true,
+  "zero_shot": false,
+  "formal_matrix_admitted": false,
+  "task": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet",
+  "demo_split": {
+    "train": "0..19",
+    "development": "20..24",
+    "rollout": "25..29"
+  },
+  "train_frames": 1509,
+  "development_frames": 379,
+  "distinct_cpu_cases_passed": 6,
+  "synthetic_optimizer_steps_per_test_invocation": 2,
+  "real_dino_text_and_full_native_core_forward_cpu_validated": true,
+  "complete_local_cpu_admission_with_real_assets_passed": true,
+  "remote_asset_paths_or_dependencies_not_rechecked_via_ssh": true,
+  "real_training_updates": 0,
+  "simulation_started": false,
+  "new_frozen_image_forwards_in_cpu_validation": 1,
+  "gpu_used": false,
+  "training_submitted": false,
+  "planned_updates": 4096,
+  "batch_size": 16,
+  "estimated_minutes": [
+    20,
+    40
+  ],
+  "slurm_hard_seconds": 3600,
+  "disk_reserve_gib": 8
+}

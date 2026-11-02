@@ -1,0 +1,69 @@
+{
+  "training_updates": 0,
+  "rollout_score_computed": false,
+  "generalization_verdict": null,
+  "model_untrained": true,
+  "formal_training_ready": false,
+  "errors": [],
+  "identity_checks": {
+    "text": {
+      "max_absolute_difference": 0.0,
+      "atol": 0.0001,
+      "rtol": 1e-05,
+      "passed": true
+    },
+    "original_batch8": {
+      "max_absolute_difference": 0.0,
+      "atol": 0.0001,
+      "rtol": 1e-05,
+      "passed": true
+    },
+    "normalized_roundtrip_batch4_padded8": {
+      "max_absolute_difference": 0.0,
+      "atol": 0.0001,
+      "rtol": 1e-05,
+      "passed": true
+    },
+    "adapter_context": {
+      "max_absolute_difference": 0.0,
+      "atol": 0.0001,
+      "rtol": 1e-05,
+      "passed": true
+    },
+    "ddpm100_action_pixels": {
+      "max_absolute_difference": 0.0,
+      "atol": 0.05,
+      "rtol": 0.0,
+      "passed": true
+    }
+  },
+  "rendered_pixel_roundtrip_exact": true,
+  "action_shape": [
+    2,
+    16,
+    2
+  ],
+  "simulation_wiring": {
+    "seed": 20261018,
+    "decisions": 2,
+    "executed_environment_steps": 16,
+    "task_score_recorded": false,
+    "scope": "Untrained policy, at most two planning calls/16 steps; no task success verdict"
+  },
+  "worker": {
+    "request_id": 6,
+    "status": "closed",
+    "requests": 5,
+    "weights_unchanged": true,
+    "all_frozen": true
+  },
+  "request_seconds": [
+    0.7002432909794152,
+    0.13651128998026252,
+    0.1382713350467384,
+    0.13497412903234363,
+    0.1289816191419959
+  ],
+  "bridge_execution_passed": true,
+  "elapsed_seconds": 84.74911039299332
+}

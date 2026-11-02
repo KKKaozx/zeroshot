@@ -1,0 +1,73 @@
+{
+  "format": "oxe-nominal-validation-target-artifacts-v1",
+  "scope": "frozen_validation_roles_only",
+  "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+  "artifacts": {
+    "actions.npy": {
+      "bytes": 9190016,
+      "sha256": "9a71ce6ada2c393bbf77548df81a6d0b54b2ed41855b7948adbe019b568beb1f"
+    },
+    "current_features.npy": {
+      "bytes": 573672,
+      "sha256": "492f2e5eb5145edc32f0223bdde1d03823e0953d1bffd47a89e6ca47e87e1fa7"
+    },
+    "episode_eligibility.json": {
+      "bytes": 541981,
+      "sha256": "eebafbfdc07398cc3270c3b5f6c0703cb5b928525f1ff7a3a1604dd1dbf273a2"
+    },
+    "episode_offsets.npy": {
+      "bytes": 9224,
+      "sha256": "27f55a694249fb56d87bee5aa88ed17d9f5195376dd17664654991274bfa812e"
+    },
+    "episodes.json": {
+      "bytes": 834170,
+      "sha256": "114a28c096d029dff33972555a90eeb40d1d908e6ea6f2eb8a0e8a9905a2b8ce"
+    },
+    "interval_commands.npy": {
+      "bytes": 286900,
+      "sha256": "6f83a920aea98d11b2e4cd92815fd516223ca66a52862a714f4ba733d340eacd"
+    },
+    "protocol.json": {
+      "bytes": 1716,
+      "sha256": "af94fe82f99d4ed18f4c108db55003b74adbe47ea69cc06771a033496224a566"
+    },
+    "qualification_rules.json": {
+      "bytes": 1072,
+      "sha256": "0d2a1fa6ac17730f137db1ae432225f9703f24109a96493fd6a705e32ad22688"
+    },
+    "recorded_pose.npy": {
+      "bytes": 4014936,
+      "sha256": "3047488d75b2572742ebc87298f534f0170055c1e94c74002417295c6798ab6b"
+    },
+    "supervision_masks.npy": {
+      "bytes": 2297600,
+      "sha256": "04993ea2daae22287300e4f4cd5773beb961f280a3620ee4bc8833e5b95f244f"
+    },
+    "validation_original_instructions.jsonl": {
+      "bytes": 6766262,
+      "sha256": "dabbe7ede45c1124dd1a30bda7483563eebaa98b6f93eb0c9080518a31b5f5b1"
+    },
+    "window_rows.npy": {
+      "bytes": 430904,
+      "sha256": "872d32eb730d08c8996b1c9abf4a94b82297e11ada18ec837e6f1bb11dfd3129"
+    }
+  },
+  "role_manifest_sha256": "720682b2c28c5a2edd10c85f6ab12f32810564c7405a8ee9dbf3d76e42aa7595",
+  "train_target_identity_for_rule_matching": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+  "candidate_plan_sha256": "40582e69fb5bd7d7906a0ca8103de3f18f67372704abadfb071488ca487c09d3",
+  "code_sha256": {
+    "code/oxe_nominal_timing.py": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+    "scripts/prepare_oxe_nominal_validation_20261025.py": "b61dd4e35b1df4e65f0d1f4eafe393362d334da6c8449067e8a479c032b715c8",
+    "scripts/prepare_oxe_nominal_targets_20261025.py": "94a899213b8ad944de737cf13f5a3a5d9c6b246e30cdce3ca0e170629c84aa02",
+    "scripts/audit_bounded_oxe_train_targets_20261025.py": "3c61a8e6f1b101caadd0a149dce4118ea687f4105b17f2eb4162b46196a078e9"
+  },
+  "source_parser_sha256": {
+    "dataset.py": "424e5d0610cf4822a96416d98cc5b655c580bdfc73047f3c815fa9c70c69c4dd",
+    "oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981",
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230"
+  },
+  "terminal_interval_placeholder_valid": false,
+  "planar_pose_placeholders_are_measured": false,
+  "formal_training_ready": false,
+  "dataset_identity": "e4cd9b9f6c528170cbdd1dd6f8227a2da9d764ae81a47767fab9319b5f20db5e"
+}

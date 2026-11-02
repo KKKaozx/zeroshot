@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# WITHDRAWN_MAIN_CHAIN_REVIEW: bulk submission has been retracted.
+echo "Bulk evaluation continuation withdrawn pending main-chain behavior verification; no job submitted." >&2
+exit 2
+# Separate operational submitter; frozen evaluate.sh/protocol/results stay intact.
+set -euo pipefail
+ROOT=/projects/Zeroshot
+BUNDLE="$ROOT/libero_original_evaluation_v1"
+PY="$ROOT/envs/libero-eval-v1/bin/python"
+N="${1:-100}"
+[[ "$N" =~ ^[1-9][0-9]*$ ]] || { echo 'Positive new-episode count required'; exit 1; }
+cd "$BUNDLE"
+exec 9>.continue_submission.lock
+flock -n 9 || { echo 'Another continuation submission is active'; exit 1; }
+OLD=$(cat job_id.txt)
+[[ "$OLD" =~ ^[0-9]+$ ]] || { echo 'Invalid previous job marker'; exit 1; }
+STATE=$(sacct -X -nP -j "$OLD" --format=State | awk -F'|' 'NF && $1!="" {print $1; exit}')
+case "$STATE" in
+  COMPLETED|FAILED|TIMEOUT|CANCELLED*|OUT_OF_MEMORY|NODE_FAIL|PREEMPTED) ;;
+  *) echo "Previous evaluation $OLD is $STATE; no duplicate submitted"; exit 1 ;;
+esac
+"$PY" -B verify_output.py --output "$ROOT/runs/libero-original-dino-noaug-s42"
+DONE=$("$PY" -c 'import json; print(int(json.load(open("/projects/Zeroshot/runs/libero-original-dino-noaug-s42/summary.json"))["evaluation_complete"]))')
+if [ "$DONE" = 1 ]; then echo 'All4000 episodes already complete; no job submitted'; exit 0; fi
+# User-confirmed228153 COMPLETED on gpu-a40-1. Keep the exact recorded runtime
+# (including the existing driver's unnormalized NVML listing) for continuation.
+JOB=$(sbatch --parsable --nodelist=gpu-a40-1 evaluate.sh "$N")
+JOB=${JOB%%;*}
+[[ "$JOB" =~ ^[0-9]+$ ]] || { echo "Unexpected sbatch response: $JOB"; exit 1; }
+printf '%s\n' "$OLD" >"continuation_previous_${JOB}.txt"
+printf '%s\n' "$JOB" >job_id.txt
+echo "LIBERO_CONTINUE: $JOB; node=gpu-a40-1; up to $N NEW episodes; original4000 and completed records retained"

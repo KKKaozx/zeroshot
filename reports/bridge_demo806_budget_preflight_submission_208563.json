@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-17",
+  "job_id": "208563",
+  "stage": "preflight",
+  "package": "bridge_demo806_budget_v1",
+  "submission_source": "user_reported",
+  "status": "user_reported_completed_pending_full_report_validation",
+  "reported_slurm_state": "COMPLETED",
+  "reported_exit_code": "0:0",
+  "reported_elapsed": "00:05:19",
+  "reported_node": "gpu-a6000-1",
+  "reported_frozen208207_replay": {"context_max_abs": 0.0, "prediction_max_abs": 0.0, "passed": true},
+  "reported_budget_preflight_passed": true,
+  "evidence_scope": "User sacct and log tail received; full validator output/resource summary not yet received, no local preflight artifact audit",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-budget-preflight-208563.out",
+  "cluster_report": "/projects/Zeroshot/runs/bridge-budget-preflight-208563/report.json",
+  "preflight_verified": false,
+  "formal_training_submitted": false,
+  "generalization_verdict": null
+}

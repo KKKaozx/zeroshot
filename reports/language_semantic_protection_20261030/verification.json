@@ -1,0 +1,26 @@
+{
+  "status": "passed_cpu_only",
+  "protection_test_methods": 5,
+  "candidate_workflow_test_methods": 3,
+  "failures": 0,
+  "errors": 0,
+  "role_swap_cases": 8,
+  "negation_extra_action_relation_cases": 19,
+  "compositional_positive_cases": 8,
+  "development_candidates_checked": 40,
+  "development_cases_used_to_design_rules": true,
+  "profiled_instructions": 8,
+  "unprofiled_instructions": 3678,
+  "native_constrained_decoding_integrated": false,
+  "new_model_calls": 0,
+  "new_training_labels": 0,
+  "new_training_updates": 0,
+  "new_cluster_jobs": 0,
+  "source_sha256": {
+    "code/protected_language_frames.py": "75f008ddd89d5ea77192a3039c5a4f384ddfc97eb40e754d30a17b862f3d7d50",
+    "tools/audit_language_semantic_protection_20261030.py": "7b5b3a1ffe401c7d2d603fd3e59b6c4ab315cf72449f31fd88749a401530e23f",
+    "tools/prepare_language_candidate_review_20261030.py": "6d3f99829fd41d1069b6a2ce23be2e88a1167c5b6f673f366555f7ba571707b1",
+    "tests/test_protected_language_frames.py": "c366f982bcb0c063b23344f4aeeacc2af4a627de1a6c2e155e32a9a59a84111a",
+    "tests/test_language_candidate_review.py": "196e96bbdcb41f937d4b10e01d3f9c3dac19642b28e0a97f47faa0e928f306ce"
+  }
+}

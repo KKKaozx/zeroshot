@@ -1,0 +1,112 @@
+check_assets.py: OK
+clip207558_development.npz: OK
+clip207558_report.json: OK
+contract.json: OK
+frozen/bridge_coverage_replication_v1/coverage_inputs.py: OK
+frozen/bridge_coverage_replication_v1/episode_reference.json: OK
+frozen/bridge_coverage_replication_v1/protocol.json: OK
+frozen/bridge_coverage_replication_v1/rows.json: OK
+frozen/bridge_coverage_replication_v1/run_training_coverage.py: OK
+frozen/bridge_coverage_replication_v1/schedule.npz: OK
+frozen/bridge_growth128_v1/adapter.py: OK
+frozen/bridge_growth128_v1/bridge_input_contract.py: OK
+frozen/bridge_growth128_v1/check_bridge_batch_control.py: OK
+frozen/bridge_growth128_v1/check_bridge_late_lr_pair.py: OK
+frozen/bridge_growth128_v1/dataset.py: OK
+frozen/bridge_growth128_v1/diffusion_decoder.py: OK
+frozen/bridge_growth128_v1/evaluate_bridge_endpoint_metrics.py: OK
+frozen/bridge_growth128_v1/fit_bridge_growth128.py: OK
+frozen/bridge_growth128_v1/growth128_input_contract.py: OK
+frozen/bridge_growth128_v1/manifest.json: OK
+frozen/bridge_growth128_v1/models.py: OK
+frozen/bridge_growth128_v1/replay_and_fit_bridge_positive.py: OK
+frozen/bridge_growth128_v1/trace_bridge_batch_training.py: OK
+frozen/bridge_inner_selection_v1/selection_contract.py: OK
+frozen/bridge_state_conditioning_v1/current_pose.npz: OK
+frozen/bridge_state_conditioning_v1/fit_state_arm.py: OK
+frozen/bridge_state_conditioning_v1/protocol.json: OK
+frozen/bridge_state_conditioning_v1/state_input_contract.py: OK
+frozen_visual_backbone.py: OK
+initial_control_report.json: OK
+job.sh: OK
+README.md: OK
+run.py: OK
+submit_once.sh: OK
+verify.py: OK
+Tue Oct 27 02:19:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 595.71.05              Driver Version: 595.71.05      CUDA Version: 13.2     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:02:12.0 Off |                  Off |
+| 85%   28C    P8             26W /  300W |       1MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+2026-10-27 02:20:26.789782: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-10-27 02:20:26.794436: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-10-27 02:20:26.804200: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+DINO_ONLY_INPUT 50 / 415
+DINO_ONLY_INPUT 100 / 415
+DINO_ONLY_INPUT 150 / 415
+DINO_ONLY_INPUT 200 / 415
+DINO_ONLY_INPUT 250 / 415
+DINO_ONLY_INPUT 300 / 415
+DINO_ONLY_INPUT 350 / 415
+DINO_ONLY_INPUT 400 / 415
+Loading weights: 100%|██████████| 590/590 [00:02<00:00, 226.60it/s]
+Loading weights: 100%|██████████| 439/439 [00:00<00:00, 2368.82it/s]
+/projects/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/transformers/models/dinov2/modeling_dinov2.py:167: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:208.)
+  attn_weights = torch.matmul(query, key.transpose(2, 3)) * scaling
+/projects/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/transformers/models/dinov2/modeling_dinov2.py:175: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:208.)
+  attn_output = torch.matmul(attn_weights, value)
+DINO_ONLY_ENCODE 0 /1876
+DINO_ONLY_ENCODE 200 /1876
+DINO_ONLY_ENCODE 400 /1876
+DINO_ONLY_ENCODE 600 /1876
+DINO_ONLY_ENCODE 800 /1876
+DINO_ONLY_ENCODE 1000 /1876
+DINO_ONLY_ENCODE 1200 /1876
+DINO_ONLY_ENCODE 1400 /1876
+DINO_ONLY_ENCODE 1600 /1876
+DINO_ONLY_ENCODE 1800 /1876
+/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/nn/functional.py:5518: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:208.)
+  q_proj = linear(q, w_q, b_q)
+/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/nn/functional.py:5519: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:208.)
+  kv_proj = linear(k, w_kv, b_kv)
+/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/nn/modules/linear.py:125: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:208.)
+  return F.linear(input, self.weight, self.bias)
+COVERAGE_METRIC common 0 train position_cm 15.106746673583984 rotation_deg 136.3098907470703
+/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:208.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at ../aten/src/ATen/native/transformers/cuda/attention_backward.cu:655.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+COVERAGE_UPDATE common 1 / 4 loss 0.40101203322410583
+COVERAGE_METRIC common 4 train position_cm 12.570651054382324 rotation_deg 35.500877380371094
+COVERAGE_UPDATE constant 5 / 8 loss 0.22036044299602509
+COVERAGE_METRIC constant 8 train position_cm 11.526799201965332 rotation_deg 42.908935546875
+COVERAGE_UPDATE restore_same_lr 5 / 8 loss 0.22036044299602509
+COVERAGE_METRIC restore_same_lr 8 train position_cm 11.526799201965332 rotation_deg 42.908935546875
+COVERAGE_UPDATE reduced 5 / 8 loss 0.22036044299602509
+COVERAGE_METRIC reduced 8 train position_cm 11.935619354248047 rotation_deg 24.497161865234375
+TRAINING_COVERAGE_REPORT /projects/Zeroshot/runs/bridge-dino-only-preflight-228978/report.json
+BRIDGE DINO-ONLY PREFLIGHT VERIFIED; no performance verdict or automatic formal submission
+{
+  "peak_reserved_gib": 5.630859375,
+  "warm_update_seconds": 0.13964871196076273,
+  "estimated_formal_seconds": 4245.645442581251,
+  "initial_parameters_match207558": true,
+  "all1876_numeric_inputs_match207558": true,
+  "language_tokens_exact": true
+}
+^C

@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "scope": "Actual formal run_arm with tiny32D eight-block Adapter and toy denoiser; synthetic inputs only",
+  "toy_updates_per_arm": 8,
+  "formal4096_not_executed": true,
+  "CLIP_loaded": false,
+  "actual207558_loaded": false,
+  "real_data_read": false,
+  "GPU_initialized": false,
+  "same_initial_base": true,
+  "same_first_loss": true,
+  "checkpoint_roundtrips_exact": true,
+  "frozen_marker_unchanged": true,
+  "admission_good_case_passes": true,
+  "admission_unchanged_candidate_rejected": true,
+  "admission_full16_better_but_first_bad_rejected": true,
+  "admission_first_rotation_regression_rejected": true,
+  "invalid_quaternions_rejected": true,
+  "runs": [
+    {
+      "arm": "control",
+      "logical_optimizer_updates": 8,
+      "initial_base_sha256": "3e0add19026f57ec0c84b31fa56a1b5b209bf03dbfb2c88ae139a51fe5b2fe3b",
+      "initial_optimizer_empty": true,
+      "trainable_parameters": 66192,
+      "first8_losses": [
+        0.9168152809143066,
+        0.9101296663284302,
+        0.968328058719635,
+        0.871026873588562,
+        0.8707091212272644,
+        0.8787661194801331,
+        0.8952818512916565,
+        0.8565561175346375
+      ],
+      "new_score_first_gradient_norms": null,
+      "new_score_parameters_changed": false,
+      "base_parameters_changed": true,
+      "checkpoint": "control_final.pt",
+      "checkpoint_sha256": "6b5866a427a65449af7d6c7aeea66092b2b89cfe4aea86aa0ccd39826f247f21",
+      "checkpoint_roundtrip_exact": true,
+      "final_state_sha256": "7f09be3aad444eec7aeb40ad4db67a2dcaa4087df31afa057d7e46a06a0054fd",
+      "warm_update_seconds": 0.09383333333244082
+    },
+    {
+      "arm": "candidate",
+      "logical_optimizer_updates": 8,
+      "initial_base_sha256": "3e0add19026f57ec0c84b31fa56a1b5b209bf03dbfb2c88ae139a51fe5b2fe3b",
+      "initial_optimizer_empty": true,
+      "trainable_parameters": 66226,
+      "first8_losses": [
+        0.9168152809143066,
+        0.910129189491272,
+        0.96832674741745,
+        0.871025562286377,
+        0.8707066178321838,
+        0.8787634968757629,
+        0.8952789902687073,
+        0.8565536141395569
+      ],
+      "new_score_first_gradient_norms": {
+        "content_score": 0.01507877092808485,
+        "position_score": 0.0007578341756016016
+      },
+      "new_score_parameters_changed": true,
+      "base_parameters_changed": true,
+      "checkpoint": "candidate_final.pt",
+      "checkpoint_sha256": "2981ecbef366bc93d0be760069ca7b325cd5b82b44d91e205ba772a22f28d6b8",
+      "checkpoint_roundtrip_exact": true,
+      "final_state_sha256": "ebe6808773d4fe1a8ddb17901ba6321023143cc196fa532d488addb6c968ecfa",
+      "warm_update_seconds": 0.09366666666755918
+    }
+  ]
+}

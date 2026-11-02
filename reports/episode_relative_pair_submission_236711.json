@@ -1,0 +1,42 @@
+{
+  "format": "episode-relative-pair-submission-v2",
+  "reported_date": "2026-10-31",
+  "job_id": 236711,
+  "submission_source": "User reported EPISODE RELATIVE PAIR V2:236711",
+  "submitted_by_agent": false,
+  "status": "runtime_import_error_before_optimizer_or_updates",
+  "slurm_state_observed": null,
+  "runtime_output_received": true,
+  "actual_updates_observed": 0,
+  "source_job": 229116,
+  "protected_gripper_job": 235928,
+  "candidate": "deployment/episode_relative_pose_pair_v2",
+  "package_sha256": "d7e4b96284a594cf9e8245d7d9e0bda5a2431fc8e13655a6358f8768702579ae",
+  "planned_updates_per_arm": 2048,
+  "planned_total_new_pose_copy_updates": 4096,
+  "planned_trainable_modules": [
+    "diffusion_decoder",
+    "state_projection"
+  ],
+  "planned_frozen_modules": [
+    "visual_encoder",
+    "text_encoder",
+    "adapter",
+    "history_projection",
+    "gripper"
+  ],
+  "planned_source_original_file_updates": 0,
+  "planned_gpu": "NVIDIA A40",
+  "slurm_hard_seconds": 3600,
+  "process_alarm_seconds_after_admission": 3300,
+  "log_path": "/projects/Zeroshot/logs/episode-relative-pair-v2-236711.out",
+  "output_directory": "/projects/Zeroshot/runs/episode-relative-pair-v2-236711",
+  "cpu_admission_inferred_from_submit_script_order": true,
+  "cpu_admission_output_independently_received": false,
+  "old_token_cache_required": false,
+  "automatic_retry_or_followup": false,
+  "formal_matrix_admitted": false,
+  "next_action": "Review tiny v2r1 runtime repair; manual installation and submission to fresh directory only. Keep236711 history.",
+  "error": "ModuleNotFoundError: scipy in episode_relative_pose_state at train_pair.py line100",
+  "runtime_repair_package": "cluster_packages/episode_relative_pose_pair_v2r1_runtime_fix_20261031.zip"
+}

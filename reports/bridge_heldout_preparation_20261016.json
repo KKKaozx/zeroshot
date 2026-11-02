@@ -1,0 +1,29 @@
+{
+  "stage": "ready_for_single_cluster_evaluation_job",
+  "protocol_sha256": "ca9cebf05244ea8193e5ff5450a080e21175135f1f57b75ae2ed8b7290641858",
+  "assets_sha256": "3e29115a54fc5d8af7450e62c55890c4eb5109271fe07fc715db2f46de70fde9",
+  "entry_sha256": "d74489a827a6ae497d53001a22b17d1f36ee5654249759c4f35c1de09df1714a",
+  "archive_sha256": "403948ac9fa48fddab0b946c135389812e3c16e0fbf68f5242ba06f7ce967ed3",
+  "archive_bytes": 56106743,
+  "local_validation_passed": true,
+  "local_validation_sha256": "7d4c35e04dcd38cbb12fe7ffaec2ca9af3ac7c7272bae17d983cd1a48df41479",
+  "new_gpu_execution": false,
+  "new_neural_execution": false,
+  "cluster_checkpoint_replay_pending": true,
+  "new_cluster_job_submitted": true,
+  "new_heldout_episodes": 13,
+  "new_heldout_windows": 60,
+  "previous_development_windows_for_interface_replay": 4,
+  "checkpoints_frozen": [
+    "207558",
+    "207746"
+  ],
+  "checkpoints_downloaded": false,
+  "training": false,
+  "test_labels_decoded_after_protocol_frozen": true,
+  "test_model_predictions_generated": false,
+  "original_unsubmitted_archive_sha256": "2211458c886c72539b5849d3112f898c73d830825f98bc5d1d01998e3aa0c4a9",
+  "draft_revision_reason": "Before any upload/scoring, align frozen text encoder batching with original16. Actual CPU input and metric paths unchanged; independent AST proof retained. Original archive was an unsubmitted build draft.",
+  "next_step": "Read status/logs for208005 only. Do not submit another job or change frozen models; both replay guards must pass before new holdout scoring.",
+  "job_id": "208005"
+}

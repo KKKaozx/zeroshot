@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "optimizer_updates": 0,
+  "initial_identity": {
+    "base_learned_sha256": "b53adab691250aeeaaee5234f15d4e7ba54da6f9207b27975098ac2116db71f9",
+    "port_sha256": "a3ca92257eb417c82c5f5dc7a5f781eb05d66581c0557a3fc177b4ed0eaca6ef",
+    "adam_sha256": "903192db3f03782ff86c6da99f8f3537cbaac1d35006409114dc4acdb31ee4e5",
+    "source_rng_sha256": "e6308123328cf8a2b2d95c610255de3543ece2ec8a1cd4ac9ffc24ccf218daea"
+  },
+  "first_batch": {
+    "replacement": {
+      "loss": {
+        "loss": 0.33615046739578247,
+        "pose_loss": 0.1300712674856186,
+        "gripper_loss": 0.8243167996406555
+      },
+      "token_shape": [
+        8,
+        77
+      ],
+      "rng_before": "e6308123328cf8a2b2d95c610255de3543ece2ec8a1cd4ac9ffc24ccf218daea",
+      "rng_after": "ab1d75eea89ffe9f7ad89eb13161ef50d8a888a2f7ea5ae1a431db4a0dac7856",
+      "noise": {
+        "step": 10241,
+        "noise": "1bc761e8b115fb32c85ff40279c3173d29ac93307c62e918b8d601c0808823c7",
+        "timesteps": "e70e06483479be74790461987ee5ad1538a4d74669a9ee6aed28c93569557694",
+        "noisy_actions": "1d2ae9cd15720105d684cf2f00ab3e8056221be215ccca41d2da04a25006cef6"
+      }
+    },
+    "cycle": {
+      "loss": {
+        "loss": 0.32289546728134155,
+        "pose_loss": 0.18518096208572388,
+        "gripper_loss": 0.5508580803871155
+      },
+      "token_shape": [
+        8,
+        77
+      ],
+      "rng_before": "e6308123328cf8a2b2d95c610255de3543ece2ec8a1cd4ac9ffc24ccf218daea",
+      "rng_after": "ab1d75eea89ffe9f7ad89eb13161ef50d8a888a2f7ea5ae1a431db4a0dac7856",
+      "noise": {
+        "step": 10241,
+        "noise": "1bc761e8b115fb32c85ff40279c3173d29ac93307c62e918b8d601c0808823c7",
+        "timesteps": "e70e06483479be74790461987ee5ad1538a4d74669a9ee6aed28c93569557694",
+        "noisy_actions": "08bb21cd923c1128fc59600a32db1bab0d49b105a8ca7d3927526ddc6528bf9a"
+      }
+    }
+  },
+  "both_training_token_shapes": [
+    8,
+    77
+  ],
+  "primitive_noise_and_timesteps_matched": true,
+  "noisy_actions_or_losses_expected_equal": false
+}

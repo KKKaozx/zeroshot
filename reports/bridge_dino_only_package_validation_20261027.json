@@ -1,0 +1,47 @@
+{
+  "local_static_and_import_checks_passed": true,
+  "compiled_python_files": 21,
+  "inherited_and_bundle_hashes_valid": true,
+  "old_runner_mutation_exactly_metadata_insertion": true,
+  "frozen_dependency_paths_correct": true,
+  "original_optimizer_prefixes_preserved": true,
+  "original_saved_CLIP_metrics_recomputed": {
+    "path_position_cm": 0.0,
+    "path_rotation_deg": 0.0,
+    "endpoint_position_cm": 0.0,
+    "endpoint_rotation_deg": 3.814697265625e-06,
+    "episode_mean_path_position_cm": 0.0,
+    "episode_mean_path_rotation_deg": 3.8146972691777137e-07
+  },
+  "shell_files_lf_only": true,
+  "shell_bash_execution_checked": false,
+  "real_DINO_model_loaded": false,
+  "model_forward_calls": 0,
+  "training_updates": 0,
+  "cluster_preflight_passed": false,
+  "formal_training_ready": false,
+  "scope": "Local code/import and saved-result checks only; allocated cluster preflight still required",
+  "synthetic_verifier_cases": [
+    {
+      "name": "positive_metadata_only",
+      "expected_behavior_observed": true
+    },
+    {
+      "name": "reject_changed_initial_weights",
+      "expected_behavior_observed": true
+    },
+    {
+      "name": "reject_changed_data",
+      "expected_behavior_observed": true
+    },
+    {
+      "name": "reject_wrong_training_budget",
+      "expected_behavior_observed": true
+    },
+    {
+      "name": "reject_language_token_change",
+      "expected_behavior_observed": true
+    }
+  ],
+  "synthetic_fixtures_are_not_cluster_preflight": true
+}

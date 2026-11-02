@@ -1,0 +1,48 @@
+{
+  "dataset": {
+    "changed": [
+      "__getitem__",
+      "__init__",
+      "_get_tfrecord_bc_z_pose",
+      "_get_tfrecord_bridge_state_action",
+      "_get_tfrecord_language_table_xy",
+      "_get_tfrecord_rt1_pose",
+      "_load_tfrecord_example",
+      "group_key"
+    ],
+    "added": [
+      "_encode_oxe_reached_pose"
+    ]
+  },
+  "train": {
+    "changed": [
+      "build_config",
+      "dataset_split_identity",
+      "parse_args",
+      "train"
+    ],
+    "added": [
+      "validate_frame_resume"
+    ]
+  },
+  "libero_action_interface": {
+    "changed": [
+      "waypoint_to_native_osc"
+    ],
+    "added": []
+  },
+  "libero_waypoint_execution": {
+    "changed": [
+      "execute_policy_chunk",
+      "ticks"
+    ],
+    "added": []
+  },
+  "libero_project_policy": {
+    "changed": [
+      "__call__",
+      "__init__"
+    ],
+    "added": []
+  }
+}

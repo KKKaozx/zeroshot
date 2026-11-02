@@ -1,0 +1,119 @@
+{
+  "execution_complete": true,
+  "fixed_rollout_audit_passed": true,
+  "target_supervised": true,
+  "zero_shot": false,
+  "formal_matrix_admitted": false,
+  "job_id": 236840,
+  "successes": 5,
+  "trials": 5,
+  "elapsed_seconds": 113.14100000000326,
+  "episodes": [
+    {
+      "demo_id": 25,
+      "success": true,
+      "native_ticks": 84,
+      "policy_calls": 21,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0,
+      "simulation_seconds": 4.2,
+      "gif_frames": 22,
+      "artifacts": {
+        "trace.json": "fc7fd7b238e7e62ed8e73b700989fa94a8d20a898f17f67652fd7b3d2d34fc5f",
+        "execution.gif": "26d1720e18cb5e03a4a760e2b32de97f69fbfece37deba3f1ac37b5cc52d46cd",
+        "initial.png": "46a738b48017d4f5a16ae063c21d63aeb6d70e4991285210eb1cf93af639706a",
+        "final.png": "08a312ecc087e6088b812e7d4eec7552632dba34826bb053d7fc19b71c21768a"
+      }
+    },
+    {
+      "demo_id": 26,
+      "success": true,
+      "native_ticks": 72,
+      "policy_calls": 18,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0,
+      "simulation_seconds": 3.6,
+      "gif_frames": 19,
+      "artifacts": {
+        "trace.json": "359ede65e11f8f02ce229581ac74e82010cd7bca92bd9b09eef0fd77431aa074",
+        "execution.gif": "f076d5159f77cc30fe6eaf7908ad87986cfe99fa131f6105b623334a23df7519",
+        "initial.png": "fb9ba22b17ecaf18cd3aaa0d2e5b2e1afc5651dfdc5b74390f921f5a6a025a47",
+        "final.png": "23ab73d37bc225259746b4fae030bfb8b784b15d6da9b57ed8c3813d2fe1f60f"
+      }
+    },
+    {
+      "demo_id": 27,
+      "success": true,
+      "native_ticks": 72,
+      "policy_calls": 18,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0,
+      "simulation_seconds": 3.6,
+      "gif_frames": 19,
+      "artifacts": {
+        "trace.json": "bf326d39a522b882fa6e93b837c3eb934c445dfd793681c338a57a15124aa357",
+        "execution.gif": "56944407c49ed7bafac2a66d7489b65c53efaf3d55cf90035b19a894c48d5fbd",
+        "initial.png": "e75b04ec71c86c484a9fe48af2a4da50960bb24dabfc15151ddc999d89fc072d",
+        "final.png": "2cbe6462f0f5e1643b4dc9824e40e6a60d9838a8b4217172784c40a76761ad42"
+      }
+    },
+    {
+      "demo_id": 28,
+      "success": true,
+      "native_ticks": 72,
+      "policy_calls": 18,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0,
+      "simulation_seconds": 3.6,
+      "gif_frames": 19,
+      "artifacts": {
+        "trace.json": "56788c44428f5b530df9a8627e00b4fa06e83ed4b94ca0b0513454f03adfcff4",
+        "execution.gif": "48cc4de53ba70107a8361275fe1fa9b031c26ce17c96d07762174dd7e18e7eae",
+        "initial.png": "0890fcc7402e7e002135f3896f8cd80182b9b105e1eb5371dc9dcde744945685",
+        "final.png": "2c57e60f04a1fcc57047afee4ee4ec3e39cc9da2877c7a13b497a02590967d00"
+      }
+    },
+    {
+      "demo_id": 29,
+      "success": true,
+      "native_ticks": 64,
+      "policy_calls": 16,
+      "stop": "native_success",
+      "state_restores": 1,
+      "state_corrections_during_execution": 0,
+      "expert_actions_used": 0,
+      "simulation_seconds": 3.2,
+      "gif_frames": 17,
+      "artifacts": {
+        "trace.json": "5fa06f3e3de56218f07c429ea57b7fccebdcd96651c5d52a751ccbec5e423e77",
+        "execution.gif": "813464aa3a4590c7ba47ef10d756c5d0d436559b987cfa271adf450397f99dbd",
+        "initial.png": "c7b04fa592944511b7f353606f734c5f2668ed18bc06841cfc9900d104790a3f",
+        "final.png": "4a06f869c34b0c8b92e00e5d6885e996915825d07ffad10b4280b51ef81f1930"
+      }
+    }
+  ],
+  "checkpoint_sha256": "cb79d8333de212aa95810050908dba90e543ccf0f76560e70fc29deb4d824bd8",
+  "report_sha256": "203ddded4b92ce0b458b596a0f9ed14b5d95683ae0cf1032cec49e19f6125c08",
+  "frozen_deployment_all_members_unchanged": true,
+  "new_local_training_updates": 0,
+  "total_native_ticks": 364,
+  "total_policy_calls": 91,
+  "source_oxe_files_written": false,
+  "branch_closed_no_extra_training_or_rollouts": true,
+  "evidence_scope": "One target-supervised task, five fixed initial states from held-out demo IDs; not unseen tasks or source-to-target transfer. All grip commands are constant open.",
+  "blocker_resolved": "A completed learned-policy closed-loop reference using frozen DINO, Adapter and native7 diffusion commands exists on LIBERO.",
+  "main_blockers_remaining": [
+    "Source OXE policy multi-window action competence",
+    "OXE future-pose to LIBERO native command and common state/action contract",
+    "Full augmentation library and teacher13-model matrix"
+  ],
+  "automatic_following_action": false
+}

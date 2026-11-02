@@ -1,0 +1,17 @@
+{
+  "project_limit_bytes": 200000000000,
+  "last_known_project_allocated_bytes": 152091529216,
+  "last_known_usage_is_live_measurement": false,
+  "candidate_raw_bytes": 17068645209,
+  "proposed_combined_checkpoint_and_logs_envelope_bytes": 24000000000,
+  "minimum_remaining_headroom_bytes": 6000000000,
+  "frozen_models_and_environments_assumed_already_in_last_known_usage": true,
+  "no_dense_all_frame_dino_token_cache_planned": true,
+  "checkpoint_policy": "Latest resumable checkpoint per run; no accumulating every-save copies; exact cost still measured on formal config",
+  "full_oxe_raw_train_bytes": 714942441282,
+  "formal_quota_admission": false,
+  "illustrative_project_total_bytes": 199160174425,
+  "fits_only_under_last_known_usage_assumption": true,
+  "proposed_max_concurrent_training_jobs": 2,
+  "checkpoint_tensor_estimate": "reports/oxe_bounded_pool_plan_20261025/parameter_storage_estimate.json"
+}

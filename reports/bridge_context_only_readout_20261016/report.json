@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "plan_sha256": "a98985fe5c569dde7f4a5e0346d2d4e118233107e914e87f4179ef0168e26745",
+  "entry_sha256": "c23e17ea5a219ca85e78614e769bc2aa9de16098069c0362c98c19cae3c6adf1",
+  "summaries": {
+    "train": {
+      "position_cm": 3.828187897373567,
+      "endpoint_position_cm": 5.707657297495812,
+      "static_position_cm": 8.960284924153353,
+      "original_ddpm_position_cm": 0.1688128578934011,
+      "episodes_better_static": 63,
+      "episodes_better_original": 0,
+      "episode_equal_position_cm": 3.8281878973735672
+    },
+    "development": {
+      "position_cm": 7.9777452471295165,
+      "endpoint_position_cm": 10.463239698943989,
+      "static_position_cm": 8.21232607389037,
+      "original_ddpm_position_cm": 8.349126682028293,
+      "episodes_better_static": 5,
+      "episodes_better_original": 6,
+      "episode_equal_position_cm": 7.580685137141662
+    }
+  },
+  "position_boundary_positive_control": false,
+  "independent_kernel_eigen_prediction_max_difference_cm": 6.394884621840902e-14,
+  "predictions_sha256": "6fb60eaf696729d4808f5d0a806beb4b709f94eee90ea214cc67fdd0779bc319",
+  "elapsed_seconds": 0.0930000000007567,
+  "no_new_neural_training_encoding_sampling_simulation": true,
+  "cluster_job_submitted": false,
+  "no_extra_raw_state_or_task_inputs": true,
+  "no_parameter_sweep": true,
+  "limitations": [
+    "OnlyXYZ; no rotation/gripper/task success.",
+    "Reused development set; no end-to-end CV.",
+    "Frozen context encoder was supervised on128training rows; these are legal train features, not independent pretraining.",
+    "Readout has different capacity/objective/regularization; success is not a single-module causal verdict."
+  ],
+  "next_step": "Prepare one fixed-context DDPM generalization protocol only if this position boundary is positive; otherwise review conditioning first."
+}

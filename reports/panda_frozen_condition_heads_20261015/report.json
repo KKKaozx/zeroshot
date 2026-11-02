@@ -1,0 +1,79 @@
+{
+  "complete": true,
+  "arms": {
+    "clip_pooled": {
+      "updates": 1024,
+      "metrics": {
+        "position_cm": 0.030115189030766487,
+        "rotation_deg": 0.25034216046333313,
+        "endpoint_position_cm": 0.03661879524588585,
+        "endpoint_rotation_deg": 0.2638114392757416,
+        "seed_position_cm": [
+          0.03015322983264923,
+          0.030191604048013687,
+          0.030000731348991394
+        ],
+        "seed_rotation_deg": [
+          0.2502150237560272,
+          0.2524738907814026,
+          0.2483375519514084
+        ],
+        "windows_all_three_seeds_pass": 16,
+        "windows": 16,
+        "static_position_cm": 5.519538879394531,
+        "static_rotation_deg": 0.0,
+        "pose_fit_passed": true
+      },
+      "initial_decoder_sha256": "08f88b538377bf854ca001495748fb39466c576265992629d7ec26c960f1a175",
+      "final_decoder_sha256": "e850fe8d4222f7b17191db8459c89e825a2d8c3e24b29be9ad4c8771b7bba9b2",
+      "trainable_parameters": 77670023,
+      "frozen_gripper_unchanged": true,
+      "peak_reserved_gib": 1.59765625,
+      "elapsed_seconds": 78.76599999994505,
+      "checkpoint_bytes": 311927715,
+      "checkpoint_sha256": "5e8d6bc3a5aa24acf8997cbd30fd7aaf6394510fa328dc7e4f5902e0ae98817b",
+      "saved_tensors_exact": true,
+      "reload_first_batch_prediction_difference": 0.0
+    },
+    "adapter_initial_only": {
+      "updates": 1024,
+      "metrics": {
+        "position_cm": 0.3831577003002167,
+        "rotation_deg": 0.9507784247398376,
+        "endpoint_position_cm": 0.5393849015235901,
+        "endpoint_rotation_deg": 1.0084562301635742,
+        "seed_position_cm": [
+          0.34941646456718445,
+          0.39361196756362915,
+          0.4064446985721588
+        ],
+        "seed_rotation_deg": [
+          0.9588266611099243,
+          0.9457122087478638,
+          0.9477964043617249
+        ],
+        "windows_all_three_seeds_pass": 14,
+        "windows": 16,
+        "static_position_cm": 5.519538879394531,
+        "static_rotation_deg": 0.0,
+        "pose_fit_passed": false
+      },
+      "initial_decoder_sha256": "08f88b538377bf854ca001495748fb39466c576265992629d7ec26c960f1a175",
+      "final_decoder_sha256": "6ada712a7c005dc2a4fe10ebc137388b358784fc68df12dbbdefc20f550dc68e",
+      "trainable_parameters": 77670023,
+      "frozen_gripper_unchanged": true,
+      "peak_reserved_gib": 1.59765625,
+      "elapsed_seconds": 78.73399999993853,
+      "checkpoint_bytes": 311929126,
+      "checkpoint_sha256": "169469b529635e541a9d0e31d3ba93ced75620d6d7535812fcbe5072c2f65e0f",
+      "saved_tensors_exact": true,
+      "reload_first_batch_prediction_difference": 0.0
+    }
+  },
+  "noise_streams_exact": true,
+  "no_clip_or_adapter_forward": true,
+  "no_clip_or_adapter_optimization": true,
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false
+}

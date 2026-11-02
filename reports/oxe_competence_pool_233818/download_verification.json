@@ -1,0 +1,42 @@
+{
+  "job_id": 233818,
+  "download_verified": true,
+  "archive_bytes": 538553,
+  "archive_sha256": "450448b04a12caf3fe279aabd89afbdffd0b1a1f242457679449e6969eafc843",
+  "file_checksums": {
+    "report.json": "7097fa8856cdfb4d0ebd26e91c6b98ce2dff06f831d56da87fbb646518145f25",
+    "predictions_and_targets.npz": "f8126d95836eaee86fdde6d34454931b78d89443656c4c174c805ed95ff7a5ab",
+    "zero_update_guard.json": "a4ec731cda1ef863a1b3e5f4a12f60b0251f78dfd4b26d8d6252d8a4ee34f9df",
+    "moderate_pool/receipt.json": "1f93fd0341d45a7c11b682b16b1e3e511552166818bcf434c3f5f6b956e2a7e3"
+  },
+  "all120_targets_masks_exact_to_qualified_local_stores": true,
+  "source_control_static_arrays_exact_to_prior_download": true,
+  "all_reported_metrics_per_window_motion_bootstraps_gates_recomputed": true,
+  "all_metric_tree_agrees_atol1e_10": true,
+  "old_control_probe_loss_noise_rng_independently_matches_archived_guard": true,
+  "contract_initial_weights_adam_rng_and_frozen_identity_metadata_checked": true,
+  "complete_weights_adam_state_and_all4096internal_traces_downloaded": false,
+  "scope": "Reused120expert windows,32seen-training anchors,88development. One source checkpoint/training seed; bootstrap excludes seed uncertainty; not all512evaluated or task success.",
+  "elapsed_seconds_reported": 1499.2224463936873,
+  "elapsed_minutes_reported": 24.98704077322812,
+  "training_seconds_reported": 1360.6867806520313,
+  "peak_reserved_gib_reported": 4.5703125,
+  "counts_of_source_level_means": {
+    "train": {
+      "available": 14,
+      "worse_control": 14,
+      "worse_static": 14
+    },
+    "validation": {
+      "available": 14,
+      "worse_control": 14,
+      "worse_static": 14
+    }
+  },
+  "exposure_scope": "Frozen4096plan counts; full executed trace validated by cluster receipt, not independently downloaded.",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "gpu_used": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false
+}

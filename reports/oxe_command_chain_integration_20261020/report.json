@@ -1,0 +1,48 @@
+{
+  "checks_passed": true,
+  "synthetic_loader_windows": 9,
+  "default_loaders_config_parameters_predictions_and_existing_metrics_unchanged": true,
+  "new_input_preserves_image_targets_and_supervision_mask": true,
+  "actual_main_model_loss_and_optimizer_used": true,
+  "synthetic_optimizer_updates": 1,
+  "real_data_training_updates": 0,
+  "frozen_clip_no_gradient": true,
+  "both_command_and_availability_projection_columns_receive_gradients": true,
+  "partial_known_and_all_unknown_metric_denominators_checked": true,
+  "complete_new_checkpoint_runtime_known_and_unknown_inputs_checked": true,
+  "old_one_column_checkpoint_shape_rejected": true,
+  "actual_resume_and_data_identity_mode_guards_checked": true,
+  "language_table_rejected_at_actual_dataset_admission": true,
+  "native_executor_unknown_initial_command_becomes_known_after_step": true,
+  "real_pretrained_model_or_physics_used": false,
+  "generalization_claimed": false,
+  "language_table_source_admitted": false,
+  "changed_definitions_reviewed": {
+    "dataset": [
+      "UnifiedRobotDataset.__init__",
+      "UnifiedRobotDataset._get_tfrecord_bc_z_pose",
+      "UnifiedRobotDataset._get_tfrecord_bridge_state_action",
+      "UnifiedRobotDataset._get_tfrecord_rt1_pose"
+    ],
+    "models": [
+      "RobotAdapterModel.__init__",
+      "RobotAdapterModel.predict_gripper_logits"
+    ],
+    "train": [
+      "build_config",
+      "dataset_split_identity",
+      "evaluate_action_metrics",
+      "parse_args",
+      "train"
+    ]
+  },
+  "source_sha256": {
+    "code/dataset.py": "dc6fc3f82669d262c69f637c0be10fbf170abb40e26b220fbba23602efcb5621",
+    "code/models.py": "36ebcea308786eb8bd0ea1df97655d4ca8aaa8bd25b810c2aa17e33fa7c69083",
+    "code/train.py": "6e8517b522b8d88c801a9786f31bf2e4c1a13848398e123392396cec2249be4b",
+    "code/libero_project_policy.py": "c05c45e432447d3f726a2480705beb845ad4b4c50c0ab8309af665ceb0050db4",
+    "code/libero_waypoint_execution.py": "140f94a3a070751f8c055afb3c1c34bf1d40794459fec5f6cf20a1fb39ad0add",
+    "code/oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981",
+    "scripts/check_oxe_command_chain_20261020.py": "d6f7aa7ecc25f91a1939d258988a3d0f2ec2747dc7da3838326b0ba703b6880b"
+  }
+}

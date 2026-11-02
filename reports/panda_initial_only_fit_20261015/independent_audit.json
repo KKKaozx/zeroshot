@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "updates": 1024,
+  "training_windows": 16,
+  "source_unchanged": true,
+  "clip_unchanged": true,
+  "original_initialization_exact": true,
+  "initial_only": {
+    "position_cm": 4.292639829305354,
+    "rotation_deg": 0.6731921350837443,
+    "endpoint_cm": 6.507689145931683
+  },
+  "original_mixed_initial": {
+    "position_cm": 7.151732668080645,
+    "rotation_deg": 0.6059996046779056,
+    "endpoint_cm": 10.941630665419678
+  },
+  "pose_fit_passed": false,
+  "passing_windows": 0,
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false,
+  "gripper_limit": "All targets open; no evidence of closing, releasing or full grasping",
+  "checkpoint_sha256": "e5d37f6d7251a0fe5581a93715504eaf182ac7414ed577f7e322b2d5cb99ec1f"
+}

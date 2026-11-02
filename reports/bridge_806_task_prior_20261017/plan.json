@@ -1,0 +1,25 @@
+{
+  "question": "How much held-out XYZ advantage does the existing806-context linear readout retain over a predictor that knows only the task name?",
+  "difference_from_old": "Task means were assessed on128 training windows in20261013/15. No806-pool task-mean baseline was included in the current context-only readout. No old baseline or ridge fit is rerun.",
+  "sources": {
+    "cluster_packages\\bridge_demonstration_expansion_v1\\rows.json": "4dbcb6b7e89110950a2d301d6ce9f9250004fe916ffdf23db5dc067121b6ce59",
+    "reports\\bridge-demo806-fit-208207\\reduced_u8192_train.npz": "f401f785578bd6f7683b8604100d5c60449c403f70d1001cbd2d86b28bbbad85",
+    "reports\\bridge-demo806-fit-208207\\reduced_u8192_development.npz": "6c358676202b88cfe28ccc76030805a7f61beed83778ab0ae13dc9f290f1b820",
+    "reports\\bridge_806_context_readout_20261017\\report.json": "6681a68daaae8e627c1552e23bf2c1d1487bd5e5689f428b5b5024d6a24cff47",
+    "reports\\bridge_806_context_readout_20261017\\predictions_and_coefficients.npz": "f5390d9a866304cc5db879f6d69cf488ebe4033eb85e5898ec9c9e7393272563",
+    "reports\\bridge_demo806_analysis_208207\\analysis.json": "3fc886606212449e0de1bfbaa4f4cbd9398b57a025c4d8d524f8f1d258a2b335",
+    "reports\\bridge_806_context_readout_20261017\\independent_saved_array_audit.json": "5dd6668ab581b68bbbd4c0d6e12d15d7905e349513bd928b7f80fce1ba1b5a5f",
+    "scripts\\check_bridge_806_task_prior_20261017.py": "02be98fa67b1af0f748199470d209972e91a6bf8dc0de517d23062af3f448a00"
+  },
+  "rule": "Exactly one arithmetic mean XYZ trajectory for each of5 tasks using all its806-pool training windows with equal window weights,16 future targets,centimeters. Task comes from the known instruction/task label. No image,state,phase,index,episode ID or development label used to construct predictions.",
+  "archived_readouts": "Compare both fixed archived8192/16170 global readouts; no fitting or choosing a winner.",
+  "evaluation": "All40 development windows/10 disjoint episodes. Window and episode-equal path/endpoint position,all5 tasks. Residual squared-error identity relative to task mean is descriptive only.",
+  "interpretation_gate": "Readout supplies incremental position evidence beyond task-only prior when BOTH window and episode-equal path error are lower and at least6/10 episodes improve. No task-success/generalization-fix verdict. Known task label may be stronger than model task inference.",
+  "limits": [
+    "Reused development set,not independent final testing.",
+    "Context also includes current state and history; advantage cannot be uniquely attributed to image or Adapter.",
+    "A task-only prior ignores actual scene; lower mean error alone does not make it a valid executable controller.",
+    "XYZ only; no rotation/gripper/closed-loop claims."
+  ],
+  "stopping": "One baseline, no per-task weighting variants,phase baselines,parameter sweep,new ridge fit,NN/GPU jobs or reserved-test reads."
+}

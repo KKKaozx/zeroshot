@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "all_original32_windows_reused": true,
+  "same_source_nonself_donors_verified": true,
+  "prediction_metric_recompute_max_normalized_error": 5.6637804668469016e-08,
+  "replay_max_absolute_difference": 0.0,
+  "model_and_frozen_tensors_unchanged": true,
+  "new_model_forward_calls": 0,
+  "new_training_updates": 0,
+  "results": {
+    "Bridge": {
+      "correct_condition_error": 1.7624397382006238,
+      "permuted_condition_error": 1.7318101788773694,
+      "correct_advantage_fraction_of_wrong_error": -0.01768644144539544,
+      "correct_better_windows": 5
+    },
+    "Language Table": {
+      "correct_condition_error": 1.3230360486947819,
+      "permuted_condition_error": 1.3202176839353643,
+      "correct_advantage_fraction_of_wrong_error": -0.0021347727679396308,
+      "correct_better_windows": 5
+    },
+    "BC-Z": {
+      "correct_condition_error": 1.0712121892562427,
+      "permuted_condition_error": 1.0275394186531184,
+      "correct_advantage_fraction_of_wrong_error": -0.04250228245293976,
+      "correct_better_windows": 4
+    },
+    "Fractal": {
+      "correct_condition_error": 1.1013549017223738,
+      "permuted_condition_error": 1.3429091091305012,
+      "correct_advantage_fraction_of_wrong_error": 0.1798738319412603,
+      "correct_better_windows": 7
+    }
+  },
+  "context_vectors_shape": [
+    32,
+    1024
+  ]
+}

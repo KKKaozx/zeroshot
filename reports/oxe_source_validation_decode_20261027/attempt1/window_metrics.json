@@ -1,0 +1,1260 @@
+[
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-eb98de7fa7be9c34a47aa661a927ee4b5d36a46e0065296dde85d6a6401d262f",
+    "episode_key": "bridge_data_v2-train.tfrecord-00400-of-01024::3",
+    "window_index": 830,
+    "input_row": 8,
+    "valid_targets": 13,
+    "payload_sha256": "4a48b3ba4d7002f1c6ac450b48f9b2ca4cb62725c58d6b464252272d1d9f0435",
+    "sampling_seed": 1101,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3523726165294647,
+        "no_motion_position_normalized": 0.07100078463554382,
+        "model_position_recorded_units": 0.035237261652946474,
+        "no_motion_position_recorded_units": 0.0071000784635543825,
+        "model_rotation_deg": 3.558178285210972,
+        "no_motion_rotation_deg": 1.859624650498483
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 13,
+        "model_position_normalized": 1.651154637336731,
+        "no_motion_position_normalized": 0.8316074013710022,
+        "model_position_recorded_units": 0.1651154637336731,
+        "no_motion_position_recorded_units": 0.08316074013710023,
+        "model_rotation_deg": 21.628043967455344,
+        "no_motion_rotation_deg": 13.801145442421587
+      },
+      "gripper": {
+        "valid_targets": 13,
+        "correct": 4,
+        "accuracy": 0.3076923076923077,
+        "actual_open_count": 4,
+        "predicted_open_count": 7,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 4,
+        "hold_known_command_accuracy": 0.3076923076923077
+      }
+    },
+    "instruction": "pick up box cutter and put into drawer"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-9c2762965c1329beecad5ec272276f1dcd8e835f57eb9c394892c0a9db8883fe",
+    "episode_key": "bridge_data_v2-train.tfrecord-00181-of-01024::24",
+    "window_index": 769,
+    "input_row": 8,
+    "valid_targets": 13,
+    "payload_sha256": "c9c0d08a127b04d3eecc658ce1173ab9084fb10f06183555a289aa5fb0a360fb",
+    "sampling_seed": 1102,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.17780537903308868,
+        "no_motion_position_normalized": 0.016568217426538467,
+        "model_position_recorded_units": 0.017780537903308868,
+        "no_motion_position_recorded_units": 0.0016568217426538468,
+        "model_rotation_deg": 1.8379894407196589,
+        "no_motion_rotation_deg": 1.226825256137504
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 13,
+        "model_position_normalized": 1.1168534755706787,
+        "no_motion_position_normalized": 0.5763898491859436,
+        "model_position_recorded_units": 0.11168534755706788,
+        "no_motion_position_recorded_units": 0.057638984918594365,
+        "model_rotation_deg": 12.69880041758079,
+        "no_motion_rotation_deg": 11.139280067353527
+      },
+      "gripper": {
+        "valid_targets": 13,
+        "correct": 8,
+        "accuracy": 0.6153846153846154,
+        "actual_open_count": 2,
+        "predicted_open_count": 7,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 11,
+        "hold_known_command_accuracy": 0.8461538461538461
+      }
+    },
+    "instruction": "put spoon into pan"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-648122d6320cccfdae97b117f2931c09718b1e833698bd03fed413a9dd7263aa",
+    "episode_key": "bridge_data_v2-train.tfrecord-00175-of-01024::21",
+    "window_index": 362,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "554dd4796730ba78211efb5fac96696ecab0fdf45ac93bb3d879d2e1b2516530",
+    "sampling_seed": 1103,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.0995040312409401,
+        "no_motion_position_normalized": 0.126241996884346,
+        "model_position_recorded_units": 0.00995040312409401,
+        "no_motion_position_recorded_units": 0.012624199688434602,
+        "model_rotation_deg": 1.5243402527190502,
+        "no_motion_rotation_deg": 2.175087720777311
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.6838440299034119,
+        "no_motion_position_normalized": 0.9759366512298584,
+        "model_position_recorded_units": 0.0683844029903412,
+        "no_motion_position_recorded_units": 0.09759366512298584,
+        "model_rotation_deg": 13.289031606312133,
+        "no_motion_rotation_deg": 10.941967281272866
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 14,
+        "accuracy": 0.875,
+        "actual_open_count": 7,
+        "predicted_open_count": 9,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 9,
+        "hold_known_command_accuracy": 0.5625
+      }
+    },
+    "instruction": "Move the pot on top of the blue cloth."
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-428a47575e4eb19460c1d67cc2bbc7ea44d0ca08ca61d42ddf18c3ae6016e269",
+    "episode_key": "bridge_data_v2-train.tfrecord-00415-of-01024::17",
+    "window_index": 591,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "73fa523834d16b99a14c9b28792fb2731df64f06c8463931599ca9962b03add7",
+    "sampling_seed": 1104,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.2728275954723358,
+        "no_motion_position_normalized": 0.11856424808502197,
+        "model_position_recorded_units": 0.02728275954723358,
+        "no_motion_position_recorded_units": 0.011856424808502198,
+        "model_rotation_deg": 1.4782953149194857,
+        "no_motion_rotation_deg": 2.6367157217842223
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 2.1278116703033447,
+        "no_motion_position_normalized": 1.1543385982513428,
+        "model_position_recorded_units": 0.21278116703033448,
+        "no_motion_position_recorded_units": 0.11543385982513428,
+        "model_rotation_deg": 19.5643679773844,
+        "no_motion_rotation_deg": 14.76087040024584
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "moved the can to the bottom left side of the wooden table"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-b7b26e813f30de5959f331b6c887325ce4581f1e7b012356c464ece9190afdff",
+    "episode_key": "bridge_data_v2-train.tfrecord-00356-of-01024::57",
+    "window_index": 566,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "fded37e7278ae957189922d0db7f3f81070cab39dc427eba17a072496dde2be5",
+    "sampling_seed": 1105,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3754431903362274,
+        "no_motion_position_normalized": 0.02874825894832611,
+        "model_position_recorded_units": 0.03754431903362274,
+        "no_motion_position_recorded_units": 0.0028748258948326113,
+        "model_rotation_deg": 9.439956008190878,
+        "no_motion_rotation_deg": 1.1143319589863827
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 3.492412567138672,
+        "no_motion_position_normalized": 1.2118123769760132,
+        "model_position_recorded_units": 0.3492412567138672,
+        "no_motion_position_recorded_units": 0.12118123769760132,
+        "model_rotation_deg": 31.156352718458248,
+        "no_motion_rotation_deg": 5.657108067454235
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 10,
+        "accuracy": 0.625,
+        "actual_open_count": 5,
+        "predicted_open_count": 11,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 11,
+        "hold_known_command_accuracy": 0.6875
+      }
+    },
+    "instruction": "move the silver lid to the bottom right side of the violet cloth"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-718f8a97b552c9ab60078f0060d55fefed558788487183bc0b1429893af0ceff",
+    "episode_key": "bridge_data_v2-train.tfrecord-00175-of-01024::0",
+    "window_index": 329,
+    "input_row": 8,
+    "valid_targets": 14,
+    "payload_sha256": "54a529b46df0bd346434795aaa0769ab95b4770b807297b2ca6cb2416672af1f",
+    "sampling_seed": 1106,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3895881474018097,
+        "no_motion_position_normalized": 0.05422438681125641,
+        "model_position_recorded_units": 0.03895881474018097,
+        "no_motion_position_recorded_units": 0.005422438681125641,
+        "model_rotation_deg": 0.5247629663340059,
+        "no_motion_rotation_deg": 0.5087609833313549
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 14,
+        "model_position_normalized": 1.360376238822937,
+        "no_motion_position_normalized": 0.5444440245628357,
+        "model_position_recorded_units": 0.1360376238822937,
+        "no_motion_position_recorded_units": 0.05444440245628357,
+        "model_rotation_deg": 11.395477667136644,
+        "no_motion_rotation_deg": 7.268213340906533
+      },
+      "gripper": {
+        "valid_targets": 14,
+        "correct": 12,
+        "accuracy": 0.8571428571428571,
+        "actual_open_count": 3,
+        "predicted_open_count": 5,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 3,
+        "hold_known_command_accuracy": 0.21428571428571427
+      }
+    },
+    "instruction": "put spatula in pan"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-348a85caed32e7d6d610867276207f3c23f70459aae0fb69b77bf08aa24816b1",
+    "episode_key": "bridge_data_v2-train.tfrecord-00529-of-01024::31",
+    "window_index": 304,
+    "input_row": 8,
+    "valid_targets": 13,
+    "payload_sha256": "303b548a3a06160b876107a77b96dda840bb05cb40e82efa885ffa4be8c8c4b0",
+    "sampling_seed": 1107,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.13989949226379395,
+        "no_motion_position_normalized": 0.05013600364327431,
+        "model_position_recorded_units": 0.013989949226379396,
+        "no_motion_position_recorded_units": 0.005013600364327431,
+        "model_rotation_deg": 4.588879378392055,
+        "no_motion_rotation_deg": 2.037121299829152
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 13,
+        "model_position_normalized": 1.754199743270874,
+        "no_motion_position_normalized": 0.9393295645713806,
+        "model_position_recorded_units": 0.17541997432708742,
+        "no_motion_position_recorded_units": 0.09393295645713806,
+        "model_rotation_deg": 20.31911280169737,
+        "no_motion_rotation_deg": 15.664170164644194
+      },
+      "gripper": {
+        "valid_targets": 13,
+        "correct": 10,
+        "accuracy": 0.7692307692307693,
+        "actual_open_count": 3,
+        "predicted_open_count": 6,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 10,
+        "hold_known_command_accuracy": 0.7692307692307693
+      }
+    },
+    "instruction": "put pear in bowl"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-5407d2ba3b4c736069ef6d709d1b2012f89c16512c47c8cc80424ad7ee132c26",
+    "episode_key": "bridge_data_v2-train.tfrecord-00859-of-01024::17",
+    "window_index": 813,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "eb625b746792a7320aa22217564166b7c1aa10849f02d809925b148438f5842f",
+    "sampling_seed": 1108,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.26686209440231323,
+        "no_motion_position_normalized": 0.09561114758253098,
+        "model_position_recorded_units": 0.026686209440231326,
+        "no_motion_position_recorded_units": 0.009561114758253098,
+        "model_rotation_deg": 4.920427654028611,
+        "no_motion_rotation_deg": 3.836635555169169
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.9128659963607788,
+        "no_motion_position_normalized": 1.0565102100372314,
+        "model_position_recorded_units": 0.1912865996360779,
+        "no_motion_position_recorded_units": 0.10565102100372314,
+        "model_rotation_deg": 24.493585170459486,
+        "no_motion_rotation_deg": 20.346627790658992
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "actual_open_count": 4,
+        "predicted_open_count": 7,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 4,
+        "hold_known_command_accuracy": 0.25
+      }
+    },
+    "instruction": "take clothes out of laundry machine"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-67ced510117fd3f69a42f5c697c056308fbaf23e6ba30c9c0193ca8a477cdaef",
+    "episode_key": "language_table-train.tfrecord-00045-of-01024::32",
+    "window_index": 2084,
+    "input_row": 4,
+    "valid_targets": 12,
+    "payload_sha256": "7d43dfdafa83f2cd9fbfd301335596ecf2400b469f077e4d9e628113f221b052",
+    "sampling_seed": 1109,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.22730891406536102,
+        "no_motion_position_normalized": 0.05683427304029465,
+        "model_position_recorded_units": 0.022730891406536103,
+        "no_motion_position_recorded_units": 0.005683427304029465
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 12,
+        "model_position_normalized": 1.437480092048645,
+        "no_motion_position_normalized": 0.4827256202697754,
+        "model_position_recorded_units": 0.1437480092048645,
+        "no_motion_position_recorded_units": 0.04827256202697754
+      }
+    },
+    "instruction": "move the yellow hexagon slightly to the right"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-cef65132a020053d185d0df405d4fbae5a86439e76526bccd707a7aff5858b63",
+    "episode_key": "language_table-train.tfrecord-00805-of-01024::105",
+    "window_index": 2443,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "abbc234b4275f3d0a3f6b89a0f978dfa952fdf9413322f91337a75abd193a5d7",
+    "sampling_seed": 1110,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.55075603723526,
+        "no_motion_position_normalized": 0.296283483505249,
+        "model_position_recorded_units": 0.055075603723526004,
+        "no_motion_position_recorded_units": 0.029628348350524903
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 0.6838836073875427,
+        "no_motion_position_normalized": 0.47981908917427063,
+        "model_position_recorded_units": 0.06838836073875428,
+        "no_motion_position_recorded_units": 0.04798190891742707
+      }
+    },
+    "instruction": "push red circle to the group of blocks"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-cde07399c74f2d4c96e89400e66444e7eda6d904f1dd414f38a6c53bc40e5554",
+    "episode_key": "language_table-train.tfrecord-00750-of-01024::89",
+    "window_index": 1934,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "d38a90db0588e29bfc15f072b474121d035d2ed73ff7f74598f7dba052f0dd5b",
+    "sampling_seed": 1111,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.4429575502872467,
+        "no_motion_position_normalized": 0.2634062170982361,
+        "model_position_recorded_units": 0.044295755028724675,
+        "no_motion_position_recorded_units": 0.02634062170982361
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 1.3977653980255127,
+        "no_motion_position_normalized": 0.6876499056816101,
+        "model_position_recorded_units": 0.13977653980255128,
+        "no_motion_position_recorded_units": 0.06876499056816102
+      }
+    },
+    "instruction": "touch the top of the heart"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-11f03a23b2f30c0a157d6b44d2a3ec5df2810d9751c476d9a30785691f5216df",
+    "episode_key": "language_table-train.tfrecord-00750-of-01024::147",
+    "window_index": 1948,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "ffa8d43ab23e06590872d5fc82c28c67c60870282b098bf74ec617b9566047fe",
+    "sampling_seed": 1112,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.40191200375556946,
+        "no_motion_position_normalized": 0.2695123553276062,
+        "model_position_recorded_units": 0.04019120037555695,
+        "no_motion_position_recorded_units": 0.02695123553276062
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 0.5379533171653748,
+        "no_motion_position_normalized": 0.5941867828369141,
+        "model_position_recorded_units": 0.05379533171653748,
+        "no_motion_position_recorded_units": 0.059418678283691406
+      }
+    },
+    "instruction": "separate the yellow blocks"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-f2f7620ce1a9fbb13c5b5ffc5d45fbbf3a6481d41f5db2b069f6619c57e3c8ae",
+    "episode_key": "language_table-train.tfrecord-00269-of-01024::115",
+    "window_index": 1622,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "fc2cfeb557d02d96f943d4e74a5c6eced0526dfee629f5c938698eda17915dd0",
+    "sampling_seed": 1113,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.2450735867023468,
+        "no_motion_position_normalized": 0.04216834157705307,
+        "model_position_recorded_units": 0.02450735867023468,
+        "no_motion_position_recorded_units": 0.004216834157705307
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 0.6017859578132629,
+        "no_motion_position_normalized": 0.3385538160800934,
+        "model_position_recorded_units": 0.0601785957813263,
+        "no_motion_position_recorded_units": 0.03385538160800934
+      }
+    },
+    "instruction": "add the red circle into the group of blocks"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-798e5279308f54116d3211c947ae41900a37a37b0d1986e7077f87ca9079bc18",
+    "episode_key": "language_table-train.tfrecord-00630-of-01024::12",
+    "window_index": 2691,
+    "input_row": 20,
+    "valid_targets": 16,
+    "payload_sha256": "40af70e0a58244e85bfaa86d3bce4f0a047f2f49684225d7f4549987b977c4a0",
+    "sampling_seed": 1114,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 1.0008162260055542,
+        "no_motion_position_normalized": 0.2734675109386444,
+        "model_position_recorded_units": 0.10008162260055542,
+        "no_motion_position_recorded_units": 0.027346751093864443
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 16,
+        "model_position_normalized": 2.9263041019439697,
+        "no_motion_position_normalized": 1.2853814363479614,
+        "model_position_recorded_units": 0.292630410194397,
+        "no_motion_position_recorded_units": 0.12853814363479615
+      }
+    },
+    "instruction": "slide the red circle to the red star"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-ecc394dfd4029e2ed920bb647f123e9b06fbb69306ea1fcc72f0c1316786e595",
+    "episode_key": "language_table-train.tfrecord-00204-of-01024::316",
+    "window_index": 2328,
+    "input_row": 8,
+    "valid_targets": 13,
+    "payload_sha256": "c68a9c3fcf4c56b15697c74f255cc294dfeac854f3f437de4c27015f00e2fe99",
+    "sampling_seed": 1115,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.1951988786458969,
+        "no_motion_position_normalized": 0.16403813660144806,
+        "model_position_recorded_units": 0.01951988786458969,
+        "no_motion_position_recorded_units": 0.016403813660144807
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 13,
+        "model_position_normalized": 1.6006004810333252,
+        "no_motion_position_normalized": 0.43454405665397644,
+        "model_position_recorded_units": 0.16006004810333252,
+        "no_motion_position_recorded_units": 0.04345440566539765
+      }
+    },
+    "instruction": "push the green star right to the red circle"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-0587127eaa1d8a5e2072e6a28754b14886823c00d913a8671f58a28b4cd01718",
+    "episode_key": "language_table-train.tfrecord-00750-of-01024::36",
+    "window_index": 1896,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "5e9758a54b95d5b6631931882b7a450694e5d2d904c3052e97c9db3f2b20df48",
+    "sampling_seed": 1116,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.2112518548965454,
+        "no_motion_position_normalized": 0.39154353737831116,
+        "model_position_recorded_units": 0.021125185489654544,
+        "no_motion_position_recorded_units": 0.03915435373783112
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 16,
+        "model_position_normalized": 1.3985157012939453,
+        "no_motion_position_normalized": 1.1588538885116577,
+        "model_position_recorded_units": 0.13985157012939453,
+        "no_motion_position_recorded_units": 0.11588538885116578
+      }
+    },
+    "instruction": "move the red circle towards bottom left corner"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-11d4ee8375b663c4c926278c9c31a41c2faae4b12b9ca53d8305dc8984bb83fd",
+    "episode_key": "bc_z-train.tfrecord-00030-of-00512::66",
+    "window_index": 12693,
+    "input_row": 96,
+    "valid_targets": 16,
+    "payload_sha256": "cfa9129cd06ffd48e675a4442a0aaa0981b3bbbcb65d015e8faf0c8233b24510",
+    "sampling_seed": 1117,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.08158941566944122,
+        "no_motion_position_normalized": 0.0417449027299881,
+        "model_position_recorded_units": 0.008158941566944123,
+        "no_motion_position_recorded_units": 0.00417449027299881,
+        "model_rotation_deg": 1.466348994047999,
+        "no_motion_rotation_deg": 0.4441853624959377
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.4943325519561768,
+        "no_motion_position_normalized": 0.38004106283187866,
+        "model_position_recorded_units": 0.14943325519561768,
+        "no_motion_position_recorded_units": 0.03800410628318787,
+        "model_rotation_deg": 8.226681708328618,
+        "no_motion_rotation_deg": 2.7960203221268487
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 4,
+        "accuracy": 0.25,
+        "actual_open_count": 4,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 4,
+        "hold_known_command_accuracy": 0.25
+      }
+    },
+    "instruction": "wipe tray with eraser"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-5d747c05efd9af1a11827596044fb0dd40607898a9c2a6633e884aa164a4004b",
+    "episode_key": "bc_z-train.tfrecord-00447-of-00512::13",
+    "window_index": 8737,
+    "input_row": 84,
+    "valid_targets": 16,
+    "payload_sha256": "22c0ccaa9b8cec2c956eb0daf2d8a5a9d77f796e214942a55cbda5ab0bd81411",
+    "sampling_seed": 1118,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.23173289000988007,
+        "no_motion_position_normalized": 0.09003704786300659,
+        "model_position_recorded_units": 0.023173289000988008,
+        "no_motion_position_recorded_units": 0.00900370478630066,
+        "model_rotation_deg": 5.169925507834104,
+        "no_motion_rotation_deg": 5.816296869117137
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.7723658084869385,
+        "no_motion_position_normalized": 0.6596739292144775,
+        "model_position_recorded_units": 0.17723658084869387,
+        "no_motion_position_recorded_units": 0.06596739292144775,
+        "model_rotation_deg": 45.80112272401198,
+        "no_motion_rotation_deg": 53.007900096910376
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 0,
+        "predicted_open_count": 0,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place the pepper in the ceramic cup"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-69a96fb29ea0b0d8f2a5fad8bc6b958c03844d1341f300d3fd2ff6b7fa4e7ec5",
+    "episode_key": "bc_z-train.tfrecord-00389-of-00512::73",
+    "window_index": 3056,
+    "input_row": 48,
+    "valid_targets": 16,
+    "payload_sha256": "f1cd6da014446dd5643f1debb6f1d4f0e6354555fdff99b4c0dc4b93855bdf5e",
+    "sampling_seed": 1119,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.21147431433200836,
+        "no_motion_position_normalized": 0.09236597269773483,
+        "model_position_recorded_units": 0.021147431433200838,
+        "no_motion_position_recorded_units": 0.009236597269773484,
+        "model_rotation_deg": 2.285231947417099,
+        "no_motion_rotation_deg": 1.3670773767843023
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.4205771684646606,
+        "no_motion_position_normalized": 0.21823281049728394,
+        "model_position_recorded_units": 0.14205771684646606,
+        "no_motion_position_recorded_units": 0.021823281049728395,
+        "model_rotation_deg": 10.212049234249685,
+        "no_motion_rotation_deg": 4.976162122469985
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "wipe purple bowl with sponge"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-d3741d7c198ee19e2d8ba49e81a6735cc5838640d1e9b9e02e3952439139d138",
+    "episode_key": "bc_z-train.tfrecord-00047-of-00512::48",
+    "window_index": 4953,
+    "input_row": 32,
+    "valid_targets": 16,
+    "payload_sha256": "7d9460ac7b1ba7da4f3117ba3c8cd2d164eaa21771ecb8502b08b441a6304740",
+    "sampling_seed": 1120,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.10574909299612045,
+        "no_motion_position_normalized": 0.0003127875679638237,
+        "model_position_recorded_units": 0.010574909299612046,
+        "no_motion_position_recorded_units": 3.127875679638237e-05,
+        "model_rotation_deg": 1.0242948349497232,
+        "no_motion_rotation_deg": 0.004195963157657393
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.2762346565723419,
+        "no_motion_position_normalized": 0.0005447549046948552,
+        "model_position_recorded_units": 0.027623465657234194,
+        "no_motion_position_recorded_units": 5.4475490469485524e-05,
+        "model_rotation_deg": 7.34367858677672,
+        "no_motion_rotation_deg": 0.004098009500922836
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "drag the pepper across the table"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-41ea8ee73c85fffdd08651dff26b76beda0595343fc6d9fa871771de5b8ccfe9",
+    "episode_key": "bc_z-train.tfrecord-00429-of-00512::9",
+    "window_index": 5533,
+    "input_row": 96,
+    "valid_targets": 16,
+    "payload_sha256": "22058e02b35a677cc778885619abf9d30878c35a153946c95316fab9f39ac1ce",
+    "sampling_seed": 1121,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.18838408589363098,
+        "no_motion_position_normalized": 0.06741791218519211,
+        "model_position_recorded_units": 0.0188384085893631,
+        "no_motion_position_recorded_units": 0.006741791218519211,
+        "model_rotation_deg": 2.409938102563814,
+        "no_motion_rotation_deg": 0.45122966542078635
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.9911425113677979,
+        "no_motion_position_normalized": 0.17315232753753662,
+        "model_position_recorded_units": 0.0991142511367798,
+        "no_motion_position_recorded_units": 0.017315232753753663,
+        "model_rotation_deg": 13.76853960096814,
+        "no_motion_rotation_deg": 2.8089101594988564
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place eraser in paper cup"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-f75df5b632e4c376ac732f6940234ea38885acc8978d6c27a1776a0498c3b3dd",
+    "episode_key": "bc_z-train.tfrecord-00471-of-00512::54",
+    "window_index": 5932,
+    "input_row": 96,
+    "valid_targets": 16,
+    "payload_sha256": "0ecd76b6959c465448431583bae282d9f2ac1561bb70f6c00a5460f7e6ecb6c5",
+    "sampling_seed": 1122,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.1363229900598526,
+        "no_motion_position_normalized": 0.15341508388519287,
+        "model_position_recorded_units": 0.013632299005985261,
+        "no_motion_position_recorded_units": 0.015341508388519288,
+        "model_rotation_deg": 4.181707716679757,
+        "no_motion_rotation_deg": 1.3818703994779677
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.3612333536148071,
+        "no_motion_position_normalized": 1.3463026285171509,
+        "model_position_recorded_units": 0.13612333536148072,
+        "no_motion_position_recorded_units": 0.1346302628517151,
+        "model_rotation_deg": 13.043442713463572,
+        "no_motion_rotation_deg": 12.24215547631093
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place pepper in plastic cup"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-4ace50b61231572293e96bc4ccf3c08614cd995cb51bbaee53918fce70218236",
+    "episode_key": "bc_z-train.tfrecord-00429-of-00512::17",
+    "window_index": 5570,
+    "input_row": 44,
+    "valid_targets": 16,
+    "payload_sha256": "8cc3bf8a81aca6a32217dd5f48e444a156c6f1c28c4b7a47a32c39fdbaa1e645",
+    "sampling_seed": 1123,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.23365488648414612,
+        "no_motion_position_normalized": 0.2675136625766754,
+        "model_position_recorded_units": 0.023365488648414614,
+        "no_motion_position_recorded_units": 0.026751366257667542,
+        "model_rotation_deg": 3.962973065711852,
+        "no_motion_rotation_deg": 3.5712565968013297
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.0163416862487793,
+        "no_motion_position_normalized": 1.2443819046020508,
+        "model_position_recorded_units": 0.10163416862487794,
+        "no_motion_position_recorded_units": 0.12443819046020509,
+        "model_rotation_deg": 24.524006511640604,
+        "no_motion_rotation_deg": 12.141267338430097
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 15,
+        "accuracy": 0.9375,
+        "actual_open_count": 0,
+        "predicted_open_count": 1,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "knock the bottle over"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-7cebd7ff9e5246b2bee7a646bed2ee9ebb5d24f3ddcb933e88db77a0a98cea9c",
+    "episode_key": "bc_z-train.tfrecord-00429-of-00512::66",
+    "window_index": 5742,
+    "input_row": 96,
+    "valid_targets": 16,
+    "payload_sha256": "a792063a3bd7261032b689ef51146cfe9a001258f9bed048218727e405dd4f60",
+    "sampling_seed": 1124,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.08322479575872421,
+        "no_motion_position_normalized": 0.059299129992723465,
+        "model_position_recorded_units": 0.008322479575872422,
+        "no_motion_position_recorded_units": 0.005929912999272347,
+        "model_rotation_deg": 2.9102311239001795,
+        "no_motion_rotation_deg": 2.7056229454091083
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.237469881772995,
+        "no_motion_position_normalized": 0.1743146926164627,
+        "model_position_recorded_units": 0.0237469881772995,
+        "no_motion_position_recorded_units": 0.017431469261646272,
+        "model_rotation_deg": 6.855836343555697,
+        "no_motion_rotation_deg": 5.367234289312198
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 8,
+        "accuracy": 0.5,
+        "actual_open_count": 8,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 8,
+        "hold_known_command_accuracy": 0.5
+      }
+    },
+    "instruction": "place apple in metal cup"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-1039ea07d5fa986607a066b338aef589bf8eb5c32908a479158a22dcbd46b7aa",
+    "episode_key": "fractal20220817_data-train.tfrecord-00121-of-01024::78",
+    "window_index": 16305,
+    "input_row": 32,
+    "valid_targets": 16,
+    "payload_sha256": "b713a7aca4f6d846c63141edef1763894be3a1ed463a39c3aaa3a160db1c28a9",
+    "sampling_seed": 1125,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.09458620846271515,
+        "no_motion_position_normalized": 6.374534859787673e-05,
+        "model_position_recorded_units": 0.009458620846271516,
+        "no_motion_position_recorded_units": 6.374534859787673e-06,
+        "model_rotation_deg": 1.9184471081783494,
+        "no_motion_rotation_deg": 0.0004469992241522018
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.5285694599151611,
+        "no_motion_position_normalized": 0.033361710608005524,
+        "model_position_recorded_units": 0.052856945991516115,
+        "no_motion_position_recorded_units": 0.0033361710608005527,
+        "model_rotation_deg": 6.2468618090991725,
+        "no_motion_rotation_deg": 0.1649183293787281
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 4,
+        "accuracy": 0.25,
+        "actual_open_count": 4,
+        "predicted_open_count": 16,
+        "hold_baseline_available": false
+      }
+    },
+    "instruction": "pick 7up can from middle shelf of fridge"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-03b3d8dec1e68755a208cdd00d6905036362ea91b3b895022976f9fa2f622313",
+    "episode_key": "fractal20220817_data-train.tfrecord-00098-of-01024::81",
+    "window_index": 16059,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "c346147ac6ffd95c63cd61adc0cbaa629759e9167395e11d9c8f6b9b6c835265",
+    "sampling_seed": 1126,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.02737405337393284,
+        "no_motion_position_normalized": 0.040000468492507935,
+        "model_position_recorded_units": 0.002737405337393284,
+        "no_motion_position_recorded_units": 0.004000046849250794,
+        "model_rotation_deg": 2.263935605738401,
+        "no_motion_rotation_deg": 2.654041613595611
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.050905704498291,
+        "no_motion_position_normalized": 0.9518231153488159,
+        "model_position_recorded_units": 0.10509057044982911,
+        "no_motion_position_recorded_units": 0.0951823115348816,
+        "model_rotation_deg": 62.03005630900538,
+        "no_motion_rotation_deg": 47.287677338206194
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "actual_open_count": 0,
+        "predicted_open_count": 3,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place 7up can upright"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-9be1543ba6d544c6ddf62397362b342d54095a7aae992abf18a56206d3a456ac",
+    "episode_key": "fractal20220817_data-train.tfrecord-00909-of-01024::5",
+    "window_index": 17435,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "8ec1201945245f6e2bfd1bedb2446e0c40bba21469e4535a4c8c02d00865b00e",
+    "sampling_seed": 1127,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.1764150857925415,
+        "no_motion_position_normalized": 0.18720154464244843,
+        "model_position_recorded_units": 0.017641508579254152,
+        "no_motion_position_recorded_units": 0.018720154464244843,
+        "model_rotation_deg": 0.7676079534471385,
+        "no_motion_rotation_deg": 1.5685262624804825
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.6733429431915283,
+        "no_motion_position_normalized": 0.7226506471633911,
+        "model_position_recorded_units": 0.16733429431915284,
+        "no_motion_position_recorded_units": 0.07226506471633912,
+        "model_rotation_deg": 23.576002459663442,
+        "no_motion_rotation_deg": 12.579211480255246
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 8,
+        "accuracy": 0.5,
+        "actual_open_count": 15,
+        "predicted_open_count": 7,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 1,
+        "hold_known_command_accuracy": 0.0625
+      }
+    },
+    "instruction": "open bottom drawer"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-d53d66446efaccd421d2b2be1348fba904925e93742c5ddc05af3b96672f41ff",
+    "episode_key": "fractal20220817_data-train.tfrecord-00255-of-01024::34",
+    "window_index": 15657,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "b9b82424f4b066ee76286687a2b636de15844c59c4dda17795b4f981c6d76f79",
+    "sampling_seed": 1128,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.2307009994983673,
+        "no_motion_position_normalized": 0.09232568740844727,
+        "model_position_recorded_units": 0.023070099949836734,
+        "no_motion_position_recorded_units": 0.009232568740844728,
+        "model_rotation_deg": 3.1290557384205435,
+        "no_motion_rotation_deg": 2.7879724347178194
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.864471673965454,
+        "no_motion_position_normalized": 1.417266845703125,
+        "model_position_recorded_units": 0.18644716739654543,
+        "no_motion_position_recorded_units": 0.1417266845703125,
+        "model_rotation_deg": 20.72502590303015,
+        "no_motion_rotation_deg": 16.267603670541867
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 10,
+        "accuracy": 0.625,
+        "actual_open_count": 6,
+        "predicted_open_count": 12,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 10,
+        "hold_known_command_accuracy": 0.625
+      }
+    },
+    "instruction": "move pepsi can near apple"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-03104a4dd494ab9e68ab334badcf783aa207fe1fabe3700811f36cf4883b1ba4",
+    "episode_key": "fractal20220817_data-train.tfrecord-01015-of-01024::52",
+    "window_index": 14837,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "e17b17b2b0e9d195b275554045846b0c999b4f896d5f6856824f019cc50d6512",
+    "sampling_seed": 1129,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.13447050750255585,
+        "no_motion_position_normalized": 0.12007801234722137,
+        "model_position_recorded_units": 0.013447050750255585,
+        "no_motion_position_recorded_units": 0.012007801234722138,
+        "model_rotation_deg": 2.7265790067647298,
+        "no_motion_rotation_deg": 1.2109973061986514
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.7462742328643799,
+        "no_motion_position_normalized": 0.3758789896965027,
+        "model_position_recorded_units": 0.074627423286438,
+        "no_motion_position_recorded_units": 0.03758789896965027,
+        "model_rotation_deg": 55.92930359850296,
+        "no_motion_rotation_deg": 30.235757145378226
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 11,
+        "accuracy": 0.6875,
+        "actual_open_count": 5,
+        "predicted_open_count": 10,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 11,
+        "hold_known_command_accuracy": 0.6875
+      }
+    },
+    "instruction": "knock green can over"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-694235ad4513163e8e03aab0d0359a5e68f4ffa57a29b82e0a7b1228e1660b04",
+    "episode_key": "fractal20220817_data-train.tfrecord-00787-of-01024::2",
+    "window_index": 15845,
+    "input_row": 24,
+    "valid_targets": 16,
+    "payload_sha256": "bcdee99cc631078aca72dde5ecb5415bbb36c473762b0375882f99a4b558bbb7",
+    "sampling_seed": 1130,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3103335201740265,
+        "no_motion_position_normalized": 0.03202274441719055,
+        "model_position_recorded_units": 0.03103335201740265,
+        "no_motion_position_recorded_units": 0.003202274441719055,
+        "model_rotation_deg": 2.0283771651593883,
+        "no_motion_rotation_deg": 0.8207393622059279
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.2556791305541992,
+        "no_motion_position_normalized": 0.2453978955745697,
+        "model_position_recorded_units": 0.12556791305541992,
+        "no_motion_position_recorded_units": 0.024539789557456972,
+        "model_rotation_deg": 10.891557777830037,
+        "no_motion_rotation_deg": 5.6781703238686125
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 1,
+        "accuracy": 0.0625,
+        "actual_open_count": 0,
+        "predicted_open_count": 15,
+        "hold_baseline_available": false
+      }
+    },
+    "instruction": "knock coke can over"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-ca8aa5db57e724515baf9bfd2475a6c55548513b0a52fdc0e8fa4c30b7a62933",
+    "episode_key": "fractal20220817_data-train.tfrecord-00695-of-01024::54",
+    "window_index": 15589,
+    "input_row": 24,
+    "valid_targets": 16,
+    "payload_sha256": "4ace8a17e8956a6a57dbe51270ac671a8b21dc5f18bb6d3db6172dda1a48ab1a",
+    "sampling_seed": 1131,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.06924471259117126,
+        "no_motion_position_normalized": 0.049182575196027756,
+        "model_position_recorded_units": 0.006924471259117127,
+        "no_motion_position_recorded_units": 0.004918257519602776,
+        "model_rotation_deg": 3.1862116515587657,
+        "no_motion_rotation_deg": 3.59239449274726
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.6908961534500122,
+        "no_motion_position_normalized": 0.25079286098480225,
+        "model_position_recorded_units": 0.06908961534500123,
+        "no_motion_position_recorded_units": 0.025079286098480227,
+        "model_rotation_deg": 14.73075520717962,
+        "no_motion_rotation_deg": 14.080150345747851
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 5,
+        "accuracy": 0.3125,
+        "actual_open_count": 5,
+        "predicted_open_count": 16,
+        "hold_baseline_available": false
+      }
+    },
+    "instruction": "pick redbull can from bottom shelf of fridge"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-23f475bbc55cdc337145031cbe871c6ac7476578c32901bdc8bd5f83d6be58e1",
+    "episode_key": "fractal20220817_data-train.tfrecord-00259-of-01024::42",
+    "window_index": 15471,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "9ef80561383ee5e6945207bdb1d0f81760a086cd5cb13a44b654db4c7268eb92",
+    "sampling_seed": 1132,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.2859400510787964,
+        "no_motion_position_normalized": 0.11754973977804184,
+        "model_position_recorded_units": 0.02859400510787964,
+        "no_motion_position_recorded_units": 0.011754973977804185,
+        "model_rotation_deg": 3.6785799539161768,
+        "no_motion_rotation_deg": 2.0853921781620475
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.0007002353668213,
+        "no_motion_position_normalized": 0.9379974603652954,
+        "model_position_recorded_units": 0.10007002353668214,
+        "no_motion_position_recorded_units": 0.09379974603652955,
+        "model_rotation_deg": 19.770170774193115,
+        "no_motion_rotation_deg": 13.728319383982873
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 5,
+        "accuracy": 0.3125,
+        "actual_open_count": 11,
+        "predicted_open_count": 0,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 5,
+        "hold_known_command_accuracy": 0.3125
+      }
+    },
+    "instruction": "close top drawer"
+  }
+]

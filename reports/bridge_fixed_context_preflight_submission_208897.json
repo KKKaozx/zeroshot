@@ -1,0 +1,28 @@
+{
+  "job_id": "208897",
+  "stage": "preflight",
+  "submission_evidence": "User reported: 固定上下文预检：208897",
+  "scheduler_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:09:24",
+  "node": "gpu-a6000-1",
+  "completion_evidence": "User pasted sacct and log tail: FIXED CONTEXT PREFLIGHT PASSED",
+  "runtime_prefix_replay": {
+    "context_max_abs": 0.0,
+    "prediction_max_abs": 0.0,
+    "passed": true
+  },
+  "reported_first_losses": {
+    "joint_replay": 0.010412417352199554,
+    "masked_probe": 0.010412417352199554,
+    "masked_restored": 0.010412417352199554
+  },
+  "full_report_verified": true,
+  "full_report_verification_method": "Original unchanged validator executed locally on downloaded real report and source snapshots; included in reports/bridge_fixed_context_analysis_208964/analysis.json",
+  "formal_job_submitted": false,
+  "protocol_sha256": "ff909f9eae31c92c11ef1ab5fd3c7167215ed03680d0a8997639879fa2635d6c",
+  "log": "/projects/Zeroshot/logs/bridge-fixed-preflight-208897.out",
+  "report": "/projects/Zeroshot/runs/bridge-fixed-preflight-208897/report.json",
+  "full_report_available_locally": true,
+  "next_action": "Preflight fully verified and formal208964 completed. Do not repeat."
+}

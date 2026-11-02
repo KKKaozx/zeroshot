@@ -1,0 +1,2138 @@
+{
+  "files": {
+    "data/bridge_data_v2-train.tfrecord-00003-of-01024": "1cdce6f2f0d86db892e760e9e2b79944567d88e39c995ef54f873258c857f051",
+    "data/bridge_data_v2-train.tfrecord-00029-of-01024": "e0aee0751bc6613a90336818146b64e27396dcb65f40b9fd802f37eaf10c76d6",
+    "data/bridge_data_v2-train.tfrecord-00018-of-01024": "06abe8fc915dc13890519ef02195ef168d61de2416e20fbdebbce090aca81e41",
+    "data/bridge_data_v2-train.tfrecord-00022-of-01024": "0be138ff32063dba3fc86d5a2424e1dccd598fecd9b0aa745bdb9a61d96e71d7",
+    "data/bridge_data_v2-train.tfrecord-00023-of-01024": "85ba5202d6db6b9e7ce5a662bc8f365f9a2196bda9be49bec841920ff120cd43",
+    "data/bridge_data_v2-train.tfrecord-00019-of-01024": "400a72130a410125791a29e9e0b8eb8ae70c757e18bb97fe2b6df0362eae4f03",
+    "data/bridge_data_v2-train.tfrecord-00015-of-01024": "9e6b19d9d16d1b74f96eaa120a22225e3484b7dcda17cc3ad8b1016bdd563cfc",
+    "data/bridge_data_v2-train.tfrecord-00027-of-01024": "4f00cc33a976f33bf3afb8acf5b905be62805fd30c700a423ccbc548fec6f7d1",
+    "data/bridge_data_v2-train.tfrecord-00007-of-01024": "bb1ea3b7c96e5830c3a2b6e78d65cfef0118f7bbfc90492ad0bb50a11dcbf2e8",
+    "input_reference.npz": "9ce93524075b2ab9c5529fdd45f27dc552d16296078726fade89a28fc4cfa9d2",
+    "coverage_replay.npz": "639e44e7dcdf6dac58376665ef8a855966998f2bd76300df228565bdec806aec",
+    "rotation_weight_replay.npz": "e490b3c9acc4a762429dde59e523a7ceae7e6a4589c4a77d6770c165661fb365"
+  },
+  "source_shard_sha256": {
+    "bridge_data_v2-train.tfrecord-00003-of-01024": "f1415b4ecb390369120198a10852176a949dc7c607d045864568b6f834682e34",
+    "bridge_data_v2-train.tfrecord-00029-of-01024": "4bc083e790b7adb3919e1ab8ef9516c24e3124a796ec4812ec30ca4e3db034f8",
+    "bridge_data_v2-train.tfrecord-00018-of-01024": "b6d741c5d0f15aad313ec2c0d6f287be902af337ccb7c718e625c46f443df7a5",
+    "bridge_data_v2-train.tfrecord-00022-of-01024": "f039c62a36a4379a9b6d539fab55b40fb44440988159bc6634aff73c46680231",
+    "bridge_data_v2-train.tfrecord-00023-of-01024": "70ef3b21e9e90ff4b8fc43d03189ef1f9f0ae3019953249b4f6ba5a7499bf179",
+    "bridge_data_v2-train.tfrecord-00019-of-01024": "98aba6e99ed6448d082d0efad8c561e44c352b8a5acbe9a2df823e6f52f29442",
+    "bridge_data_v2-train.tfrecord-00015-of-01024": "cb1a83bbb0d2a1ff164e811411ee4c4991b29b523e9864ad4393eeadfc805b48",
+    "bridge_data_v2-train.tfrecord-00027-of-01024": "fda2ee8c690c045a71a8a256b3cc2d96ce24c6bc93c06d457cc5bc2e672c470c",
+    "bridge_data_v2-train.tfrecord-00007-of-01024": "82abd94bd72c6453a26bb8f82594eec4f37409c3d503491f9b798d1d0482d7d4"
+  },
+  "episodes": [
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+      "record_index": 5,
+      "episode_id": 0,
+      "steps": 30,
+      "instruction": "open the drawer",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/03/train/out.npy",
+      "payload_sha256": "9068fe2c9c8ab8ff1bc2ebd2e25af1b21f2a0059c0d6c13dd73615ed51036e45"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+      "record_index": 15,
+      "episode_id": 7,
+      "steps": 28,
+      "instruction": "open the drawer",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/deepthought_robot_desk/drawer_pnp/40/train/out.npy",
+      "payload_sha256": "d0f05daf45ed383cc1f0e230e9e4c77837e68c5db21b1b05908e5c4fdb6c5ce5"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+      "record_index": 8,
+      "episode_id": 9,
+      "steps": 45,
+      "instruction": "open the drawer",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/13/train/out.npy",
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+      "record_index": 34,
+      "episode_id": 12,
+      "steps": 39,
+      "instruction": "open the drawer",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/02/train/out.npy",
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+      "record_index": 28,
+      "episode_id": 249,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "payload_sha256": "08e3a3cdcc72e8f94196fd253c754a681f04cd29569817434df9a0337edac5ba"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+      "record_index": 6,
+      "episode_id": 180,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "payload_sha256": "d5a58d5e1749cc141bfe82b14b69481cbb9ed5b1b23bce7334bd4f40f8857d32"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+      "record_index": 2,
+      "episode_id": 152,
+      "steps": 23,
+      "instruction": "turn lever vertical to front",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/turn_lever_vertical_to_front_distractors/train/out.npy",
+      "payload_sha256": "29359793df546b1aacb67ae99d1d955abe17ee4c61074ee1669ffd746bdfa8e1"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+      "record_index": 12,
+      "episode_id": 95,
+      "steps": 38,
+      "instruction": "take broccoli out of pan",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy",
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+      "record_index": 13,
+      "episode_id": 153,
+      "steps": 38,
+      "instruction": "take broccoli out of pan",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen1/take_broccoli_out_of_pan_cardboardfence/train/out.npy",
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+      "record_index": 45,
+      "episode_id": 85,
+      "steps": 23,
+      "instruction": "close microwave",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen6/close_microwave/train/out.npy",
+      "payload_sha256": "fac0f224b1b223755fe16ef11b089e0eafc015707595d53b308bd90e833375b9"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+      "record_index": 1,
+      "episode_id": 41,
+      "steps": 38,
+      "instruction": "close microwave",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v1/berkeley/toykitchen5/close_microwave/train/out.npy",
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+      "record_index": 9,
+      "episode_id": 0,
+      "steps": 39,
+      "instruction": "close the drawer",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_toykitchen7/drawer_pnp/08/train/out.npy",
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3"
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+      "record_index": 55,
+      "episode_id": 22,
+      "steps": 43,
+      "instruction": "close the drawer",
+      "origin_file_path": "/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256/bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp/08/train/out.npy",
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83"
+    }
+  ],
+  "row_checks": [
+    {
+      "index": 0,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 0,
+        "task": "close the drawer",
+        "partition": "validation"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "7c8370fa6b833215ee37f2ee8bce3f4502879ece9631b9b5825e8f43dfe9ba15",
+        "decoded_rgb_sha256": "ba319dd8ff743eaa9038b53d2295cd798429ceb9ddeceec224c7d8459a35491a",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2289cde811bafb687fefeca17e386a8d1940440d5ecf12310868429f15e1f6fb",
+        "action_sha256": "6f071e079c79fd9a4f91a107ffab65e238d5b81cf1878cb1439a8fc309dc47ef",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "7baa31906948718198cbc05ae616cb3de03d12e3dde05e53da56a3e433ccf752",
+      "source_to_world_position_error_m": 1.088122812686887e-08,
+      "source_to_world_matrix_error": 2.4962830069696906e-07,
+      "processed_sha256": {
+        "image": "b637dbaf3829a7ea6c574e8e93534c194a1b84bb4d49c5b91e377a130a1198d3",
+        "target": "6697a06d1140e5b87c2fd55e6a4ab25264eb93583caaddcce04498453699586e",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 1,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 4,
+        "task": "close the drawer",
+        "partition": "validation"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "804ee984ed8e3ed3614de55a5fc9f421a069fd611d13cc92879ef25959a14bc0",
+        "decoded_rgb_sha256": "bfa0732eaab9e37863c2e91c5ea5c19364c2b12303076c8b659831fe601d9e03",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2289cde811bafb687fefeca17e386a8d1940440d5ecf12310868429f15e1f6fb",
+        "action_sha256": "6f071e079c79fd9a4f91a107ffab65e238d5b81cf1878cb1439a8fc309dc47ef",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "7baa31906948718198cbc05ae616cb3de03d12e3dde05e53da56a3e433ccf752",
+      "source_to_world_position_error_m": 9.286752436499235e-09,
+      "source_to_world_matrix_error": 2.8917261462452215e-07,
+      "processed_sha256": {
+        "image": "a8d5b667014d4d949933c1f05ac7964b31e2604df0d3a43a09265a28ff86a3d2",
+        "target": "8ed777c8e4ad6346376946aab47ffdcfeeecf87a162995833c29391f3557bce7",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 2,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 8,
+        "task": "close the drawer",
+        "partition": "validation"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "83447ba7b98bb9560a426cc42c7f00b75ff148af250cb1c7012d209accd23e22",
+        "decoded_rgb_sha256": "89bf01f4d1b11b81c6b0f211eab9852e0d8c934a4ab5011f729540cd636d26dd",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2289cde811bafb687fefeca17e386a8d1940440d5ecf12310868429f15e1f6fb",
+        "action_sha256": "6f071e079c79fd9a4f91a107ffab65e238d5b81cf1878cb1439a8fc309dc47ef",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "7baa31906948718198cbc05ae616cb3de03d12e3dde05e53da56a3e433ccf752",
+      "source_to_world_position_error_m": 1.9310482268775075e-08,
+      "source_to_world_matrix_error": 3.141787465396617e-07,
+      "processed_sha256": {
+        "image": "c0d29fc7e9fa14beeb69ac5e8fcc47de1320a32cfa6bdce8ee65eabe8a5e3f55",
+        "target": "6b8026c5e0df8b30294b79c8548df1a48b265b09dc59b0bc5f6f22f0ff878163",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 3,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 22,
+        "start_index": 12,
+        "task": "close the drawer",
+        "partition": "validation"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "f506db274824d3c6076bef6f40ecb54dc4da3d48bad9cb0c7e740fc2c4175f6f",
+        "decoded_rgb_sha256": "2daef8250e795b1266e20cc257d35420f91aad7efd0db38bcb9953e56f76534a",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2289cde811bafb687fefeca17e386a8d1940440d5ecf12310868429f15e1f6fb",
+        "action_sha256": "6f071e079c79fd9a4f91a107ffab65e238d5b81cf1878cb1439a8fc309dc47ef",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "7baa31906948718198cbc05ae616cb3de03d12e3dde05e53da56a3e433ccf752",
+      "source_to_world_position_error_m": 3.2534542560025415e-08,
+      "source_to_world_matrix_error": 2.0199903237594352e-07,
+      "processed_sha256": {
+        "image": "95dc824b451e1b53b09df997a37f6e2e430b5578c4b56bc1d446f53f612e4b5b",
+        "target": "5cab2c15049e99ebf88c6a26d3269c28c7e1fb9f3634a7af2e120b8de0aaff76",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 4,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 5,
+        "start_index": 0,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "e9975260b34b441a836cd581e79409fbb5fb8acb5240598ece378f8e2fc287ec",
+        "decoded_rgb_sha256": "4c6ef28a9ac4f80c5998722c5e879ac335d4a97235d0470dfc01beaa5372910b",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "9b3af81f12cd52223f7d8539bd41a2bebbfe3d7506f75104cbc695a70b96a0b6",
+        "action_sha256": "2ed249aefa59d9fbbe104c6dfbd846acb3f836cab8884b792c32287300cad7b4",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9068fe2c9c8ab8ff1bc2ebd2e25af1b21f2a0059c0d6c13dd73615ed51036e45",
+      "source_to_world_position_error_m": 7.558539391605557e-09,
+      "source_to_world_matrix_error": 4.033296942262954e-08,
+      "processed_sha256": {
+        "image": "8167567be6fc794fe23d5e655ea38cb101dba3dcf383c37af43a75f06b196866",
+        "target": "e1e136f538b0ed45b740bd6749d9e472ebb97c200e620e15c21866d4535d87e5",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 5,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 5,
+        "start_index": 4,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "bcc671a6b5968688a1b2046d668c327373d97b92040287b92247a164ab2c4a39",
+        "decoded_rgb_sha256": "67ce0bbd5b438508d637c00ed697bab28eafd9faba4ad9cddb9305224f7d549a",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "9b3af81f12cd52223f7d8539bd41a2bebbfe3d7506f75104cbc695a70b96a0b6",
+        "action_sha256": "2ed249aefa59d9fbbe104c6dfbd846acb3f836cab8884b792c32287300cad7b4",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9068fe2c9c8ab8ff1bc2ebd2e25af1b21f2a0059c0d6c13dd73615ed51036e45",
+      "source_to_world_position_error_m": 5.663852525872315e-09,
+      "source_to_world_matrix_error": 3.602196921304035e-08,
+      "processed_sha256": {
+        "image": "97b8f408d89b9743f8298b62e4f15c147b1eb3707612d82e366c4bf234f0397c",
+        "target": "f9f1ac3fe18f2e06809457e020a0c13ffe6ef028a9238513b0e0dfb9e13b39b6",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 6,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 5,
+        "start_index": 8,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "6e4d197a21cb50c01602c4904b4ae3aac500413d203c8942ba23d3ac30574a20",
+        "decoded_rgb_sha256": "01710c96cdcf156189afdc044127fe663c61c4e6574346df3ac8a8b1a38e03b1",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "9b3af81f12cd52223f7d8539bd41a2bebbfe3d7506f75104cbc695a70b96a0b6",
+        "action_sha256": "2ed249aefa59d9fbbe104c6dfbd846acb3f836cab8884b792c32287300cad7b4",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9068fe2c9c8ab8ff1bc2ebd2e25af1b21f2a0059c0d6c13dd73615ed51036e45",
+      "source_to_world_position_error_m": 8.179066687818981e-09,
+      "source_to_world_matrix_error": 3.650971705515538e-08,
+      "processed_sha256": {
+        "image": "467e3fd53e2c50019c8cf4897be59ee7c4d6f4f7a4c7a7eb0cd634d98c75cd12",
+        "target": "4de97591e998115320a75e8957d5d6580640f60d77372f6b00d64b94731d5e7c",
+        "current": "70d6ad2b819611a41b99fbcf8017de895687454d6571ab5ebc95a7abca3063e5"
+      }
+    },
+    {
+      "index": 7,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00029-of-01024",
+        "record_index": 5,
+        "start_index": 12,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "86f4996164abec5dbfa19d215a2b39a1799aa60837dadbbe6fd74d9c2cf6a41f",
+        "decoded_rgb_sha256": "438d68c984a41642002119232e72be31d501a361e0c1b3f7f928e69525f54ee7",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "9b3af81f12cd52223f7d8539bd41a2bebbfe3d7506f75104cbc695a70b96a0b6",
+        "action_sha256": "2ed249aefa59d9fbbe104c6dfbd846acb3f836cab8884b792c32287300cad7b4",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9068fe2c9c8ab8ff1bc2ebd2e25af1b21f2a0059c0d6c13dd73615ed51036e45",
+      "source_to_world_position_error_m": 8.41028563458579e-09,
+      "source_to_world_matrix_error": 5.272807457323836e-08,
+      "processed_sha256": {
+        "image": "00a13aa17c8bbc340b7035b052740722e49a6f28e970c918d1e8d9eec6632192",
+        "target": "0c1f6ef09ae29e658aacd4c8785ddd5cd2a2c7e1e84d8e3a821f254fde9737d3",
+        "current": "0c59980ce5c7bcf7320fd0c66165ce41472ff28000b3fc54991f5478fb9a0bae"
+      }
+    },
+    {
+      "index": 8,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 15,
+        "start_index": 0,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "37a812a81fdf6da911abca0c2b8a8ffc5551e38d28e5a82cbc152e754b1ba523",
+        "decoded_rgb_sha256": "35b187d3bbc0bb4f2861b35d67705959303a2f028158995f2ea522fa14633ef3",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "023a1cd7d02715dfb0848f3f86883a33abcbf59159875c3089d74e0329e6471e",
+        "action_sha256": "585baff1ad0b2de471a50a28d387910cffda14d8fe7caa6f24a2806721f9ca08",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "d0f05daf45ed383cc1f0e230e9e4c77837e68c5db21b1b05908e5c4fdb6c5ce5",
+      "source_to_world_position_error_m": 1.5765285715785282e-08,
+      "source_to_world_matrix_error": 3.6383569282372186e-08,
+      "processed_sha256": {
+        "image": "5f1f05bd0a8652af021b20135239eb355219358030a5f3ba1fb58e9a0ddef2ea",
+        "target": "7d85895381c05a438d3c475a78b7bc9b0b2e5b0eabacaef3219285485d227d53",
+        "current": "43186297fcd7e47f7b30694280a017c20c16036dd1e9c3e6245dc296985ed8a8"
+      }
+    },
+    {
+      "index": 9,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 15,
+        "start_index": 4,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "2add099f893eaa7a518bda34b50be8b8d68f7005797018c1908b407581fd68f1",
+        "decoded_rgb_sha256": "79615179e6dcf48cd5b298423173884585886e485b4cb5b84f37f048c2482dec",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "023a1cd7d02715dfb0848f3f86883a33abcbf59159875c3089d74e0329e6471e",
+        "action_sha256": "585baff1ad0b2de471a50a28d387910cffda14d8fe7caa6f24a2806721f9ca08",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "d0f05daf45ed383cc1f0e230e9e4c77837e68c5db21b1b05908e5c4fdb6c5ce5",
+      "source_to_world_position_error_m": 1.75772700145016e-08,
+      "source_to_world_matrix_error": 4.6459244951169154e-08,
+      "processed_sha256": {
+        "image": "08bb94f7c3f0028947db623be7925826fc2a45f0799034987d7d36e26511f95e",
+        "target": "2fd58b1addc1ad8dcd1c853c214e8b3c497f0f946b17a1ce98eaf0849a4dddad",
+        "current": "43186297fcd7e47f7b30694280a017c20c16036dd1e9c3e6245dc296985ed8a8"
+      }
+    },
+    {
+      "index": 10,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 15,
+        "start_index": 8,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "f292f55b5a7dc2fd7d9d81db22a810c2b3dfff28aed3458c2847d44288784e0a",
+        "decoded_rgb_sha256": "5e5fd29735f56da6734da94c2ae852dfc93480bd91d379183031d649f67bc376",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "023a1cd7d02715dfb0848f3f86883a33abcbf59159875c3089d74e0329e6471e",
+        "action_sha256": "585baff1ad0b2de471a50a28d387910cffda14d8fe7caa6f24a2806721f9ca08",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "d0f05daf45ed383cc1f0e230e9e4c77837e68c5db21b1b05908e5c4fdb6c5ce5",
+      "source_to_world_position_error_m": 7.110779270957934e-09,
+      "source_to_world_matrix_error": 4.6015089502637885e-08,
+      "processed_sha256": {
+        "image": "ce1862001787eff5a0f5b1cb5abbbcd4bf275db1b3c759386c37a4937538169c",
+        "target": "350d0b8b854de359efc920c72eb5319cfd88def0fc93fa59e3f86db8b4912687",
+        "current": "43186297fcd7e47f7b30694280a017c20c16036dd1e9c3e6245dc296985ed8a8"
+      }
+    },
+    {
+      "index": 11,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 0,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "2799ce3c9d1748fe8d3025e24c634d20050c203cd9e347b2a69dafd5395f9fd3",
+        "decoded_rgb_sha256": "a72463d0b551b1a392665695a664d6f520ee5117635474d874bdddd656b415bf",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 1.3199409620856528e-08,
+      "source_to_world_matrix_error": 1.1894281409796648e-07,
+      "processed_sha256": {
+        "image": "f2d865e75ee610a584aecb3930191fb1b380162293f78e8c1758c97c0093cedb",
+        "target": "2b683c995c26e5cb2d0f3215e80c05ea7e7fa2a72a672d32c3832e815bdb9550",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 12,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 4,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "6c5ddd8865125cf285b328bbf67a931557ce29b6ede66cf28a2f153adc18cb88",
+        "decoded_rgb_sha256": "ddf33d89381215f2260f546ba6df8f21d02d2d76b5c2570c99871edf1b18de05",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 1.3526730846535884e-08,
+      "source_to_world_matrix_error": 2.0202142902991937e-07,
+      "processed_sha256": {
+        "image": "91970ac4c0e173730f0c88b2baa77dd66a43c3579c0ed22b74fa15f9800bb875",
+        "target": "dae669287a0ba80c4bb57eeee6a30f58635314ae71b874807eb3d0b92d1f9a9e",
+        "current": "44f624dc522cd2f541b5265fc3c0f7082108885d2e8acccbf7c0fcd3753d10a0"
+      }
+    },
+    {
+      "index": 13,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 8,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "55967a6650637ad6ce0293dfeaf58be3a8c193d7589ff00d549d51db2bd483a1",
+        "decoded_rgb_sha256": "efa2d9458161095b2082be0276eb0aa964b30cb9d05667f9cdc0a9cb15be3894",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 9.975502007764092e-09,
+      "source_to_world_matrix_error": 1.4707843765116024e-07,
+      "processed_sha256": {
+        "image": "1f32a21ea4c2e32acfaf73c959c5a1bf66c06cdc4aaa7eff9597ecd31431172f",
+        "target": "8b22f5b9107f927c78cfe4cc0b876c026b3b7dea83bcfee14e8696acb02252d0",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 14,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 12,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "437448c61610bcdc042bb852157471dbdda860e6d235491df29710fd2b973209",
+        "decoded_rgb_sha256": "50d2f7951826b29a81a197ffd40ce6531efc3bcfb49181702def5ca7e2f646f5",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 7.573381949343982e-09,
+      "source_to_world_matrix_error": 1.0574113418204689e-07,
+      "processed_sha256": {
+        "image": "0ca5dfcecf393b25460a6919780efb7ff3fdfe8f555e298627bbfa9a3724823c",
+        "target": "2af29058829e33d3e574df47bef78467cf4755e224cd3eefea06a78d95060eb1",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 15,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 16,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "6a18975f73dd4ba5d0564f05bd06e43ffce141c1d448353fb50e281b6113a3ae",
+        "decoded_rgb_sha256": "60995ee7e49bbcbb924f062b06dc71210b6221dd246b59808b974e03d64d8476",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 1.0664826716189069e-08,
+      "source_to_world_matrix_error": 1.297978348135942e-07,
+      "processed_sha256": {
+        "image": "9fdd6ea6cf6141c991666437324fefbb223a52d2a3c3b7e840a6b4c06e36529c",
+        "target": "006e0b20b4a82e93e2f30a0b9df092824e30639415bc588cb13adc3fadd58ecf",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 16,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 20,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "09c80db6a78ab7c37a235f81ce569a2f5a2fee4f01fc8c573b6aac839a040b81",
+        "decoded_rgb_sha256": "d9a95d3b9a853eb7ab8ccb1d853d7f8e0001bdd95dfb1427a4596363e87a0f4c",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 2.0509997034068306e-08,
+      "source_to_world_matrix_error": 1.4629739908400552e-07,
+      "processed_sha256": {
+        "image": "51adc2c1baeb6d968463fc40a8d88f0718bbcc789a58cfacfd0958e57d02b451",
+        "target": "c7655a052be7ed864772dc90a50ab7d5292939ab1ef68c5e1a49faa9c108d932",
+        "current": "dfcdef808e626dac32bc27250e217542efa5224ec9697d708d6f139cb2dc4e3e"
+      }
+    },
+    {
+      "index": 17,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 24,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "43e311e7350c70a8916cffdc0760e3e5f3ae24a3a3333415aaeb65721eba2149",
+        "decoded_rgb_sha256": "1eddc8988528bd8230c6ae37161ff48971a1b50a23fff61bfc68af1f9e437725",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 5.548207504535441e-09,
+      "source_to_world_matrix_error": 1.6077979192452574e-07,
+      "processed_sha256": {
+        "image": "bcfbb0fd7a56a0b70ba2c87d4a9772dcd1fd0587d2d76c40af51699adb3a570a",
+        "target": "4630901c0e1025a04be88bdcbfdc3e84145d6a2f10da55afa0840cfc8e1b2662",
+        "current": "7eaf06b3d470e19e3811fe858b6a2d34525921cab245746fc2aa8d9b6571ceb9"
+      }
+    },
+    {
+      "index": 18,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 8,
+        "start_index": 28,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "4d0ff994c9e2397d0497ff590f27f608721b71e57b5848cf31f449d2c44545fe",
+        "decoded_rgb_sha256": "530fc109e8be4c7721908794f141de532ae4a7334f12b3022231393e64fdb887",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f08b7a4b857994f6acc6a2074611ddcdef5171c312323d319e10356cd646e81f",
+        "action_sha256": "00e09523dc59f37ce0b40bd65159c514fb2cb36b7abf0bd8f225d7d3a1721a77",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "217b5e4d7d6680598299e123cbcf3229b95fb6f747176c445ea31ae5da82155e",
+      "source_to_world_position_error_m": 3.5878591486682154e-09,
+      "source_to_world_matrix_error": 1.409019744214035e-07,
+      "processed_sha256": {
+        "image": "e18e9ab75a1d0fedfb8e242c6aa845bcb3c5e0fc0bcc44b521ae1d9e6a76e779",
+        "target": "681736e6f22b0b04e095270a10c6c431fbc688d43f42c5b4dbfc4b4f10b49cde",
+        "current": "7eaf06b3d470e19e3811fe858b6a2d34525921cab245746fc2aa8d9b6571ceb9"
+      }
+    },
+    {
+      "index": 19,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "start_index": 0,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "22ac566819c709cba3714275bc2fd2e89554a24ace161466935d5be516a7f7f7",
+        "decoded_rgb_sha256": "5109dd29f9eb78a7fa7c00a211f530125e65e5b7e7535a855eed7e2d9d7a68bc",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0238552c26bd6690a70fe87dcef266301a0d73c11f317c2cff311e5b8e5b9b07",
+        "action_sha256": "1ee1d1bc32a567f1abde596867b6e43d07bb2bee800965cb2e7986e00bef9776",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023",
+      "source_to_world_position_error_m": 9.806697939818143e-09,
+      "source_to_world_matrix_error": 4.251093774221282e-08,
+      "processed_sha256": {
+        "image": "c8ef69f91f8b01c87c62ad15b10ace12ec24429f99340e0679b7a92a561b6f13",
+        "target": "e8c32c294bee3442f4701037330f4c5bca1173acb33f08a122c81707ca1cc8b0",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 20,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "start_index": 4,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "86bc82547013aa22b2a338ca70561ae33c3e312071bf5355d98509b487ec7431",
+        "decoded_rgb_sha256": "71472b7793755441daa3632c7c0be5c41e693e7c1cd3347122159687ebfb3d12",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0238552c26bd6690a70fe87dcef266301a0d73c11f317c2cff311e5b8e5b9b07",
+        "action_sha256": "1ee1d1bc32a567f1abde596867b6e43d07bb2bee800965cb2e7986e00bef9776",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023",
+      "source_to_world_position_error_m": 1.0215130005764017e-08,
+      "source_to_world_matrix_error": 4.032944792009552e-08,
+      "processed_sha256": {
+        "image": "c4d51f6e6630351aab2cd2a2aa324eedc77371f0c071bc753e68f44399ce07b7",
+        "target": "66ce3b91e54a4965c229c1d3db33841c83f873e450705bc55337519b753f511c",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 21,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "start_index": 8,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "ddde55874109ee87da215a2008621bb296bc3f91677b89a4c901c5ef172e80b6",
+        "decoded_rgb_sha256": "dcb7511bf30b210bbb22b7f42a242c7f1d735764f5648bc47a780ac5027da72e",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0238552c26bd6690a70fe87dcef266301a0d73c11f317c2cff311e5b8e5b9b07",
+        "action_sha256": "1ee1d1bc32a567f1abde596867b6e43d07bb2bee800965cb2e7986e00bef9776",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023",
+      "source_to_world_position_error_m": 4.9964478388009326e-09,
+      "source_to_world_matrix_error": 4.599059658452753e-08,
+      "processed_sha256": {
+        "image": "5bec26dd8925207e259033aef4d89b1e23f6b9d4bc41159ac4d0f683b75d8860",
+        "target": "30dec4c49d4e33eda3c327fe438c8a284a159a3d2b81689bff8c8cc945cca376",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 22,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "start_index": 12,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "87e678632fb054cc7170d5b955d8f5f09d4bc2fd030cb0bcb22de8a4048e6d45",
+        "decoded_rgb_sha256": "3a1e0dc2c42b21468844d45ae8a8537236dd439d32e529129aa626e4f9c37a18",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0238552c26bd6690a70fe87dcef266301a0d73c11f317c2cff311e5b8e5b9b07",
+        "action_sha256": "1ee1d1bc32a567f1abde596867b6e43d07bb2bee800965cb2e7986e00bef9776",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023",
+      "source_to_world_position_error_m": 8.565377435099109e-09,
+      "source_to_world_matrix_error": 5.1691960489819166e-08,
+      "processed_sha256": {
+        "image": "28835682a466b7899b5f00ce070340a6190853dee3811f53271a3ec768bc814d",
+        "target": "52a73c4097c7cd05e9f855d5d33474e145fcd1a5df4d90bcaee13a7b06367d8f",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 23,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "start_index": 16,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "2888eb84946f90e2421249368251c62ec32275b47b876070d622b37126a6632c",
+        "decoded_rgb_sha256": "8a0d3a3606dafcbea958ecd294e0df9883eddf8516d0eea40b94fff0af05429b",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0238552c26bd6690a70fe87dcef266301a0d73c11f317c2cff311e5b8e5b9b07",
+        "action_sha256": "1ee1d1bc32a567f1abde596867b6e43d07bb2bee800965cb2e7986e00bef9776",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023",
+      "source_to_world_position_error_m": 6.269815167048165e-09,
+      "source_to_world_matrix_error": 5.4917841080248664e-08,
+      "processed_sha256": {
+        "image": "15499a6af4faf155c0d176b3bb47b34ed7ff5b68d5f7698c543a8759f91847d7",
+        "target": "fb1ebe531f5f1feca4bee1a87419cebacfdb66dbe0c6bb7853ac55d6e6f81553",
+        "current": "c924b470625a0a4e9b1b8a20859c8a311de88721dbe55a722ea0a8cd9dfe09fb"
+      }
+    },
+    {
+      "index": 24,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00023-of-01024",
+        "record_index": 34,
+        "start_index": 20,
+        "task": "open the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "open the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "aae7569a26c12312ed2f35b634f9bea0c4a324a341283ba9c94d3621c8086bbb",
+        "decoded_rgb_sha256": "622dd74c3ded020d831215d72ecd2a1297cb132844d31608a5d3dcc15f3d427d",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0238552c26bd6690a70fe87dcef266301a0d73c11f317c2cff311e5b8e5b9b07",
+        "action_sha256": "1ee1d1bc32a567f1abde596867b6e43d07bb2bee800965cb2e7986e00bef9776",
+        "instruction_sha256": "645dab60843458b2ea6bdce85d64f9e4c1898f33d5665743a19e0b2d4fc78701"
+      },
+      "payload_sha256": "9f90fa62e28a1315e4e9713b189e18ccb0f1a7b83b30b68554509cade581e023",
+      "source_to_world_position_error_m": 4.8372351124648105e-09,
+      "source_to_world_matrix_error": 4.894497523943997e-08,
+      "processed_sha256": {
+        "image": "72040f91f06bfc5ac8cdac20b1793c0e647f3a719f48fbe1441747bde04bac31",
+        "target": "46daed89008cca63c983c0583d7d5796c102d9bff2b0477e11d60272befdb667",
+        "current": "b4a0aef114516e60b1a0ec2582c78950c83a1820b8cff5e1c9be8cc05127291b"
+      }
+    },
+    {
+      "index": 25,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 28,
+        "start_index": 0,
+        "task": "turn lever vertical to front",
+        "partition": "sealed_test"
+      },
+      "text": "turn lever vertical to front",
+      "raw_identity": {
+        "encoded_image_sha256": "6ad585a44bf58d8f61436d7d4fd579dfc4408b16c74701072025a5043ac972f1",
+        "decoded_rgb_sha256": "2e9ff1da374756b7641a58a28f8ae3b6665bb3e061fc7470fb3b9a65312dfdf2",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f66f3774029ea01ca07feb77affc9ba0efa768031504dd52006643d2489f4c8c",
+        "action_sha256": "4facc5528321824957f351ea374c384896c53bda60a2480ef3fb9a5e2c2e800a",
+        "instruction_sha256": "b659ee5206dae5135e93be0cc222de208bfbd617d985211274ed18be49bbc1df"
+      },
+      "payload_sha256": "08e3a3cdcc72e8f94196fd253c754a681f04cd29569817434df9a0337edac5ba",
+      "source_to_world_position_error_m": 3.082978705659656e-09,
+      "source_to_world_matrix_error": 1.0400889177697437e-07,
+      "processed_sha256": {
+        "image": "3469266f407c29f0b0f263366422fc59e5811ea1e80be69f2cd9667b630a46be",
+        "target": "533e09f35108937c4d36e7b39c019fa6f87659c46c5820a2ab96d2da63ad1e07",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 26,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00019-of-01024",
+        "record_index": 28,
+        "start_index": 4,
+        "task": "turn lever vertical to front",
+        "partition": "sealed_test"
+      },
+      "text": "turn lever vertical to front",
+      "raw_identity": {
+        "encoded_image_sha256": "eaa4b98b52cd385c3cfd67df99890435d6590fde52cfb505051a7dc753d81f12",
+        "decoded_rgb_sha256": "9d9917ca6ecef2ad4236fdfeb7431a09036f62753fde699ad8b0070dde24a122",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f66f3774029ea01ca07feb77affc9ba0efa768031504dd52006643d2489f4c8c",
+        "action_sha256": "4facc5528321824957f351ea374c384896c53bda60a2480ef3fb9a5e2c2e800a",
+        "instruction_sha256": "b659ee5206dae5135e93be0cc222de208bfbd617d985211274ed18be49bbc1df"
+      },
+      "payload_sha256": "08e3a3cdcc72e8f94196fd253c754a681f04cd29569817434df9a0337edac5ba",
+      "source_to_world_position_error_m": 3.593388753220239e-09,
+      "source_to_world_matrix_error": 6.188363421699705e-08,
+      "processed_sha256": {
+        "image": "5ad6431fdaebf30294e194fc129d712821caec0e0052e7191fd299b916e919bb",
+        "target": "660fa3777ba5f0e2e0ea0a54282b5036705769f678964778fb7021aff41780f8",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 27,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 6,
+        "start_index": 0,
+        "task": "turn lever vertical to front",
+        "partition": "sealed_test"
+      },
+      "text": "turn lever vertical to front",
+      "raw_identity": {
+        "encoded_image_sha256": "305ee3f36854a83906e7cd3120233efcb3773a41c65a6e8360736992a993e387",
+        "decoded_rgb_sha256": "62e1199adc3811c277f799e78f9b9c3b02a7792ae6f1c8c97192281f158a8890",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f6a31df6f6552f2635b3bcb6ea71a100102cfc1f54f13ce486c95fe1b9693633",
+        "action_sha256": "e228119ba649a2a9dd3f8d161ec6338b12ade426191cbd2ea9996077cf388e35",
+        "instruction_sha256": "b659ee5206dae5135e93be0cc222de208bfbd617d985211274ed18be49bbc1df"
+      },
+      "payload_sha256": "d5a58d5e1749cc141bfe82b14b69481cbb9ed5b1b23bce7334bd4f40f8857d32",
+      "source_to_world_position_error_m": 5.293150251439727e-09,
+      "source_to_world_matrix_error": 5.793343443860621e-08,
+      "processed_sha256": {
+        "image": "8ed2481abc94b932afa10b8adfc74720e2c288091e1f76f4563ecf55fc8b8d12",
+        "target": "742a71820a830fa497186dbb55236480041466b3b67c2a3299b8733d6b7077b6",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 28,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 6,
+        "start_index": 4,
+        "task": "turn lever vertical to front",
+        "partition": "sealed_test"
+      },
+      "text": "turn lever vertical to front",
+      "raw_identity": {
+        "encoded_image_sha256": "c32a5787e90fdc76a45278c5ad720af02706b2bbdf2b33b33273ed914915dd44",
+        "decoded_rgb_sha256": "0e0fb200dfd47f46749f13794cc786ad6b3e1e618bdd003553fa3946bb4b1908",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "f6a31df6f6552f2635b3bcb6ea71a100102cfc1f54f13ce486c95fe1b9693633",
+        "action_sha256": "e228119ba649a2a9dd3f8d161ec6338b12ade426191cbd2ea9996077cf388e35",
+        "instruction_sha256": "b659ee5206dae5135e93be0cc222de208bfbd617d985211274ed18be49bbc1df"
+      },
+      "payload_sha256": "d5a58d5e1749cc141bfe82b14b69481cbb9ed5b1b23bce7334bd4f40f8857d32",
+      "source_to_world_position_error_m": 2.897722999051222e-09,
+      "source_to_world_matrix_error": 4.928764274492181e-08,
+      "processed_sha256": {
+        "image": "ce62e90c8c3926a94ef40722cb0ac2013f7deee878b478b3bfe9f5e3fa505d1a",
+        "target": "be16025126a941a1d8a62fe6995cf41970c1750aeec1f6b2b29783940ff12e68",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 29,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 2,
+        "start_index": 0,
+        "task": "turn lever vertical to front",
+        "partition": "sealed_test"
+      },
+      "text": "turn lever vertical to front",
+      "raw_identity": {
+        "encoded_image_sha256": "e354ef3358f73ca1ffd98a65e3220e41d0c26b47af8d1c27d86b832b188e38ab",
+        "decoded_rgb_sha256": "4cc3825d5840ba7eb8edde667af061cfcddf53bd591b06e0989c3db37fd88111",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "92f2ba90eed8539f81dac897502b47658eb3e7da3bcf1fa3cedfd35a3ac5dd78",
+        "action_sha256": "c1ddebcf49dae1f0c915cd9790c76ccfc143b502db28148ec6d6717907fbcd40",
+        "instruction_sha256": "b659ee5206dae5135e93be0cc222de208bfbd617d985211274ed18be49bbc1df"
+      },
+      "payload_sha256": "29359793df546b1aacb67ae99d1d955abe17ee4c61074ee1669ffd746bdfa8e1",
+      "source_to_world_position_error_m": 5.1608405882141994e-09,
+      "source_to_world_matrix_error": 1.748228209974556e-07,
+      "processed_sha256": {
+        "image": "52cfcfb86fc65c473e70ae71ab31494d2a502c7a85fc179bc75d4b3f5bddbd0a",
+        "target": "ad73515926e5ad1d7b984a7701a9c6ecdc0350a332ce122af6bb157f73ff9807",
+        "current": "44f624dc522cd2f541b5265fc3c0f7082108885d2e8acccbf7c0fcd3753d10a0"
+      }
+    },
+    {
+      "index": 30,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 2,
+        "start_index": 4,
+        "task": "turn lever vertical to front",
+        "partition": "sealed_test"
+      },
+      "text": "turn lever vertical to front",
+      "raw_identity": {
+        "encoded_image_sha256": "96f5ef1f34b81f2f63f68d8eb3514adeef5001b8d90c13e4c4f4415d49480b1c",
+        "decoded_rgb_sha256": "d988d7abf7c30e3b3b0e5b96d9c60a52f43320fc57510ff0f11dcfb50cbe25f8",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "92f2ba90eed8539f81dac897502b47658eb3e7da3bcf1fa3cedfd35a3ac5dd78",
+        "action_sha256": "c1ddebcf49dae1f0c915cd9790c76ccfc143b502db28148ec6d6717907fbcd40",
+        "instruction_sha256": "b659ee5206dae5135e93be0cc222de208bfbd617d985211274ed18be49bbc1df"
+      },
+      "payload_sha256": "29359793df546b1aacb67ae99d1d955abe17ee4c61074ee1669ffd746bdfa8e1",
+      "source_to_world_position_error_m": 5.478794806723641e-09,
+      "source_to_world_matrix_error": 8.336457546498366e-08,
+      "processed_sha256": {
+        "image": "a5ee9d6a7d79fef3a58763d496852aa542e80ed32beeb3832bdad753ffb054ee",
+        "target": "318b79c2d638d2fa172a3f1631cd97b10abd308894ded92be0f4d6ea1e424c9c",
+        "current": "44f624dc522cd2f541b5265fc3c0f7082108885d2e8acccbf7c0fcd3753d10a0"
+      }
+    },
+    {
+      "index": 31,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "start_index": 0,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "0849a9476f1b306584ae853d7157b1fb750fd82f93e49a5698a5d2c071669351",
+        "decoded_rgb_sha256": "52ed460b4399f6c6fb1a5266753432d909e1fb7b4738affd6e0ccfe71b86a363",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "16fc0640f3ab2241ae287c3e3cc3205ca79affe4b0ca20a133948d31b1de211e",
+        "action_sha256": "ab04c44f09303ee42ab102dfdfb9bc6a2403623a8148bbaf201668cd6fdd168b",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4",
+      "source_to_world_position_error_m": 5.982273565408036e-09,
+      "source_to_world_matrix_error": 5.496101490587435e-08,
+      "processed_sha256": {
+        "image": "e0c1ebb923873d5cb7ad9d02a98c6ff33950928f2ad0f9a4e5112559b81fe814",
+        "target": "8a85cf53783140e224e0a47d18338e5a30870a6e0595bf17f572cbbbc679044b",
+        "current": "7a7833a795e68abd8262b9979765465854a286db676f84a69fe0ce582ea1b1b6"
+      }
+    },
+    {
+      "index": 32,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "start_index": 4,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "b065699d1224c35ca166e34db5f3fd2620095b06d579818a65eae2496cce7c72",
+        "decoded_rgb_sha256": "346f21afd8bef5f13644d0e15eb3252cabfb43fe8f4e29aa431cb646c9490d33",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "16fc0640f3ab2241ae287c3e3cc3205ca79affe4b0ca20a133948d31b1de211e",
+        "action_sha256": "ab04c44f09303ee42ab102dfdfb9bc6a2403623a8148bbaf201668cd6fdd168b",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4",
+      "source_to_world_position_error_m": 6.91120137508161e-09,
+      "source_to_world_matrix_error": 6.491204701530862e-08,
+      "processed_sha256": {
+        "image": "9ebabf8704c669968380bd23211d1db159adcb9d7fe8ebf897ec90edaefa8b79",
+        "target": "7597f75d0ad5b10d222c141ffc9c77af98c0473249d858aa81063a5f3e5b0b17",
+        "current": "7a7833a795e68abd8262b9979765465854a286db676f84a69fe0ce582ea1b1b6"
+      }
+    },
+    {
+      "index": 33,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "start_index": 8,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "3b73245d48895b9e3bab965d6f65f4307abcb61e702153f3e3df25aecc7ecabc",
+        "decoded_rgb_sha256": "d02f4db43fa78a63a23014cb6cb769f0f0edfcac6b656333473519611e118bc5",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "16fc0640f3ab2241ae287c3e3cc3205ca79affe4b0ca20a133948d31b1de211e",
+        "action_sha256": "ab04c44f09303ee42ab102dfdfb9bc6a2403623a8148bbaf201668cd6fdd168b",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4",
+      "source_to_world_position_error_m": 3.484279850751726e-09,
+      "source_to_world_matrix_error": 5.506501898899785e-08,
+      "processed_sha256": {
+        "image": "1ed9d68a12a247a474d1da0a8c2b601ddd9fe59277301d1c3c78209ce5be47b8",
+        "target": "8a800ec97da3360667467c01ec2e31418f30a5d0e10d426c5203224e13b87bcf",
+        "current": "7a7833a795e68abd8262b9979765465854a286db676f84a69fe0ce582ea1b1b6"
+      }
+    },
+    {
+      "index": 34,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "start_index": 12,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "fda28af4d1a8d2989978c5a78e62c76c6fc8d03ba6cccb19cb6df5c7680c8c23",
+        "decoded_rgb_sha256": "27579efdea1f40428f461214def84ecea4ec744cf07415fae5444681c064f882",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "16fc0640f3ab2241ae287c3e3cc3205ca79affe4b0ca20a133948d31b1de211e",
+        "action_sha256": "ab04c44f09303ee42ab102dfdfb9bc6a2403623a8148bbaf201668cd6fdd168b",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4",
+      "source_to_world_position_error_m": 1.0023331720176998e-08,
+      "source_to_world_matrix_error": 9.784060162054686e-08,
+      "processed_sha256": {
+        "image": "03888ce31fce08794af2cb8da1cabb623876172dc1d369f338d4db764a839005",
+        "target": "fd76ee8eade3eaf1eca7bfd109dd6efc6ce72f4bbf7a25fd3188e8bbafbb0f14",
+        "current": "7a7833a795e68abd8262b9979765465854a286db676f84a69fe0ce582ea1b1b6"
+      }
+    },
+    {
+      "index": 35,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "start_index": 16,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "f6b110c5617810b8e93b7a83364bd79fb372c79e929123c282a4d7bdc8b26ce7",
+        "decoded_rgb_sha256": "20a9be9d51d7c26b025d76706e2a7e82ccf3b3535f49701e4f84667128087e7b",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "16fc0640f3ab2241ae287c3e3cc3205ca79affe4b0ca20a133948d31b1de211e",
+        "action_sha256": "ab04c44f09303ee42ab102dfdfb9bc6a2403623a8148bbaf201668cd6fdd168b",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4",
+      "source_to_world_position_error_m": 1.150923628623346e-08,
+      "source_to_world_matrix_error": 1.5922410223634387e-07,
+      "processed_sha256": {
+        "image": "7697e04c586254d760eb125d1823af09e14efc55e6872ce0bb5a7c9703a2ef42",
+        "target": "9d9048a7520152f46356fa4ecf78dd9ea2427b0f28193c5ee84b72211b5250a2",
+        "current": "18fa5aea4b30bf025b1efa7557c277465cb6cb89ea23fb60cd46eaf27fe92a32"
+      }
+    },
+    {
+      "index": 36,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00015-of-01024",
+        "record_index": 12,
+        "start_index": 20,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "ac62579a2ecc4bbfeb420663c4c8b7e90a280eb9dc4cd8f7e01f5ef16a624410",
+        "decoded_rgb_sha256": "65b90476ea417cd2fb07329953e99190c1dda784268dbbd574186db3bb6716e7",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "16fc0640f3ab2241ae287c3e3cc3205ca79affe4b0ca20a133948d31b1de211e",
+        "action_sha256": "ab04c44f09303ee42ab102dfdfb9bc6a2403623a8148bbaf201668cd6fdd168b",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "07c1e5e4de5459d3c109721ffef437e4b598fe8ad7366c74f7aea974697173b4",
+      "source_to_world_position_error_m": 1.1257846654899595e-08,
+      "source_to_world_matrix_error": 1.5810139880612084e-07,
+      "processed_sha256": {
+        "image": "081bfcea24ed5fd89f6b770c2c8acce81ae42e34f173016f7f0050aa482c2973",
+        "target": "0b2e8659a6c32102d13a6141e26c08259890a2ee670a02257e05b3cc9987156e",
+        "current": "ee8348d5dcc7be19461a46d293a83f118c3d05483eabbdece5cc87f0dc5e269f"
+      }
+    },
+    {
+      "index": 37,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "start_index": 0,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "15f89e243b446c2651aa4aeffa226fd4504691e460ef58fc5e51298760e4f77c",
+        "decoded_rgb_sha256": "73a151a68e09e9c4cdec1d0e9b0b2bc2db3b64ba96d20fc12b013f2b712f8893",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "ab7f6c31edf5626446cd74f61b9d6983d243726f2332bdb06f77b658a77e7f9f",
+        "action_sha256": "70e6f837fb03803f6f2fc1409614e7018f57ff56699c5fe5ec3c5796cde48578",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365",
+      "source_to_world_position_error_m": 1.2035472202187592e-08,
+      "source_to_world_matrix_error": 8.488471361922656e-08,
+      "processed_sha256": {
+        "image": "d3dce11874b2e12812392b6e78731718101920936316aea450f457c1b3aa1bb6",
+        "target": "ea002c1f30c4b23b8db58ede7828b6d1e38f70768f29bfd91e2e19e3f523703e",
+        "current": "2264264bc2296fe787d2f54a18c7a69925ba6f3933fe32f899846b5e1c5165c7"
+      }
+    },
+    {
+      "index": 38,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "start_index": 4,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "ad291ae4c2f7c16a64ea8cb3a1f0ed4c4f3257a271241bd9c8f624f8978a0580",
+        "decoded_rgb_sha256": "d143ecb1ac988e2493ebf73ebb4dae70c03eb70ec95c3b4ba5770b761df3a3b3",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "ab7f6c31edf5626446cd74f61b9d6983d243726f2332bdb06f77b658a77e7f9f",
+        "action_sha256": "70e6f837fb03803f6f2fc1409614e7018f57ff56699c5fe5ec3c5796cde48578",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365",
+      "source_to_world_position_error_m": 1.1323229062720763e-08,
+      "source_to_world_matrix_error": 5.515758877416843e-08,
+      "processed_sha256": {
+        "image": "2ca2a785a272d0ebd25483965be5fc45c6fe6b93b29fe8018992e96c9404cdf3",
+        "target": "adc18d513722512fa5a2f35945f90232d9a476bc2a018b6d5244db55d9f1d139",
+        "current": "2264264bc2296fe787d2f54a18c7a69925ba6f3933fe32f899846b5e1c5165c7"
+      }
+    },
+    {
+      "index": 39,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "start_index": 8,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "a5f0a6fe3405ddb59651fe9bf51534ad94d57f8b179e80715d26333c510d584a",
+        "decoded_rgb_sha256": "806144f583b9609061c7cc1bf429f2d853fee546f8aa768cf7377a593be02191",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "ab7f6c31edf5626446cd74f61b9d6983d243726f2332bdb06f77b658a77e7f9f",
+        "action_sha256": "70e6f837fb03803f6f2fc1409614e7018f57ff56699c5fe5ec3c5796cde48578",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365",
+      "source_to_world_position_error_m": 7.3459593824543035e-09,
+      "source_to_world_matrix_error": 9.497968228577847e-08,
+      "processed_sha256": {
+        "image": "83733d28569255e1a9b8e76e6c1cb246a487a5f2eefa4fb51540ee5c43e1c987",
+        "target": "49da5d955defbde816b084c37c8f7170cc17d2ddb2d36698add75532edf58801",
+        "current": "2264264bc2296fe787d2f54a18c7a69925ba6f3933fe32f899846b5e1c5165c7"
+      }
+    },
+    {
+      "index": 40,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "start_index": 12,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "054ca3b3e16836b541e5b2051819779df8b52cb234ba67412d0a3dfcf54ef662",
+        "decoded_rgb_sha256": "7f3899e8030fa04b886b9a69cefc71f0e9af38eea441fb1233cc5ddef4b64365",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "ab7f6c31edf5626446cd74f61b9d6983d243726f2332bdb06f77b658a77e7f9f",
+        "action_sha256": "70e6f837fb03803f6f2fc1409614e7018f57ff56699c5fe5ec3c5796cde48578",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365",
+      "source_to_world_position_error_m": 4.358805275050948e-09,
+      "source_to_world_matrix_error": 8.821365288236294e-08,
+      "processed_sha256": {
+        "image": "e08e4a728bfb8e17436802b760054ce31fe4adcb281242164752b704483ebd21",
+        "target": "a1aad02f8b8eb8d4d9ade0c9c5cd1acbcad3664fbfbead58131946d8d6d7ec28",
+        "current": "2264264bc2296fe787d2f54a18c7a69925ba6f3933fe32f899846b5e1c5165c7"
+      }
+    },
+    {
+      "index": 41,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "start_index": 16,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "cb84921460ad04deac7f5522408b5b75c55c002988c039dd1ac094cd7193464a",
+        "decoded_rgb_sha256": "a30fd779503d8afe4c66a68f561178ab91fd6e087ca28554b49a5c737174c9f1",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "ab7f6c31edf5626446cd74f61b9d6983d243726f2332bdb06f77b658a77e7f9f",
+        "action_sha256": "70e6f837fb03803f6f2fc1409614e7018f57ff56699c5fe5ec3c5796cde48578",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365",
+      "source_to_world_position_error_m": 1.330866147841725e-08,
+      "source_to_world_matrix_error": 9.96275709708172e-08,
+      "processed_sha256": {
+        "image": "c530d75cbe47bbcc404fed52bf1e3c3d286f5c3aed39d7fafa911fbd53285d73",
+        "target": "cc36c84fafdccf0c7730fd55c97384e26c763c3c7e694c57097589bccd4cc6d7",
+        "current": "2264264bc2296fe787d2f54a18c7a69925ba6f3933fe32f899846b5e1c5165c7"
+      }
+    },
+    {
+      "index": 42,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00018-of-01024",
+        "record_index": 13,
+        "start_index": 20,
+        "task": "take broccoli out of pan",
+        "partition": "sealed_test"
+      },
+      "text": "take broccoli out of pan",
+      "raw_identity": {
+        "encoded_image_sha256": "c82601b8f27a3e398dec1ecf530d208bcc9efd251dbf99df6c549c9773286094",
+        "decoded_rgb_sha256": "85ea43ba1892225b02b0a2224fe63024519b4975f2d28cd7ece9d320d5bf867b",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "ab7f6c31edf5626446cd74f61b9d6983d243726f2332bdb06f77b658a77e7f9f",
+        "action_sha256": "70e6f837fb03803f6f2fc1409614e7018f57ff56699c5fe5ec3c5796cde48578",
+        "instruction_sha256": "49e3a3b2b26cc262cce322f6b5aa5deddcb160ef4b9dc333753647dd67adda80"
+      },
+      "payload_sha256": "77680912d68f40e4349cf1e0138683b12b809d8c6443bb9031b5b2db64d3f365",
+      "source_to_world_position_error_m": 1.3721081437712002e-08,
+      "source_to_world_matrix_error": 5.939250222186665e-08,
+      "processed_sha256": {
+        "image": "e129abdb315d3ad8c4621198959168188cf971312f34c133fab67398f8d21095",
+        "target": "83cc73f866431ce2a12115cd06c7480981af5646306bebecef6bbcab9277cdab",
+        "current": "5f6aefe937b198d1b445e27db01ca733fc080b6d18ac462b99c225cf0e118d11"
+      }
+    },
+    {
+      "index": 43,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 45,
+        "start_index": 0,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "e296494ed226817f934ac2cfe4856d53392c79baade10027d483237d539ee105",
+        "decoded_rgb_sha256": "47970cc9a1778aa4135f0f9d6a345ebfded718e1f0f1af66d6fab29f2af5ad43",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "1a4a91e7018643c006038f4c0ab4ebd3c33df8ec109c312d802d9124fbe17e71",
+        "action_sha256": "0487542ce97bfec6241104e75d6ca0d3405a062e05b06839233226ad9b09f048",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "fac0f224b1b223755fe16ef11b089e0eafc015707595d53b308bd90e833375b9",
+      "source_to_world_position_error_m": 1.8151359443274728e-08,
+      "source_to_world_matrix_error": 5.388744162004855e-08,
+      "processed_sha256": {
+        "image": "917ba37e9b684c1df275cff128ae71dd37b09d969046515da4ecc0f7319a8ca2",
+        "target": "c483d3e79e4addf8e9192a1f77abcd23db5fbad347a9e5e6d142c07a935214d4",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 44,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00027-of-01024",
+        "record_index": 45,
+        "start_index": 4,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "887a8541e16d92334fb937257dd7c9a2613fd21beef44f85d0876dee2ef1063b",
+        "decoded_rgb_sha256": "d73a33ab6e9260f9f5d92453d930a08b040378696a7d139599229fdf38f17750",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "1a4a91e7018643c006038f4c0ab4ebd3c33df8ec109c312d802d9124fbe17e71",
+        "action_sha256": "0487542ce97bfec6241104e75d6ca0d3405a062e05b06839233226ad9b09f048",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "fac0f224b1b223755fe16ef11b089e0eafc015707595d53b308bd90e833375b9",
+      "source_to_world_position_error_m": 1.1019707868431539e-08,
+      "source_to_world_matrix_error": 9.48717639448482e-08,
+      "processed_sha256": {
+        "image": "6af520d4b152c64e36af2c7519238fe44a27bf392585fec9591e0d3efb6c0561",
+        "target": "db5c20bd405eaea937d4ff151cb734bfc9d3c1446a4aafb135680eb3d37b9127",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 45,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "start_index": 0,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "f2ea14dd32f8c6c0104e9c8d93811cf8a8dd6e0fe72546a1981514ca33b6c347",
+        "decoded_rgb_sha256": "5a6379ad9c2d96781cc36bf245b9d668710d25a022ba37fea5558ba8295a9715",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0baa0034e31b80719872f242a9022eceb93694d53f301c868e02ce7d408bace7",
+        "action_sha256": "5428ec2b4e764e9b55646dc395b2f0b5d7190c0d05ea0a7028e868a59790df29",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900",
+      "source_to_world_position_error_m": 1.252102110882447e-08,
+      "source_to_world_matrix_error": 9.650278232076204e-08,
+      "processed_sha256": {
+        "image": "ed8b44d26b9dab3953893748464c544563903958dcc66371fd0b43acb3fe3bbf",
+        "target": "5b46f86464775b0d35723581f53613cd15125cf3a4d3275b5c4ff8c9d677f74b",
+        "current": "43186297fcd7e47f7b30694280a017c20c16036dd1e9c3e6245dc296985ed8a8"
+      }
+    },
+    {
+      "index": 46,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "start_index": 4,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "0fc19e27cba2256c32cd41c8010d1cfff05434d6040f406293eabeb04b0683e8",
+        "decoded_rgb_sha256": "bbaee3da81fcabd0cefc7ddfd0ba033a674c9f11ed0592a2eec6ec0a75d42585",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0baa0034e31b80719872f242a9022eceb93694d53f301c868e02ce7d408bace7",
+        "action_sha256": "5428ec2b4e764e9b55646dc395b2f0b5d7190c0d05ea0a7028e868a59790df29",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900",
+      "source_to_world_position_error_m": 1.329007276451577e-08,
+      "source_to_world_matrix_error": 7.944794999659166e-08,
+      "processed_sha256": {
+        "image": "241844331d67bda2ca75ef84092d56c7e46222890eba9f68be796a4c27db051a",
+        "target": "29b6a085df645eca79cae5d88214a510e37c4715856854754034255c6e440c0c",
+        "current": "43186297fcd7e47f7b30694280a017c20c16036dd1e9c3e6245dc296985ed8a8"
+      }
+    },
+    {
+      "index": 47,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "start_index": 8,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "4713df602c27af7f9f984b34b9082dee4e62f42ad65630361187b61a3611b3b6",
+        "decoded_rgb_sha256": "2bf5651e995b579c5a21247d855ac89f6e9baeaae2e83b6b4886c2d4c66b7b5c",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0baa0034e31b80719872f242a9022eceb93694d53f301c868e02ce7d408bace7",
+        "action_sha256": "5428ec2b4e764e9b55646dc395b2f0b5d7190c0d05ea0a7028e868a59790df29",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900",
+      "source_to_world_position_error_m": 1.2503525520513037e-08,
+      "source_to_world_matrix_error": 6.2897451802435e-08,
+      "processed_sha256": {
+        "image": "570e0daa3989b79c47dd7e0b4673501f3c7db1f244b51e3cfbfd6164f53f7a68",
+        "target": "32baf32c1cf555a2d0745f52302b41753446b37e55fa8f3d6b4df25aabd606e2",
+        "current": "43186297fcd7e47f7b30694280a017c20c16036dd1e9c3e6245dc296985ed8a8"
+      }
+    },
+    {
+      "index": 48,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "start_index": 12,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "78020baed85b8c25b1a61c1a3347774e0acb385e8660055d022ff72adf136b52",
+        "decoded_rgb_sha256": "abe4aa5c417de35a5fb69da214d7b7c2d0627554051d0ed70b56c4d1e5c80c6c",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0baa0034e31b80719872f242a9022eceb93694d53f301c868e02ce7d408bace7",
+        "action_sha256": "5428ec2b4e764e9b55646dc395b2f0b5d7190c0d05ea0a7028e868a59790df29",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900",
+      "source_to_world_position_error_m": 9.713677445732927e-09,
+      "source_to_world_matrix_error": 5.8447637896197335e-08,
+      "processed_sha256": {
+        "image": "a79e23a5120829272cbc84e203f00e24a6edd83bbaf6bf98d4f9c4fe56ff267c",
+        "target": "bc3c7bec5d60935971c32c0ca717318c39a7db95826882ee69add66bc8c62604",
+        "current": "da1a55cf92c86b91c917ecf1140fc0463573bdaf203d805d7aa5e86266275cbe"
+      }
+    },
+    {
+      "index": 49,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "start_index": 16,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "31f7cffb662d3279a31d8604652c7da9318238df766eea9d8005d8a483e256c9",
+        "decoded_rgb_sha256": "58a79830427c97ca2c61c481052de85439663256f378f4c4880010a5fe024d92",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0baa0034e31b80719872f242a9022eceb93694d53f301c868e02ce7d408bace7",
+        "action_sha256": "5428ec2b4e764e9b55646dc395b2f0b5d7190c0d05ea0a7028e868a59790df29",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900",
+      "source_to_world_position_error_m": 8.477793331934658e-09,
+      "source_to_world_matrix_error": 7.15024012776233e-08,
+      "processed_sha256": {
+        "image": "fb38a09b21b6925c68bbccf1701eba9e9b7510aed0036ba3b0113b0f739f606f",
+        "target": "e97de9782c2de2749642bca5e51fb93936f957b5e7cea54ac1ed9999ca17379d",
+        "current": "da1a55cf92c86b91c917ecf1140fc0463573bdaf203d805d7aa5e86266275cbe"
+      }
+    },
+    {
+      "index": 50,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+        "record_index": 1,
+        "start_index": 20,
+        "task": "close microwave",
+        "partition": "sealed_test"
+      },
+      "text": "close microwave",
+      "raw_identity": {
+        "encoded_image_sha256": "3ad49fe11c0feed85f8ec7a3ef2fe43d8aba966ae5ab72f746c1e5dee8c6d505",
+        "decoded_rgb_sha256": "71c37c5ccfb787870ec3561e7d68a21d71fe1ec1d548928950a9755ebaef4697",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "0baa0034e31b80719872f242a9022eceb93694d53f301c868e02ce7d408bace7",
+        "action_sha256": "5428ec2b4e764e9b55646dc395b2f0b5d7190c0d05ea0a7028e868a59790df29",
+        "instruction_sha256": "9d48b5aebadb33289b469b519010a318ebf4a2c4d37af07e3241f3b37d583f8b"
+      },
+      "payload_sha256": "db4447bd4880d092efc177282cbe064b179d82e17a108596c70735bf77382900",
+      "source_to_world_position_error_m": 1.4756028454687709e-08,
+      "source_to_world_matrix_error": 1.1668296850952942e-07,
+      "processed_sha256": {
+        "image": "ae08f304908e861cab56c14e3248ddf96f84b2631c8caaac26b435b919679228",
+        "target": "4caf1e214d15838d5078703876fa67e24fb31122ff9443b8704d3f25db874edc",
+        "current": "da1a55cf92c86b91c917ecf1140fc0463573bdaf203d805d7aa5e86266275cbe"
+      }
+    },
+    {
+      "index": 51,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "start_index": 0,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "Close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "c3e715c2a627ae49db323e543cc49b635bcf2a3b83fde5d979152dce4b374316",
+        "decoded_rgb_sha256": "7f16d9c744105003132e9ccc09326f7ff684815afec5c70525921d6ad631e731",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2245f878ba55e8e5e346c2575952b59d07b593794c1f352a851fa1dd64e0d741",
+        "action_sha256": "e3db7032bc59e6db74d3c501a67789e9edae21d98e0b4bde41a37c2809a0baad",
+        "instruction_sha256": "615dfc64f1fa18fea685fd295085c9ca3c1b8f7d99da9867f9f5b342a66f37de"
+      },
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3",
+      "source_to_world_position_error_m": 7.79389160154853e-09,
+      "source_to_world_matrix_error": 1.4578273443976997e-07,
+      "processed_sha256": {
+        "image": "dda4d3c2acf79324d912657f600bb6280c924e8f01aa2fc104b4d4b35980452b",
+        "target": "c6c4c3e73e625acefb03be63e13d24a62a97a40a14996ac37643a4b6373c5251",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 52,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "start_index": 4,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "Close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "4157a5c59854ec39c7791e641a862156896f598542ed746ad9736c74e8a1f87c",
+        "decoded_rgb_sha256": "7e15040ac9cefedf4aecde73ff7466e6c4ac8edb0b430d02add773797639e1eb",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2245f878ba55e8e5e346c2575952b59d07b593794c1f352a851fa1dd64e0d741",
+        "action_sha256": "e3db7032bc59e6db74d3c501a67789e9edae21d98e0b4bde41a37c2809a0baad",
+        "instruction_sha256": "615dfc64f1fa18fea685fd295085c9ca3c1b8f7d99da9867f9f5b342a66f37de"
+      },
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3",
+      "source_to_world_position_error_m": 8.27429172400862e-09,
+      "source_to_world_matrix_error": 1.2622251810423535e-07,
+      "processed_sha256": {
+        "image": "2b8b5860db48190b2c57953b84a25bf964519ed104b4a9603e396a0de4a9b08b",
+        "target": "1c3608f806091a9b017607e11eaae4eb3f953ce008a4e3bf4f6dc8c9c0492a58",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 53,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "start_index": 8,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "Close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "c0857cc27b097883c26b388a1ada13069ee7eef76d2ead8a077240901882e66c",
+        "decoded_rgb_sha256": "6fba7af43c481221717b67f3c6aab2544017b001a083d5ea3cb7a5d850df7acb",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2245f878ba55e8e5e346c2575952b59d07b593794c1f352a851fa1dd64e0d741",
+        "action_sha256": "e3db7032bc59e6db74d3c501a67789e9edae21d98e0b4bde41a37c2809a0baad",
+        "instruction_sha256": "615dfc64f1fa18fea685fd295085c9ca3c1b8f7d99da9867f9f5b342a66f37de"
+      },
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3",
+      "source_to_world_position_error_m": 6.9701320271065015e-09,
+      "source_to_world_matrix_error": 1.210510600646586e-07,
+      "processed_sha256": {
+        "image": "55b9afe738f23a4ad6eb5f699845044ad50ef5be40b98c185c6e2b8a5c6cc23a",
+        "target": "666444fe06c43f6b2011bc264749ba3431618801f805736689f76b102d220186",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 54,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "start_index": 12,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "Close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "9d6ec4c1e3bba870b68ca06491ba5d3e7b8564bd0ee6f7a97bb43b52a54cbfa2",
+        "decoded_rgb_sha256": "6d72650511ddbf8f16d67df721633b0f43fedc5cf928df647dbb8702d0e734c8",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2245f878ba55e8e5e346c2575952b59d07b593794c1f352a851fa1dd64e0d741",
+        "action_sha256": "e3db7032bc59e6db74d3c501a67789e9edae21d98e0b4bde41a37c2809a0baad",
+        "instruction_sha256": "615dfc64f1fa18fea685fd295085c9ca3c1b8f7d99da9867f9f5b342a66f37de"
+      },
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3",
+      "source_to_world_position_error_m": 7.686337441525914e-09,
+      "source_to_world_matrix_error": 1.1584717651835774e-07,
+      "processed_sha256": {
+        "image": "21b9a0c67f78d01177d53f94ebacba720982cafee46a74a76b20d3fde14aebb9",
+        "target": "81a5bfdacc0b113f6afa63660f80c8478a9ee3d71574c9d3fdddc65610c33523",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 55,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "start_index": 16,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "Close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "97b8e4df2ed41206f2d928e28d9c710055558fd79a93b131656f977603997b5b",
+        "decoded_rgb_sha256": "86047f1df1af3157068a4069fd4f673fe4880ed51c2d87d3d1b16f8ba3c8d4cd",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2245f878ba55e8e5e346c2575952b59d07b593794c1f352a851fa1dd64e0d741",
+        "action_sha256": "e3db7032bc59e6db74d3c501a67789e9edae21d98e0b4bde41a37c2809a0baad",
+        "instruction_sha256": "615dfc64f1fa18fea685fd295085c9ca3c1b8f7d99da9867f9f5b342a66f37de"
+      },
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3",
+      "source_to_world_position_error_m": 7.57620438607276e-09,
+      "source_to_world_matrix_error": 8.564035602898201e-08,
+      "processed_sha256": {
+        "image": "2cad45ebc01109d7c1f391e0805d8ab832aa7e7e90623867cc254d67d5cfc11c",
+        "target": "09fe254519c9009e80586ef30b023a6e6c94c46cf6ee9a2a4e80553e369efc15",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 56,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00022-of-01024",
+        "record_index": 9,
+        "start_index": 20,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "Close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "e6d123acd143957cef45f76902d23cddd9d8762c5753ed263c353d40e3fe3884",
+        "decoded_rgb_sha256": "ed356357496cd9de063638fcfdaf06f6c09b7011469cbe3e608ec98ca05f2963",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "2245f878ba55e8e5e346c2575952b59d07b593794c1f352a851fa1dd64e0d741",
+        "action_sha256": "e3db7032bc59e6db74d3c501a67789e9edae21d98e0b4bde41a37c2809a0baad",
+        "instruction_sha256": "615dfc64f1fa18fea685fd295085c9ca3c1b8f7d99da9867f9f5b342a66f37de"
+      },
+      "payload_sha256": "18e8127b230acfa100f4e0965696081ec0fd38a77e120a19b0f7025fa500bdd3",
+      "source_to_world_position_error_m": 1.6559341398103555e-08,
+      "source_to_world_matrix_error": 8.537412743425676e-08,
+      "processed_sha256": {
+        "image": "d2ffa88aed474659df7365776f182c443b68be2a4a2d403f1f45a626495fe290",
+        "target": "027f86b5847b22ae67fa6b6e20bc2dd535c4321f2bf9276e214a317d305a9bcb",
+        "current": "9f5602f4627f03dd0e00490ebabbc7b1ab2eaeb16f64768900bd7fd64b4ba0e3"
+      }
+    },
+    {
+      "index": 57,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 0,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "8f3b2f1f021c3716e5b053629d3c6dda0ff42cd4a589210f7cf65df75df911e4",
+        "decoded_rgb_sha256": "b10c69c5d2583a0882d73bc3ea33efdf9c17ffcc01bc2583e8e1b8d680b98c8a",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 1.8835634330027773e-08,
+      "source_to_world_matrix_error": 1.1849212289138933e-07,
+      "processed_sha256": {
+        "image": "71676cff4712153f82da5468350347b4f21c1ea80c91c4b78be4bdc1d5a8e79e",
+        "target": "7192e63a170d536af2c3c7d35ce72fd839e6db3b591b52a0ecb63f201ef004e2",
+        "current": "f598700a3bb2b591f64f9a5c983e83c353a4f46220fa41551ca43c5b0eefae9f"
+      }
+    },
+    {
+      "index": 58,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 4,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "f4ec882ee1beed7d9c827dc254f2885579acea83b2cca3b657260d0ce66bbc37",
+        "decoded_rgb_sha256": "b3d30d54366be6bffba8759b40efaa42b2ecf2080dfc8e26235af66592ea88cb",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 1.1011518169512513e-08,
+      "source_to_world_matrix_error": 7.775122490283337e-08,
+      "processed_sha256": {
+        "image": "3e022c689e1440fb45981be1e3f65af47d312e5c37e5904c1164ed4a84c8d0a3",
+        "target": "67aa8f45af99050a6209b6195848f11f080a42de7e7998441166d429e15c6a31",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 59,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 8,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "0e0da3325e9c74bf3093d6c658224afbdab649c61794ff9ae28e53bc0e024661",
+        "decoded_rgb_sha256": "8e84ad8e0f138d11564f27b86dcfac6ea02083c5e5703b196dc944cff3a5b45a",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 7.333393226005569e-09,
+      "source_to_world_matrix_error": 5.805767744337942e-08,
+      "processed_sha256": {
+        "image": "10cb8f1d1ef16a842eddb3ebda05a66e82f18a37d2339e670090f8a0a70ae7ee",
+        "target": "af31ecb5e414cce388cb4ff76ea03c37a8ee4b82aa5c0cbceca674b8bda5bc96",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 60,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 12,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "66452e03f543632fa3a68d38cd3541a3656574907244a81a7722d39ecb63e46c",
+        "decoded_rgb_sha256": "00678e7b88c2eec9a1b3c05ec946b548a1a132ebea77570b3bedfafcdaed9b17",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 1.260234161470919e-08,
+      "source_to_world_matrix_error": 7.720698541602289e-08,
+      "processed_sha256": {
+        "image": "cc1403131d8fc5d733eebe5a31d321eeca272dde8fbe0323fcba23c5685180b9",
+        "target": "f36d9b17c22dcca750be6e79564bbc87736de4085c6e8da023c172d745281f63",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 61,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 16,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "1fb45359cabdf5bb24caf8c45f3a2a4ae566a90daa8d566f14347b1b86f803b4",
+        "decoded_rgb_sha256": "f73def77d280e978e908991cca7ae6e3d655c71e45fcb7df6710e43ce52d8ce0",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 1.253830705927328e-08,
+      "source_to_world_matrix_error": 3.9181801606176514e-08,
+      "processed_sha256": {
+        "image": "ebc60f6448a633e67907cd5e424689f550a509313217a213210ec31fd07ebdee",
+        "target": "249016321527938c3422b801ff06144cbbfb192c4307a6875ad3501d8e6d57b3",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 62,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 20,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "3bfcfa64de3e038d6dc86ed4ffe954b05f6df63ce8d72bf2a025ae0a3496e621",
+        "decoded_rgb_sha256": "33098542b24c572601dbf557dc7fecea2625477da34edc08d8c696e809c575a9",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 9.34701166466212e-09,
+      "source_to_world_matrix_error": 7.770473831048008e-08,
+      "processed_sha256": {
+        "image": "ea77733070c889adc5919b1a2a10e3a1c53640b767ca28320c1e0021f3cc4dde",
+        "target": "d79af944a45326d7cfe45e5f258c3f1cf68a7b87286a2aeb0cce142da62805d5",
+        "current": "7897c026db55302b2ad19fd6d1165891060459ee6b1d092562a7ccb6838c70a2"
+      }
+    },
+    {
+      "index": 63,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+        "record_index": 55,
+        "start_index": 24,
+        "task": "close the drawer",
+        "partition": "sealed_test"
+      },
+      "text": "close the drawer",
+      "raw_identity": {
+        "encoded_image_sha256": "b19c4aea200bd19d187b69953a3478d175d252661b897069c06e7ba422ef0a9b",
+        "decoded_rgb_sha256": "6e3bc0cc45ea8e67827649528d4a7b3cedfad53e1b6d832a3c936346ba97fcab",
+        "rgb_shape": [
+          256,
+          256,
+          3
+        ],
+        "state_sha256": "acdc5c73ba03907e57ce8b0b2e8ee5c48fc247ce949dbc7c34c567a0470a6653",
+        "action_sha256": "b2bc2bac351a174322cc9e8d5225b445a1ba92a8840f33e8cab2b343d6b2dd1c",
+        "instruction_sha256": "2a459109ef7913f366ea8fc82a472d24ee728623377430db569b8733e394a399"
+      },
+      "payload_sha256": "42480029f3e7a691f0ef23e02ed9677f72ba745a2622ee6f05bcb4e45844ca83",
+      "source_to_world_position_error_m": 1.0843386327730187e-08,
+      "source_to_world_matrix_error": 4.5319667851817513e-08,
+      "processed_sha256": {
+        "image": "98ddc5d3dff2beb0e2d2a0b4f2a55b63e30a123a1abd713af45773920c386927",
+        "target": "dd4c1f82aff1b3e95eb1de33d73a422b9a50dd4a7a3b4ad76750609aff9d954a",
+        "current": "44f624dc522cd2f541b5265fc3c0f7082108885d2e8acccbf7c0fcd3753d10a0"
+      }
+    }
+  ],
+  "source_contract_passed": true,
+  "targets_now_decoded_for_frozen_evaluation": true,
+  "model_executed": false,
+  "local_gpu_used": false,
+  "no_episodes_or_windows_excluded": true,
+  "protocol_frozen_before_decoding_sha256": "ca9cebf05244ea8193e5ff5450a080e21175135f1f57b75ae2ed8b7290641858"
+}

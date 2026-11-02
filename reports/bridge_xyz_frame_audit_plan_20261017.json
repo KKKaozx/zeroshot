@@ -1,0 +1,35 @@
+{
+  "stage": "planned_not_executed",
+  "objective": "Check whether position-label coordinate representation contributes to conditional mapping difficulty before considering another diffusion training experiment.",
+  "difference_from_completed": "Existing geometry audits verified correctness; XYZ axis-limit experiments changed scale; state/history pairs changed input. This plan checks tool-axis versus base-axis relative XYZ representation on the current806 pool. No completed experiment is rerun.",
+  "scope": {
+    "train_episodes": 806,
+    "train_windows": 3624,
+    "development_episodes": 10,
+    "development_windows": 40,
+    "future_targets": 16,
+    "candidate_representations": ["existing_tool_relative_XYZ", "base_axis_relative_XYZ"],
+    "rotation_target_change": false,
+    "unit_change": false,
+    "new_observation_input": false
+  },
+  "transforms": {
+    "forward": "d_base = R_current @ d_tool, using observation-at-start rotation only",
+    "evaluation": "pred_tool = R_current.T @ pred_base before original XYZ Euclidean metrics",
+    "no_integration": "All16 targets remain displacements from the same current pose, not consecutive deltas"
+  },
+  "data_policy": "Reuse audited saved target arrays,1788 added current poses,168 retained current poses and already exported old415 episode records for missing current orientations only. Do not decode images, reread reserved tests or rerun original geometry/encoding experiments. Freeze actual source hashes and exact extraction paths before executing.",
+  "fixed_analysis": "One training-window-equal mean trajectory per task in each representation, train-only means. Evaluate all40 development windows after mapping to original tool frame; compare window/episode path and endpoint XYZ and all10 episodes/5 tasks. Also report task residual variance in training. No phase/weighting/normalization/seed alternatives.",
+  "interpretation_gate": "For a positive limited representation candidate require both window and episode-equal path mean lower than existing tool task prior and at least6/10 episodes improve; report training residual structure separately. No claim of a root cause or actual neural-policy improvement.",
+  "limitations": [
+    "Base-axis prior uses legal current orientation to map predictions; cannot attribute its advantage solely to representation independent of this analytic conditioning.",
+    "Coordinates mathematically correct does not settle which representation is easier to learn.",
+    "Reused development set,not fresh test.",
+    "XYZ only; no rotation/gripper/grasp claim."
+  ],
+  "stopping": "One CPU audit. No new project model, encoding, neural training, GPU submission or reserved-test access. Negative result closes this representation candidate. Any later neural experiment needs a separately frozen matched protocol; no reinterpretation-only continuation of old weights.",
+  "model_loaded": false,
+  "gpu_used": false,
+  "training_executed": false,
+  "new_result_available": false
+}

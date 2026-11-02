@@ -1,0 +1,206 @@
+ (https://raw.githubusercontent.com/kpertsch/bridge_rlds_builder/main/bridge_dataset/bridge_dataset_dataset_builder.py)
+citeturn22view0 [wordlim: 200] Crawled: 2 months ago; Content type: text/plain; Source: open({"ref_id":"https://raw.githubusercontent.com/kpertsch/bridge_rlds_builder/main/bridge_dataset/bridge_dataset_dataset_builder.py","lineno":null}); Total lines: 203
+L0: from typing import Iterator, Tuple, Any
+L1: 
+L2: import glob
+L3: import numpy as np
+L4: import tensorflow as tf
+L5: import tensorflow_hub as hub
+L6: import tensorflow_datasets as tfds
+L7: from bridge_dataset.conversion_utils import MultiThreadedDatasetBuilder
+L8: 
+L9: def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
+L10:     """Yields episodes for list of data paths."""
+L11:     # the line below needs to be *inside* generate_examples so that each worker creates it's own model
+L12:     # creating one shared model outside this function would cause a deadlock
+L13:     _embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-large/5")
+L14:     def _parse_examples(episode_path):
+L15:         # load raw data --> this should change for your dataset
+L16:         data = np.load(episode_path, allow_pickle=True)  # this is a list of dicts in our case
+L17: 
+L18:         for k, example in enumerate(data):
+L19:             # assemble episode --> here we're assuming demos so we set reward to 1 at the end
+L20:             episode = []
+L21:             instruction = example['language'][0]
+L22:             if instruction:
+L23:                 language_embedding = _embed([instruction])[0].numpy()
+L24:             else:
+L25:                 language_embedding = np.zeros(512, dtype=np.float32)
+L26:             for i in range(len(example['observations'])):
+L27:                 observation = {
+L28:                     'state': example['observations'][i]['state'].astype(np.float32),
+L29:                 }
+L30:                 for image_idx in range(4):
+L31:                     orig_key = f'images{image_idx}'
+L32:                     new_key = f'image_{image_idx}'
+L33:                     if orig_key in example['observations'][i]:
+L34:                         observation[new_key] = example['observations'][i][orig_key]
+L35:                     else:
+L36:                         observation[new_key] = np.zeros_like(example['observations'][i]['images0'])
+L37:                 episode.append({
+L38:                     'observation': observation,
+L39:                     'action': example['actions'][i].astype(np.float32),
+L40:                     'discount': 1.0,
+L41:                     'reward': float(i == (len(example['observations']) - 1)),
+L42:                     'is_first': i == 0,
+L43:                     'is_last': i == (len(example['observations']) - 1),
+L44:                     'is_terminal': i == (len(example['observations']) - 1),
+L45:                     'language_instruction': instruction,
+L46:                     'language_embedding': language_embedding,
+L47:                 })
+L48:             # create output data sample
+L49:             sample = {
+L50:                 'steps': episode,
+L51:                 'episode_metadata': {
+L52:                     'file_path': episode_path,
+L53:                     'episode_id': k,
+L54:                 }
+L55:             }
+L56:             # mark dummy values
+L57:             for image_idx in range(4):
+L58:                 orig_key = f'images{image_idx}'
+L59:                 new_key = f'image_{image_idx}'
+L60:                 sample['episode_metadata'][f'has_{new_key}'] = orig_key in example['observations']
+L61:             sample['episode_metadata']['has_language'] = bool(instruction)
+L62: 
+L63:             # if you want to skip an example for whatever reason, simply return None
+L64:             yield episode_path + str(k), sample
+L65:     # for smallish datasets, use single-thread parsing
+L66:     for sample in paths:
+L67:         for id, sample in _parse_examples(sample):
+L68:             yield id, sample
+L69: 
+L70: 
+L71: class BridgeDataset(MultiThreadedDatasetBuilder):
+L72:     """DatasetBuilder for example dataset."""
+L73:     VERSION = tfds.core.Version('1.0.0')
+L74:     RELEASE_NOTES = {
+L75:       '1.0.0': 'Initial release.',
+L76:     }
+L77:     N_WORKERS = 40             # number of parallel workers for data conversion
+L78:     MAX_PATHS_IN_MEMORY = 80   # number of paths converted & stored in memory before writing to disk
+L79:                                # -> the higher the faster / more parallel conversion, adjust based on avilable RAM
+L80:                                # note that one path may yield multiple episodes and adjust accordingly
+L81:     PARSE_FCN = _generate_examples      # handle to parse function from file paths to RLDS episodes
+L82:     def _info(self) -> tfds.core.DatasetInfo:
+L83:         """Dataset metadata (homepage, citation,...)."""
+L84:         return self.dataset_info_from_configs(
+L85:             features=tfds.features.FeaturesDict({
+L86:                 'steps': tfds.features.Dataset({
+L87:                     'observation': tfds.features.FeaturesDict({
+L88:                         'image_0': tfds.features.Image(
+L89:                             shape=(256, 256, 3),
+L90:                             dtype=np.uint8,
+L91:                             encoding_format='jpeg',
+L92:                             doc='Main camera RGB observation.',
+L93:                         ),
+L94:                         'image_1': tfds.features.Image(
+L95:                             shape=(256, 256, 3),
+L96:                             dtype=np.uint8,
+L97:                             encoding_format='jpeg',
+L98:                             doc='Main camera RGB observation.',
+L99:                         ),
+L100:                         'image_2': tfds.features.Image(
+L101:                             shape=(256, 256, 3),
+L102:                             dtype=np.uint8,
+L103:                             encoding_format='jpeg',
+L104:                             doc='Main camera RGB observation.',
+L105:                         ),
+L106:                         'image_3': tfds.features.Image(
+L107:                             shape=(256, 256, 3),
+L108:                             dtype=np.uint8,
+L109:                             encoding_format='jpeg',
+L110:                             doc='Main camera RGB observation.',
+L111:                         ),
+L112:                         'state': tfds.features.Tensor(
+L113:                             shape=(7,),
+L114:                             dtype=np.float32,
+L115:                             doc='Robot state, consists of [7x robot joint angles, '
+L116:                                 '2x gripper position, 1x door opening angle].',
+L117:                         )
+L118:                     }),
+L119:                     'action': tfds.features.Tensor(
+L120:                         shape=(7,),
+L121:                         dtype=np.float32,
+L122:                         doc='Robot action, consists of [7x joint velocities, '
+L123:                             '2x gripper velocities, 1x terminate episode].',
+L124:                     ),
+L125:                     'discount': tfds.features.Scalar(
+L126:                         dtype=np.float32,
+L127:                         doc='Discount if provided, default to 1.'
+L128:                     ),
+L129:                     'reward': tfds.features.Scalar(
+L130:                         dtype=np.float32,
+L131:                         doc='Reward if provided, 1 on final step for demos.'
+L132:                     ),
+L133:                     'is_first': tfds.features.Scalar(
+L134:                         dtype=np.bool_,
+L135:                         doc='True on first step of the episode.'
+L136:                     ),
+L137:                     'is_last': tfds.features.Scalar(
+L138:                         dtype=np.bool_,
+L139:                         doc='True on last step of the episode.'
+L140:                     ),
+L141:                     'is_terminal': tfds.features.Scalar(
+L142:                         dtype=np.bool_,
+L143:                         doc='True on last step of the episode if it is a terminal step, True for demos.'
+L144:                     ),
+L145:                     'language_instruction': tfds.features.Text(
+L146:                         doc='Language Instruction.'
+L147:                     ),
+L148:                     'language_embedding': tfds.features.Tensor(
+L149:                         shape=(512,),
+L150:                         dtype=np.float32,
+L151:                         doc='Kona language embedding. '
+L152:                             'See https://tfhub.dev/google/universal-sentence-encoder-large/5'
+L153:                     ),
+L154:                 }),
+L155:                 'episode_metadata': tfds.features.FeaturesDict({
+L156:                     'file_path': tfds.features.Text(
+L157:                         doc='Path to the original data file.'
+L158:                     ),
+L159:                     'episode_id': tfds.features.Scalar(
+L160:                         dtype=np.int32,
+L161:                         doc='ID of episode in file_path.'
+L162:                     ),
+L163:                     'has_image_0': tfds.features.Scalar(
+L164:                         dtype=np.bool_,
+L165:                         doc='True if image0 exists in observation, otherwise dummy value.'
+L166:                     ),
+L167:                     'has_image_1': tfds.features.Scalar(
+L168:                         dtype=np.bool_,
+L169:                         doc='True if image1 exists in observation, otherwise dummy value.'
+L170:                     ),
+L171:                     'has_image_2': tfds.features.Scalar(
+L172:                         dtype=np.bool_,
+L173:                         doc='True if image2 exists in observation, otherwise dummy value.'
+L174:                     ),
+L175:                     'has_image_3': tfds.features.Scalar(
+L176:                         dtype=np.bool_,
+L177:                         doc='True if image3 exists in observation, otherwise dummy value.'
+L178:                     ),
+L179:                     'has_language': tfds.features.Scalar(
+L180:                         dtype=np.bool_,
+L181:                         doc='True if language exists in observation, otherwise empty string.'
+L182:                     ),
+L183:                 }),
+L184:             }))
+L185:     def _split_paths(self):
+L186:         """Define filepaths for data splits."""
+L187:         base_paths = ["/nfs/kun2/users/homer/datasets/bridge_data_all/numpy_256",
+L188:                       "/nfs/kun2/users/homer/datasets/bridge_data_all/scripted_numpy_256"]
+L189:         train_filenames, val_filenames = [], []
+L190:         for path in base_paths:
+L191:           for filename in glob.glob(f'{path}/**/*.npy', recursive=True):
+L192:             if '/train/out.npy' in filename:
+L193:                 train_filenames.append(filename)
+L194:             elif '/val/out.npy' in filename:
+L195:                 val_filenames.append(filename)
+L196:             else:
+L197:                 raise ValueError(filename)
+L198:         print(f"Converting {len(train_filenames)} training and {len(val_filenames)} validation files.")
+L199:         return {
+L200:             'train': train_filenames,
+L201:             'val': val_filenames,
+L202:         }
+

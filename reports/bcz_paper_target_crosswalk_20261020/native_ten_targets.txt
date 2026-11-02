@@ -1,0 +1,15 @@
+def bcz_native_command_chunk(position, axis_angle, xyz_residuals, angle_residuals, target_closes):
+    """诊断用原生10目标：[10, 8]，每一行的位姿与夹爪来自相同waypoint。
+
+    全部残差相对于同一输入时刻，不做累加，不跨观测拼接，不推定每步秒数。
+    仅接入显式native_commands拟合诊断，不改变默认训练或闭环的数据语义。
+    """
+    xyz = np.asarray(xyz_residuals, dtype=np.float32)
+    angles = np.asarray(angle_residuals, dtype=np.float32)
+    closes = np.asarray(target_closes)
+    if xyz.shape != (10, 3) or angles.shape != (10, 3) or closes.shape != (10,):
+        raise ValueError("BC-Z native diagnostic requires shapes (10,3), (10,3), (10,)")
+    return np.stack([
+        bcz_first_command_action(position, axis_angle, xyz[k], angles[k], closes[k])
+        for k in range(10)
+    ])

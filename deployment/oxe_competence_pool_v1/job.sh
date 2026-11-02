@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=oxe-competence
+#SBATCH --partition=cluster02
+#SBATCH --account=msc
+#SBATCH --qos=msc
+#SBATCH --gres=gpu:a40:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=40G
+#SBATCH --time=00:35:00
+#SBATCH --no-requeue
+#SBATCH --chdir=/projects/Zeroshot
+#SBATCH --output=/projects/Zeroshot/logs/oxe-competence-%j.out
+set -euo pipefail
+ROOT=/projects/Zeroshot
+PROJECT="$ROOT/envs/multitask-preflight-v1"
+export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 WANDB_MODE=disabled
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+export CUBLAS_WORKSPACE_CONFIG=:4096:8
+export LD_LIBRARY_PATH="$PROJECT/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+cd "$ROOT/oxe_competence_pool_v1"
+sha256sum -c SHA256SUMS
+if [[ "$#" == 0 ]]; then
+  "$PROJECT/bin/python" -B run_competence.py --root "$ROOT" --output "$ROOT/runs/oxe-competence-${SLURM_JOB_ID}"
+else
+  [[ "$#" == 1 && "$1" =~ ^[0-9]+$ ]] || exit 1
+  "$PROJECT/bin/python" -B run_competence.py --root "$ROOT" --output "$ROOT/runs/oxe-competence-$1" --resume
+fi

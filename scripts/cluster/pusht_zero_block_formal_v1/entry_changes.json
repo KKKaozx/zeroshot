@@ -1,0 +1,76 @@
+{
+  "source_sha256": "4c727f1be2158e99772d5f37862836bf9c8e533a5be92670cd4cab5fd2d36c6c",
+  "changes": [
+    {
+      "before": "import training_core as core\n",
+      "after": "import training_core as core\nimport zero_state\nfrom zero_blocks import remove_blocks\nfrom bind_preflight import verify_binding\nfrom pair_metrics import compare\n",
+      "count": 1
+    },
+    {
+      "before": "payload = core.capture(policy, averaged, optimizer, scheduler, ema, completed, protocol_sha, plan_sha)",
+      "after": "payload = zero_state.capture(policy, averaged, optimizer, scheduler, ema, completed, protocol_sha, plan_sha, contract_sha)",
+      "count": 1
+    },
+    {
+      "before": "choices=(1, 2), required=True",
+      "after": "choices=(1,), required=True",
+      "count": 1
+    },
+    {
+      "before": "    args = parser.parse_args()",
+      "after": "    parser.add_argument(\"--binding\", type=Path, required=True)\n    args = parser.parse_args()",
+      "count": 1
+    },
+    {
+      "before": "        data = TrainingData(root, protocol, output)",
+      "after": "        binding = verify_binding(args.binding.resolve(), root, bundle)\n        binding_sha = sha(args.binding)\n        shutil.copyfile(args.binding, output / \"preflight_binding.json\")\n        data = TrainingData(root, protocol, output)",
+      "count": 1
+    },
+    {
+      "before": "        normalizer = LinearNormalizer()",
+      "after": "        initialization = remove_blocks(policy.obs_encoder)\n        if initialization != binding[\"initialization\"]:\n            raise ValueError(\"Common norm/projection initialization differs from admitted zero-block preflight\")\n        normalizer = LinearNormalizer()",
+      "count": 1
+    },
+    {
+      "before": "            return snapshot(policy, averaged, optimizer, scheduler, ema, completed,\n                            protocol_sha, plan_sha, contract_sha)",
+      "after": "            payload = snapshot(policy, averaged, optimizer, scheduler, ema, completed,\n                               protocol_sha, plan_sha, contract_sha)\n            payload[\"preflight_binding_sha256\"] = binding_sha\n            return payload",
+      "count": 1
+    },
+    {
+      "before": "                       \"startup_checks\": startup}",
+      "after": "                       \"startup_checks\": startup, \"preflight_binding_sha256\": binding_sha}",
+      "count": 1
+    },
+    {
+      "before": "            validate_resume(sidecar, contract_sha, protocol_sha, plan_sha, target, args.segment)",
+      "after": "            validate_resume(sidecar, contract_sha, protocol_sha, plan_sha, target, args.segment)\n            if sidecar.get(\"preflight_binding_sha256\") != binding_sha:\n                raise ValueError(\"Resume uses a different admitted preflight\")",
+      "count": 1
+    },
+    {
+      "before": "core.restore(payload, policy, averaged, optimizer, scheduler, ema, protocol_sha, plan_sha)",
+      "after": "zero_state.restore(payload, policy, averaged, optimizer, scheduler, ema, protocol_sha, plan_sha, contract_sha)",
+      "count": 2
+    },
+    {
+      "before": "                      fixed_text_digest=fixed_text_digest)",
+      "after": "                      fixed_text_digest=fixed_text_digest)\n        result.update(preflight_binding_sha256=binding_sha, zero_block_initialization=initialization,\n                      active_cross_attention_blocks=0, actual_gpu_name=torch.cuda.get_device_name(0),\n                      actual_node=os.environ.get(\"SLURMD_NODENAME\", os.environ.get(\"HOSTNAME\")),\n                      comparison_scope=contract[\"comparison_scope\"])",
+      "count": 1
+    },
+    {
+      "before": "        if args.segment == 2:\n            del optimizer, scheduler, policy",
+      "after": "        if completed == 84168:\n            del optimizer, scheduler, policy",
+      "count": 1
+    },
+    {
+      "before": "            development = evaluate(LiveProjectPolicy(averaged, client), output, protocol)",
+      "after": "            ema_before = state_hash(averaged)\n            development = evaluate(LiveProjectPolicy(averaged, client), output, protocol)",
+      "count": 1
+    },
+    {
+      "before": "            result.update(development_complete=True, development=development, evaluation_worker=close)",
+      "after": "            if (state_hash(averaged) != ema_before\n                    or any(p.requires_grad or p.grad is not None for p in averaged.parameters())):\n                raise ValueError(\"EMA changed during evaluation\")\n            result.update(development_complete=True, development=development, evaluation_worker=close,\n                          ema_unchanged_during_evaluation=True)\n            reference = json.loads((bundle / \"eight_block_reference.json\").read_text())\n            outcome = compare(development, reference[\"development\"], protocol, contract)\n            save_json(output / \"comparison.json\", outcome)\n            result.update(formal_complete=True, zero_vs_eight=outcome)\n            print(\"ZERO_VS_EIGHT\", json.dumps(outcome), flush=True)",
+      "count": 1
+    }
+  ],
+  "extra_changes": "Doc/log labels only; core loop/evaluator math unchanged"
+}

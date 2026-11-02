@@ -1,0 +1,300 @@
+{
+  "verified": true,
+  "job_id": "207348",
+  "archive_sha256": "aa0491cb937bfa9de166e8e5bab8e09b093d9d9d025db1552a876c014af25f57",
+  "inventory": [
+    {
+      "path": "bridge-coverage-fit-207348/report.json",
+      "bytes": 1374869,
+      "sha256": "1bb7323522b12cc71e1e951939edc3252238f70969d668f5a4006090a1d76804"
+    },
+    {
+      "path": "bridge-coverage-fit-207348/runner_snapshot.py",
+      "bytes": 12888,
+      "sha256": "4646af9511be97c5e79159dbe5cf150215cfb47feda23b9e110222a95eb8f4d3"
+    },
+    {
+      "path": "bridge-coverage-fit-207348/common_updates.jsonl",
+      "bytes": 1333110,
+      "sha256": "5764b916e00485b6f8e9ba89deafd2939fa47bb3739a5a5e3b6d5fbb0f2ef2db"
+    },
+    {
+      "path": "bridge-coverage-fit-207348/reduced_updates.jsonl",
+      "bytes": 1332401,
+      "sha256": "ed862f4bcabd7911096c3bb2eca2e3e9d08a0b91a79ba295e4dd9508266a7ed6"
+    },
+    {
+      "path": "bridge-coverage-fit-207348/reduced_u8192_train.npz",
+      "bytes": 10099947,
+      "sha256": "50a43e3a1e51514bf5fcd5d817f01f2c7afddcf26c81ca1814cf2856a7c79806"
+    },
+    {
+      "path": "bridge-coverage-fit-207348/reduced_u8192_development.npz",
+      "bytes": 221153,
+      "sha256": "8657078a87322b6d008b9b0e5664a13f9e4ef79c3fe8dca646172ebe31d7db93"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/restore_same_lr_u0008_train.npz",
+      "bytes": 22820,
+      "sha256": "5940ae1153f63af940fef43feb7905144e43e1f4c62e95512286cdf272532909"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/report.json",
+      "bytes": 1127670,
+      "sha256": "14c6cd53b5a5c6fb46aac3e72d6b28d3445f414d9c57e177a9d15a2230ef3082"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/restore_same_lr_updates.jsonl",
+      "bytes": 1280,
+      "sha256": "22e511ffec681c3dcf8e3ebb89bd08b86b57ab17543d25dab6200850529a9ef1"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/runner_snapshot.py",
+      "bytes": 12888,
+      "sha256": "4646af9511be97c5e79159dbe5cf150215cfb47feda23b9e110222a95eb8f4d3"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/common_updates.jsonl",
+      "bytes": 1271,
+      "sha256": "19dbd5587e0a3658ce430fc5b2fb9a612bb7377ab1ffa3a375b321e291e22794"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/reduced_updates.jsonl",
+      "bytes": 1276,
+      "sha256": "421de484fa3f399bbeeb51e44d3cf21b074f8b5991b65b2151faf72439dcc2ed"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/common_u0000_train.npz",
+      "bytes": 23035,
+      "sha256": "72ff7f0f4a6b793689025275c89c8281f404faa657035e20a60229e0bcd25bdf"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/constant_updates.jsonl",
+      "bytes": 1280,
+      "sha256": "22e511ffec681c3dcf8e3ebb89bd08b86b57ab17543d25dab6200850529a9ef1"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/constant_u0008_train.npz",
+      "bytes": 22820,
+      "sha256": "5940ae1153f63af940fef43feb7905144e43e1f4c62e95512286cdf272532909"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/common_u0004_train.npz",
+      "bytes": 22826,
+      "sha256": "e3070120943b9d9372097eb009c175537034898a65e4f40772783819dad42993"
+    },
+    {
+      "path": "bridge-coverage-preflight-207334/reduced_u0008_train.npz",
+      "bytes": 22864,
+      "sha256": "d12966755c9bd62205e05a4d4c4cbff7aadb49682c5f07183b8edada90758960"
+    }
+  ],
+  "metrics": {
+    "train": {
+      "coverage": {
+        "path_position_cm": 5.336860682990664,
+        "path_rotation_deg": 12.442290064537637,
+        "endpoint_position_cm": 7.177033423515685,
+        "endpoint_rotation_deg": 17.63034032987998
+      },
+      "static": {
+        "path_position_cm": 8.22670390343021,
+        "path_rotation_deg": 14.030568864298662,
+        "endpoint_position_cm": 11.87872060699621,
+        "endpoint_rotation_deg": 20.23048765375136
+      },
+      "retained128": {
+        "path_position_cm": 5.643944625194582,
+        "path_rotation_deg": 11.977945034298095,
+        "endpoint_position_cm": 7.340602852479019,
+        "endpoint_rotation_deg": 17.52154239026307
+      },
+      "episode_equal": {
+        "coverage": {
+          "position_cm": 5.034301946534896,
+          "rotation_deg": 11.913906272639037
+        },
+        "static": {
+          "position_cm": 7.936635611150259,
+          "rotation_deg": 13.435664277765438
+        }
+      }
+    },
+    "development": {
+      "coverage": {
+        "path_position_cm": 7.0794121204466665,
+        "path_rotation_deg": 14.559846665761862,
+        "endpoint_position_cm": 8.943366874185719,
+        "endpoint_rotation_deg": 18.48020213781281
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "original": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593287,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554033
+      },
+      "episode_equal": {
+        "coverage": {
+          "position_cm": 6.697434987825519,
+          "rotation_deg": 14.707823198592868
+        },
+        "static": {
+          "position_cm": 7.9601175966494155,
+          "rotation_deg": 15.066972166771839
+        },
+        "original": {
+          "position_cm": 7.692468140144546,
+          "rotation_deg": 14.825867044893112
+        }
+      }
+    }
+  },
+  "episode_counts": {
+    "train": {
+      "position_better_static": 386,
+      "rotation_better_static": 266,
+      "episodes": 405
+    },
+    "development": {
+      "position_better_static": 7,
+      "rotation_better_static": 3,
+      "episodes": 10,
+      "position_better_original": 7,
+      "rotation_better_original": 7
+    }
+  },
+  "gates": {
+    "position_threshold": true,
+    "rotation_threshold": true,
+    "position_better_old": true,
+    "rotation_better_old": true,
+    "episode_position_majority": true
+  },
+  "candidate_passed": true,
+  "snapshots": [
+    {
+      "stage": "fit",
+      "arm": "reduced",
+      "update": 8192,
+      "split": "train",
+      "path_position_cm": 5.336860682990664,
+      "path_rotation_deg": 12.442290064537637,
+      "endpoint_position_cm": 7.177033423515685,
+      "endpoint_rotation_deg": 17.63034032987998,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "fit",
+      "arm": "reduced",
+      "update": 8192,
+      "split": "development",
+      "path_position_cm": 7.0794121204466665,
+      "path_rotation_deg": 14.559846665761862,
+      "endpoint_position_cm": 8.943366874185719,
+      "endpoint_rotation_deg": 18.48020213781281,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "preflight",
+      "arm": "common",
+      "update": 0,
+      "split": "train",
+      "path_position_cm": 17.47809247960541,
+      "path_rotation_deg": 132.91613021999035,
+      "endpoint_position_cm": 18.037556631460518,
+      "endpoint_rotation_deg": 91.92717175544836,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "preflight",
+      "arm": "common",
+      "update": 4,
+      "split": "train",
+      "path_position_cm": 11.733987267328095,
+      "path_rotation_deg": 34.46665805265516,
+      "endpoint_position_cm": 16.574000528033,
+      "endpoint_rotation_deg": 36.127659648111766,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "preflight",
+      "arm": "constant",
+      "update": 8,
+      "split": "train",
+      "path_position_cm": 11.903443316324369,
+      "path_rotation_deg": 29.954125291536077,
+      "endpoint_position_cm": 17.29905485877388,
+      "endpoint_rotation_deg": 27.160447411531067,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "preflight",
+      "arm": "restore_same_lr",
+      "update": 8,
+      "split": "train",
+      "path_position_cm": 11.903443316324369,
+      "path_rotation_deg": 29.954125291536077,
+      "endpoint_position_cm": 17.29905485877388,
+      "endpoint_rotation_deg": 27.160447411531067,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "preflight",
+      "arm": "reduced",
+      "update": 8,
+      "split": "train",
+      "path_position_cm": 11.481058929585494,
+      "path_rotation_deg": 22.1907901094178,
+      "endpoint_position_cm": 16.75495879056299,
+      "endpoint_rotation_deg": 30.813739414012982,
+      "passing_windows": 0,
+      "fit_gate": false
+    }
+  ],
+  "max_report_metric_difference": {
+    "position_cm": 2.691571491908462e-06,
+    "rotation_deg": 0.0006356261339135472
+  },
+  "fixed_schedule": {
+    "updates": 8192,
+    "batch_size": 8,
+    "total_draws": 65536,
+    "minimum_window_draws": 23,
+    "maximum_window_draws": 72,
+    "mean_window_draws": 35.694989106753816
+  },
+  "initial_and_retained_contracts_match_old": true,
+  "preflight_first4_losses_and_gradients_exact": true,
+  "complete415_payload_identities_match_prior_geometry_audit": true,
+  "checkpoint_metadata": [
+    {
+      "path": "final_trainable.pt",
+      "sha256": "7a0dc3135e6952051af63f766780d7b1e8da5c07da6324b4f104d49ab957117b",
+      "bytes": 529377698,
+      "roundtrip_exact": true
+    }
+  ],
+  "checkpoint_downloaded": false,
+  "peak_reserved_gib": 5.625,
+  "elapsed_seconds": 3237.284936045995,
+  "new_neural_execution": false,
+  "limitations": [
+    "One training initialization; three diffusion sampling seeds are not training replications.",
+    "Repeated development set, not an untouched final test.",
+    "More episodes, more within-episode windows and fewer repetitions per window change together at fixed update budget.",
+    "Cache and frozen-parameter integrity use runtime hashes/assertions, not a downloaded model re-execution.",
+    "Offline pose only; gripper frozen; no robotic grasp or unseen-task conclusion."
+  ]
+}

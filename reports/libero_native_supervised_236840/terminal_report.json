@@ -1,0 +1,75 @@
+{
+  "execution_complete": true,
+  "target_supervised": true,
+  "zero_shot": false,
+  "formal_matrix_admitted": false,
+  "optimizer_updates": 4096,
+  "encoder_updates": 0,
+  "original_oxe_weights_loaded": false,
+  "task": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet",
+  "train_demos": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "development_demos": [
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "automatic_rollout": false,
+  "automatic_following_action": false,
+  "errors": [],
+  "new_frames_encoded": 1888,
+  "encoding_seconds": 33.64871302107349,
+  "initial_state_sha256": "43e558ef72f905c237aeaeab0805beddfef578611fff400c2ce8aec0df972430",
+  "final_state_sha256": "f7a36dc0c1fa9b767efc226b562ec4f26dffb2c335af30e71b0099f8ae6a047d",
+  "policy_sha256": "cb79d8333de212aa95810050908dba90e543ccf0f76560e70fc29deb4d824bd8",
+  "metrics": {
+    "train": {
+      "motion6_mse_native_units": 0.0028219580456072192,
+      "train_mean_motion6_mse": 0.05249979970890587,
+      "previous_command_held_motion6_mse": 0.03774865462587324,
+      "draws": 3,
+      "windows": 128,
+      "constant_native_dimensions": [
+        6
+      ],
+      "scope": "Offline command error; no task-success admission or checkpoint selection"
+    },
+    "development": {
+      "motion6_mse_native_units": 0.01166144882864451,
+      "train_mean_motion6_mse": 0.051401504309051466,
+      "previous_command_held_motion6_mse": 0.03705424337718006,
+      "draws": 3,
+      "windows": 128,
+      "constant_native_dimensions": [
+        6
+      ],
+      "scope": "Offline command error; no task-success admission or checkpoint selection"
+    }
+  },
+  "peak_reserved_gib": 5.666015625,
+  "elapsed_seconds": 665.9169721179642,
+  "elapsed_scope": "After CPU admission; includes loading/encoding/training/offline sampling; before final verifier/ZIP",
+  "learned_policy_task_success": null
+}

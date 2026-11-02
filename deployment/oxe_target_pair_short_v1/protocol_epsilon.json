@@ -1,0 +1,19 @@
+{
+  "format": "explicit-main-target-prefix-protocol-v1",
+  "target": "epsilon",
+  "prefix_updates": 8192,
+  "total_lr_horizon": 65536,
+  "pair_protocol_sha256": "07b52f959f0529dbbe06d89d4ce2b6a3bc16c2d8dcac3110cc5a44f28cab07f6",
+  "source_original_protocol_sha256": "297e03087cf4efaf61b476b84b046404565014984d32c0d777a03b62fada51be",
+  "measured_old_preflight_frozen_binding_reused_only": true,
+  "new_target_performance_or_preflight_claimed": false,
+  "source_assumptions": {
+    "clock": "Published nominal5/5/10/3Hz mapped to5Hz; no measured timestamps",
+    "raw_source_xyz_treated_as_meters_for_shared_scale": true,
+    "exact_export_units_verified_for_all_sources": false,
+    "source_cartesian_frames_preserved": true,
+    "cross_robot_base_or_tcp_registration_proven": false,
+    "libero_execution": "Separate uncalibrated shared-Cartesian convention; no physical target evaluation in this training entry"
+  },
+  "role": "bounded diagnostic, not a primary thesis condition"
+}

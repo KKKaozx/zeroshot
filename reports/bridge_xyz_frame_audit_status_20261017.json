@@ -1,0 +1,19 @@
+{
+  "stage": "verified_closed",
+  "scope": "One CPU prior/representation audit only; no neural-policy change",
+  "plan": "reports/bridge_xyz_frame_audit_20261017/plan.json",
+  "plan_sha256": "a3f7fc40b5ace1f8b0b3725b5cc893cd5bf99ff0bd698d17d16ad53d06ae92af",
+  "report": "reports/bridge_xyz_frame_audit_20261017/report.json",
+  "report_sha256": "57b1132d1b965bf96e4cb45e9f591f2a5865a9f7210f5910bbb32e5a0b08fa78",
+  "independent_audit": "reports/bridge_xyz_frame_audit_20261017/independent_audit.json",
+  "representation_gate_passed": false,
+  "tool_prior_window_position_cm": 7.687429820261715,
+  "base_prior_window_position_cm": 7.708288224318514,
+  "tool_prior_episode_position_cm": 7.4073516365294125,
+  "base_prior_episode_position_cm": 7.383138729923824,
+  "episodes_better": 5,
+  "new_gpu_job_submitted": false,
+  "neural_training": false,
+  "original_labels_modified": false,
+  "next_action": "Close this representation candidate based on the fixed gate; no automatic neural coordinate experiment, scale sweep or reserved-test access. Preserve all existing references."
+}

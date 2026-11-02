@@ -1,0 +1,79 @@
+{
+  "verified": true,
+  "zero_new_training": true,
+  "train_only": true,
+  "same_native_predictions_exact": true,
+  "trace_growth": [
+    {
+      "seed": 1101,
+      "initial_windows_worsening": 11,
+      "windows": 16,
+      "mean_position_growth_cm": 1.8524260530006862
+    },
+    {
+      "seed": 1102,
+      "initial_windows_worsening": 12,
+      "windows": 16,
+      "mean_position_growth_cm": 2.5564243177979264
+    },
+    {
+      "seed": 1103,
+      "initial_windows_worsening": 14,
+      "windows": 16,
+      "mean_position_growth_cm": 2.929217578769734
+    }
+  ],
+  "phase_specific_other15_mean_diagnostic": [
+    {
+      "observation_start": 0,
+      "position_cm": 5.835999829527888,
+      "rotation_deg": 0.0009035680012416316,
+      "endpoint_cm": 8.966325032819192
+    },
+    {
+      "observation_start": 12,
+      "position_cm": 0.0636861912577324,
+      "rotation_deg": 0.0012235814017331104,
+      "endpoint_cm": 0.06387843234270152
+    },
+    {
+      "observation_start": 24,
+      "position_cm": 0.00024786834236118925,
+      "rotation_deg": 0.0004071919977567195,
+      "endpoint_cm": 0.0004237634645042287
+    },
+    {
+      "observation_start": 36,
+      "position_cm": 0.0007746337750390196,
+      "rotation_deg": 0.0008734303373884965,
+      "endpoint_cm": 0.0012082180861441596
+    },
+    {
+      "observation_start": 44,
+      "position_cm": 0.0004653538434506181,
+      "rotation_deg": 0.0005006513885507292,
+      "endpoint_cm": 0.0008613640567502796
+    },
+    {
+      "observation_start": 52,
+      "position_cm": 0.000903301168209931,
+      "rotation_deg": 0.0009813934681011571,
+      "endpoint_cm": 0.0008917493473612479
+    },
+    {
+      "observation_start": 68,
+      "position_cm": 0.00024231278479015092,
+      "rotation_deg": 0.00031117178369574654,
+      "endpoint_cm": 0.00041219449008382314
+    },
+    {
+      "observation_start": 86,
+      "position_cm": 0.00015318742019879662,
+      "rotation_deg": 0.00010650846772021293,
+      "endpoint_cm": 0.00018281535823286106
+    }
+  ],
+  "constant_baseline_limit": "Uses expert phase and labels of other training demonstrations; diagnostic target variability, not a deployable policy or held-out performance",
+  "checked_outputs_sha256": "4fd413806b667a4cf06edf85a53616eb73ba28970811e89f5de7cd8f1cc5e8b9",
+  "checked_trace_sha256": "68981c03fd49febc866540d8d08e859278084692ec013d619743b969c99deadf"
+}

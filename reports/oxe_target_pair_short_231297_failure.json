@@ -1,0 +1,47 @@
+{
+  "job_id": 231297,
+  "reported_date": "2026-10-28",
+  "source": "User pasted sample endpoint receipt tail and evaluation traceback",
+  "status": "two_training_prefixes_verified_then_evaluation_failed_before_generation",
+  "slurm_state_observed": null,
+  "original_process_failed": true,
+  "completed_updates_per_arm_inferred_from_unchanged_verifier": 8192,
+  "training_pair_verification_inferred_passed": true,
+  "first_reference_replay_inferred_passed": true,
+  "inference_basis": "run_pair saved pair verification before evaluation; evaluate repeated verify_pair before failing at selection field access",
+  "original_reports_or_predictions_downloaded": false,
+  "generated_metrics_available": false,
+  "root_cause": {
+    "exception": "KeyError",
+    "field_requested": "sampling_steps",
+    "actual_selection_field": "generation_steps",
+    "actual_value": 100,
+    "location": "evaluate.py:56",
+    "attribution": "Assistant-authored evaluator schema mismatch; earlier CPU suite did not exercise this main entry"
+  },
+  "sample_terminal": {
+    "final_learned_sha256": "9be1b13dfa746d19c96f13c746c9fe50355505b2532a28dfbf25dde4a6c121fd",
+    "checkpoint_contract_sha256": "9cd86ab798175775aa908f31b3ab9a9ff3867c3bc7f03cc45b7605c9340844ae",
+    "elapsed_seconds": 2346.636757478118,
+    "peak_reserved_gib": 4.603515625,
+    "full_optimizer_state_retained": true,
+    "not_full_horizon_training": true,
+    "frozen_sha256_before": "fc5316b4b1efba56b942d2f78d896e8a26ab0f5ae6c7226977163f8544c0daa4",
+    "frozen_sha256_after": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "restored_buffer_names": [
+      "posterior_mean_x0",
+      "posterior_mean_xt"
+    ],
+    "encoder_parameters_written": false,
+    "learned_parameters_written": false,
+    "identity_tolerance_used": false
+  },
+  "training_repeated": false,
+  "repair_status": "232091_execution_complete_terminal_bridge64_received",
+  "repair_package": "cluster_packages/oxe_target_pair_eval_repair_v1.zip",
+  "repair_package_sha256": "4ac92b12f9896bfd559b17b5bab24015d049444fd022f102247985975a907075",
+  "scope": "Training receipts/control-flow evidence only, no decoded metrics or generalization verdict",
+  "repair_job_id": 232091,
+  "repair_submission": "reports/oxe_target_eval_repair_submission_232091.json",
+  "repaired_evaluation_result": "reports/oxe_target_eval_repair_232091/analysis.json"
+}

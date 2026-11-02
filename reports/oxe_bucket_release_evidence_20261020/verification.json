@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "bucket_metadata_byte_identity_checks": [
+    {
+      "dataset": "language_table",
+      "version": "0.1.0",
+      "file": "dataset_info.json",
+      "local_sha256": "f9c24bb59cc3dd66bc655d78762ed2a4c47b6628d187d684c29c8c886f7dd938",
+      "remote_sha256": "f9c24bb59cc3dd66bc655d78762ed2a4c47b6628d187d684c29c8c886f7dd938",
+      "byte_equal": true
+    },
+    {
+      "dataset": "language_table",
+      "version": "0.1.0",
+      "file": "features.json",
+      "local_sha256": "aab4b382f0f235a6327006a8f47c13fa3169f4e2cbf71674b0519649af2d95bd",
+      "remote_sha256": "aab4b382f0f235a6327006a8f47c13fa3169f4e2cbf71674b0519649af2d95bd",
+      "byte_equal": true
+    },
+    {
+      "dataset": "bc_z",
+      "version": "1.0.0",
+      "file": "dataset_info.json",
+      "local_sha256": "2dd37a932985e555619a55c1985f17cfcc8a4f3da0ac67430451f79d629a03b9",
+      "remote_sha256": "2dd37a932985e555619a55c1985f17cfcc8a4f3da0ac67430451f79d629a03b9",
+      "byte_equal": true
+    },
+    {
+      "dataset": "bc_z",
+      "version": "1.0.0",
+      "file": "features.json",
+      "local_sha256": "298f944d5a3322b5d9eae86f3f88406c4146e9600fe3f097b97ed7413514ef4b",
+      "remote_sha256": "298f944d5a3322b5d9eae86f3f88406c4146e9600fe3f097b97ed7413514ef4b",
+      "byte_equal": true
+    }
+  ],
+  "release_summaries": {
+    "bc_z_0.1.0_dataset_info.json": [
+      {
+        "name": "train",
+        "episodes": 39350,
+        "shards": 1024,
+        "bytes": 78651255904
+      },
+      {
+        "name": "val",
+        "episodes": 3914,
+        "shards": 64,
+        "bytes": 7824546275
+      }
+    ],
+    "bc_z_1.0.0_dataset_info.json": [
+      {
+        "name": "train",
+        "episodes": 39350,
+        "shards": 512,
+        "bytes": 49245868997
+      },
+      {
+        "name": "eval",
+        "episodes": 3914,
+        "shards": 64,
+        "bytes": 4898916047
+      }
+    ],
+    "language_table_0.0.1_dataset_info.json": [
+      {
+        "name": "train",
+        "episodes": 442226,
+        "shards": 500,
+        "bytes": 428665067806
+      }
+    ],
+    "language_table_0.1.0_dataset_info.json": [
+      {
+        "name": "train",
+        "episodes": 442226,
+        "shards": 1024,
+        "bytes": 429354585952
+      }
+    ]
+  },
+  "pinned_source_snapshots_verified": true,
+  "language_table_additional_source_snapshots": [
+    {
+      "url": "https://raw.githubusercontent.com/google-research/language-table/42b319d46ec408cfe382cdbf45e71b6cf4be2900/language_table/examples/dataset_example.py",
+      "sha256": "dbb0974581dfaae814eaae769cf4ad3ab8d658bedfe098b76aca854e969119df",
+      "snapshot": "lt_dataset_example.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-research/language-table/42b319d46ec408cfe382cdbf45e71b6cf4be2900/language_table/environments/constants.py",
+      "sha256": "a21fbe7c43243b6e2f2650ed173b4d99e33f4ebb7372f6967d07ebcc400d92fc",
+      "snapshot": "lt_constants.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-research/language-table/42b319d46ec408cfe382cdbf45e71b6cf4be2900/language_table/environments/language_table.py",
+      "sha256": "47d3bbcb79bcc96429cc57922c2a454956be55233e6ce83f63e9dd05bf4b961d",
+      "snapshot": "lt_language_table.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-research/language-table/42b319d46ec408cfe382cdbf45e71b6cf4be2900/language_table/train/input_pipeline_rlds.py",
+      "sha256": "4c9788933bb751406add9d2c2aea081414ff688594adee2f1f934219e3840c62",
+      "snapshot": "lt_input_pipeline_rlds.py"
+    }
+  ],
+  "production_code_unchanged": true,
+  "episode_roles_unchanged": true,
+  "no_physical_units_or_record_timing_verdict": true,
+  "training_ready": false
+}

@@ -1,0 +1,130 @@
+{
+  "status": "superseded_by_teacher7_five_condition_plan",
+  "authority": "First/fourth/sixth teacher correspondence and existing project requirements",
+  "main_question": "OXE-trained frozen-CLIP Adapter diffusion policy evaluated in official LIBERO, with language augmentation ablations",
+  "training_sources": [
+    "bridge_data_v2",
+    "language_table real",
+    "bc_z",
+    "fractal20220817_data"
+  ],
+  "libero_demonstrations_used_as_main_training": false,
+  "target_domain_training_requires_separately_labelled_experiment": true,
+  "conditions": [
+    {
+      "id": "no_augmentation",
+      "paraphrases": false,
+      "counterfactuals": false
+    },
+    {
+      "id": "paraphrase_only",
+      "paraphrases": true,
+      "counterfactuals": false
+    },
+    {
+      "id": "counterfactual_only",
+      "paraphrases": false,
+      "counterfactuals": true
+    },
+    {
+      "id": "combined",
+      "paraphrases": true,
+      "counterfactuals": true
+    }
+  ],
+  "independent_training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "minimum_distinct_training_runs": 12,
+  "paraphrase_requirement": "Five verified lexical restatements per original training instruction, generated only from training inputs; local language model requested by teacher",
+  "counterfactual_requirement": "Different-goal language from the training suite, with verified scene-instruction mismatch; do not automatically label every alternative goal as inaction",
+  "null_action_semantics": {
+    "xyz": [
+      0,
+      0,
+      0
+    ],
+    "relative_quaternion_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "gripper": "Hold current known state/command under the declared source contract; do not open by default",
+    "all_zero_quaternion_allowed": false
+  },
+  "matched_across_groups": [
+    "source examples and splits",
+    "initialization by training seed",
+    "architecture",
+    "frozen CLIP weights",
+    "optimizer and diffusion schedule",
+    "accepted update budget",
+    "native evaluation interface and initial-state plan"
+  ],
+  "augmentation_sampling_policy": "Not yet frozen; explicitly document the changed positive/negative exposure and compute budget before runs",
+  "update_budget_per_run": null,
+  "formal_task_suites_and_splits": null,
+  "rollouts_per_task_split_required": 100,
+  "official_author_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "engineering_task_excluded_from_final_scores": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "existing_work_completed": [
+    "130 task names and assets match local HDF5 metadata",
+    "official environment reset and two cameras",
+    "one native 197-action engineering replay ending in official success",
+    "relative waypoint to native OSC goal geometry boundary",
+    "opt-in four-condition intervention in main train.py before tokenizer, CPU synthetic contract checks passed",
+    "Actual45,049-window engineering manifest and fixed roles consumed by main prepare-only entry;20 checks including8 actual train-window reads",
+    "Training-only35,933-window instruction inventory:2,447 canonical instructions; no validation/holdout/LIBERO instruction reads"
+  ],
+  "language_training_entry": "code/train.py --language-condition; default disabled; requires shared split manifest and reviewed training-only bank",
+  "real_reviewed_language_bank_available": false,
+  "language_contract_check_report": "reports/language_condition_integration_20261020/report.json",
+  "libero_reader_phase_repair_report": "reports/libero_observation_phase_20261020/report.json",
+  "explicit_time_execution_entry": "code/libero_waypoint_execution.py",
+  "execution_contract_check_report": "reports/libero_waypoint_execution_20261020.json",
+  "project_policy_inference_entry": "code/libero_project_policy.py",
+  "project_policy_inference_check_report": "reports/libero_project_policy_20261020.json",
+  "two_feature_command_input_chain_report": "reports/oxe_command_chain_integration_20261020/report.json",
+  "oxe_baseline_preparation_plan": "configs/oxe_no_augmentation_stage_plan_20261020.json",
+  "oxe_unassigned_candidate_inventory": "reports/oxe_baseline_candidates_20261020/report.json",
+  "project_inference_scope": "Actual main-model code with a randomly initialized tiny CLIP; CPU only, no physics or trained competence validation",
+  "learned_policy_libero_execution_validated": false,
+  "required_before_formal_runs": [
+    "mixed-source training manifest and masks with complete source contracts",
+    "training-only paraphrase and grounded counterfactual banks",
+    "fixed training budget and complete optimizer/scheduler/RNG resume qualification",
+    "20Hz control timing and cross-robot TCP mapping contract",
+    "model inference connection and gripper execution",
+    "frozen formal task/initial-state plan and update budget"
+  ],
+  "new_jobs_submitted": false,
+  "pusht214273_or_bridge207558_modified": false,
+  "formal_benchmark_result_available": false,
+  "readiness_rechecked_date": "2026-10-25",
+  "parallel_execution_blocker_note": "docs/LIBERO_PREPARATION_WINDOWS_LANGUAGE_20261025.md",
+  "does_not_wait_for_pusht_root_cause": true,
+  "engineering_window_manifest_report": "reports/oxe_window_index_20261025/report.json",
+  "engineering_window_main_entry_check": "reports/oxe_window_index_20261025/integration_checks.json",
+  "training_instruction_catalog_available": true,
+  "training_instruction_catalog_report": "reports/oxe_train_language_20261025/report.json",
+  "local_language_generation_preparation": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "asset_manifest": "reports/local_paraphrase_model_assets_20261025.json",
+    "pilot_report": "reports/local_paraphrase_pilot_20261025_v2/report.json",
+    "text_review": "reports/local_paraphrase_pilot_20261025_v2/text_review.json",
+    "pilot_instructions": 8,
+    "structural_passing_groups": 7,
+    "complete_five_text_accepted_groups": 2,
+    "full_catalog_generated": false,
+    "reviewed_training_bank_ready": false,
+    "automatic_full_generation": false,
+    "status": "local_candidate_chain_runs_quality_not_ready_for_training",
+    "training_updates": 0
+  },
+  "superseded_by": "configs/libero_five_condition_plan_20261025.json",
+  "historical_only_do_not_submit_from_this_matrix": true
+}

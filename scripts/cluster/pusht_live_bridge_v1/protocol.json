@@ -1,0 +1,47 @@
+{
+  "stage": "resource_only_no_formal_entry",
+  "data_report_sha256": "c6f4f8f2e1e2de7118c92f497f3ad49d2a51031d5ec52895cb6031104bc49879",
+  "author_file_sha256": {
+    "diffusion_policy/policy/diffusion_unet_hybrid_image_policy.py": "d8ead767ed3b1501c358aa3dd97ab479ebdf77a62ec9ab7081d6a2211c2d2e76",
+    "diffusion_policy/workspace/train_diffusion_unet_hybrid_workspace.py": "1d69542bdb37906c899f25465e0c178b0581cbf4760de326a78899d67b0cd029",
+    "diffusion_policy/model/diffusion/conditional_unet1d.py": "8a95014f8aa52ade086f967c9018a66bf0c68f2133969c8f7a8522da01b472ac",
+    "diffusion_policy/dataset/pusht_image_dataset.py": "1c3cc71f10cdf71d0bfbea411068a62ef876ee7508dfd7c1d1cfbe770650b0f5",
+    "diffusion_policy/common/sampler.py": "3dc7afb686a418abf4ceee4648dafb7e1be901bb70b1539530f9f9964cad1688",
+    "diffusion_policy/model/diffusion/ema_model.py": "f683be124722abe0703e2cf003566ab2d446783383cdcd5202063e20148ae467",
+    "diffusion_policy/model/common/normalizer.py": "92322852fc04d956d0dd43a2e41fb461dee246bbf97ddc7940186a9307525ed3"
+  },
+  "fixed_text": "Push the T-shaped block into the target pose.",
+  "initialization": "Both start from the same freshly initialized author policy backend; no pretrained checkpoint loaded",
+  "batch": {
+    "logical": 64,
+    "microbatch": 8,
+    "accumulation": 8,
+    "updates_each": 5,
+    "warmup_updates": 2,
+    "measured_updates": 3
+  },
+  "cached_observations": {
+    "time_steps": 2,
+    "rgb_tokens": [
+      257,
+      1024
+    ],
+    "text_width": 768,
+    "adapter_layers": 8,
+    "pooling": "cls_patch_mean",
+    "mapping": "Linear(1024,64)",
+    "native_state_columns": "Measure identity branch placement, preserve exact columns; do not assume concatenation order"
+  },
+  "scope": "Frontend family includes its own preprocessing; not an Adapter-only causal comparison",
+  "image_preprocessing": {
+    "native": "Author random84crop in train, fixed84crop eval and image [-1,1] normalizer",
+    "project": "Fixed local CLIPImageProcessor resize/normalize; cache float32 raw-frame features; same preprocessing planned for live inference"
+  },
+  "normalizer": "Train90 episode frames only, fitted identically in both groups; this differs from original full-replay stats",
+  "formal_reference_projection_updates": 84168,
+  "formal_budget_fixed": false,
+  "dev_scored": false,
+  "final_scored": false,
+  "clip_unfreeze_allowed": false,
+  "pretrained_195527_score_used_as_short_budget_comparator": false
+}

@@ -1,0 +1,110 @@
+{
+  "protocol_sha256": "30f10e36923f41cc0286046e87e8e52bf2aacd3eacebbaf837d54c8dbdfc8813",
+  "source_sha256": {
+    "code/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "code/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "code/train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9",
+    "code/replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "code/fit_bridge_adapter_pair.py": "a2798c873783e7b1adbb3573876c96c3ceda45c23b53f28a28a4989526f64914",
+    "code/evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "code/pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "scripts/run_panda_spatial_fixed_trial_20261015.py": "1d7763e06fe2b7b44d9cac560fa0379a2f0c8f5600027f6b2a3dc677771bc271",
+    "scripts/preflight_panda_minimal_generalization_20261015.py": "2601c8eaab821608e54a312c4a2dec7eef9e983df0516ca8d00a34f4484416a5"
+  },
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "panda_measured_finger_width_affine_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  },
+  "initialization": 43,
+  "updates": 8192,
+  "batch_size": 8,
+  "learning_rates": [
+    {
+      "first": 1,
+      "last": 4096,
+      "lr": 0.0001
+    },
+    {
+      "first": 4097,
+      "last": 8192,
+      "lr": 1e-05
+    }
+  ],
+  "sample_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "offline_batch_size": 2,
+  "checkpoint_selection": "Final fixed update only",
+  "inputs": "RGB,instruction,measured finger width; no EE-state port or object coordinates",
+  "loss": "Unchanged production policy_loss; pose and gripper jointly trained",
+  "rollout": {
+    "split": "development",
+    "replans": 28,
+    "executed_prefix": 4,
+    "total_commands": 112,
+    "position_min": [
+      0.25,
+      -0.3,
+      0.64
+    ],
+    "position_max": [
+      0.75,
+      0.3,
+      1.05
+    ],
+    "success": "Last10 object heights >initial+0.10m and final bilateral contacts; no precise-height condition",
+    "candidate": "At least3/4 positions succeed in at least2/3 sampling draws"
+  },
+  "storage": {
+    "stage": "Formal training, separate from preparation-only no-weight rule",
+    "checkpoint_bytes_limit": 1073741824,
+    "one_final_nonclip_checkpoint": true,
+    "save_optimizer": false,
+    "intermediate_weights": false
+  },
+  "preflight_weight_loaded": false,
+  "test_used": false
+}

@@ -1,0 +1,88 @@
+{
+  "cpu_request_contract_verified": true,
+  "production_training_integration_ready": false,
+  "new_generalization_result": false,
+  "active_reference": 207558,
+  "baseline_unchanged": true,
+  "cuda_visible_devices": "-1",
+  "optimization_updates": 0,
+  "project_model_or_checkpoint_loaded": false,
+  "raw_dataset_read": false,
+  "real_targets_read": false,
+  "heldout_targets_read": false,
+  "learned_policy_rollouts": false,
+  "GPU_jobs_submitted": false,
+  "tests_use": "Synthetic tensors, untrained small archived U-Net layout, and a synthetic exact-clean oracle",
+  "architecture_probe": {
+    "down_dims": [
+      8,
+      16,
+      32
+    ],
+    "context_dim": 8,
+    "core_parameters": 69583,
+    "request_projection_parameters": 128,
+    "production1024_context_additional_parameters": 16384
+  },
+  "requested_horizons": [
+    1,
+    16
+  ],
+  "diffusion_steps_for_both": 100,
+  "remaining_length_is_model_condition": false,
+  "training_pair_counts": {
+    "K1": 3394,
+    "K16": 1836,
+    "total": 5230,
+    "independent_new_demonstrations": 0
+  },
+  "checks": {
+    "full16_forward_noise_exact": true,
+    "full16_denoiser_exact_even_with_nonzero_request_projection": true,
+    "full16_loss_max_difference": 0.0,
+    "full16_source_sample_replay_steps": 100,
+    "full16_all_latent_context_output_max_difference": 0.0,
+    "full16_final_pose_difference": 0.0,
+    "K1_availability1_vs15_same_input_prediction_loss": true,
+    "K1_unrequested_target_and_noise_poison_invariant": true,
+    "requested16_missing_labels_rejected": true,
+    "invalid_input_gradient": 0.0,
+    "new_request_projection_gradient": 0.4167909622192383,
+    "all_gradients_finite": true,
+    "K1_all100_inference_inputs_auxiliary_zero": true,
+    "K1_output_shape": [
+      1,
+      1,
+      7
+    ],
+    "K1_quaternions_unit": true,
+    "K1_synthetic_clean_oracle_max_difference": 4.172325134277344e-06,
+    "no_optimizer_or_parameter_change": true
+  },
+  "explicit_changes": [
+    "A caller-request conditioning projection is added; not the unchanged model",
+    "Auxiliary slots are projected to zero at forward noise, denoiser input/output, each reverse step",
+    "K1 supervision on ALL3394 contexts, K16 on1836 full contexts; weights/compute budget not yet specified",
+    "K1 deployment would reobserve after one action; no claim that4-step execution is unchanged",
+    "Only7D poses; gripper training/execution not implemented here"
+  ],
+  "limits": [
+    "Numerical contracts on synthetic tensors are not pretrained checkpoint replay or generalization evidence",
+    "Zero padding and request conditioning still impose a different inductive bias",
+    "Unknown future16 poses of late contexts remain unidentifiable from these records; do not claim full16 supervision there",
+    "K1 cannot replace the original16-horizon evaluation as proof of improving the same metric",
+    "No remaining-length or end-of-task prediction/control capability is established",
+    "Batch sampler, full model integration, internal/fresh holdout split, joint gripper, and final training protocol remain open"
+  ],
+  "source_sha256": {
+    "scripts\\check_bridge_requested_prefix_diffusion_20261017.py": "665282e56941fbe6050b9069a5ea38f9b13050fdb9909812f49bc2910deadbc0",
+    "scripts\\bridge_requested_prefix_diffusion_v1.py": "b84770cc9fdece2b86c66fb34b3c7e907bbf8d8681c4a8ca8021919393c172d6",
+    "scripts\\bridge_partial_future_contract_v1.py": "4c22738deeaa2a845d1e914d6444150d8bf386249d4e3b31a2167e3f0ecf1eb1",
+    "cluster_packages\\bridge_growth128_v1\\diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "cluster_packages\\bridge_growth128_v1\\models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "reports\\bridge_partial_future_contract_20261017\\report.json": "80c2e3bcbb428e94f8875fd010f363eed0cca929401e0151ceef4bcac6122d74",
+    "reports\\bridge_partial_future_contract_20261017\\candidate_rows.json": "f592bff26aff611c8ad428e69e22e6ac354152a3e9c1cf4890cd36cd3240960c"
+  },
+  "elapsed_seconds": 0.875,
+  "pairs_sha256": "d6fb489e12644a843b53c09a4eef02e193ec49e391ddb1603713bfa944de58b3"
+}

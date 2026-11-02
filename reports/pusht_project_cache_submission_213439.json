@@ -1,0 +1,21 @@
+{
+  "job_id": 213439,
+  "evidence": "User supplied completed job, original CPU cache verifier success and small report downloaded/read on 2026-10-20; large numeric cache verified on cluster, not downloaded or hashed locally",
+  "status": "completed_cluster_integrity_verified_report_received",
+  "elapsed": "00:06:28",
+  "node": "gpu-a6000-1",
+  "bundle": "pusht_project_cache_v1",
+  "native_reference_job": 212158,
+  "expected_log": "/projects/Zeroshot/logs/pusht-clip-cache-213439.out",
+  "expected_report": "/projects/Zeroshot/runs/pusht-project-cache-213439/report.json",
+  "expected_training_frames": 11356,
+  "expected_training_updates": 0,
+  "cache_complete": true,
+  "cache_complete_evidence_scope": "Original cluster verifier plus local small report checks",
+  "clip_frozen_and_unchanged": true,
+  "reference_feature_identity_verified": true,
+  "reference128_max_absolute_difference": 0.0,
+  "large_cache_hashed_locally": false,
+  "project_training_submitted": false,
+  "automatic_repeat_submission": false
+}

@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-16",
+  "purpose": "One-time same-task independent-demonstration evaluation of two frozen checkpoints; no model selection or optimization.",
+  "authorization": "User explicitly approved beginning the new-demonstration assessment after explanation of one-time use.",
+  "selection_sha256": "0448f01fe60bb572904672b1a0e077181f43ad917ca225bc971c6bda26d9e2d7",
+  "metadata_audit_sha256": "cf236c46dca080c079e15d593ca083c4b7e90b20bb8deddfe14da1f9972d3e55",
+  "original_plan_sha256": "4fdba94e69060a35d81a012925d489511c7bf44791536e22f12e4b42f25de14f",
+  "pool_manifest_sha256": "bcd80954a895580068485f7f665d58b07e179341c8c07c161ec2bc6c0caec0b2",
+  "inherited_sha256": {
+    "bridge_growth128_v1/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "bridge_growth128_v1/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "bridge_growth128_v1/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "bridge_growth128_v1/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "bridge_growth128_v1/replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "bridge_growth128_v1/evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "bridge_growth128_v1/check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "bridge_growth128_v1/bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "bridge_growth128_v1/trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+    "bridge_growth128_v1/check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+    "bridge_growth128_v1/fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70",
+    "bridge_growth128_v1/growth128_input_contract.py": "bde3fd9da5d0ae8f67c1511418600121ae19729b368c732c0982e282c67b14d1",
+    "bridge_growth128_v1/manifest.json": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+    "bridge_state_conditioning_v1/fit_state_arm.py": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa",
+    "bridge_state_conditioning_v1/state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+    "bridge_state_conditioning_v1/protocol.json": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82",
+    "bridge_state_conditioning_v1/current_pose.npz": "d8246fec1901054d92f20b4340ce65cffe2c18c0a2e714a673d5f74879d6ab7f",
+    "bridge_inner_selection_v1/selection_contract.py": "e51aaea52530bda8e98638d5e01bb8f07e37aed604322ae689271652ce5960ab",
+    "bridge_coverage_replication_v1/protocol.json": "ab71de20c672180223df4497ebe3548f8b1ecbcc9974c86b817b36fa0031989a",
+    "bridge_rotation_weight_v1/protocol.json": "5a5fb791966a1b67be95d95644d577ce2434de3e619d2a3d019ac4465919e862"
+  },
+  "models": [
+    {
+      "label": "coverage",
+      "job": "207558",
+      "report_directory": "bridge-coverage-rep-fit-207558",
+      "report_sha256": "10d13e43d90f2b1d6b1b87a6d64803806a2d383ecf4fdab517646599b786246f",
+      "checkpoint": {
+        "path": "final_trainable.pt",
+        "sha256": "926030039ac9d32634bf193e989a44a5b891882c503cb8b40fd7b5091ac98ed6",
+        "bytes": 529379298,
+        "roundtrip_exact": true
+      },
+      "initial_shared_sha256": "68040cd1af445c08abcf29c092df21aaa5bd61c1629c3af864ead08102ee9181",
+      "augmented_initial_sha256": "176e4fe2eaf7d14dd5f7ccc0877c3f8655d3aa08aeb5e468c6fa3d0c1de511c6",
+      "torch_version": "2.5.1+cu118"
+    },
+    {
+      "label": "rotation_weight",
+      "job": "207746",
+      "report_directory": "bridge-rotation-weight-fit-207746",
+      "report_sha256": "20b546f8e426945685a221675f110078294c2183adb5b38f0ed8e51391c904ff",
+      "checkpoint": {
+        "path": "final_trainable.pt",
+        "sha256": "9435ed6e96657514bdce23b2fa0f391cec2a312c9470217820f115f2643c9504",
+        "bytes": 529379618,
+        "roundtrip_exact": true
+      },
+      "initial_shared_sha256": "68040cd1af445c08abcf29c092df21aaa5bd61c1629c3af864ead08102ee9181",
+      "augmented_initial_sha256": "176e4fe2eaf7d14dd5f7ccc0877c3f8655d3aa08aeb5e468c6fa3d0c1de511c6",
+      "torch_version": "2.5.1+cu118"
+    }
+  ],
+  "counts": {
+    "episodes": 13,
+    "windows": 60,
+    "replay_windows": 4,
+    "tasks": 5
+  },
+  "task_episode_counts": {
+    "open the drawer": 4,
+    "turn lever vertical to front": 3,
+    "take broccoli out of pan": 2,
+    "close microwave": 2,
+    "close the drawer": 2
+  },
+  "window_rule": "All valid16-step windows, stride4, start in range(0,steps-16,4); no target/error/range-based dropping or replacement.",
+  "sampling": {
+    "steps": 100,
+    "seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "batch_size": 2,
+    "method": "unchanged production DDPM"
+  },
+  "image_processing": "Frozen dataset.py prepare_image; no augmentation.",
+  "state_statistics": "Original128 training observations only, frozen state protocol.",
+  "replay_guard": {
+    "context_atol": 0.0001,
+    "prediction_atol": 0.0001,
+    "rtol": 0,
+    "windows": "First4 of the already-scored40 development windows, same order and batch2; interface check only, not rescoring model selection."
+  },
+  "metrics": {
+    "primary": "Episode-equal path position_cm and rotation_deg; also report original window-weighted metrics.",
+    "secondary": "16th-target position/rotation, all5tasks, all13episodes, all16horizons, same-target no-motion baseline.",
+    "comparisons": "Both fixed models versus static and each other; no winner chosen for subsequent tuning from this set.",
+    "mean_advantage": "Descriptive only: BOTH episode-equal and window-weighted path position/rotation strictly below corresponding same-set static means. Report endpoint separately; do not claim significance, unseen-task ability or grasp success."
+  },
+  "test_use_policy": "After first scoring this set is consumed. Do not tune hyperparameters, select seeds/checkpoints, drop episodes or repeatedly evaluate on it. Do not claim this is the final LIBERO/CLIPort or zero-shot benchmark.",
+  "training": false,
+  "optimizer_created": false,
+  "gripper_trained": false,
+  "simulation": false,
+  "downloads": false,
+  "local_gpu_required": false,
+  "resource_limits": {
+    "package_bytes": 104857600,
+    "new_cluster_files_bytes": 268435456,
+    "gpu_reserved_gib": 7.5
+  },
+  "stop_policy": "Input/geometry/checkpoint/source/replay failures abort before test inference. One job performs guards then each frozen model once; no retraining or hyperparameter sweep. Preserve failure report."
+}

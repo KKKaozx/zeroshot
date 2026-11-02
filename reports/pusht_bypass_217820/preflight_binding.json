@@ -1,0 +1,30 @@
+{
+  "format": "pusht-bypass-preflight-binding-v1",
+  "preflight_job": 217778,
+  "formal_contract_sha256": "7af548adb14ec51246fb231bf6e9e253dd01df0770fdffa9e5b12e42483f2847",
+  "preflight_protocol_sha256": "06a41526155c617ba8c461f7e661b09c81ff048b8fad281542076ea52f7dd167",
+  "preflight_report_sha256": "e251918369ca50fa7da08d867ced0149d62ea869092100f7294f99a0f6e26379",
+  "statistics_sha256": "cb91353dc27bd7ad0f512c70ca0a2728c79ca2c5eb12078dca049de0a274e54b",
+  "source_checkpoint_sha256": "9546973d4245d1165e7a5eb96bd59dab21dd38422ea78861f0133f4610224d13",
+  "verified": {
+    "preflight_verified": true,
+    "groups": {
+      "global_control": {
+        "peak_reserved_gib": 8.78125,
+        "warm_update_seconds": 1.9019729026127608,
+        "zero_endpoint_replay_exact": true,
+        "new_head_gradients_and_updates_valid": true
+      },
+      "spatial_candidate": {
+        "peak_reserved_gib": 8.78125,
+        "warm_update_seconds": 1.4903039943892509,
+        "zero_endpoint_replay_exact": true,
+        "new_head_gradients_and_updates_valid": true
+      }
+    },
+    "estimated_paired_training_hours_excluding_rollouts_and_io": 7.719314538955689,
+    "formal_training_submitted": false,
+    "policy_generalization_verdict": null
+  },
+  "preflight_updates_used_as_training_start": false
+}

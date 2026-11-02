@@ -1,0 +1,158 @@
+{
+  "format": "prediction-target-existing-evidence-review-v1",
+  "review_date": "2026-10-28",
+  "scope": "Existing JSON/source AST only; no models/forwards/updates/simulations or cluster calls",
+  "existing_controls": [
+    {
+      "job": 186009,
+      "scope": "14 training windows, fixed context and gripper,2000updates/arm,3sampling draws",
+      "paired_checks": {
+        "identical_initial_state": true,
+        "identical_all_training_noisy_inputs_and_timesteps": true,
+        "identical_updates_and_coverage": true,
+        "frozen_gripper_unchanged": true
+      },
+      "metrics": {
+        "sample": {
+          "position_error_cm": 0.15663408715670782,
+          "rotation_error_deg": 0.6847830835333216
+        },
+        "epsilon": {
+          "position_error_cm": 1.2565329890178714,
+          "rotation_error_deg": 3.895940293396869
+        }
+      },
+      "not_generalization": true
+    },
+    {
+      "training_job": 197783,
+      "evaluation_job": 197845,
+      "scope": "CLIP, no full current-pose context port,1836train40dev,18360updates/arm,pairedDDPM100",
+      "raw_source_sha256": "1aaf441411386bb1e898fa4481824198f0b144114f64fc16261ce2554d69877d",
+      "paired_sampling_rng": true,
+      "metrics": {
+        "train": {
+          "static": {
+            "path_position_cm": 8.226703643798828,
+            "path_rotation_deg": 14.0304594039917,
+            "endpoint_position_cm": 11.8787202835083,
+            "endpoint_rotation_deg": 20.230451583862305
+          },
+          "sample": {
+            "path_position_cm": 9.842789649963379,
+            "path_rotation_deg": 14.612508138020834,
+            "endpoint_position_cm": 13.839494705200195,
+            "endpoint_rotation_deg": 20.51447041829427
+          },
+          "epsilon": {
+            "path_position_cm": 10.6520144144694,
+            "path_rotation_deg": 18.28461456298828,
+            "endpoint_position_cm": 15.204588572184244,
+            "endpoint_rotation_deg": 25.567652384440105
+          }
+        },
+        "validation": {
+          "static": {
+            "path_position_cm": 8.212326049804688,
+            "path_rotation_deg": 15.098398208618164,
+            "endpoint_position_cm": 10.56533432006836,
+            "endpoint_rotation_deg": 19.98635482788086
+          },
+          "sample": {
+            "path_position_cm": 8.976540883382162,
+            "path_rotation_deg": 13.79190731048584,
+            "endpoint_position_cm": 11.860957463582357,
+            "endpoint_rotation_deg": 17.941125233968098
+          },
+          "epsilon": {
+            "path_position_cm": 9.908487955729166,
+            "path_rotation_deg": 18.365049997965496,
+            "endpoint_position_cm": 13.18229866027832,
+            "endpoint_rotation_deg": 24.449771245320637
+          }
+        }
+      },
+      "source_recipe": {
+        "backbone": "CLIP from archived source config/default constructor",
+        "pooling": "cls_patch_mean",
+        "full_xyz_orientation_context_port": false,
+        "optimizer": "AdamW",
+        "batch_size": 2,
+        "gripper_trained": true,
+        "lr": "1e-4 cosine-per-epoch20"
+      }
+    },
+    {
+      "job": 193195,
+      "followup": 193390,
+      "scope": "Earlier compact epsilon control and frozen DDIM-step review",
+      "evidence": "docs/BRIDGE_EPSILON_CONTROL.md",
+      "already_closed": true
+    }
+  ],
+  "current_main_vs_archived_core_target_and_sampler_ast_identical": {
+    "diffusion_loss": true,
+    "sample": true
+  },
+  "positive229116_vs_197845_exact_window_identity_sets_equal": {
+    "train": true,
+    "validation": true
+  },
+  "positive229116_recipe_differences": {
+    "backbone": "DINO instead of CLIP",
+    "current_pose_context_port": "Observed9D pose port added",
+    "pooling": "cls_patch_mean remains",
+    "optimizer": "Adam instead of AdamW",
+    "batch_size": 8,
+    "updates": 8192,
+    "lr": "1e-4 first4096,1e-5 remaining4096",
+    "gripper_trained": false
+  },
+  "current_question_not_answered": "Whether the known positive DINO+pose-state recipe depends on x0, conditional on its other fixed choices",
+  "decision": "Do not repeat generic x0/epsilon sweep, formula/unit/scheduler checks or old CLIP fitting. First reuse/collect existing229116 artifacts before admitting a conditional new arm.",
+  "next_control_design": {
+    "baseline": "Existing229116 DINO x0 arm, after actual report/prediction/history admission",
+    "conditional_candidate": "At most one fresh epsilon arm under exact positive recipe; no fresh x0 retraining",
+    "fixed": [
+      "DINO features",
+      "text",
+      "observed9Dpose",
+      "CLS+patch readout",
+      "1836train40dev identities",
+      "initial learned weights",
+      "batch8 schedule",
+      "Adam/LR",
+      "frozen gripper"
+    ],
+    "budget_if_admitted": 8192,
+    "reason_not_shorter_vs_existing8192baseline": "Changing target and training dose together would confound the comparison",
+    "admission_pending": [
+      "Actual229116 raw reports and predictions local verification",
+      "Exact initial and constant buffer identity review",
+      "Bounded real generation evaluation and runtime review"
+    ],
+    "training_code_implemented": false,
+    "cluster_submitted": false
+  },
+  "existing_evidence_collection_script": "scripts/cluster/package_bridge_pair_229116_results.sh",
+  "existing_local_download_verifier": "scripts/download_bridge_pair_229116_reports.ps1",
+  "local_positive_raw_evidence_present": false,
+  "source_sha256": {
+    "reports/bridge-target-eval-197845.json": "1aaf441411386bb1e898fa4481824198f0b144114f64fc16261ce2554d69877d",
+    "reports/bridge_target_pair_analysis_197845.json": "a1bdb54329768dde77872ef27543699eed0ca69bae5345acb16fcfa62f0db28a",
+    "reports/bridge_target_pair/pair_comparison.json": "90bc43f720c9a603c9d075bf41278c204f3a1483949a2639da75e732e253a935",
+    "reports/bridge-head-train-192651.json": "f4732ed3a6112f0080fa6d28d4ae69327efe52be27a9626c5c42dd2ceb950b76",
+    "cluster_packages/bridge_backbone_pair_a40_v1/frozen/bridge_growth128_v1/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "deployment/oxe_bridge_supervision_v1/code/models.py": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+    "code/run_bridge_prediction_target.py": "bbc56172eb40367d6086cecc9bca709ae639d61d6d7b1725eefe34cb1795aee8",
+    "scripts/cluster/package_bridge_pair_229116_results.sh": "bf963cc03e26edf85a963a8d8482ab4e88e388eef02f03ad63708dbf29e19395",
+    "scripts/download_bridge_pair_229116_reports.ps1": "8dcd292829f29a7884b41deca0d5883d51312f4584839d6ff9b04a0b822df3ca"
+  },
+  "followup_collection_update": {
+    "completed": true,
+    "verification": "reports/bridge_backbone_pair_a40_229116/download_verification.json",
+    "candidate_package": "cluster_packages/bridge_dino_epsilon_control_v1.zip",
+    "new_x0_training": false,
+    "new_job_submitted": false
+  }
+}

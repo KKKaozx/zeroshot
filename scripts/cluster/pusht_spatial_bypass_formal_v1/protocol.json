@@ -1,0 +1,69 @@
+{
+  "stage": "pre_adapter_spatial_bypass_paired_preflight_only",
+  "motivation_job": 217660,
+  "source_job": 215999,
+  "source_checkpoint": "runs/pusht-project-part2-215999/latest.pt",
+  "source_checkpoint_sha256": "9546973d4245d1165e7a5eb96bd59dab21dd38422ea78861f0133f4610224d13",
+  "source_updates": 84168,
+  "raw_training_images_sha256": "7b05b0ca91d161bad12b2ac5eefe5b58ea7a98f1dfb730d404ed0ba02b842293",
+  "reused_sources_sha256": {
+    "base_protocol.json": "78405a674443df59e6946b3aa86a6d7cbc2b9b22b6b12213b5169fafb2c02911",
+    "project_contract.json": "ffec22787398ce1337230e61d0e3704d46b21d79eb7ff3e644e1de0f65f65b99",
+    "checkpoint_config.yaml": "5fc467ea821b26afa743aad1b7e41206540b3665271be7c688d4cc52cc82dbd6",
+    "project_frontend.py": "fe2670da5542fb61753aa1851d77eef06ad8c76ffce43d7e7c74339bf6501441",
+    "frozen_adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "native_data.py": "438a437fc2dd22564eac8c74eb55c394d70366f802d2b697874029c2821a9580",
+    "token_binding.py": "66d0e352db13e427834028a9a8e18e70cf5188cdb8308749c4d05df357b1068b",
+    "cache_tools.py": "5130c7cd1d212017374e6fe58a03dd28891086ab159360de879c1a9ed7b5033a",
+    "resource_probe.py": "d769356fd2ed37d037143e66f3301f13e7c10246ae3df0b3a8c49b9d9b9d7fb2",
+    "training_core.py": "fbe5340c7e07987b9ceb7975600f7ca8db8fcd09b7e8f9804b80cce7365addad"
+  },
+  "groups": {
+    "global_control": "Raw frozenCLIP patch mean repeated4 times -> fixed train standardization ->4096-to64 zero linear head -> residual add to old visual64",
+    "spatial_candidate": "Raw frozenCLIP patch moments(mean,x,y,xy) -> same standardization algorithm -> same4096-to64 zero linear head -> residual add to old visual64"
+  },
+  "unique_intervention": "Explicit pre-Adapter spatial summary versus pre-Adapter global mean, with matched new head parameter count and same original semantic path",
+  "new_parameters_per_group": 262144,
+  "condition_dimensions_unchanged": {
+    "rgb": 64,
+    "agent_pos": 2,
+    "total": 66
+  },
+  "clip_vision_text_must_remain_frozen": true,
+  "training_scope": "Both groups jointly continue the same existing Adapter/projection/U-Net parameters plus their new bypass head; no group freezes extra modules",
+  "normalization": "Fixed per-channel center/std from all11356 original train90 cached frames only; no diagnostic state labels or nontrain data; no per-frame LayerNorm",
+  "initialization": "Both new heads exactly zero; old raw/EMA outputs and full DDPM100 actions must initially match source. Retain old Adam/LR/EMA counter and RNG; append only new cold-Adam head.",
+  "preflight_updates_per_mode": 8,
+  "preflight_evaluation": "2 train windows only for exact zero initialization DDPM100 replay and finite post-update actions; zero rollout/reward scoring",
+  "planned_formal_updates_per_mode": 8192,
+  "planned_formal_endpoint": 92360,
+  "planned_training_data": "Unchanged90 episodes,10726 windows,11356 frames; same logical64/micro8, continuation indices84168 onward",
+  "planned_objective": "Pinned author epsilon objective and cosineDDPM100; old AdamW, LR horizon512400, EMA counter unchanged",
+  "planned_evaluation": "One fixed endpoint EMA per group on same dev20 seeds5000000..5000019, same diffusion streams. Original215999 and native212158 existing endpoints are context; no extra checkpoint selection.",
+  "planned_development_gate": {
+    "candidate_mean_gain_at_least": 0.05,
+    "mean_gain_references": [
+      "matched global_control",
+      "unchanged215999 mean0.44548841481267654"
+    ],
+    "paired_candidate_minus_control_episode_bootstrap95_lower_bound_positive": true,
+    "candidate_full_reward_fraction_at_least_control_and_unchanged0_25": true,
+    "gate_scope": "Promising reused-development evidence only, not final-set confirmation or multiple-training-seed significance",
+    "if_failed": "Close this bounded variant; no automatic seeds, budgets, new variants or final50 access"
+  },
+  "formal_entry_included": false,
+  "automatic_formal_submission": false,
+  "sealed_final_access_allowed": false,
+  "diagnostic_holdout40_state_labels_allowed_as_training_targets": false,
+  "difference_from_closed210334": "210334 reweighted tokens only after Adapter then collapsed one context; this preserves explicit rawCLIP spatial summaries from before Adapter and compares a matched raw-global bypass",
+  "causal_limits": [
+    "A bounded continuation test, not a fresh full training comparison or proof of the best possible architecture",
+    "Same parameter count does not mean same effective feature rank; added spatial structure is the intervention",
+    "Branch still passes through64 visual dimensions and shares the original learned backend; a failure would not rule out all spatial architectures",
+    "Only one source training seed and reused dev20; final50 remains sealed"
+  ],
+  "formal_requires": [
+    "Real endpoint preflight, complete new-state replay, gradients and measured resources verified",
+    "Prepare separate formal entry bound to successful preflight"
+  ]
+}

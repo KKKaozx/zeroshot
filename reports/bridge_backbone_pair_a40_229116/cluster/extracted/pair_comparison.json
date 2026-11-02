@@ -1,0 +1,108 @@
+{
+  "pair_verified": true,
+  "scores": {
+    "clip": {
+      "path_position_cm": 6.8082075119018555,
+      "path_rotation_deg": 15.138787269592285,
+      "endpoint_position_cm": 8.221684455871582,
+      "endpoint_rotation_deg": 19.032087326049805,
+      "episode_mean_path_position_cm": 6.449931716918945,
+      "episode_mean_path_rotation_deg": 15.213188028335571
+    },
+    "dino": {
+      "path_position_cm": 5.64326286315918,
+      "path_rotation_deg": 12.849230766296387,
+      "endpoint_position_cm": 7.430886268615723,
+      "endpoint_rotation_deg": 16.268421173095703,
+      "episode_mean_path_position_cm": 5.4992966771125795,
+      "episode_mean_path_rotation_deg": 12.99104995727539
+    }
+  },
+  "dino_minus_clip": {
+    "path_position_cm": -1.1649446487426758,
+    "path_rotation_deg": -2.2895565032958984,
+    "endpoint_position_cm": -0.7907981872558594,
+    "endpoint_rotation_deg": -2.7636661529541016,
+    "episode_mean_path_position_cm": -0.9506350398063654,
+    "episode_mean_path_rotation_deg": -2.222138071060181
+  },
+  "negative_error_difference_favors_dino": true,
+  "static": {
+    "static_path_position_cm": 8.212326049804688,
+    "static_path_rotation_deg": 15.098398208618164,
+    "static_endpoint_position_cm": 10.56533432006836,
+    "static_endpoint_rotation_deg": 19.98635482788086
+  },
+  "per_episode": [
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00003-of-01024::22",
+      "windows": 4,
+      "position_cm_dino_minus_clip": -1.1912908554077148,
+      "rotation_deg_dino_minus_clip": -5.305074691772461
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::38",
+      "windows": 6,
+      "position_cm_dino_minus_clip": -2.034421443939209,
+      "rotation_deg_dino_minus_clip": -2.7568817138671875
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00008-of-01024::54",
+      "windows": 6,
+      "position_cm_dino_minus_clip": 0.6885085105895996,
+      "rotation_deg_dino_minus_clip": -1.207921028137207
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00011-of-01024::24",
+      "windows": 3,
+      "position_cm_dino_minus_clip": -5.6008501052856445,
+      "rotation_deg_dino_minus_clip": 8.8071928024292
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00021-of-01024::19",
+      "windows": 2,
+      "position_cm_dino_minus_clip": 0.4093666076660156,
+      "rotation_deg_dino_minus_clip": 0.8909692764282227
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::11",
+      "windows": 4,
+      "position_cm_dino_minus_clip": 2.2042384147644043,
+      "rotation_deg_dino_minus_clip": 1.4584035873413086
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::34",
+      "windows": 2,
+      "position_cm_dino_minus_clip": -0.4812227487564087,
+      "rotation_deg_dino_minus_clip": -0.5296664237976074
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00024-of-01024::38",
+      "windows": 2,
+      "position_cm_dino_minus_clip": 1.712559700012207,
+      "rotation_deg_dino_minus_clip": -14.894684791564941
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00029-of-01024::9",
+      "windows": 6,
+      "position_cm_dino_minus_clip": -2.9867870807647705,
+      "rotation_deg_dino_minus_clip": -6.343005180358887
+    },
+    {
+      "episode": "bridge_data_v2-train.tfrecord-00030-of-01024::39",
+      "windows": 5,
+      "position_cm_dino_minus_clip": -2.2264513969421387,
+      "rotation_deg_dino_minus_clip": -2.340712547302246
+    }
+  ],
+  "same_allocation": "229116",
+  "gpu": "NVIDIA A40",
+  "training_seed": 42,
+  "updates_per_arm": 8192,
+  "development_windows": 40,
+  "development_episodes": 10,
+  "source_feature_cache_gpu": "NVIDIA RTX A6000 for both encoders",
+  "scope": "One training seed on one allocated GPU; reused dev40; offline pose, frozen gripper. Not final LIBERO success or three training seeds.",
+  "automatic_following_action": false,
+  "main_oxe_model_replaced": false
+}

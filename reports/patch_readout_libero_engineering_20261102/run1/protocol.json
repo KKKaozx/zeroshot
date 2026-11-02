@@ -1,0 +1,160 @@
+{
+  "format": "patch-readout-a3-libero-engineering-trial-v1",
+  "task": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "policy": "A3_patch_hist_future seed42 EMA endpoint (job 239393), spatial readout + state_delta + prev_command",
+  "initial_state": "existing engineering demo_0 states[0] and model XML only",
+  "native_step_limit": 200,
+  "policy_call_limit": 50,
+  "wall_seconds_limit": 600,
+  "environment_seed": 20261026,
+  "sampling_seed_base": 1101,
+  "sampling": "ddim10_x8_mean (offline gate point prediction)",
+  "training_updates": 0,
+  "formal_episodes": 0,
+  "expert_actions_or_future_observations_read": 0,
+  "state_corrections_after_initial": 0,
+  "automatic_retries": 0,
+  "prev_command_assumption": "previous executed source first waypoint encoded as command8 (unverified proxy for Bridge controller command)",
+  "physical_calibration_verified": false,
+  "formal_scoring_admitted": false,
+  "stop": [
+    "native_success",
+    "native_done",
+    "200ticks_or50calls",
+    "invalid_output_or_exception",
+    "600seconds"
+  ],
+  "checkpoint": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\patch_readout_239393\\A3_policy\\policy.pt",
+  "spatial_mapping": {
+    "format": "source-target-pose-mapping-v1",
+    "source": "Bridge",
+    "status": "explicit_uncalibrated_engineering_convention_only",
+    "target_meters_per_source_unit": 1.0,
+    "source_axes_to_target": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "source_origin_in_target_m": [
+      0,
+      0,
+      0
+    ],
+    "right_tool_alignment": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "source_eef_to_point_source_units": [
+      0,
+      0,
+      0
+    ],
+    "target_eef_to_point_m": [
+      0,
+      0,
+      0
+    ],
+    "evidence": "User-approved limited engineering trial, following configs/libero_nominal_execution_candidate_20261025.json: assume raw source XYZ meters, coincident world axes/origins and EEF frames/points. These are deliberately uncalibrated assumptions, not measured registrations. Includes absolute-state input as well as relative-action output; may give out-of-distribution source pose features.",
+    "physical_calibration_verified": false,
+    "formal_scoring_admitted": false
+  },
+  "execution": {
+    "format": "libero-nominal-cartesian-execution-candidate-v1",
+    "status": "Engineering convention with explicit uncalibrated source-to-target assumptions",
+    "formal_task_scoring_admitted": false,
+    "constructor_kwargs": {
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "execute_waypoints": 1,
+      "position_scale_meters": 0.1,
+      "timing_evidence": "User-selected published nominal Bridge/LT5Hz, BC-Z10Hz, Fractal3Hz resampled to5Hz; no measured export timestamps. Actual native20Hz checked at execution.",
+      "tcp_mapping_evidence": "Engineering transfer convention: interpret model source-Cartesian deltas at measured LIBERO EEF world pose; source-specific units/base/TCP alignment is not calibrated or proven by this file.",
+      "native_control_hz": 20.0,
+      "image_convention": "opengl",
+      "camera_key": "agentview_image",
+      "output_scales": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "action_representation": "source_cartesian_delta_pose_open_positive_v1",
+      "saturation_policy": "bounded_feedback"
+    },
+    "target_reference": "Measured EEF at the actual image observation; fixed within each predicted chunk",
+    "translation_rule": "p_target_world = p_reference_world + 0.1 * predicted_xyz",
+    "orientation_rule": "q_target_world = predicted_left_relative_xyzw * q_reference_world",
+    "execution_rule": "One target over4 native20Hz ticks, measured-pose feedback every tick, then reobserve/replan at nominal5Hz",
+    "arrival_at_target_within_interval_guaranteed": false,
+    "gripper_rule": "Binary open-positive prediction, inverted once for native close-positive command; hold this command during the4 ticks",
+    "initial_gripper_history": "Unknown [0,0] until an explicit command is executed; never threshold sensed finger width into a command",
+    "language_table_training_mask": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "shared_metric_units_assumption_verified_for_all_exact_exports": false,
+    "source_to_libero_base_registration_available": false,
+    "source_specific_tcp_registration_available": false,
+    "runtime_native_eef_and_controller_interface_previously_checked": true,
+    "task_success_or_cross_robot_calibration_proven": false
+  },
+  "runtime_sha256": {
+    "deployment\\patch_readout_v1\\run_libero_engineering.py": "1ebf2f910a39a6b2d329e16a29e9d4eb5a88641e8cbb0882d780082401032a16",
+    "deployment\\patch_readout_v1\\online_policy.py": "4944626ca95678b77802c60e6dbb75b424bd472cc567e244769b5dfa7e1c0f57",
+    "deployment\\patch_readout_v1\\code\\patch_policy.py": "21f731e6c0b122cc7bf64d748b82ac6e1fe715881c940ee34dc8fda8a5f879b0",
+    "configs\\libero_bridge_pose_mapping_uncalibrated_engineering_20261030.json": "c3b13850f028b9fa9570bd9afeb30226d42b3c5bfebba4cb73266c9c52d2d61f",
+    "configs\\libero_nominal_execution_candidate_20261025.json": "28e0d46c819daf23299dab89da6f221475ece9e216d4f9dc43e9bb684310f58f",
+    "code\\libero_pose_transfer.py": "b7719856bdddca239098b9c319271bae4ddac3f6a952c0f899dfa8548008d08d",
+    "code\\libero_waypoint_execution.py": "837879bf8dad10f2d830535ae6fd1b30c9e02f83e3c4d660e0594fbdc8b9d667",
+    "code\\libero_action_interface.py": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf"
+  }
+}

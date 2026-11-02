@@ -1,0 +1,68 @@
+{
+  "failed_cluster_job": 226378,
+  "reported_state": "FAILED",
+  "reported_exit_code": "1:0",
+  "reported_elapsed_seconds": 95,
+  "reported_node": "gpu-a40-1",
+  "failure_site": "Before the training update loop, combined frozen-state/tokenizer identity guard",
+  "new_optimizer_updates_before_this_failure": 0,
+  "local_cpu_reconstructions_with_hashseeds1_and2": {
+    "actual_pretrained_frozen_tensors_equal": true,
+    "key_order_equal": true,
+    "legacy_frozen_sha256": "7cd8554464b8b23cb6014cde9575d48300441f8f13d19203d69f6518d42782ea",
+    "tokenizer_fresh_identity_equal": true,
+    "model_forward_calls": 0,
+    "optimizer_updates": 0
+  },
+  "local_tokenizer_finding": {
+    "raw_backend_fingerprint_changes_after_explicit_tokenization": true,
+    "fresh_rules_sha256": "7f9c7a007705969889918c87008f406f886b04833119356ee4083193295e2747",
+    "used_rules_sha256": "07d00062e1a3aae1ca8ae8199a731d2dadd88934333b0e865a4684b650fc832b",
+    "cluster_cause_confirmed": false
+  },
+  "cluster_expected_and_current_identity_fields_available": false,
+  "existing_identity_guard_bypassed_or_weakened": false,
+  "next_action": "Continue the existing original-budget seed42 stage1 to32768 and full validation; no new retry or initialization diagnostic while it trains",
+  "actual_cluster_tokenizer_diagnosis": {
+    "preflight_job_id": "226133",
+    "fresh_tokenizer_matches_binding": true,
+    "explicit_encode_changes_runtime_backend_state": true,
+    "tokenizer_as_failure_cause_confirmed": false,
+    "formal_actual_frozen_digest_not_available": true,
+    "source": "cluster_tokenizer_diagnosis.json"
+  },
+  "actual_cluster_cpu_diagnosis": {
+    "job_id": 226567,
+    "both_reconstructed_frozen_digests_match_preflight_binding": true,
+    "all_named_tensors_and_order_identical": true,
+    "tokenizer_matches_before_and_after_model": true,
+    "failure_reproduced": false,
+    "root_cause_confirmed": false
+  },
+  "actual_cluster_runtime_diagnosis": {
+    "job_id": 226586,
+    "unchanged_formal_entry_cuda_guard_matches": true,
+    "named_frozen_tensors_and_tokenizer_match": true,
+    "forward_calls": 0,
+    "optimizer_updates": 0,
+    "earlier_failure_reproduced": false,
+    "root_cause_confirmed": false
+  },
+  "formal_retry_job_id": 226603,
+  "original_failure_root_cause_confirmed": false,
+  "direct_retry_recurrence": {
+    "job_id": 226603,
+    "same_original_guard_failed": true,
+    "optimizer_updates": 0,
+    "root_cause_confirmed": false,
+    "wrapper_diagnostic_not_equivalent_to_direct_startup": true
+  },
+  "direct_formal_progress": {
+    "job_id": 226619,
+    "reported_date": "2026-10-26",
+    "original_identity_guard_matches": true,
+    "optimizer_updates_observed_at_least": 2048,
+    "prior_failure_root_cause_confirmed": false,
+    "logging_patch_is_not_a_proven_root_cause_fix": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "job_id": 211309,
+  "evidence": "User sacct and terminal output; complete report not yet locally reviewed",
+  "status": "completed_0:0_terminal",
+  "origin_failed_job": 211279,
+  "repair_bundle": "pusht_native_device_repair_v1",
+  "stage": "native_reference_first20000_updates",
+  "expected_log": "/projects/Zeroshot/logs/pusht-native20k-211309.out",
+  "expected_report": "/projects/Zeroshot/runs/pusht-native20k-211309/report.json",
+  "device_restore_check_passed": null,
+  "startup_checks_passed": null,
+  "training_completed": true,
+  "development_competence_verdict": false,
+  "project_group_submitted": false,
+  "automatic_repeat_submission": false
+}

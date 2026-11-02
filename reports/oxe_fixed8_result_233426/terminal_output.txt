@@ -1,0 +1,61 @@
+2026-10-29 05:10:11.655802: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-10-29 05:10:11.880085: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2026-10-29 05:10:12.183426: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-10-29 05:10:12.183490: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-10-29 05:10:12.188686: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-10-29 05:10:12.232375: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-29 05:10:17.651762: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-10-29 05:10:23.822624: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2026-10-29 05:10:23.825466: W tensorflow/core/common_runtime/gpu/gpu_device.cc:2256] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+Loading weights: 100%|██████████| 439/439 [00:00<00:00, 2381.38it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 369.43it/s]
+[transformers] CLIPTextModel LOAD REPORT from: /projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+OXE_FIXED8_UPDATE {"loss": 0.24456898868083954, "pose_loss": 0.10573339462280273, "gripper_loss": 0.5553423762321472, "diagnostic_update": 1, "source_schedule_update": 10241, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.0001900968867902419, 0.0001900968867902419, 0.0001900968867902419], "gradient_norm": 0.48958930373191833}
+OXE_FIXED8_UPDATE {"loss": 0.16113083064556122, "pose_loss": 0.023890912532806396, "gripper_loss": 0.5489596724510193, "diagnostic_update": 2, "source_schedule_update": 10242, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.00019009477376493532, 0.00019009477376493532, 0.00019009477376493532], "gradient_norm": 0.49353745579719543}
+OXE_FIXED8_UPDATE {"loss": 0.09436973929405212, "pose_loss": 0.03155810013413429, "gripper_loss": 0.25124654173851013, "diagnostic_update": 64, "source_schedule_update": 10304, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.00018996334912195942, 0.00018996334912195942, 0.00018996334912195942], "gradient_norm": 0.4292162358760834}
+OXE_FIXED8_UPDATE {"loss": 0.06805611401796341, "pose_loss": 0.023828651756048203, "gripper_loss": 0.17690984904766083, "diagnostic_update": 128, "source_schedule_update": 10368, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.00018982682477783965, 0.00018982682477783965, 0.00018982682477783965], "gradient_norm": 0.3928675353527069}
+OXE_FIXED8_UPDATE {"loss": 0.05213594436645508, "pose_loss": 0.01715683564543724, "gripper_loss": 0.13991643488407135, "diagnostic_update": 192, "source_schedule_update": 10432, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.0001896894278956636, 0.0001896894278956636, 0.0001896894278956636], "gradient_norm": 0.2237137109041214}
+OXE_FIXED8_UPDATE {"loss": 0.03478417545557022, "pose_loss": 0.008389294147491455, "gripper_loss": 0.10557953268289566, "diagnostic_update": 256, "source_schedule_update": 10496, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.000189551159810044, 0.000189551159810044, 0.000189551159810044], "gradient_norm": 0.10369295626878738}
+OXE_FIXED8_UPDATE {"loss": 0.026888642460107803, "pose_loss": 0.006286235060542822, "gripper_loss": 0.08240962773561478, "diagnostic_update": 320, "source_schedule_update": 10560, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.00018941202186405578, 0.00018941202186405578, 0.00018941202186405578], "gradient_norm": 0.10024481266736984}
+OXE_FIXED8_UPDATE {"loss": 0.01841863989830017, "pose_loss": 0.0017674991395324469, "gripper_loss": 0.06660456210374832, "diagnostic_update": 384, "source_schedule_update": 10624, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.00018927201540922347, 0.00018927201540922347, 0.00018927201540922347], "gradient_norm": 0.05844550579786301}
+OXE_FIXED8_UPDATE {"loss": 0.017005406320095062, "pose_loss": 0.0027143924962729216, "gripper_loss": 0.05716405436396599, "diagnostic_update": 448, "source_schedule_update": 10688, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.0001891311418055078, 0.0001891311418055078, 0.0001891311418055078], "gradient_norm": 0.06017648056149483}
+OXE_FIXED8_UPDATE {"loss": 0.014527876861393452, "pose_loss": 0.001348439254797995, "gripper_loss": 0.052717749029397964, "diagnostic_update": 512, "source_schedule_update": 10752, "indices": [9759, 5333, 2514, 497, 251, 3550, 2188, 4103], "lr_used": [0.00018898940242129277, 0.00018898940242129277, 0.00018898940242129277], "gradient_norm": 0.11705009639263153}
+OXE_FIXED8_REPORT /projects/Zeroshot/runs/oxe-fixed8-lr-repair-233426/report.json
+OXE_FIXED8_GENERATION {"before": {"windows": 8, "position_axes": ["x", "y", "z"], "path_position_normalized": 1.6726405329108665, "path_rotation_deg": 16.120382305602796, "endpoint_position_normalized": 2.38945094014149, "endpoint_rotation_deg": 21.15206903508242}, "static": {"windows": 8, "position_axes": ["x", "y", "z"], "path_position_normalized": 0.8854155122030833, "path_rotation_deg": 9.915310143340463, "endpoint_position_normalized": 1.3268808784454649, "endpoint_rotation_deg": 14.783837884331922}, "after": {"windows": 8, "position_axes": ["x", "y", "z"], "path_position_normalized": 0.0950304187821337, "path_rotation_deg": 4.617203938501046, "endpoint_position_normalized": 0.16441613985135456, "endpoint_rotation_deg": 6.822742191579421}}
+OXE_FIXED8_FIT_DECISION {"mean_limits": {"path_position_normalized": 0.08854155122030834, "path_rotation_deg": 0.9915310143340463, "endpoint_position_normalized": 0.1326880878445465, "endpoint_rotation_deg": 1.4783837884331923}, "means_pass": false, "windows_passing_all_four": 1, "window_pass_mask": [false, true, false, false, false, false, false, false], "fixed8_pose_fit_gate_passed": false, "interpretation": "This fixed512update budget did not establish repeated8window generation fit; not proof of mathematical unlearnability", "new_budget_or_variants_authorized": false, "libero_or_generalization_verdict": null}
+OXE FIXED8 CHECK COMPLETE; fixed seen-window fit only, no generalization or grasp verdict
+FIXED8 LR REPAIR EXECUTION COMPLETE; same fixed512update diagnostic, no automatic follow-up
+^C

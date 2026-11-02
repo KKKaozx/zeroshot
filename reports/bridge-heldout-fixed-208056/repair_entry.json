@@ -1,0 +1,152 @@
+{
+  "repair_entry_sha256": "e102854a6948740062762512169b2665f17b7c095d8891abfa91184bad13c002",
+  "repair_contract_sha256": "9f1ba97a883753030ff58988bfaee5d178558f93c7bff44c1a1ba1c2ff48886e",
+  "execution_passed": true,
+  "new_training": false,
+  "original_protocol_changed": false,
+  "numeric_tolerance_changed": false,
+  "diagnostic_evidence": {
+    "verified": true,
+    "diagnostic_job": "208034",
+    "report_sha256": "4bb4964a1f67da1b6c5839a88f2de2b6d0c41e55a139701cc94835e1cd0380b7",
+    "checked_prediction_files": [
+      {
+        "file": "coverage_saved_context_sampler.npz",
+        "sha256": "35ffa9d1a103a71bed29bb9791d1ec71e9209730d468440bc4583f1f8bad7d22"
+      },
+      {
+        "file": "coverage_cached_original_state.npz",
+        "sha256": "35ffa9d1a103a71bed29bb9791d1ec71e9209730d468440bc4583f1f8bad7d22"
+      },
+      {
+        "file": "coverage_cached_failed_state.npz",
+        "sha256": "35ffa9d1a103a71bed29bb9791d1ec71e9209730d468440bc4583f1f8bad7d22"
+      },
+      {
+        "file": "coverage_cached_failed_mode.npz",
+        "sha256": "1aed882d86cde0e0f4bbbab8b294a16a88527ba36960e0c43806463a08f122e4"
+      },
+      {
+        "file": "coverage_fresh_original_encoder_original_context.npz",
+        "sha256": "35ffa9d1a103a71bed29bb9791d1ec71e9209730d468440bc4583f1f8bad7d22"
+      },
+      {
+        "file": "coverage_fresh_original_encoder_failed_context.npz",
+        "sha256": "1aed882d86cde0e0f4bbbab8b294a16a88527ba36960e0c43806463a08f122e4"
+      },
+      {
+        "file": "coverage_fresh_failed_encoder_original_context.npz",
+        "sha256": "35ffa9d1a103a71bed29bb9791d1ec71e9209730d468440bc4583f1f8bad7d22"
+      },
+      {
+        "file": "coverage_fresh_failed_encoder_failed_context.npz",
+        "sha256": "1aed882d86cde0e0f4bbbab8b294a16a88527ba36960e0c43806463a08f122e4"
+      },
+      {
+        "file": "rotation_weight_saved_context_sampler.npz",
+        "sha256": "dbf6776b8c1404e7f6ce5efe20251f0d1f10a7a3058620a1e9b056f08c24f91a"
+      },
+      {
+        "file": "rotation_weight_cached_original_state.npz",
+        "sha256": "dbf6776b8c1404e7f6ce5efe20251f0d1f10a7a3058620a1e9b056f08c24f91a"
+      },
+      {
+        "file": "rotation_weight_cached_failed_state.npz",
+        "sha256": "dbf6776b8c1404e7f6ce5efe20251f0d1f10a7a3058620a1e9b056f08c24f91a"
+      },
+      {
+        "file": "rotation_weight_cached_failed_mode.npz",
+        "sha256": "03886d3be8d8e7ccfe1489faecb0f4fbf38eec28fde2a98bb0addccad840ec53"
+      },
+      {
+        "file": "rotation_weight_fresh_original_encoder_original_context.npz",
+        "sha256": "dbf6776b8c1404e7f6ce5efe20251f0d1f10a7a3058620a1e9b056f08c24f91a"
+      },
+      {
+        "file": "rotation_weight_fresh_original_encoder_failed_context.npz",
+        "sha256": "03886d3be8d8e7ccfe1489faecb0f4fbf38eec28fde2a98bb0addccad840ec53"
+      },
+      {
+        "file": "rotation_weight_fresh_failed_encoder_original_context.npz",
+        "sha256": "dbf6776b8c1404e7f6ce5efe20251f0d1f10a7a3058620a1e9b056f08c24f91a"
+      },
+      {
+        "file": "rotation_weight_fresh_failed_encoder_failed_context.npz",
+        "sha256": "03886d3be8d8e7ccfe1489faecb0f4fbf38eec28fde2a98bb0addccad840ec53"
+      }
+    ],
+    "comparisons": {
+      "coverage": {
+        "saved_context_sampler": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "cached_original_state": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "cached_failed_state": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "cached_failed_mode": {
+          "context_max_abs": 9.5367431640625e-07,
+          "prediction_max_abs": 0.00011682510375976562
+        },
+        "fresh_original_encoder_original_context": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "fresh_original_encoder_failed_context": {
+          "context_max_abs": 9.5367431640625e-07,
+          "prediction_max_abs": 0.00011682510375976562
+        },
+        "fresh_failed_encoder_original_context": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "fresh_failed_encoder_failed_context": {
+          "context_max_abs": 9.5367431640625e-07,
+          "prediction_max_abs": 0.00011682510375976562
+        }
+      },
+      "rotation_weight": {
+        "saved_context_sampler": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "cached_original_state": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "cached_failed_state": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "cached_failed_mode": {
+          "context_max_abs": 1.430511474609375e-06,
+          "prediction_max_abs": 0.00013771653175354004
+        },
+        "fresh_original_encoder_original_context": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "fresh_original_encoder_failed_context": {
+          "context_max_abs": 1.430511474609375e-06,
+          "prediction_max_abs": 0.00013771653175354004
+        },
+        "fresh_failed_encoder_original_context": {
+          "context_max_abs": 0.0,
+          "prediction_max_abs": 0.0
+        },
+        "fresh_failed_encoder_failed_context": {
+          "context_max_abs": 1.430511474609375e-06,
+          "prediction_max_abs": 0.00013771653175354004
+        }
+      }
+    },
+    "old_tolerances_unchanged": true,
+    "conclusion": "Original context-execution bundle reproduces exactly on both frozen checkpoints; failed bundle reproduces discrepancy. CLIP encoding styles and tested state array shapes do not explain this replay difference."
+  },
+  "only_runtime_override": "contexts: restore original parameter flags and no_grad, explicitly disabling outer inference_mode"
+}

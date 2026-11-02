@@ -1,0 +1,46 @@
+{
+  "job_id": 217660,
+  "evidence_source": "User-supplied sacct and diagnostic stdout",
+  "status": "server_verified_and_requested_artifacts_verified_analyzed_locally",
+  "server_verifier_passed_reported_by_user": true,
+  "local_artifacts_received": true,
+  "local_output_verification_completed": true,
+  "analysis": "reports/pusht_spatial_analysis_217660_20261021/report.json",
+  "train_mean_heldout": {
+    "agent_position_sim_pixels": 132.0033706311365,
+    "block_position_sim_pixels": 72.47105431828626,
+    "block_angle_deg": 37.10702720604612
+  },
+  "exit_code": "0:0",
+  "elapsed_seconds": 145,
+  "node": "gpu-a6000-1",
+  "metric_scope": "Fixed linear readouts on40 whole heldout dataset episodes,12 frames each; episode-equal means",
+  "position_units": "512x512 simulation canvas pixels, NOT cm",
+  "angle_units": "circular degrees",
+  "columns": ["agent_position_sim_pixels", "block_position_sim_pixels", "block_angle_deg"],
+  "heldout_readouts": {
+    "clip_pool": [52.44415654176021, 35.854713924867426, 19.664091628345282],
+    "clip_spatial": [20.240020886879613, 17.10263475437852, 16.759530433351006],
+    "adapter1_pool": [69.70571563090334, 38.11730417009546, 23.39165637392115],
+    "adapter4_pool": [97.08781377246193, 46.65449899342889, 29.223414683525057],
+    "adapter8_pre_norm": [96.81381387693165, 46.568705877662985, 29.190595813986715],
+    "adapter8_spatial": [35.304653645554374, 22.299196372545858, 26.782823652245106],
+    "adapter8_pool": [95.02016235658814, 45.6483914353427, 29.120826941941385],
+    "projection64": [111.5791101964918, 51.02304621171301, 31.786347525756717],
+    "native_rgb64": [91.31638865126095, 25.088869927588718, 30.050890181277545],
+    "raw_pixels12": [72.36909151951137, 28.131941522687185, 42.673548889470666],
+    "agent_state_only": [0.2671351731909363, 57.6951302766984, 36.92319367804861]
+  },
+  "preliminary_interpretation": "Current-frame spatial labels are linearly accessible from frozen CLIP. Accessibility is worse in sampled downstream representations, including the matched4096-dimensional spatial-moment comparison. Prioritize preservation/readout through the Adapter chain, without declaring information absent or a uniquely identified policy root cause.",
+  "pending": [
+    "Define one controlled spatial-preservation intervention before any new policy training"
+  ],
+  "limitations": [
+    "Linear accessibility is not an information-theoretic presence/absence test",
+    "Different representation dimensions imply different probe capacities",
+    "The native frontend has much better policy reward but a worse angle readout than CLIP spatial moments; probe error does not rank policy competence",
+    "No policy improvement, final-set result or robot grasp success is measured"
+  ],
+  "new_training_submitted": false,
+  "sealed_final_accessed_by_this_analysis": false
+}

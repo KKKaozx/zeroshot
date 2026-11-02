@@ -1,0 +1,77 @@
+{
+  "verified": true,
+  "no_additional_fit": true,
+  "checks": {
+    "8192": {
+      "normal_equation_stationarity_max_abs": 2.0889956431346945e-12,
+      "stored_predictions_reconstruction_max_abs_cm": 0.0,
+      "train_only_centers_and_scalar_scale_recomputed": true,
+      "development_weighting_recomputed": true
+    },
+    "16170": {
+      "normal_equation_stationarity_max_abs": 3.2683855621939983e-12,
+      "stored_predictions_reconstruction_max_abs_cm": 0.0,
+      "train_only_centers_and_scalar_scale_recomputed": true,
+      "development_weighting_recomputed": true
+    }
+  },
+  "posthoc_descriptive_sampling_mean": {
+    "8192": {
+      "window_path_cm": 6.142161202089026,
+      "episode_equal_path_cm": 5.943410134820693,
+      "linear_episodes_better_than_native_sample_mean": 6,
+      "per_task": {
+        "close microwave": {
+          "native_sample_mean_cm": 6.707354924727099,
+          "linear_cm": 6.435816021452368
+        },
+        "close the drawer": {
+          "native_sample_mean_cm": 5.957238606052981,
+          "linear_cm": 4.640827023665632
+        },
+        "open the drawer": {
+          "native_sample_mean_cm": 5.895358648955256,
+          "linear_cm": 5.532053566288341
+        },
+        "take broccoli out of pan": {
+          "native_sample_mean_cm": 7.560401409145943,
+          "linear_cm": 6.585414242780653
+        },
+        "turn lever vertical to front": {
+          "native_sample_mean_cm": 2.494227344787716,
+          "linear_cm": 3.5437841662436793
+        }
+      }
+    },
+    "16170": {
+      "window_path_cm": 6.513733030661051,
+      "episode_equal_path_cm": 6.229005137036622,
+      "linear_episodes_better_than_native_sample_mean": 5,
+      "per_task": {
+        "close microwave": {
+          "native_sample_mean_cm": 6.471549960708546,
+          "linear_cm": 6.246680984999517
+        },
+        "close the drawer": {
+          "native_sample_mean_cm": 6.30448451995633,
+          "linear_cm": 5.030007110581985
+        },
+        "open the drawer": {
+          "native_sample_mean_cm": 5.447741781414454,
+          "linear_cm": 4.641843238058948
+        },
+        "take broccoli out of pan": {
+          "native_sample_mean_cm": 9.759406810229201,
+          "linear_cm": 7.10538969764278
+        },
+        "turn lever vertical to front": {
+          "native_sample_mean_cm": 2.5617734029992034,
+          "linear_cm": 4.436739322436802
+        }
+      }
+    }
+  },
+  "scope": "Saved-array audit only. Sample mean comparator added after fixed readout results to check sampling variance; not a preregistered gate or proposed executable policy.",
+  "report_sha256": "6681a68daaae8e627c1552e23bf2c1d1487bd5e5689f428b5b5024d6a24cff47",
+  "audit_script_sha256": "243c08262d60b9e381c01f3375cd30db9f53c72f5b747bb5f8a85326ff8b80bc"
+}

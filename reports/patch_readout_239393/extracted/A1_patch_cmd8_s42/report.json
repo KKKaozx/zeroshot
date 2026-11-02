@@ -1,0 +1,331 @@
+{
+  "format": "patch-readout-report-v1",
+  "config": "A1_patch_cmd8.json",
+  "target": "command8",
+  "seed": 42,
+  "completed_steps": 10000,
+  "planned_steps": 10000,
+  "training_seconds": 1051.368216753006,
+  "total_seconds": 1068.688021659851,
+  "trainable_parameters": 133099688,
+  "results": {
+    "train": {
+      "metrics": {
+        "single": {
+          "first_position_normalized": 0.06303531688274357,
+          "first_rotation_deg": 1.2308630927797304,
+          "path_position_normalized": 0.06170649750748835,
+          "path_rotation_deg": 1.2218176837715475,
+          "endpoint_position_normalized": 0.06538760423785199,
+          "endpoint_rotation_deg": 1.1822699581060094,
+          "gripper_accuracy": 0.9985026041666667
+        },
+        "point": {
+          "first_position_normalized": 0.044604429235854476,
+          "first_rotation_deg": 0.8396187549434779,
+          "path_position_normalized": 0.0421318135037326,
+          "path_rotation_deg": 0.812963146439936,
+          "endpoint_position_normalized": 0.043704624892938734,
+          "endpoint_rotation_deg": 0.779362506921079,
+          "gripper_accuracy": 0.9985026041666667
+        },
+        "marginal": {
+          "first_position_normalized": 0.23737293915986807,
+          "first_rotation_deg": 3.947111627687517,
+          "path_position_normalized": 0.262333441598153,
+          "path_rotation_deg": 4.3204552855449645,
+          "endpoint_position_normalized": 0.2500151865422645,
+          "endpoint_rotation_deg": 4.126872885587026,
+          "gripper_accuracy": 0.5251627062173937
+        },
+        "zero": {
+          "first_position_normalized": 0.1567537133478046,
+          "first_rotation_deg": 2.6597066311733,
+          "path_position_normalized": 0.1745051607935319,
+          "path_rotation_deg": 2.8121823991104664,
+          "endpoint_position_normalized": 0.14472383182128984,
+          "endpoint_rotation_deg": 2.1672738684634614,
+          "gripper_accuracy": null
+        },
+        "train_mean": {
+          "first_position_normalized": 0.1576697710179777,
+          "first_rotation_deg": 2.6732049209072684,
+          "path_position_normalized": 0.17503182483349933,
+          "path_rotation_deg": 2.8220778926521772,
+          "endpoint_position_normalized": 0.14630731200001856,
+          "endpoint_rotation_deg": 2.201836780102456,
+          "gripper_accuracy": 0.593194273174742
+        }
+      },
+      "bootstrap95_minus_zero": {
+        "single": {
+          "first_position_normalized": [
+            -0.11500458426807117,
+            -0.07264859581517742
+          ],
+          "first_rotation_deg": [
+            -1.8558149282533194,
+            -1.0344660663686542
+          ],
+          "path_position_normalized": [
+            -0.12478912951797907,
+            -0.1005863419083629
+          ],
+          "path_rotation_deg": [
+            -1.8215518464247664,
+            -1.3716688696566581
+          ],
+          "endpoint_position_normalized": [
+            -0.10372893347717023,
+            -0.05577560016343665
+          ],
+          "endpoint_rotation_deg": [
+            -1.410867962126883,
+            -0.5841750226853979
+          ]
+        },
+        "point": {
+          "first_position_normalized": [
+            -0.1338268139705056,
+            -0.0906134415894753
+          ],
+          "first_rotation_deg": [
+            -2.2604728874871864,
+            -1.4085517074442966
+          ],
+          "path_position_normalized": [
+            -0.14411624997378347,
+            -0.1204760360383004
+          ],
+          "path_rotation_deg": [
+            -2.236252947839934,
+            -1.7687335205382329
+          ],
+          "endpoint_position_normalized": [
+            -0.12609944557924435,
+            -0.07686937083792617
+          ],
+          "endpoint_rotation_deg": [
+            -1.8229416717470774,
+            -0.979709181026201
+          ]
+        }
+      },
+      "skill": {
+        "single": {
+          "first_position_normalized": {
+            "vs_zero": 0.5978703436333848,
+            "vs_marginal": 0.7344460699444346
+          },
+          "first_rotation_deg": {
+            "vs_zero": 0.537218474265807,
+            "vs_marginal": 0.6881610633594235
+          },
+          "path_position_normalized": {
+            "vs_zero": 0.6463915609894357,
+            "vs_marginal": 0.764778378495825
+          },
+          "path_rotation_deg": {
+            "vs_zero": 0.5655268718849724,
+            "vs_marginal": 0.717201636628573
+          },
+          "endpoint_position_normalized": {
+            "vs_zero": 0.5481904851814943,
+            "vs_marginal": 0.7384654702693496
+          },
+          "endpoint_rotation_deg": {
+            "vs_zero": 0.4544898199948275,
+            "vs_marginal": 0.7135191727772741
+          }
+        },
+        "point": {
+          "first_position_normalized": {
+            "vs_zero": 0.7154489786351261,
+            "vs_marginal": 0.8120913470856344
+          },
+          "first_rotation_deg": {
+            "vs_zero": 0.6843190353768117,
+            "vs_marginal": 0.7872827439047162
+          },
+          "path_position_normalized": {
+            "vs_zero": 0.7585640830784287,
+            "vs_marginal": 0.8393959487320307
+          },
+          "path_rotation_deg": {
+            "vs_zero": 0.7109137918304702,
+            "vs_marginal": 0.8118339173281383
+          },
+          "endpoint_position_normalized": {
+            "vs_zero": 0.6980136281431053,
+            "vs_marginal": 0.8251921193373165
+          },
+          "endpoint_rotation_deg": {
+            "vs_zero": 0.6403950057896347,
+            "vs_marginal": 0.8111493790751398
+          }
+        }
+      },
+      "position_gate_passed": true
+    },
+    "validation": {
+      "metrics": {
+        "single": {
+          "first_position_normalized": 0.19228559841257825,
+          "first_rotation_deg": 2.921573511431018,
+          "path_position_normalized": 0.1674218675092241,
+          "path_rotation_deg": 3.036766800432731,
+          "endpoint_position_normalized": 0.1446336600405978,
+          "endpoint_rotation_deg": 3.1522363457497766,
+          "gripper_accuracy": 0.819573698870574
+        },
+        "point": {
+          "first_position_normalized": 0.1881226931140377,
+          "first_rotation_deg": 2.7911756649444133,
+          "path_position_normalized": 0.16201696874227267,
+          "path_rotation_deg": 2.92630659316377,
+          "endpoint_position_normalized": 0.13819400514343,
+          "endpoint_rotation_deg": 3.0423485358194284,
+          "gripper_accuracy": 0.819573698870574
+        },
+        "marginal": {
+          "first_position_normalized": 0.29034771448539864,
+          "first_rotation_deg": 4.143808750328398,
+          "path_position_normalized": 0.2575672408976579,
+          "path_rotation_deg": 4.250382188104847,
+          "endpoint_position_normalized": 0.2364924451563194,
+          "endpoint_rotation_deg": 4.252331658401307,
+          "gripper_accuracy": 0.488548582493895
+        },
+        "zero": {
+          "first_position_normalized": 0.22400433411326365,
+          "first_rotation_deg": 2.875341267950411,
+          "path_position_normalized": 0.17616243194576237,
+          "path_rotation_deg": 2.714176653119388,
+          "endpoint_position_normalized": 0.10859300568247628,
+          "endpoint_rotation_deg": 2.0292230589034324,
+          "gripper_accuracy": null
+        },
+        "train_mean": {
+          "first_position_normalized": 0.223699039237293,
+          "first_rotation_deg": 2.8697834694857507,
+          "path_position_normalized": 0.17641883932811764,
+          "path_rotation_deg": 2.721765294499634,
+          "endpoint_position_normalized": 0.11094394765659188,
+          "endpoint_rotation_deg": 2.076460485422973,
+          "gripper_accuracy": 0.45468511523199023
+        }
+      },
+      "bootstrap95_minus_zero": {
+        "single": {
+          "first_position_normalized": [
+            -0.06034879588632917,
+            -0.0031320886901178304
+          ],
+          "first_rotation_deg": [
+            -0.31758411569091605,
+            0.40870711894896067
+          ],
+          "path_position_normalized": [
+            -0.018896731638323942,
+            0.0013309946034048058
+          ],
+          "path_rotation_deg": [
+            0.18057004655244097,
+            0.472961532739601
+          ],
+          "endpoint_position_normalized": [
+            0.011278028525661432,
+            0.0615273333893969
+          ],
+          "endpoint_rotation_deg": [
+            0.7191535968902396,
+            1.6070344764797502
+          ]
+        },
+        "point": {
+          "first_position_normalized": [
+            -0.06550629757647133,
+            -0.006149823605428304
+          ],
+          "first_rotation_deg": [
+            -0.44787953245692386,
+            0.28018225331989743
+          ],
+          "path_position_normalized": [
+            -0.024460611278516772,
+            -0.003917551871690951
+          ],
+          "path_rotation_deg": [
+            0.08048120433390438,
+            0.3459829231954474
+          ],
+          "endpoint_position_normalized": [
+            0.004709171321961813,
+            0.05512519141511427
+          ],
+          "endpoint_rotation_deg": [
+            0.6571271650974652,
+            1.434576958107331
+          ]
+        }
+      },
+      "skill": {
+        "single": {
+          "first_position_normalized": {
+            "vs_zero": 0.14159875890904594,
+            "vs_marginal": 0.3377402720273587
+          },
+          "first_rotation_deg": {
+            "vs_zero": -0.01607887174852185,
+            "vs_marginal": 0.29495454846957336
+          },
+          "path_position_normalized": {
+            "vs_zero": 0.049616506425327556,
+            "vs_marginal": 0.349987727764853
+          },
+          "path_rotation_deg": {
+            "vs_zero": -0.1188537772375986,
+            "vs_marginal": 0.2855308849798378
+          },
+          "endpoint_position_normalized": {
+            "vs_zero": -0.33188743723977643,
+            "vs_marginal": 0.38842164727504824
+          },
+          "endpoint_rotation_deg": {
+            "vs_zero": -0.5534203260302035,
+            "vs_marginal": 0.2587040242917267
+          }
+        },
+        "point": {
+          "first_position_normalized": {
+            "vs_zero": 0.16018279798587765,
+            "vs_marginal": 0.3520779268145462
+          },
+          "first_rotation_deg": {
+            "vs_zero": 0.029271517765260713,
+            "vs_marginal": 0.3264226625509171
+          },
+          "path_position_normalized": {
+            "vs_zero": 0.08029784243580862,
+            "vs_marginal": 0.3709721462340442
+          },
+          "path_rotation_deg": {
+            "vs_zero": -0.07815627615858456,
+            "vs_marginal": 0.31151918494450825
+          },
+          "endpoint_position_normalized": {
+            "vs_zero": -0.2725866115862603,
+            "vs_marginal": 0.41565150188165634
+          },
+          "endpoint_rotation_deg": {
+            "vs_zero": -0.4992676741331121,
+            "vs_marginal": 0.28454580211101876
+          }
+        }
+      },
+      "position_gate_passed": false
+    }
+  },
+  "position_gate_passed_both_roles": false,
+  "scope": "Bridge源端离线指标；不是任务成功率，也不是零样本迁移证明。checkpoint=最终端点。"
+}

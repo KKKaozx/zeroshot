@@ -1,0 +1,22 @@
+{
+  "script": "D:\\ntu_related\\dissertation\\Zero_shot\\scripts\\cluster\\repair_libero_headless_opencv_20261026.sh",
+  "sha256": "57c845d2a17f43360b8a4ca4327150f83f65fad8d843772509e6179daca80bb2",
+  "bytes": 2897,
+  "embedded_python_syntax_passed": true,
+  "shell_line_endings": "LF",
+  "bash_runtime_checked_locally": false,
+  "evidence": "termcolor3.3.0 installed; cv2 GUI wheel import requires absent libGL.so.1 on login node",
+  "repair": "Replace only isolated eval-venv owned GUI OpenCV with opencv-python-headless4.6.0.66; no base/training modification",
+  "source": "https://pypi.org/project/opencv-python-headless/4.6.0.66/",
+  "training_retry_job_submitted_by_user": 227920,
+  "training_full_resume_observed": false,
+  "evaluation_retry_submitted": true,
+  "actual_formal_episodes_completed": 0,
+  "new_agent_submissions": 0,
+  "linux_headless_fix_run_verified": false,
+  "headless_installation_reported_success": true,
+  "cv2_import_and_build_version_assertions_reported_passed": true,
+  "failure_after_headless_fix": "Metadata collection lacks transformers; no evaluation submission executed",
+  "linux_headless_import_and_version_checks_verified": true,
+  "evaluation_retry_job_id": 227964
+}

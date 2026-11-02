@@ -1,0 +1,86 @@
+{
+  "config": {
+    "action": {
+      "representation": "source_cartesian_delta_pose_open_positive_v1",
+      "position_scale_meters": 0.1,
+      "target_protocol_sha256": "508db430c5fb41a69739d2b35deac9556d852d318356cad8cfcf6644100cf648"
+    },
+    "model": {
+      "chunk_size": 3,
+      "action_dim": 8
+    }
+  },
+  "target_binding": {
+    "format": "window-target-binding-v1",
+    "protocol": {
+      "format": "window-target-protocol-v1",
+      "scope": "synthetic_fixture",
+      "dataset_identity": "12798b12f29f0f631902627abdabeb85e50a286ebcb963120e5056a5bbdf5d8b",
+      "output": {
+        "family": "observed_future_reached_pose",
+        "horizon": 3,
+        "action_dim": 8,
+        "representation": "source_cartesian_delta_pose_open_positive_v1",
+        "reference": "fixed_input_observation",
+        "position_scale_meters": 0.1,
+        "shared_target_times_seconds": [
+          0.1,
+          0.2,
+          0.3
+        ]
+      },
+      "sources": {
+        "synthetic_bcz": {
+          "family": "observed_future_reached_pose",
+          "target_indices": [
+            1,
+            2,
+            3
+          ],
+          "gripper_rule": "preceding_observation_first_command",
+          "supervision_mask": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "position_to_meters": 1,
+          "unit_evidence": [
+            {
+              "uri": "synthetic://fixture/declarations",
+              "sha256": "5aaee6c8984302d08a839b33a2ab5c64082eff4a30e00d753fb8e4b4df42bb65",
+              "claim": "Declared unit/time/pairing in a synthetic fixture; not source qualification"
+            }
+          ],
+          "timing": {
+            "kind": "fixed_offsets_seconds",
+            "offsets_seconds": [
+              0.1,
+              0.2,
+              0.3
+            ],
+            "evidence": [
+              {
+                "uri": "synthetic://fixture/declarations",
+                "sha256": "5aaee6c8984302d08a839b33a2ab5c64082eff4a30e00d753fb8e4b4df42bb65",
+                "claim": "Declared unit/time/pairing in a synthetic fixture; not source qualification"
+              }
+            ]
+          },
+          "pairing_evidence": [
+            {
+              "uri": "synthetic://fixture/declarations",
+              "sha256": "5aaee6c8984302d08a839b33a2ab5c64082eff4a30e00d753fb8e4b4df42bb65",
+              "claim": "Declared unit/time/pairing in a synthetic fixture; not source qualification"
+            }
+          ]
+        }
+      }
+    },
+    "sha256": "508db430c5fb41a69739d2b35deac9556d852d318356cad8cfcf6644100cf648"
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "job_id": 233531,
+  "status": "paired_training_and_endpoint_complete_cluster_output_verified",
+  "terminal_sha256": "451e8b7e90c40dffeeee0f5a01474234f12b82feda127e139c6708acfa0f1499",
+  "source_job": 232587,
+  "source_update": 10240,
+  "endpoint_update": 14336,
+  "updates_each": 4096,
+  "primary_bridge64": {
+    "source232587": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.7026795821340763,
+      "path_rotation_deg": 15.178584054151134,
+      "endpoint_position_normalized": 2.3432171994867774,
+      "endpoint_rotation_deg": 20.01715040566384
+    },
+    "static": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0241369636028934,
+      "path_rotation_deg": 12.063044075899477,
+      "endpoint_position_normalized": 1.3696822176356824,
+      "endpoint_rotation_deg": 16.297180059569865
+    },
+    "replacement": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0964773418140894,
+      "path_rotation_deg": 12.522369791730771,
+      "endpoint_position_normalized": 1.4877090381004268,
+      "endpoint_rotation_deg": 16.844135845240494
+    },
+    "cycle": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0794249074007691,
+      "path_rotation_deg": 12.67554706205471,
+      "endpoint_position_normalized": 1.4343498657513922,
+      "endpoint_rotation_deg": 17.122206757108284
+    }
+  },
+  "cluster_verifier_output": {
+    "verified": true,
+    "updates_each": 4096,
+    "actual_noise_t_model_rng_matched": true,
+    "primary_bridge64": {
+      "source232587": {
+        "windows": 64,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "path_position_normalized": 1.7026795821340763,
+        "path_rotation_deg": 15.178584054151134,
+        "endpoint_position_normalized": 2.3432171994867774,
+        "endpoint_rotation_deg": 20.01715040566384
+      },
+      "static": {
+        "windows": 64,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "path_position_normalized": 1.0241369636028934,
+        "path_rotation_deg": 12.063044075899477,
+        "endpoint_position_normalized": 1.3696822176356824,
+        "endpoint_rotation_deg": 16.297180059569865
+      },
+      "replacement": {
+        "windows": 64,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "path_position_normalized": 1.0964773418140894,
+        "path_rotation_deg": 12.522369791730771,
+        "endpoint_position_normalized": 1.4877090381004268,
+        "endpoint_rotation_deg": 16.844135845240494
+      },
+      "cycle": {
+        "windows": 64,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "path_position_normalized": 1.0794249074007691,
+        "path_rotation_deg": 12.67554706205471,
+        "endpoint_position_normalized": 1.4343498657513922,
+        "endpoint_rotation_deg": 17.122206757108284
+      }
+    },
+    "paired_comparisons": {
+      "cycle_minus_replacement": {
+        "path_position_normalized": {
+          "mean_difference": -0.0170524344133202,
+          "paired_group_bootstrap95": [
+            -0.0651992040300949,
+            0.030642495856344605
+          ]
+        },
+        "path_rotation_deg": {
+          "mean_difference": 0.1531772703239393,
+          "paired_group_bootstrap95": [
+            -0.27219432377891833,
+            0.6073654497738779
+          ]
+        },
+        "endpoint_position_normalized": {
+          "mean_difference": -0.05335917234903462,
+          "paired_group_bootstrap95": [
+            -0.1284873196461146,
+            0.02012206019029248
+          ]
+        },
+        "endpoint_rotation_deg": {
+          "mean_difference": 0.2780709118677872,
+          "paired_group_bootstrap95": [
+            -0.525520149118553,
+            1.112143300839279
+          ]
+        }
+      },
+      "cycle_minus_source232587": {
+        "path_position_normalized": {
+          "mean_difference": -0.6232546747333072,
+          "paired_group_bootstrap95": [
+            -0.7036734147630386,
+            -0.541958258450771
+          ]
+        },
+        "path_rotation_deg": {
+          "mean_difference": -2.5030369920964244,
+          "paired_group_bootstrap95": [
+            -3.265779472129687,
+            -1.7550674201260748
+          ]
+        },
+        "endpoint_position_normalized": {
+          "mean_difference": -0.9088673337353853,
+          "paired_group_bootstrap95": [
+            -1.0359501714291748,
+            -0.7811575986023168
+          ]
+        },
+        "endpoint_rotation_deg": {
+          "mean_difference": -2.8949436485555586,
+          "paired_group_bootstrap95": [
+            -3.9988767320339615,
+            -1.8090700761604965
+          ]
+        }
+      },
+      "cycle_minus_static": {
+        "path_position_normalized": {
+          "mean_difference": 0.05528794379787581,
+          "paired_group_bootstrap95": [
+            0.01157457633576487,
+            0.0981486384402569
+          ]
+        },
+        "path_rotation_deg": {
+          "mean_difference": 0.612502986155233,
+          "paired_group_bootstrap95": [
+            0.2573274240092451,
+            0.9868845971521221
+          ]
+        },
+        "endpoint_position_normalized": {
+          "mean_difference": 0.06466764811570966,
+          "paired_group_bootstrap95": [
+            -0.017514274680990854,
+            0.14598402656829895
+          ]
+        },
+        "endpoint_rotation_deg": {
+          "mean_difference": 0.8250266975384195,
+          "paired_group_bootstrap95": [
+            0.18564642356020336,
+            1.5166904678490063
+          ]
+        }
+      }
+    },
+    "sampling_effect_gates": {
+      "bridge_path_position_better_control": true,
+      "bridge_other_three_metrics_no_worse_control": false,
+      "bridge_path_position_difference_ci_upper_negative": false
+    },
+    "basic_competence_gates": {
+      "bridge_all_four_better_static": false,
+      "bridge_all_four_no_worse_source": true
+    },
+    "validation_source_regression_flags": {
+      "Bridge": [
+        "path_rotation_deg",
+        "endpoint_rotation_deg"
+      ],
+      "Language Table": [
+        "path_position_normalized",
+        "endpoint_position_normalized"
+      ],
+      "BC-Z": [
+        "path_rotation_deg",
+        "endpoint_rotation_deg"
+      ],
+      "Fractal": [
+        "path_position_normalized",
+        "path_rotation_deg",
+        "endpoint_rotation_deg"
+      ]
+    },
+    "candidate_for_review_only": false,
+    "scope": "One source training seed/checkpoint; repeateddev64groups/3sampling draws; source10240is unequal-budget regression reference, not causal arm",
+    "automatic_following_action": false
+  },
+  "derived_arithmetic": {
+    "cycle_minus_replacement": {
+      "path_position_normalized": {
+        "difference": -0.017052434413320272,
+        "percent_relative_to_baseline": -1.5552017139822991,
+        "reported_ci": [
+          -0.0651992040300949,
+          0.030642495856344605
+        ],
+        "reported_ci_contains_zero": true
+      },
+      "path_rotation_deg": {
+        "difference": 0.15317727032393869,
+        "percent_relative_to_baseline": 1.2232290921890063,
+        "reported_ci": [
+          -0.27219432377891833,
+          0.6073654497738779
+        ],
+        "reported_ci_contains_zero": true
+      },
+      "endpoint_position_normalized": {
+        "difference": -0.053359172349034534,
+        "percent_relative_to_baseline": -3.586667216673356,
+        "reported_ci": [
+          -0.1284873196461146,
+          0.02012206019029248
+        ],
+        "reported_ci_contains_zero": true
+      },
+      "endpoint_rotation_deg": {
+        "difference": 0.27807091186778976,
+        "percent_relative_to_baseline": 1.6508470035069323,
+        "reported_ci": [
+          -0.525520149118553,
+          1.112143300839279
+        ],
+        "reported_ci_contains_zero": true
+      }
+    },
+    "cycle_minus_source232587": {
+      "path_position_normalized": {
+        "difference": -0.6232546747333072,
+        "percent_relative_to_baseline": -36.60434301750084,
+        "reported_ci": [
+          -0.7036734147630386,
+          -0.541958258450771
+        ],
+        "reported_ci_contains_zero": false
+      },
+      "path_rotation_deg": {
+        "difference": -2.5030369920964244,
+        "percent_relative_to_baseline": -16.490582936897056,
+        "reported_ci": [
+          -3.265779472129687,
+          -1.7550674201260748
+        ],
+        "reported_ci_contains_zero": false
+      },
+      "endpoint_position_normalized": {
+        "difference": -0.9088673337353852,
+        "percent_relative_to_baseline": -38.78715698802696,
+        "reported_ci": [
+          -1.0359501714291748,
+          -0.7811575986023168
+        ],
+        "reported_ci_contains_zero": false
+      },
+      "endpoint_rotation_deg": {
+        "difference": -2.8949436485555573,
+        "percent_relative_to_baseline": -14.462316513025923,
+        "reported_ci": [
+          -3.9988767320339615,
+          -1.8090700761604965
+        ],
+        "reported_ci_contains_zero": false
+      }
+    },
+    "cycle_minus_static": {
+      "path_position_normalized": {
+        "difference": 0.055287943797875716,
+        "percent_relative_to_baseline": 5.398491194319735,
+        "reported_ci": [
+          0.01157457633576487,
+          0.0981486384402569
+        ],
+        "reported_ci_contains_zero": false
+      },
+      "path_rotation_deg": {
+        "difference": 0.6125029861552331,
+        "percent_relative_to_baseline": 5.0775159429197565,
+        "reported_ci": [
+          0.2573274240092451,
+          0.9868845971521221
+        ],
+        "reported_ci_contains_zero": false
+      },
+      "endpoint_position_normalized": {
+        "difference": 0.0646676481157098,
+        "percent_relative_to_baseline": 4.721361443046094,
+        "reported_ci": [
+          -0.017514274680990854,
+          0.14598402656829895
+        ],
+        "reported_ci_contains_zero": true
+      },
+      "endpoint_rotation_deg": {
+        "difference": 0.8250266975384193,
+        "percent_relative_to_baseline": 5.062389287734202,
+        "reported_ci": [
+          0.18564642356020336,
+          1.5166904678490063
+        ],
+        "reported_ci_contains_zero": false
+      }
+    }
+  },
+  "improvement_percent_vs_unequal_budget_source": {
+    "replacement": {
+      "path_position_normalized": 35.602837238477676,
+      "path_rotation_deg": 17.499749996073746,
+      "endpoint_position_normalized": 36.509981301508375,
+      "endpoint_rotation_deg": 15.851479836638209
+    },
+    "cycle": {
+      "path_position_normalized": 36.60434301750084,
+      "path_rotation_deg": 16.490582936897056,
+      "endpoint_position_normalized": 38.78715698802696,
+      "endpoint_rotation_deg": 14.462316513025923
+    }
+  },
+  "visible_trace_checks": {
+    "counts": {
+      "replacement": 10,
+      "cycle": 18
+    },
+    "common_visible_steps": [
+      1792,
+      2048,
+      2304,
+      2560,
+      2816,
+      3072,
+      3328,
+      3584,
+      3840,
+      4096
+    ],
+    "planned_indices_actual_linux_lrs_mask_counts_source_slots_exact": true,
+    "visible_before_after_rng_hashes_exact": true,
+    "all4096_internal_trace_verification_reported_by_cluster": true,
+    "all4096_traces_independently_downloaded": false
+  },
+  "interpretation": "Short4096update cycle has no demonstrated superiority over replacement; positions slightly lower, rotations slightly higher, all four paired intervals include zero. Both new roles improve versus source but neither beats static on all four primary means.",
+  "causal_limit": "Source10240is unequal budget and earlier dynamic training padding; new roles share77token padding. Common improvement cannot be attributed solely to more updates or to sampling policy.",
+  "scope": "One training seed, reused64Bridge development groups, three sampling draws. Position normalized recorded source units, not centimetres or LIBERO success.",
+  "slurm_final_state_received": false,
+  "raw_cluster_report_downloaded": true,
+  "raw_predictions_downloaded": true,
+  "bootstrap_recomputed_from_original_predictions": true,
+  "source_prediction_replay_inferred_from_completed_cluster_verifier": true,
+  "sampling_effect_gate_passed": false,
+  "basic_competence_gate_passed": false,
+  "branch_closed_no_extra_budget": true,
+  "main_model_replaced": false,
+  "automatic_following_action": false,
+  "independent_array_audit": "reports/oxe_sampling_pair_233531/independent_array_audit.json",
+  "download_verification": "reports/oxe_sampling_pair_233531/download_verification.json",
+  "motion_summary": "reports/oxe_sampling_pair_233531/motion_summary.json",
+  "elapsed_reported_minutes": 47.44906696820011,
+  "all120_targets_masks_independently_matched": true,
+  "all_source_and_per_window_metrics_independently_recomputed": true
+}

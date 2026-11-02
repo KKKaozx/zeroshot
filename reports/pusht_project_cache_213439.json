@@ -1,0 +1,58 @@
+{
+  "cache_complete": true,
+  "errors": [],
+  "training_updates": 0,
+  "development_or_final_scored": false,
+  "automatic_training_submission": false,
+  "cache_contract_sha256": "7087a26a26c2046d9514257f6c5a82e7e93a12d67cd9a43bba51803baec20338",
+  "files": {
+    "visual.npy": {
+      "sha256": "88709c5f67328e590bd9aa63d932513fc998e87a0f6b4be5915eea377c61c922",
+      "bytes": 11954143360
+    },
+    "frame_ids.npy": {
+      "sha256": "e82a61db676ad564c08aa3d713617e711004bcda5df13eaac4e064c0c3701f34",
+      "bytes": 90976
+    },
+    "text.npz": {
+      "sha256": "fd3aa6f44875b8cbe134aa6a86e2a78aee7461d5e75620cb7d13c95c9961208f",
+      "bytes": 40552
+    }
+  },
+  "visual_shape": [
+    11356,
+    257,
+    1024
+  ],
+  "visual_dtype": "float32",
+  "training_data": {
+    "train_episodes": 90,
+    "train_windows": 10726,
+    "train_frames": 11356,
+    "raw_training_images_sha256": "7b05b0ca91d161bad12b2ac5eefe5b58ea7a98f1dfb730d404ed0ba02b842293",
+    "resource_64_windows_exact": true,
+    "normalizer_inputs_exact": true,
+    "normalizer_scope": "90 train episodes only",
+    "data_changed": false
+  },
+  "reference128": {
+    "frames": 128,
+    "max_absolute_difference": 0.0,
+    "atol": 0.0001,
+    "rtol": 1e-05,
+    "passed": true
+  },
+  "text_max_absolute_difference": 0.0,
+  "worker": {
+    "request_id": 356,
+    "status": "closed",
+    "requests": 355,
+    "weights_unchanged": true,
+    "all_frozen": true
+  },
+  "requests": 355,
+  "clip_request_seconds": 244.40457500400953,
+  "cache_data_gib": 11.133163452148438,
+  "scope": "Frozen train-frame features only; no Adapter/native training or task evaluation",
+  "elapsed_seconds": 383.97043510410003
+}

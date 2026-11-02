@@ -1,0 +1,15 @@
+{
+  "scope": "Read-only derivation using native controller source and recorded demo; no inverse-dynamics calibration claim",
+  "observations_are_after_action_at_same_row": true,
+  "rows_used": 196,
+  "first_row_excluded": true,
+  "native_desired_position_formula": "current_measured_position + scaled_native_action",
+  "native_controller_source": "robosuite/controllers/osc.py:set_goal and utils/control_utils.py:set_goal_position",
+  "current_training_target_formula": "interpolated observed future position minus observed reference, divided by position_divisor",
+  "current_training_source": "code/oxe_nominal_timing.py lines112-115",
+  "derived_native_goal_vs_next_reached_position_mean_mm": 21.507725922374178,
+  "derived_native_goal_vs_next_reached_position_max_mm": 41.203507304553106,
+  "normalized_command_vs_naive_reached_delta_mean_l2": 0.4301545184474835,
+  "interpretation": "Observed reached pose and native desired setpoint are different quantities. Replaying reached poses through OSC is a tracking/control design problem, not the inverse of the original command sequence.",
+  "limits": "This distinction is expected for dynamic/compliant control and is not by itself proof that reached-pose prediction cannot work. It invalidates assuming task-preserving action equivalence without an execution qualification."
+}

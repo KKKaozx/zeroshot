@@ -1,0 +1,43 @@
+{
+  "format": "bridge-supervision-exact-constant-repair-v1",
+  "failed_job": 229597,
+  "passed_preflight": 229577,
+  "base_bundle": "oxe_bridge_supervision_v1",
+  "base_protocol_sha256": "8bbe2ec8ef8f0a94a8fb559c718453cb3bb77544355a86970ca23b2a66caf88c",
+  "profile_sha256": "0ad6ce3e3681a5f97fd31c805bd2e4f24458eb13c5651a69df7079c998b3a1bf",
+  "expected_frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "known_failed_frozen_sha256": "fc5316b4b1efba56b942d2f78d896e8a26ab0f5ae6c7226977163f8544c0daa4",
+  "initial_learned_sha256": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+  "allowed_buffers": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "known_failed_metadata": {
+    "posterior_mean_x0": {
+      "dtype": "torch.float32",
+      "sha256": "2ede12ea2ae0d0b63c899f3e6f8cfab0a86dcab10b2f874262bf130e70edef9b",
+      "shape": [
+        100
+      ]
+    },
+    "posterior_mean_xt": {
+      "dtype": "torch.float32",
+      "sha256": "88e2e7ec2e0341a60d36573a6eee138723dc7d7c2650c42ac328b7873f6d8d01",
+      "shape": [
+        100
+      ]
+    }
+  },
+  "source_prior_failure": "227815 (same frozen aggregate digest, existing named-buffer diagnosis)",
+  "budget": 65536,
+  "segment_endpoints": [
+    32768,
+    65536
+  ],
+  "repeat_engineering_training": false,
+  "original_guards_kept": true,
+  "original_code_files_modified": false,
+  "source_supervision_intervention_changed": false,
+  "new_training_seed": false,
+  "scope": "Exact immutable training constants only; no learned/encoder changes, no new diagnostic optimization or automatic training"
+}

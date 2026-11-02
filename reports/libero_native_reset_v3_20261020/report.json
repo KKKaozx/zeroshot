@@ -1,0 +1,88 @@
+{
+  "stage": "reset",
+  "execution_complete": true,
+  "errors": [],
+  "model_loaded": false,
+  "training_updates": 0,
+  "final_task_scoring": false,
+  "scope": "Single already-inspected LIBERO90 example; engineering control, not benchmark success",
+  "demonstration": "D:\\ntu_related\\dissertation\\dataset\\LIBERO\\libero_90\\KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it_demo.hdf5",
+  "demo_key": "demo_0",
+  "state_restore_count": 0,
+  "windows_compatibility": "Supported private macros use GLFW/no /tmp log; byte-identical packaged MuJoCo DLL at expected lookup path",
+  "versions": {
+    "libero": "0.1.0",
+    "robosuite": "1.4.0",
+    "mujoco": "2.3.7",
+    "numpy": "1.26.4",
+    "numba": "0.60.0",
+    "gym": "0.25.2"
+  },
+  "native_controller_matches_metadata": true,
+  "output_max": [
+    0.05,
+    0.05,
+    0.05,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "input_max": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "action_spec": [
+    [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "steps": 8,
+  "renderer_passed": true,
+  "native_check_success_any": false,
+  "native_check_success_final": false,
+  "native_success_series": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "reward_series": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "eef_position_replay_error_m": [],
+  "max_eef_position_replay_error_m": null,
+  "action_sha256": "5c55c8f4db4010ba9203d83536d0609856af8c847ac039e37e7dde8fbd574b61",
+  "state_corrections_during_replay": 0,
+  "actual_learned_policy_success": null,
+  "elapsed_seconds": 13.764999999999418
+}

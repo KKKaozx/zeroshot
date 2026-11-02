@@ -1,0 +1,49 @@
+Loading A3 policy with frozen DINO/CLIP
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:  26%|¨€¨€¨„       | 51/196 [00:00<00:00, 509.61it/s]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 196/196 [00:00<00:00, 1271.85it/s]
+[transformers] [1mCLIPTextModel LOAD REPORT[0m from: D:\ntu_related\dissertation\hf_cache\models--openai--clip-vit-large-patch14\snapshots\32bd64288804d66eefd0ccbe215aa642df71cc41
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/439 [00:00<?, ?it/s]Loading weights:  10%|¨         | 43/439 [00:00<00:00, 417.13it/s]Loading weights:  19%|¨€¨        | 85/439 [00:00<00:00, 358.74it/s]Loading weights:  38%|¨€¨€¨€¨‚      | 166/439 [00:00<00:00, 514.86it/s]Loading weights:  50%|¨€¨€¨€¨€¨€     | 221/439 [00:00<00:00, 498.15it/s]Loading weights:  62%|¨€¨€¨€¨€¨€¨€¨‡   | 272/439 [00:00<00:00, 426.86it/s]Loading weights: 100%|¨€¨€¨€¨€¨€¨€¨€¨€¨€¨€| 439/439 [00:00<00:00, 654.25it/s]
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+A3_LIBERO 5 /50 calls; 20 /200 ticks
+A3_LIBERO 10 /50 calls; 40 /200 ticks
+A3_LIBERO 15 /50 calls; 60 /200 ticks
+A3_LIBERO 20 /50 calls; 80 /200 ticks
+A3_LIBERO 25 /50 calls; 100 /200 ticks
+A3_LIBERO 30 /50 calls; 120 /200 ticks
+A3_LIBERO 35 /50 calls; 140 /200 ticks
+A3_LIBERO 40 /50 calls; 160 /200 ticks
+A3_LIBERO 45 /50 calls; 180 /200 ticks
+A3_LIBERO 50 /50 calls; 200 /200 ticks
+REPORT D:\ntu_related\dissertation\Zero_shot\reports\patch_readout_libero_engineering_20261102\run1\report.json

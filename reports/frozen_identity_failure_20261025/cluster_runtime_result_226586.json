@@ -1,0 +1,81 @@
+{
+  "guard_captured": true,
+  "formal_retry_submitted": false,
+  "cpu_reference_vs_actual_formal_guard": {
+    "preflight_reconstruction_matches_legacy_binding": true,
+    "formal_reconstruction_matches_legacy_binding": true,
+    "preflight_reconstruction_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "formal_reconstruction_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "same_named_frozen_tensors": true,
+    "same_key_order": true,
+    "missing_keys_in_formal": [],
+    "extra_keys_in_formal": [],
+    "changed_encoder_tensors": [],
+    "changed_schedule_buffers": [],
+    "other_changed_tensors": [],
+    "normalized_configuration_differences": {},
+    "preflight_tokenizer_matches_binding": true,
+    "formal_tokenizer_matches_binding": true,
+    "formal_tokenizer_mutated_during_model_loading": false,
+    "cpu_capabilities": [
+      "AVX512",
+      "AVX2"
+    ],
+    "classification": "Not reproduced by CPU reconstruction; no repair or guard bypass authorized",
+    "schedule_numeric_differences": {}
+  },
+  "actual_frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "expected_frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "frozen_matches_at_actual_guard": true,
+  "tokenizer_matches_at_actual_guard": true,
+  "actual_tokenizer": {
+    "class": "transformers.models.clip.tokenization_clip.CLIPTokenizer",
+    "vocabulary_sha256": "f9190aead40a965a09db1ba2e556dccac0eda8423cb4926bcd994722899ec68e",
+    "rules_sha256": "7f9c7a007705969889918c87008f406f886b04833119356ee4083193295e2747",
+    "special_tokens": {
+      "bos_token": "<|startoftext|>",
+      "eos_token": "<|endoftext|>",
+      "unk_token": "<|endoftext|>",
+      "pad_token": "<|endoftext|>"
+    },
+    "settings": {
+      "model_max_length": 77,
+      "padding_side": "right",
+      "truncation_side": "right",
+      "clean_up_tokenization_spaces": false
+    }
+  },
+  "expected_tokenizer": {
+    "class": "transformers.models.clip.tokenization_clip.CLIPTokenizer",
+    "vocabulary_sha256": "f9190aead40a965a09db1ba2e556dccac0eda8423cb4926bcd994722899ec68e",
+    "rules_sha256": "7f9c7a007705969889918c87008f406f886b04833119356ee4083193295e2747",
+    "special_tokens": {
+      "bos_token": "<|startoftext|>",
+      "eos_token": "<|endoftext|>",
+      "unk_token": "<|endoftext|>",
+      "pad_token": "<|endoftext|>"
+    },
+    "settings": {
+      "model_max_length": 77,
+      "padding_side": "right",
+      "truncation_side": "right",
+      "clean_up_tokenization_spaces": false
+    }
+  },
+  "tokenizer_changed_field_names": [],
+  "model_device": "cuda:0",
+  "gpu": "NVIDIA A40",
+  "torch_version": "2.5.1+cu118",
+  "cuda_runtime": "11.8",
+  "bound_preflight_job": "226133",
+  "stopped_at_guard_line": 228,
+  "model_forward_calls": 0,
+  "optimizer_updates": 0,
+  "training_checkpoint_written": false,
+  "original_code_modified": false,
+  "guard_bypassed": false,
+  "scope": "Exact formal initialization through unchanged run_stage.py; stopped BEFORE guard evaluation, no training",
+  "automatic_following_action": false,
+  "would_fail_original_guard": false,
+  "classification": "Actual formal guard matches; earlier failure not reproduced; no training started"
+}

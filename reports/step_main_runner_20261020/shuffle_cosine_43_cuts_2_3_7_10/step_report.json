@@ -1,0 +1,370 @@
+{
+  "format": "main-fixed-update-segment-report-v1",
+  "completed_updates": 11,
+  "total_updates": 11,
+  "complete": true,
+  "frozen_state_unchanged": true,
+  "updates": [
+    {
+      "update": 1,
+      "pass": 1,
+      "indices": [
+        3,
+        1,
+        2
+      ],
+      "lr": [
+        0.005,
+        0.002
+      ],
+      "loss": 1.1565755605697632,
+      "pose_loss": 0.9827684164047241,
+      "gripper_loss": 0.6952283978462219,
+      "gradient_norm": 1.0603348016738892,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "update": 2,
+      "pass": 1,
+      "indices": [
+        4,
+        5,
+        0
+      ],
+      "lr": [
+        0.01,
+        0.004
+      ],
+      "loss": 1.124062418937683,
+      "pose_loss": 0.9565892219543457,
+      "gripper_loss": 0.6698926091194153,
+      "gradient_norm": 0.696100652217865,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "update": 3,
+      "pass": 1,
+      "indices": [
+        6
+      ],
+      "lr": [
+        0.01,
+        0.004
+      ],
+      "loss": 0.43279829621315,
+      "pose_loss": 0.43279829621315,
+      "gripper_loss": 0.0,
+      "gradient_norm": 1.413953423500061,
+      "valid_dimensions": [
+        2.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "update": 4,
+      "pass": 2,
+      "indices": [
+        2,
+        4,
+        1
+      ],
+      "lr": [
+        0.009698463103929543,
+        0.0038793852415718168
+      ],
+      "loss": 0.9968942999839783,
+      "pose_loss": 0.8180869817733765,
+      "gripper_loss": 0.7152292728424072,
+      "gradient_norm": 0.4777812361717224,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0
+      ]
+    },
+    {
+      "update": 5,
+      "pass": 2,
+      "indices": [
+        6,
+        5,
+        0
+      ],
+      "lr": [
+        0.00883022221559489,
+        0.003532088886237956
+      ],
+      "loss": 0.8164325952529907,
+      "pose_loss": 0.6539340615272522,
+      "gripper_loss": 0.6499940752983093,
+      "gradient_norm": 0.781058132648468,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "update": 6,
+      "pass": 2,
+      "indices": [
+        3
+      ],
+      "lr": [
+        0.0075,
+        0.003
+      ],
+      "loss": 1.0574398040771484,
+      "pose_loss": 1.0574398040771484,
+      "gripper_loss": 0.0,
+      "gradient_norm": 2.3838775157928467,
+      "valid_dimensions": [
+        2.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "update": 7,
+      "pass": 3,
+      "indices": [
+        3,
+        5,
+        4
+      ],
+      "lr": [
+        0.005868240888334653,
+        0.0023472963553338613
+      ],
+      "loss": 0.9924925565719604,
+      "pose_loss": 0.8196835517883301,
+      "gripper_loss": 0.6912360191345215,
+      "gradient_norm": 0.7442578673362732,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "update": 8,
+      "pass": 3,
+      "indices": [
+        0,
+        6,
+        2
+      ],
+      "lr": [
+        0.0041317591116653484,
+        0.0016527036446661394
+      ],
+      "loss": 1.065492033958435,
+      "pose_loss": 0.8823824524879456,
+      "gripper_loss": 0.7324385046958923,
+      "gradient_norm": 0.758351743221283,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "update": 9,
+      "pass": 3,
+      "indices": [
+        1
+      ],
+      "lr": [
+        0.0025000000000000014,
+        0.0010000000000000005
+      ],
+      "loss": 1.617422342300415,
+      "pose_loss": 1.4469140768051147,
+      "gripper_loss": 0.6820331811904907,
+      "gradient_norm": 1.255682110786438,
+      "valid_dimensions": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "update": 10,
+      "pass": 4,
+      "indices": [
+        5,
+        4,
+        6
+      ],
+      "lr": [
+        0.0011697777844051104,
+        0.0004679111137620442
+      ],
+      "loss": 1.3571536540985107,
+      "pose_loss": 1.1818034648895264,
+      "gripper_loss": 0.7014005184173584,
+      "gradient_norm": 0.8045095801353455,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    {
+      "update": 11,
+      "pass": 4,
+      "indices": [
+        1,
+        2,
+        3
+      ],
+      "lr": [
+        0.00030153689607045843,
+        0.00012061475842818337
+      ],
+      "loss": 0.7115560173988342,
+      "pose_loss": 0.52291339635849,
+      "gripper_loss": 0.7545704245567322,
+      "gradient_norm": 0.5092184543609619,
+      "valid_dimensions": [
+        6.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "update": 3,
+      "loss": 0.9030168652534485
+    },
+    {
+      "update": 6,
+      "loss": 1.3902044296264648
+    },
+    {
+      "update": 9,
+      "loss": 1.3372631072998047
+    },
+    {
+      "update": 11,
+      "loss": 1.2538076639175415
+    }
+  ],
+  "language_counts": {},
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "openai/clip-vit-large-patch14",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "epsilon",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 2,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "binary",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "compact"
+    }
+  },
+  "plan": {
+    "dataset_identity": "e087bf2720485e4a5528bfbbd6e70096074725bc6c13c4da0c5b2c3bc2c3e7f3",
+    "indices_sha256": "d71a595b6e83e7180caf80e813a0e1b08c48963fd436c20da78927c8f489902a",
+    "size": 7,
+    "batch_size": 3,
+    "total_updates": 11,
+    "seed": 43,
+    "mode": "shuffle",
+    "drop_last": false,
+    "weights_sha256": null
+  },
+  "generalization_verdict": null,
+  "test_partition_evaluated": false,
+  "data_qualification_proven_by_this_runner": false
+}

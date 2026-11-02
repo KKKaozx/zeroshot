@@ -1,0 +1,177 @@
+{
+  "format": "libero-score-blind-evaluation-candidate-v1",
+  "status": "common_rules_prepared_rollout_count_question_pending",
+  "formal_task_scoring_admitted": false,
+  "score_generated": false,
+  "teacher_basis": {
+    "training_conditions": "Teacher seventh email:four DINO augmentation conditions x3 training seeds, CLIP combined x1",
+    "episode_quote": "100 episodes per task split",
+    "count_ambiguity_not_hidden": true,
+    "primary_suite_scope_is_implementation_proposal_not_teacher_quote": true
+  },
+  "official_author_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "primary_suites": [
+    "libero_spatial",
+    "libero_object",
+    "libero_goal",
+    "libero_10"
+  ],
+  "primary_tasks": 40,
+  "primary_suite_basis": "Pinned official lifelong/evaluate.py accepts exactly spatial/object/goal/10",
+  "libero90_role": "Not part of the proposed primary40; no claim of evaluating all130 tasks. Existing single engineering task stays excluded.",
+  "engineering_task_excluded_from_final_scores": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "task_roster_sha256": "50e8c70fc54f6372410b8a85652590542af5edd0225e5c15cc6d3c00dacc1120",
+  "candidate100_slots_sha256": "025286211e8e1b8c31ef24240bcaddb3afd216a9e30bcf7bf584b38fd3c7590b",
+  "rollouts": {
+    "selection": null,
+    "recommended_candidate": "100 per individual task",
+    "options": {
+      "per_task100": {
+        "episodes_per_task": 100,
+        "episodes_per_suite": 1000,
+        "original_instruction_episodes_per_model": 4000
+      },
+      "bounded_per_suite100": {
+        "episodes_per_task": 10,
+        "episodes_per_suite": 100,
+        "original_instruction_episodes_per_model": 400,
+        "scope": "Bounded evaluation only, not automatically the final thesis requirement"
+      }
+    },
+    "counts_apply_to_original_instruction_only": true
+  },
+  "initial_state_rule": {
+    "source": "Pinned official .pruned_init assets; no demonstrations or synthesized states",
+    "index": "episode_slot % number_of_official_pruned_initial_states",
+    "duplicates": "Repeat counts/unique initial-state indices must be reported;100 trials need not mean100 distinct physical states",
+    "seeds": "SHA256([20261026,task_key,episode_slot,channel]), first64 bits mod2^31-1 for environment or2^63-1 for sampler",
+    "paired_across": "Same task/slot/seeds for all model conditions and training seeds; seeds exclude condition, training seed and phrasing",
+    "reset_policy_per_episode": "Reset callback call counter and use fixed per-episode sampler seed; never reload/train the model between trials"
+  },
+  "language": {
+    "primary": "Official benchmark task.language from grab_language_from_filename; never substitute BDDL wording silently",
+    "evaluation_paraphrases": "Five semantically reviewed phrasings, retained outside training; freeze text before scoring those variants",
+    "evaluation_paraphrase_bank_ready": false,
+    "paraphrase_rollout_budget": null,
+    "training_languages": "No LIBERO task language/demo/init is added to OXE training or augmentation banks"
+  },
+  "execution": {
+    "native_control_hz": 20,
+    "image_height": 128,
+    "image_width": 128,
+    "camera": "agentview_image",
+    "image_convention": "opengl",
+    "settle_native_steps": 5,
+    "settle_action": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "settle_gripper_history": "Zero native gripper is neutral; keep command history unknown, not falsely known open/closed",
+    "policy_native_step_budget": 600,
+    "policy_simulated_seconds": 30,
+    "policy_decisions_max": 150,
+    "native_ticks_per_decision": 4,
+    "checkpoint": "Immutable final65536 endpoint; no intermediate/best/target-outcome checkpoint selection",
+    "ddpm_steps": 100,
+    "prediction_type": "epsilon",
+    "schedule": "squaredcos_cap_v2",
+    "frozen_state": "Exact training digest; use explicit verified original coefficient profile on a different runtime",
+    "control": {
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "execute_waypoints": 1,
+      "position_scale_meters": 0.1,
+      "timing_evidence": "User-selected published nominal Bridge/LT5Hz, BC-Z10Hz, Fractal3Hz resampled to5Hz; no measured export timestamps. Actual native20Hz checked at execution.",
+      "tcp_mapping_evidence": "Engineering transfer convention: interpret model source-Cartesian deltas at measured LIBERO EEF world pose; source-specific units/base/TCP alignment is not calibrated or proven by this file.",
+      "native_control_hz": 20.0,
+      "image_convention": "opengl",
+      "camera_key": "agentview_image",
+      "output_scales": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "action_representation": "source_cartesian_delta_pose_open_positive_v1",
+      "saturation_policy": "bounded_feedback"
+    },
+    "source_units_and_tcp_calibrated": false,
+    "transfer_assumption": "Evaluate the already-declared uncalibrated shared-Cartesian convention as an explicit experimental setting, not as proven calibration",
+    "policy_inputs": {
+      "rgb": "Only upright agentview RGB through the training prepare_image path",
+      "language": "Frozen CLIP text encoding of official benchmark language",
+      "proprioception": "Last explicit gripper command plus availability; no joint/EEF/object coordinates passed to the learned network",
+      "eef_reference": "Measured EEF pose is used only by the fixed native OSC conversion, not as an added learned feature"
+    }
+  },
+  "success": {
+    "predicate": "Official native BDDL goal predicate as returned by LIBERO step done, with goal status recorded",
+    "decision": "At least one success during at most600 actual policy control ticks; stop at first success",
+    "no_surrogates": "Position loss, reward proxies, arm motion and8-decision engineering connection do not count as task success"
+  },
+  "baseline": {
+    "kind": "Native seven-dimensional zero-action policy",
+    "initial_states_seeds_and_step_budget": "Identical to learned policies",
+    "reuse": "One fixed baseline result per task/slot; reuse across model/training seeds and language variants rather than rerun identical trials"
+  },
+  "statistics": {
+    "per_task": "Success count/planned completed trials; never silently omit technical errors",
+    "per_suite": "Equal-weight mean over10 task success rates",
+    "overall": "Equal-weight mean over4 suite means; also publish each suite separately",
+    "training_seeds": "Report mean and sample SD(ddof1) over42/43/44 when all three available; single-seed results have no invented training-seed SD",
+    "paired_comparisons": "Match task/slot and training seed; scene resampling clusters by official initial-state index",
+    "clip_ablation": "Single training seed; do not treat episode bootstrap as three-seed evidence"
+  },
+  "errors_and_resume": {
+    "technical_errors": "Report evaluation incomplete; retry the identical task/slot/seeds only, no resampled easier episodes",
+    "native_horizon_failure": "A valid rollout with no goal by600 ticks is a task failure",
+    "resume": "Completed episode identities are immutable, skipped only after checkpoint/protocol/asset hashes match",
+    "selection": "No algorithm/control/data/budget/checkpoint changes based on final scores; a changed method gets a new exploratory protocol"
+  },
+  "storage": {
+    "episode_reports": "Compact per-episode results and trace digests, not per-episode full simulator dumps",
+    "videos": "If enabled, choose task/episode identifiers before outcomes, never select successes only"
+  },
+  "remaining_before_scoring": [
+    "Resolve rollout-count interpretation",
+    "Bind actual evaluator code and per-run checkpoint/profile identities",
+    "Specify separate paraphrase robustness budget before those scores"
+  ],
+  "metadata_only": true,
+  "initial_state_vectors_decoded": 0,
+  "model_forwards": 0,
+  "physics_steps": 0,
+  "source_sha256": {
+    "libero\\libero\\benchmark\\__init__.py": "4ce6edbb00b3280692f2e2b2e8a14bf6e2d5878965b0484a386c0355a867ecc5",
+    "libero\\libero\\benchmark\\libero_suite_task_map.py": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d",
+    "libero\\lifelong\\evaluate.py": "84dea8f168406884e460acd5df9d2dcab5802e297b9a7b4333a5c17fcb24b50f",
+    "libero\\lifelong\\metric.py": "4fe37407f23cd9c1ceb4c93670f308d2fed6d34b2c2139d86123702c849cabcb",
+    "libero\\configs\\eval\\default.yaml": "e9775e56a15317666ee8248f7e9d59072b9469c0f7346dc3ed496484657c6bcd",
+    "libero\\libero\\envs\\env_wrapper.py": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+    "libero\\libero\\envs\\bddl_base_domain.py": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d"
+  },
+  "candidate_identity": "dba8b406cba994ae5a1797299bfeabb0dd4a810276b5970f116155d8089260d3"
+}

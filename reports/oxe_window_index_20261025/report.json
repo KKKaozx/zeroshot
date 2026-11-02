@@ -1,0 +1,85 @@
+{
+  "complete": true,
+  "window_index_created": true,
+  "main_dataset_consumable": true,
+  "formal_training_admitted": false,
+  "source_payloads_reread": false,
+  "images_or_numeric_labels_decoded": false,
+  "candidate_episodes": 5158,
+  "indexed_episodes": 4218,
+  "excluded_episodes": 940,
+  "windows": 45049,
+  "original_frozen_episode_roles_unchanged": true,
+  "role_policy": "Filter within fixed roles; no reassignments across seeds/conditions",
+  "by_source_windows": {
+    "Bridge": {
+      "train": 2156,
+      "test": 274,
+      "validation": 240
+    },
+    "Language Table": {
+      "train": 10000,
+      "test": 1237,
+      "validation": 1277
+    },
+    "BC-Z": {
+      "test": 1669,
+      "train": 18016,
+      "validation": 2662
+    },
+    "Fractal": {
+      "test": 915,
+      "train": 5761,
+      "validation": 842
+    }
+  },
+  "by_role_windows": {
+    "train": 35933,
+    "validation": 5021,
+    "test": 4095
+  },
+  "by_source_horizon_counts": {
+    "Bridge": {
+      "full16": 1588,
+      "partial_tail": 1082
+    },
+    "Language Table": {
+      "full16": 3760,
+      "partial_tail": 8754
+    },
+    "BC-Z": {
+      "full16": 20149,
+      "partial_tail": 2198
+    },
+    "Fractal": {
+      "full16": 4980,
+      "partial_tail": 2538
+    }
+  },
+  "excluded_reasons": {
+    "Bridge:without_language": 115,
+    "Bridge:trajectory_too_short": 3,
+    "Language Table:trajectory_too_short": 807,
+    "BC-Z:trajectory_too_short": 12,
+    "Fractal:trajectory_too_short": 3
+  },
+  "dataset_identity": "a1c8338600926bbba2920d8e67b7c26cc9ec52940cf609a9b33c6155264e8abe",
+  "target_protocol_sha256": "e0d4c1facf6998d83ffeb9aff7ce462942c3178c2f28d28a8e16c50f3164ad6a",
+  "source_units_time_or_tcp_guessed": false,
+  "model_loaded": false,
+  "training_updates": 0,
+  "simulation_steps": 0,
+  "scope": "Portable engineering window index from previously verified cached metadata; prepare-only, not numeric/physical training admission",
+  "window_manifest_sha256": "55b62e336bcdee3af19c3497e87833759b3b4fcdbae48a4e3864a22b7dd7c57f",
+  "by_role_indexed_episodes": {
+    "train": 3363,
+    "test": 415,
+    "validation": 440
+  },
+  "by_role_content_groups": {
+    "train": 3323,
+    "validation": 434,
+    "test": 411
+  },
+  "train_3d_start0_windows_with_no_prior_command": 1275
+}

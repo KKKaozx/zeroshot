@@ -1,0 +1,33 @@
+{
+  "job_id": 217820,
+  "evidence": "User-pasted terminal endpoint, admission output and successful original server verify_formal.py output on 2026-10-22; server artifacts not received locally",
+  "terminal_reports_pair_execution_complete": true,
+  "full_output_verified": true,
+  "verification_basis": "Original server verifier success reported in user terminal; not independently rerun locally",
+  "local_artifacts_received": true,
+  "received_small_files_verified_locally": true,
+  "local_analysis_report": "reports/pusht_bypass_analysis_217820_20261022/report.json",
+  "source_checkpoint_job": 215999,
+  "endpoint_updates_each": 92360,
+  "new_updates_each": 8192,
+  "scores": {
+    "unchanged215999": {"mean_score": 0.44548841481267654, "full_reward_fraction": 0.25},
+    "global_control": {"mean_score": 0.28180136259665395, "full_reward_fraction": 0.05},
+    "spatial_candidate": {"mean_score": 0.39077456633648944, "full_reward_fraction": 0.15}
+  },
+  "paired_mean_gain_candidate_minus_control": 0.10897320373983552,
+  "paired_mean_gain_episode_bootstrap95": [-0.00408811189466344, 0.24210061259152352],
+  "paired_candidate_better_worse_equal": [10, 5, 5],
+  "candidate_minus_unchanged_mean": -0.0547138484761871,
+  "gates": {
+    "mean_gain_at_least0_05_vs_global_control": true,
+    "mean_gain_at_least0_05_vs_unchanged215999": false,
+    "paired_mean_gain_bootstrap95_lower_positive": false,
+    "full_reward_fraction_no_worse_than_both": false
+  },
+  "development_admission_passed": false,
+  "decision": "Close this bounded bypass variant; retain unchanged215999 as existing project reference; no extra budget/seeds/variants or final50 access",
+  "scope": "Reused development20, one source training seed, fixed endpoint EMA; overlap reward only",
+  "interpretation": "Spatial bypass exceeds its matched global bypass control on the observed mean, but uncertainty includes zero and both underperform the unchanged source. No policy improvement and no proof that spatial representation is irrelevant or a unique cause is excluded.",
+  "next_action": "Artifact review completed; branch closed, retain original215999 and final50 remains sealed"
+}

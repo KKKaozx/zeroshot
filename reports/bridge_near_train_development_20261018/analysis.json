@@ -1,0 +1,366 @@
+{
+  "date": "2026-10-18",
+  "source_model_job": 207558,
+  "new_development_job": 209481,
+  "saved_predictions_only": true,
+  "source_sha256": {
+    "train": {
+      "path": "reports\\bridge-coverage-rep-fit-207558\\reduced_u8192_train.npz",
+      "sha256": "61ff5b41bd4102b470db230cae60aad9c0a7d19178d66e9339b7005d0929a7ca"
+    },
+    "new_development": {
+      "path": "reports\\bridge-prefix-formal-209481\\unchanged207558_full16.npz",
+      "sha256": "d8b4a5e1070baf68fd4df0d44b16288c6d5e6b709b74b69c96038ed555c27b96"
+    }
+  },
+  "counts": {
+    "train": {
+      "windows": 1836,
+      "episodes": 405,
+      "tasks": {
+        "close microwave": {
+          "episodes": 64,
+          "windows": 342
+        },
+        "close the drawer": {
+          "episodes": 93,
+          "windows": 491
+        },
+        "open the drawer": {
+          "episodes": 100,
+          "windows": 522
+        },
+        "take broccoli out of pan": {
+          "episodes": 55,
+          "windows": 308
+        },
+        "turn lever vertical to front": {
+          "episodes": 93,
+          "windows": 173
+        }
+      }
+    },
+    "new_development": {
+      "windows": 50,
+      "episodes": 10,
+      "tasks": {
+        "close microwave": {
+          "episodes": 2,
+          "windows": 11
+        },
+        "close the drawer": {
+          "episodes": 2,
+          "windows": 7
+        },
+        "open the drawer": {
+          "episodes": 2,
+          "windows": 16
+        },
+        "take broccoli out of pan": {
+          "episodes": 2,
+          "windows": 12
+        },
+        "turn lever vertical to front": {
+          "episodes": 2,
+          "windows": 4
+        }
+      }
+    }
+  },
+  "summaries": {
+    "train": {
+      "episode_equal": {
+        "model": {
+          "first1": {
+            "position_cm": 1.2642782584817536,
+            "rotation_deg": 2.7707347459960725,
+            "position_by_sampling_seed_cm": [
+              1.2722798129389128,
+              1.2622534668223893,
+              1.258301495683959
+            ]
+          },
+          "first4": {
+            "position_cm": 2.7312401528197836,
+            "rotation_deg": 5.716295548005378,
+            "position_by_sampling_seed_cm": [
+              2.7610951239255996,
+              2.7507031770908736,
+              2.6819221574428775
+            ]
+          },
+          "full16": {
+            "position_cm": 4.838238397549727,
+            "rotation_deg": 12.13788806177467,
+            "position_by_sampling_seed_cm": [
+              4.881463974225925,
+              4.844008600505376,
+              4.78924261791788
+            ]
+          }
+        },
+        "static": {
+          "first1": {
+            "position_cm": 1.2340391347752793,
+            "rotation_deg": 2.271510990749451,
+            "position_by_sampling_seed_cm": [
+              1.2340391347752793
+            ]
+          },
+          "first4": {
+            "position_cm": 3.256597661538899,
+            "rotation_deg": 5.7464047589973255,
+            "position_by_sampling_seed_cm": [
+              3.256597661538899
+            ]
+          },
+          "full16": {
+            "position_cm": 7.936635611150257,
+            "rotation_deg": 13.435664277765444,
+            "position_by_sampling_seed_cm": [
+              7.936635611150257
+            ]
+          }
+        }
+      },
+      "task_macro": {
+        "model": {
+          "first1": {
+            "position_cm": 1.306393362558683,
+            "rotation_deg": 2.786786799697087,
+            "position_by_sampling_seed_cm": [
+              1.3090395323026573,
+              1.3039842342520354,
+              1.3061563211213563
+            ]
+          },
+          "first4": {
+            "position_cm": 2.8221669040842996,
+            "rotation_deg": 5.76876979486482,
+            "position_by_sampling_seed_cm": [
+              2.840986978627789,
+              2.8417013825316717,
+              2.783812351093437
+            ]
+          },
+          "full16": {
+            "position_cm": 4.999684028622067,
+            "rotation_deg": 12.126443688803427,
+            "position_by_sampling_seed_cm": [
+              5.036302306866362,
+              5.0045507735923636,
+              4.958199005407474
+            ]
+          }
+        },
+        "static": {
+          "first1": {
+            "position_cm": 1.2823891408770232,
+            "rotation_deg": 2.296669523428986,
+            "position_by_sampling_seed_cm": [
+              1.2823891408770232
+            ]
+          },
+          "first4": {
+            "position_cm": 3.3651798914281335,
+            "rotation_deg": 5.793770392864294,
+            "position_by_sampling_seed_cm": [
+              3.3651798914281335
+            ]
+          },
+          "full16": {
+            "position_cm": 8.183300033878258,
+            "rotation_deg": 13.444252369668963,
+            "position_by_sampling_seed_cm": [
+              8.183300033878258
+            ]
+          }
+        }
+      }
+    },
+    "new_development": {
+      "episode_equal": {
+        "model": {
+          "first1": {
+            "position_cm": 1.4461413906408727,
+            "rotation_deg": 2.7740070772762415,
+            "position_by_sampling_seed_cm": [
+              1.3416977158314778,
+              1.5581315502191981,
+              1.438594905871942
+            ]
+          },
+          "first4": {
+            "position_cm": 3.2686223371424568,
+            "rotation_deg": 6.159821903571808,
+            "position_by_sampling_seed_cm": [
+              3.0908864867422237,
+              3.377419284062264,
+              3.3375612406228816
+            ]
+          },
+          "full16": {
+            "position_cm": 5.986335115116556,
+            "rotation_deg": 13.78152965127272,
+            "position_by_sampling_seed_cm": [
+              5.68508506755136,
+              5.989856500444935,
+              6.284063777353374
+            ]
+          }
+        },
+        "static": {
+          "first1": {
+            "position_cm": 1.2268812930144994,
+            "rotation_deg": 2.4400986199536856,
+            "position_by_sampling_seed_cm": [
+              1.2268812930144994
+            ]
+          },
+          "first4": {
+            "position_cm": 3.133200993597063,
+            "rotation_deg": 6.266228956772219,
+            "position_by_sampling_seed_cm": [
+              3.133200993597063
+            ]
+          },
+          "full16": {
+            "position_cm": 8.110599583259136,
+            "rotation_deg": 15.517002139750979,
+            "position_by_sampling_seed_cm": [
+              8.110599583259136
+            ]
+          }
+        }
+      },
+      "task_macro": {
+        "model": {
+          "first1": {
+            "position_cm": 1.4461413906408727,
+            "rotation_deg": 2.7740070772762415,
+            "position_by_sampling_seed_cm": [
+              1.3416977158314778,
+              1.5581315502191981,
+              1.438594905871942
+            ]
+          },
+          "first4": {
+            "position_cm": 3.2686223371424568,
+            "rotation_deg": 6.159821903571808,
+            "position_by_sampling_seed_cm": [
+              3.0908864867422237,
+              3.377419284062264,
+              3.3375612406228816
+            ]
+          },
+          "full16": {
+            "position_cm": 5.986335115116556,
+            "rotation_deg": 13.78152965127272,
+            "position_by_sampling_seed_cm": [
+              5.68508506755136,
+              5.989856500444935,
+              6.284063777353374
+            ]
+          }
+        },
+        "static": {
+          "first1": {
+            "position_cm": 1.2268812930144994,
+            "rotation_deg": 2.4400986199536856,
+            "position_by_sampling_seed_cm": [
+              1.2268812930144994
+            ]
+          },
+          "first4": {
+            "position_cm": 3.133200993597063,
+            "rotation_deg": 6.266228956772219,
+            "position_by_sampling_seed_cm": [
+              3.133200993597063
+            ]
+          },
+          "full16": {
+            "position_cm": 8.110599583259136,
+            "rotation_deg": 15.517002139750979,
+            "position_by_sampling_seed_cm": [
+              8.110599583259136
+            ]
+          }
+        }
+      }
+    }
+  },
+  "first_target_task_wins_vs_static": {
+    "train": {
+      "position_cm": 1,
+      "rotation_deg": 0
+    },
+    "new_development": {
+      "position_cm": 0,
+      "rotation_deg": 1
+    }
+  },
+  "first_target_task_macro_motion": {
+    "train": {
+      "mean_predicted_displacement_cm": 1.0031006950013355,
+      "mean_true_displacement_cm": 1.282389140877021,
+      "signed_tool_axis_residual_cm": [
+        -0.03769215219956517,
+        0.059563877903205165,
+        0.06197939998011967
+      ],
+      "tool_axis_mean_absolute_error_cm": [
+        0.574088434676972,
+        0.6500293144193368,
+        0.7024746323129163
+      ],
+      "position_RMSE_cm": 1.603679867397392,
+      "squared_position_error_cm2": 2.5717891170957166,
+      "sampling_spread_cm2": 0.34966004590353794,
+      "sampling_spread_fraction": 0.13595984351096557,
+      "seed_mean_position_error_cm2": 2.2221290711921773,
+      "global_tool_offset_squared_error_fraction": 0.0034256307609497076,
+      "direction_eligible_weight": 0.9645324905157596,
+      "direction_eligible_observations": 5280,
+      "direction_cosine": 0.37637826212496267,
+      "opposite_direction_fraction": 0.2648153716397265
+    },
+    "new_development": {
+      "mean_predicted_displacement_cm": 1.0387493749459547,
+      "mean_true_displacement_cm": 1.2268812930144997,
+      "signed_tool_axis_residual_cm": [
+        -0.12305314964422803,
+        0.31562926530144375,
+        0.25621820304724374
+      ],
+      "tool_axis_mean_absolute_error_cm": [
+        0.5337096584598839,
+        0.7637056699972568,
+        0.8493357230429511
+      ],
+      "position_RMSE_cm": 1.7697606571295115,
+      "squared_position_error_cm2": 3.1320527835234806,
+      "sampling_spread_cm2": 0.4688809252450807,
+      "sampling_spread_fraction": 0.14970403044025377,
+      "seed_mean_position_error_cm2": 2.6631718582783996,
+      "global_tool_offset_squared_error_fraction": 0.05760173623954509,
+      "direction_eligible_weight": 0.9708333333333333,
+      "direction_eligible_observations": 144,
+      "direction_cosine": 0.19674727058522068,
+      "opposite_direction_fraction": 0.41373390557939915
+    }
+  },
+  "GPU_used": false,
+  "model_loaded": false,
+  "new_training_or_sampling": false,
+  "raw_dataset_read": false,
+  "final25_payloads_read": false,
+  "training_weights_modified": false,
+  "classification": "First-target weakness already present on retained training predictions; new episodes additionally worsen position. Not exclusively a held-out-only failure.",
+  "caveats": [
+    "Different episode counts and environments remain even after matching task weights.",
+    "Same three sampling seeds, not independent training seeds or statistical significance evidence.",
+    "No proof of optimizer/loss bug, missing information or a specific faulty module.",
+    "Historical small-sample fitting weights are different checkpoints; this is not a repeat fitting test.",
+    "Execution success cannot be inferred from offline next-pose errors."
+  ]
+}

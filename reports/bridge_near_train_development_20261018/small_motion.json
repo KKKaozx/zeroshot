@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-18",
+  "model": 207558,
+  "target": 1,
+  "scope": "saved predictions only",
+  "weighting": "Same five task weights; episode equal within task; bin means condition original weights, not new episode rebalance",
+  "metric": "Final sampled XYZ error; squared-distance diagnostic is NOT denoising training loss and excludes quaternion",
+  "threshold_policy": "Post-hoc descriptive fixed centimeter bins, not predeclared acceptance or deployment thresholds",
+  "global_scores": {
+    "train": {
+      "model_position_cm": 1.3063933625586834,
+      "static_position_cm": 1.282389140877022,
+      "model_squared_position_error_cm2": 2.5717891170957174,
+      "static_squared_position_error_cm2": 2.8775060590644586
+    },
+    "new_development": {
+      "model_position_cm": 1.4461413906408724,
+      "static_position_cm": 1.2268812930144997,
+      "model_squared_position_error_cm2": 3.1320527835234806,
+      "static_squared_position_error_cm2": 2.4864305694941153
+    }
+  },
+  "motion_bins": [
+    {
+      "domain": "train",
+      "true_next_displacement_bin_cm": "[0,0.5)",
+      "windows": 520,
+      "task_macro_weight": 0.30436493913792306,
+      "mean_predicted_displacement_cm": 0.878789262207842,
+      "model_position_cm": 0.8674728007082505,
+      "static_position_cm": 0.1519889717767423,
+      "model_squared_position_error_cm2": 1.057798318164154,
+      "static_squared_position_error_cm2": 0.04611924840681532
+    },
+    {
+      "domain": "train",
+      "true_next_displacement_bin_cm": "[0.5,1)",
+      "windows": 317,
+      "task_macro_weight": 0.16373129072987944,
+      "mean_predicted_displacement_cm": 0.746550636231964,
+      "model_position_cm": 0.8271652001012724,
+      "static_position_cm": 0.7600120445973767,
+      "model_squared_position_error_cm2": 0.9871691559123456,
+      "static_squared_position_error_cm2": 0.598130964930005
+    },
+    {
+      "domain": "train",
+      "true_next_displacement_bin_cm": "[1,2)",
+      "windows": 569,
+      "task_macro_weight": 0.29205117680258813,
+      "mean_predicted_displacement_cm": 0.9292602386628704,
+      "model_position_cm": 1.2179602528874236,
+      "static_position_cm": 1.4388125123239495,
+      "model_squared_position_error_cm2": 1.8247214677996277,
+      "static_squared_position_error_cm2": 2.14732729881967
+    },
+    {
+      "domain": "train",
+      "true_next_displacement_bin_cm": "[2,inf)",
+      "windows": 430,
+      "task_macro_weight": 0.23985259332960948,
+      "mean_predicted_displacement_cm": 1.4258874770704761,
+      "model_position_cm": 2.2981844711424047,
+      "static_position_cm": 2.882955638205787,
+      "model_squared_position_error_cm2": 6.484357090757409,
+      "static_squared_position_error_cm2": 8.9155040086529
+    },
+    {
+      "domain": "new_development",
+      "true_next_displacement_bin_cm": "[0,0.5)",
+      "windows": 13,
+      "task_macro_weight": 0.2575,
+      "mean_predicted_displacement_cm": 0.9685724460031363,
+      "model_position_cm": 0.9682397783238788,
+      "static_position_cm": 0.1597790631846576,
+      "model_squared_position_error_cm2": 1.3454183493155527,
+      "static_squared_position_error_cm2": 0.051705676210465665
+    },
+    {
+      "domain": "new_development",
+      "true_next_displacement_bin_cm": "[0.5,1)",
+      "windows": 9,
+      "task_macro_weight": 0.2,
+      "mean_predicted_displacement_cm": 0.8550795878933877,
+      "model_position_cm": 0.877665261249736,
+      "static_position_cm": 0.7662595857580894,
+      "model_squared_position_error_cm2": 1.056213240340247,
+      "static_squared_position_error_cm2": 0.5920325226240498
+    },
+    {
+      "domain": "new_development",
+      "true_next_displacement_bin_cm": "[1,2)",
+      "windows": 18,
+      "task_macro_weight": 0.3541666666666667,
+      "mean_predicted_displacement_cm": 0.8908804894483402,
+      "model_position_cm": 1.3906272548603367,
+      "static_position_cm": 1.366424811836221,
+      "model_squared_position_error_cm2": 2.204550286786545,
+      "static_squared_position_error_cm2": 1.9424501387260467
+    },
+    {
+      "domain": "new_development",
+      "true_next_displacement_bin_cm": "[2,inf)",
+      "windows": 10,
+      "task_macro_weight": 0.18833333333333335,
+      "mean_predicted_displacement_cm": 1.6078188274788443,
+      "model_position_cm": 2.807643058634463,
+      "static_position_cm": 2.912623785314181,
+      "model_squared_position_error_cm2": 9.52346911824659,
+      "static_squared_position_error_cm2": 8.850046526794522
+    }
+  ],
+  "all_windows_retained": true,
+  "GPU_used": false,
+  "model_loaded": false,
+  "training_or_sampling": false,
+  "raw_dataset_read": false,
+  "final25_payloads_read": false,
+  "no_truth_based_deployment_gate": true,
+  "adoption_unchanged": true,
+  "caveats": [
+    "Near-zero measured next displacement does not identify a grasp/release/hold semantic phase.",
+    "Measured displacement does not establish the native commanded motion or its delay.",
+    "Three samples are repeated diffusion draws, not independent training seeds.",
+    "Metric rank reversal does not prove an incorrect training objective or fix generalization."
+  ],
+  "candidate_admitted": false
+}

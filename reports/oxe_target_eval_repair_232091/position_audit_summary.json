@@ -1,0 +1,102 @@
+{
+  "source_job": 232091,
+  "source_training_job": 231297,
+  "raw_files_downloaded_and_verified": true,
+  "raw_files": {
+    "report.json": {
+      "bytes": 247071,
+      "sha256": "c42991b8407d702a0b479aab260789c8ba982e3d3409c7075df339d6e705adfa"
+    },
+    "repair_receipt.json": {
+      "bytes": 259911,
+      "sha256": "b3ffcb9d53e1c2767b3854eb9124e89c72467fd9564cfb371c13cb537cbf13f4"
+    },
+    "predictions_and_targets.npz": {
+      "bytes": 350073,
+      "sha256": "03888bb72002ae3a28a9992ed8da94f5929376427cd5bb1e3e2e543539c78906"
+    }
+  },
+  "raw_file_total_bytes": 857055,
+  "complete_generated_metrics_recomputed_from_npz": true,
+  "all120_labels_masks_roles_order_exact_local_store_match": true,
+  "repair_contract_and_evaluator_sha_match": true,
+  "by_source": {
+    "train": {
+      "Bridge": {
+        "x0_motion_rms_ratio": 0.9607652255941552,
+        "x0_energy_weighted_direction_alignment": -0.0021334038063503436,
+        "x0_between_draw_fraction_of_position_mse": 0.16391410722149932,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 1.6112789970777504,
+        "x0_position_mse_vs_static_ratio": 1.9271692190895715
+      },
+      "Language Table": {
+        "x0_motion_rms_ratio": 1.1500823486959577,
+        "x0_energy_weighted_direction_alignment": 0.007466127886279691,
+        "x0_between_draw_fraction_of_position_mse": 0.0808418821575741,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 2.1191338253364798,
+        "x0_position_mse_vs_static_ratio": 2.3055160849917766
+      },
+      "BC-Z": {
+        "x0_motion_rms_ratio": 1.419226345409134,
+        "x0_energy_weighted_direction_alignment": 0.09241481585288472,
+        "x0_between_draw_fraction_of_position_mse": 0.21891169626895965,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 2.149467793028249,
+        "x0_position_mse_vs_static_ratio": 2.7518883367742712
+      },
+      "Fractal": {
+        "x0_motion_rms_ratio": 1.060452115314169,
+        "x0_energy_weighted_direction_alignment": 0.03189770680403844,
+        "x0_between_draw_fraction_of_position_mse": 0.20920019824724367,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 1.6266014165673197,
+        "x0_position_mse_vs_static_ratio": 2.0569067075662684
+      }
+    },
+    "validation": {
+      "Bridge": {
+        "x0_motion_rms_ratio": 1.0492044488029206,
+        "x0_energy_weighted_direction_alignment": -0.059161799228628506,
+        "x0_between_draw_fraction_of_position_mse": 0.12657788785141919,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 1.9433429066240857,
+        "x0_position_mse_vs_static_ratio": 2.224975621287565
+      },
+      "Language Table": {
+        "x0_motion_rms_ratio": 1.2547600297956831,
+        "x0_energy_weighted_direction_alignment": -0.15741187791884684,
+        "x0_between_draw_fraction_of_position_mse": 0.18645936873442245,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 2.4157690391226097,
+        "x0_position_mse_vs_static_ratio": 2.969450997628157
+      },
+      "BC-Z": {
+        "x0_motion_rms_ratio": 1.2852270761164284,
+        "x0_energy_weighted_direction_alignment": 0.1360392408854679,
+        "x0_between_draw_fraction_of_position_mse": 0.24301733002450093,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 1.7426694903255895,
+        "x0_position_mse_vs_static_ratio": 2.302126005582127
+      },
+      "Fractal": {
+        "x0_motion_rms_ratio": 1.38809471783583,
+        "x0_energy_weighted_direction_alignment": -0.25595278687111545,
+        "x0_between_draw_fraction_of_position_mse": 0.0884756737525093,
+        "x0_three_draw_mean_position_mse_vs_static_ratio": 3.3155606898177026,
+        "x0_position_mse_vs_static_ratio": 3.637380368626043
+      }
+    }
+  },
+  "bridge_x0_validation_first_step_error": 0.2983120231266665,
+  "bridge_static_validation_first_step_error": 0.18745436585973946,
+  "interpretation": [
+    "Overall x0 Bridge motion RMS approaches target scale, while aggregate displacement-direction alignment is weak in both seen-train and validation windows",
+    "Most position MSE remains in the error of the three-draw mean; sampling variability alone does not account for this failure",
+    "Mismatch persists at the first predicted step, so a long future horizon is not the sole observed issue",
+    "These are descriptive finite-sample facts, not proof of a particular encoder/state/optimizer defect"
+  ],
+  "current_architecture_fact": "Frozen DINO/text context is the only pose-denoiser condition; current command/availability goes to gripper head, current XYZ/orientation absent",
+  "old_positive_recipe_fact": "207558/229116 explicitly add a learned projection of current measured9Dpose to context",
+  "proposed_next_hypothesis": "At fixedx0/DINO/data, assess the causal value of current observed end-effector pose with a capacity/mask-matched control; design only",
+  "no_new_training_budget_committed": true,
+  "real_model_calls": 0,
+  "new_sampling_calls": 0,
+  "new_optimization_updates": 0,
+  "uncertainty": "One trainingseed, reused fixed groups,3sampling draws, only8seen-train windows per source; direction alignment is an aggregate energy-weighted statistic",
+  "position_units": "Normalized recorded units; no physical unit/base/TCP calibration supplied"
+}

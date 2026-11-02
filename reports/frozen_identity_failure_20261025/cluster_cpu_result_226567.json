@@ -1,0 +1,29 @@
+{
+  "preflight_reconstruction_matches_legacy_binding": true,
+  "formal_reconstruction_matches_legacy_binding": true,
+  "preflight_reconstruction_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "formal_reconstruction_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "same_named_frozen_tensors": true,
+  "same_key_order": true,
+  "missing_keys_in_formal": [],
+  "extra_keys_in_formal": [],
+  "changed_encoder_tensors": [],
+  "changed_schedule_buffers": [],
+  "other_changed_tensors": [],
+  "normalized_configuration_differences": {},
+  "preflight_tokenizer_matches_binding": true,
+  "formal_tokenizer_matches_binding": true,
+  "formal_tokenizer_mutated_during_model_loading": false,
+  "cpu_capabilities": [
+    "AVX512",
+    "AVX512"
+  ],
+  "classification": "Not reproduced by CPU reconstruction; no repair or guard bypass authorized",
+  "schedule_numeric_differences": {},
+  "scope": "CPU frozen-tensor/config comparison only; no model forward, optimizer or guard changes",
+  "binding_frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "preflight_job_id": "226133",
+  "failed_formal_job": 226378,
+  "guards_or_weights_modified": false,
+  "gpu_requested": false
+}

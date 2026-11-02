@@ -1,0 +1,51 @@
+{
+  "execution_complete": true,
+  "training_updates": 0,
+  "policy_calls": 50,
+  "native_steps": 200,
+  "physical_calibration_verified": false,
+  "formal_scoring_admitted": false,
+  "errors": [],
+  "checkpoint_metadata": {
+    "checkpoint": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_full_capability_234100\\cluster\\final_policy.pt",
+    "base_and_pose_port_restored": true,
+    "source_training_stats_restored": true,
+    "source_report": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_full_capability_234100\\cluster\\report.json",
+    "supplied_mapping_evidence": "User-approved limited engineering trial, following configs/libero_nominal_execution_candidate_20261025.json: assume raw source XYZ meters, coincident world axes/origins and EEF frames/points. These are deliberately uncalibrated assumptions, not measured registrations. Includes absolute-state input as well as relative-action output; may give out-of-distribution source pose features.",
+    "physical_calibration_verified_by_loader": false,
+    "formal_libero_scoring_admitted": false,
+    "source_capability_verified_by_loader": false
+  },
+  "checkpoint_sha256": "03682dc1760973bcc55b2baee1de2762561129d97c86fe495ad5f30734b1c554",
+  "native_goal_initial": false,
+  "initial_state_restores": 1,
+  "stop_reason": "200ticks_or50calls",
+  "native_goal_final": false,
+  "native_goal_any_chunk_end": false,
+  "saturated_native_ticks": 0,
+  "all_calls_pose_port_applied": true,
+  "native_goal_components_final": [
+    {
+      "predicate": [
+        "close",
+        "wooden_cabinet_1_top_region"
+      ],
+      "value": false
+    },
+    {
+      "predicate": [
+        "on",
+        "akita_black_bowl_1",
+        "wooden_cabinet_1_top_side"
+      ],
+      "value": false
+    }
+  ],
+  "final_eef_position_m": [
+    -0.10516813575222034,
+    0.6780511425707203,
+    0.9024811184513413
+  ],
+  "elapsed_seconds": 100.92199999999139,
+  "cuda_max_reserved_gib": 2.15234375
+}

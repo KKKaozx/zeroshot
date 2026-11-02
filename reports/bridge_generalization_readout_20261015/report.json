@@ -1,0 +1,145 @@
+{
+  "complete": true,
+  "source_identity_checks_passed": true,
+  "identical128_40_split": true,
+  "train_only_readout_statistics": true,
+  "no_same_episode_in_readout_cv_fit": true,
+  "fixed_lambda": 1.0,
+  "max_dual_svd_prediction_difference_cm": 6.217248937900877e-14,
+  "summaries": {
+    "train_resubstitution": {
+      "state_only": {
+        "path_position_cm": 5.460013876381559,
+        "endpoint_position_cm": 7.1088112552287175,
+        "episode_equal_position_cm": 5.460013876381559,
+        "episodes": 64,
+        "episodes_better_than_static": 62
+      },
+      "clip_state": {
+        "path_position_cm": 4.629627519877915,
+        "endpoint_position_cm": 6.063659186432191,
+        "episode_equal_position_cm": 4.629627519877916,
+        "episodes": 64,
+        "episodes_better_than_static": 64
+      },
+      "learned_condition_state": {
+        "path_position_cm": 3.356776578197297,
+        "endpoint_position_cm": 4.634042883084048,
+        "episode_equal_position_cm": 3.356776578197297,
+        "episodes": 64,
+        "episodes_better_than_static": 64
+      },
+      "training_task_mean": {
+        "path_position_cm": 8.603733881009127,
+        "endpoint_position_cm": 12.366217425566818,
+        "episode_equal_position_cm": 8.603733881009127,
+        "episodes": 64,
+        "episodes_better_than_static": 48
+      },
+      "no_motion": {
+        "path_position_cm": 8.960284924153353,
+        "endpoint_position_cm": 12.615988871210613,
+        "episode_equal_position_cm": 8.960284924153353,
+        "episodes": 64,
+        "episodes_better_than_static": 0
+      },
+      "existing_final_ddpm100": {
+        "path_position_cm": 0.1688128578934011,
+        "endpoint_position_cm": 0.2174985292224908,
+        "episode_equal_position_cm": 0.1688128578934011,
+        "episodes": 64,
+        "episodes_better_than_static": 64
+      }
+    },
+    "train_episode_excluded_readout": {
+      "state_only": {
+        "path_position_cm": 6.912315768268666,
+        "endpoint_position_cm": 9.113468287360226,
+        "episode_equal_position_cm": 6.912315768268666,
+        "episodes": 64,
+        "episodes_better_than_static": 54
+      },
+      "clip_state": {
+        "path_position_cm": 6.808773278482584,
+        "endpoint_position_cm": 8.993999506745912,
+        "episode_equal_position_cm": 6.808773278482583,
+        "episodes": 64,
+        "episodes_better_than_static": 57
+      },
+      "learned_condition_state": {
+        "path_position_cm": 4.802061223646613,
+        "endpoint_position_cm": 6.694173032414847,
+        "episode_equal_position_cm": 4.802061223646613,
+        "episodes": 64,
+        "episodes_better_than_static": 63
+      },
+      "training_task_mean": {
+        "path_position_cm": 8.77878434278843,
+        "endpoint_position_cm": 12.597417797945011,
+        "episode_equal_position_cm": 8.77878434278843,
+        "episodes": 64,
+        "episodes_better_than_static": 42
+      },
+      "no_motion": {
+        "path_position_cm": 8.960284924153353,
+        "endpoint_position_cm": 12.615988871210613,
+        "episode_equal_position_cm": 8.960284924153353,
+        "episodes": 64,
+        "episodes_better_than_static": 0
+      }
+    },
+    "development": {
+      "state_only": {
+        "path_position_cm": 6.279815835014465,
+        "endpoint_position_cm": 7.908333029307255,
+        "episode_equal_position_cm": 6.124063780009704,
+        "episodes": 10,
+        "episodes_better_than_static": 9
+      },
+      "clip_state": {
+        "path_position_cm": 6.239474230444139,
+        "endpoint_position_cm": 7.654820726699485,
+        "episode_equal_position_cm": 6.132431611221358,
+        "episodes": 10,
+        "episodes_better_than_static": 9
+      },
+      "learned_condition_state": {
+        "path_position_cm": 6.8227599346053704,
+        "endpoint_position_cm": 8.356572648246006,
+        "episode_equal_position_cm": 6.539548563943313,
+        "episodes": 10,
+        "episodes_better_than_static": 9
+      },
+      "training_task_mean": {
+        "path_position_cm": 7.958851671564643,
+        "endpoint_position_cm": 10.389959174123511,
+        "episode_equal_position_cm": 7.654187401657462,
+        "episodes": 10,
+        "episodes_better_than_static": 6
+      },
+      "no_motion": {
+        "path_position_cm": 8.21232607389037,
+        "endpoint_position_cm": 10.565334249436834,
+        "episode_equal_position_cm": 7.9601175966494155,
+        "episodes": 10,
+        "episodes_better_than_static": 0
+      },
+      "existing_final_ddpm100": {
+        "path_position_cm": 8.349126682028293,
+        "endpoint_position_cm": 10.728351441373349,
+        "episode_equal_position_cm": 7.692468140144546,
+        "episodes": 10,
+        "episodes_better_than_static": 5
+      }
+    }
+  },
+  "auxiliary_linear_readouts_solved_on_training_labels": true,
+  "new_neural_training": false,
+  "new_policy_inference": false,
+  "new_clip_encoding": false,
+  "reserved_test_used": false,
+  "physical_rollout": false,
+  "development_used_for_scoring_only": true,
+  "context_cv_is_not_end_to_end_validation": true,
+  "elapsed_seconds": 0.8279999999795109
+}

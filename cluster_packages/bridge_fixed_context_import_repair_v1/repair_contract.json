@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-17",
+  "failed_job": "208926",
+  "successful_preflight": "208897",
+  "failure": "After sys.path prepending inherited input directories, lazy from validate_preflight import validate resolves the expansion directory module, which lacks validate. Failure is before advance8193.",
+  "repair": "Load unchanged fixed_hooks and validator by absolute path; bind that exact validator module only during the unchanged original FixedHooks.fit call. Prevalidate before constructing models. Restore previous module-cache entry after fit.",
+  "original_files_sha256": {
+    "run_fixed_context.py": "e5c52661baa0c2dc1dc390681bde4399706f301979c29a38d760bb9a1ad4d714",
+    "fixed_hooks.py": "5635418bf02f470a5556b216a9d9916157b26d75328d61724b089b5cf1a83cd3",
+    "validate_preflight.py": "2a06b82afbe035d64a31e0ce239bdc1eeeed530f2604c737a45c0fbedcdc318f",
+    "protocol.json": "ff909f9eae31c92c11ef1ab5fd3c7167215ed03680d0a8997639879fa2635d6c",
+    "fit.sh": "164b4f05af3c63829ffef3219a3304a84989652f8e45486701889f6867b79c53"
+  },
+  "experiment_protocol_sha256": "ff909f9eae31c92c11ef1ab5fd3c7167215ed03680d0a8997639879fa2635d6c",
+  "repair_runner_sha256": "a2a9ee50ec57237de1fdcb8a4543484de2e09d21f100e42ec89693e52c156f90",
+  "preserved": [
+    "All old packages/failed output",
+    "Original protocol and preflight validator/thresholds",
+    "Successful preflight208897",
+    "Original context/check/advance/fit function bodies",
+    "8192 model and Adam",
+    "Batches,seeds,Dropout,global clipping,update mask,7978 budget",
+    "Development rows and evaluation gates",
+    "All reserved test data"
+  ],
+  "allowed_retry": "One new formal job only after unchanged full validator passes and failed208926 report verifies no new updates/checkpoints. Never rerun the12-step GPU preflight or8192 prefix.",
+  "limitations": "Local import regression uses a clearly synthetic preflight fixture and stops at advance entry. It does not replace actual cluster report validation or establish generalization."
+}

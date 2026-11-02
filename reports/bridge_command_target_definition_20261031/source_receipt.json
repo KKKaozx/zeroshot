@@ -1,0 +1,44 @@
+{
+  "episode": {
+    "source": "Bridge",
+    "episode_key": "bridge_data_v2-train.tfrecord-00667-of-01024::0",
+    "stage_relative_path": "bridge_v2/bridge_data_v2-train.tfrecord-00667-of-01024",
+    "record_index": 0,
+    "payload_sha256": "5a00e99d952e42d17e67d570d238115b0e56ca97cc060aa7027e293f98a550f7",
+    "payload_offset": 12,
+    "payload_bytes": 1588186,
+    "group_id": "bounded-origin-content-17eb21f2768e1826c249b1215919a92a82323db64a7d527ae0ad886c584b9243",
+    "partition": "train",
+    "steps": 45,
+    "row_offset": 0,
+    "window_first": 0,
+    "window_stop": 11,
+    "observed_dimensions": [
+      "x",
+      "y",
+      "z",
+      "qx",
+      "qy",
+      "qz",
+      "qw",
+      "open_command"
+    ]
+  },
+  "local_source_file": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00667-of-01024",
+  "state_shape": [
+    45,
+    7
+  ],
+  "action_shape": [
+    45,
+    7
+  ],
+  "numeric_archive_sha256": "1999144051b2e36ce6667ce2d57442236b4d3ed8748c1568022135c8e03a435c",
+  "images_decoded": 0,
+  "records_read": 1,
+  "model_calls": 0,
+  "simulations": 0,
+  "training_updates": 0,
+  "source_action_raw_values_not_interpreted_as_native_libero": true,
+  "scope": "New numeric extraction of existing steps/action and current state from one fixed training record; not reopening prior metadata/calibration experiment"
+}

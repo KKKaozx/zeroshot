@@ -1,0 +1,59 @@
+{
+  "full_size_CPU_interface_verified": true,
+  "baseline207558_weights_loaded": false,
+  "local_pretrained_CLIP_loaded": true,
+  "adapter_and_decoder_weights": "Fresh random initialization, NOT trained207558",
+  "GPU_used": false,
+  "optimizer_created": false,
+  "optimization_updates": 0,
+  "checkpoints_saved": false,
+  "raw_dataset_or_holdout_targets_read": false,
+  "synthetic_calibration_image_only": true,
+  "parameters": {
+    "base_trainable": 132309639,
+    "additional_request": 16384,
+    "total_trainable": 132326023
+  },
+  "checks": {
+    "interface_creation_preserves_rng": true,
+    "decoder_not_double_registered": true,
+    "raw_observation_and_token_context_exact": true,
+    "full16_original_diffusion_loss_exact": true,
+    "K1_fullsize100step_output_shape": [
+      1,
+      1,
+      7
+    ],
+    "K1_quaternions_unit": true,
+    "gradient_norms": {
+      "adapter": 9.52581417030975,
+      "decoder": 15.046228591278512,
+      "history": 1.5161071047061327,
+      "state": 0.47168484940572514,
+      "request": 0.44791272738445104
+    },
+    "CLIP_and_gripper_gradients_absent": true,
+    "in_memory_trainable_format_roundtrip": true,
+    "unknown_payload_keys_rejected": true,
+    "all_parameters_unchanged": true
+  },
+  "no_generalization_verdict": true,
+  "no_grasp_capability_claim": true,
+  "pending": [
+    "Actual207558 checkpoint key/config/hash replay on cluster",
+    "All1558 added real observations/labels and frozenCLIP cache input verification",
+    "Numeric eligibility of new validation/final metadata candidates",
+    "Matched batch schedules, freshAdam continuation, and resource preflight on cluster"
+  ],
+  "source_sha256": {
+    "scripts\\check_bridge_prefix_full_interface_20261017.py": "28718c48dbb4546214f2907bad4401869ccdce5bb6cbc89116bea4c7464928bf",
+    "scripts\\bridge_prefix_model_interface_v1.py": "a8939757f2b1dc34efe7e9d779f2ed4900d2a4c1b6ea43803b9653fd3305cd10",
+    "scripts\\bridge_requested_prefix_diffusion_v1.py": "b84770cc9fdece2b86c66fb34b3c7e907bbf8d8681c4a8ca8021919393c172d6",
+    "cluster_packages\\bridge_growth128_v1\\models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "cluster_packages\\bridge_growth128_v1\\adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "cluster_packages\\bridge_growth128_v1\\diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "cluster_packages\\bridge_growth128_v1\\dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "cluster_packages\\bridge_state_conditioning_v1\\state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493"
+  },
+  "elapsed_seconds": 9.65700000000652
+}

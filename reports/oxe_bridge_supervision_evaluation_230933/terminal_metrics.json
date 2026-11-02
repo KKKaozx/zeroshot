@@ -1,0 +1,61 @@
+{
+  "format": "oxe-bridge-supervision-paired-terminal-metrics-v1",
+  "job_id": 230933,
+  "reported_date": "2026-10-28",
+  "evidence_source": "User pasted stdout from standard-library existing report reader after execution_complete and zero-update assertions",
+  "evaluation_complete_reported": true,
+  "optimizer_updates": 0,
+  "primary64": {
+    "mixed": {
+      "windows": 64,
+      "path_position_normalized": 1.4527488103915607,
+      "path_rotation_deg": 17.349917158323997,
+      "endpoint_position_normalized": 2.027401546958955,
+      "endpoint_rotation_deg": 24.374551323784864
+    },
+    "bridge_supervision": {
+      "windows": 64,
+      "path_position_normalized": 1.4107523094371501,
+      "path_rotation_deg": 17.37383010851825,
+      "endpoint_position_normalized": 1.9333942087765679,
+      "endpoint_rotation_deg": 23.970086186213823
+    },
+    "static": {
+      "windows": 64,
+      "path_position_normalized": 1.0241369636028934,
+      "path_rotation_deg": 12.063044075899477,
+      "endpoint_position_normalized": 1.3696822176356824,
+      "endpoint_rotation_deg": 16.297180059569865
+    }
+  },
+  "candidate_minus_mixed": {
+    "path_position_normalized": -0.04199650095441054,
+    "path_rotation_deg": 0.023912950194251437,
+    "endpoint_position_normalized": -0.09400733818238693,
+    "endpoint_rotation_deg": -0.40446513757104086
+  },
+  "paired_validation_group_bootstrap95": {
+    "path_position_normalized": [
+      -0.07507590810154861,
+      -0.009029146656888193
+    ],
+    "path_rotation_deg": [
+      -0.560956779753732,
+      0.6095332786745583
+    ],
+    "endpoint_position_normalized": [
+      -0.15117555871403998,
+      -0.04181891595666546
+    ],
+    "endpoint_rotation_deg": [
+      -1.2610259877196532,
+      0.4276692016042198
+    ]
+  },
+  "units": "Position normalized recorded units (divisor0.1); no new physical calibration",
+  "raw_report_downloaded": false,
+  "raw_predictions_downloaded": false,
+  "independent_prediction_metric_recalculation_done": false,
+  "scope": "64 predeclared reused validation groups, three sampling draws per checkpoint, one training seed; not final LIBERO or cross-task success",
+  "uncertainty_scope": "Validation-group bootstrap excludes training-seed uncertainty"
+}

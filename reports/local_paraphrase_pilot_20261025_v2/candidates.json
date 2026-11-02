@@ -1,0 +1,221 @@
+[
+  {
+    "source": "Bridge",
+    "instruction_id": "012b1057affa6af2bc68b838c7ba54a7843d9a8a906edb0228283fc5dc5be47e",
+    "instruction": "place the metal pot on the back left corner of the table.",
+    "seed": 2944514175,
+    "prompt_sha256": "9f1f3eac45ee4d933cb80f05cb9bae89343fbf8fc9d3892a1a992d1d96806258",
+    "input_tokens": 235,
+    "output_tokens": 81,
+    "seconds": 2.875,
+    "raw_generation": "{\"paraphrases\": [\"Place the metal pot at the back left corner of the table.\", \"At the back left corner of the table, place the metal pot.\", \"The metal pot should be placed at the back left corner of the table.\", \"On the back left corner of the table, put the metal pot.\", \"Put the metal pot in the back left corner of the table.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Place the metal pot at the back left corner of the table.",
+      "At the back left corner of the table, place the metal pot.",
+      "The metal pot should be placed at the back left corner of the table.",
+      "On the back left corner of the table, put the metal pot.",
+      "Put the metal pot in the back left corner of the table."
+    ],
+    "lexical_review_flags": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "Bridge",
+    "instruction_id": "01e79c8c50abeb888cb23f819bf66d13fcd38e9b4d31411fd66b74996c0a0536",
+    "instruction": "put up the blue glass",
+    "seed": 1343414347,
+    "prompt_sha256": "26c1d0d8b26367b57a0cb0ca5be2b1ad0a13085b91874c916d91210d548b4236",
+    "input_tokens": 227,
+    "output_tokens": 47,
+    "seconds": 1.4060000000172295,
+    "raw_generation": "{\"paraphrases\": [\"Place the blue glass in place.\", \"Raise the blue glass.\", \"Position the blue glass upward.\", \"Bring the blue glass to an elevated position.\", \"Ensure the blue glass is positioned above.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Place the blue glass in place.",
+      "Raise the blue glass.",
+      "Position the blue glass upward.",
+      "Bring the blue glass to an elevated position.",
+      "Ensure the blue glass is positioned above."
+    ],
+    "lexical_review_flags": [
+      [],
+      [],
+      [],
+      [],
+      [
+        "direction_or_relation_tokens_changed"
+      ]
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "Language Table",
+    "instruction_id": "0038d818d1b5798ba536039f75cc559a25ad14513d34ce914ed8d8b24f4d5372",
+    "instruction": "place your arm to the bottom right of the red star",
+    "seed": 377778692,
+    "prompt_sha256": "2286ac77dcebaaaa1b51cc87e1908dfa2a6ee80f0d271fe40577c2dc3503fb20",
+    "input_tokens": 233,
+    "output_tokens": 76,
+    "seconds": 2.3119999999762513,
+    "raw_generation": "{\"paraphrases\": [\"Place your arm at the bottom right of the red star.\", \"At the bottom right of the red star, place your arm.\", \"The bottom right of the red star, place your arm.\", \"Place your arm in the bottom right position relative to the red star.\", \"At the bottom right of the red star, position your arm.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Place your arm at the bottom right of the red star.",
+      "At the bottom right of the red star, place your arm.",
+      "The bottom right of the red star, place your arm.",
+      "Place your arm in the bottom right position relative to the red star.",
+      "At the bottom right of the red star, position your arm."
+    ],
+    "lexical_review_flags": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "Language Table",
+    "instruction_id": "004aac2cd87d4ca0d83c8501ed0ec5b03b36806671b7b9ae9bcf9286f167b235",
+    "instruction": "move the red star to left of blue triangle",
+    "seed": 4186667693,
+    "prompt_sha256": "cbf612322355141d2a30419213a12aaa6ac73eb275eab6d76e02f14e0b4a556a",
+    "input_tokens": 231,
+    "output_tokens": 73,
+    "seconds": 2.172000000020489,
+    "raw_generation": "{\"paraphrases\": [\"Move the red star to the left side of the blue triangle.\", \"Shift the red star to the left of the blue triangle.\", \"Position the red star to the left of the blue triangle.\", \"Move the red star to the left of the blue triangle.\", \"Place the red star to the left of the blue triangle.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Move the red star to the left side of the blue triangle.",
+      "Shift the red star to the left of the blue triangle.",
+      "Position the red star to the left of the blue triangle.",
+      "Move the red star to the left of the blue triangle.",
+      "Place the red star to the left of the blue triangle."
+    ],
+    "lexical_review_flags": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "BC-Z",
+    "instruction_id": "02c70cc035d2430cbe5158ec177c136b368e2c853006c9acd73f949372d60e16",
+    "instruction": "place apple in tray",
+    "seed": 1056503473,
+    "prompt_sha256": "cb238c90258f6fbc6bf6a12d5871468e93d605785834d990099561926825fdef",
+    "input_tokens": 226,
+    "output_tokens": 47,
+    "seconds": 1.4070000000065193,
+    "raw_generation": "{\"paraphrases\": [\"Put the apple on the tray.\", \"Place the apple inside the tray.\", \"Move the apple to the tray.\", \"Position the apple on the tray.\", \"Insert the apple into the tray.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Put the apple on the tray.",
+      "Place the apple inside the tray.",
+      "Move the apple to the tray.",
+      "Position the apple on the tray.",
+      "Insert the apple into the tray."
+    ],
+    "lexical_review_flags": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "BC-Z",
+    "instruction_id": "031fdb8f4d91951b3e990beb3441a486757d84aa48b1fec023571add3a479389",
+    "instruction": "place brush in tray",
+    "seed": 1261345781,
+    "prompt_sha256": "36ec04dc53c2e7535ce6bd5251c595ffc85bd26c2713ac16b4f752cd3449807e",
+    "input_tokens": 226,
+    "output_tokens": 47,
+    "seconds": 1.4369999999762513,
+    "raw_generation": "{\"paraphrases\": [\"Place the brush on the tray.\", \"Put the brush in the tray.\", \"Transfer the brush to the tray.\", \"Position the brush within the tray.\", \"Insert the brush into the tray.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Place the brush on the tray.",
+      "Put the brush in the tray.",
+      "Transfer the brush to the tray.",
+      "Position the brush within the tray.",
+      "Insert the brush into the tray."
+    ],
+    "lexical_review_flags": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "Fractal",
+    "instruction_id": "00353f04ee3bd0a3cea97b8d73e4183d5ec0b56e39988ee323f915b130ac33a5",
+    "instruction": "move sponge near rxbar blueberry",
+    "seed": 793747120,
+    "prompt_sha256": "e9435c8058c3b5596dead0caef37f79b635deede78c8b0b28f678a649670ff94",
+    "input_tokens": 229,
+    "output_tokens": 70,
+    "seconds": 2.25,
+    "raw_generation": "{\"paraphrases\": [\"Sponge should be near the rxbar blueberry.\", \"Move the sponge close to the rxbar blueberry.\", \"Near the rxbar blueberry, place the sponge.\", \"The sponge needs to be adjacent to the rxbar blueberry.\", \"Move the sponge to be near the rxbar blueberry.\"]}",
+    "structural_checks_passed": true,
+    "candidates": [
+      "Sponge should be near the rxbar blueberry.",
+      "Move the sponge close to the rxbar blueberry.",
+      "Near the rxbar blueberry, place the sponge.",
+      "The sponge needs to be adjacent to the rxbar blueberry.",
+      "Move the sponge to be near the rxbar blueberry."
+    ],
+    "lexical_review_flags": [
+      [],
+      [
+        "direction_or_relation_tokens_changed"
+      ],
+      [],
+      [
+        "direction_or_relation_tokens_changed"
+      ],
+      []
+    ],
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  },
+  {
+    "source": "Fractal",
+    "instruction_id": "01512104c9189af61035a89c8895ee621c82ff63e39941d931b499ec66659026",
+    "instruction": "move pepsi can near 7up can",
+    "seed": 3187791136,
+    "prompt_sha256": "a14fe286c78e4d295abfe674b601b83cba2dfe83dcc6db8aa172c7c6c986b12c",
+    "input_tokens": 231,
+    "output_tokens": 70,
+    "seconds": 2.625,
+    "raw_generation": "{\"paraphrases\": [\"Bring the Pepsi can close to the 7Up can.\", \"Place the Pepsi can next to the 7Up can.\", \"Move the Pepsi can beside the 7Up can.\", \"Position the Pepsi can near the 7Up can.\", \"Bring the Pepsi can close to the 7Up can.\"]}",
+    "structural_checks_passed": false,
+    "candidates": [],
+    "lexical_review_flags": [],
+    "parse_error": "ValueError: Candidates must be mutually distinct and differ from the original",
+    "semantic_review_status": "pending",
+    "usable_for_training": false
+  }
+]

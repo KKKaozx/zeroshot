@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "Downloaded actual positive effective runner hash exact; four declared hooks compile, training/noise/optimizer/evaluator retained",
+    "All locally received baseline report/history/prediction hashes bound; existing independent baseline verification reused",
+    "Only two fixed-buffer restoration matches entire initial state; learned/other-buffer changes refused; RNG preserved",
+    "Toy saved-positive replay exact and fresh parameter values restored before epsilon activation; no optimizer update",
+    "Reference x0 backward clears gradients, preserves empty Adam state and retains same graph for epsilon backward",
+    "New sources and embedded Python compile; typed A40/LF shell static checks, no bash execution"
+  ],
+  "scope": "CPU synthetic integration/source/hash checks only",
+  "actual_policy_loaded": false,
+  "actual_cuda_calls": 0,
+  "actual_policy_training_updates": 0,
+  "cluster_jobs_submitted": 0,
+  "actual_positive_replay_passed": false,
+  "existing_math_and_sampler_checks_reused_not_rerun": [
+    "197845",
+    "code/check_bridge_prediction_targets.py"
+  ],
+  "baseline_raw_download_verification": "reports/bridge_backbone_pair_a40_229116/download_verification.json"
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "GPU_used": false,
+  "robot_policy_loaded": false,
+  "metric_checks": [
+    "XYZ units",
+    "xyzw sign invariance",
+    "90degree rotation",
+    "episode weighting",
+    "seed errors do not cancel",
+    "invalid quaternion rejected"
+  ],
+  "admission_checks": [
+    "conjunction",
+    "same-six intersection",
+    "window regression rejection"
+  ],
+  "orchestration": "Actual AST update/save/load body,8-update tiny CPU fixture; identical reset/freshAdam arms match",
+  "formal_training_executed": false,
+  "preflight_repeated": false,
+  "generalization_verdict": false
+}

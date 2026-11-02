@@ -1,0 +1,44 @@
+{
+  "complete": true,
+  "episode_records": 5158,
+  "origin_content_groups": 5090,
+  "by_source_episode_counts": {
+    "Bridge": {
+      "train": 329,
+      "test": 38,
+      "validation": 32
+    },
+    "Language Table": {
+      "train": 2741,
+      "test": 355,
+      "validation": 340
+    },
+    "BC-Z": {
+      "train": 518,
+      "test": 50,
+      "validation": 75
+    },
+    "Fractal": {
+      "test": 72,
+      "train": 539,
+      "validation": 69
+    }
+  },
+  "by_role_groups": {
+    "train": 4072,
+    "validation": 509,
+    "test": 509
+  },
+  "by_role_episodes": {
+    "train": 4127,
+    "validation": 516,
+    "test": 515
+  },
+  "all_known_overlap_groups_kept_together": true,
+  "main_training_window_manifest": false,
+  "numeric_labels_or_images_read": false,
+  "new_model_or_training_experiment": false,
+  "source_units_time_eligibility_passed": false,
+  "frozen_role_manifest_sha256": "149c5dece84ad636760acf8a06cc69c367323bdac5a99c7859e4dc08540ea079",
+  "training_ready": false
+}

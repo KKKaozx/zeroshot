@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "scope": "Actual full main architecture local resource probe only",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.11.0+cu128",
+  "cuda_runtime": "12.8",
+  "batch_size": 8,
+  "adapter_layers": 8,
+  "attention_dim": 512,
+  "attention_heads": 8,
+  "full_multiscale_decoder": true,
+  "diffusion_steps": 100,
+  "optimizer_updates": 2,
+  "target_binding": {
+    "format": "oxe-nominal-target-binding-v1",
+    "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+    "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+    "label_family": "nominal_resampled_observed_reached_pose",
+    "clock_basis": "user_selected_published_nominal_frequency_assumption",
+    "target_times_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "source_units_or_formal_training_admitted": false
+  },
+  "source_balanced_replacement": true,
+  "updates": [
+    {
+      "update": 1,
+      "indices": [
+        2408,
+        2604,
+        5117,
+        2177,
+        32594,
+        21431,
+        140896,
+        137989
+      ],
+      "sources": [
+        "tfrecord_bridge_state_action",
+        "tfrecord_bridge_state_action",
+        "tfrecord_bridge_state_action",
+        "tfrecord_bridge_state_action",
+        "tfrecord_bc_z_pose",
+        "tfrecord_language_table_xy",
+        "tfrecord_rt1_pose",
+        "tfrecord_rt1_pose"
+      ],
+      "input_read_seconds": 0.5320000000065193,
+      "optimizer_update_seconds": 0.8900000000139698,
+      "loss": 1.2745215892791748
+    },
+    {
+      "update": 2,
+      "indices": [
+        3459,
+        5492,
+        6503,
+        16476,
+        128520,
+        131593,
+        16582,
+        65649
+      ],
+      "sources": [
+        "tfrecord_bridge_state_action",
+        "tfrecord_bridge_state_action",
+        "tfrecord_bridge_state_action",
+        "tfrecord_language_table_xy",
+        "tfrecord_rt1_pose",
+        "tfrecord_rt1_pose",
+        "tfrecord_language_table_xy",
+        "tfrecord_bc_z_pose"
+      ],
+      "input_read_seconds": 0.2809999999590218,
+      "optimizer_update_seconds": 0.3600000000442378,
+      "loss": 1.7732288837432861
+    }
+  ],
+  "frozen_encoders_unchanged": true,
+  "trainable_parameters": 131521928,
+  "trainable_parameter_bytes": 526087712,
+  "weights_plus_two_adam_moment_bytes": 1578263136,
+  "peak_reserved_gib": 4.380859375,
+  "peak_allocated_gib": 4.242326259613037,
+  "model_load_seconds": 3.1410000000032596,
+  "checkpoint_resume": "covered by main-entry continuous2 versus1+1 route, not repeated here",
+  "local_gpu_rate_is_cluster_estimate": false,
+  "formal_budget_frozen": false,
+  "validation_test_or_libero_examples_read": 0,
+  "new_cluster_jobs": 0,
+  "policy_performance_verdict": null,
+  "trained_resource_weights_saved": false,
+  "formal_training_ready": false
+}

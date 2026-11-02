@@ -1,0 +1,24 @@
+{
+  "checks_passed": true,
+  "actual_RobotAdapterModel_used": true,
+  "backbone": "Local randomly initialized tiny CLIP, not pretrained ViT-L/14",
+  "actual_main_adapter_decoder_and_gripper_code_used": true,
+  "main_image_preprocessing_and_tokenise_reused": true,
+  "direct_vs_callback_max_absolute_difference": 0.0,
+  "complete_learned_state_restore_and_repeat_inference_exact": true,
+  "caller_cpu_rng_preserved": true,
+  "state_dict_unchanged_during_inference": true,
+  "frozen_clip_and_eval_checked": true,
+  "mismatched_scale_horizon_gripper_partial_state_rejected": true,
+  "binary_without_explicit_command_semantics_rejected": true,
+  "training_updates": 0,
+  "physics_steps": 0,
+  "pretrained_downloads": 0,
+  "trained_checkpoint_or_real_task_competence_verified": false,
+  "cuda_path_tested": false,
+  "benchmark_success_claimed": false,
+  "source_sha256": {
+    "code/libero_project_policy.py": "ab5ad439de84a76282e56bacb9397806eb06c5644eb8af8e4a81774a1b2c5b28",
+    "scripts/check_libero_project_policy_20261020.py": "39aa430377b1c4ddc6e5ce58e1d93b5d3b75a8d8774fcbb7bd3256ddfc1ff215"
+  }
+}

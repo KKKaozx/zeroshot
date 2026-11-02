@@ -1,0 +1,68 @@
+{
+  "format": "oxe-bridge-supervision-evaluation-submission-v1",
+  "job_id": 230933,
+  "submission_reported_date": "2026-10-28",
+  "submission_source": "User pasted BRIDGE SUPERVISION REPAIRED stage=evaluate:230933",
+  "submitted_by_agent": false,
+  "status": "terminal_metrics_reported_bounded_diagnostic_closed",
+  "slurm_state_observed": null,
+  "completed_evaluation_draws_observed": 6,
+  "evaluation_complete": true,
+  "actual_optimizer_updates_planned": 0,
+  "source_training_updates_verified_before_submission": 65536,
+  "preflight_reverified_not_retrained": true,
+  "original_failure_profile_comparison": {
+    "passed": true,
+    "same_named_encoder_tensors": true,
+    "same_key_order": true,
+    "changed_keys": [
+      "posterior_mean_x0",
+      "posterior_mean_xt"
+    ],
+    "schedule_numeric_differences": {
+      "posterior_mean_x0": {
+        "max_abs": 7.450580596923828e-09,
+        "unequal_values": 15
+      },
+      "posterior_mean_xt": {
+        "max_abs": 1.1920928955078125e-07,
+        "unequal_values": 14
+      }
+    },
+    "classification": "Exact same known two-buffer initialization variant; archived constants may restore original full identity",
+    "models_constructed": 0,
+    "optimizer_updates": 0,
+    "guard_bypassed": false,
+    "failed_job": 229597,
+    "failure_profile_sha256": "890f6c62696e45917490bfa8f665ee53e6c055ce65618375fb1707ae4f2676a8",
+    "failure_report_sha256": "8a84e90d768583a548007bf0ac35eb6330b177e808cb86893f4272fd40bb47a4",
+    "original_guard_unchanged": true,
+    "evidence_source": "User pasted existing saved-profile comparison at evaluation submission",
+    "local_raw_profiles_downloaded": false,
+    "reported_date": "2026-10-28"
+  },
+  "preflight_job_id": 229577,
+  "training_stage2_job_id": 230276,
+  "groups": [
+    "mixed",
+    "bridge_supervision",
+    "static"
+  ],
+  "fixed_bridge_validation_groups": 64,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "learned_policy_sampled_trajectories_planned": 384,
+  "log_path": "/projects/Zeroshot/logs/oxe-bridge-supervision-repaired-230933.out",
+  "output_directory": "/projects/Zeroshot/runs/oxe-bridge-supervision-eval-230933",
+  "repair_report_directory": "/projects/Zeroshot/runs/oxe-bridge-supervision-repair-230933",
+  "libero_evaluated": false,
+  "generalization_verdict": "Modest position gain after removing other supervision; both remain worse than static on this fixed validation set",
+  "automatic_following_action": false,
+  "sampled_learned_trajectories_observed": 384,
+  "result_log_analysis": "reports/oxe_bridge_supervision_evaluation_230933/log_analysis.json",
+  "result_metrics": "reports/oxe_bridge_supervision_evaluation_230933/terminal_metrics.json",
+  "result_analysis": "reports/oxe_bridge_supervision_evaluation_230933/analysis.json"
+}

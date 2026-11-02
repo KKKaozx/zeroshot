@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "errors": [],
+  "versions": {
+    "torch": "2.5.1+cu118",
+    "transformers": "5.17.0",
+    "tokenizers": "0.23.2",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0",
+    "Pillow": "12.3.0",
+    "numpy": "1.26.4",
+    "opencv-python-headless": "4.6.0.66",
+    "termcolor": "3.3.0",
+    "mujoco": "2.3.7",
+    "robosuite": "1.4.0",
+    "gym": "0.25.2",
+    "bddl": "1.0.1",
+    "easydict": "1.9",
+    "h5py": "3.14.0",
+    "scipy": "1.13.1",
+    "numba": "0.60.0",
+    "PyOpenGL": "3.1.10",
+    "glfw": "2.11.0",
+    "PyYAML": "6.0.2",
+    "matplotlib": "3.8.4"
+  },
+  "origins": {
+    "torch": "/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/__init__.py",
+    "transformers": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/transformers/__init__.py",
+    "tokenizers": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/tokenizers/__init__.py",
+    "huggingface_hub": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/huggingface_hub/__init__.py",
+    "safetensors": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/safetensors/__init__.py",
+    "PIL": "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/PIL/__init__.py"
+  },
+  "parent_reference": {
+    "prefix": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1",
+    "base_prefix": "/projects/Zeroshot/envs/bridge-diffusion",
+    "python": [
+      3,
+      10,
+      21
+    ],
+    "sites": [
+      "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages"
+    ],
+    "versions": {
+      "torch": "2.5.1+cu118",
+      "transformers": "5.17.0",
+      "tokenizers": "0.23.2",
+      "huggingface-hub": "1.33.0",
+      "safetensors": "0.8.0",
+      "Pillow": "12.3.0"
+    },
+    "origins": {
+      "torch": "/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/__init__.py",
+      "transformers": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/transformers/__init__.py",
+      "tokenizers": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/tokenizers/__init__.py",
+      "huggingface_hub": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/huggingface_hub/__init__.py",
+      "safetensors": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/safetensors/__init__.py",
+      "PIL": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/lib/python3.10/site-packages/PIL/__init__.py"
+    },
+    "errors": []
+  },
+  "training_updates": 0,
+  "model_instances": 0,
+  "model_forwards": 0,
+  "physics_steps": 0,
+  "scope": "Full CPU model-entry imports and dependency identity; no native EGL context or task episode",
+  "cuda_initialized": false,
+  "evaluation_protocol_identity": "5156ea881351f156b9d95ba756e6b61434f3fe8a44e199bb52dde9b4c40c3381"
+}

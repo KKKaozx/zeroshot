@@ -1,0 +1,24 @@
+{
+  "verified": true,
+  "report_sha256": "4e3b1e412093152b7db32e2078f1cfc0add149b4061d87e7f97ded173e02c9b5",
+  "protocol_sha256": "f02e37da36f404b65ce81fa731207e308c2d973a3e075177e8aa2bdf64c6e1a3",
+  "source_and_input_identity": true,
+  "selection_recomputed_from_arrays": [
+    {
+      "update": 4,
+      "recomputed_score": 2.549544891078638,
+      "recorded_score": 2.5495719657191973
+    },
+    {
+      "update": 8,
+      "recomputed_score": 1.5678972210167017,
+      "recorded_score": 1.5679122775212029
+    }
+  ],
+  "winner_matches_fixed_rule": true,
+  "no_outer_scores_or_gradient_draws": true,
+  "runtime_observer_replay_exact": true,
+  "runtime_checkpoint_reload_exact": true,
+  "discarded_failed_attempt": "First local attempt stopped before optimization because Torch2.11 initialization was compared against the Torch2.5 cluster hash; both known platform references now pinned.",
+  "limits": "Runtime parameter/Adam equality and deleted transient checkpoint replay are guarded by runner assertions; this saved-array audit does not reconstruct those deleted tensors. No formal training or generalization result."
+}

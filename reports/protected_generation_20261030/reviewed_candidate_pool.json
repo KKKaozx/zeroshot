@@ -1,0 +1,829 @@
+{
+  "format": "reviewed-candidate-pool-not-training-bank-v1",
+  "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+  "scope": "Inventory existing reviewed candidates across two disclosed generation mechanisms; no new generation or filling failed groups",
+  "prior_erratum_applied": true,
+  "instructions": 8,
+  "distinct_text_candidates": 51,
+  "instructions_with_at_least_five": 8,
+  "final_five_per_instruction_selected": false,
+  "training_bank_created": false,
+  "mixed_generation_provenance_disclosed": true,
+  "rows": [
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "original_instruction": "move apple near redbull can",
+      "candidates": [
+        {
+          "candidate": "move the apple close to the red bull can",
+          "candidate_id": "1227781c5136314ad7ba208d07b1324b463b86fd2ce5f657cd16a30c87c85c9a",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 0,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "put the apple in proximity to the red bull can",
+          "candidate_id": "58ed76f67ed71849c36d5949dd057f2907736d739fe72714bfd333afdf967847",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 3,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "shift the apple so it is near the red bull can",
+          "candidate_id": "d19929825bd200812240427cdb6ac95ddff5a77f4c884af1dd91a353ac3a7f40",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 4,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "reposition the apple near the red bull can",
+          "candidate_id": "f59ad02d5e5709c1fa8f37aacc981f581f7d4f78af24aa3187f14529557b6685",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "position the apple in proximity to the red bull can",
+          "candidate_id": "d630e2312fe2837fac8cb02fe3b3295cb06196a931d0a82fd123d4a17785cbd9",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "near the red bull can, place the apple",
+          "candidate_id": "1bfde4539bffc475abb94964e58112fafbf1f0277273bd20120a327941242311",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 6,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "original_instruction": "put the silver pot to the lower right of the burner",
+      "candidates": [
+        {
+          "candidate": "place the silver pot in the lower right position relative to the burner",
+          "candidate_id": "4323ac3b1d32d9bd1ae4ab194a426e527bbed2d66f3fc7957d7988f059c9f30d",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 0,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the silver pot to the lower right side of the burner",
+          "candidate_id": "9842da4f74f7d679a7260ac91dad3b020f46ca64891aaa5fb3d420ea66582f2d",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 1,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "set the silver pot to the lower right of the burner",
+          "candidate_id": "fbfbd6708859f98cbcc0acb4ad3b510de08cf98777c8b4585169b6b1e3829ccc",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 2,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "position the silver pot to the lower right of the burner",
+          "candidate_id": "56e96ca8975d4504b141f224fd40678e71ac674fea7d583236c057ea4fe402c5",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 3,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "put the silver pot at the lower right of the burner",
+          "candidate_id": "caa21c3d6ebd0017ce578de870fbc4b0d33ff5ce12977fb95553532d285060fc",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 4,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the silver pot to the lower right of the burner",
+          "candidate_id": "26edd546efd7088c15c70e21cb2b58558f2ace77cb2f1071c39468e252aeeee4",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "shift the silver pot to the lower right of the burner",
+          "candidate_id": "46664126c251f97aa23f60f971f22c533ee5dfd9c193075d528d8fbbbc136e58",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "reposition the silver pot to the lower right of the burner",
+          "candidate_id": "213a4a86cf93f6cb433e86503829a07421ecdc5a6328079b2961894c2873b57c",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "to the lower right of the burner, place the silver pot",
+          "candidate_id": "f9593d36b0810e7c945cdd30435d9ab24a92513857176c399043203e6c5724f0",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 9,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "original_instruction": "push the green circle closer to the yellow hexagon and blue triangle",
+      "candidates": [
+        {
+          "candidate": "push the green circle so it is closer to the yellow hexagon and the blue triangle",
+          "candidate_id": "3315869114e8a5d00e5b8717554a3620d88efcdddd173df30de4f99247d32835",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 1,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "push the green circle nearer to the yellow hexagon and the blue triangle",
+          "candidate_id": "9fa3570df6eb58f5048a1e84341400b4127d58a007a0eece5b32d22abd72621c",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "push the green circle so that it is nearer to the yellow hexagon and the blue triangle",
+          "candidate_id": "8675afaa9720523e342a559e7021a575ace5909f120cbacbba78b765642cdab8",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "by pushing the green circle, move it closer to the yellow hexagon and the blue triangle",
+          "candidate_id": "824dc4df6db5085adc4925e4e07434556e0ed3a4d5d4e66eab8d72a2a7041844",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "make the green circle nearer to the yellow hexagon and the blue triangle by pushing it",
+          "candidate_id": "54442234195c647b036e0299d23dce9b51ca49d2fc55a9a57afc7a1b5885f86c",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 5,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "original_instruction": "move the yellow object from the table to the top of the drawer",
+      "candidates": [
+        {
+          "candidate": "shift the yellow item from the table to the very top of the drawer",
+          "candidate_id": "f113d3242a3c5f59d9b84053aa0098e5a9c5616d78cb20182bc91fa56af55665",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 4,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "shift the yellow object from the table to the top of the drawer",
+          "candidate_id": "72ac67424c50f8bccb5fec35cc2d5da5b8a2d786101564411a4af086766ab1f1",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "transfer the yellow object from the table to the top of the drawer",
+          "candidate_id": "67cc7d5551bb02cdcc9dda8b3ccf3523b2c16bb888a7ba5a7d298db9a6f0a07b",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "reposition the yellow object from the table to the top of the drawer",
+          "candidate_id": "fdb0faad630d95fca8747361fb8ad787c8a3e58fb1a1e9a5f909616fa0e4268c",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "from the table to the top of the drawer, move the yellow object",
+          "candidate_id": "e3e745c3e0f0cf4b99c58e5fbcd492ae40c73487585f07f351834888afb1b8da",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "from the table to the top of the drawer, shift the yellow object",
+          "candidate_id": "05b3b0488ad12fd934add3f6964ce652bdb66429016f5e3771137664ca4ad290",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 6,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "original_instruction": "move the blue triangle left side of the blue cube",
+      "candidates": [
+        {
+          "candidate": "shift the blue triangle to the left side of the blue cube",
+          "candidate_id": "b31615f190395263b1eb7e051297eddcf290bd2b427563c2925105c64ed85b99",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 0,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "transfer the blue triangle to the left side relative to the blue cube",
+          "candidate_id": "78fc4e93ff6772c6642a02c08d8c771a4ce46372e298c5767ca12d7d6c489122",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 2,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the blue triangle to the left of the blue cube",
+          "candidate_id": "6ab5b9770991f0b6ba09e3f1c9d4dec1a12db21fc298ff3f394d23642b30a9b9",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 3,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "reposition the blue triangle to the left side of the blue cube",
+          "candidate_id": "87a20370b8b89c026fa902c5af559dcf8b7ca06a2ed025d8becf5978c52ce281",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 4,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the blue triangle to the left side of the blue cube",
+          "candidate_id": "ca534d4f9d8788de686b42fb6b8ca28a0202edce171e7942138c9173e1321524",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "position the blue triangle to the left side of the blue cube",
+          "candidate_id": "769344aebca96ecdb5764bf181f525d2154498b23980ef57268c595bd262dc87",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "to the left of the blue cube, place the blue triangle",
+          "candidate_id": "6ffef62060eb6bc0ba4842e058ed2f238cbc18fed27fc2769a65babd4ae13248",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 7,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "original_instruction": "place rxbar blueberry into top drawer",
+      "candidates": [
+        {
+          "candidate": "put the rxbar blueberry inside the top drawer",
+          "candidate_id": "89ba57e70299604970160a9506759f02f774affd415a214697108295d1478fa7",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 0,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the blueberry rxbar into the topmost drawer",
+          "candidate_id": "8c359ca8492f047a4470319b82df173693dc8eec9c731ed01e13a57f87f2f0c1",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 2,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "deposit the blueberry rxbar into the highest drawer",
+          "candidate_id": "bf11344e3f497a35cdaac1de99dcac8a0d3bd7c23770be7cf1b9a8d1e0c4359c",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 4,
+              "mechanism": "7b-json-schema-development"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "put the rxbar blueberry into the top drawer",
+          "candidate_id": "7f40b9a3c5fae10f97660895cd558c11d3d588d09fd3b66ff931fe88a0c6f22d",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "insert the rxbar blueberry into the top drawer",
+          "candidate_id": "6ec889c6bbbb56d1ae31c80872a962185bc7282427a5aa15a26e52f00068d81b",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the rxbar blueberry into the top drawer",
+          "candidate_id": "a3e629aa4727aabe454f9a99070cec2d94fddf13b7c316f37891d1ebbeaf2795",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "deposit the rxbar blueberry into the top drawer",
+          "candidate_id": "a09fc9012f98bb4b0733f55949f1f5579c9901f5658fd52ded1d934dbc7a47de",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "into the top drawer, place the rxbar blueberry",
+          "candidate_id": "cdc615e5d094deb8d5e94c3204f72b5e92de8d0f8854218cf6c86d1467eb6bb1",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 8,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "original_instruction": "place grapes in purple bowl",
+      "candidates": [
+        {
+          "candidate": "put the grapes inside the purple bowl",
+          "candidate_id": "30ee20e479d04ba40bd995981d12f8727d6078e394392270c91ff2ea41772a13",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 0,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "insert the grapes into the purple bowl",
+          "candidate_id": "5617a4446cd9c743e7d9c439acccf6d01a8d43e981cbac900c4462a053bd68ff",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 1,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "move the grapes into the purple bowl",
+          "candidate_id": "a2ce85d50c7fd1ecd427751e3297614989cc8557a8e154de1d64422263b59362",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 2,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "deposit the grapes in the purple bowl",
+          "candidate_id": "4fb1c3ab4f2a972eb0b8d287c69813fd8ac08d27f0071ebb588ad00a08b43c33",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 3,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "into the purple bowl, place the grapes",
+          "candidate_id": "fd0468213c7c6cf041335d0768b002890603e91b98f2766ec0627a45af970b14",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 5,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "original_instruction": "wipe purple bowl with towel",
+      "candidates": [
+        {
+          "candidate": "use a towel to wipe the purple bowl",
+          "candidate_id": "cf54132bb4eac575a5f17ededb329762d60af964aa7d9449c7dba24ed82f05a6",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 0,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 1,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "with a towel, wipe the purple bowl",
+          "candidate_id": "5fcf7446633827fb8fd6a8e9faa9062f26623580a6742fbd22580d1712938e4d",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 3,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 2,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "wipe the purple bowl by using a towel",
+          "candidate_id": "b90c0f94eb1d50787518a5b4fce17135999f140d7df308ddea5133983c5cc959",
+          "provenance": [
+            {
+              "review_path": "reports\\local_7b_qualification_20261030_loopback_repair\\manual_text_review.json",
+              "review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+              "slot": 4,
+              "mechanism": "7b-json-schema-development"
+            },
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 3,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "wipe the purple bowl with a towel",
+          "candidate_id": "775fbbc83c037ef3676584600944b261fb0801c543a8108838b637e74fa42e27",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 0,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        },
+        {
+          "candidate": "the purple bowl should be wiped with a towel",
+          "candidate_id": "b82c49dca8653163eb90fdb61d16c6fcbcfda59e548b35762c7471b1866c1a3b",
+          "provenance": [
+            {
+              "review_path": "reports\\protected_generation_20261030\\manual_text_review.json",
+              "review_sha256": "87d0538ff82b9742578dcd0b43e6cdc0abc25157e5189203ae1a0092fddf24b1",
+              "slot": 4,
+              "mechanism": "7b-protected-gbnf-v1"
+            }
+          ],
+          "usable_for_training": false
+        }
+      ],
+      "distinct_text_accepted": 5,
+      "has_at_least_five": true,
+      "five_selected_for_training": false,
+      "usable_for_training": false
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "execution_complete": true,
+  "training_updates": 0,
+  "policy_calls": 50,
+  "native_steps": 200,
+  "physical_calibration_verified": false,
+  "formal_scoring_admitted": false,
+  "errors": [],
+  "checkpoint_metadata": {
+    "checkpoint": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\patch_readout_239393\\A3_policy\\policy.pt",
+    "checkpoint_sha256": "2f6b177f528718c9ed6934c4f4b5b1c70dd303af64f72b15b33ceb7fd35cd35c",
+    "completed_steps": 10000,
+    "seed": 42,
+    "ema_weights": true,
+    "feature_stats_from_checkpoint": true,
+    "physical_calibration_verified": false,
+    "formal_libero_scoring_admitted": false
+  },
+  "native_goal_initial": false,
+  "initial_state_restores": 1,
+  "initial_eef_position_m": [
+    -0.21948676000062342,
+    0.010772288510524454,
+    1.1660739459034577
+  ],
+  "stop_reason": "200ticks_or50calls",
+  "native_goal_final": false,
+  "native_goal_any_chunk_end": false,
+  "saturated_native_ticks": 0,
+  "calls_with_history": 49,
+  "mean_eef_motion_per_call_m": 0.005523679139988965,
+  "gripper_commands": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "native_goal_components_final": [
+    {
+      "predicate": [
+        "close",
+        "wooden_cabinet_1_top_region"
+      ],
+      "value": false
+    },
+    {
+      "predicate": [
+        "on",
+        "akita_black_bowl_1",
+        "wooden_cabinet_1_top_side"
+      ],
+      "value": false
+    }
+  ],
+  "final_eef_position_m": [
+    -0.2627057946715717,
+    0.12233684905803925,
+    1.41242929685051
+  ],
+  "elapsed_seconds": 50.07799999997951,
+  "cuda_max_reserved_gib": 2.162109375
+}

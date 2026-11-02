@@ -1,0 +1,54 @@
+code/frozen_visual_backbone.py: OK
+cpu_checks.py: OK
+evaluate_local.py: OK
+frozen_encoders.py: OK
+inputs.npz: OK
+inputs_receipt.json: OK
+job.sh: OK
+native_data.py: OK
+native_policy.py: OK
+normalizer.json: OK
+plan.npz: OK
+preparation_reference/prepare_inputs_source.py: OK
+preparation_reference/README.txt: OK
+protocol.json: OK
+README.md: OK
+submit_once.sh: OK
+text_config.json: OK
+train.py: OK
+vendor/adapter.py: OK
+vendor/diffusion_decoder.py: OK
+verify.py: OK
+Loading weights: 100%|██████████| 439/439 [00:00<00:00, 4257.67it/s]
+LIBERO_NATIVE_ENCODING 200 / 1888
+LIBERO_NATIVE_ENCODING 400 / 1888
+LIBERO_NATIVE_ENCODING 600 / 1888
+LIBERO_NATIVE_ENCODING 800 / 1888
+LIBERO_NATIVE_ENCODING 1000 / 1888
+LIBERO_NATIVE_ENCODING 1200 / 1888
+LIBERO_NATIVE_ENCODING 1400 / 1888
+LIBERO_NATIVE_ENCODING 1600 / 1888
+LIBERO_NATIVE_ENCODING 1800 / 1888
+LIBERO_NATIVE_ENCODING 1888 / 1888
+/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at ../aten/src/ATen/native/transformers/cuda/attention_backward.cu:655.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+LIBERO_NATIVE_UPDATE {"update": 1, "loss": 0.3115290105342865, "gradient_norm": 7.9634809494018555, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 2, "loss": 0.4301067292690277, "gradient_norm": 9.272002220153809, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 256, "loss": 0.020448725670576096, "gradient_norm": 0.4376155734062195, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 512, "loss": 0.014930088073015213, "gradient_norm": 0.23120029270648956, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 768, "loss": 0.01714637689292431, "gradient_norm": 0.4079369306564331, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 1024, "loss": 0.006414939649403095, "gradient_norm": 0.14896747469902039, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 1280, "loss": 0.00567279476672411, "gradient_norm": 0.1609729826450348, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 1536, "loss": 0.004045530688017607, "gradient_norm": 0.16400213539600372, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 1792, "loss": 0.0037879932206124067, "gradient_norm": 0.2036590278148651, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 2048, "loss": 0.0032452696468681097, "gradient_norm": 0.2395813763141632, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 2304, "loss": 0.002880641957744956, "gradient_norm": 0.08145885914564133, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 2560, "loss": 0.0031529529951512814, "gradient_norm": 0.12550219893455505, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 2816, "loss": 0.0034153275191783905, "gradient_norm": 0.12991143763065338, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 3072, "loss": 0.0022873952984809875, "gradient_norm": 0.08261294662952423, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 3328, "loss": 0.0015980169409886003, "gradient_norm": 0.0844564139842987, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 3584, "loss": 0.0022073762957006693, "gradient_norm": 0.13354463875293732, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 3840, "loss": 0.0017301326151937246, "gradient_norm": 0.07280389219522476, "lr": 0.0001}
+LIBERO_NATIVE_UPDATE {"update": 4096, "loss": 0.0045343125239014626, "gradient_norm": 0.1422591656446457, "lr": 0.0001}
+LIBERO_NATIVE_SUPERVISED_COMPLETE {"execution_complete": true, "target_supervised": true, "zero_shot": false, "formal_matrix_admitted": false, "optimizer_updates": 4096, "encoder_updates": 0, "original_oxe_weights_loaded": false, "task": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet", "train_demos": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "development_demos": [20, 21, 22, 23, 24], "automatic_rollout": false, "automatic_following_action": false, "errors": [], "new_frames_encoded": 1888, "encoding_seconds": 33.64871302107349, "initial_state_sha256": "43e558ef72f905c237aeaeab0805beddfef578611fff400c2ce8aec0df972430", "final_state_sha256": "f7a36dc0c1fa9b767efc226b562ec4f26dffb2c335af30e71b0099f8ae6a047d", "policy_sha256": "cb79d8333de212aa95810050908dba90e543ccf0f76560e70fc29deb4d824bd8", "metrics": {"train": {"motion6_mse_native_units": 0.0028219580456072192, "train_mean_motion6_mse": 0.05249979970890587, "previous_command_held_motion6_mse": 0.03774865462587324, "draws": 3, "windows": 128, "constant_native_dimensions": [6], "scope": "Offline command error; no task-success admission or checkpoint selection"}, "development": {"motion6_mse_native_units": 0.01166144882864451, "train_mean_motion6_mse": 0.051401504309051466, "previous_command_held_motion6_mse": 0.03705424337718006, "draws": 3, "windows": 128, "constant_native_dimensions": [6], "scope": "Offline command error; no task-success admission or checkpoint selection"}}, "peak_reserved_gib": 5.666015625, "elapsed_seconds": 665.9169721179642, "elapsed_scope": "After CPU admission; includes loading/encoding/training/offline sampling; before final verifier/ZIP", "learned_policy_task_success": null}
+^C

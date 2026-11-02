@@ -1,0 +1,17 @@
+def bcz_first_command_action(position, axis_angle, xyz_residual, axis_angle_residual, target_close):
+    """BC-Z 字段定义：残差分别加到当前位置/轴角，不是四元数相乘。
+
+    只转换第一个原生控制目标，不假定其等于下一帧或具有固定秒数。
+    空间输出仍为当前末端坐标系下的3+4+1维。
+    """
+    position = np.asarray(position, dtype=np.float32).reshape(3)
+    axis_angle = np.asarray(axis_angle, dtype=np.float32).reshape(3)
+    xyz_residual = np.asarray(xyz_residual, dtype=np.float32).reshape(3)
+    angle_residual = np.asarray(axis_angle_residual, dtype=np.float32).reshape(3)
+    if not all(np.isfinite(a).all() for a in (position, axis_angle, xyz_residual, angle_residual)):
+        raise ValueError("BC-Z command contains nonfinite pose values")
+    if float(target_close) not in (0.0, 1.0):
+        raise ValueError("BC-Z first-command diagnostic requires binary target_close")
+    return relative_pose_action(position, rotation_vector_to_quaternion(axis_angle),
+        position + xyz_residual, rotation_vector_to_quaternion(axis_angle + angle_residual),
+        1.0 if float(target_close) == 0 else -1.0)

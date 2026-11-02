@@ -1,0 +1,46 @@
+{
+  "format": "libero-eef-observation-frame-definition-v1",
+  "position_site_name": "gripper0_grip_site",
+  "quaternion_body_name": "robot0_right_hand",
+  "position_site_in_quaternion_body_model_units": [
+    0.0,
+    0.0,
+    0.09700000000000003
+  ],
+  "controller_site_axes_in_quaternion_body_xyzw": [
+    0.0,
+    0.0,
+    -0.7071067811865476,
+    0.7071067811865476
+  ],
+  "fixed_path_names": [
+    "gripper0_right_gripper",
+    "gripper0_eef",
+    "gripper0_grip_site"
+  ],
+  "observation_frame": "origin at position site; axes parallel to quaternion body",
+  "controller_frame": "origin and axes both at position site",
+  "observation_to_controller_orientation": "R_world_site = R_world_observation * R_body_site",
+  "left_relative_rotation_rule": "R_future_site * R_current_site.T = R_future_body * R_current_body.T",
+  "cross_robot_tool_alignment_proven": false,
+  "status": "target_internal_geometry_only_not_cross_robot_registration",
+  "origin_name": "gripper0_grip_site",
+  "axes_name": "robot0_right_hand",
+  "quaternion_order": "xyzw",
+  "quaternion_input_basis": "world",
+  "offset_meaning": "0.097 is hand-body origin to measured grip-site origin; NOT an extra offset to add to robot0_eef_pos",
+  "lengths": "XML model units; existing LIBERO execution convention calls them metres; this proves no Bridge scale",
+  "scope": {
+    "task": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+    "demo": "demo_0",
+    "model_xml_sha256": "2e0924ffc94d7ba7b5f51edcdca35668eb5b790f21c670a372498cf735770e19",
+    "no_other_task_model_or_robot_asserted": true
+  },
+  "installed_source_sha256": {
+    "observation": "d233b1b785e8f88ffb5df1357666b02a397ae930ce98181b079e0496ab35fc57",
+    "controller": "61f99a2daeb4eb6e39bfb996d94c5a5689ef3bc771d030d070193ea56d6a8332",
+    "robot_model": "ac21ce0b004a1ee93cb8b728c00b9c18c38ecabb2dedca370de80602ad26f059"
+  },
+  "source_to_target_mapping_parameters_supplied": false,
+  "physical_correspondence_point_shared_with_bridge": null
+}

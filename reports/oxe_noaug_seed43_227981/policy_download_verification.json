@@ -1,0 +1,23 @@
+{
+  "policy_verified_against_user_report": true,
+  "checks": {
+    "expected_bytes": true,
+    "format": true,
+    "completed_updates": true,
+    "seed43": true,
+    "learned_tensors_match_cluster_report": true,
+    "training_contract_matches_cluster_report": true,
+    "protocol": true,
+    "no_augmentation": true
+  },
+  "policy_bytes": 526910896,
+  "policy_file_sha256": "a190a3ed12702c6c6c8cbdc8436338a77fe81b4310adb5c60d55bb1ac16fca6c",
+  "learned_tensors_sha256": "f032cf513759c267d9e96dd42211a3d327c1e538f4d38d6caff9a0c1704fdecf",
+  "training_contract_sha256": "243800bd3c304728b2ae96a38fd7ccd1e754f7030b160711fc6704acec4db29f",
+  "learned_tensor_count": 321,
+  "small_reports_archive_present": false,
+  "full_update_history_verified": false,
+  "model_forward_calls": 0,
+  "training_updates": 0,
+  "scope": "CPU tensor and contract integrity verification only; report archive not yet available; no generalization verdict"
+}

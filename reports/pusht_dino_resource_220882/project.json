@@ -1,0 +1,51 @@
+{
+  "group": "project",
+  "initial_backend_sha256": "73936e05e8b46d45531cdf8a05cce912250a17d3dfd6b9bbafe324dee72b2e5b",
+  "normalizer_sha256": "c587312123bfb95c527ac4f36cf9c897b27a5959cdb6fcb18686a983b9b6f474",
+  "torch_version": "1.12.1",
+  "gpu": "NVIDIA A40",
+  "precision": "float32",
+  "native_agent_pos_columns": [
+    64,
+    65
+  ],
+  "logical_batch": 64,
+  "microbatch": 8,
+  "accumulation": 8,
+  "updates": 5,
+  "warm_updates": 3,
+  "warm_update_seconds": 1.0887612554555137,
+  "peak_reserved_gib": 7.537109375,
+  "update_seconds": [
+    7.874559910967946,
+    1.0835315361618996,
+    1.0864928201772273,
+    1.089207414072007,
+    1.0905835321173072
+  ],
+  "overall_peak_reserved_gib": 7.65234375,
+  "trainable_parameters": 305159362,
+  "first_gradients_finite_and_nonzero": {
+    "frontend": true,
+    "backend": true,
+    "adapter": true,
+    "projection": true
+  },
+  "losses_resource_only": [
+    1.2746757864952087,
+    4.3667996525764465,
+    2.0405103266239166,
+    1.2986785024404526,
+    1.0703969895839691
+  ],
+  "ema_included_in_update_timing": true,
+  "sampling_ddpm100_seconds_batch2": 0.8652731021866202,
+  "sampling_action_shape": [
+    2,
+    8,
+    2
+  ],
+  "rollout_executed": false,
+  "cache_frontend_state": "fresh random init; no pretrained Push-T or Bridge backend loaded",
+  "note": "Timing/gradient probe, same 64 train windows repeated. Diffusion draws not paired across frontends; no efficacy comparison."
+}

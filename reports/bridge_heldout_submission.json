@@ -1,0 +1,35 @@
+{
+  "job_id": "208005",
+  "date": "2026-10-16",
+  "stage": "failed_old_window_replay_guard",
+  "source": "user_reported_job_id",
+  "slurm_state_verified": true,
+  "report_verified": false,
+  "results_available": false,
+  "training": false,
+  "checkpoint_jobs": [
+    "207558",
+    "207746"
+  ],
+  "episodes": 13,
+  "windows": 60,
+  "old_replay_windows": 4,
+  "protocol_sha256": "ca9cebf05244ea8193e5ff5450a080e21175135f1f57b75ae2ed8b7290641858",
+  "archive_sha256": "403948ac9fa48fddab0b946c135389812e3c16e0fbf68f5242ba06f7ce967ed3",
+  "cluster_output": "/projects/Zeroshot/runs/bridge-heldout-eval-208005",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-heldout-eval-208005.out",
+  "next_step": "Do not rerun208005 or widen tolerance. Submit one small old4window diagnostic; no new13episode scoring until cause is understood.",
+  "slurm_state": "FAILED",
+  "exit_code": "1:0",
+  "elapsed": "00:01:39",
+  "node": "gpu-a6000-1",
+  "failure_evidence": "user_pasted_sacct_and_traceback",
+  "failure": {
+    "model": "coverage",
+    "check": "old4window_prediction_replay",
+    "max_absolute_difference": 0.00011682510375976562,
+    "threshold": 0.0001
+  },
+  "new_holdout_scored": false,
+  "new_holdout_not_scored_evidence": "inferred from frozen source failure position before claim/inference; actual failed report/claim check required in diagnostic"
+}

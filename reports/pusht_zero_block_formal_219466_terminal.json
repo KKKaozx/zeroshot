@@ -1,0 +1,65 @@
+{
+  "job_id": 219466,
+  "recorded_date": "2026-10-23",
+  "basis": "User-pasted original server verifier success plus received ten small artifacts locally checked on 2026-10-23; no local checkpoint bytes",
+  "formal_complete_reported": true,
+  "original_output_verifier_passed": true,
+  "local_artifacts_received": true,
+  "zero_episode_scores_in_seed_order_5000000_to_5000019": [
+    0.6143861271189459,
+    0.9829345029831321,
+    0.0,
+    0.996462320777871,
+    1.0,
+    0.024786251909714698,
+    0.21185540793213478,
+    1.0,
+    0.3734197616245782,
+    0.0027810690949989832,
+    0.13047025800488152,
+    0.0,
+    1.0,
+    0.055403979775830656,
+    0.9492287770893806,
+    0.1957428270133759,
+    0.0,
+    1.0,
+    0.9982757222660006,
+    1.0
+  ],
+  "scores": {
+    "zero_blocks": {
+      "mean_score": 0.5267873502795423,
+      "full_reward_fraction": 0.25
+    },
+    "eight_blocks215999": {
+      "mean_score": 0.44548841481267654,
+      "full_reward_fraction": 0.25
+    },
+    "native212158": {
+      "mean_score": 0.8458782546929152,
+      "full_reward_fraction": 0.5
+    }
+  },
+  "zero_minus_eight_mean_reward": 0.0812989354668657,
+  "paired_episode_bootstrap95": [
+    -0.09334259925729309,
+    0.2548637028909615
+  ],
+  "zero_better_worse_equal": [
+    9,
+    7,
+    4
+  ],
+  "zero_better_criteria_passed": false,
+  "eight_better_criteria_passed": false,
+  "interpretation": "Inconclusive under predeclared criteria; average gain does not establish stable improvement or isolate a unique causal module",
+  "scope": "Reused dev20; one training seed; old8 A6000 and new0 A40; whole attention/FFN stack includes capacity/dropout; fixed language ablation",
+  "automatic_following_action": false,
+  "main_model_replaced": false,
+  "final50_accessed_reported": false,
+  "terminal_arithmetic_recomputed_against_pinned_eight_reference": true,
+  "local_small_output_verification_passed": true,
+  "local_analysis_report": "reports/pusht_zero_analysis_219466_20261023/report.json",
+  "local_checkpoint_bytes_verified": false
+}

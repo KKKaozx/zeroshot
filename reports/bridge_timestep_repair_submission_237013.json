@@ -1,0 +1,75 @@
+{
+  "format": "bridge-timestep-repair-v1r1-submission-v1",
+  "reported_date": "2026-10-31",
+  "job_id": 237013,
+  "submission_source": "User reported BRIDGE TIMESTEP REPAIR V1R1: 237013",
+  "submitted_by_agent": false,
+  "status": "both_arms_closed_raw_results_independently_audited_no_replacement",
+  "slurm_state_independently_observed": null,
+  "runtime_output_received": true,
+  "actual_updates_observed": 16384,
+  "candidate": "deployment/bridge_timestep_repair_v1r1",
+  "package_sha256": "6b8f48da44598ba6f5ebd99b308de0f548cb5501c0b4c1903aeef17f3c587797",
+  "source_job": 234100,
+  "source_checkpoint_sha256": "03682dc1760973bcc55b2baee1de2762561129d97c86fe495ad5f30734b1c554",
+  "planned_arms": [
+    "uniform",
+    "min_snr5_grid_mean_one"
+  ],
+  "planned_updates_per_arm": 8192,
+  "planned_total_updates": 16384,
+  "batch_size": 8,
+  "output_action_dim": 8,
+  "label_family": "nominal_resampled_observed_reached_pose",
+  "target_supervised": false,
+  "zero_shot_transfer_proven": false,
+  "formal_matrix_admitted": false,
+  "slurm_hard_seconds": 7200,
+  "estimated_minutes": [
+    95,
+    110
+  ],
+  "log_path": "/projects/Zeroshot/logs/bridge-timestep-repair-v1r1-237013.out",
+  "output_directory": "/projects/Zeroshot/runs/bridge-timestep-repair-v1r1-237013",
+  "cpu_admission_inferred_from_submit_script_order": true,
+  "cpu_admission_output_independently_received": false,
+  "source_preservation_runtime_verified": false,
+  "automatic_retry_or_extension": false,
+  "automatic_rollout": false,
+  "next_action": "This fixed pair is closed. Preserve originals and separate236840 supervised reference. Source competence and physical OXE-to-LIBERO execution remain unresolved; no automatic additional experiment.",
+  "actual_updates_observed_scope": "Total reported by COMPLETE;34 candidate rows checked; control trace absent; not independent tracing of all16384 updates",
+  "reported_updates_per_arm": 8192,
+  "terminal_audit": "reports/bridge_timestep_repair_237013/terminal_audit.json",
+  "candidate_admitted": false,
+  "raw_results_downloaded": true,
+  "control_basic_capability_result_known": true,
+  "saved_predictions_independently_recomputed": true,
+  "raw_verification_file_received": true,
+  "cluster_full_policy_adam_checked_report_received": true,
+  "full_policy_adam_locally_inspected": false,
+  "control_basic_capability_passed": {
+    "train": false,
+    "validation": false
+  },
+  "min_snr_basic_capability_passed": {
+    "train": false,
+    "validation": false
+  },
+  "selected_replacement_for_original_source": null,
+  "all16384_saved_history_records_checked": true,
+  "actual_noise_tensors_or_full_training_reexecuted": false,
+  "independent_audit": "reports/bridge_timestep_repair_237013/independent_array_audit.json",
+  "raw_package_sha256": "bd7dc60d8323d889794000c5110cddc40eff2eb669c4bbb459e515a02c558dd3",
+  "reported_arm_resources": {
+    "uniform": {
+      "training_seconds": 2705.1963078840636,
+      "train_and_evaluation_seconds": 2777.5882367407903,
+      "peak_reserved_gib": 4.533203125
+    },
+    "min_snr5_grid_mean_one": {
+      "training_seconds": 2704.041196016129,
+      "train_and_evaluation_seconds": 2776.981706696097,
+      "peak_reserved_gib": 4.533203125
+    }
+  }
+}

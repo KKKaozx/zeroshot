@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    "35,933 real training bindings accepted; original text/targets/masks and RNG unchanged",
+    "wrong text/split/group and all augmented uses of unreviewed catalogue rejected",
+    "actual main fixed-update no-augmentation dispatch and one 1+2 resume route match exactly",
+    "new explicit original control matches unchanged disabled path in parameters and forward/noise trace",
+    "original catalogue byte changes rejected on resume before decoded batches",
+    "epoch and fixed-update entries both route the explicit original catalogue"
+  ],
+  "real_catalog_training_windows": 35933,
+  "real_source_payloads_read": false,
+  "real_images_decoded": false,
+  "pretrained_models_loaded": false,
+  "old_52_path_suite_rerun": false,
+  "synthetic_optimizer_updates": 9,
+  "real_policy_optimizer_updates": 0,
+  "physics_steps": 0,
+  "new_cluster_jobs": 0,
+  "formal_training_admitted": false,
+  "catalog_sha256": "37ea692609c7518490abc68908d392d86f3e2fc3b0e92e64fe035d81384c81fe",
+  "code_sha256": {
+    "language_training_conditions.py": "e4f115bdae73c51b567b1e2225c797ebb901f04fb0359273d3f6e76c9c455fa2",
+    "train.py": "74a83ffa2ddfacac905e895f84f03e6fe5337f6e0b04b078d6205aa41a129fa2",
+    "step_training_runner.py": "e626b02d260a494cbf0e3feac8cf9829958ef1f908e569462fd51d4f8bb14874"
+  }
+}

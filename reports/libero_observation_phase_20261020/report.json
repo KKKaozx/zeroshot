@@ -1,0 +1,74 @@
+{
+  "checks_passed": true,
+  "official_generator_sha256": "6ff09687a6ca8cb5df16b828cce2326467099da2b4dd6e5af557644d3e60f37f",
+  "official_generator_line_evidence": {
+    "step": [
+      177
+    ],
+    "save_ee": [
+      203
+    ],
+    "save_image": [
+      220
+    ],
+    "valid_index": [
+      195
+    ]
+  },
+  "observation_phase": "after action at same row",
+  "only_libero_reader_changed": true,
+  "oxe_parsers_unchanged_ast": true,
+  "new_libero_pose_targets_equal_old": true,
+  "engineering_data": "D:\\ntu_related\\dissertation\\dataset\\LIBERO\\libero_90\\KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it_demo.hdf5",
+  "demo": "demo_0",
+  "action_sha256": "a99815b4a83300cff24185a8c2137bb67d2f09394fc43d884418948827ce486e",
+  "native_action_switch_rows": [
+    117,
+    189
+  ],
+  "checked_windows": [
+    {
+      "start": 0,
+      "available_future_rows": 16,
+      "current_command_corrected": false,
+      "future_command_rows_corrected": 0,
+      "old_vs_upright_normalized_image_max_difference": 2.972865343093872
+    },
+    {
+      "start": 116,
+      "available_future_rows": 16,
+      "current_command_corrected": false,
+      "future_command_rows_corrected": 1,
+      "old_vs_upright_normalized_image_max_difference": 2.981567859649658
+    },
+    {
+      "start": 117,
+      "available_future_rows": 16,
+      "current_command_corrected": true,
+      "future_command_rows_corrected": 0,
+      "old_vs_upright_normalized_image_max_difference": 2.981567859649658
+    },
+    {
+      "start": 188,
+      "available_future_rows": 8,
+      "current_command_corrected": false,
+      "future_command_rows_corrected": 1,
+      "old_vs_upright_normalized_image_max_difference": 3.565800666809082
+    },
+    {
+      "start": 189,
+      "available_future_rows": 7,
+      "current_command_corrected": true,
+      "future_command_rows_corrected": 0,
+      "old_vs_upright_normalized_image_max_difference": 3.596811294555664
+    }
+  ],
+  "ambiguous_image_and_neutral_command_rejected": true,
+  "dataset_before_sha256": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+  "dataset_after_sha256": "17471a03f0a93de08463b94ba8f01433d1b72a2d2678560a00460c64221b066b",
+  "model_loaded": false,
+  "simulation_steps": 0,
+  "training_updates": 0,
+  "bridge_root_cause_identified": false,
+  "benchmark_success_claimed": false
+}

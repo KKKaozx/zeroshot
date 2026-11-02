@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": {
+    "original_constructor_restored_after_scope": true,
+    "only_two_constants_written_and_exact_original_guard_passed": true,
+    "original_resume_keeps_completed_counter_and_learning_rate": true,
+    "exact_next_training_model_and_optimizer_match_uninterrupted": true,
+    "exact_rng_continuation_match_uninterrupted": true,
+    "input_checkpoint_bytes_unchanged": true,
+    "original_contract_guard_still_rejects_changed_budget": true
+  },
+  "synthetic_optimizer_updates": 9,
+  "actual_model_forwards": 0,
+  "actual_training_updates": 0,
+  "actual_libero_episodes": 0,
+  "original_training_files_changed": false
+}

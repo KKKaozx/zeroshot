@@ -1,0 +1,39 @@
+{
+  "format": "oxe-bridge-supervision-preflight-terminal-result-v1",
+  "job_id": 229577,
+  "evidence_source": "User pasted cluster receipt and successful verify.py terminal output",
+  "preflight_verified_reported": true,
+  "independent_report_download_verified": false,
+  "completed_updates": 2,
+  "bridge_presentations": 7,
+  "all_presentations": 16,
+  "zero_bridge_steps_retained": 0,
+  "first_reference_replay": {
+    "passed": true,
+    "actual": {
+      "loss": 1.4397112131118774,
+      "pose_loss": 1.2741793394088745,
+      "gripper_loss": 0.6621274948120117,
+      "gradient_norm": 7.065093994140625
+    },
+    "expected": {
+      "loss": 1.4397112131118774,
+      "pose_loss": 1.2741793394088745,
+      "gripper_loss": 0.6621274948120117,
+      "gradient_norm": 7.065093994140625
+    },
+    "optimizer_steps_before_replay": 0,
+    "parameter_versions_unchanged": true,
+    "rng_unchanged": true
+  },
+  "initial_learned_sha256": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+  "gpu": "NVIDIA A40",
+  "peak_reserved_gib": 4.373046875,
+  "elapsed_seconds": 61.302513206377625,
+  "checkpoint_restore_check": "Successful preflight verifier requires actual update1 save/reconstruction/restore/update2 and retained first update history",
+  "generalization_verdict": null,
+  "causal_mixed_source_negative_transfer_proven": false,
+  "formal_training_submitted": false,
+  "submitted_by_agent": false,
+  "next_step": "User submits stage1 with fit 1 229577; script rechecks preflight files, Slurm COMPLETED and free space; fresh initialization, no learned preflight-weight transfer"
+}

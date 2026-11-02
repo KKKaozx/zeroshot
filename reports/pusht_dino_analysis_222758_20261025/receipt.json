@@ -1,0 +1,208 @@
+{
+  "local_small_output_verified": true,
+  "archive_sha256": "fef44ea9b0758213bde28a36b9d5c1906d32b746615aa718cfe05261dd453c2c",
+  "files": {
+    "backbone_binding.json": "e9648adfedea94716b92f3eea396d815e98de8641df2278a77c3774330c38318",
+    "comparison.json": "494ecf5fedc4fa72f987c1327f5bfa061a776216c09b852e946f95d1937c0a86",
+    "development.json": "94dc8cddfa6706e1a4c21975284cd204af9e78bdd4c093c14f99c47cedf164a9",
+    "development_seed_5000000.mp4": "5467b92cdda18fd7433466eebb56c0f513a7753bb6f251a7b7af6ae0a9003ae0",
+    "development_seed_5000001.mp4": "d70bf6a920086848fe6d639926ee7150178025310254716236550110a48c1fb5",
+    "dino_worker.log": "2c93bd787da176737eeb8f925416a0c2373164c23c0331f64bbeffc722517258",
+    "latest.json": "494fbff680dfd0b3a31872b94a26c9628f3688393349ed8175ed613b3727f63f",
+    "report.json": "74dbe92469e2671bebfd2cd2fe6b235a7d19540c4ce5959d615324efed672e85",
+    "updates.jsonl": "665431e504df12f8ce5e71dbc4418b1f4421d74d25e026abc5bfc2d8dc186832"
+  },
+  "second_segment_trace_updates_verified": 42084,
+  "completed_total_updates": 84168,
+  "checkpoint_sha256_report_and_sidecar": "787e51bd7b8bd0d9c648da3abef1c17ada0605d5152afff67d26805ea5861789",
+  "checkpoint_bytes_locally_received": false,
+  "checkpoint_full_hash_verified_by_original_server_validator": true,
+  "comparison": {
+    "scores": {
+      "dino8": {
+        "mean_score": 0.8298577066775906,
+        "full_reward_fraction": 0.35,
+        "reference_competence_gate_passed": false
+      },
+      "clip8_215999": {
+        "mean_score": 0.44548841481267654,
+        "full_reward_fraction": 0.25,
+        "reference_competence_gate_passed": false
+      },
+      "native212158": {
+        "mean_score": 0.8458782546929152,
+        "full_reward_fraction": 0.5,
+        "reference_competence_gate_passed": true
+      }
+    },
+    "dino_minus_clip_mean": 0.3843692918649141,
+    "paired_scene_bootstrap95": [
+      0.2006358682271091,
+      0.5753083376846504
+    ],
+    "dino_better_worse_equal": [
+      12,
+      2,
+      6
+    ],
+    "native_gap_closed_fraction": 0.9599876260093999,
+    "per_scene_gain": [
+      {
+        "environment_seed": 5000000,
+        "dino_minus_clip": 0.04391859326416625
+      },
+      {
+        "environment_seed": 5000001,
+        "dino_minus_clip": 0.0
+      },
+      {
+        "environment_seed": 5000002,
+        "dino_minus_clip": 1.0
+      },
+      {
+        "environment_seed": 5000003,
+        "dino_minus_clip": -0.017733527429956486
+      },
+      {
+        "environment_seed": 5000004,
+        "dino_minus_clip": 0.0
+      },
+      {
+        "environment_seed": 5000005,
+        "dino_minus_clip": 0.7167126572951188
+      },
+      {
+        "environment_seed": 5000006,
+        "dino_minus_clip": 0.0
+      },
+      {
+        "environment_seed": 5000007,
+        "dino_minus_clip": 0.17373313550619196
+      },
+      {
+        "environment_seed": 5000008,
+        "dino_minus_clip": 0.005391015630166196
+      },
+      {
+        "environment_seed": 5000009,
+        "dino_minus_clip": 0.0
+      },
+      {
+        "environment_seed": 5000010,
+        "dino_minus_clip": -0.04978451484419344
+      },
+      {
+        "environment_seed": 5000011,
+        "dino_minus_clip": 0.9418391491086157
+      },
+      {
+        "environment_seed": 5000012,
+        "dino_minus_clip": 0.4658539243480322
+      },
+      {
+        "environment_seed": 5000013,
+        "dino_minus_clip": 0.9427363402827029
+      },
+      {
+        "environment_seed": 5000014,
+        "dino_minus_clip": 0.7063522971733976
+      },
+      {
+        "environment_seed": 5000015,
+        "dino_minus_clip": 0.8284855301553568
+      },
+      {
+        "environment_seed": 5000016,
+        "dino_minus_clip": 0.9301719944974136
+      },
+      {
+        "environment_seed": 5000017,
+        "dino_minus_clip": 0.0
+      },
+      {
+        "environment_seed": 5000018,
+        "dino_minus_clip": 0.0
+      },
+      {
+        "environment_seed": 5000019,
+        "dino_minus_clip": 0.9997092423112691
+      }
+    ],
+    "scope": "Reused dev20, one training seed; original CLIP onA6000 versus DINO onA40. Visual backbone and native representation normalization differ. Scene bootstrap excludes training-seed uncertainty; not final50 or robot grasp success.",
+    "main_clip_model_replaced": false,
+    "final50_accessed": false,
+    "automatic_following_action": false,
+    "interpretation": "Report paired effect size and uncertainty; no automatic extra training, variant or seed"
+  },
+  "videos": [
+    {
+      "model": "CLIP +8",
+      "environment_seed": 5000000,
+      "frames": 300,
+      "fps": 10.0,
+      "max_reward": 0.3637322550695917,
+      "last_reward": 0.0,
+      "bytes": 46305,
+      "sampled_initial_middle_last_decoded": true
+    },
+    {
+      "model": "DINO +8",
+      "environment_seed": 5000000,
+      "frames": 300,
+      "fps": 10.0,
+      "max_reward": 0.407650848333758,
+      "last_reward": 0.1274822279484728,
+      "bytes": 47393,
+      "sampled_initial_middle_last_decoded": true
+    },
+    {
+      "model": "Native",
+      "environment_seed": 5000000,
+      "frames": 185,
+      "fps": 10.0,
+      "max_reward": 1.0,
+      "last_reward": 1.0,
+      "bytes": 29141,
+      "sampled_initial_middle_last_decoded": true
+    },
+    {
+      "model": "CLIP +8",
+      "environment_seed": 5000001,
+      "frames": 97,
+      "fps": 10.0,
+      "max_reward": 1.0,
+      "last_reward": 1.0,
+      "bytes": 15526,
+      "sampled_initial_middle_last_decoded": true
+    },
+    {
+      "model": "DINO +8",
+      "environment_seed": 5000001,
+      "frames": 71,
+      "fps": 10.0,
+      "max_reward": 1.0,
+      "last_reward": 1.0,
+      "bytes": 11920,
+      "sampled_initial_middle_last_decoded": true
+    },
+    {
+      "model": "Native",
+      "environment_seed": 5000001,
+      "frames": 89,
+      "fps": 10.0,
+      "max_reward": 1.0,
+      "last_reward": 1.0,
+      "bytes": 14366,
+      "sampled_initial_middle_last_decoded": true
+    }
+  ],
+  "training_seconds": 51631.453560465015,
+  "elapsed_seconds": 52342.3573707873,
+  "actual_node": "gpu-a40-2",
+  "actual_gpu": "NVIDIA A40",
+  "peak_reserved_gib": 7.572265625,
+  "scope": "Downloaded small outputs and fixed videos only; no model inference, training or environment rollout",
+  "main_clip_model_replaced": false,
+  "final50_accessed": false,
+  "automatic_following_action": false
+}

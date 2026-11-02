@@ -1,0 +1,23 @@
+{
+  "train_windows": 1836,
+  "train_targets": 29376,
+  "training_targets_sha256": "ccbe8a668229eb31384e962bd61104db4cc571e3e8a7c13f76c236cbed95de9c",
+  "xyz_static_squared_sum_mean": 0.9894351904337632,
+  "quaternion_static_squared_sum_mean": 0.027914684966650435,
+  "weight": 35.444970688934426,
+  "quaternion_negative_w_count": 0,
+  "xyz_std": [
+    0.5570206843989384,
+    0.6146067479227708,
+    0.5108798004918726
+  ],
+  "quaternion_std": [
+    0.05905952060637993,
+    0.06517938521704093,
+    0.13708670102045967,
+    0.03188676267893757
+  ],
+  "source_train_npz_sha256": "61ff5b41bd4102b470db230cae60aad9c0a7d19178d66e9339b7005d0929a7ca",
+  "coefficient_selection": "Ratio of train-only static xyz squared-distance sum to quaternion identity-chord squared-distance sum.",
+  "development_targets_or_predictions_used_to_choose_weight": false
+}

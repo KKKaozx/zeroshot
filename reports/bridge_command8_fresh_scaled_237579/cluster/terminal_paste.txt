@@ -1,0 +1,81 @@
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-31 15:10:56.852652: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-10-31 15:11:00.001826: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2026-10-31 15:11:00.017619: W tensorflow/core/common_runtime/gpu/gpu_device.cc:2256] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+Loading weights: 100%|██████████| 439/439 [00:00<00:00, 2831.51it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 450.36it/s]
+[transformers] CLIPTextModel LOAD REPORT from: /projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+BRIDGE_CAPABILITY_UPDATE {"loss": 1.4850263595581055, "pose_loss": 1.280958652496338, "gripper_loss": 0.8162710070610046, "update": 1, "indices": [9132, 3673, 9866, 5910, 3220, 1313, 500, 7126], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 9.51367473602295}
+BRIDGE_CAPABILITY_UPDATE {"loss": 1.207227110862732, "pose_loss": 1.0101982355117798, "gripper_loss": 0.7881155014038086, "update": 2, "indices": [2087, 9164, 5782, 7109, 275, 4611, 8895, 7085], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 9.553884506225586}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.6497453451156616, "pose_loss": 0.495044082403183, "gripper_loss": 0.618804931640625, "update": 256, "indices": [9387, 6737, 2595, 7365, 4209, 8170, 6606, 1115], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.3657320737838745}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.7403138279914856, "pose_loss": 0.5987704992294312, "gripper_loss": 0.566173255443573, "update": 512, "indices": [4049, 22, 3143, 192, 1836, 5207, 2925, 5793], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.218782663345337}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.428355872631073, "pose_loss": 0.3019901514053345, "gripper_loss": 0.5054629445075989, "update": 768, "indices": [8456, 9615, 4100, 7615, 3217, 9334, 8912, 1785], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.0746159553527832}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.8442854881286621, "pose_loss": 0.6956824660301208, "gripper_loss": 0.594412088394165, "update": 1024, "indices": [4369, 1872, 1125, 2705, 10267, 2030, 7577, 5977], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.9546726942062378}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.6789300441741943, "pose_loss": 0.5596403479576111, "gripper_loss": 0.4771587550640106, "update": 1280, "indices": [1009, 9672, 2120, 2669, 1053, 7586, 7488, 1920], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 2.2132370471954346}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.5528564453125, "pose_loss": 0.42147740721702576, "gripper_loss": 0.5255160331726074, "update": 1536, "indices": [5754, 6910, 890, 9727, 1784, 926, 7641, 4519], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.130751132965088}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.3865307867527008, "pose_loss": 0.282068133354187, "gripper_loss": 0.41785064339637756, "update": 1792, "indices": [7898, 2290, 9834, 2183, 2375, 2177, 5690, 7256], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.087281584739685}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.4839838445186615, "pose_loss": 0.3898372948169708, "gripper_loss": 0.3765862286090851, "update": 2048, "indices": [1727, 6118, 5919, 9242, 8348, 6800, 5154, 7616], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.9284344911575317}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.4228248596191406, "pose_loss": 0.31108641624450684, "gripper_loss": 0.44695383310317993, "update": 2304, "indices": [7580, 3939, 1454, 7659, 6969, 5569, 4326, 8210], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.254464864730835}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.5827958583831787, "pose_loss": 0.4643271863460541, "gripper_loss": 0.47387459874153137, "update": 2560, "indices": [8738, 4863, 3772, 9825, 5697, 6975, 4711, 3058], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.1365095376968384}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.44371429085731506, "pose_loss": 0.3377012014389038, "gripper_loss": 0.424052357673645, "update": 2816, "indices": [7414, 5948, 3368, 4110, 9936, 7726, 655, 7705], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.8667845726013184}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.640741229057312, "pose_loss": 0.5516039133071899, "gripper_loss": 0.3565492630004883, "update": 3072, "indices": [5438, 2582, 401, 7615, 4898, 10116, 3653, 3678], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.8711546659469604}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.3858751356601715, "pose_loss": 0.3017306923866272, "gripper_loss": 0.33657780289649963, "update": 3328, "indices": [8715, 2449, 2867, 3163, 6481, 7196, 9786, 270], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.149242639541626}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.3435438871383667, "pose_loss": 0.23825697600841522, "gripper_loss": 0.4211476445198059, "update": 3584, "indices": [456, 3245, 5716, 3536, 9951, 2155, 4007, 1140], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.258009672164917}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.4357244372367859, "pose_loss": 0.3693358302116394, "gripper_loss": 0.26555439829826355, "update": 3840, "indices": [9995, 7856, 6251, 2049, 761, 5692, 6854, 8122], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.1201772689819336}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.28342345356941223, "pose_loss": 0.21502794325351715, "gripper_loss": 0.2735820412635803, "update": 4096, "indices": [1755, 3470, 4560, 3962, 7769, 3488, 7082, 7507], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.7739808559417725}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.3532624840736389, "pose_loss": 0.26004132628440857, "gripper_loss": 0.37288469076156616, "update": 4352, "indices": [4351, 3372, 1936, 8405, 7864, 541, 7444, 7062], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.7623192667961121}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.2515966296195984, "pose_loss": 0.17821647226810455, "gripper_loss": 0.29352065920829773, "update": 4608, "indices": [4174, 6334, 6968, 10055, 9174, 6653, 5267, 8167], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.8166729807853699}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.36197638511657715, "pose_loss": 0.2677331268787384, "gripper_loss": 0.3769730031490326, "update": 4864, "indices": [8762, 54, 5874, 5128, 4603, 7396, 1012, 7935], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.0767263174057007}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.2752618193626404, "pose_loss": 0.22114568948745728, "gripper_loss": 0.21646447479724884, "update": 5120, "indices": [1397, 5517, 9653, 3402, 2659, 4421, 9687, 8435], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.9508564472198486}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.6619600653648376, "pose_loss": 0.5660349130630493, "gripper_loss": 0.38370051980018616, "update": 5376, "indices": [720, 5338, 7283, 6268, 1306, 8814, 7003, 5971], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.7523449659347534}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.5675410032272339, "pose_loss": 0.4705560505390167, "gripper_loss": 0.3879397511482239, "update": 5632, "indices": [2683, 9529, 10063, 8455, 1376, 1875, 8687, 3205], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.2997453212738037}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.6551704406738281, "pose_loss": 0.5920569896697998, "gripper_loss": 0.2524537146091461, "update": 5888, "indices": [4489, 8046, 2316, 7764, 9161, 8555, 2244, 4708], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.1055415868759155}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.36626148223876953, "pose_loss": 0.2924049198627472, "gripper_loss": 0.29542621970176697, "update": 6144, "indices": [2824, 4389, 1004, 528, 2535, 5239, 8220, 9517], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.9019518494606018}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.3296881318092346, "pose_loss": 0.2797439694404602, "gripper_loss": 0.19977669417858124, "update": 6400, "indices": [5668, 4267, 9139, 7758, 7347, 9743, 4617, 4176], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.0170743465423584}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.5155966281890869, "pose_loss": 0.4121708273887634, "gripper_loss": 0.4137030839920044, "update": 6656, "indices": [1659, 6597, 9770, 2837, 3666, 331, 5708, 749], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.0984253883361816}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.5659266710281372, "pose_loss": 0.45911353826522827, "gripper_loss": 0.42725247144699097, "update": 6912, "indices": [10082, 7483, 2598, 6986, 3461, 8992, 1166, 688], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.3056293725967407}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.29737555980682373, "pose_loss": 0.2317672222852707, "gripper_loss": 0.26243332028388977, "update": 7168, "indices": [790, 973, 5047, 3198, 4857, 3176, 1992, 1350], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.7932541966438293}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.41700616478919983, "pose_loss": 0.3488651514053345, "gripper_loss": 0.27256402373313904, "update": 7424, "indices": [3664, 8697, 3490, 4853, 5189, 4714, 3029, 6877], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.150093913078308}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.43187469244003296, "pose_loss": 0.362880676984787, "gripper_loss": 0.2759760022163391, "update": 7680, "indices": [9467, 10238, 9849, 925, 3943, 4773, 2041, 527], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.225696325302124}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.33234211802482605, "pose_loss": 0.22363539040088654, "gripper_loss": 0.43482691049575806, "update": 7936, "indices": [4140, 9264, 1615, 5636, 10152, 58, 4662, 5243], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 1.3018712997436523}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.21089085936546326, "pose_loss": 0.1288541555404663, "gripper_loss": 0.3281467854976654, "update": 8192, "indices": [242, 1768, 8307, 6391, 3733, 3558, 8510, 1558], "lr": [0.0001, 0.0001, 0.0001], "gradient_norm": 0.6087299585342407}
+COMMAND8_FRESH_SCALED_GENERATION train 1101 128
+COMMAND8_FRESH_SCALED_GENERATION train 1102 128
+COMMAND8_FRESH_SCALED_GENERATION train 1103 128
+COMMAND8_FRESH_SCALED_GENERATION validation 1101 64
+COMMAND8_FRESH_SCALED_GENERATION validation 1102 64
+COMMAND8_FRESH_SCALED_GENERATION validation 1103 64
+BRIDGE_COMMAND8_FRESH_SCALED_COMPLETE {"execution_complete": true, "target_supervised": false, "formal_matrix_admitted": false, "zero_shot_transfer_proven": false, "completed_updates": 8192, "encoder_updates": 0, "source_checkpoint_sha256": null, "effective_action_representation": "bridge_controller_increment_pose8_candidate_v1", "source_semantics_status": "Public collector-family hypothesis; exact cached0.0.1 exporter/config not recovered", "automatic_rollout": false, "automatic_following_action": false, "initial_identity": {"base": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b", "pose_port": "7948a6aa3df4da34f2147fa89554b4df5faac1842f7eb518422a179efaf21458"}, "final_identity": {"base": "2feb926fb2f381e5aa6e4c8b35f88af131f6754fe606030fd50c00652d61679a", "pose_port": "33b1d49d2f09b621b7e56edd6e910bc717e6f0d48c79a3f6c66ada35ad7b8045"}, "source_engineering_review_gate_passed": false, "training_seconds": 2690.320553466212, "policy_sha256": "ed06b14ba92cd54ba318ad9072933d71692f515e87f604a1d5c43f4a12166a45", "source_learned_checkpoint_loaded": false, "fresh_learned_initialization": true, "max_current_pose_feature_abs_delta": 0.0, "current_pose_feature_tolerance": 1e-06, "peak_reserved_gib": 4.533203125, "peak_scope": "After construction, includes zero guard/training/evaluation", "program_elapsed_seconds": 2780.4273461811244, "elapsed_scope": "After CPU admission, includes construction/guard/train/sample/policy save, before final verification/ZIP", "constructor_config_scope": "Fresh architecture/frozen restoration template only; effective labels/scaling bound in explicit new contract", "metrics": {"train": {"first_position_normalized": 0.21564401335296546, "first_rotation_deg": 3.446082134563466, "gate": false}, "validation": {"first_position_normalized": 0.2620962215304547, "first_rotation_deg": 3.5454271599719736, "gate": false}}}
+^C

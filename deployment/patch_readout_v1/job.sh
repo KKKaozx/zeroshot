@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=patch-readout
+#SBATCH --partition=cluster02
+#SBATCH --account=msc
+#SBATCH --qos=msc
+#SBATCH --gres=gpu:a40:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=48G
+#SBATCH --time=03:30:00
+#SBATCH --no-requeue
+#SBATCH --chdir=/projects/Zeroshot
+#SBATCH --output=/projects/Zeroshot/logs/patch-readout-%j.out
+# 一次作业：建缓存(若不存在) -> 依次训练5个配置(各≤25分钟训练) -> 每个配置独立报告。
+# 任何一步失败即停止；不自动重提、不加步、不续训。
+set -euo pipefail
+ROOT=/projects/Zeroshot
+PROJECT="$ROOT/envs/multitask-preflight-v1"
+PY="$PROJECT/bin/python"
+export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 USE_TF=0 WANDB_MODE=disabled
+export LD_LIBRARY_PATH="$PROJECT/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+cd "$ROOT/patch_readout_v1"
+CACHE="$ROOT/caches/patch_readout_bridge_dinov2_v1"
+RUNS="$ROOT/runs/patch-readout-${SLURM_JOB_ID}"
+mkdir -p "$ROOT/caches" "$RUNS"
+if [[ ! -e "$CACHE/manifest.json" ]]; then
+  "$PY" -B build_cache.py --root "$ROOT" --backbone dinov2 --out "$CACHE"
+fi
+for CFG in A0_cls_cmd8 A1_patch_cmd8 A2_patch_hist_cmd8 A3_patch_hist_future A4_cls_hist_future; do
+  "$PY" -B train_cached.py --cache "$CACHE" --config "configs/${CFG}.json" --seed 42 \
+      --steps 10000 --batch 64 --time-cap 1500 --out "$RUNS/${CFG}_s42"
+done
+"$PY" -B summarize_runs.py "$RUNS" | tee "$RUNS/summary.txt"
+cd "$RUNS" && tar czf small_results.tgz summary.txt */report.json */history.json */run_config.json
+echo "PATCH_READOUT_ALL_COMPLETE $RUNS"

@@ -1,0 +1,31 @@
+{
+  "format": "libero-nominal-cartesian-execution-candidate-v1",
+  "status": "Engineering convention with explicit uncalibrated source-to-target assumptions",
+  "formal_task_scoring_admitted": false,
+  "constructor_kwargs": {
+    "target_times_seconds": [0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 3.2],
+    "execute_waypoints": 1,
+    "position_scale_meters": 0.1,
+    "timing_evidence": "User-selected published nominal Bridge/LT5Hz, BC-Z10Hz, Fractal3Hz resampled to5Hz; no measured export timestamps. Actual native20Hz checked at execution.",
+    "tcp_mapping_evidence": "Engineering transfer convention: interpret model source-Cartesian deltas at measured LIBERO EEF world pose; source-specific units/base/TCP alignment is not calibrated or proven by this file.",
+    "native_control_hz": 20.0,
+    "image_convention": "opengl",
+    "camera_key": "agentview_image",
+    "output_scales": [0.05, 0.05, 0.05, 0.5, 0.5, 0.5],
+    "action_representation": "source_cartesian_delta_pose_open_positive_v1",
+    "saturation_policy": "bounded_feedback"
+  },
+  "target_reference": "Measured EEF at the actual image observation; fixed within each predicted chunk",
+  "translation_rule": "p_target_world = p_reference_world + 0.1 * predicted_xyz",
+  "orientation_rule": "q_target_world = predicted_left_relative_xyzw * q_reference_world",
+  "execution_rule": "One target over4 native20Hz ticks, measured-pose feedback every tick, then reobserve/replan at nominal5Hz",
+  "arrival_at_target_within_interval_guaranteed": false,
+  "gripper_rule": "Binary open-positive prediction, inverted once for native close-positive command; hold this command during the4 ticks",
+  "initial_gripper_history": "Unknown [0,0] until an explicit command is executed; never threshold sensed finger width into a command",
+  "language_table_training_mask": [1, 1, 0, 0, 0, 0, 0, 0],
+  "shared_metric_units_assumption_verified_for_all_exact_exports": false,
+  "source_to_libero_base_registration_available": false,
+  "source_specific_tcp_registration_available": false,
+  "runtime_native_eef_and_controller_interface_previously_checked": true,
+  "task_success_or_cross_robot_calibration_proven": false
+}

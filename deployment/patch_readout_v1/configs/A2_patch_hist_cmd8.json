@@ -1,0 +1,14 @@
+{
+  "name": "A2_patch_hist_cmd8",
+  "description": "spatial读出+速度/上一命令",
+  "target": "command8",
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "spatial",
+    "history": [
+      "state_delta",
+      "prev_command"
+    ]
+  }
+}

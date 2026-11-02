@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "seed": 42,
+  "stage": 2,
+  "completed_updates": 65536,
+  "full_budget": 65536,
+  "training_protocol_sha256": "297e03087cf4efaf61b476b84b046404565014984d32c0d777a03b62fada51be",
+  "peak_reserved_gib": 4.626953125,
+  "elapsed_seconds": 10218.378305773716,
+  "libero_evaluated": false,
+  "generalization_verdict": null,
+  "policy_export": {
+    "passed": true,
+    "completed_updates": 65536,
+    "all_learned_tensors_preserved_sha256": "2295d8add3e735a7340eb8e244fbc1d4b6abc09d95692120fde1573303abd66d",
+    "policy_file": "/projects/_ssd/Zeroshot/runs/oxe-dino-noaug-s42/final_policy.pt",
+    "policy_bytes": 526910896,
+    "training_contract_sha256": "b3b59ab65e0c422d5de774630749bc27afb943edf4fdfd854a2a3cd96daf76fc",
+    "full_checkpoint_before_compaction_bytes": 1596160066,
+    "full_optimizer_state_discarded": true,
+    "generalization_verdict": null
+  }
+}

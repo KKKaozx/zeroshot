@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "tiny_cpu_parameters": 32,
+  "project_model_executed": false,
+  "gpu_used": false,
+  "actual_mask_and_hash_hooks_used": true,
+  "train_dropout_preserved": true,
+  "first_decoder_update_exact": true,
+  "clipping_active_in_probe": true,
+  "context_gradients_nonzero_but_parameters_and_adam_unchanged": true,
+  "masked_adam_continuation_repeated_exact": true,
+  "serialization_roundtrip_exact": true,
+  "tiny_checkpoint_removed": true,
+  "source_compilation_passed": true,
+  "clip_mask_step_callback_order_correct": true,
+  "original_prefix_training_removed": true,
+  "closure_schedule_replacement_checked": true,
+  "frozen_protocol_sha256": "ff909f9eae31c92c11ef1ab5fd3c7167215ed03680d0a8997639879fa2635d6c",
+  "entry_sha256": "48d3d4eae2a039853dfcd59853de98b61c775d12422cf46bc911f629b91dc693",
+  "torch_version": "2.11.0+cu128"
+}

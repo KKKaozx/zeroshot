@@ -1,0 +1,72 @@
+STATE_PAIR_START preflight legacy
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791892837.331827   54040 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791892839.691333   54040 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]
+Loading weights:   7%|▋         | 39/590 [00:00<00:01, 382.35it/s]
+Loading weights:  13%|█▎        | 78/590 [00:00<00:02, 251.71it/s]
+Loading weights:  18%|█▊        | 106/590 [00:00<00:02, 194.09it/s]
+Loading weights:  23%|██▎       | 133/590 [00:00<00:02, 213.54it/s]
+Loading weights:  27%|██▋       | 157/590 [00:00<00:02, 207.07it/s]
+Loading weights:  30%|███       | 179/590 [00:00<00:02, 169.23it/s]
+Loading weights: 100%|██████████| 590/590 [00:00<00:00, 605.13it/s]
+LATE_LR_MONITOR common 0 train position_mm 138.4144115447998 rotation 139.5875701904297
+D:\miniconda\envs\zeroshot-gpu\lib\site-packages\torch\autograd\graph.py:869: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:902.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+LATE_LR_UPDATE common 1 / 16 loss 0.4893696904182434
+LATE_LR_MONITOR common 16 train position_mm 104.36736106872559 rotation 18.365209579467773
+LATE_LR_UPDATE constant 17 / 32 loss 0.23370221257209778
+LATE_LR_MONITOR constant 32 train position_mm 111.27312660217285 rotation 23.0684814453125
+LATE_LR_FINAL constant train_mm 111.27312660217285 gate False
+LATE_LR_UPDATE restore_same_lr 17 / 32 loss 0.23370221257209778
+LATE_LR_MONITOR restore_same_lr 32 train position_mm 111.27312660217285 rotation 23.0684814453125
+LATE_LR_FINAL restore_same_lr train_mm 111.27312660217285 gate False
+LATE_LR_UPDATE reduced 17 / 32 loss 0.23370221257209778
+LATE_LR_MONITOR reduced 32 train position_mm 95.78086853027344 rotation 13.477869987487793
+LATE_LR_FINAL reduced train_mm 95.78086853027344 gate False
+LATE_LR_REPORT reports\bridge_state_local_preflight_20261013\legacy\report.json
+STATE_PAIR_START preflight zero
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791893112.410337   47352 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791893114.803732   47352 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]
+Loading weights:  13%|█▎        | 75/590 [00:00<00:00, 742.58it/s]
+Loading weights:  25%|██▌       | 150/590 [00:00<00:01, 363.56it/s]
+Loading weights:  33%|███▎      | 197/590 [00:00<00:01, 346.26it/s]
+Loading weights:  40%|████      | 237/590 [00:00<00:01, 324.30it/s]
+Loading weights:  46%|████▋     | 273/590 [00:00<00:01, 311.18it/s]
+Loading weights: 100%|██████████| 590/590 [00:00<00:00, 700.71it/s]
+LATE_LR_MONITOR common 0 train position_mm 138.4144115447998 rotation 139.5875701904297
+D:\miniconda\envs\zeroshot-gpu\lib\site-packages\torch\autograd\graph.py:869: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:902.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+LATE_LR_UPDATE common 1 / 16 loss 0.4893696904182434
+LATE_LR_MONITOR common 16 train position_mm 104.36767578125 rotation 18.365150451660156
+LATE_LR_UPDATE constant 17 / 32 loss 0.23370400071144104
+LATE_LR_MONITOR constant 32 train position_mm 111.27354621887207 rotation 23.06939125061035
+LATE_LR_FINAL constant train_mm 111.27354621887207 gate False
+LATE_LR_UPDATE restore_same_lr 17 / 32 loss 0.23370400071144104
+LATE_LR_MONITOR restore_same_lr 32 train position_mm 111.27354621887207 rotation 23.06939125061035
+LATE_LR_FINAL restore_same_lr train_mm 111.27354621887207 gate False
+LATE_LR_UPDATE reduced 17 / 32 loss 0.23370400071144104
+LATE_LR_MONITOR reduced 32 train position_mm 95.78080177307129 rotation 13.477463722229004
+LATE_LR_FINAL reduced train_mm 95.78080177307129 gate False
+LATE_LR_REPORT reports\bridge_state_local_preflight_20261013\zero\report.json
+STATE_PAIR_START preflight real
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791893408.846200   36492 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791893412.750208   36492 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]
+Loading weights:   7%|▋         | 44/590 [00:00<00:01, 423.07it/s]
+Loading weights:  15%|█▍        | 87/590 [00:00<00:01, 338.84it/s]
+Loading weights:  21%|██        | 122/590 [00:00<00:01, 322.80it/s]
+Loading weights:  28%|██▊       | 168/590 [00:00<00:01, 369.17it/s]
+Loading weights:  35%|███▍      | 206/590 [00:00<00:01, 311.01it/s]
+Loading weights:  41%|████      | 239/590 [00:00<00:01, 307.68it/s]
+Loading weights:  46%|████▌     | 271/590 [00:00<00:01, 258.02it/s]
+Loading weights: 100%|██████████| 590/590 [00:00<00:00, 633.05it/s]

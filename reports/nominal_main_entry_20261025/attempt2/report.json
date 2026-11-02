@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "real_window_image_target_checks": [
+    {
+      "source": "Bridge",
+      "window": 0,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "Bridge",
+      "window": 10,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "Language Table",
+      "window": 10352,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "Language Table",
+      "window": 10354,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "BC-Z",
+      "window": 22566,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "BC-Z",
+      "window": 22587,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "Fractal",
+      "window": 118362,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    },
+    {
+      "source": "Fractal",
+      "window": 118378,
+      "actual_image_decoded": true,
+      "targets_masks_inputs_exact": true
+    }
+  ],
+  "bound_train_windows": 145812,
+  "target_binding": {
+    "format": "oxe-nominal-target-binding-v1",
+    "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+    "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+    "label_family": "nominal_resampled_observed_reached_pose",
+    "clock_basis": "user_selected_published_nominal_frequency_assumption",
+    "target_times_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "source_units_or_formal_training_admitted": false
+  },
+  "main_prepare_only_entry_checked": true,
+  "actual_pretrained_dino_and_clip_text": true,
+  "reduced_adapter_full_multiscale_decoder": true,
+  "bounded_continuous2_versus_resumed1_plus1_all_checkpoint_fields_exact": true,
+  "long_or_unqualified_formal_nominal_training_rejected": true,
+  "optimizer_updates_executed": 4,
+  "validation_test_or_libero_numeric_examples_read": 0,
+  "validation_loss_or_success_score_generated": false,
+  "frozen_encoders_unchanged": true,
+  "peak_reserved_gib": 3.232421875,
+  "formal_eight_layer_resources_qualified": false,
+  "formal_training_jobs_submitted": 0,
+  "generalization_verdict": null,
+  "elapsed_seconds": 213.65599999995902
+}

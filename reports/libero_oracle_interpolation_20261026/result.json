@@ -1,0 +1,40 @@
+{
+  "execution_complete": true,
+  "comparability_checks": {
+    "same5hz_oracle_pose_row_indices": true,
+    "same_actual_native_gripper_commands": true,
+    "same_native_budget_and_initial_state_restore": true,
+    "no_midtrajectory_corrections": true,
+    "main_executor_and_geometry_unchanged": true
+  },
+  "old_5hz_exact_gripper_success": false,
+  "interpolated_5hz_exact_gripper_success": false,
+  "interpolated_final_components": [
+    {
+      "predicate": [
+        "close",
+        "wooden_cabinet_1_top_region"
+      ],
+      "value": false
+    },
+    {
+      "predicate": [
+        "on",
+        "akita_black_bowl_1",
+        "wooden_cabinet_1_top_side"
+      ],
+      "value": true
+    }
+  ],
+  "old_mean_path_position_error_mm": 11.128105363836506,
+  "interpolated_mean_path_position_error_mm": 30.542639420802,
+  "old_max_path_position_error_mm": 27.865147768328598,
+  "interpolated_max_path_position_error_mm": 67.96917166479314,
+  "real_control_ticks_this_condition": 200,
+  "wall_seconds": 18.21799999999348,
+  "learning_models": 0,
+  "new_training_updates": 0,
+  "formal40_task_episodes": 0,
+  "decision": "This one measured-start linear/Slerp interpolation does not restore drawer closure; stop this control, do not tune gains or claim interpolation is a fix",
+  "limit": "Does not prove5Hz information is universally insufficient or20Hz retraining necessary; all results from one excluded engineering demo"
+}

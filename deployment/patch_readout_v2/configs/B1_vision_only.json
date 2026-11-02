@@ -1,0 +1,14 @@
+{
+  "name": "B1_vision_only",
+  "description": "去掉pose18、夹爪状态、上一命令；只看画面+语言",
+  "target": "future_pose",
+  "augment": false,
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "spatial",
+    "use_pose18": false,
+    "use_current2": false,
+    "history": []
+  }
+}

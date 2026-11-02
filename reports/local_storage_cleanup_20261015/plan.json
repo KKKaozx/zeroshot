@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-15",
+  "authorized_by": "User explicitly requested deletion of files judged disposable after reviewing candidate inventory.",
+  "root": "D:\\ntu_related\\dissertation\\Zero_shot",
+  "inventory_sha256": "8a8c47a3ff221dba1c3547f84e7c38b5f0cf4ea5fd28ce8c28aa369583abc690",
+  "deleted_files": 0,
+  "free_bytes_before": 70181257216,
+  "expected_freed_bytes": 13504562033,
+  "targets": [
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_balanced_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_balanced_fit_v1/latest.pt",
+      "bytes": 28519981,
+      "mtime_ns": 1790928417982281400,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_balanced_fit_v1\\best.pt",
+        "relative_path": "results/bcz_balanced_fit_v1/best.pt",
+        "bytes": 28519785,
+        "mtime_ns": 1790928418007279900,
+        "category": "retained best checkpoint",
+        "sha256": "47178eaefa9ef1115185eac9dca76d10359c47fa399bfc54ae9f012a8e43af74"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_cls_regression_fit_control_v1\\latest.pt",
+      "relative_path": "results/bcz_cls_regression_fit_control_v1/latest.pt",
+      "bytes": 649942357,
+      "mtime_ns": 1790875375876848600,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_cls_regression_fit_control_v1\\best.pt",
+        "relative_path": "results/bcz_cls_regression_fit_control_v1/best.pt",
+        "bytes": 649913073,
+        "mtime_ns": 1790875376360845200,
+        "category": "retained best checkpoint",
+        "sha256": "beaabda66b2f793155b326fdc9295b6868cff4cdc616f1e57fe7e3fb56ab75a3"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_first_command_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_first_command_fit_v1/latest.pt",
+      "bytes": 649572437,
+      "mtime_ns": 1790923377895628600,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_first_command_fit_v1\\best.pt",
+        "relative_path": "results/bcz_first_command_fit_v1/best.pt",
+        "bytes": 649543345,
+        "mtime_ns": 1790923378381623600,
+        "category": "retained best checkpoint",
+        "sha256": "49b377bcbc07d6a511be934246432cbc912168c6546e45ea5730d541a72b6fb6"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_first_command_pilot_v1\\latest.pt",
+      "relative_path": "results/bcz_first_command_pilot_v1/latest.pt",
+      "bytes": 649590357,
+      "mtime_ns": 1790924978849904200,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_first_command_pilot_v1\\best.pt",
+        "relative_path": "results/bcz_first_command_pilot_v1/best.pt",
+        "bytes": 649561265,
+        "mtime_ns": 1790924979336903600,
+        "category": "retained best checkpoint",
+        "sha256": "f03513ecc457e4b62efac5e9acba9c8a0cf49cfd5bac4380b3a38b883ea6108f"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_fusion_adapter_v1\\latest.pt",
+      "relative_path": "results/bcz_fusion_adapter_v1/latest.pt",
+      "bytes": 649593301,
+      "mtime_ns": 1790926349104584600,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_fusion_adapter_v1\\best.pt",
+        "relative_path": "results/bcz_fusion_adapter_v1/best.pt",
+        "bytes": 649564209,
+        "mtime_ns": 1790926349579587300,
+        "category": "retained best checkpoint",
+        "sha256": "a4976be6eeeef5155c9f4307d91aecd9028a5365c67b371be136a4a9957c8e9b"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_fusion_simple_v1\\latest.pt",
+      "relative_path": "results/bcz_fusion_simple_v1/latest.pt",
+      "bytes": 28534893,
+      "mtime_ns": 1790926642894817200,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_fusion_simple_v1\\best.pt",
+        "relative_path": "results/bcz_fusion_simple_v1/best.pt",
+        "bytes": 28534697,
+        "mtime_ns": 1790926642921817700,
+        "category": "retained best checkpoint",
+        "sha256": "6c265ba0434e740fc50cb230b56f13641dad560145e3be6e66b836384e77633c"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_generalization_regression_v1\\latest.pt",
+      "relative_path": "results/bcz_generalization_regression_v1/latest.pt",
+      "bytes": 649960725,
+      "mtime_ns": 1790872354934675000,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_generalization_regression_v1\\best.pt",
+        "relative_path": "results/bcz_generalization_regression_v1/best.pt",
+        "bytes": 649930929,
+        "mtime_ns": 1790872170193843700,
+        "category": "retained best checkpoint",
+        "sha256": "38848eb703ca598e0d9b50e2adc61625f3377b1610eafd921946f03a71f1af40"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_generalization_x0_v1\\latest.pt",
+      "relative_path": "results/bcz_generalization_x0_v1/latest.pt",
+      "bytes": 719947237,
+      "mtime_ns": 1790873210765680900,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_generalization_x0_v1\\best.pt",
+        "relative_path": "results/bcz_generalization_x0_v1/best.pt",
+        "bytes": 719906913,
+        "mtime_ns": 1790872934357591300,
+        "category": "retained best checkpoint",
+        "sha256": "22f2293bead7aad0a6eb41caaefeb565e92a5018e5418177dc33d5de35253a17"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_legacy_400_v1\\latest.pt",
+      "relative_path": "results/bcz_gripper_head_legacy_400_v1/latest.pt",
+      "bytes": 11748413,
+      "mtime_ns": 1790935118829416100,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_legacy_400_v1\\best.pt",
+        "relative_path": "results/bcz_gripper_head_legacy_400_v1/best.pt",
+        "bytes": 11748289,
+        "mtime_ns": 1790935118842412800,
+        "category": "retained best checkpoint",
+        "sha256": "2497362f7cd44192ba1ba68b50dc934667c94caf5b13decd97a949fc7d4601ee"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_legacy_v1\\latest.pt",
+      "relative_path": "results/bcz_gripper_head_legacy_v1/latest.pt",
+      "bytes": 11742077,
+      "mtime_ns": 1790934648800674900,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_legacy_v1\\best.pt",
+        "relative_path": "results/bcz_gripper_head_legacy_v1/best.pt",
+        "bytes": 11741953,
+        "mtime_ns": 1790934648812674600,
+        "category": "retained best checkpoint",
+        "sha256": "dff3ee432b43f5edb17c6a8c81f66e5956e6d2637c8b9229b55c522f99b59651"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_mlp2_400_v1\\latest.pt",
+      "relative_path": "results/bcz_gripper_head_mlp2_400_v1/latest.pt",
+      "bytes": 13331133,
+      "mtime_ns": 1790935278322164700,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_mlp2_400_v1\\best.pt",
+        "relative_path": "results/bcz_gripper_head_mlp2_400_v1/best.pt",
+        "bytes": 13330977,
+        "mtime_ns": 1790935278338163200,
+        "category": "retained best checkpoint",
+        "sha256": "7b6407a8919ccd36e70f14c45023c1ae7c55b94ab3582fde86578e6a82161783"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_mlp2_v1\\latest.pt",
+      "relative_path": "results/bcz_gripper_head_mlp2_v1/latest.pt",
+      "bytes": 13324797,
+      "mtime_ns": 1790934722062878900,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_head_mlp2_v1\\best.pt",
+        "relative_path": "results/bcz_gripper_head_mlp2_v1/best.pt",
+        "bytes": 13324641,
+        "mtime_ns": 1790934722077881400,
+        "category": "retained best checkpoint",
+        "sha256": "ad5b9fd71f1e9eb6f3534803b47d9020cf5a66fed765271f0211d5b2100cec26"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_only_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_gripper_only_fit_v1/latest.pt",
+      "bytes": 11740861,
+      "mtime_ns": 1790933868936338800,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_gripper_only_fit_v1\\best.pt",
+        "relative_path": "results/bcz_gripper_only_fit_v1/best.pt",
+        "bytes": 11740737,
+        "mtime_ns": 1790933868949338400,
+        "category": "retained best checkpoint",
+        "sha256": "06ff6fa409a1c51bece2fa04d932ef95986762e8108ef6c8e164d2668e14274f"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_adapter_fit_lr_low_v1\\latest.pt",
+      "relative_path": "results/bcz_native_adapter_fit_lr_low_v1/latest.pt",
+      "bytes": 651385765,
+      "mtime_ns": 1790943745778567600,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_adapter_fit_lr_low_v1\\best.pt",
+        "relative_path": "results/bcz_native_adapter_fit_lr_low_v1/best.pt",
+        "bytes": 651355873,
+        "mtime_ns": 1790943746296567500,
+        "category": "retained best checkpoint",
+        "sha256": "8a2141ae4b23dc8a9807ce055498ea8f4afea9fc3268025469b04b08610b410a"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_adapter_fit_lr_split_v1\\latest.pt",
+      "relative_path": "results/bcz_native_adapter_fit_lr_split_v1/latest.pt",
+      "bytes": 651385765,
+      "mtime_ns": 1790944019428979400,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_adapter_fit_lr_split_v1\\best.pt",
+        "relative_path": "results/bcz_native_adapter_fit_lr_split_v1/best.pt",
+        "bytes": 651355873,
+        "mtime_ns": 1790944019962978200,
+        "category": "retained best checkpoint",
+        "sha256": "d3cdfaa58279a6a0bcfaa9b7540140bb7cb8bcc74ed8c0c762ddaa59dc7fc3c8"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_adapter_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_native_adapter_fit_v1/latest.pt",
+      "bytes": 651385701,
+      "mtime_ns": 1790943305765819300,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_adapter_fit_v1\\best.pt",
+        "relative_path": "results/bcz_native_adapter_fit_v1/best.pt",
+        "bytes": 651355809,
+        "mtime_ns": 1790943306263819500,
+        "category": "retained best checkpoint",
+        "sha256": "35bbc130e597082d774146a140679ca71a10657c409802351504d035e248abbc"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_adapter_lr_split_v1\\latest.pt",
+      "relative_path": "results/bcz_native_pool_adapter_lr_split_v1/latest.pt",
+      "bytes": 651443429,
+      "mtime_ns": 1790945437914412400,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_adapter_lr_split_v1\\best.pt",
+        "relative_path": "results/bcz_native_pool_adapter_lr_split_v1/best.pt",
+        "bytes": 651382049,
+        "mtime_ns": 1790944787786587900,
+        "category": "retained best checkpoint",
+        "sha256": "3388ef022f2a218c884953ff77dc30afaae32d651ab071a2f03821b4c2e7fafe"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_adapter_smoke_v1\\latest.pt",
+      "relative_path": "results/bcz_native_pool_adapter_smoke_v1/latest.pt",
+      "bytes": 651398629,
+      "mtime_ns": 1790941323379055500,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_adapter_smoke_v1\\best.pt",
+        "relative_path": "results/bcz_native_pool_adapter_smoke_v1/best.pt",
+        "bytes": 651368673,
+        "mtime_ns": 1790941323822773700,
+        "category": "retained best checkpoint",
+        "sha256": "4bd3474225ef7b4e79378bf0f1969de5952286fb57e58a4e1a9487b78076308c"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_adapter_v1\\latest.pt",
+      "relative_path": "results/bcz_native_pool_adapter_v1/latest.pt",
+      "bytes": 651443365,
+      "mtime_ns": 1790942753503724500,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_adapter_v1\\best.pt",
+        "relative_path": "results/bcz_native_pool_adapter_v1/best.pt",
+        "bytes": 651413473,
+        "mtime_ns": 1790942754018720500,
+        "category": "retained best checkpoint",
+        "sha256": "9953665c67c69ccf5857d777d6dd05aeb9fccc8313c46c67cb287bca865c3661"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_baseline_v1\\latest.pt",
+      "relative_path": "results/bcz_native_pool_baseline_v1/latest.pt",
+      "bytes": 30384373,
+      "mtime_ns": 1790939106934640300,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_baseline_v1\\best.pt",
+        "relative_path": "results/bcz_native_pool_baseline_v1/best.pt",
+        "bytes": 30352401,
+        "mtime_ns": 1790938606202195300,
+        "category": "retained best checkpoint",
+        "sha256": "1b026f9d9f2f4e0701886e1c3b3971571ccd51c36e7eace0d9f1057233b6e6a6"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_smoke_v1\\latest.pt",
+      "relative_path": "results/bcz_native_pool_smoke_v1/latest.pt",
+      "bytes": 30339573,
+      "mtime_ns": 1790936712157656100,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_pool_smoke_v1\\best.pt",
+        "relative_path": "results/bcz_native_pool_smoke_v1/best.pt",
+        "bytes": 30339089,
+        "mtime_ns": 1790936712185655500,
+        "category": "retained best checkpoint",
+        "sha256": "62e148bc37ee039f26ebdf98cbd4e80ebfac7e0dbe550b63bce2a6157addee15"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_sequence_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_native_sequence_fit_v1/latest.pt",
+      "bytes": 28743277,
+      "mtime_ns": 1790931832766494800,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_native_sequence_fit_v1\\best.pt",
+        "relative_path": "results/bcz_native_sequence_fit_v1/best.pt",
+        "bytes": 28743081,
+        "mtime_ns": 1790931832794409000,
+        "category": "retained best checkpoint",
+        "sha256": "7c50e67420bc8d3647e7c1842de9e9874af21c583272d3b8908f9aef9a894782"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_overfit_cosine_v2\\latest.pt",
+      "relative_path": "results/bcz_overfit_cosine_v2/latest.pt",
+      "bytes": 719930917,
+      "mtime_ns": 1790856248990777800,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_overfit_cosine_v2\\best.pt",
+        "relative_path": "results/bcz_overfit_cosine_v2/best.pt",
+        "bytes": 719891041,
+        "mtime_ns": 1790856227393720400,
+        "category": "retained best checkpoint",
+        "sha256": "e3a1f1a2f9f4c34ca9a7236b779482a058433093196d145011be89a040c9f1b2"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_overfit_regression_v1\\latest.pt",
+      "relative_path": "results/bcz_overfit_regression_v1/latest.pt",
+      "bytes": 649944533,
+      "mtime_ns": 1790858277639089600,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_overfit_regression_v1\\best.pt",
+        "relative_path": "results/bcz_overfit_regression_v1/best.pt",
+        "bytes": 649915249,
+        "mtime_ns": 1790858278104109600,
+        "category": "retained best checkpoint",
+        "sha256": "ef3e8e905274bc764a9a9d7e3ae4ac0df677609a77c5424432abefe42444e239"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_overfit_x0_v1\\latest.pt",
+      "relative_path": "results/bcz_overfit_x0_v1/latest.pt",
+      "bytes": 719931109,
+      "mtime_ns": 1790859355526693100,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_overfit_x0_v1\\best.pt",
+        "relative_path": "results/bcz_overfit_x0_v1/best.pt",
+        "bytes": 719891617,
+        "mtime_ns": 1790859356150369400,
+        "category": "retained best checkpoint",
+        "sha256": "a368e45857a24f165eef7a67c361f09c4da1dbde1c7b384e6efcf61d479a1ebe"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_patch_pool_regression_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_patch_pool_regression_fit_v1/latest.pt",
+      "bytes": 649942357,
+      "mtime_ns": 1790875043985382300,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_patch_pool_regression_fit_v1\\best.pt",
+        "relative_path": "results/bcz_patch_pool_regression_fit_v1/best.pt",
+        "bytes": 649913073,
+        "mtime_ns": 1790875044475382200,
+        "category": "retained best checkpoint",
+        "sha256": "1089fee675fc03ffa6d41310702e1a58328c7c8e2359676c65c07412fa566715"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_pool_seen_probe_fit_v1\\latest.pt",
+      "relative_path": "results/bcz_pool_seen_probe_fit_v1/latest.pt",
+      "bytes": 651385829,
+      "mtime_ns": 1790949103689278200,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_pool_seen_probe_fit_v1\\best.pt",
+        "relative_path": "results/bcz_pool_seen_probe_fit_v1/best.pt",
+        "bytes": 651355937,
+        "mtime_ns": 1790949104304277400,
+        "category": "retained best checkpoint",
+        "sha256": "4995176b38e6f725f3e6c9a48ce6a827be9bdb3c42eed0fe8196c245339057b7"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_pool_seen_probe_rotation4_v1\\latest.pt",
+      "relative_path": "results/bcz_pool_seen_probe_rotation4_v1/latest.pt",
+      "bytes": 651385893,
+      "mtime_ns": 1790949893242595000,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bcz_pool_seen_probe_rotation4_v1\\best.pt",
+        "relative_path": "results/bcz_pool_seen_probe_rotation4_v1/best.pt",
+        "bytes": 651356001,
+        "mtime_ns": 1790949893742594500,
+        "category": "retained best checkpoint",
+        "sha256": "c3bb1fba8483907732ad8324cd747f7f34e5d090d169d4d20c17def9d027c431"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_fixed_fit_constant_lr_v1\\latest.pt",
+      "relative_path": "results/bridge_fixed_fit_constant_lr_v1/latest.pt",
+      "bytes": 128044469,
+      "mtime_ns": 1790960546622902200,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_fixed_fit_constant_lr_v1\\best.pt",
+        "relative_path": "results/bridge_fixed_fit_constant_lr_v1/best.pt",
+        "bytes": 128038225,
+        "mtime_ns": 1790960546737903900,
+        "category": "retained best checkpoint",
+        "sha256": "d9023cb79aa25cc7a9b7f75c6285514a1517fcf80335117e244b8dda351dfc2e"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_fixed_fit_v1\\latest.pt",
+      "relative_path": "results/bridge_fixed_fit_v1/latest.pt",
+      "bytes": 128044469,
+      "mtime_ns": 1790959741715033100,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_fixed_fit_v1\\best.pt",
+        "relative_path": "results/bridge_fixed_fit_v1/best.pt",
+        "bytes": 128038225,
+        "mtime_ns": 1790959741830035000,
+        "category": "retained best checkpoint",
+        "sha256": "e3395ff4d83581b92337bba8207ca46d3f9dec90ccff9d5eed249b621476a30a"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_single_step_v1\\training\\latest.pt",
+      "relative_path": "results/bridge_single_step_v1/training/latest.pt",
+      "bytes": 127845813,
+      "mtime_ns": 1791131315744521100,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_single_step_v1\\training\\best.pt",
+        "relative_path": "results/bridge_single_step_v1/training/best.pt",
+        "bytes": 127828305,
+        "mtime_ns": 1791130900055675700,
+        "category": "retained best checkpoint",
+        "sha256": "edc34edfc5730f99f7fbfd51f83444661f0f0ead5930146bf9a91a3c6b803d21"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_single_task_pilot_v1\\latest.pt",
+      "relative_path": "results/bridge_single_task_pilot_v1/latest.pt",
+      "bytes": 128023221,
+      "mtime_ns": 1790958079360006000,
+      "category": "old latest checkpoint",
+      "retained_best": {
+        "path": "D:\\ntu_related\\dissertation\\Zero_shot\\results\\bridge_single_task_pilot_v1\\best.pt",
+        "relative_path": "results/bridge_single_task_pilot_v1/best.pt",
+        "bytes": 128012113,
+        "mtime_ns": 1790957947414835900,
+        "category": "retained best checkpoint",
+        "sha256": "e66ac3f087c1f084087492a8d39b9f18dd87b95faea14051b470a4bb72374b9c"
+      }
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_author_obs_results_203876.tar.gz",
+      "relative_path": "reports/bridge_author_obs_results_203876.tar.gz",
+      "bytes": 106850,
+      "mtime_ns": 1791981372202978300,
+      "category": "verified redundant archive",
+      "sha256": "cfd43b8a9c721049ce9ef59cb1540f888d1203486752f3f501370744c78e21e5",
+      "verified_members": 2
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_author_preflight_results_203498.tar.gz",
+      "relative_path": "reports/bridge_author_preflight_results_203498.tar.gz",
+      "bytes": 52456,
+      "mtime_ns": 1791965720221844400,
+      "category": "verified redundant archive",
+      "sha256": "e4040f7e1106115e0a92dfab00e8d6411300eec609e759423540d6b1b6052cd9",
+      "verified_members": 6
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_author_reference_results_203699.tar.gz",
+      "relative_path": "reports/bridge_author_reference_results_203699.tar.gz",
+      "bytes": 974946,
+      "mtime_ns": 1791973552103295700,
+      "category": "verified redundant archive",
+      "sha256": "a172f4ad04a2585f8639b24dd4ef301319a04350e373a765f60450be401c2305",
+      "verified_members": 8
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_history_results_204258.tar.gz",
+      "relative_path": "reports/bridge_history_results_204258.tar.gz",
+      "bytes": 4785430,
+      "mtime_ns": 1792001811926317800,
+      "category": "verified redundant archive",
+      "sha256": "17c7d178e075d4712fa6b4809731d5ef61bdb730939d8e1d9500d92d899f272b",
+      "verified_members": 17
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_project_condition_results_204017.tar.gz",
+      "relative_path": "reports/bridge_project_condition_results_204017.tar.gz",
+      "bytes": 371736,
+      "mtime_ns": 1791986000023961900,
+      "category": "verified redundant archive",
+      "sha256": "ff78e87f2136581fa41c48f85206bf101cbb5ce60aed1e487c5262ce85206180",
+      "verified_members": 2
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_state_rep_results_202463.tar.gz",
+      "relative_path": "reports/bridge_state_rep_results_202463.tar.gz",
+      "bytes": 14665124,
+      "mtime_ns": 1791911542026237700,
+      "category": "verified redundant archive",
+      "sha256": "2b0b68acf368e2be6521c6b369434144981c63767b3dca3183b9a797fcc0ea66",
+      "verified_members": 64
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\bridge_state_results_202278.tar.gz",
+      "relative_path": "reports/bridge_state_results_202278.tar.gz",
+      "bytes": 14678062,
+      "mtime_ns": 1791901462297308300,
+      "category": "verified redundant archive",
+      "sha256": "6099e368c1b0026799d4408a2760947ec4fc7de64908a7c09b3eff4c23bddee9",
+      "verified_members": 64
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\exports\\bridge_expansion_training_v1.zip",
+      "relative_path": "training_cache/exports/bridge_expansion_training_v1.zip",
+      "bytes": 727974763,
+      "mtime_ns": 1791358263545523100,
+      "category": "verified redundant archive",
+      "sha256": "2a0171d66096df7a9b6941d6b54cc9b7869ec511ea7a0066f9afab2efc724f7b",
+      "verified_members": 221
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\exports\\multitask_training_v1.zip",
+      "relative_path": "training_cache/exports/multitask_training_v1.zip",
+      "bytes": 101015610,
+      "mtime_ns": 1791348465616768700,
+      "category": "verified redundant archive",
+      "sha256": "f77b99c46f01d638c093bfdcd969bfda110fb0718dcb0c3800f6ab5acd46e8b0",
+      "verified_members": 36
+    }
+  ],
+  "protected_latest": [
+    {
+      "path": "results/bridge_gripper_coverage_fit_v1/latest.pt",
+      "reason": "Default fit-checkpoint of code/diagnose_bridge_modules.py."
+    },
+    {
+      "path": "results/bridge_single_task_full_validation_v1/latest.pt",
+      "reason": "Default model for multiple Bridge audit/feature preparation scripts."
+    }
+  ],
+  "preserved": "All best.pt files, current diagnostic dependencies, raw data, environments, frozen packages, numerical reports, prediction NPZ files and PyBullet positive/negative-control weights."
+}

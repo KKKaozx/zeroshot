@@ -1,0 +1,122 @@
+zixiao005@login-2:/projects/Zeroshot$ (
+set -euo pipefail
+cd /projects/Zeroshot
+unzip -n oxe_resume_and_libero_dependency_repair_v1.zip
+cd oxe_resume_and_libero_dependency_repair_v1
+
+# 从现有断点接续seed43，不重训第一段
+bash submit_seed43_resume.sh
+
+# 只补独立评估环境的缺失依赖
+bash repair_eval_dependency.sh
+
+# 重提尚未完成的同一个评估回合
+cd /projects/Zeroshot/libero_original_evaluation_v1
+bash submit_once.sh 1
+)
+Archive:  oxe_resume_and_libero_dependency_repair_v1.zip
+  inflating: oxe_resume_and_libero_dependency_repair_v1/frozen_profile_restore.py  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/README.md  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/repair_eval_dependency.sh  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/resume_constants.py  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/run_seed43_resume.py  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/submit_seed43_resume.sh  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/train_seed43_resume.sh  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/training_frozen_profile.json  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/verify_eval_import.py  
+  inflating: oxe_resume_and_libero_dependency_repair_v1/SHA256SUMS  
+frozen_profile_restore.py: OK
+README.md: OK
+repair_eval_dependency.sh: OK
+resume_constants.py: OK
+run_seed43_resume.py: OK
+submit_seed43_resume.sh: OK
+train_seed43_resume.sh: OK
+training_frozen_profile.json: OK
+verify_eval_import.py: OK
+README.md: OK
+bind_preflight.py: OK
+code/adapter.py: OK
+code/cartesian_action_contract.py: OK
+code/completed_policy_export.py: OK
+code/dataset.py: OK
+code/diffusion_decoder.py: OK
+code/frozen_identity_failure.py: OK
+code/frozen_visual_backbone.py: OK
+code/language_training_conditions.py: OK
+code/libero_action_interface.py: OK
+code/libero_project_policy.py: OK
+code/libero_waypoint_execution.py: OK
+code/models.py: OK
+code/oxe_formal_protocol.py: OK
+code/oxe_nominal_dataset.py: OK
+code/oxe_nominal_target_store.py: OK
+code/oxe_nominal_timing.py: OK
+code/oxe_source_semantics.py: OK
+code/oxe_window_index.py: OK
+code/step_training_runner.py: OK
+code/step_training_state.py: OK
+code/train.py: OK
+code/window_target_protocol.py: OK
+execution_assumptions.json: OK
+run_stage.py: OK
+submit_stage_once.sh: OK
+train_stage.sh: OK
+training_protocol.json: OK
+verify_stage.py: OK
+{
+  "passed": true,
+  "seed": 43,
+  "stage": 2,
+  "restored_update": 32768,
+  "requested_end": 65536,
+  "total_horizon": 65536,
+  "fresh": false,
+  "formal_training_submitted_by_this_check": false
+}
+OXE seed43 exact-constant stage2 resume: 227920; original contract/optimizer/RNG/65536 budget retained
+frozen_profile_restore.py: OK
+README.md: OK
+repair_eval_dependency.sh: OK
+resume_constants.py: OK
+run_seed43_resume.py: OK
+submit_seed43_resume.sh: OK
+train_seed43_resume.sh: OK
+training_frozen_profile.json: OK
+verify_eval_import.py: OK
+Collecting termcolor==3.3.0
+  Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+Installing collected packages: termcolor
+Successfully installed termcolor-3.3.0
+
+[notice] A new release of pip is available: 23.0.1 -> 26.2.2
+[notice] To update, run: /projects/Zeroshot/envs/libero-eval-v1/bin/python -m pip install --upgrade pip
+Traceback (most recent call last):
+  File "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/robosuite/__init__.py", line 2, in <module>
+    from robosuite.macros_private import *
+ModuleNotFoundError: No module named 'robosuite.macros_private'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/projects/_ssd/Zeroshot/oxe_resume_and_libero_dependency_repair_v1/verify_eval_import.py", line 37, in <module>
+    if __name__=='__main__':main()
+  File "/projects/_ssd/Zeroshot/oxe_resume_and_libero_dependency_repair_v1/verify_eval_import.py", line 24, in main
+    from libero.libero.envs import OffScreenRenderEnv
+  File "/projects/_ssd/Zeroshot/libero_runtime_v1/libero/libero/envs/__init__.py", line 1, in <module>
+    from .bddl_base_domain import TASK_MAPPING
+  File "/projects/_ssd/Zeroshot/libero_runtime_v1/libero/libero/envs/bddl_base_domain.py", line 3, in <module>
+    import robosuite.utils.transform_utils as T
+  File "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/robosuite/__init__.py", line 5, in <module>
+    from robosuite.utils.log_utils import ROBOSUITE_DEFAULT_LOGGER
+  File "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/robosuite/utils/__init__.py", line 3, in <module>
+    from .opencv_renderer import OpenCVRenderer
+  File "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/robosuite/utils/opencv_renderer.py", line 4, in <module>
+    import cv2
+  File "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/cv2/__init__.py", line 181, in <module>
+    bootstrap()
+  File "/projects/Zeroshot/envs/libero-eval-v1/lib/python3.10/site-packages/cv2/__init__.py", line 153, in bootstrap
+    native_module = importlib.import_module("cv2")
+  File "/projects/Zeroshot/envs/bridge-diffusion/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory

@@ -1,0 +1,29 @@
+{
+  "format": "pusht-zero-preflight-binding-v1",
+  "preflight_job": 219260,
+  "formal_contract_sha256": "2f71bfd8187adcfb761275749e7f1e8df3fd10d9d017afa59ea2da95b4a5105c",
+  "preflight_protocol_sha256": "0a0a709878b1d65b1a6adff42548afd252da18d2fbf9c452fc95393d15daff1c",
+  "preflight_report_sha256": "40bef0188ad5bd909bf40bd38f82ead912e5104167e73f69dec7b4aa1ed98124",
+  "initialization": {
+    "initial_eight_frontend_sha256": "3f2483a82cb8ca88a87fbe75c08aab94988d97fc485309f5a8b501a413d2c4b5",
+    "common_norm_sha256": "cab274a4ca0fc93593f4ca63240059856b7cf2149e3c6aec94be1e00ecb3552e",
+    "common_projection_sha256": "c38a22b17ed31651a6ae12e19239311288a0ab54984d162ce59af6bc376af5bd",
+    "original_frontend_parameters": 53647424,
+    "removed_block_parameters": 53579776,
+    "remaining_frontend_parameters": 67648,
+    "common_parameter_objects_preserved": true,
+    "rng_unchanged": true,
+    "active_cross_attention_blocks": 0,
+    "active_text_conditioning": false,
+    "scope": "No attention or FFN blocks; retain original pooled output LayerNorm and1024-to64 projection"
+  },
+  "verified": {
+    "preflight_verified": true,
+    "warm_update_seconds": 0.5472305431962013,
+    "peak_reserved_gib": 6.63671875,
+    "estimated_formal_training_hours_excluding_io_and_rollout": 12.794250099927188,
+    "formal_training_submitted": false,
+    "task_performance_verdict": null
+  },
+  "preflight_weights_used": false
+}

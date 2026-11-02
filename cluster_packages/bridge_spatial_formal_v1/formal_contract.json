@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-18",
+  "preflight_job": 210291,
+  "preflight_source_sums_sha256": "be2b692172ad81c3cee43144fadb210a93caf8fbbbfaf54cd62b3bf38a8fcb1d",
+  "protocol_sha256": "99d24b4a1b9af3a09fa4a7858550613035807daddd682c4e0f42c646f0da25ac",
+  "initial_checkpoint_sha256": "926030039ac9d32634bf193e989a44a5b891882c503cb8b40fd7b5091ac98ed6",
+  "user_reported_verified_resources": {
+    "peak_reserved_gib": 3.77734375,
+    "warm_update_seconds": 0.16032358317170292,
+    "estimated_paired_formal_seconds": 1956.0530471117818
+  },
+  "scope": "Two4096-update continuations; same1836 full16 windows, frozenCLIP, only readout learns1026 extra parameters",
+  "first8_loss_preflight_comparison_atol": 1e-06,
+  "preflight_reexecuted": false,
+  "old1836_or40_or13_rescored": false,
+  "formal_training_calculate_AST_matches_preflight": true,
+  "base_metrics_source": {
+    "path": "cluster_packages\\bridge_prefix_formal_v1\\bridge_prefix_pair_metrics_v1.py",
+    "sha256": "32f05eec53b0e4d7f1a2e9149d9dd2c6e05fe06850219666ec6cadf656208352"
+  },
+  "prefix_validation_dependencies": {
+    "protocol.json": "5d5134acc7cc44a47a1383ecb15475243a3bdb039aa711c72c3fbe4af95aa8ff",
+    "input_reference/report.json": "6ddae8bfb447f922e2bb3aff60ad05e0ccdb81d01b33555585790db5e1c0f2e8",
+    "input_reference/validation_rows.json": "b9f7676426c4fbf953fee19ca5b02c8995341d27c37f70065db1f1effc93f954",
+    "input_reference/validation_reference.npz": "8c338246f127cc8d6caace14aadc8f5471aabe828e4cd03a6685308ed6180ea0",
+    "state_protocol.json": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82"
+  },
+  "baseline_result_files": {
+    "report.json": "95aea3f7ef9f56432bcfab5d84bdb336eb5bf14238c1adf9bbe6f2b78c5cff16",
+    "validation_rows.json": "37e0642e0be6a21fc85f254966c6d60e1da4c21aa6b50965e5c64469cfd64cb6",
+    "validation_inputs.npz": "9674850ad4056a07d3563b3ba4703a9554724b0583e71800fa21a757ab35d59d",
+    "unchanged207558_full16.npz": "d8b4a5e1070baf68fd4df0d44b16288c6d5e6b709b74b69c96038ed555c27b96"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "verified": true,
+  "source_analysis_sha256": {
+    "43": "05f103be1687705b3c74261fa33700b00720aa9fabaa696b7686028f1567e8bf",
+    "42": "6a8f4b075dfd1376d99a9f5daeec704d7b21a218c4a37496f6b3159e5f35ddf9"
+  },
+  "initializations": [
+    {
+      "initialization_seed": 43,
+      "small_pool_position_cm": 8.349126682028293,
+      "large_pool_position_cm": 7.0794121204466665,
+      "static_position_cm": 8.21232607389037,
+      "small_pool_rotation_deg": 15.256048338593287,
+      "large_pool_rotation_deg": 14.559846665761862,
+      "static_rotation_deg": 15.098500432102608,
+      "large_pool_endpoint_position_cm": 8.943366874185719,
+      "large_pool_endpoint_rotation_deg": 18.48020213781281,
+      "position_improvement_percent_vs_static": 13.795287026480862,
+      "position_improvement_percent_vs_small": 15.207752977502665,
+      "position_better_static_episodes": 7,
+      "position_better_small_episodes": 7,
+      "rotation_better_static_episodes": 3,
+      "complete_candidate_passed": true
+    },
+    {
+      "initialization_seed": 42,
+      "small_pool_position_cm": 8.381654748014052,
+      "large_pool_position_cm": 6.808207638142424,
+      "static_position_cm": 8.21232607389037,
+      "small_pool_rotation_deg": 15.99391770130639,
+      "large_pool_rotation_deg": 15.13889077358553,
+      "static_rotation_deg": 15.098500432102608,
+      "large_pool_endpoint_position_cm": 8.221684348444295,
+      "large_pool_endpoint_rotation_deg": 19.0321697518528,
+      "position_improvement_percent_vs_static": 17.09769464965707,
+      "position_improvement_percent_vs_small": 18.772511600342888,
+      "position_better_static_episodes": 9,
+      "position_better_small_episodes": 8,
+      "rotation_better_static_episodes": 2,
+      "complete_candidate_passed": false
+    }
+  ],
+  "task_deltas": [
+    {
+      "task": "close the drawer",
+      "init43_rotation_delta_vs_static_deg": -9.546606453038002,
+      "init43_position_delta_vs_small_cm": -0.16552727845124338,
+      "init42_rotation_delta_vs_static_deg": -11.685924164891908,
+      "init42_position_delta_vs_small_cm": -0.31762637335486144
+    },
+    {
+      "task": "close microwave",
+      "init43_rotation_delta_vs_static_deg": 0.0038976768421470354,
+      "init43_position_delta_vs_small_cm": -2.4872214120738096,
+      "init42_rotation_delta_vs_static_deg": 1.070029896614077,
+      "init42_position_delta_vs_small_cm": -2.2361817775094837
+    },
+    {
+      "task": "take broccoli out of pan",
+      "init43_rotation_delta_vs_static_deg": 2.2989483849381376,
+      "init43_position_delta_vs_small_cm": -1.9666827729707848,
+      "init42_rotation_delta_vs_static_deg": 3.0106754650768615,
+      "init42_position_delta_vs_small_cm": -1.0226231799751702
+    },
+    {
+      "task": "turn lever vertical to front",
+      "init43_rotation_delta_vs_static_deg": -1.3637316309018956,
+      "init43_position_delta_vs_small_cm": 0.23131288190017196,
+      "init42_rotation_delta_vs_static_deg": -1.9625473369509105,
+      "init42_position_delta_vs_small_cm": -0.4162424616138285
+    },
+    {
+      "task": "open the drawer",
+      "init43_rotation_delta_vs_static_deg": 1.859900214121918,
+      "init43_position_delta_vs_small_cm": -0.7407555675166453,
+      "init42_rotation_delta_vs_static_deg": 3.798633622239956,
+      "init42_position_delta_vs_small_cm": -2.527429992128112
+    }
+  ],
+  "both_position_better_matched_small": true,
+  "both_position_better_static": true,
+  "full_candidate_replicated": false,
+  "new_neural_execution": false,
+  "no_additional_seed_or_training_budget": true,
+  "conclusion": "Two initializations support position benefit at the fixed update budget; rotation benefit against static is not consistent.",
+  "limitations": "Same repeatedly inspected development set; only2training initializations; no final test or robot success."
+}

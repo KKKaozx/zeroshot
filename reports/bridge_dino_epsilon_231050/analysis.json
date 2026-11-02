@@ -1,0 +1,47 @@
+{
+  "job_id": 231050,
+  "arithmetic_recomputed": true,
+  "relative_errors": {
+    "path_position_cm": {
+      "epsilon_error_increase_vs_x0_percent": 59.506319509107904,
+      "epsilon_error_above_static_percent": 9.607933716460145
+    },
+    "path_rotation_deg": {
+      "epsilon_error_increase_vs_x0_percent": 32.50688486457942,
+      "epsilon_error_above_static_percent": 12.767693514415084
+    },
+    "endpoint_position_cm": {
+      "epsilon_error_increase_vs_x0_percent": 48.27080196240969,
+      "epsilon_error_above_static_percent": 4.2828776602293654
+    },
+    "endpoint_rotation_deg": {
+      "epsilon_error_increase_vs_x0_percent": 38.8481849353373,
+      "epsilon_error_above_static_percent": 13.019145867303342
+    }
+  },
+  "x0_better_than_static_all_four_metrics": true,
+  "epsilon_worse_than_static_all_four_metrics": true,
+  "position_degradation_episode_bootstrap_excludes_zero": true,
+  "path_rotation_episode_bootstrap_excludes_zero": false,
+  "endpoint_rotation_episode_bootstrap_excludes_zero": true,
+  "interval_scope": "Intervals refer to episode-equal means, not window-weighted mean differences; excludes training-seed uncertainty",
+  "conclusion": "Only switching prediction target and its sampling interpretation from x0 to epsilon loses the static-baseline advantage of the otherwise fixed positive DINO+pose recipe in this bounded control.",
+  "not_established": [
+    "epsilon universally invalid",
+    "DDPM formula bug",
+    "Current four-source main model repaired by changing target alone",
+    "Failure exclusively due to poor fit or exclusively poor generalization",
+    "LIBERO success"
+  ],
+  "decision": "Close this conditional epsilon branch; retain positive x0 recipe and all results, no extra seed/budget/variants or retraining x0.",
+  "next_read_only_step": "Existing training metrics now reviewed; do not repeat this read or refit the old pair.",
+  "next_main_design_direction": "Prepare explicit sample/x0 diagnostic training under current main entry, use a fixed matched bounded budget and actual generated heldout metrics; do not co-change state/readout/data/optimizer or relabel trained epsilon weights as x0.",
+  "new_main_control_implemented": false,
+  "new_jobs_submitted": false,
+  "existing_training_metrics_received": true,
+  "training_metrics_evidence": "reports/bridge_dino_epsilon_231050/train_and_development_review.json",
+  "training_position_error_ratio_epsilon_over_x0": 2.1873022520644847,
+  "full_generation_degradation_also_on_training": true,
+  "heldout_only_failure_supported": false,
+  "prospective_main_control_status": "not_implemented_not_submitted"
+}

@@ -1,0 +1,50 @@
+{
+  "job_id": 233531,
+  "download_verified": true,
+  "archive_bytes": 546323,
+  "archive_sha256": "0b08bfaafeed9583d7c28f037f4176bb90fb36344b3d62e1e25c65c33960566b",
+  "file_checksums": {
+    "report.json": "befcc8c0331c8151a6bf6280e5b55dc3fbab0264ffaa8d26765fc5ad516b1d33",
+    "predictions_and_targets.npz": "2e1718a58d5d7b8b2056810e161088eb1107c8e17f8b70871f6afd50ac9d40ba",
+    "paired_zero_update_guard.json": "876578c2a21e09ae22147b190f0fc6ed61e9b54d29b20834d972de52ea7902fd",
+    "replacement/receipt.json": "bec406bee425eeef69e2ac3a4f94a6e58e984d095d4e66cfacb2cdecda96933f",
+    "cycle/receipt.json": "65ba6cc4c7bdf125a9e7e736440c5706667ee7f3aac3c12aa7248e2b4b6cce21"
+  },
+  "all120_targets_masks_exact_to_local_qualified_stores": true,
+  "all_source_metrics_per_window_and_bridge_bootstrap_recomputed": true,
+  "all_reported_metric_tree_agrees": true,
+  "initial_identity_and_bound_protocol_metadata_checked": true,
+  "full_checkpoint_weights_and_all4096_internal_traces_downloaded": false,
+  "elapsed_total_seconds": 2846.9440180920064,
+  "elapsed_total_minutes": 47.44906696820011,
+  "training_seconds": {
+    "replacement": 1317.2053262740374,
+    "cycle": 1293.4049151549116
+  },
+  "peak_reserved_gib": {
+    "replacement": 4.5703125,
+    "cycle": 4.57421875
+  },
+  "bridge_squared_error_decomposition": {
+    "replacement": {
+      "squared_error_reduction_vs_source": 2.2634317446140564,
+      "prediction_energy_reduction_component": 2.1169414276129137,
+      "alignment_improvement_component": 0.1464903170011422,
+      "energy_fraction_of_reduction": 0.9352795517913348,
+      "scope": "Exact descriptive squared-error identity; not causal separation of training changes or the reported unsquared distance metric"
+    },
+    "cycle": {
+      "squared_error_reduction_vs_source": 2.3479571109110395,
+      "prediction_energy_reduction_component": 2.048167988418359,
+      "alignment_improvement_component": 0.29978912249268047,
+      "energy_fraction_of_reduction": 0.8723191658401468,
+      "scope": "Exact descriptive squared-error identity; not causal separation of training changes or the reported unsquared distance metric"
+    }
+  },
+  "diagnostic_scope": "Descriptive same120expert-window motion comparisons; mean cosine window-equal, excludes numerically zero vectors, amplitude ratio is ratio of window-equal mean norms. Three-draw spread is population decomposition, not seed uncertainty. No policy alteration or significance gate based on new diagnostics.",
+  "inference_calls": 0,
+  "training_updates": 0,
+  "gpu_used": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false
+}

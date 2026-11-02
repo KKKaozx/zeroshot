@@ -1,0 +1,134 @@
+{
+  "format": "oxe-moderate-pool-competence-design-v1",
+  "date": "2026-10-29",
+  "status": "prepared_cpu_checked_not_submitted",
+  "question": "Can the unchanged current four-source recipe learn a moderate fixed training pool after repeated exposure?",
+  "source_job": 232587,
+  "source_role": "real_pose",
+  "source_update": 10240,
+  "proposed_updates": 4096,
+  "proposed_endpoint_update": 14336,
+  "proposed_pool_windows": 512,
+  "pool_selection": "128distinct training groups per source: original8frozen train-evaluation rows plus120groups selected with fixed seeded RNG, one window/group; no validation group or target-driven choice",
+  "source_internal_sampling": "Uniform with replacement in both new candidate and existing control; no new cycle variant",
+  "pool_counts": {
+    "Bridge": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "presentations_4096": 8287,
+      "mean_presentations": 64.7421875,
+      "min_presentations": 45,
+      "max_presentations": 95,
+      "never_sampled": 0
+    },
+    "Language Table": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        13277,
+        10935,
+        13164,
+        16660,
+        13098,
+        16986,
+        17591,
+        13648
+      ],
+      "presentations_4096": 8091,
+      "mean_presentations": 63.2109375,
+      "min_presentations": 46,
+      "max_presentations": 85,
+      "never_sampled": 0
+    },
+    "BC-Z": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        79920,
+        54575,
+        108107,
+        86732,
+        28371,
+        65872,
+        61103,
+        26231
+      ],
+      "presentations_4096": 8081,
+      "mean_presentations": 63.1328125,
+      "min_presentations": 42,
+      "max_presentations": 83,
+      "never_sampled": 0
+    },
+    "Fractal": {
+      "pool_windows": 128,
+      "pool_independent_groups": 128,
+      "anchored_existing_train_evaluation_windows": [
+        134205,
+        122820,
+        122450,
+        142181,
+        122881,
+        137083,
+        144137,
+        130640
+      ],
+      "presentations_4096": 8309,
+      "mean_presentations": 64.9140625,
+      "min_presentations": 47,
+      "max_presentations": 86,
+      "never_sampled": 0
+    }
+  },
+  "unchanged": [
+    "DINOv2-L/14 and CLIP text frozen",
+    "Adapter/readout/U-Net/current pose port",
+    "x0/native100DDPM/targets/masks",
+    "joint gripper loss/three Adam groups/clip norm",
+    "original actual4096LR values and source slots",
+    "both new roles train77token padding"
+  ],
+  "reuse_control": {
+    "job": 233531,
+    "role": "replacement",
+    "updates": 4096,
+    "same_source232587": true,
+    "retrain_control": false,
+    "required_saved_trace": "runs/oxe-sampling-pair-233531/replacement/latest_state.pt"
+  },
+  "changes": "Pool membership/diversity and resulting exposure per member; not a clean exposure-count-only causal intervention at fixed full pool",
+  "expected_minutes_excluding_queue_and_startup": 25.892318382284916,
+  "causal_limits": [
+    "A smaller pool is easier and changes the training distribution; success does not prove exposure is the sole full-pool bottleneck",
+    "Original32seen-train anchors measure training competence, not independent generalization",
+    "Existing88validation windows may be reported but cannot select pool/budget/endpoint",
+    "One starting checkpoint/training seed; old control and new candidate would be different allocations",
+    "All4096actual model RNG/noise/t matches must be qualified against saved control; no new stochastic identity claimed by this CPU design"
+  ],
+  "decision_rules": {
+    "learning_evidence": "Report masked per-source original32training-window generation vs unchanged source/control/static; all-four means below static required where rotation available; LT XY only",
+    "not_main_admission": "Even positive training fit is not main-model, final generalization or LIBERO admission",
+    "failed": "No automatic extension, seed, smaller pool, removed source, changed loss, LR or backbone"
+  },
+  "candidate_plan_sha256": "581fb8243348ebb1eb35055edce97d101e0923c96dfa6ab92463cecfe69e8c21",
+  "pool_rows_sha256": "8a7afcc793917bedd121b2cf9bd1eac9a30d31b35e38f49c0bd80c577a93f515",
+  "code_sha256": "23fc3abef7b23cd5fccc566d573ba1d45ad8876adde28576981497ee6a0dbd06",
+  "actual_model_calls": 0,
+  "training_updates": 0,
+  "gpu_used": false,
+  "training_code_package_created": true,
+  "new_gpu_budget_selected": true,
+  "training_submitted": false,
+  "automatic_following_action": false,
+  "package": "cluster_packages/oxe_competence_pool_v1.zip",
+  "validation": "reports/oxe_competence_pool_validation_20261029.json"
+}

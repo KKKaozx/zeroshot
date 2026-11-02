@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "schedule_shape": [
+    16170,
+    8
+  ],
+  "prefix8192_exact": true,
+  "all_task_labels_match_predeclared_schedule": true,
+  "no_duplicate_window_in_batch": true,
+  "unchanged_function_asts": [
+    "advance",
+    "context",
+    "check"
+  ],
+  "executable_source_compiles": true,
+  "actual_project_model_executed": false,
+  "actual_gpu_executed": false,
+  "requires_cluster_optimizer_and_replay_preflight": true,
+  "mean_window_exposure": 35.6953642384106,
+  "task_draw_counts": {
+    "close microwave": 32339,
+    "turn lever vertical to front": 24252,
+    "open the drawer": 24257,
+    "close the drawer": 24255,
+    "take broccoli out of pan": 24257
+  },
+  "local_free_bytes": 79694143488,
+  "launcher_arguments_exact": true,
+  "no_stray_plus_argument": true,
+  "all_python_sources_compile": true,
+  "bash_syntax_checked": true,
+  "bash_syntax_evidence": "Two separate Git Bash -n calls returned exit0; scripts not executed.",
+  "cpu_micro_optimizer_roundtrip_verified": true,
+  "cpu_probe_project_model_executed": false,
+  "cpu_probe_path": "reports/bridge_budget_optimizer_cpu_20261017/validation.json",
+  "final_endpoint": 16170
+}

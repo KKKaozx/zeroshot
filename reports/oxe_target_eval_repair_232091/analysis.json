@@ -1,0 +1,160 @@
+{
+  "job_id": 232091,
+  "source_training_job": 231297,
+  "source_terminal_sha256": "9e04c13d706617f5213299901185f4aa28f877a38a3537f9c47e485807e60667",
+  "execution_complete_marker_observed": true,
+  "all_six_120window_generation_markers_observed": true,
+  "repair_receipt_verifier_passed_inferred_from_unchanged_code": true,
+  "slurm_state_observed": null,
+  "bridge_validation_windows": 64,
+  "sampling_draws_per_window": 3,
+  "training_seed": 42,
+  "updates_per_arm": 8192,
+  "original_lr_horizon": 65536,
+  "metrics_summary": {
+    "epsilon": {
+      "path_position_normalized": 1.9089892335353247,
+      "path_rotation_deg": 22.45653977464036,
+      "endpoint_position_normalized": 2.65407722801213,
+      "endpoint_rotation_deg": 29.80259746010794
+    },
+    "sample": {
+      "path_position_normalized": 1.5568879102451203,
+      "path_rotation_deg": 13.698360515024278,
+      "endpoint_position_normalized": 1.9936525162469771,
+      "endpoint_rotation_deg": 18.754033075173815
+    },
+    "static": {
+      "path_position_normalized": 1.0241369636028934,
+      "path_rotation_deg": 12.063044075899477,
+      "endpoint_position_normalized": 1.3696822176356824,
+      "endpoint_rotation_deg": 16.297180059569865
+    }
+  },
+  "paired_comparisons": {
+    "sample_minus_epsilon": {
+      "path_position_normalized": {
+        "mean_difference": -0.3521013232902042,
+        "paired_group_bootstrap95": [
+          -0.44550321968669115,
+          -0.2594549361998228
+        ],
+        "relative_change_percent": -18.444384971105134,
+        "candidate_better_worse_equal": [
+          51,
+          13,
+          0
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": -8.75817925961608,
+        "paired_group_bootstrap95": [
+          -10.01874549890552,
+          -7.500274117086349
+        ],
+        "relative_change_percent": -39.00057331854164,
+        "candidate_better_worse_equal": [
+          61,
+          3,
+          0
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": -0.6604247117651532,
+        "paired_group_bootstrap95": [
+          -0.7941219173568922,
+          -0.5278312882094116
+        ],
+        "relative_change_percent": -24.883402215835392,
+        "candidate_better_worse_equal": [
+          55,
+          9,
+          0
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": -11.048564384934128,
+        "paired_group_bootstrap95": [
+          -13.083677263027543,
+          -8.987651930055083
+        ],
+        "relative_change_percent": -37.07248805988505,
+        "candidate_better_worse_equal": [
+          57,
+          7,
+          0
+        ]
+      }
+    },
+    "sample_minus_static": {
+      "path_position_normalized": {
+        "mean_difference": 0.5327509466422269,
+        "paired_group_bootstrap95": [
+          0.444131525248007,
+          0.6193862533583004
+        ],
+        "relative_change_percent": 52.0195018416306,
+        "candidate_better_worse_equal": [
+          4,
+          60,
+          0
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": 1.6353164391248023,
+        "paired_group_bootstrap95": [
+          0.9327054234513239,
+          2.3081425900550596
+        ],
+        "relative_change_percent": 13.556416016020112,
+        "candidate_better_worse_equal": [
+          17,
+          47,
+          0
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": 0.6239702986112949,
+        "paired_group_bootstrap95": [
+          0.495056761058567,
+          0.7559469026826425
+        ],
+        "relative_change_percent": 45.55584431025026,
+        "candidate_better_worse_equal": [
+          7,
+          57,
+          0
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": 2.4568530156039508,
+        "paired_group_bootstrap95": [
+          1.2540868528845228,
+          3.6354619052899633
+        ],
+        "relative_change_percent": 15.075325955923669,
+        "candidate_better_worse_equal": [
+          18,
+          46,
+          0
+        ]
+      }
+    }
+  },
+  "logged_per_window_averages_independently_recomputed": true,
+  "static_per_window_from_original_local_labels_recomputed": true,
+  "candidate_policy_predictions_npz_downloaded": true,
+  "full_report_by_source_train_windows_received": true,
+  "uncertainty_scope": "Reused64validation groups, averaged3draws; does not include training-seed uncertainty",
+  "position_units": "Normalized recorded units (divisor0.1), no new physical calibration; do not label as cm",
+  "interpretation": "Native x0 improves this fixed current-main prefix vs epsilon on all4means with group intervals below0, but all4means remain worse than no-motion. Short-run result does not establish full65536training or LIBERO competence.",
+  "new_model_calls": 0,
+  "new_training_updates": 0,
+  "automatic_extension_or_libero_submission": false,
+  "next_action": "Current-pose conditioning hypothesis design only, no new training budget or submission",
+  "full_source_training_validation_summary_received": true,
+  "source_summary_analysis": "reports/oxe_target_eval_repair_232091/source_summary_analysis.json",
+  "full_generated_metrics_independently_recomputed_from_npz": true,
+  "all120_labels_masks_exact_local_binding_match": true,
+  "position_audit": "reports/oxe_target_eval_repair_232091/position_audit_summary.json"
+}

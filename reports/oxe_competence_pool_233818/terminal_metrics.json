@@ -1,0 +1,1899 @@
+{
+  "output_verified": true,
+  "new_training_updates": 4096,
+  "control_retrained": false,
+  "source_replay_exact": true,
+  "all_actual_primitive_noise_t_and_rng_matched": true,
+  "train32_anchor_results": {
+    "Bridge": {
+      "source232587": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 0,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.1166272800811072,
+            "endpoint_position_normalized": 1.8325850703087199,
+            "path_rotation_deg": 11.810804509441768,
+            "endpoint_rotation_deg": 16.89797164704481
+          },
+          {
+            "selection_index": 1,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 3.0144970809498886,
+            "endpoint_position_normalized": 4.286284249390861,
+            "path_rotation_deg": 27.434060859806753,
+            "endpoint_rotation_deg": 36.4625217880029
+          },
+          {
+            "selection_index": 2,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.7143868768274526,
+            "endpoint_position_normalized": 2.7927433131966777,
+            "path_rotation_deg": 17.87950994930976,
+            "endpoint_rotation_deg": 23.087381744918982
+          },
+          {
+            "selection_index": 3,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.649076766674276,
+            "endpoint_position_normalized": 1.9946485090329646,
+            "path_rotation_deg": 13.071943345960678,
+            "endpoint_rotation_deg": 11.630058275994855
+          },
+          {
+            "selection_index": 4,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.203208411134429,
+            "endpoint_position_normalized": 1.873639713274116,
+            "path_rotation_deg": 11.849372938319336,
+            "endpoint_rotation_deg": 17.154264988904572
+          },
+          {
+            "selection_index": 5,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.1728666749552763,
+            "endpoint_position_normalized": 1.835328421203986,
+            "path_rotation_deg": 12.344922949185147,
+            "endpoint_rotation_deg": 23.936925348319324
+          },
+          {
+            "selection_index": 6,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.9216322682687128,
+            "endpoint_position_normalized": 1.0295530946478826,
+            "path_rotation_deg": 14.381816198158651,
+            "endpoint_rotation_deg": 11.450982947941144
+          },
+          {
+            "selection_index": 7,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.5888289043957897,
+            "endpoint_position_normalized": 3.470825150076711,
+            "path_rotation_deg": 20.19062769464025,
+            "endpoint_rotation_deg": 28.596445539532784
+          }
+        ],
+        "path_position_normalized": 1.6726405329108665,
+        "path_rotation_deg": 16.120382305602796,
+        "endpoint_position_normalized": 2.38945094014149,
+        "endpoint_rotation_deg": 21.152069035082423
+      },
+      "static": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 0,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.3511996273817419,
+            "endpoint_position_normalized": 0.8450301223362405,
+            "path_rotation_deg": 11.727911192013648,
+            "endpoint_rotation_deg": 22.041581919285715
+          },
+          {
+            "selection_index": 1,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.193515896731746,
+            "endpoint_position_normalized": 3.119053174188085,
+            "path_rotation_deg": 18.575921346261477,
+            "endpoint_rotation_deg": 21.859447914953147
+          },
+          {
+            "selection_index": 2,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.6156487833126074,
+            "endpoint_position_normalized": 1.2535286453869452,
+            "path_rotation_deg": 10.500020732763838,
+            "endpoint_rotation_deg": 14.840847974859791
+          },
+          {
+            "selection_index": 3,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.2204769366529247,
+            "endpoint_position_normalized": 1.3956427798348006,
+            "path_rotation_deg": 7.0113633083503935,
+            "endpoint_rotation_deg": 4.240177823731011
+          },
+          {
+            "selection_index": 4,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.4661506577725102,
+            "endpoint_position_normalized": 0.8018113403195577,
+            "path_rotation_deg": 6.805729142479845,
+            "endpoint_rotation_deg": 11.696833525460354
+          },
+          {
+            "selection_index": 5,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.4941923243681388,
+            "endpoint_position_normalized": 1.045125631247837,
+            "path_rotation_deg": 10.09362271988053,
+            "endpoint_rotation_deg": 25.2033107164258
+          },
+          {
+            "selection_index": 6,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.46637137587776095,
+            "endpoint_position_normalized": 0.6120859179709827,
+            "path_rotation_deg": 8.33024983392302,
+            "endpoint_rotation_deg": 9.04145463894103
+          },
+          {
+            "selection_index": 7,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.2757684955272368,
+            "endpoint_position_normalized": 1.5427694162792702,
+            "path_rotation_deg": 6.277662871050955,
+            "endpoint_rotation_deg": 9.347048560998525
+          }
+        ],
+        "path_position_normalized": 0.8854155122030833,
+        "path_rotation_deg": 9.915310143340463,
+        "endpoint_position_normalized": 1.3268808784454649,
+        "endpoint_rotation_deg": 14.783837884331922
+      },
+      "replacement": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 0,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7726325904922317,
+            "endpoint_position_normalized": 1.4748264118900878,
+            "path_rotation_deg": 9.768918039397873,
+            "endpoint_rotation_deg": 19.343745172828253
+          },
+          {
+            "selection_index": 1,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 3.124138502921685,
+            "endpoint_position_normalized": 4.3908480669960674,
+            "path_rotation_deg": 22.28247011650065,
+            "endpoint_rotation_deg": 29.465650453918233
+          },
+          {
+            "selection_index": 2,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.9006407713154877,
+            "endpoint_position_normalized": 1.2322395439794207,
+            "path_rotation_deg": 10.521107456456791,
+            "endpoint_rotation_deg": 13.977979836884069
+          },
+          {
+            "selection_index": 3,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.210003532068106,
+            "endpoint_position_normalized": 1.4254242676470552,
+            "path_rotation_deg": 6.819516139075411,
+            "endpoint_rotation_deg": 2.8286717415333675
+          },
+          {
+            "selection_index": 4,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.48610196917362697,
+            "endpoint_position_normalized": 0.7071990555953711,
+            "path_rotation_deg": 6.331561690343459,
+            "endpoint_rotation_deg": 9.99101205938694
+          },
+          {
+            "selection_index": 5,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.5879738144853895,
+            "endpoint_position_normalized": 0.8165476494804417,
+            "path_rotation_deg": 11.184134633216503,
+            "endpoint_rotation_deg": 24.74578487089549
+          },
+          {
+            "selection_index": 6,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7171624822295344,
+            "endpoint_position_normalized": 1.0174922258449814,
+            "path_rotation_deg": 8.331808979475154,
+            "endpoint_rotation_deg": 8.989506729538999
+          },
+          {
+            "selection_index": 7,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.3902994397787696,
+            "endpoint_position_normalized": 1.552139266451622,
+            "path_rotation_deg": 6.155594165916363,
+            "endpoint_rotation_deg": 8.673881798856874
+          }
+        ],
+        "path_position_normalized": 1.1486191378081039,
+        "path_rotation_deg": 10.174388902547776,
+        "endpoint_position_normalized": 1.5770895609856308,
+        "endpoint_rotation_deg": 14.752029082980279
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 0,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.0292255725236101,
+            "endpoint_position_normalized": 1.6002881068553396,
+            "path_rotation_deg": 13.166058529486728,
+            "endpoint_rotation_deg": 21.61163181873397
+          },
+          {
+            "selection_index": 1,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.287129606582785,
+            "endpoint_position_normalized": 3.057336661237219,
+            "path_rotation_deg": 24.508943936020327,
+            "endpoint_rotation_deg": 27.39855343686015
+          },
+          {
+            "selection_index": 2,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.8309097339021925,
+            "endpoint_position_normalized": 1.9329965746280457,
+            "path_rotation_deg": 23.27949050710534,
+            "endpoint_rotation_deg": 24.424199413875897
+          },
+          {
+            "selection_index": 3,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.5926283136021961,
+            "endpoint_position_normalized": 1.89044266224167,
+            "path_rotation_deg": 12.734779347520131,
+            "endpoint_rotation_deg": 10.480032730583456
+          },
+          {
+            "selection_index": 4,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.8799170599132419,
+            "endpoint_position_normalized": 1.0905063196774445,
+            "path_rotation_deg": 13.00271085365932,
+            "endpoint_rotation_deg": 17.268905963664288
+          },
+          {
+            "selection_index": 5,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.078665305706405,
+            "endpoint_position_normalized": 1.5499121236468687,
+            "path_rotation_deg": 11.391280795304256,
+            "endpoint_rotation_deg": 25.61791090665797
+          },
+          {
+            "selection_index": 6,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.8520585277220438,
+            "endpoint_position_normalized": 0.9626344255186625,
+            "path_rotation_deg": 15.196172071076747,
+            "endpoint_rotation_deg": 11.673143824722876
+          },
+          {
+            "selection_index": 7,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 3.113368582018439,
+            "endpoint_position_normalized": 3.257470832014992,
+            "path_rotation_deg": 25.72621959575101,
+            "endpoint_rotation_deg": 26.81217579406989
+          }
+        ],
+        "path_position_normalized": 1.5829878377463642,
+        "path_rotation_deg": 17.375706954490482,
+        "endpoint_position_normalized": 1.9176984632275302,
+        "endpoint_rotation_deg": 20.66081923614606
+      }
+    },
+    "Language Table": {
+      "source232587": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y"
+        ],
+        "per_window": [
+          {
+            "selection_index": 8,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.40338015567274593,
+            "endpoint_position_normalized": 0.52899737649016,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 9,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.6825723715268829,
+            "endpoint_position_normalized": 1.2578146889280146,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 10,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.9053635609087557,
+            "endpoint_position_normalized": 1.275182330508135,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 11,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 2.2172636190998896,
+            "endpoint_position_normalized": 2.366749471121128,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 12,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.8526047258818102,
+            "endpoint_position_normalized": 1.2764014866697913,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 13,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.131049543426975,
+            "endpoint_position_normalized": 1.3534043726860252,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 14,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 2.04614214631898,
+            "endpoint_position_normalized": 1.5782407686870323,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 15,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.6905840586733871,
+            "endpoint_position_normalized": 1.026158670466296,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          }
+        ],
+        "path_position_normalized": 1.1161200226886783,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 1.3328686456945729,
+        "endpoint_rotation_deg": null
+      },
+      "static": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y"
+        ],
+        "per_window": [
+          {
+            "selection_index": 8,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.48594934842820736,
+            "endpoint_position_normalized": 0.6249351499731395,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 9,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.5566791320310218,
+            "endpoint_position_normalized": 1.3328877314365855,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 10,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.8288959414755362,
+            "endpoint_position_normalized": 1.1129489401165265,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 11,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.7117199593915797,
+            "endpoint_position_normalized": 1.8305693065303625,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 12,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.21625412907739597,
+            "endpoint_position_normalized": 0.2506467242278024,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 13,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.30742564924905896,
+            "endpoint_position_normalized": 0.31464248924226174,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 14,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.3540428320516043,
+            "endpoint_position_normalized": 0.7247650635103821,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 15,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.52246300605105,
+            "endpoint_position_normalized": 0.7331277220716393,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          }
+        ],
+        "path_position_normalized": 0.6229287497194318,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 0.8655653908885874,
+        "endpoint_rotation_deg": null
+      },
+      "replacement": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y"
+        ],
+        "per_window": [
+          {
+            "selection_index": 8,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.5321750023506694,
+            "endpoint_position_normalized": 0.6624736123708195,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 9,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.7878158031451608,
+            "endpoint_position_normalized": 1.625161620024837,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 10,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.7373129403956532,
+            "endpoint_position_normalized": 1.065762149736542,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 11,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.5829924472639776,
+            "endpoint_position_normalized": 1.5220622002376027,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 12,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.4606158041248631,
+            "endpoint_position_normalized": 0.6280724605036864,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 13,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.41370571093877306,
+            "endpoint_position_normalized": 0.5026652158292036,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 14,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.3672551086192962,
+            "endpoint_position_normalized": 0.6260443419120173,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 15,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.4507246884550554,
+            "endpoint_position_normalized": 0.6286055534699043,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          }
+        ],
+        "path_position_normalized": 0.6665746881616811,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 0.9076058942605767,
+        "endpoint_rotation_deg": null
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y"
+        ],
+        "per_window": [
+          {
+            "selection_index": 8,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.4263025601038611,
+            "endpoint_position_normalized": 0.49430793504399406,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 9,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.079198308312869,
+            "endpoint_position_normalized": 1.995276108474939,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 10,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.3781784123198555,
+            "endpoint_position_normalized": 1.8931244200998971,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 11,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.5729388542474363,
+            "endpoint_position_normalized": 1.7710973475548972,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 12,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.5051409677177727,
+            "endpoint_position_normalized": 2.311292000017733,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 13,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.7622292628213019,
+            "endpoint_position_normalized": 1.1968012677836855,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 14,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 0.9725826950461677,
+            "endpoint_position_normalized": 1.018337057924746,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          },
+          {
+            "selection_index": 15,
+            "position_axes": [
+              "x",
+              "y"
+            ],
+            "path_position_normalized": 1.2604083934749004,
+            "endpoint_position_normalized": 2.1384146769599064,
+            "path_rotation_deg": null,
+            "endpoint_rotation_deg": null
+          }
+        ],
+        "path_position_normalized": 1.2446224317555206,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 1.6023313517324747,
+        "endpoint_rotation_deg": null
+      }
+    },
+    "BC-Z": {
+      "source232587": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 16,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.4268157260875338,
+            "endpoint_position_normalized": 2.1193305915837635,
+            "path_rotation_deg": 16.445223446373955,
+            "endpoint_rotation_deg": 18.724281424904476
+          },
+          {
+            "selection_index": 17,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.1258970883388466,
+            "endpoint_position_normalized": 2.4809829308307836,
+            "path_rotation_deg": 28.0641694473065,
+            "endpoint_rotation_deg": 33.36917304933379
+          },
+          {
+            "selection_index": 18,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7795713286213211,
+            "endpoint_position_normalized": 1.4268768472296405,
+            "path_rotation_deg": 9.66402839115117,
+            "endpoint_rotation_deg": 12.32035036241927
+          },
+          {
+            "selection_index": 19,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.3415368196988153,
+            "endpoint_position_normalized": 1.8343387366126211,
+            "path_rotation_deg": 6.740367346291049,
+            "endpoint_rotation_deg": 10.96785532375433
+          },
+          {
+            "selection_index": 20,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.538919701973471,
+            "endpoint_position_normalized": 2.818435874151699,
+            "path_rotation_deg": 14.462650143819104,
+            "endpoint_rotation_deg": 24.908742778448175
+          },
+          {
+            "selection_index": 21,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.125920795554979,
+            "endpoint_position_normalized": 3.0059224729537184,
+            "path_rotation_deg": 14.072391759825825,
+            "endpoint_rotation_deg": 10.763397168665099
+          },
+          {
+            "selection_index": 22,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.4652723128691354,
+            "endpoint_position_normalized": 1.5140607433019948,
+            "path_rotation_deg": 12.303363423035412,
+            "endpoint_rotation_deg": 17.04045967374918
+          },
+          {
+            "selection_index": 23,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7893495059478676,
+            "endpoint_position_normalized": 1.2852755633335202,
+            "path_rotation_deg": 4.952716722925226,
+            "endpoint_rotation_deg": 7.3443901523706865
+          }
+        ],
+        "path_position_normalized": 1.3241604098864963,
+        "path_rotation_deg": 13.338113835091029,
+        "endpoint_position_normalized": 2.0606529699997176,
+        "endpoint_rotation_deg": 16.929831241705624
+      },
+      "static": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 16,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.3800949284186597,
+            "endpoint_position_normalized": 0.5501906025726289,
+            "path_rotation_deg": 11.341076263666352,
+            "endpoint_rotation_deg": 13.86038971712012
+          },
+          {
+            "selection_index": 17,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.2985899222097226,
+            "endpoint_position_normalized": 2.1074639339147865,
+            "path_rotation_deg": 21.98127007007163,
+            "endpoint_rotation_deg": 26.072852936609422
+          },
+          {
+            "selection_index": 18,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.6332401085332501,
+            "endpoint_position_normalized": 1.0038691820008079,
+            "path_rotation_deg": 6.343359030959834,
+            "endpoint_rotation_deg": 8.1770162555841
+          },
+          {
+            "selection_index": 19,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.3736944618412073,
+            "endpoint_position_normalized": 0.4160339340059864,
+            "path_rotation_deg": 4.554872606231604,
+            "endpoint_rotation_deg": 5.4484145635490995
+          },
+          {
+            "selection_index": 20,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7833774967269757,
+            "endpoint_position_normalized": 2.783062850224129,
+            "path_rotation_deg": 8.391663849502713,
+            "endpoint_rotation_deg": 26.015925992152372
+          },
+          {
+            "selection_index": 21,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.4459059054132082,
+            "endpoint_position_normalized": 1.012148318794963,
+            "path_rotation_deg": 3.575795227711185,
+            "endpoint_rotation_deg": 12.709169489288778
+          },
+          {
+            "selection_index": 22,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.14526841639466306,
+            "endpoint_position_normalized": 0.377853013176958,
+            "path_rotation_deg": 3.1165307761257908,
+            "endpoint_rotation_deg": 8.651438417304426
+          },
+          {
+            "selection_index": 23,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.31148010159369593,
+            "endpoint_position_normalized": 0.4564359158766415,
+            "path_rotation_deg": 6.703801053923389,
+            "endpoint_rotation_deg": 11.09488750198822
+          }
+        ],
+        "path_position_normalized": 0.5464564176414228,
+        "path_rotation_deg": 8.251046109774062,
+        "endpoint_position_normalized": 1.0883822188208625,
+        "endpoint_rotation_deg": 14.003761859199567
+      },
+      "replacement": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 16,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.4875718948244869,
+            "endpoint_position_normalized": 0.6289561298719857,
+            "path_rotation_deg": 11.381798965441002,
+            "endpoint_rotation_deg": 13.986904277444657
+          },
+          {
+            "selection_index": 17,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.21989594141366,
+            "endpoint_position_normalized": 1.8571870519143125,
+            "path_rotation_deg": 21.652325567968052,
+            "endpoint_rotation_deg": 25.431690396654037
+          },
+          {
+            "selection_index": 18,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.6978391809412954,
+            "endpoint_position_normalized": 0.9790682057413135,
+            "path_rotation_deg": 5.263343236553841,
+            "endpoint_rotation_deg": 7.838893377547682
+          },
+          {
+            "selection_index": 19,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.4218758675172048,
+            "endpoint_position_normalized": 0.6278522517435733,
+            "path_rotation_deg": 5.3559526799631145,
+            "endpoint_rotation_deg": 5.892460118618293
+          },
+          {
+            "selection_index": 20,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.0837812545879426,
+            "endpoint_position_normalized": 2.8518058974259133,
+            "path_rotation_deg": 7.681260995845615,
+            "endpoint_rotation_deg": 25.203397422661144
+          },
+          {
+            "selection_index": 21,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.6536629783459759,
+            "endpoint_position_normalized": 1.3794341660128786,
+            "path_rotation_deg": 3.32448047553194,
+            "endpoint_rotation_deg": 12.328498998265658
+          },
+          {
+            "selection_index": 22,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.2889655767398414,
+            "endpoint_position_normalized": 0.5249534814554078,
+            "path_rotation_deg": 3.155002307970678,
+            "endpoint_rotation_deg": 8.1055745378883
+          },
+          {
+            "selection_index": 23,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.3433450956041341,
+            "endpoint_position_normalized": 0.5999215085466815,
+            "path_rotation_deg": 7.281773514698228,
+            "endpoint_rotation_deg": 12.175949746029369
+          }
+        ],
+        "path_position_normalized": 0.6496172237468176,
+        "path_rotation_deg": 8.136992217996559,
+        "endpoint_position_normalized": 1.1811473365890084,
+        "endpoint_rotation_deg": 13.87042110938864
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 16,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.2557831244581088,
+            "endpoint_position_normalized": 1.4625145045643784,
+            "path_rotation_deg": 20.63416166694533,
+            "endpoint_rotation_deg": 27.091961442685747
+          },
+          {
+            "selection_index": 17,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.9438947131624443,
+            "endpoint_position_normalized": 1.638907511967071,
+            "path_rotation_deg": 31.050033949353377,
+            "endpoint_rotation_deg": 41.304646344096206
+          },
+          {
+            "selection_index": 18,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7435742520818108,
+            "endpoint_position_normalized": 1.141281228795221,
+            "path_rotation_deg": 8.74182330511566,
+            "endpoint_rotation_deg": 10.160554257783946
+          },
+          {
+            "selection_index": 19,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.9788787375287638,
+            "endpoint_position_normalized": 1.6821595782031995,
+            "path_rotation_deg": 9.851914887148128,
+            "endpoint_rotation_deg": 13.36467792735516
+          },
+          {
+            "selection_index": 20,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.185033975904051,
+            "endpoint_position_normalized": 1.6868196414258165,
+            "path_rotation_deg": 14.485183847631689,
+            "endpoint_rotation_deg": 27.309588483953537
+          },
+          {
+            "selection_index": 21,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.3189057924238394,
+            "endpoint_position_normalized": 2.9614039857627605,
+            "path_rotation_deg": 25.21129407612865,
+            "endpoint_rotation_deg": 16.260479648353606
+          },
+          {
+            "selection_index": 22,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.5207874164496641,
+            "endpoint_position_normalized": 0.7048930695075728,
+            "path_rotation_deg": 9.327971867330307,
+            "endpoint_rotation_deg": 15.150610831005158
+          },
+          {
+            "selection_index": 23,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.6294610102168365,
+            "endpoint_position_normalized": 0.9178659328111453,
+            "path_rotation_deg": 8.845681540143884,
+            "endpoint_rotation_deg": 11.644382557119656
+          }
+        ],
+        "path_position_normalized": 1.0720398777781899,
+        "path_rotation_deg": 16.01850814247463,
+        "endpoint_position_normalized": 1.5244806816296457,
+        "endpoint_rotation_deg": 20.285862686544128
+      }
+    },
+    "Fractal": {
+      "source232587": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 24,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.887850672943031,
+            "endpoint_position_normalized": 3.9892953467568453,
+            "path_rotation_deg": 28.153429334772955,
+            "endpoint_rotation_deg": 58.96750953055397
+          },
+          {
+            "selection_index": 25,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.0087100364374244,
+            "endpoint_position_normalized": 3.888264437023146,
+            "path_rotation_deg": 20.662462120574162,
+            "endpoint_rotation_deg": 42.448924732403164
+          },
+          {
+            "selection_index": 26,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.6834234881756296,
+            "endpoint_position_normalized": 4.8214122400203765,
+            "path_rotation_deg": 13.914990148152953,
+            "endpoint_rotation_deg": 25.669939740981373
+          },
+          {
+            "selection_index": 27,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.7839661922538527,
+            "endpoint_position_normalized": 0.6304430242380331,
+            "path_rotation_deg": 25.790200443897675,
+            "endpoint_rotation_deg": 33.67006488795559
+          },
+          {
+            "selection_index": 28,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.420190591190875,
+            "endpoint_position_normalized": 3.824608131346048,
+            "path_rotation_deg": 11.696187004656922,
+            "endpoint_rotation_deg": 16.28550773309239
+          },
+          {
+            "selection_index": 29,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.6188889913375264,
+            "endpoint_position_normalized": 5.018200100775392,
+            "path_rotation_deg": 20.797468110382102,
+            "endpoint_rotation_deg": 30.848173276310618
+          },
+          {
+            "selection_index": 30,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.5772847948337787,
+            "endpoint_position_normalized": 2.045495463415815,
+            "path_rotation_deg": 11.58726535776998,
+            "endpoint_rotation_deg": 13.30803771648049
+          },
+          {
+            "selection_index": 31,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.733376113951207,
+            "endpoint_position_normalized": 4.2574780348840795,
+            "path_rotation_deg": 23.79404230574192,
+            "endpoint_rotation_deg": 33.60247011055447
+          }
+        ],
+        "path_position_normalized": 2.214211360140416,
+        "path_rotation_deg": 19.54950560324358,
+        "endpoint_position_normalized": 3.559399597307467,
+        "endpoint_rotation_deg": 31.85007846604151
+      },
+      "static": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 24,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.8006803406351816,
+            "endpoint_position_normalized": 0.9413735213858866,
+            "path_rotation_deg": 33.17320566829731,
+            "endpoint_rotation_deg": 67.60676034417268
+          },
+          {
+            "selection_index": 25,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.5811271041117045,
+            "endpoint_position_normalized": 3.498408611713663,
+            "path_rotation_deg": 24.10694372842428,
+            "endpoint_rotation_deg": 49.644027871376586
+          },
+          {
+            "selection_index": 26,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.6062061805567895,
+            "endpoint_position_normalized": 2.267639377356109,
+            "path_rotation_deg": 4.179436579418862,
+            "endpoint_rotation_deg": 1.7962122897847699
+          },
+          {
+            "selection_index": 27,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.9424425958983782,
+            "endpoint_position_normalized": 3.4020873304910695,
+            "path_rotation_deg": 28.072837805008778,
+            "endpoint_rotation_deg": 44.10108504342347
+          },
+          {
+            "selection_index": 28,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.20173036197404712,
+            "endpoint_position_normalized": 0.22039433139046563,
+            "path_rotation_deg": 6.9307702579213535,
+            "endpoint_rotation_deg": 11.402617200105189
+          },
+          {
+            "selection_index": 29,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.998606266407763,
+            "endpoint_position_normalized": 2.1265748424364754,
+            "path_rotation_deg": 9.568606042163982,
+            "endpoint_rotation_deg": 13.268024226098712
+          },
+          {
+            "selection_index": 30,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.0602500159854942,
+            "endpoint_position_normalized": 2.1956951968267426,
+            "path_rotation_deg": 10.741290552430309,
+            "endpoint_rotation_deg": 17.680502988839336
+          },
+          {
+            "selection_index": 31,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.872561351632059,
+            "endpoint_position_normalized": 2.5376755582004074,
+            "path_rotation_deg": 16.343679813153113,
+            "endpoint_rotation_deg": 21.380741810774012
+          }
+        ],
+        "path_position_normalized": 1.257950527150177,
+        "path_rotation_deg": 16.639596305852248,
+        "endpoint_position_normalized": 2.1487310962251023,
+        "endpoint_rotation_deg": 28.359996471821844
+      },
+      "replacement": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 24,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.9795278262226566,
+            "endpoint_position_normalized": 1.3268618156199896,
+            "path_rotation_deg": 33.3943023650289,
+            "endpoint_rotation_deg": 67.50660658494013
+          },
+          {
+            "selection_index": 25,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.0246450742957787,
+            "endpoint_position_normalized": 2.3279542069486565,
+            "path_rotation_deg": 23.134810631610133,
+            "endpoint_rotation_deg": 48.41256098451985
+          },
+          {
+            "selection_index": 26,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.7101726992560289,
+            "endpoint_position_normalized": 2.562577050538488,
+            "path_rotation_deg": 5.52909856330961,
+            "endpoint_rotation_deg": 4.78158519578481
+          },
+          {
+            "selection_index": 27,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.5989638954964436,
+            "endpoint_position_normalized": 2.3725865077296935,
+            "path_rotation_deg": 26.199115112715493,
+            "endpoint_rotation_deg": 39.628765904924414
+          },
+          {
+            "selection_index": 28,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.37503664699996403,
+            "endpoint_position_normalized": 0.7868154754602817,
+            "path_rotation_deg": 6.3754955911336495,
+            "endpoint_rotation_deg": 10.169912599226558
+          },
+          {
+            "selection_index": 29,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.1538287901277158,
+            "endpoint_position_normalized": 2.2534417656807455,
+            "path_rotation_deg": 10.183203071914363,
+            "endpoint_rotation_deg": 14.221268096382643
+          },
+          {
+            "selection_index": 30,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.6233825787502275,
+            "endpoint_position_normalized": 0.8834363401725419,
+            "path_rotation_deg": 8.560571523039412,
+            "endpoint_rotation_deg": 15.474665675630078
+          },
+          {
+            "selection_index": 31,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.747103194354688,
+            "endpoint_position_normalized": 2.1438229640449165,
+            "path_rotation_deg": 17.637236528358482,
+            "endpoint_rotation_deg": 24.39824685952577
+          }
+        ],
+        "path_position_normalized": 1.1515825881879378,
+        "path_rotation_deg": 16.376729173388753,
+        "endpoint_position_normalized": 1.832187015774414,
+        "endpoint_rotation_deg": 28.07420148761678
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "position_axes": [
+          "x",
+          "y",
+          "z"
+        ],
+        "per_window": [
+          {
+            "selection_index": 24,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.1432792234634195,
+            "endpoint_position_normalized": 2.7537117563045643,
+            "path_rotation_deg": 25.056768030171668,
+            "endpoint_rotation_deg": 52.614430520986765
+          },
+          {
+            "selection_index": 25,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.1078186044319316,
+            "endpoint_position_normalized": 2.899463532366578,
+            "path_rotation_deg": 15.464040727491152,
+            "endpoint_rotation_deg": 28.759272276910725
+          },
+          {
+            "selection_index": 26,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.0702142361673113,
+            "endpoint_position_normalized": 1.4539025249551898,
+            "path_rotation_deg": 19.159606609403106,
+            "endpoint_rotation_deg": 25.561502305507435
+          },
+          {
+            "selection_index": 27,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 0.8518213672102676,
+            "endpoint_position_normalized": 0.9191917716828543,
+            "path_rotation_deg": 23.28372903325315,
+            "endpoint_rotation_deg": 31.644253747517507
+          },
+          {
+            "selection_index": 28,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 1.833851384990851,
+            "endpoint_position_normalized": 3.266051351255669,
+            "path_rotation_deg": 10.391904434164866,
+            "endpoint_rotation_deg": 15.531020938622532
+          },
+          {
+            "selection_index": 29,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.6695698163526766,
+            "endpoint_position_normalized": 3.750607283565278,
+            "path_rotation_deg": 29.526895126561126,
+            "endpoint_rotation_deg": 34.008827097565764
+          },
+          {
+            "selection_index": 30,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.3197091844944944,
+            "endpoint_position_normalized": 1.6549244001402748,
+            "path_rotation_deg": 25.83257403219601,
+            "endpoint_rotation_deg": 24.27115241691693
+          },
+          {
+            "selection_index": 31,
+            "position_axes": [
+              "x",
+              "y",
+              "z"
+            ],
+            "path_position_normalized": 2.8942344407465335,
+            "endpoint_position_normalized": 3.3967889174636166,
+            "path_rotation_deg": 48.1179732659888,
+            "endpoint_rotation_deg": 66.62819992094627
+          }
+        ],
+        "path_position_normalized": 1.9863122822321857,
+        "path_rotation_deg": 24.604186407403734,
+        "endpoint_position_normalized": 2.5118301922167534,
+        "endpoint_rotation_deg": 34.87733240312174
+      }
+    }
+  },
+  "train32_anchor_motion": {
+    "Bridge": {
+      "source232587": {
+        "windows": 8,
+        "prediction_amplitude": 1.183179989974338,
+        "expert_amplitude": 0.8854155122030832,
+        "prediction_to_expert_amplitude_ratio": 1.336299142794957,
+        "mean_direction_cosine_nonzero_pairs": -0.10317472494364231,
+        "positive_direction_fraction_nonzero_pairs": 0.4573502886002886,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "static": {
+        "windows": 8,
+        "prediction_amplitude": 0.0,
+        "expert_amplitude": 0.8854155122030832,
+        "prediction_to_expert_amplitude_ratio": 0.0,
+        "mean_direction_cosine_nonzero_pairs": null,
+        "positive_direction_fraction_nonzero_pairs": null,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "replacement": {
+        "windows": 8,
+        "prediction_amplitude": 0.5435098792279383,
+        "expert_amplitude": 0.8854155122030832,
+        "prediction_to_expert_amplitude_ratio": 0.6138472522077026,
+        "mean_direction_cosine_nonzero_pairs": -0.23386360573159343,
+        "positive_direction_fraction_nonzero_pairs": 0.31292087542087543,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "prediction_amplitude": 1.083566418709717,
+        "expert_amplitude": 0.8854155122030832,
+        "prediction_to_expert_amplitude_ratio": 1.2237942567931708,
+        "mean_direction_cosine_nonzero_pairs": -0.12269455635156229,
+        "positive_direction_fraction_nonzero_pairs": 0.4437560125060125,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    },
+    "Language Table": {
+      "source232587": {
+        "windows": 8,
+        "prediction_amplitude": 0.8605760385213063,
+        "expert_amplitude": 0.6229287497194318,
+        "prediction_to_expert_amplitude_ratio": 1.3814999530988274,
+        "mean_direction_cosine_nonzero_pairs": 0.006855481543597122,
+        "positive_direction_fraction_nonzero_pairs": 0.515625,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "static": {
+        "windows": 8,
+        "prediction_amplitude": 0.0,
+        "expert_amplitude": 0.6229287497194318,
+        "prediction_to_expert_amplitude_ratio": 0.0,
+        "mean_direction_cosine_nonzero_pairs": null,
+        "positive_direction_fraction_nonzero_pairs": null,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "replacement": {
+        "windows": 8,
+        "prediction_amplitude": 0.40291137217357414,
+        "expert_amplitude": 0.6229287497194318,
+        "prediction_to_expert_amplitude_ratio": 0.646801696590575,
+        "mean_direction_cosine_nonzero_pairs": 0.09640821487067414,
+        "positive_direction_fraction_nonzero_pairs": 0.5646494708994709,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "prediction_amplitude": 1.0999603531007374,
+        "expert_amplitude": 0.6229287497194318,
+        "prediction_to_expert_amplitude_ratio": 1.7657883884732586,
+        "mean_direction_cosine_nonzero_pairs": -0.09669756269586288,
+        "positive_direction_fraction_nonzero_pairs": 0.4551917989417989,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    },
+    "BC-Z": {
+      "source232587": {
+        "windows": 8,
+        "prediction_amplitude": 1.3109615168483606,
+        "expert_amplitude": 0.5464564176414228,
+        "prediction_to_expert_amplitude_ratio": 2.3990230044449685,
+        "mean_direction_cosine_nonzero_pairs": 0.056061489847331517,
+        "positive_direction_fraction_nonzero_pairs": 0.5119791666666667,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "static": {
+        "windows": 8,
+        "prediction_amplitude": 0.0,
+        "expert_amplitude": 0.5464564176414228,
+        "prediction_to_expert_amplitude_ratio": 0.0,
+        "mean_direction_cosine_nonzero_pairs": null,
+        "positive_direction_fraction_nonzero_pairs": null,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "replacement": {
+        "windows": 8,
+        "prediction_amplitude": 0.32340883143942156,
+        "expert_amplitude": 0.5464564176414228,
+        "prediction_to_expert_amplitude_ratio": 0.5918291395227753,
+        "mean_direction_cosine_nonzero_pairs": 0.08069995881530137,
+        "positive_direction_fraction_nonzero_pairs": 0.6005208333333334,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "prediction_amplitude": 0.9868584526392026,
+        "expert_amplitude": 0.5464564176414228,
+        "prediction_to_expert_amplitude_ratio": 1.805923438320319,
+        "mean_direction_cosine_nonzero_pairs": 0.1365941735907966,
+        "positive_direction_fraction_nonzero_pairs": 0.6635416666666667,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    },
+    "Fractal": {
+      "source232587": {
+        "windows": 8,
+        "prediction_amplitude": 2.0356807826273684,
+        "expert_amplitude": 1.2579505271501772,
+        "prediction_to_expert_amplitude_ratio": 1.61825186181137,
+        "mean_direction_cosine_nonzero_pairs": 0.04565768309399281,
+        "positive_direction_fraction_nonzero_pairs": 0.5390625,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "static": {
+        "windows": 8,
+        "prediction_amplitude": 0.0,
+        "expert_amplitude": 1.2579505271501772,
+        "prediction_to_expert_amplitude_ratio": 0.0,
+        "mean_direction_cosine_nonzero_pairs": null,
+        "positive_direction_fraction_nonzero_pairs": null,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "replacement": {
+        "windows": 8,
+        "prediction_amplitude": 0.7476754810156789,
+        "expert_amplitude": 1.2579505271501772,
+        "prediction_to_expert_amplitude_ratio": 0.594360004530146,
+        "mean_direction_cosine_nonzero_pairs": 0.43684834401126604,
+        "positive_direction_fraction_nonzero_pairs": 0.8020833333333333,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      },
+      "moderate_pool": {
+        "windows": 8,
+        "prediction_amplitude": 2.3277683094640045,
+        "expert_amplitude": 1.2579505271501772,
+        "prediction_to_expert_amplitude_ratio": 1.8504450367674197,
+        "mean_direction_cosine_nonzero_pairs": 0.3890262580863715,
+        "positive_direction_fraction_nonzero_pairs": 0.7760416666666666,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    }
+  },
+  "all_source_training_anchor_basic_passed": false,
+  "limited_training_anchor_support": false,
+  "scope": "Predeclared32seen-training anchors within512pool; not all512evaluated, not generalization. Reused88development windows descriptive only. One source training seed, different allocation from old control; bootstrap excludes training-seed uncertainty.",
+  "automatic_following_action": false
+}

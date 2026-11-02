@@ -1,0 +1,26 @@
+test_bound_full_material_and_mean_are_source_only (__main__.Checks) ... ok
+test_new_endpoint_strict_restore_and_old_format_rejection (__main__.Checks) ... ok
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.822375476360321, "pose_loss": 0.6327161192893982, "gripper_loss": 0.7586374878883362, "update": 1, "indices": [0, 1], "lr": [1e-05, 1e-05, 1e-05], "gradient_norm": 2.0904812812805176}
+BRIDGE_CAPABILITY_UPDATE {"loss": 0.9774074554443359, "pose_loss": 0.7877574563026428, "gripper_loss": 0.7585999965667725, "update": 2, "indices": [0, 1], "lr": [1e-05, 1e-05, 1e-05], "gradient_norm": 2.2184274196624756}
+test_new_targets_reach_native_loss_and_full_adam_rng_restore (__main__.Checks) ... ok
+test_online_goal_persists_and_old_pose_callback_rejected (__main__.Checks) ... ok
+test_saved_metric_sense_first_command_gate_and_masks (__main__.Checks) ... ok
+test_source_phase_clipping_fractional_masks_and_episode_tail (__main__.Checks) ... ok
+test_source_reader_pairs_current_image_text_and_command_without_old_target_cache (__main__.Checks) ... WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793452638.009758   49132 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1793452640.809604   49132 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+D:\ntu_related\dissertation\Zero_shot\training_cache\libero_native_env_v1\lib\site-packages\matplotlib\_fontconfig_pattern.py:88: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+D:\ntu_related\dissertation\Zero_shot\training_cache\libero_native_env_v1\lib\site-packages\matplotlib\_fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+D:\ntu_related\dissertation\Zero_shot\training_cache\libero_native_env_v1\lib\site-packages\matplotlib\_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In D:\ntu_related\dissertation\Zero_shot\training_cache\libero_native_env_v1\lib\site-packages\matplotlib\mpl-data\stylelib\classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In D:\ntu_related\dissertation\Zero_shot\training_cache\libero_native_env_v1\lib\site-packages\matplotlib\mpl-data\stylelib\classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.298s
+
+OK

@@ -1,0 +1,23 @@
+{
+  "format": "zero-shot-core-project-constraints-v1",
+  "date": "2026-10-31",
+  "source": "User explicitly reaffirmed zero-shot generalization as the core innovation and said not to change direction except as a last resort",
+  "core_objective": "Train on OXE source demonstrations; evaluate zero-shot robot/task transfer on LIBERO with the teacher-required language augmentation comparisons",
+  "default_research_route_unchanged": true,
+  "mainline_uses_libero_demonstrations_for_policy_or_learned_executor_training": false,
+  "libero_supervised236840_role": "Independent closed same-task supervised positive control5/5; not a zero-shot model or formal13-model result",
+  "libero_supervised_weights_and_demo_fitted_normalizers_may_enter_zero_shot_mainline": false,
+  "current_observations_and_explicit_nonlearned_robot_controller_geometry_allowed": true,
+  "source_only_action_label_frame_state_interface_or_optimization_changes_may_be_proposed": true,
+  "source_only_changes_require_explicit_semantics_evidence_reviewable_code_and_budget": true,
+  "changes_to_action_representation_do_not_by_themselves_change_the_zero_shot_research_objective": true,
+  "preserve_existing8D_policy_interface_by_default": true,
+  "different_internal_or_external_representation_requires_clear_separate_proposal": true,
+  "formal_libero40_tasks_not_for_tuning_or_checkpoint_selection": true,
+  "teacher13_model_matrix_still_required": true,
+  "scope_change_requires_separate_explicit_user_decision_and_teacher_alignment": true,
+  "no_automatic_route_change_from_failed_experiments": true,
+  "no_automatic_new_training_submission": true,
+  "closed_experiments_and_language_tools_remain_closed": true,
+  "new_training_or_simulation_authorized_by_this_preference_message": false
+}

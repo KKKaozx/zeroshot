@@ -1,0 +1,52 @@
+{
+  "status": "B2_software_pose_port_interface_fixed_CPU_checked_physical_contract_still_blocked",
+  "tests_run": 4,
+  "failures": 0,
+  "errors": 0,
+  "test_seconds_excluding_imports": 0.037,
+  "test_command": "training_cache/libero_native_env_v1/Scripts/python.exe -m unittest discover -s tests -p test_libero_pose_policy.py -v",
+  "checks": [
+    "Nonidentity units, axes, tool rotation and TCP offsets match independent world-pose construction",
+    "Frozen18D training encoder and nonzero learned port contribute to actual callback sampler context; output callback maps actual sampled values",
+    "Base and port learned groups restore together; missing port and base-only reader are rejected",
+    "Missing mapping facts and full local checkpoint fail before pretrained model loading; legacy default context remains unchanged"
+  ],
+  "fixed_software_blocker": "Latest Bridge diagnostic state is no longer omitted at the LIBERO callback boundary",
+  "source_capability_fixed": false,
+  "physical_calibration_established": false,
+  "contact_execution_fixed": false,
+  "full_B2_resolved": false,
+  "frozen_runtime_file_compatibility": {
+    "models.py": true,
+    "adapter.py": true,
+    "diffusion_decoder.py": true,
+    "frozen_visual_backbone.py": true,
+    "dataset.py": true,
+    "cartesian_action_contract.py": true
+  },
+  "real_234100_checkpoint_loader_executed": false,
+  "real_pretrained_models_loaded": 0,
+  "real_policy_sampling_calls": 0,
+  "synthetic_sampler_calls_in_final_test_run": 2,
+  "physics_steps": 0,
+  "training_updates": 0,
+  "new_cluster_jobs": 0,
+  "new_language_generation_or_tool_work": false,
+  "missing_mapping_fields": [
+    "target_meters_per_source_unit",
+    "source_axes_to_target",
+    "source_origin_in_target_m",
+    "right_tool_alignment",
+    "source_eef_to_point_source_units",
+    "target_eef_to_point_m",
+    "evidence"
+  ],
+  "missing_checkpoint": "/projects/Zeroshot/runs/bridge-full-capability-234100/final_policy.pt (not in local small-results archive)",
+  "formal_matrix_or_scoring_released": false,
+  "source_sha256": {
+    "code/libero_project_policy.py": "e495a8f49c8d9f8d63f5fe091c244f1ab4db03d7c1f7353ffc7af389394c54e4",
+    "code/libero_pose_policy.py": "8c93fe5b1a30940e5e292dd70f23a972c8b1bb1de47ed4c70745b51a6a9cd91b",
+    "code/libero_pose_transfer.py": "b7719856bdddca239098b9c319271bae4ddac3f6a952c0f899dfa8548008d08d",
+    "tests/test_libero_pose_policy.py": "746fc690c9786b60448715b436983c7889fcb42adec6b1cf4d27e90bb5a43f05"
+  }
+}

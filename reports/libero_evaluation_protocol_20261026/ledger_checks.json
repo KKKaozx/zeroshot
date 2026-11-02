@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": {
+    "stop_on_native_goal_with_partial_prefix": true,
+    "unknown_command_then_executed_history": true,
+    "native_timeout_is_failure_and_settle_excluded": true,
+    "done_goal_disagreement_is_technical_error": true,
+    "simultaneous_worker_rejected": true,
+    "technical_error_not_completed_or_resampled": true,
+    "partial_not_published_as_final": true,
+    "duplicate_completed_slot_rejected": true,
+    "resume_skips_only_completed_fixed_slot": true,
+    "complete_denominator_includes_timeout_failure": true,
+    "changed_identity_rejected": true,
+    "tampered_completed_record_rejected": true
+  },
+  "training_updates": 0,
+  "real_policy_forwards": 0,
+  "real_physics_steps": 0,
+  "formal_episodes_completed": 0
+}

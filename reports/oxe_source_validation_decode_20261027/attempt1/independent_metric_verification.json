@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "target_and_mask_arrays_exactly_match_bound_validation_cache": true,
+  "raw_observed_position_reconstruction_max_error_recorded_units": 1.0430812852346705e-08,
+  "independent_float64_position_metric_max_error_normalized": 5.6637804668469016e-08,
+  "independent_scipy_rotation_metric_max_error_deg": 3.560352013209922e-11,
+  "all32_selected_windows_checked": true,
+  "model_and_frozen_digests_unchanged": true,
+  "models_loaded": 0,
+  "new_inference_calls": 0,
+  "training_updates": 0,
+  "source_result": "All four source window-equal valid-path position ratios exceed1 on this fixed small diagnostic sample; not a full-source or final task-success verdict",
+  "interpretation": "A LIBERO executor change alone cannot fix the source-validation prediction errors observed here"
+}

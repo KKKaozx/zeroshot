@@ -1,0 +1,219 @@
+{
+  "available_small_artifacts_verified_locally": true,
+  "missing_required_small_files": [],
+  "standalone_startup_checks_file_required": false,
+  "startup_checks_source": "Embedded report.json and latest.json, compared exactly",
+  "matched_contract_checks_passed": true,
+  "development_reward_series_recomputed": true,
+  "all_scores_match_user_terminal": true,
+  "summaries": {
+    "native": {
+      "mean_score": 0.8458782546929152,
+      "full_reward_count": 10,
+      "mean_final_overlap_reward": 0.8055606402176736,
+      "episodes_max_overlap_at_most_0_1": 1,
+      "low_overlap_threshold_is_descriptive_not_task_success": true
+    },
+    "project": {
+      "mean_score": 0.44548841481267654,
+      "full_reward_count": 5,
+      "mean_final_overlap_reward": 0.30212699884447575,
+      "episodes_max_overlap_at_most_0_1": 8,
+      "low_overlap_threshold_is_descriptive_not_task_success": true
+    }
+  },
+  "paired": [
+    {
+      "environment_seed": 5000000,
+      "native_score": 1.0,
+      "project_score": 0.3637322550695917,
+      "project_minus_native": -0.6362677449304083
+    },
+    {
+      "environment_seed": 5000001,
+      "native_score": 1.0,
+      "project_score": 1.0,
+      "project_minus_native": 0.0
+    },
+    {
+      "environment_seed": 5000002,
+      "native_score": 0.9876781797734817,
+      "project_score": 0.0,
+      "project_minus_native": -0.9876781797734817
+    },
+    {
+      "environment_seed": 5000003,
+      "native_score": 1.0,
+      "project_score": 0.9874557207637781,
+      "project_minus_native": -0.012544279236221922
+    },
+    {
+      "environment_seed": 5000004,
+      "native_score": 1.0,
+      "project_score": 1.0,
+      "project_minus_native": 0.0
+    },
+    {
+      "environment_seed": 5000005,
+      "native_score": 1.0,
+      "project_score": 0.02879175888484829,
+      "project_minus_native": -0.9712082411151517
+    },
+    {
+      "environment_seed": 5000006,
+      "native_score": 0.0,
+      "project_score": 0.0,
+      "project_minus_native": 0.0
+    },
+    {
+      "environment_seed": 5000007,
+      "native_score": 1.0,
+      "project_score": 0.42546546465641466,
+      "project_minus_native": -0.5745345353435853
+    },
+    {
+      "environment_seed": 5000008,
+      "native_score": 0.9929088405709702,
+      "project_score": 0.9871157088135433,
+      "project_minus_native": -0.005793131757426906
+    },
+    {
+      "environment_seed": 5000009,
+      "native_score": 1.0,
+      "project_score": 0.0027810690949989832,
+      "project_minus_native": -0.997218930905001
+    },
+    {
+      "environment_seed": 5000010,
+      "native_score": 0.9206067350770438,
+      "project_score": 1.0,
+      "project_minus_native": 0.07939326492295617
+    },
+    {
+      "environment_seed": 5000011,
+      "native_score": 0.4811852791782408,
+      "project_score": 0.04688149302566976,
+      "project_minus_native": -0.43430378615257104
+    },
+    {
+      "environment_seed": 5000012,
+      "native_score": 0.9359121706883831,
+      "project_score": 0.5341460756519678,
+      "project_minus_native": -0.40176609503641525
+    },
+    {
+      "environment_seed": 5000013,
+      "native_score": 1.0,
+      "project_score": 0.05340065111143002,
+      "project_minus_native": -0.94659934888857
+    },
+    {
+      "environment_seed": 5000014,
+      "native_score": 1.0,
+      "project_score": 0.29364770282660235,
+      "project_minus_native": -0.7063522971733976
+    },
+    {
+      "environment_seed": 5000015,
+      "native_score": 1.0,
+      "project_score": 0.16046960640743033,
+      "project_minus_native": -0.8395303935925696
+    },
+    {
+      "environment_seed": 5000016,
+      "native_score": 0.840749640865179,
+      "project_score": 0.02588078994725578,
+      "project_minus_native": -0.8148688509179233
+    },
+    {
+      "environment_seed": 5000017,
+      "native_score": 0.9889069961956148,
+      "project_score": 1.0,
+      "project_minus_native": 0.01109300380438516
+    },
+    {
+      "environment_seed": 5000018,
+      "native_score": 0.2481273361558994,
+      "project_score": 1.0,
+      "project_minus_native": 0.7518726638441006
+    },
+    {
+      "environment_seed": 5000019,
+      "native_score": 0.5214899153534908,
+      "project_score": 0.0,
+      "project_minus_native": -0.5214899153534908
+    }
+  ],
+  "videos": [
+    {
+      "group": "native",
+      "seed": 5000000,
+      "video": "reports\\pusht_native_212158\\development_seed_5000000.mp4",
+      "frames_decoded": 185,
+      "fps": 10.0,
+      "video_sha256": "4bce98cfd9a23fceb77077fc79a46c76507d4b9e51d170baa906b834c4f3f2e6",
+      "first_recorded_reward": 0.0,
+      "peak_reward": 1.0,
+      "first_peak_step": 185,
+      "last_reward": 1.0,
+      "notes": "Frame1 is post-first recorded environment step, not a guaranteed reset screenshot"
+    },
+    {
+      "group": "project",
+      "seed": 5000000,
+      "video": "reports\\pusht_project_215999\\development_seed_5000000.mp4",
+      "frames_decoded": 300,
+      "fps": 10.0,
+      "video_sha256": "6e0a6213999fa7a1e7a1fc87e562d1156ed49b6ca38f5f49b84d25a44e0a5053",
+      "first_recorded_reward": 0.0,
+      "peak_reward": 0.3637322550695917,
+      "first_peak_step": 67,
+      "last_reward": 0.0,
+      "notes": "Frame1 is post-first recorded environment step, not a guaranteed reset screenshot"
+    },
+    {
+      "group": "native",
+      "seed": 5000001,
+      "video": "reports\\pusht_native_212158\\development_seed_5000001.mp4",
+      "frames_decoded": 89,
+      "fps": 10.0,
+      "video_sha256": "52b729a281af39fd0de2d52baf868e36abf8a5c77d79b59441eb53eab9dabe98",
+      "first_recorded_reward": 0.07772467807649266,
+      "peak_reward": 1.0,
+      "first_peak_step": 89,
+      "last_reward": 1.0,
+      "notes": "Frame1 is post-first recorded environment step, not a guaranteed reset screenshot"
+    },
+    {
+      "group": "project",
+      "seed": 5000001,
+      "video": "reports\\pusht_project_215999\\development_seed_5000001.mp4",
+      "frames_decoded": 97,
+      "fps": 10.0,
+      "video_sha256": "810476041a44d43cf37e040654b8c5a63c09fe154478e75dbc19cf9c7aebf173",
+      "first_recorded_reward": 0.07559852708419784,
+      "peak_reward": 1.0,
+      "first_peak_step": 97,
+      "last_reward": 1.0,
+      "notes": "Frame1 is post-first recorded environment step, not a guaranteed reset screenshot"
+    }
+  ],
+  "video_review_scope": "Only first2 prespecified scenes per group; no final50 access",
+  "checkpoint_sha256_agrees_between_received_metadata": true,
+  "checkpoint_bytes_verified_locally": false,
+  "updates_jsonl_verified_locally": false,
+  "full_checkpoint_and_update_log_verification": "Already reported passed on server by user",
+  "input_sha256": {
+    "reports\\pusht_project_215999\\report.json": "e6eed1281571b0e754314ea24200ba738e4387732fae7ff5db67fa36fda16d73",
+    "reports\\pusht_project_215999\\development.json": "72ffd94fd571c586c00729e2c4e113f3abe23282125959f913d88598b0f33b09",
+    "reports\\pusht_project_215999\\latest.json": "17c6edbdf5279a5a194e037e93daa9461313eb034d8a836e190051144caecf55",
+    "reports\\pusht_project_215999\\development_seed_5000000.mp4": "6e0a6213999fa7a1e7a1fc87e562d1156ed49b6ca38f5f49b84d25a44e0a5053",
+    "reports\\pusht_project_215999\\development_seed_5000001.mp4": "810476041a44d43cf37e040654b8c5a63c09fe154478e75dbc19cf9c7aebf173"
+  },
+  "native_development_sha256": "42a83f5c0afa24137f0f9598975e7ce7e60786fe777ff60dd17e7db39415a89d",
+  "script_sha256": "1163d6e612194ef1ee278424f62184d2440ea4cc4b63bf74d4d4e31c8fd58767",
+  "policy_loaded_or_executed": false,
+  "new_training_or_rollouts_executed": false,
+  "independent_training_seeds_per_group": 1,
+  "comparison_scope": "Frontend family, not Adapter-only or CLIP-only causal effect; development overlap, not grasp success"
+}

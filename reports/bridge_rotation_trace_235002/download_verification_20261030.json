@@ -1,0 +1,28 @@
+{
+  "job_id": 235002,
+  "source_job": 234100,
+  "download_verified": true,
+  "archive_bytes": 4614522,
+  "archive_sha256": "485315e848dbebf2b6bffd26615ec5a078d9f88e8576f3ace359c3d68b5e88aa",
+  "files_sha256": {
+    "report.json": "0f2a98d2a027fb085725d8557ac0a555d165b44050e3502b21f0ab921b43f4ce",
+    "trace.npz": "2627ee0dbecdb6f5a7654a6ebedc42ed8c2c62f5b9f6c7a538fb24af2f82c7ac",
+    "effective_sample.py": "61c824a0413386bb514e792638fa972af384169142f14d13b8b9cd2248cc8a0a"
+  },
+  "original_verifier": {
+    "verified": true,
+    "all16targets_masks_and3seed_final_predictions_exact_to_original234100": true,
+    "all100step_summaries_recomputed": true,
+    "optimizer_updates_reported": 0,
+    "weights_check_scope": "Source tensor identity/unchanged status supported by cluster report; full weights not downloaded",
+    "automatic_following_action": false
+  },
+  "independent_scipy_geometry_and_mse_decomposition_agree": true,
+  "source_weights_downloaded": false,
+  "new_neural_model_calls": 0,
+  "new_sampling_calls": 0,
+  "new_optimizer_updates": 0,
+  "gpu_used": false,
+  "original_source_arrays_and_gates_unchanged": true,
+  "automatic_following_action": false
+}

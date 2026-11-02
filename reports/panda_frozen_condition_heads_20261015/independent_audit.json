@@ -1,0 +1,32 @@
+{
+  "verified": true,
+  "identical_initial_decoder": true,
+  "all1024_noise_inputs_and_timesteps_exact": true,
+  "conditions_and_targets_exact": true,
+  "arms": {
+    "clip_pooled": {
+      "path_position_cm": 0.03011518889317028,
+      "path_rotation_deg": 0.2521203331368636,
+      "endpoint_position_cm": 0.0366187964423224,
+      "endpoint_rotation_deg": 0.2658700845942013,
+      "pose_fit_passed": true,
+      "passing_windows": 16,
+      "not_passing_episodes": []
+    },
+    "adapter_initial_only": {
+      "path_position_cm": 0.38315770011840034,
+      "path_rotation_deg": 0.9513515894627655,
+      "endpoint_position_cm": 0.5393849060752153,
+      "endpoint_rotation_deg": 1.0089886725732196,
+      "pose_fit_passed": false,
+      "passing_windows": 14,
+      "not_passing_episodes": [
+        "xy_2_4",
+        "xy_3_4"
+      ]
+    }
+  },
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false
+}

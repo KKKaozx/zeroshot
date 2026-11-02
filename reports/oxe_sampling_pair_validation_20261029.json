@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-29",
+  "status": "five_meaningful_cpu_regressions_passed",
+  "command": "training_cache/libero_native_env_v1/Scripts/python.exe -B tests/test_oxe_sampling_pair.py",
+  "tests": 5,
+  "elapsed_seconds_observed": 17.984,
+  "exit_code_observed": 0,
+  "covered": [
+    "Actual paired main and original120-window numeric/feature input preparation; original native100step sampler on CPU toy models and saved output verifier",
+    "Source checkpoint mmap admission with actual full145812 numeric pool; all4096 rates and source-plan suffix; rejects one-bit rate/order/weight/file changes before CUDA",
+    "Zero-update paired first-batch guard and native paired training; primitive noise/t identical while different noisy targets allowed; variable random consumption rejected",
+    "Committed halfway interruption and exact core/port/three-group Adam/RNG restore versus uninterrupted training; corrupted history/wrong role/noise rejected",
+    "Real target masks and all-source metrics; static competence separated from sampling effect; exact archived Linux plan/LR and source-cycle uniqueness",
+    "Reused source loader text exactly matches previously qualified corrected-function SHA"
+  ],
+  "fixture_limit": "CPU toy frozen encoders/decoder, short4update engine fixtures and original native sampler/real numeric targets; no actual DINO/CUDA qualification",
+  "all_python_package_sources_compile": true,
+  "zip_members_byte_checked": 13,
+  "shell_check": "LF/header/static review only; Git Bash -n could not launch under local MSYS named-object permission restriction",
+  "source_checkpoint_actual_cluster_cpu_admission_executed": false,
+  "actual_cluster_source_prediction_replay_executed": false,
+  "actual_cluster_paired_stochastic_guard_executed": false,
+  "package": {
+    "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\oxe_sampling_pair_v1.zip",
+    "bytes": 265952,
+    "sha256": "f04a77f83aa94fde12f68b46e259b6cf73bf0af08a356ab5992bc80653f3b904",
+    "members": 13,
+    "source_or_encoder_weights_or_images_included": false,
+    "python_sources_compiled": true,
+    "shell_validation": "Static LF/header only, Bash not executed locally",
+    "user_selected_updates_each": 4096,
+    "expected_total_gpu_minutes": 45,
+    "job_cap_minutes": 60,
+    "actual_source_checkpoint_cpu_check_executed_on_cluster": false,
+    "actual_cuda_training_executed": false,
+    "training_submitted": false
+  },
+  "test_file_sha256": "062fcd5d564a4a828cd35d4c9e8e53d0b20c6af5424042831870d562dfd9eb7d",
+  "source_models_or_closed_branches_modified": false,
+  "training_submitted": false,
+  "automatic_following_action": false
+}

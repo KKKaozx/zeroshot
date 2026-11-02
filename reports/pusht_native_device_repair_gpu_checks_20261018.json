@@ -1,0 +1,18 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.11.0+cu128",
+  "real_cuda_regression_passed": true,
+  "author_normalizer_and_published_dict_load_behavior_used": true,
+  "old_cpu_input_cuda_conv_error_reproduced": "Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor",
+  "raw_and_ema_normalizer_back_on_gpu": true,
+  "next_training_update_loss_and_full_state_replay_exact": true,
+  "actual_original_runner_binds_repaired_restore": true,
+  "modified_original_bundle_rejected": true,
+  "changed_production_functions": [
+    "restore"
+  ],
+  "original_bundle_or_protocol_modified": false,
+  "same_cluster_torch112_tested_locally": false,
+  "CLIP_or_dataset_or_simulation_executed": false,
+  "development_or_final_scored": false
+}

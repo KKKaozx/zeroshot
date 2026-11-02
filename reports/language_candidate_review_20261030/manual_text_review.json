@@ -1,0 +1,462 @@
+{
+  "review_type": "Codex explicit manual raw-output text inspection; not human or scene validation",
+  "raw_outputs_sha256": "d4044fcadf1c22dbd12c746b3a6e2b5b54a8d3d0a595ab3b9457b46cc37e1c26",
+  "candidate_review_tasks_sha256": "fc92989083077edeb9fd6c089314c0df0512c8b737f105c92370e169c7e3d1a3",
+  "instructions": 8,
+  "nominal_output_slots_inspected": 40,
+  "strict_structure_passed_groups": 0,
+  "manual_slot_decisions": {
+    "reject_semantic": 25,
+    "text_potential_only": 3,
+    "reject_original_reuse": 7,
+    "reject_non_string": 5
+  },
+  "complete_five_accepted_instructions": 0,
+  "new_training_eligible_instructions": 0,
+  "format_repair_used_for_training": false,
+  "bank_created": false,
+  "decision": "Close this fixed batch and do not scale the current generator/prompt to the full catalog. Reuse saved outputs; do not retry failed groups or relax checks.",
+  "comparison_limit": "Inputs and prompt differ from the old pilot; no controlled estimate of prompt quality improvement.",
+  "rows": [
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "source": "Bridge",
+      "original_instruction": "put the silver pot to the lower right of the burner",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "put the silver pot inside the burner",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Changes lower-right-of to inside the burner.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "move the silver pot near the burner",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Near omits the lower-right destination constraint.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "place the silver pot beside the burner",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Beside omits the specified lower-right relation.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "position the silver pot on the burner",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "On the burner changes the destination.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "set the silver pot at the burner's lower right side",
+          "manual_text_decision": "text_potential_only",
+          "evidence": "Preserves the silver pot and lower-right burner relation in text; malformed group remains rejected.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "source": "Bridge",
+      "original_instruction": "move the yellow object from the table to the top of the drawer",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "move the yellow object from the table to the top of the drawer",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original repeated; not a distinct paraphrase.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "move the yellow object from the table to the top of the drawer",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original repeated; not a distinct paraphrase.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "move the yellow object from the table to the top of the drawer",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original repeated; not a distinct paraphrase.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "move the yellow object from the table to the top of the drawer",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original repeated; not a distinct paraphrase.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "move the yellow object from the table to the top of the drawer",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original repeated; not a distinct paraphrase.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "source": "Language Table",
+      "original_instruction": "push the green circle closer to the yellow hexagon and blue triangle",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "move the green circle in front of the yellow hexagon and blue triangle",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "In front of is not closer to both objects; push is weakened to move.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "place the green circle next to the yellow hexagon and blue triangle",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Next to changes the closer goal and drops the pushing action.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "bring the green circle nearer to the yellow hexagon and blue triangle",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Nearer preserves the distance relation, but bring does not preserve the explicit pushing action.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "position the green circle adjacent to the yellow hexagon and blue triangle",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Adjacency replaces comparative closer and drops pushing.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "arrange the green circle close to the yellow hexagon and blue triangle",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Arrange/close to does not preserve explicit push/closer constraints.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "source": "Language Table",
+      "original_instruction": "move the blue triangle left side of the blue cube",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "move the blue triangle to the left side of the blue cube",
+          "manual_text_decision": "text_potential_only",
+          "evidence": "Grammatical restatement preserves the moved blue triangle and left-of-blue-cube goal; malformed group remains rejected.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "move the blue triangle to the left side of the blue cube, then place it there",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Adds a sequenced placement command after reaching the goal; conservatively reject.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "move the blue triangle to the left side of the blue cube, then position it there",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Adds a redundant sequenced positioning command; uncertain action equivalence, conservatively reject.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "move the blue triangle to the left side of the blue cube, then align it there",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Adds an alignment action absent from the original.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "move the blue triangle to the left side of the blue cube, then set it there",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Adds a sequenced setting/placement command; conservatively reject.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "source": "BC-Z",
+      "original_instruction": "place grapes in purple bowl",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": {
+            "action": "put",
+            "moved_object": "grapes",
+            "object_name": "purple bowl",
+            "color": "purple",
+            "quantity": "one",
+            "destination": "bowl",
+            "relation": "in"
+          },
+          "manual_text_decision": "reject_non_string",
+          "evidence": "Structured object is not a paraphrase string; quantity one is unsupported.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": {
+            "action": "set",
+            "moved_object": "grapes",
+            "object_name": "purple bowl",
+            "color": "purple",
+            "quantity": "one",
+            "destination": "bowl",
+            "relation": "on"
+          },
+          "manual_text_decision": "reject_non_string",
+          "evidence": "Structured object is not a paraphrase string; also changes in to on and invents quantity one.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": {
+            "action": "add",
+            "moved_object": "grapes",
+            "object_name": "purple bowl",
+            "color": "purple",
+            "quantity": "one",
+            "destination": "bowl",
+            "relation": "inside"
+          },
+          "manual_text_decision": "reject_non_string",
+          "evidence": "Structured object is not a paraphrase string; quantity one is unsupported.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": {
+            "action": "bring",
+            "moved_object": "grapes",
+            "object_name": "purple bowl",
+            "color": "purple",
+            "quantity": "one",
+            "destination": "bowl",
+            "relation": "into"
+          },
+          "manual_text_decision": "reject_non_string",
+          "evidence": "Structured object is not a paraphrase string; quantity one is unsupported.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": {
+            "action": "insert",
+            "moved_object": "grapes",
+            "object_name": "purple bowl",
+            "color": "purple",
+            "quantity": "one",
+            "destination": "bowl",
+            "relation": "within"
+          },
+          "manual_text_decision": "reject_non_string",
+          "evidence": "Structured object is not a paraphrase string; quantity one is unsupported.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "source": "BC-Z",
+      "original_instruction": "wipe purple bowl with towel",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "wipe purple bowl with towel",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "clean purple bowl with towel",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Clean is broader than the specified wiping action.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "scrub purple bowl with towel",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Scrub introduces a different action requirement.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "wipe purple bowl with cloth",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Cloth broadens the explicitly named towel tool.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "clean purple bowl with cloth",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Both wiping action and towel tool specificity are lost.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "source": "Fractal",
+      "original_instruction": "move apple near redbull can",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "move apple on redbull can",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "On changes proximity into a support/contact destination.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "move apple beside redbull can",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Beside narrows the unconstrained near relation; conservatively reject.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "move apple close to redbull can",
+          "manual_text_decision": "text_potential_only",
+          "evidence": "Close to preserves near, moved apple and Red Bull can in text; malformed group remains rejected.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "move apple near redbull can",
+          "manual_text_decision": "reject_original_reuse",
+          "evidence": "Unchanged original.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "move apple adjacent to redbull can",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Adjacent is a stronger spatial constraint than near; conservatively reject.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "source": "Fractal",
+      "original_instruction": "place rxbar blueberry into top drawer",
+      "slots": [
+        {
+          "slot": 0,
+          "raw_slot_content": "move blueberry red apple to top shelf",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Replaces RXBAR Blueberry with a blueberry red apple and changes drawer to shelf.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "raw_slot_content": "put blueberry red apple in top drawer",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Replaces RXBAR Blueberry with a blueberry red apple.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "raw_slot_content": "place blueberry red apple on top drawer",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Wrong moved object and on rather than into the drawer.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "raw_slot_content": "place blueberry red apple inside top drawer",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Inside preserves containment but the moved object is wrong.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "raw_slot_content": "place blueberry red apple on top shelf",
+          "manual_text_decision": "reject_semantic",
+          "evidence": "Wrong object and shelf rather than drawer containment.",
+          "strict_candidate_admitted": false,
+          "usable_for_training": false
+        }
+      ],
+      "group_decision": "rejected_by_strict_structure_no_salvage",
+      "complete_five_accepted": false,
+      "usable_for_training": false
+    }
+  ]
+}

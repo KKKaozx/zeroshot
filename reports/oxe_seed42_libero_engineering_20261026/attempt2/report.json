@@ -1,0 +1,221 @@
+{
+  "passed": true,
+  "scope": "Trained seed42 policy on excluded engineering task; no benchmark score",
+  "task": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "training_updates": 0,
+  "expert_actions_read": 0,
+  "final_initial_states_read": 0,
+  "checkpoint_selection_performed": false,
+  "libero_task_success_scored": false,
+  "generalization_verdict": null,
+  "policy_calls": 8,
+  "physics_steps": 32,
+  "errors": [],
+  "execution_contract": {
+    "format": "libero-nominal-cartesian-execution-candidate-v1",
+    "status": "Engineering convention with explicit uncalibrated source-to-target assumptions",
+    "formal_task_scoring_admitted": false,
+    "constructor_kwargs": {
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "execute_waypoints": 1,
+      "position_scale_meters": 0.1,
+      "timing_evidence": "User-selected published nominal Bridge/LT5Hz, BC-Z10Hz, Fractal3Hz resampled to5Hz; no measured export timestamps. Actual native20Hz checked at execution.",
+      "tcp_mapping_evidence": "Engineering transfer convention: interpret model source-Cartesian deltas at measured LIBERO EEF world pose; source-specific units/base/TCP alignment is not calibrated or proven by this file.",
+      "native_control_hz": 20.0,
+      "image_convention": "opengl",
+      "camera_key": "agentview_image",
+      "output_scales": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "action_representation": "source_cartesian_delta_pose_open_positive_v1",
+      "saturation_policy": "bounded_feedback"
+    },
+    "target_reference": "Measured EEF at the actual image observation; fixed within each predicted chunk",
+    "translation_rule": "p_target_world = p_reference_world + 0.1 * predicted_xyz",
+    "orientation_rule": "q_target_world = predicted_left_relative_xyzw * q_reference_world",
+    "execution_rule": "One target over4 native20Hz ticks, measured-pose feedback every tick, then reobserve/replan at nominal5Hz",
+    "arrival_at_target_within_interval_guaranteed": false,
+    "gripper_rule": "Binary open-positive prediction, inverted once for native close-positive command; hold this command during the4 ticks",
+    "initial_gripper_history": "Unknown [0,0] until an explicit command is executed; never threshold sensed finger width into a command",
+    "language_table_training_mask": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "shared_metric_units_assumption_verified_for_all_exact_exports": false,
+    "source_to_libero_base_registration_available": false,
+    "source_specific_tcp_registration_available": false,
+    "runtime_native_eef_and_controller_interface_previously_checked": true,
+    "task_success_or_cross_robot_calibration_proven": false
+  },
+  "torch_version": "2.11.0+cu128",
+  "cuda_runtime": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "checkpoint_metadata": {
+    "checkpoint": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\oxe_noaug_seed42_227223\\cluster\\final_policy.pt",
+    "original_backbone_name": "/projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+    "local_backbone_path": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "experiment_kind": null,
+    "all_learned_state_keys_restored": true,
+    "local_backbone_matches_training_identity_verified": true,
+    "visual_backbone": "dinov2",
+    "dino_asset_identity_verified": true,
+    "visual_input_contract": "canonical_clip_224_letterbox_to_dino_imagenet_v1",
+    "fixed_update_state_loaded": true,
+    "frozen_encoders_and_tokenizer_match_training": true,
+    "frozen_runtime_restore": {
+      "profile_path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\oxe_noaug_seed42_227223\\cluster\\preflight.json",
+      "profile_file_sha256": "0ad6ce3e3681a5f97fd31c805bd2e4f24458eb13c5651a69df7079c998b3a1bf",
+      "frozen_sha256_before": "7cd8554464b8b23cb6014cde9575d48300441f8f13d19203d69f6518d42782ea",
+      "frozen_sha256_after": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+      "restored_buffer_names": [
+        "posterior_mean_x0",
+        "posterior_mean_xt"
+      ],
+      "differences": {
+        "posterior_mean_x0": {
+          "max_abs_before_restore": 7.450580596923828e-09,
+          "unequal_values_before_restore": 15
+        },
+        "posterior_mean_xt": {
+          "max_abs_before_restore": 1.1920928955078125e-07,
+          "unequal_values_before_restore": 14
+        }
+      },
+      "encoder_parameters_written": false,
+      "learned_parameters_written": false,
+      "exact_original_training_digest_verified": true,
+      "identity_tolerance_used": false
+    },
+    "nominal_target_binding": {
+      "format": "oxe-nominal-target-set-v1",
+      "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+      "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+      "label_family": "nominal_resampled_observed_reached_pose",
+      "clock_basis": "user_selected_published_nominal_frequency_assumption",
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "source_units_or_formal_training_admitted": false,
+      "partition_bindings": {
+        "train": {
+          "format": "oxe-nominal-target-binding-v1",
+          "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+          "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+          "label_family": "nominal_resampled_observed_reached_pose",
+          "clock_basis": "user_selected_published_nominal_frequency_assumption",
+          "target_times_seconds": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1.0,
+            1.2,
+            1.4,
+            1.6,
+            1.8,
+            2.0,
+            2.2,
+            2.4,
+            2.6,
+            2.8,
+            3.0,
+            3.2
+          ],
+          "source_units_or_formal_training_admitted": false
+        },
+        "validation": {
+          "format": "oxe-nominal-target-binding-v1",
+          "dataset_identity": "e4cd9b9f6c528170cbdd1dd6f8227a2da9d764ae81a47767fab9319b5f20db5e",
+          "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+          "label_family": "nominal_resampled_observed_reached_pose",
+          "clock_basis": "user_selected_published_nominal_frequency_assumption",
+          "target_times_seconds": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1.0,
+            1.2,
+            1.4,
+            1.6,
+            1.8,
+            2.0,
+            2.2,
+            2.4,
+            2.6,
+            2.8,
+            3.0,
+            3.2
+          ],
+          "source_units_or_formal_training_admitted": false,
+          "partition": "validation"
+        }
+      }
+    },
+    "input_preflight_checkpoint": false,
+    "gripper_training_or_task_success_verified": false
+  },
+  "final_eef_position": [
+    -0.16797885564349632,
+    -0.018111068779161087,
+    1.1462412378994495
+  ],
+  "last_inference": {
+    "call_index": 7,
+    "sampling_seed": 1108,
+    "input_rgb_sha256": "b461c532320656fbe99df3ddf0fe5cbb1dd5b9c0dba0bd9a467d25ec6bfb1a1f",
+    "output_sha256": "4f6f6c3e5c760b9a38481739fe2e6baec34ca22fd4048ecd97add8ec214bd2ad",
+    "model_eval": true,
+    "gripper_input_semantics": "last_command_open_positive_with_availability_v1",
+    "gripper_input_features": [
+      1.0,
+      1.0
+    ],
+    "trained_competence_or_tcp_calibration_proven": false
+  },
+  "simulated_seconds": 1.6,
+  "elapsed_seconds": 30.48499999998603
+}

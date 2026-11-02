@@ -1,0 +1,175 @@
+{
+  "local_small_output_verification_passed": true,
+  "received_files": 10,
+  "archive_sha256": "ed14a43594766444c1206d3a7b18b23da336909b95a82f1b8c6e40139100acaa",
+  "scope": "Small artifacts, 84168 update/LR records, binding, data identity and saved reward series. No weights/model/inference loaded.",
+  "checkpoint_bytes_verified_locally": false,
+  "checkpoint_verification_basis": "Original server verify_formal.py passed per user terminal",
+  "original_preflight_report_bytes_reverified_locally": false,
+  "comparison": {
+    "scores": {
+      "zero_blocks": {
+        "mean_score": 0.5267873502795423,
+        "full_reward_fraction": 0.25,
+        "reference_competence_gate_passed": false
+      },
+      "eight_blocks215999": {
+        "mean_score": 0.44548841481267654,
+        "full_reward_fraction": 0.25,
+        "reference_competence_gate_passed": false
+      }
+    },
+    "zero_minus_eight_mean_reward": 0.0812989354668657,
+    "paired_episode_bootstrap95": [
+      -0.09334259925729309,
+      0.2548637028909615
+    ],
+    "zero_better_worse_equal": [
+      9,
+      7,
+      4
+    ],
+    "per_seed_gain": [
+      {
+        "environment_seed": 5000000,
+        "zero_minus_eight": 0.2506538720493542
+      },
+      {
+        "environment_seed": 5000001,
+        "zero_minus_eight": -0.01706549701686788
+      },
+      {
+        "environment_seed": 5000002,
+        "zero_minus_eight": 0.0
+      },
+      {
+        "environment_seed": 5000003,
+        "zero_minus_eight": 0.009006600014092925
+      },
+      {
+        "environment_seed": 5000004,
+        "zero_minus_eight": 0.0
+      },
+      {
+        "environment_seed": 5000005,
+        "zero_minus_eight": -0.004005506975133591
+      },
+      {
+        "environment_seed": 5000006,
+        "zero_minus_eight": 0.21185540793213478
+      },
+      {
+        "environment_seed": 5000007,
+        "zero_minus_eight": 0.5745345353435853
+      },
+      {
+        "environment_seed": 5000008,
+        "zero_minus_eight": -0.6136959471889651
+      },
+      {
+        "environment_seed": 5000009,
+        "zero_minus_eight": 0.0
+      },
+      {
+        "environment_seed": 5000010,
+        "zero_minus_eight": -0.8695297419951185
+      },
+      {
+        "environment_seed": 5000011,
+        "zero_minus_eight": -0.04688149302566976
+      },
+      {
+        "environment_seed": 5000012,
+        "zero_minus_eight": 0.4658539243480322
+      },
+      {
+        "environment_seed": 5000013,
+        "zero_minus_eight": 0.0020033286644006373
+      },
+      {
+        "environment_seed": 5000014,
+        "zero_minus_eight": 0.6555810742627782
+      },
+      {
+        "environment_seed": 5000015,
+        "zero_minus_eight": 0.035273220605945566
+      },
+      {
+        "environment_seed": 5000016,
+        "zero_minus_eight": -0.02588078994725578
+      },
+      {
+        "environment_seed": 5000017,
+        "zero_minus_eight": 0.0
+      },
+      {
+        "environment_seed": 5000018,
+        "zero_minus_eight": -0.001724277733999413
+      },
+      {
+        "environment_seed": 5000019,
+        "zero_minus_eight": 1.0
+      }
+    ],
+    "zero_better_criteria_passed": false,
+    "eight_better_criteria_passed": false,
+    "interpretation": "Inconclusive under the predeclared development criteria; no automatic extra budget or seeds",
+    "scope": "Reused dev20, one training seed, old8 trainedA6000/new0 trainedA40; whole stack includes capacity/dropout. Not final confirmation or a replacement multilingual policy.",
+    "main_eight_block_model_replaced": false,
+    "automatic_following_action": false,
+    "final50_accessed": false
+  },
+  "training_hours": 10.982946437275322,
+  "total_process_hours": 11.214332640567251,
+  "training_updates": 84168,
+  "final_loss": 0.003690004936958614,
+  "mean_loss_last1000": 0.007185250980344407,
+  "actual_gpu": "NVIDIA A40",
+  "actual_node": "gpu-a40-1",
+  "videos": [
+    {
+      "group": "Native",
+      "environment_seed": 5000000,
+      "frames": 185,
+      "fps": 10.0,
+      "sha256": "4bce98cfd9a23fceb77077fc79a46c76507d4b9e51d170baa906b834c4f3f2e6"
+    },
+    {
+      "group": "Eight blocks",
+      "environment_seed": 5000000,
+      "frames": 300,
+      "fps": 10.0,
+      "sha256": "6e0a6213999fa7a1e7a1fc87e562d1156ed49b6ca38f5f49b84d25a44e0a5053"
+    },
+    {
+      "group": "Zero blocks",
+      "environment_seed": 5000000,
+      "frames": 300,
+      "fps": 10.0,
+      "sha256": "9df0669a9f7f9adc8e596500f6fc0b6289b21d88d7ac00e0566ba4da2ffc17db"
+    },
+    {
+      "group": "Native",
+      "environment_seed": 5000001,
+      "frames": 89,
+      "fps": 10.0,
+      "sha256": "52b729a281af39fd0de2d52baf868e36abf8a5c77d79b59441eb53eab9dabe98"
+    },
+    {
+      "group": "Eight blocks",
+      "environment_seed": 5000001,
+      "frames": 97,
+      "fps": 10.0,
+      "sha256": "810476041a44d43cf37e040654b8c5a63c09fe154478e75dbc19cf9c7aebf173"
+    },
+    {
+      "group": "Zero blocks",
+      "environment_seed": 5000001,
+      "frames": 300,
+      "fps": 10.0,
+      "sha256": "d65bd00a116884d4d14f9c6acaf80914f170497a8a264225c8ba19ab5700edfa"
+    }
+  ],
+  "conclusion": "Close zero-versus-eight diagnostic as inconclusive. Frozen-frontend family remains below native; unique cause not established.",
+  "automatic_following_action": false
+}

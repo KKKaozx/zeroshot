@@ -1,0 +1,919 @@
+{
+  "date": "2026-10-26",
+  "workspace": "D:\\ntu_related\\dissertation\\Zero_shot",
+  "source_files_checked": 128,
+  "source_originals_metadata_verified": [
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00667-of-01024",
+      "bytes": 99939000,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00200-of-01024",
+      "bytes": 95500159,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-01019-of-01024",
+      "bytes": 135637830,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00746-of-01024",
+      "bytes": 121356574,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00515-of-01024",
+      "bytes": 81824430,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00132-of-01024",
+      "bytes": 103705018,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00316-of-01024",
+      "bytes": 124298694,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00980-of-01024",
+      "bytes": 103608740,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00529-of-01024",
+      "bytes": 86748147,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00895-of-01024",
+      "bytes": 111656139,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00175-of-01024",
+      "bytes": 154555824,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00961-of-01024",
+      "bytes": 102103678,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00657-of-01024",
+      "bytes": 105643637,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00106-of-01024",
+      "bytes": 154376463,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00356-of-01024",
+      "bytes": 123977857,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00415-of-01024",
+      "bytes": 131151536,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00739-of-01024",
+      "bytes": 127249118,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00755-of-01024",
+      "bytes": 93655402,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00618-of-01024",
+      "bytes": 142734672,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00181-of-01024",
+      "bytes": 115597298,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00584-of-01024",
+      "bytes": 101499993,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00859-of-01024",
+      "bytes": 122933795,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00400-of-01024",
+      "bytes": 116168586,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00047-of-01024",
+      "bytes": 102013047,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00870-of-01024",
+      "bytes": 151735224,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00625-of-01024",
+      "bytes": 98938469,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00602-of-01024",
+      "bytes": 97783650,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-01006-of-01024",
+      "bytes": 121325239,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00510-of-01024",
+      "bytes": 153393721,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00045-of-01024",
+      "bytes": 85429837,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00678-of-01024",
+      "bytes": 93699047,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00795-of-01024",
+      "bytes": 114117767,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00567-of-01024",
+      "bytes": 108240186,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00975-of-01024",
+      "bytes": 104493770,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00896-of-01024",
+      "bytes": 132335787,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00128-of-01024",
+      "bytes": 128225848,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\bridge_data_v2-train.tfrecord-00828-of-01024",
+      "bytes": 123596719,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00626-of-01024",
+      "bytes": 438774991,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00265-of-01024",
+      "bytes": 393135065,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00269-of-01024",
+      "bytes": 415124350,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00976-of-01024",
+      "bytes": 415099155,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00750-of-01024",
+      "bytes": 447289271,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00045-of-01024",
+      "bytes": 395008869,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00204-of-01024",
+      "bytes": 443192882,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00805-of-01024",
+      "bytes": 402865991,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00526-of-01024",
+      "bytes": 408323911,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\language_table-train.tfrecord-00630-of-01024",
+      "bytes": 464034178,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00389-of-00512",
+      "bytes": 111394606,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00187-of-00512",
+      "bytes": 90839105,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00082-of-00512",
+      "bytes": 101277411,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00214-of-00512",
+      "bytes": 97200314,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00076-of-00512",
+      "bytes": 78725110,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00089-of-00512",
+      "bytes": 75634548,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00282-of-00512",
+      "bytes": 101217215,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00047-of-00512",
+      "bytes": 89423327,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00024-of-00512",
+      "bytes": 103361384,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00355-of-00512",
+      "bytes": 85984778,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00429-of-00512",
+      "bytes": 92158364,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00471-of-00512",
+      "bytes": 90706865,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00120-of-00512",
+      "bytes": 96738253,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00338-of-00512",
+      "bytes": 96514527,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00399-of-00512",
+      "bytes": 81968413,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00104-of-00512",
+      "bytes": 90531130,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00239-of-00512",
+      "bytes": 95624788,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00125-of-00512",
+      "bytes": 76536672,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00236-of-00512",
+      "bytes": 120759413,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00368-of-00512",
+      "bytes": 97654248,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00370-of-00512",
+      "bytes": 87592326,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00344-of-00512",
+      "bytes": 96871724,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00447-of-00512",
+      "bytes": 82651052,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00442-of-00512",
+      "bytes": 96472667,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00380-of-00512",
+      "bytes": 92875415,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00434-of-00512",
+      "bytes": 105317873,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00181-of-00512",
+      "bytes": 119666069,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00247-of-00512",
+      "bytes": 103166862,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00021-of-00512",
+      "bytes": 97158038,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00371-of-00512",
+      "bytes": 77912051,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00489-of-00512",
+      "bytes": 92956468,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00397-of-00512",
+      "bytes": 84570432,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00418-of-00512",
+      "bytes": 100079783,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00233-of-00512",
+      "bytes": 107847009,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00196-of-00512",
+      "bytes": 75904217,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00163-of-00512",
+      "bytes": 91361485,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00494-of-00512",
+      "bytes": 102136689,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00030-of-00512",
+      "bytes": 88669533,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00067-of-00512",
+      "bytes": 107925147,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00007-of-00512",
+      "bytes": 96147824,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00271-of-00512",
+      "bytes": 90984388,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00321-of-00512",
+      "bytes": 94102633,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00438-of-00512",
+      "bytes": 102588957,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00241-of-00512",
+      "bytes": 107269801,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\bc_z-train.tfrecord-00022-of-00512",
+      "bytes": 109809848,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00104-of-01024",
+      "bytes": 139116983,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00953-of-01024",
+      "bytes": 116115446,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00242-of-01024",
+      "bytes": 105573397,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00872-of-01024",
+      "bytes": 110539788,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00368-of-01024",
+      "bytes": 107335056,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-01015-of-01024",
+      "bytes": 109047620,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00037-of-01024",
+      "bytes": 125271077,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00261-of-01024",
+      "bytes": 106519931,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00887-of-01024",
+      "bytes": 119434667,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00743-of-01024",
+      "bytes": 124372956,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00839-of-01024",
+      "bytes": 112204074,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00670-of-01024",
+      "bytes": 113625819,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00259-of-01024",
+      "bytes": 107540696,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00695-of-01024",
+      "bytes": 121793400,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00255-of-01024",
+      "bytes": 127382388,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00374-of-01024",
+      "bytes": 136680588,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00787-of-01024",
+      "bytes": 147242890,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00098-of-01024",
+      "bytes": 131777593,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00311-of-01024",
+      "bytes": 131343227,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00121-of-01024",
+      "bytes": 136383065,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00184-of-01024",
+      "bytes": 127155477,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00066-of-01024",
+      "bytes": 98326930,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00402-of-01024",
+      "bytes": 127765055,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00295-of-01024",
+      "bytes": 111469187,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00359-of-01024",
+      "bytes": 142359279,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-01017-of-01024",
+      "bytes": 115216284,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00012-of-01024",
+      "bytes": 115181685,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00190-of-01024",
+      "bytes": 115428248,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00524-of-01024",
+      "bytes": 130309174,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00288-of-01024",
+      "bytes": 129267050,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00909-of-01024",
+      "bytes": 109338399,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00786-of-01024",
+      "bytes": 98353814,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00657-of-01024",
+      "bytes": 122210386,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00240-of-01024",
+      "bytes": 124798009,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-00042-of-01024",
+      "bytes": 98936743,
+      "exists_and_size_matches": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\fractal20220817_data-train.tfrecord-01011-of-01024",
+      "bytes": 92840502,
+      "exists_and_size_matches": true
+    }
+  ],
+  "source_files_freshly_hashed": false,
+  "archive_members_and_embedded_inventory_verified": true,
+  "preserved_checkpoint": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\nominal_main_entry_20261025\\attempt2\\full\\latest_step.pt",
+  "checkpoint_duplicate_all_fields_equal": true,
+  "targets": [
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\oxe_nominal_pool_v1_20261025.tar",
+      "kind": "file",
+      "bytes": 17068789760,
+      "reason": "Uploaded source archive; 128 original source files remain with matching sizes, embedded inventory verified; cluster already training from unpacked sources",
+      "creation_sha256": "61961c0d93361f737fd40788833663cc8d837e62feb004d5fdada41fd18b525b",
+      "creation_sha256_not_rehashed": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\nominal_main_entry_20261025\\attempt2\\resumed\\latest_step.pt",
+      "kind": "file",
+      "bytes": 986070735,
+      "reason": "All nested checkpoint fields/tensors exact to retained full/latest_step.pt; disposable 2-update engineering resume copy",
+      "retained_equivalent": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\nominal_main_entry_20261025\\attempt2\\full\\latest_step.pt",
+      "all_checkpoint_fields_equal": true
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898",
+      "kind": "directory",
+      "bytes": 5137,
+      "reason": "New identity diagnostic synthetic verification fixtures; originals and check reports retained",
+      "files": [
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\blocked_forward\\report.json",
+          "bytes": 2156
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\diagnostic\\actual_profile.json",
+          "bytes": 4
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\diagnostic\\report.json",
+          "bytes": 129
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\oxe_dino_noaug_training_v1\\cluster_preflight_binding.json",
+          "bytes": 35
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\oxe_dino_noaug_training_v1\\run_stage.py",
+          "bytes": 178
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\oxe_dino_noaug_training_v1\\SHA256SUMS",
+          "bytes": 176
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\oxe_dino_noaug_training_v1\\code\\step_training_runner.py",
+          "bytes": 330
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\oxe_dino_noaug_training_v1\\code\\torch\\nn\\modules\\module.py",
+          "bytes": 90
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\oxe_dino_noaug_training_v1\\code\\__pycache__\\step_training_runner.cpython-310.pyc",
+          "bytes": 544
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\reference\\preflight.json",
+          "bytes": 36
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\match\\reference\\report.json",
+          "bytes": 57
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\diagnostic\\actual_profile.json",
+          "bytes": 4
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\diagnostic\\report.json",
+          "bytes": 128
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\oxe_dino_noaug_training_v1\\cluster_preflight_binding.json",
+          "bytes": 35
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\oxe_dino_noaug_training_v1\\run_stage.py",
+          "bytes": 77
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\oxe_dino_noaug_training_v1\\SHA256SUMS",
+          "bytes": 176
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\oxe_dino_noaug_training_v1\\code\\step_training_runner.py",
+          "bytes": 331
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\oxe_dino_noaug_training_v1\\code\\__pycache__\\step_training_runner.cpython-310.pyc",
+          "bytes": 558
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\reference\\preflight.json",
+          "bytes": 36
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\runtime_guard_2f1a02f898\\mismatch\\reference\\report.json",
+          "bytes": 57
+        }
+      ]
+    },
+    {
+      "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba",
+      "kind": "directory",
+      "bytes": 476545,
+      "reason": "New identity diagnostic synthetic verification fixtures; originals and check reports retained",
+      "files": [
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\reference.json",
+          "bytes": 2086
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\encoder\\oxe-id-failure-local-1792943407032554300\\actual_profile.json",
+          "bytes": 2852
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\encoder\\oxe-id-failure-local-1792943407032554300\\report.json",
+          "bytes": 2840
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\bind_preflight.py",
+          "bytes": 4650
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\execution_assumptions.json",
+          "bytes": 2204
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\README.md",
+          "bytes": 4065
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\run_stage.py",
+          "bytes": 7353
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\SHA256SUMS",
+          "bytes": 2632
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\submit_stage_once.sh",
+          "bytes": 1853
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\training_protocol.json",
+          "bytes": 3485
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\train_stage.sh",
+          "bytes": 873
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\verify_stage.py",
+          "bytes": 1259
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\adapter.py",
+          "bytes": 4308
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\cartesian_action_contract.py",
+          "bytes": 3397
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\completed_policy_export.py",
+          "bytes": 4735
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\dataset.py",
+          "bytes": 101105
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\diffusion_decoder.py",
+          "bytes": 12482
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\frozen_visual_backbone.py",
+          "bytes": 3899
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\language_training_conditions.py",
+          "bytes": 12281
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\libero_action_interface.py",
+          "bytes": 4765
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\libero_project_policy.py",
+          "bytes": 13716
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\libero_waypoint_execution.py",
+          "bytes": 9086
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\models.py",
+          "bytes": 25053
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\oxe_formal_protocol.py",
+          "bytes": 4061
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\oxe_nominal_dataset.py",
+          "bytes": 14441
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\oxe_nominal_target_store.py",
+          "bytes": 7023
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\oxe_nominal_timing.py",
+          "bytes": 7359
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\oxe_source_semantics.py",
+          "bytes": 7253
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\oxe_window_index.py",
+          "bytes": 9199
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\step_training_runner.py",
+          "bytes": 20789
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\step_training_state.py",
+          "bytes": 15546
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\train.py",
+          "bytes": 132786
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\oxe_dino_noaug_training_v1\\code\\window_target_protocol.py",
+          "bytes": 16162
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\installer\\runs\\oxe-dino-noaug-s42\\latest_step.pt",
+          "bytes": 7
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\schedule\\oxe-id-failure-local-1792943407038553300\\actual_profile.json",
+          "bytes": 2852
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\schedule\\oxe-id-failure-local-1792943407038553300\\report.json",
+          "bytes": 2873
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\tokenizer\\oxe-id-failure-local-1792943407064553100\\actual_profile.json",
+          "bytes": 2852
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\.tmp\\direct_identity_logging_bd47d0deba\\tokenizer\\oxe-id-failure-local-1792943407064553100\\report.json",
+          "bytes": 2363
+        }
+      ]
+    }
+  ],
+  "planned_bytes": 18055342177,
+  "no_source_data_or_formal_checkpoint_targeted": true
+}

@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "target_binding": {
+    "format": "oxe-nominal-target-set-v1",
+    "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+    "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+    "label_family": "nominal_resampled_observed_reached_pose",
+    "clock_basis": "user_selected_published_nominal_frequency_assumption",
+    "target_times_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "source_units_or_formal_training_admitted": false,
+    "partition_bindings": {
+      "train": {
+        "format": "oxe-nominal-target-binding-v1",
+        "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+        "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+        "label_family": "nominal_resampled_observed_reached_pose",
+        "clock_basis": "user_selected_published_nominal_frequency_assumption",
+        "target_times_seconds": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0,
+          1.2,
+          1.4,
+          1.6,
+          1.8,
+          2.0,
+          2.2,
+          2.4,
+          2.6,
+          2.8,
+          3.0,
+          3.2
+        ],
+        "source_units_or_formal_training_admitted": false
+      },
+      "validation": {
+        "format": "oxe-nominal-target-binding-v1",
+        "dataset_identity": "e4cd9b9f6c528170cbdd1dd6f8227a2da9d764ae81a47767fab9319b5f20db5e",
+        "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+        "label_family": "nominal_resampled_observed_reached_pose",
+        "clock_basis": "user_selected_published_nominal_frequency_assumption",
+        "target_times_seconds": [
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0,
+          1.2,
+          1.4,
+          1.6,
+          1.8,
+          2.0,
+          2.2,
+          2.4,
+          2.6,
+          2.8,
+          3.0,
+          3.2
+        ],
+        "source_units_or_formal_training_admitted": false,
+        "partition": "validation"
+      }
+    }
+  },
+  "training_windows": 145812,
+  "validation_windows": 17949,
+  "validation_episode_count": 1136,
+  "source_groups_cross_roles": false,
+  "swapped_store_role_and_moved_validation_window_rejected": true,
+  "real_validation_image_target_checks": [
+    {
+      "source": "Bridge",
+      "validation_local_index": 0,
+      "global_index": 145812,
+      "exact": true
+    },
+    {
+      "source": "Bridge",
+      "validation_local_index": 7,
+      "global_index": 145819,
+      "exact": true
+    },
+    {
+      "source": "Language Table",
+      "validation_local_index": 1287,
+      "global_index": 147099,
+      "exact": true
+    },
+    {
+      "source": "Language Table",
+      "validation_local_index": 1290,
+      "global_index": 147102,
+      "exact": true
+    },
+    {
+      "source": "BC-Z",
+      "validation_local_index": 2869,
+      "global_index": 148681,
+      "exact": true
+    },
+    {
+      "source": "BC-Z",
+      "validation_local_index": 2918,
+      "global_index": 148730,
+      "exact": true
+    },
+    {
+      "source": "Fractal",
+      "validation_local_index": 14311,
+      "global_index": 160123,
+      "exact": true
+    },
+    {
+      "source": "Fractal",
+      "validation_local_index": 14322,
+      "global_index": 160134,
+      "exact": true
+    }
+  ],
+  "actual_main_collator_checked": true,
+  "original_catalog_only_training_indices": true,
+  "original_training_entries_changed": false,
+  "combined_original_catalog_sha256": "b05a2a84cdb548139ac31ceba26b8ee0bf168a08db4f2fdd3d3d011adc423e56",
+  "training_manifest_or_numeric_targets_rebuilt": false,
+  "training_manifest_sha256": "63a67fca2097d4157fe4f412da56c17fcb927e9ffb2999e635f87b90df63a5ac",
+  "test_or_quarantine_payloads_read": 0,
+  "models_loaded": 0,
+  "optimizer_updates": 0,
+  "resume_or_resource_suites_repeated": false,
+  "validation_model_score_generated": false,
+  "new_cluster_jobs": 0,
+  "formal_training_ready": false
+}

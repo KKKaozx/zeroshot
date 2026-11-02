@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "policy_sha256": "cb79d8333de212aa95810050908dba90e543ccf0f76560e70fc29deb4d824bd8",
+  "small_results_sha256": "7367e5e3be233dc717756a4145f2635675e5a8f31dac2d9ad9eb71bfdaef1942",
+  "raw_report_matches_terminal": true,
+  "targets_masks_previous_indices_match_bound_inputs": true,
+  "metrics_float64_independently_recomputed": {
+    "train": {
+      "motion6_mse_native_units": 0.002821958127582191,
+      "train_mean_motion6_mse": 0.05249979970890587,
+      "previous_command_held_motion6_mse": 0.037748655954261565
+    },
+    "development": {
+      "motion6_mse_native_units": 0.01166144923876824,
+      "train_mean_motion6_mse": 0.051401504309051466,
+      "previous_command_held_motion6_mse": 0.037054249365943856
+    }
+  },
+  "state_sha256": "f7a36dc0c1fa9b767efc226b562ec4f26dffb2c335af30e71b0099f8ae6a047d",
+  "full_cpu_model_strict_restoration": true,
+  "trainable_parameters": 131261063,
+  "cluster_admission": {
+    "passed": true,
+    "runtime_dependencies": {
+      "numpy": "1.26.4",
+      "torch": "2.5.1+cu118",
+      "all_training_imports_checked_on_cpu": true
+    },
+    "assets_verified": true,
+    "storage": {
+      "checked": true,
+      "scope": "Cluster project du+filesystem space; Windows preparation has no cluster quota view",
+      "project_bytes_estimate": 140658757632,
+      "filesystem_free_bytes": 201248057851904,
+      "reserve_bytes": 8589934592
+    },
+    "dino_assets": "/projects/_ssd/Zeroshot/dinov2_large_frozen_assets_20261023",
+    "clip_assets": "/projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+    "target_supervised": true,
+    "zero_shot": false,
+    "formal_matrix_admitted": false,
+    "gpu_used_during_admission": false,
+    "training_updates": 0
+  },
+  "cluster_verification": {
+    "verified": true,
+    "full_policy_and_adam_readback": true,
+    "saved_metrics_recomputed": true,
+    "optimizer_updates": 4096,
+    "new_sampling": 0,
+    "target_supervised": true,
+    "zero_shot": false,
+    "learned_task_success_proven": false,
+    "automatic_following_action": false
+  },
+  "local_adam_inspected": false,
+  "new_training_updates": 0,
+  "new_sampling": 0
+}

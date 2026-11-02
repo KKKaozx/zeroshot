@@ -1,0 +1,37 @@
+{
+  "stage": "ready_for_complete_cluster_preflight_only",
+  "weight": 35.444970688934426,
+  "selection_train_only": true,
+  "baseline_reused": "207558",
+  "baseline_retrained": false,
+  "new_job_submitted": false,
+  "protocol_sha256": "5a5fb791966a1b67be95d95644d577ce2434de3e619d2a3d019ac4465919e862",
+  "screen": {
+    "rotation_at_most_deg": 14.381946234906252,
+    "position_at_most_cm": 6.808207638142424,
+    "episodes_rotation_better_than_control_at_least": 6,
+    "all40windows_and_all10episodes_included": true,
+    "all5tasks_reported": true
+  },
+  "local_attempt1": {
+    "directory": "reports/bridge_rotation_weight_local_preflight_20261016",
+    "status": "interrupted",
+    "reason": "Near-full global laptop GPU memory; first backward/update remained slow. Preserve evidence; reduce local token residency only.",
+    "completed_update_log_rows": 0,
+    "initial_prediction_targets_contexts_exact_vs_baseline": true,
+    "new_full_training_run": false
+  },
+  "local_attempt2": {
+    "status": "interrupted_for_user_gpu_contention",
+    "completed_logged_updates": 5,
+    "saved_prediction_snapshots": 2,
+    "restore_completed": false
+  },
+  "local_complete_preflight_passed": false,
+  "independent_smoke_verified": true,
+  "cpu_loss_math_and_training_statistics_verified": true,
+  "bash_syntax_passed": true,
+  "archive_bytes": 197313,
+  "archive_sha256": "1858486bd9f728995bf8c25b27c70fcd75728a40a4900fb56a6c86193063d1e7",
+  "next_step": "Upload small package and submit complete cluster preflight only. No formal until complete validator passes; reuse207558 control/cache."
+}

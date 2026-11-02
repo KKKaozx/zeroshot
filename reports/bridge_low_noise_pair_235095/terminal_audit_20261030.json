@@ -1,0 +1,54 @@
+{
+  "job_id": 235095,
+  "source_job": 234100,
+  "source_trace_job": 235002,
+  "observed_date": "2026-10-30",
+  "terminal_sha256": "21878fc3ff59878280efc11fb23f6b911666f4199f9a113cfa8cc3741593094f",
+  "original_gaussians_exact_marker_observed": true,
+  "forwards_observed": [
+    {
+      "seed": 1101,
+      "role": "train",
+      "windows": 8
+    },
+    {
+      "seed": 1101,
+      "role": "validation",
+      "windows": 8
+    },
+    {
+      "seed": 1102,
+      "role": "train",
+      "windows": 8
+    },
+    {
+      "seed": 1102,
+      "role": "validation",
+      "windows": 8
+    },
+    {
+      "seed": 1103,
+      "role": "train",
+      "windows": 8
+    },
+    {
+      "seed": 1103,
+      "role": "validation",
+      "windows": 8
+    }
+  ],
+  "completion_marker_observed": true,
+  "cluster_result_reported": {
+    "optimizer_updates": 0,
+    "direct_denoiser_forwards": 6,
+    "new_full_sampling_runs": 0,
+    "source_unchanged": true
+  },
+  "archive_sha256_reported": "3607b528c45e6af2f68ee9ca14859902ffbd9a1cdf0099434c1c109b3fe6bc87",
+  "raw_results_downloaded": false,
+  "metrics_independently_recomputed": false,
+  "source_weights_downloaded": false,
+  "slurm_final_state_observed": null,
+  "automatic_following_action": false,
+  "next_action": "Download existing two-file small_results.zip and compare teacher input/output with archived native t0response; no new job or training."
+}

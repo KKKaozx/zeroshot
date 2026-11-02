@@ -1,0 +1,84 @@
+{
+  "action": {
+    "representation": "source_cartesian_delta_pose_open_positive_v1",
+    "position_scale_meters": 0.1,
+    "max_normalized_position": 8.0,
+    "dimensions": "source_dx_dy_dz+left_dqx_dqy_dqz_dqw+gripper",
+    "nominal_target_binding": {
+      "format": "oxe-nominal-target-binding-v1",
+      "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+      "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+      "label_family": "nominal_resampled_observed_reached_pose",
+      "clock_basis": "user_selected_published_nominal_frequency_assumption",
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "source_units_or_formal_training_admitted": false
+    },
+    "source_position_to_meters_verified": false
+  },
+  "model": {
+    "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+    "visual_backbone": "dinov2",
+    "dino_assets": "D:\\ntu_related\\dissertation\\Zero_shot\\baselines\\dinov2_large_frozen_assets_20261023",
+    "visual_input_contract": "canonical_clip_224_letterbox_to_dino_imagenet_v1",
+    "visual_asset_identity": {
+      "repository": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "sha256": {
+        "model.safetensors": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+        "config.json": "12df51c069a2dc1305e34ba71ef58bc2407ea553b75f4722a1715c1bce3bbed0",
+        "preprocessor_config.json": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+      }
+    },
+    "fusion_type": "cross_attention",
+    "adapter_pooling": "cls",
+    "decoder_type": "diffusion",
+    "diffusion_prediction_type": "epsilon",
+    "num_adapter_layers": 8,
+    "attention_dim": 512,
+    "num_attention_heads": 8,
+    "decoder_hidden_dim": 256,
+    "chunk_size": 16,
+    "action_dim": 8,
+    "num_diffusion_steps": 100,
+    "beta_schedule": "squaredcos_cap_v2",
+    "clip_denoised": true,
+    "dropout": 0.1,
+    "separate_gripper_head": true,
+    "trajectory_conditioned_gripper": true,
+    "gripper_head_type": "legacy",
+    "condition_on_current_gripper": true,
+    "current_gripper_encoding": "last_command_with_availability_v1",
+    "current_gripper_semantics": "last_command_open_positive_with_availability_v1",
+    "gripper_loss_weight": 0.25,
+    "gripper_change_weight": 1.0,
+    "gripper_target_mode": "state",
+    "gripper_transition_decode": "cumulative",
+    "gripper_switch_threshold": 0.0,
+    "balanced_gripper_loss": false,
+    "diffusion_architecture": "multiscale",
+    "diffusion_down_dims": [
+      256,
+      512,
+      1024
+    ],
+    "diffusion_step_embed_dim": 128,
+    "diffusion_kernel_size": 5
+  }
+}

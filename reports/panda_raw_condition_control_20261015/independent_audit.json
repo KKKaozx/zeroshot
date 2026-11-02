@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "one_new_arm_only": true,
+  "original_processed_arm_reexecuted": false,
+  "initial_decoder_and_all1024_noised_inputs_match": true,
+  "groups": {
+    "raw": {
+      "path_position_cm": 1.0464924896556826,
+      "path_rotation_deg": 1.29556907814697,
+      "endpoint_position_cm": 1.5419027894130224,
+      "endpoint_rotation_deg": 1.3816733192144615,
+      "pose_fit_passed": false,
+      "passing_windows": 2
+    },
+    "processed_reused": {
+      "path_position_cm": 0.38315770011840034,
+      "path_rotation_deg": 0.9513515894627655,
+      "endpoint_position_cm": 0.5393849060752153,
+      "endpoint_rotation_deg": 1.0089886725732196,
+      "pose_fit_passed": false,
+      "passing_windows": 14
+    }
+  },
+  "processed_minus_raw_position_cm": -0.6633347895372823,
+  "processed_position_relative_change": -0.6338648352417062,
+  "windows_better_with_processing": 15,
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false
+}

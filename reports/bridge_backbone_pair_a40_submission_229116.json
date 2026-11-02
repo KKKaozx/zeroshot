@@ -1,0 +1,34 @@
+{
+  "job_id": 229116,
+  "date": "2026-10-27",
+  "source": "User reported submission identifier",
+  "experiment": "bridge_backbone_pair_a40_v1",
+  "arms": [
+    "clip",
+    "dino"
+  ],
+  "updates_per_arm": 8192,
+  "training_seed": 42,
+  "same_allocated_gpu_required": true,
+  "gpu_model": "NVIDIA A40",
+  "source_preflight_job": 228978,
+  "failed_a6000_attempts": [
+    229016,
+    229042
+  ],
+  "slurm_state_observed": false,
+  "cuda_health_observed_passed": false,
+  "training_started_observed": true,
+  "pair_completed_observed": true,
+  "performance_verdict": "DINO improves original Bridge recipe versus matched CLIP and no-motion on reused dev40, one training seed; not main-pipeline or LIBERO success",
+  "log": "/projects/Zeroshot/logs/bridge-backbone-pair-a40-229116.out",
+  "expected_output": "/projects/Zeroshot/runs/bridge-backbone-pair-a40-229116",
+  "expected_comparison": "/projects/Zeroshot/runs/bridge-backbone-pair-a40-229116/pair_comparison.json",
+  "automatic_following_action": false,
+  "pair_completed_terminal_reported": true,
+  "terminal_pair_verification_passed": true,
+  "cuda_working_inferred_from_actual_training": true,
+  "completed_updates_per_arm": 8192,
+  "result_note": "docs/BRIDGE_A40_PAIR_RESULT_20261027.md",
+  "raw_artifact_local_verification_complete": false
+}

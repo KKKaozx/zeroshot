@@ -1,0 +1,23 @@
+{
+  "source": "User pasted cluster code-bundle verification and pre-upload storage check",
+  "code_bundle_uploaded_and_all56_files_verified": true,
+  "project_allocated_bytes": 157336899072,
+  "additional_peak_bytes_including_tar_and_extraction": 42727514112,
+  "project_budget_bytes": 200000000000,
+  "filesystem_free_bytes": 203635891896320,
+  "passed": false,
+  "conservative_peak_deficit_bytes": 64413184,
+  "proposed_cleanup": {
+    "exact_file": "/projects/Zeroshot/oxe_dino_main_preflight_v1.zip",
+    "expected_bytes": 91911249,
+    "expected_sha256": "37f3bbf70bcf589db24f0ec76827e42f72eeec2139b95c7fe8786952d2b772c7",
+    "reason": "Uploaded transport copy already extracted and all bundled files verified; local original remains available",
+    "expected_peak_after_cleanup_if_no_other_changes": 199972501935,
+    "existing8GiB_preflight_reserve_retained": true,
+    "executed_by_agent": false,
+    "user_confirmation_of_cleanup_or_recheck_received": false
+  },
+  "old_records_or_checkpoints_deleted": false,
+  "cluster_job_submission_reported": false,
+  "scope": "Conservative project du allocation, not authoritative account quota"
+}

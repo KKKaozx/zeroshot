@@ -1,0 +1,2695 @@
+[
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第一封邮件（任务及要求）.docx",
+    "filename": "第一封邮件（任务及要求）.docx",
+    "sha256": "7af553f929ee2fffa82c7c1011c0230129e8316f8a203f4f4643a83665c48daa",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "Title: Machine Learning for Zero-Shot Generalization of Robotic Manipulation Policies Using Vision-Language Models"
+      },
+      {
+        "paragraph": 3,
+        "text": "Summary:"
+      },
+      {
+        "paragraph": 4,
+        "text": "Teaching robots to manipulate physical objects in unstructured environments remains one of the central challenges of embodied artificial intelligence. Traditional robot learning approaches require large amounts of task-specific demonstration data collected in the target environment, making them expensive to scale to new tasks or new scenes. Recent advances in large vision-language models have opened the possibility of using the rich semantic knowledge encoded in these models to guide robot policies toward novel objects and task instructions they have never encountered during training. This project investigates how pre-trained vision-language models can be adapted to serve as zero-shot policy modules for tabletop robotic manipulation, enabling a robot arm to follow natural language instructions and interact with previously unseen objects using simulated environments and publicly available demonstration datasets. No prior knowledge of robotics or machine learning is assumed. Detailed instructions and datasets will be provided to the student who takes the project."
+      },
+      {
+        "paragraph": 6,
+        "text": "Novelty:"
+      },
+      {
+        "paragraph": 7,
+        "text": "Existing approaches to vision-language-conditioned robot manipulation either require fine-tuning large models on thousands of robot demonstrations, which is expensive, or use the language model only for high-level task decomposition while delegating low-level control to separately trained primitive skills. This project proposes a lightweight adapter architecture that grafts a small set of trainable cross-attention layers between a frozen vision-language model backbone and a diffusion-based action decoder, requiring fine-tuning of only the adapter parameters on a modest number of demonstrations while keeping the large pre-trained model frozen. The key novelty is a counterfactual data augmentation scheme in which the language instruction is systematically varied at training time while the visual scene is held fixed, or vice versa, forcing the adapter to disentangle visual and linguistic factors of variation and producing policies that are dramatically more robust to instruction paraphrasing and object appearance change at test time. This combination of parameter-efficient adaptation and counterfactual instruction augmentation is not present in the current robot learning literature and addresses a critical bottleneck for real-world deployment of generalist robot policies."
+      },
+      {
+        "paragraph": 9,
+        "text": "Datasets (all public, show dataset names and web addresses in text):"
+      },
+      {
+        "paragraph": 10,
+        "text": "The Open X-Embodiment dataset aggregates over one million robot demonstrations across 22 robot embodiments and dozens of tasks collected by research groups worldwide and is available at https://robotics-transformer-x.github.io. The LIBERO benchmark provides 130 manipulation task suites in simulation with language annotations and is hosted at https://libero-project.github.io. The Bridge Dataset contains over 7,000 teleoperated demonstrations of kitchen manipulation tasks with language labels and can be downloaded at https://rail.eecs.berkeley.edu/datasets/bridge_release. The CLIPort benchmark for language-conditioned pick-and-place tasks in simulation is available at https://cliport.github.io. Together these four sources span simulation and real-robot demonstrations, diverse object sets, and language-annotated tasks at a scale sufficient for both adapter training and zero-shot generalization evaluation."
+      },
+      {
+        "paragraph": 12,
+        "text": "References :"
+      },
+      {
+        "paragraph": 13,
+        "text": "A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, J. Dabis, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, J. Hsu, J. Ibarz, B. Ichter, A. Irpan, T. Jackson, S. Jesmonth, N. Joshi, R. Julian, D. Kalashnikov, Y. Kuang, I. Leal, K. Lee, S. Levine, Y. Lu, U. Malla, D. Manjunath, I. Mordatch, O. Nachum, C. Parada, J. Peralta, E. Perez, K. Pertsch, J. Quiambao, K. Rao, M. Ryoo, G. Salazar, P. Sanketi, K. Sayed, J. Singh, S. Sontakke, A. Stone, C. Tan, H. Tran, V. Vanhoucke, S. Vega, Q. Vuong, F. Xia, T. Xiao, P. Xu, S. Xu, T. Yu, and B. Zitkovich, \"RT-1: Robotics transformer for real-world control at scale,\" in Proc. Robot.: Sci. Syst. (RSS), Daegu, Republic of Korea, 2023."
+      },
+      {
+        "paragraph": 15,
+        "text": "C. Chi, S. Feng, Y. Du, Z. Xu, E. Cousineau, B. Burchfiel, and S. Song, \"Diffusion policy: Visuomotor policy learning via action diffusion,\" in Proc. Robot.: Sci. Syst. (RSS), Daegu, Republic of Korea, 2023."
+      },
+      {
+        "paragraph": 17,
+        "text": "M. Shridhar, L. Manuelli, and D. Fox, \"CLIPort: What and where pathways for robotic manipulation,\" in Proc. Conf. Robot Learn. (CoRL), vol. 164, London, UK, 2022, pp. 894-906."
+      },
+      {
+        "paragraph": 19,
+        "text": "E. J. Hu, Y. Shen, P. Wallis, Z. Allen-Zhu, Y. Li, S. Wang, L. Wang, and W. Chen, \"LoRA: Low-rank adaptation of large language models,\" in Proc. Int. Conf. Learn. Represent. (ICLR), Virtual Event, 2022."
+      },
+      {
+        "paragraph": 21,
+        "text": "A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, \"Learning transferable visual models from natural language supervision,\" in Proc. Int. Conf. Mach. Learn. (ICML), Virtual Event, 2021, pp. 8748-8763."
+      },
+      {
+        "paragraph": 23,
+        "text": "K. Rana, J. Haviland, S. Garg, J. Abou-Chakra, I. Reid, and N. Suenderhauf, \"SayPlan: Grounding large language models using 3D scene graphs for scalable robot task planning,\" in Proc. Conf. Robot Learn. (CoRL), Atlanta, GA, USA, 2023."
+      },
+      {
+        "paragraph": 25,
+        "text": "Research questions:"
+      },
+      {
+        "paragraph": 26,
+        "text": "The primary research question is whether a lightweight cross-attention adapter trained on a small subset of the Open X-Embodiment demonstrations can match or exceed the zero-shot task success rate of fully fine-tuned baselines on novel objects and instructions from the LIBERO and CLIPort benchmarks. A secondary question is whether the counterfactual instruction augmentation strategy provides measurable improvement in robustness to instruction paraphrasing compared to standard data augmentation, as evaluated by testing the same physical task under a set of semantically equivalent but lexically diverse instruction phrasings. A third question is whether the adapter generalizes across robot embodiments, specifically whether an adapter trained on demonstrations from one robot arm in the Open X-Embodiment data retains reasonable performance when controlling a different simulated robot arm at test time."
+      },
+      {
+        "paragraph": 28,
+        "text": "Approach and Methods in detail:"
+      },
+      {
+        "paragraph": 29,
+        "text": "The project is organized into four phases. In the first phase of approximately three months, the student will set up the simulation environment using the ManiSkill2 or PyBullet simulator and download the four datasets. A unified data loader will be written to parse demonstrations from all four sources into a common format consisting of a language instruction string, a sequence of RGB observation images at 224 by 224 pixels, and a sequence of end-effector pose actions represented as eight-dimensional vectors of position, quaternion, and gripper width. Demonstrations will be filtered to retain only those with valid language annotations and at least ten timesteps of action data."
+      },
+      {
+        "paragraph": 31,
+        "text": "In the second phase of approximately five months, the student will implement the adapter architecture. The frozen backbone will be the CLIP ViT-L/14 vision-language model, whose visual and textual encoders produce 1024-dimensional embeddings. The adapter consists of eight cross-attention layers with 512-dimensional keys and values, inserted after the frozen CLIP encoders, that take the visual token sequence and the language embedding as queries and keys respectively and produce a fused context vector. This context vector is passed to a conditional diffusion action decoder based on the DDPM formulation with a U-Net denoising network that takes as input a noisy action trajectory and the fused context and predicts the denoised trajectory. Only the adapter and the diffusion decoder are trained; CLIP weights remain frozen throughout."
+      },
+      {
+        "paragraph": 33,
+        "text": "In the third phase of approximately four months, the student will implement the counterfactual augmentation strategy. For each training demonstration, an augmented counterpart will be generated by replacing the original instruction with a semantically different instruction drawn from the same task suite but corresponding to a different goal, and the action sequence will be replaced with a null sequence of zeros, teaching the model that mismatched instruction-scene pairs should predict inaction. Additionally, paraphrase augmentations will be generated by prompting a locally hosted language model to produce five lexically diverse restatements of each original instruction, which are used as additional positive training examples. The student will compare four training conditions: no augmentation, paraphrase-only augmentation, counterfactual-only augmentation, and the full combined augmentation. Evaluation will be performed in simulation by rolling out the policy for 100 episodes per task split and measuring task success rate as the primary metric."
+      },
+      {
+        "paragraph": 35,
+        "text": "In the fourth phase of approximately two months, ablation studies will remove the adapter layers one at a time to assess the minimum number required for good performance, and a cross-embodiment transfer experiment will train on demonstrations from one robot type in Open X-Embodiment and evaluate on a different robot type in simulation. Qualitative analysis will examine cases where the policy fails due to visual ambiguity versus linguistic ambiguity by systematically holding one modality constant and varying the other."
+      },
+      {
+        "paragraph": 37,
+        "text": "Deliverables:"
+      },
+      {
+        "paragraph": 38,
+        "text": "The student will produce a documented Python codebase using PyTorch hosted on GitHub, including simulation environment setup scripts, the data loading pipeline, the adapter and diffusion decoder implementation, training scripts, and evaluation rollout scripts. A written thesis of approximately 10,000 words covering background, methodology, experimental results, and discussion will be completed. A conference-length manuscript of approximately eight pages formatted to the CoRL or NeurIPS template will be prepared for peer-reviewed submission."
+      },
+      {
+        "paragraph": 40,
+        "text": "***************"
+      },
+      {
+        "paragraph": 41,
+        "text": "I have changed the email subject. To email me in the future, please reply to our latest email without changing the email subject, keeping all past emails below, so that I know what we have discussed by keeping only our last email. Don’t cc any other persons in this email stream. If you wish to email someone else, start a fresh email."
+      },
+      {
+        "paragraph": 43,
+        "text": "This email is rather long, but it is important that you carefully read and follow these instructions. If you have any questions, please ask me; but I hope I don’t have to repeat what is already in this email. This email may contain some suggestions (1) specific to this project and (2) in general. This is a research project, so it emphasizes on novelty (creating something new) and you are strongly encouraged to explore your own ideas. But you need to show it works, otherwise it would be a fantasy."
+      },
+      {
+        "paragraph": 45,
+        "text": "Pay attention to the Submission section – you don’t want to be late for your graduation/job."
+      },
+      {
+        "paragraph": 47,
+        "text": "You will likely to need GPU if you use deep learning. Please apply for access to GPU servers available at the School of EEE https://forms.office.com/pages/responsepage.aspx?id=SJPOFSq-K0aPwOF2WpsgSn5rtMSbsYVIu88PUxQZJYdUQUg2QklKWVRVV0dDM1Y1RVg3UVlZSURHTy4u&route=shorturl . You may need to forward me a pdf form to sign, depending on their requirements (please fill in all spaces that can be filled, including Supervisor Name, extension 6790 6372, Supervisor Signature Date). If you don’t hear from them in a couple of weeks, try to remind them by email for a couple of times, since they may be busy. If the website says registration is closed, please try to email the person in charge. You may also explore other GPU resources, for example, NSCC (https://www.nscc.sg/), Google Colab, and NTU HPC. Also see attached."
+      },
+      {
+        "paragraph": 49,
+        "text": "Best regards,"
+      },
+      {
+        "paragraph": 51,
+        "text": "Wang Lipo"
+      },
+      {
+        "paragraph": 53,
+        "text": "Regular Meeting?"
+      },
+      {
+        "paragraph": 55,
+        "text": "I don’t require you to meet me regularly; however, I do require that you write me an email every 2 weeks to tell me what you did (attach any figures/tables) since your last email to me, so that I know your progress. The email can be quite brief or detailed. You are also welcome to set up a meeting with me. Kindly note that I may not respond to any of your emails; however, please be assured that I have read them and will respond if necessary. Occasionally, I may forget to reply even if I should reply, in which case, kindly remind me. Don’t apologize for lack of progress for various reasons, for example, being too busy with other courses, upcoming quiz, etc. No need to email me your codes or input data – I will need these only when you submit your final report. Email me any results, e.g., tables and figures. No need to list all papers you read or summarize papers you read."
+      },
+      {
+        "paragraph": 57,
+        "text": "A bad mistake is for the student not updating me regularly, wasting time on something not good, and suddenly telling me the deadline is due and too late to make any corrections/adjustments."
+      },
+      {
+        "paragraph": 59,
+        "text": "Your plan should be like this: you spend at most 2 months since my first email for reading existing work etc. Programming and running with data should start after that. The major part of your time will be spent on running program, test with data, modifying algorithms, compare results, etc. Don’t spend much time on planning, thinking, and writing report."
+      },
+      {
+        "paragraph": 61,
+        "text": "Get Started"
+      },
+      {
+        "paragraph": 63,
+        "text": "You may need to study the tools to be used in your Project. For example, if you use neural networks, you can find a book in NTU library to read about the basics (you don’t need, but are welcome, to learn ALL about the tools or advanced materials). You could experiment it in Python (most popular programming language nowadays, although other language may still be used), with some tutorials, toolboxes and manuals. You can choose your preferred software environment / programming language for this Project. You can consider a neural network a black box, with inputs and outputs, plus some adjustable parameters. Once you have the neural network program and data, you can start training and testing, even without knowing much of the inner details of neural networks. So don’t overwhelm yourself with all that math and algorithms."
+      },
+      {
+        "paragraph": 65,
+        "text": "Most likely, you can find an existing program to use from public domain, without having to program from scratch. For example, https://paperswithcode.com/ has lots of papers with codes and data. But ultimately, you are responsible for coding. If you cannot find the code you like, you need to code yourself. Please don’t ask me to find things for you."
+      },
+      {
+        "paragraph": 67,
+        "text": "You also need to read some research papers published on your Project area. You need to understand what has been done and how it has been done, so that you know what to do in your project. Later you need to write about prior work in your report. In addition, while reading research papers, pay attention to how the papers are written, so that you know how to carry out your work and write your report properly. Your report should contain materials suitable for submission for publication in a journal (preferred) or conference."
+      },
+      {
+        "paragraph": 69,
+        "text": "To find research papers in the area of your Project, Google search may turn up low-quality (junk) papers and reading/learning junk leads to poor project outcome. Instead, go to the NTU Library website, click databases. Then find one of the reputable publisher, i.e., IEEE Xplore, Elsevier SicenceDirect, ACM, ACM, and SpringerLink, and search for only journal papers (not conference papers or book chapters).  Enter the keywords/phrases in your Project title/summary (use Advanced Search / enter multiple keywords to make your search more specific, only in paper title and abstract). Focus on more recent papers, e.g., recent 3-5 years. If you like, you could also search for Top-tier conferences, i.e., AAAI, ICML, CVPR, NeurIPS, ICCV, ECCV, ACM-MM (but not any other conferences). But in rare cases, if there are not many papers in the above places, you may have to google."
+      },
+      {
+        "paragraph": 71,
+        "text": "As I mentioned previously, this reading part should not last more than 2 months."
+      },
+      {
+        "paragraph": 73,
+        "text": "Goal of your Project"
+      },
+      {
+        "paragraph": 75,
+        "text": "If there are already papers published on your topic, you should attempt to improve on the best published method on the subject."
+      },
+      {
+        "paragraph": 77,
+        "text": "First, reproduce the best published results in a research paper using a program (written yourself or already available for download) and the same data used in the paper. It is highly desirable to select the state-of-the-art to compare. Deliberately selecting an inferior or older approach to compare will be bad for your project. You should make sure the data used in the paper can be freely downloaded."
+      },
+      {
+        "paragraph": 79,
+        "text": "Second, make some modifications to the algorithms in the paper and try to improve the results for the same data used in the paper."
+      },
+      {
+        "paragraph": 81,
+        "text": "It would be less desirable to simply do something, without comparing with published research paper(s), or simply reproduce someone else’s results without trying any improvements."
+      },
+      {
+        "paragraph": 83,
+        "text": "If no prior work exists on your topic (rarely happens), you should try to propose your own solution to the problem, maybe inspired by some other solutions."
+      },
+      {
+        "paragraph": 85,
+        "text": "During your computer simulations, whenever appropriate, calculate averages and standard deviations. For example, if each time your run the simulation with different initialization, the result is different, you will need to run 5-10 times and computer the average/standard deviation."
+      },
+      {
+        "paragraph": 87,
+        "text": "Standardize the result presentations. For example, an accuracy of 53.5973% usually does not make sense and 53.6% would be sufficient."
+      },
+      {
+        "paragraph": 89,
+        "text": "Use tables and figures to present and compare results, rather than bullets. For comparison, each table should have multiple columns/rows and each figure should have more than 1 curve/dots."
+      },
+      {
+        "paragraph": 91,
+        "text": "Basically, learn from a good journal paper on how to carry out simulations, how to present your results, etc."
+      },
+      {
+        "paragraph": 93,
+        "text": "If the proposed method consists of multiple components, ablation studies should be performed to see which components are necessary."
+      },
+      {
+        "paragraph": 95,
+        "text": "Statistical significance between performance differences of different methods should be analyzed using statistical ranking methods, such as Wilcoxon test / Friedman test. Comparisons of different methods should be clearly presented in tables and/or figures. Each method should be denoted by an acronym and the year published, e.g., ResNet, 2022."
+      },
+      {
+        "paragraph": 97,
+        "text": "The purpose of this project is for you to learn something. There is no penalty if you tried a few ways but are not able to improve the results. You should include your attempts in your report. Do not fake any results, which will result in severe penalties. All results are subject to verification at the end of the project."
+      },
+      {
+        "paragraph": 99,
+        "text": "Data Preparation"
+      },
+      {
+        "paragraph": 101,
+        "text": "Data should be divided into 3 sets: training set, validation set, and test set. The training set is used to train weights/biases. Validation set is used to determine the best hyperparameters, such as the number layers, the number of neurons in each layer, the learning rate, etc. If you use past data to predict future data, the number of past data (window length) used to predict the next data is also a hyperparameter to be determined. You need to search for the optimal set of hyperparameters. After that, test results are obtained using the optimal hyperparameters and the test data set."
+      },
+      {
+        "paragraph": 103,
+        "text": "Writing Reports/Dissertation"
+      },
+      {
+        "paragraph": 105,
+        "text": "Do a spelling and grammar check."
+      },
+      {
+        "paragraph": 107,
+        "text": "Do not copy anyone else’s stuff, including sentences, paragraphs, figures, pictures, pseudo-codes, etc (it is against copyright law to do any of these). Write your own sentences. Draw your own figures (if you use software other than Microsoft Word to draw your figures, please also submit the figures in editable forms. For example, if you draw in ppt, also submit your ppt file). Do not include any scanned or copy-righted materials (even if you cite the source). Violations will result in penalties. Don’t ask for or try to achieve an “acceptable similarity score” in a Turnitin report. Instead, use the colored parts in the Turnitin report to make sure there are no copied sentences (except references, names, addresses). It is possible that something with 45% similarity score is alright (without copied materials), but something with 10% similarity score is not acceptable (with copied materials)."
+      },
+      {
+        "paragraph": 109,
+        "text": "For each method/algorithm used: if it is invented by you, say \"we propose...\". If it is NOT invented by you, write \"... was proposed by ... (give references. Use past tense). If it is your modification of someone else's work, say exactly what the modifications are and give references. You must review all existing work directly related to yours. Do not include other people's work that is not directly related to your results. Use simple present tense to describe your work. Use simple past tense to describe already published work."
+      },
+      {
+        "paragraph": 111,
+        "text": "Define EVERY acronym (e.g., TSP) when it first appears (e.g., traveling salesman problem (TSP)). Don't define any acronyms that you don't intend to re-use later in the report. Define EVERY math symbol when it first appears in the report. Avoid inventing new phrases, new terminologies, or new acronyms unless it is absolutely essential."
+      },
+      {
+        "paragraph": 113,
+        "text": "Use standard forms of references, for example (must include author names, paper title, journal/conference title, page/volume number for journal, year, etc. Note there should a space at appropriate places.),"
+      },
+      {
+        "paragraph": 114,
+        "text": "[1]     J. C. Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68–73."
+      },
+      {
+        "paragraph": 115,
+        "text": "[2]     Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, “Electron spectroscopy studies on magneto-optical media and plastic substrate interface,” IEEE Trans. Industrial Electronics, vol. 2, pp. 740–741, August 1987."
+      },
+      {
+        "paragraph": 117,
+        "text": "Each reference must have publication title and year. For a journal reference, make sure it also has journal name, volume number, and page number. For a conference reference, make sure it has conference name. For a book reference, make sure it has publisher name and publisher city. There should be at least 40 references in your PROJECT."
+      },
+      {
+        "paragraph": 119,
+        "text": "In the literature survey part, leave out things that are too elementary, for example, you don’t need a figure showing the old 3-layer multilayer perceptron neural network."
+      },
+      {
+        "paragraph": 121,
+        "text": "When citing someone, use their surnames only. Don't include first names or initials. For example, say \"Chua [5] proposed...\" (suppose the paper cited is reference #5), not \"L.O. Chua proposed...\". When citing a paper with two authors, include both authors' names, not only one of the authors. When citing a paper with 3 or more authors, use either et al or include all authors names, for example, Lee et al... or Lee, Lin, and Wang.... Don’t use “The research paper …” or “The comparison paper …”."
+      },
+      {
+        "paragraph": 123,
+        "text": "Write simple and short sentences, unless you are absolutely sure that the long sentences you write are clear and correct. Make sure each sentence uses correct grammar. DO NOT use abbreviations like \"don't\", \"can't\"."
+      },
+      {
+        "paragraph": 125,
+        "text": "Number all equations, figures, tables, etc, so that they can be referred to easily."
+      },
+      {
+        "paragraph": 127,
+        "text": "For each figure/plot/table:"
+      },
+      {
+        "paragraph": 128,
+        "text": "1.       If the width of the figure is about 6cm (about half of A4 page width), the font size of labels (words/numbers) for the axis or inside the figure must be 8 or 9, so that it is big enough to read. The size of the axis label should be increased proportionally, so that when the figure is reduced to 6cm-wide later, the axis label is still big enough to read."
+      },
+      {
+        "paragraph": 129,
+        "text": "2.       Minimize the number of words inside of a figure. Explain the figure in the figure legend."
+      },
+      {
+        "paragraph": 130,
+        "text": "3.       Do not use color in figures. Instead, use different line types (dashes, solid), different dots, squares, triangles, etc. Do not have too many of these symbols in figures to make it hard to tell which is which."
+      },
+      {
+        "paragraph": 131,
+        "text": "4.       Avoid grids inside a figure"
+      },
+      {
+        "paragraph": 132,
+        "text": "5.       Do not have too many ticks on each axis (for example, no more than 6 ticks for each axis)."
+      },
+      {
+        "paragraph": 133,
+        "text": "6.       Each figure or table must have a legend, a concise description of the figure/table. Do not use shades or colors in tables."
+      },
+      {
+        "paragraph": 134,
+        "text": "7.       Make sure all figures have high resolution. If you need to capture screen, enlarge the figure first and then capture the screen."
+      },
+      {
+        "paragraph": 135,
+        "text": "8.       Avoid figure titles (labels on top of the figures). Have description in figure legends instead."
+      },
+      {
+        "paragraph": 136,
+        "text": "9.       All plotted figures should have axis and all axis must have labels (i.e., explain what is plotted against what)."
+      },
+      {
+        "paragraph": 138,
+        "text": "No need to include codes in your report. If you want to include codes, put them in an Appendix, not in the main chapters. Describe your algorithms in English (or pseudocodes) and/or block diagrams/figures."
+      },
+      {
+        "paragraph": 140,
+        "text": "Whenever possible/appropriate, compare your results with published results based on the same dataset by listing both results in the same table or plotting both results in the same figure."
+      },
+      {
+        "paragraph": 142,
+        "text": "Include the sources of datasets used in your references."
+      },
+      {
+        "paragraph": 144,
+        "text": "Email me both Word (or Latex) file and PDF file of your PROJECT report. I myself do not need any hardcopies (I don’t speak for any other examiners)."
+      },
+      {
+        "paragraph": 146,
+        "text": "When you submit your final version (after your updates according to comments from me and the examiner), also submit your source codes and data files necessary to run the codes, plus a brief instruction on how to run your codes. These things are not needed for the examiner. Only for me. If it is too big to email, upload somewhere (e.g., dropsend.com) and give me a download link."
+      },
+      {
+        "paragraph": 148,
+        "text": "Submissions"
+      },
+      {
+        "paragraph": 150,
+        "text": "After you email me your thesis, I usually need a few days to read it and may give you some suggestions to improve/revise. Then you may need to spend time revising and send me again. If you don’t revise adequately, the process may repeat. After you submit to school, the review will take time. Please don’t email me your thesis and expect me to sign it immediately. I heard that you can still submit thesis after STP expires (but you need to verify this). If you need to graduate or take a job at a certain date, you should send thesis to me at least 2-3 months before that date."
+      },
+      {
+        "paragraph": 152,
+        "text": "When your thesis is ready for final submission to school, please also send the following to me (not to school):"
+      },
+      {
+        "paragraph": 153,
+        "text": "Program source codes (with a readme file briefly explaining which file is for what purpose. See “Project-Code and Reproducibility Requirements” below for details)."
+      },
+      {
+        "paragraph": 154,
+        "text": "Thesis Word (or Latex) file."
+      },
+      {
+        "paragraph": 155,
+        "text": "All figures that you draw in editable forms. For example, if you draw a figure using PPT, send me the ppt file. If you draw in Word, that’s fine to send me the Word file. Diagrams in screen shots (likely copied from somewhere) are not acceptable."
+      },
+      {
+        "paragraph": 157,
+        "text": "Regular Backup"
+      },
+      {
+        "paragraph": 159,
+        "text": "It is very important to back up all your data frequently (as frequent as you care to loss the data, since your disk might become corrupted at any time). If a student says no submissions can be made because of computer failure, this will not be considered a valid excuse."
+      },
+      {
+        "paragraph": 161,
+        "text": "Initial (Introductory) Meeting?"
+      },
+      {
+        "paragraph": 163,
+        "text": "I don’t require this. If you need one, please let me know what we will be discussing. Otherwise, we can have a discussion when you have some results to discuss."
+      },
+      {
+        "paragraph": 165,
+        "text": "Things that I am not able to help"
+      },
+      {
+        "paragraph": 167,
+        "text": "·         Debug a program"
+      },
+      {
+        "paragraph": 168,
+        "text": "·         Solve computer issues"
+      },
+      {
+        "paragraph": 169,
+        "text": "Set up a detailed timeline and milestones"
+      },
+      {
+        "paragraph": 170,
+        "text": "·         Teach how neural networks work"
+      },
+      {
+        "paragraph": 172,
+        "text": "Major Mistakes"
+      },
+      {
+        "paragraph": 174,
+        "text": "·         Ignored my instructions given in this email (they said they read this email, but they didn’t really read it)"
+      },
+      {
+        "paragraph": 175,
+        "text": "Never email progress to me, do all the wrong things, and suddenly tell me I must sign their thesis NOW!"
+      },
+      {
+        "paragraph": 177,
+        "text": "Project-Code and Reproducibility Requirements"
+      },
+      {
+        "paragraph": 179,
+        "text": "The aim of these requirements is not to create production-quality software.The aim is simply that, at the end of the project:"
+      },
+      {
+        "paragraph": 180,
+        "text": "The supervisor can run the code without guessing missing files."
+      },
+      {
+        "paragraph": 181,
+        "text": "The main experimental results in the dissertation can be approximately reproduced."
+      },
+      {
+        "paragraph": 182,
+        "text": "Another student can continue the work if necessary."
+      },
+      {
+        "paragraph": 183,
+        "text": "The expectations are lightweight and focus on good organization rather than heavy documentation."
+      },
+      {
+        "paragraph": 185,
+        "text": "1. Folder Structure (Keep It Simple)"
+      },
+      {
+        "paragraph": 186,
+        "text": "Use a clear top-level project folder such as:"
+      },
+      {
+        "paragraph": 187,
+        "text": "project_name/"
+      },
+      {
+        "paragraph": 188,
+        "text": "code/"
+      },
+      {
+        "paragraph": 189,
+        "text": "configs/"
+      },
+      {
+        "paragraph": 190,
+        "text": "data_readme.txt"
+      },
+      {
+        "paragraph": 191,
+        "text": "results/"
+      },
+      {
+        "paragraph": 192,
+        "text": "logs/"
+      },
+      {
+        "paragraph": 193,
+        "text": "thesis_tables/"
+      },
+      {
+        "paragraph": 194,
+        "text": "You do not need complicated subfolders.The important part is consistency."
+      },
+      {
+        "paragraph": 196,
+        "text": "2. Version Control (Minimum Requirement)"
+      },
+      {
+        "paragraph": 197,
+        "text": "Use Git (GitHub, GitLab, or private repository)."
+      },
+      {
+        "paragraph": 198,
+        "text": "Minimum rules:"
+      },
+      {
+        "paragraph": 199,
+        "text": "Commit at least once per week."
+      },
+      {
+        "paragraph": 200,
+        "text": "Each commit message can be short, e.g.,“add PQW weighting module”“VOC split2 experiments”"
+      },
+      {
+        "paragraph": 201,
+        "text": "No need for branching strategies or advanced workflows."
+      },
+      {
+        "paragraph": 202,
+        "text": "This alone prevents most “lost code” problems."
+      },
+      {
+        "paragraph": 204,
+        "text": "3. One Main Entry Script"
+      },
+      {
+        "paragraph": 205,
+        "text": "At the end of the project there must be:"
+      },
+      {
+        "paragraph": 206,
+        "text": "One training script"
+      },
+      {
+        "paragraph": 207,
+        "text": "One evaluation script"
+      },
+      {
+        "paragraph": 208,
+        "text": "Example names:"
+      },
+      {
+        "paragraph": 209,
+        "text": "train.py"
+      },
+      {
+        "paragraph": 210,
+        "text": "test.py"
+      },
+      {
+        "paragraph": 211,
+        "text": "They do not need to be elegant.They just need to run."
+      },
+      {
+        "paragraph": 213,
+        "text": "4. Configuration Files Instead of Hard-Coding"
+      },
+      {
+        "paragraph": 214,
+        "text": "Store hyperparameters in a small config file rather than editing code every time."
+      },
+      {
+        "paragraph": 215,
+        "text": "Example:"
+      },
+      {
+        "paragraph": 216,
+        "text": "configs/voc_split1_5shot.yaml"
+      },
+      {
+        "paragraph": 217,
+        "text": "Even a simple .txt or .json file is fine."
+      },
+      {
+        "paragraph": 218,
+        "text": "This avoids the “which parameters did I use?” problem."
+      },
+      {
+        "paragraph": 220,
+        "text": "5. Record Final Experiment Settings"
+      },
+      {
+        "paragraph": 221,
+        "text": "For every table or figure in the thesis:"
+      },
+      {
+        "paragraph": 222,
+        "text": "Create one small text file in thesis_tables/ such as:"
+      },
+      {
+        "paragraph": 223,
+        "text": "table5_2_settings.txt"
+      },
+      {
+        "paragraph": 224,
+        "text": "Content example (5–10 lines only):"
+      },
+      {
+        "paragraph": 225,
+        "text": "Dataset: VOC Split1"
+      },
+      {
+        "paragraph": 226,
+        "text": "Shot: 5"
+      },
+      {
+        "paragraph": 227,
+        "text": "Seed: 42"
+      },
+      {
+        "paragraph": 228,
+        "text": "LR: 0.001"
+      },
+      {
+        "paragraph": 229,
+        "text": "Epochs: 12"
+      },
+      {
+        "paragraph": 230,
+        "text": "Checkpoint: model_voc_s1_5shot_seed42.pth"
+      },
+      {
+        "paragraph": 231,
+        "text": "No long explanations needed.Just enough to rerun the experiment."
+      },
+      {
+        "paragraph": 233,
+        "text": "6. Logs and Checkpoints"
+      },
+      {
+        "paragraph": 234,
+        "text": "Keep at least one final checkpoint per main experiment."
+      },
+      {
+        "paragraph": 235,
+        "text": "Keep one log file showing the final metrics."
+      },
+      {
+        "paragraph": 236,
+        "text": "Old intermediate logs can be deleted if disk space is limited."
+      },
+      {
+        "paragraph": 238,
+        "text": "7. Data Handling"
+      },
+      {
+        "paragraph": 239,
+        "text": "You do not need to redistribute datasets."
+      },
+      {
+        "paragraph": 240,
+        "text": "Instead, include a small file:"
+      },
+      {
+        "paragraph": 241,
+        "text": "data_readme.txt"
+      },
+      {
+        "paragraph": 242,
+        "text": "Example:"
+      },
+      {
+        "paragraph": 243,
+        "text": "Dataset: PASCAL VOC 2007+2012"
+      },
+      {
+        "paragraph": 244,
+        "text": "Download from: official website"
+      },
+      {
+        "paragraph": 245,
+        "text": "Expected path: /data/voc/"
+      },
+      {
+        "paragraph": 247,
+        "text": "8. Minimal Documentation (Maximum 1–2 Pages)"
+      },
+      {
+        "paragraph": 248,
+        "text": "At the end, provide one README file with:"
+      },
+      {
+        "paragraph": 249,
+        "text": "Environment (Python version, major libraries)"
+      },
+      {
+        "paragraph": 250,
+        "text": "How to train"
+      },
+      {
+        "paragraph": 251,
+        "text": "How to test"
+      },
+      {
+        "paragraph": 252,
+        "text": "Approximate runtime"
+      },
+      {
+        "paragraph": 253,
+        "text": "GPU/CPU requirement"
+      },
+      {
+        "paragraph": 254,
+        "text": "This should be 1–2 pages maximum.No detailed API documentation required."
+      },
+      {
+        "paragraph": 256,
+        "text": "9. Reproducibility Expectation Level"
+      },
+      {
+        "paragraph": 257,
+        "text": "The requirement is approximate reproducibility, not exact bit-wise matching."
+      },
+      {
+        "paragraph": 258,
+        "text": "Acceptable:"
+      },
+      {
+        "paragraph": 259,
+        "text": "±1–2% metric difference"
+      },
+      {
+        "paragraph": 260,
+        "text": "Slight training variance"
+      },
+      {
+        "paragraph": 261,
+        "text": "Not acceptable:"
+      },
+      {
+        "paragraph": 262,
+        "text": "Code cannot run"
+      },
+      {
+        "paragraph": 263,
+        "text": "Missing modules"
+      },
+      {
+        "paragraph": 264,
+        "text": "Unknown parameters"
+      },
+      {
+        "paragraph": 266,
+        "text": "10. End-of-Project Submission Checklist"
+      },
+      {
+        "paragraph": 267,
+        "text": "At submission time, the student should provide:"
+      },
+      {
+        "paragraph": 268,
+        "text": "Full source code folder"
+      },
+      {
+        "paragraph": 269,
+        "text": "Config files"
+      },
+      {
+        "paragraph": 270,
+        "text": "Final checkpoints"
+      },
+      {
+        "paragraph": 271,
+        "text": "Logs for main experiments"
+      },
+      {
+        "paragraph": 272,
+        "text": "README (1–2 pages)"
+      },
+      {
+        "paragraph": 273,
+        "text": "Thesis tables’ setting files"
+      },
+      {
+        "paragraph": 274,
+        "text": "No extra polishing required."
+      },
+      {
+        "paragraph": 276,
+        "text": "Guiding Principle"
+      },
+      {
+        "paragraph": 277,
+        "text": "“Code should be runnable and understandable, not perfect.”"
+      },
+      {
+        "paragraph": 278,
+        "text": "The goal is continuity and verification, not software engineering excellence.Following these simple habits adds only small overhead during the project but prevents major problems at the end."
+      },
+      {
+        "paragraph": 281,
+        "text": "# 项目全文中文翻译"
+      },
+      {
+        "paragraph": 282,
+        "text": "**标题：基于视觉语言模型实现机器人操作策略零样本泛化的机器学习研究**"
+      },
+      {
+        "paragraph": 284,
+        "text": "**摘要**"
+      },
+      {
+        "paragraph": 285,
+        "text": "让机器人在非结构化环境中操控物理物体，是具身人工智能领域的核心难题之一。传统机器人学习方法需要在目标环境下采集大量面向特定任务的演示数据，很难拓展到全新任务与场景。大型视觉语言模型的最新进展，为利用模型内部蕴含的丰富语义知识引导机器人策略，处理训练阶段从未见过的物体与任务指令提供了可能性。本课题研究如何对预训练视觉语言模型做适配改造，将其作为桌面机器人操作的零样本策略模块；依托仿真环境与公开演示数据集，实现机械臂理解自然语言指令、交互未见过物体的能力。本课题不要求学生预先掌握机器人学或机器学习知识，课题会向参与学生提供详细指导文档与数据集。"
+      },
+      {
+        "paragraph": 287,
+        "text": "**创新点**"
+      },
+      {
+        "paragraph": 288,
+        "text": "现有视觉语言驱动的机器人操作方案存在两类局限：一类需要使用成千上万条机器人演示样本对大模型做全量微调，成本高昂；另一类仅依靠大语言模型完成高层任务拆解，底层控制交由单独训练的基础技能实现。"
+      },
+      {
+        "paragraph": 289,
+        "text": "本课题提出轻量化适配器架构：在冻结的视觉语言模型主干网络与基于扩散模型的动作解码器之间接入少量可训练的交叉注意力层。仅对适配器参数使用少量演示样本微调，大预训练模型本身保持冻结。"
+      },
+      {
+        "paragraph": 290,
+        "text": "核心创新为**反事实数据增强策略**：训练时固定视觉场景，系统性改写语言指令；或是固定语言指令、改动视觉场景。迫使适配器把视觉特征与语言语义解耦，最终让策略在测试阶段面对指令转述、物体外观变化时鲁棒性大幅提升。"
+      },
+      {
+        "paragraph": 291,
+        "text": "这种参数高效适配结合反事实指令增强的方案尚未出现在现有机器人学习文献中，解决了通用机器人策略落地部署的关键瓶颈。"
+      },
+      {
+        "paragraph": 293,
+        "text": "**数据集（全部公开，文中标注数据集名称与网页）**"
+      },
+      {
+        "paragraph": 294,
+        "text": "1. Open XEmbodiment数据集：汇集全球研究团队采集的22种机器人硬件、数十类任务，合计超100万条机器人演示数据，访问地址：https://roboticstransformerx.github.io"
+      },
+      {
+        "paragraph": 295,
+        "text": "2. LIBERO基准数据集：仿真环境下130套带语言标注的操作任务，访问地址：https://liberoproject.github.io"
+      },
+      {
+        "paragraph": 296,
+        "text": "3. Bridge数据集：7000+条带语言标签的厨房操作遥操作演示样本，下载地址：https://rail.eecs.berkeley.edu/datasets/bridge_release"
+      },
+      {
+        "paragraph": 297,
+        "text": "4. CLIPort基准数据集：仿真环境下语言驱动抓取放置任务数据集，访问地址：https://cliport.github.io"
+      },
+      {
+        "paragraph": 299,
+        "text": "以上数据集覆盖仿真、真实机器人演示，包含多样化物体集合与带语言标注任务，规模足以支撑适配器训练与零样本泛化评估。"
+      },
+      {
+        "paragraph": 301,
+        "text": "**参考文献**（保留英文，不做翻译，格式同原文）"
+      },
+      {
+        "paragraph": 302,
+        "text": "> A. Brohan, N. Brown, J. Carbajal, Y. Chebotar, J. Dabis, C. Finn, K. Gopalakrishnan, K. Hausman, A. Herzog, J. Hsu, J. Ibarz, B. Ichter, A. Irpan, T. Jackson, S. Jesmonth, N. Joshi, R. Julian, D. Kalashnikov, Y. Kuang, I. Leal, K. Lee, S. Levine, Y. Lu, U. Malla, D. Manjunath, I. Mordatch, O. Nachum, C. Parada, J. Peralta, E. Perez, K. Pertsch, J. Quiambao, K. Rao, M. Ryoo, G. Salazar, P. Sanketi, K. Sayed, J. Singh, S. Sontakke, A. Stone, C. Tan, H. Tran, V. Vanhoucke, S. Vega, Q. Vuong, F. Xia, T. Xiao, P. Xu, S. Xu, T. Yu, and B. Zitkovich, \"RT1: Robotics transformer for realworld control at scale,\" in Proc. Robot.: Sci. Syst. (RSS), Daegu, Republic of Korea, 2023."
+      },
+      {
+        "paragraph": 303,
+        "text": ">"
+      },
+      {
+        "paragraph": 304,
+        "text": "> C. Chi, S. Feng, Y. Du, Z. Xu, E. Cousineau, B. Burchfiel, and S. Song, \"Diffusion policy: Visuomotor policy learning via action diffusion,\" in Proc. Robot.: Sci. Syst. (RSS), Daegu, Republic of Korea, 2023."
+      },
+      {
+        "paragraph": 305,
+        "text": ">"
+      },
+      {
+        "paragraph": 306,
+        "text": "> M. Shridhar, L. Manuelli, and D. Fox, \"CLIPort: What and where pathways for robotic manipulation,\" in Proc. Conf. Robot Learn. (CoRL), vol. 164, London, UK, 2022, pp. 894906."
+      },
+      {
+        "paragraph": 307,
+        "text": ">"
+      },
+      {
+        "paragraph": 308,
+        "text": "> E. J. Hu, Y. Shen, P. Wallis, Z. AllenZhu, Y. Li, S. Wang, L. Wang, and W. Chen, \"LoRA: Lowrank adaptation of large language models,\" in Proc. Int. Conf. Learn. Represent. (ICLR), Virtual Event, 2022."
+      },
+      {
+        "paragraph": 309,
+        "text": ">"
+      },
+      {
+        "paragraph": 310,
+        "text": "> A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark, G. Krueger, and I. Sutskever, \"Learning transferable visual models from natural language supervision,\" in Proc. Int. Conf. Mach. Learn. (ICML), Virtual Event, 2021, pp. 87488763."
+      },
+      {
+        "paragraph": 311,
+        "text": ">"
+      },
+      {
+        "paragraph": 312,
+        "text": "> K. Rana, J. Haviland, S. Garg, J. AbouChakra, I. Reid, and N. Suenderhauf, \"SayPlan: Grounding large language models using 3D scene graphs for scalable robot task planning,\" in Proc. Conf. Robot Learn. (CoRL), Atlanta, GA, USA, 2023."
+      },
+      {
+        "paragraph": 314,
+        "text": "**研究问题**"
+      },
+      {
+        "paragraph": 315,
+        "text": "1. 核心研究问题：基于Open XEmbodiment数据集的少量样本训练得到轻量化交叉注意力适配器，在LIBERO、CLIPort基准测试集的全新物体、全新指令任务上，零样本任务成功率能否达到甚至超过全量微调的基线模型。"
+      },
+      {
+        "paragraph": 316,
+        "text": "2. 次要问题：相比传统数据增强，反事实指令增强策略能否显著提升模型面对指令转述的鲁棒性；评估方式为同一物理任务，使用语义等价但措辞不同的多条指令做测试。"
+      },
+      {
+        "paragraph": 317,
+        "text": "3. 第三个研究问题：适配器是否具备跨机器人硬件泛化能力；即使用Open XEmbodiment中某一类机械臂样本训练，测试时控制另一款仿真机械臂，性能是否可以维持在可用水平。"
+      },
+      {
+        "paragraph": 319,
+        "text": "**详细研究方案与方法**"
+      },
+      {
+        "paragraph": 320,
+        "text": "本项目分为四个阶段："
+      },
+      {
+        "paragraph": 321,
+        "text": "1. **第一阶段（约3个月）**：搭建ManiSkill2或PyBullet仿真环境，下载全部4个公开数据集；编写统一数据加载器，把不同来源演示样本解析为统一格式：自然语言指令字符串、224×224像素RGB图像序列、8维末端执行器动作序列（位置+四元数+夹爪开度）。过滤样本，仅保留带有效语言标注、动作序列至少10个时间步的演示数据。"
+      },
+      {
+        "paragraph": 323,
+        "text": "2. **第二阶段（约5个月）**：实现适配器架构。主干网络采用冻结的CLIP ViTL/14视觉语言模型，视觉、文本编码器输出1024维嵌入特征。适配器包含8层交叉注意力层（Key/Value维度512），部署在CLIP编码器之后；输入视觉Token序列与语言嵌入，输出融合上下文向量。融合向量送入基于DDPM、UNet降噪网络的条件扩散动作解码器；输入为带噪声的动作轨迹与融合上下文，输出降噪后的动作轨迹。训练仅更新适配器与扩散解码器，CLIP全部权重冻结。"
+      },
+      {
+        "paragraph": 325,
+        "text": "3. **第三阶段（约4个月）**：实现反事实增强策略。"
+      },
+      {
+        "paragraph": 326,
+        "text": "- 针对每一条训练样本，生成反事实样本：保持原始场景，替换为同一任务集下目标不同的其他指令，动作序列置全零，教会模型：场景指令不匹配时应当输出无动作。"
+      },
+      {
+        "paragraph": 327,
+        "text": "- 转述增强：本地部署大模型，为每条原始指令生成5条措辞不同但语义一致的复述，作为额外正样本。"
+      },
+      {
+        "paragraph": 328,
+        "text": "- 设置四组对照训练：无增强、仅转述增强、仅反事实增强、完整组合增强。"
+      },
+      {
+        "paragraph": 329,
+        "text": "- 仿真环境评估：每个任务划分下运行100轮仿真，**任务成功率作为核心评价指标**。"
+      },
+      {
+        "paragraph": 331,
+        "text": "4. **第四阶段（约2个月）**：消融实验，逐层移除适配器层，确定保证性能所需的最小层数；跨硬件迁移实验：在Open XEmbodiment某一类机器人样本训练，仿真环境另一类机器人上测试。定性分析：固定单一模态、改变另一模态，区分模型失败来自视觉歧义还是语言歧义。"
+      },
+      {
+        "paragraph": 333,
+        "text": "**项目交付物**"
+      },
+      {
+        "paragraph": 334,
+        "text": "1. GitHub托管、带文档的PyTorch Python代码库：仿真环境配置脚本、数据处理流水线、适配器+扩散解码器实现、训练脚本、仿真评估脚本。"
+      },
+      {
+        "paragraph": 335,
+        "text": "2. 约10000字学位论文，包含研究背景、方法、实验结果、分析讨论。"
+      },
+      {
+        "paragraph": 336,
+        "text": "3. 一篇8页左右会议格式稿件，遵循CoRL/NeurIPS模板，用于同行评审投稿。"
+      },
+      {
+        "paragraph": 338,
+        "text": "---"
+      },
+      {
+        "paragraph": 340,
+        "text": "## 导师Wang Lipo邮件正文翻译"
+      },
+      {
+        "paragraph": 341,
+        "text": "> 我已经修改邮件主题。后续给我发邮件，请直接回复最新一封邮件，**不要修改邮件主题**，保留全部历史邮件，这样我可以查阅全部讨论记录。"
+      },
+      {
+        "paragraph": 342,
+        "text": "> 该邮件线程不要抄送给其他人。如需联系其他人，请新建邮件会话。"
+      },
+      {
+        "paragraph": 343,
+        "text": ">"
+      },
+      {
+        "paragraph": 344,
+        "text": "> 本邮件内容较长，请仔细阅读并遵照执行。有疑问可以向我提问，我不希望重复讲解邮件内已经写明的内容。邮件同时包含本项目专属建议与通用科研要求。本研究看重创新（产出新成果），鼓励你拓展自己的想法，但**必须实验验证有效，不能仅停留在空想**。"
+      },
+      {
+        "paragraph": 345,
+        "text": ">"
+      },
+      {
+        "paragraph": 346,
+        "text": "> 重点阅读提交部分，避免耽误毕业与求职。"
+      },
+      {
+        "paragraph": 347,
+        "text": ">"
+      },
+      {
+        "paragraph": 348,
+        "text": "> 深度学习实验需要GPU资源，请申请EEE学院GPU服务器：（表单链接）。部分情况下需要把填好的PDF表格发给我签字，请完整填写全部可填项：导师姓名，分机号6790 6372，导师签名及日期。提交后数周若无回复，请邮件提醒管理员；若注册通道关闭，请直接邮件联系负责人。"
+      },
+      {
+        "paragraph": 349,
+        "text": "> 其他可选算力资源：NSCC新加坡国家超算中心、Google Colab、NTU HPC。详见附件。"
+      },
+      {
+        "paragraph": 350,
+        "text": ">"
+      },
+      {
+        "paragraph": 351,
+        "text": "> ### 定期汇报"
+      },
+      {
+        "paragraph": 352,
+        "text": "> 我不强制线下例会；但**你必须每两周发邮件向我同步进度**，附上图表、表格等结果。邮件篇幅可长可短。你也可以主动预约开会。"
+      },
+      {
+        "paragraph": 353,
+        "text": "> 请注意：我不一定回复你的邮件，但我均已阅读，仅必要时回复；偶尔会遗漏回复，可以提醒我。"
+      },
+      {
+        "paragraph": 354,
+        "text": "> 不要因为课程繁重、测验临近等原因为进度滞后道歉。**不需要发送代码、原始数据，最终提交报告阶段才需要；邮件发送实验结果（表格、图）即可，不需要罗列、总结读过的论文。**"
+      },
+      {
+        "paragraph": 355,
+        "text": ">"
+      },
+      {
+        "paragraph": 356,
+        "text": "> 一个重大错误：学生长期不更新进度，在错误方向浪费大量时间，临近截止日期才告知，此时已经来不及修正调整。"
+      },
+      {
+        "paragraph": 357,
+        "text": ">"
+      },
+      {
+        "paragraph": 358,
+        "text": "> ### 时间规划"
+      },
+      {
+        "paragraph": 359,
+        "text": "> 收到第一封邮件起，文献阅读最多占用**2个月**；之后必须启动编程、数据调试。大部分时间用于运行程序、测试、算法修改、结果对比。**不要把大量时间花在空想规划、写报告上。**"
+      },
+      {
+        "paragraph": 360,
+        "text": ">"
+      },
+      {
+        "paragraph": 361,
+        "text": "> ### 项目入门"
+      },
+      {
+        "paragraph": 362,
+        "text": "> 需要学习项目工具。神经网络基础可以借阅NTU图书馆书籍，不需要吃透全部高级内容。使用Python做实验，利用教程、工具包即可。神经网络可以视作输入输出+可调参数的黑盒；拿到代码与数据集就可以训练测试，不必完全掌握内部数学原理，不要被复杂数学压垮。"
+      },
+      {
+        "paragraph": 363,
+        "text": ">"
+      },
+      {
+        "paragraph": 364,
+        "text": "> 优先使用公开开源代码（paperswithcode网站），不必从零手写全部代码，但代码责任属于你；找不到合适开源实现就自行编写。**不要让我帮你查找资料。**"
+      },
+      {
+        "paragraph": 365,
+        "text": ">"
+      },
+      {
+        "paragraph": 366,
+        "text": "> 需要阅读领域论文，了解已有工作，论文会作为论文的相关工作章节。同时学习论文写作范式，你的报告需要达到可投期刊/会议稿件标准，优先期刊。"
+      },
+      {
+        "paragraph": 367,
+        "text": ">"
+      },
+      {
+        "paragraph": 368,
+        "text": "> 文献检索：不要使用普通谷歌搜索，容易搜到低质量论文。访问NTU图书馆数据库，使用IEEE Xplore、Elsevier ScienceDirect、ACM、SpringerLink，优先检索**近35年期刊论文**，高级搜索限定标题、摘要关键词。也可以看顶会：AAAI, ICML, CVPR, NeurIPS, ICCV, ECCV, ACMMM。只有上述渠道文献不足时才使用谷歌搜索。"
+      },
+      {
+        "paragraph": 369,
+        "text": "> 阅读阶段不超过2个月。"
+      },
+      {
+        "paragraph": 370,
+        "text": ">"
+      },
+      {
+        "paragraph": 371,
+        "text": "> ### 项目目标"
+      },
+      {
+        "paragraph": 372,
+        "text": "> 如果已有相关发表工作，你的目标是**超越领域最优公开方法**。"
+      },
+      {
+        "paragraph": 373,
+        "text": "> 1. 复现论文SOTA结果，使用论文公开数据集；务必选择最优基线，不要刻意选用老旧、性能差的方法做对比，数据集必须公开可下载。"
+      },
+      {
+        "paragraph": 374,
+        "text": "> 2. 在原有算法基础上修改，在相同数据集上争取性能提升。"
+      },
+      {
+        "paragraph": 375,
+        "text": ">"
+      },
+      {
+        "paragraph": 376,
+        "text": "> 不推荐只做复现、不做改进；也不推荐完全不对比已有文献直接做实验。极少情况下没有前人工作时，可以借鉴其他方案提出自己的方法。"
+      },
+      {
+        "paragraph": 377,
+        "text": ">"
+      },
+      {
+        "paragraph": 378,
+        "text": "> 仿真实验规范："
+      },
+      {
+        "paragraph": 379,
+        "text": "> - 多次初始化实验，运行510次，计算均值、标准差。"
+      },
+      {
+        "paragraph": 380,
+        "text": "> - 数值不要保留过多小数，例如53.6%，不要写53.5973%。"
+      },
+      {
+        "paragraph": 381,
+        "text": "> - 使用表格、图展示对比结果，不要项目符号列表。表格多行列对比；一张图至少包含多条曲线。"
+      },
+      {
+        "paragraph": 382,
+        "text": "> - 提出多组件模型必须做消融实验，确定各组件必要性。"
+      },
+      {
+        "paragraph": 383,
+        "text": "> - 使用Wilcoxon、Friedman检验做性能差异的统计显著性分析。方法使用缩写+发表年份标注，例如 ResNet, 2022。"
+      },
+      {
+        "paragraph": 384,
+        "text": "> - 允许多次尝试但没有取得性能提升，报告如实记录尝试过程，不会扣分。**严禁伪造实验结果，后果严重；全部结果最终可复现核验。**"
+      },
+      {
+        "paragraph": 385,
+        "text": ">"
+      },
+      {
+        "paragraph": 386,
+        "text": "> ### 数据划分"
+      },
+      {
+        "paragraph": 387,
+        "text": "> 数据集分为训练集、验证集、测试集。"
+      },
+      {
+        "paragraph": 388,
+        "text": "> - 训练集：更新模型权重"
+      },
+      {
+        "paragraph": 389,
+        "text": "> - 验证集：调超参（网络层数、神经元、学习率、窗口长度等），搜索最优超参数"
+      },
+      {
+        "paragraph": 390,
+        "text": "> - 测试集：使用调好的超参数在测试集上得到最终结果。"
+      },
+      {
+        "paragraph": 391,
+        "text": ">"
+      },
+      {
+        "paragraph": 392,
+        "text": "> ### 学位论文写作规范"
+      },
+      {
+        "paragraph": 393,
+        "text": "> 1. 拼写语法检查。严禁抄袭文本、图片、伪代码，改写全部语句；绘图需要提供可编辑源文件（PPT/Word），禁止直接复制版权图片，即使标注引用。不要追求Turnitin重复率数值，核心是**没有直接复制的句子**，参考文献除外。"
+      },
+      {
+        "paragraph": 394,
+        "text": "> 2. 写作时态：自己提出的算法用一般现在时；已有文献用一般过去时。修改别人工作要明确描述改动内容并引用文献。"
+      },
+      {
+        "paragraph": 395,
+        "text": "> 3. 缩写：第一次出现完整全称再写缩写；不使用的缩写不要定义。所有数学符号第一次出现定义。不要随意造术语缩写。"
+      },
+      {
+        "paragraph": 396,
+        "text": "> 4. 参考文献格式严格遵循示例；期刊要有卷、页码；会议要有会议名称；书籍要有出版社与出版城市。**参考文献总数≥40篇**。数据集来源写入参考文献。"
+      },
+      {
+        "paragraph": 397,
+        "text": "> 5. 引用格式：仅写姓氏；两位作者全部列出；3位及以上作者写 et al。不要写“这篇论文”这类指代。"
+      },
+      {
+        "paragraph": 398,
+        "text": "> 6. 句子简洁简短，语法正确；禁止缩写口语写法 don’t / can’t。"
+      },
+      {
+        "paragraph": 399,
+        "text": "> 7. 公式、图、表全部编号，方便正文引用。"
+      },
+      {
+        "paragraph": 400,
+        "text": "> 8. 图表规范："
+      },
+      {
+        "paragraph": 401,
+        "text": ">     - 图宽约A4一半（6cm），坐标轴字号89号；"
+      },
+      {
+        "paragraph": 402,
+        "text": ">     - 图内部文字尽量少，全部说明放在图注；"
+      },
+      {
+        "paragraph": 403,
+        "text": ">     - **图表禁止彩色，依靠线型、标记符号区分；表格禁止底色；**"
+      },
+      {
+        "paragraph": 404,
+        "text": ">     - 图内不要网格；坐标轴刻度不超过6个；"
+      },
+      {
+        "paragraph": 405,
+        "text": ">     - 高分辨率截图，截图前放大原图；"
+      },
+      {
+        "paragraph": 406,
+        "text": ">     - 图标题放在图注，不在图上方；坐标轴必须标注物理含义。"
+      },
+      {
+        "paragraph": 407,
+        "text": "> 9. 正文不要贴代码，需要放代码则放在附录；算法描述使用文字或框图。"
+      },
+      {
+        "paragraph": 408,
+        "text": "> 10.尽量将对比方法与本方法放在同一张表格/同一张图。"
+      },
+      {
+        "paragraph": 409,
+        "text": "> 11.提交论文时，同时提交Word/LaTeX源文件与PDF，我不需要纸质版。"
+      },
+      {
+        "paragraph": 410,
+        "text": ">"
+      },
+      {
+        "paragraph": 411,
+        "text": "> ### 最终提交（提交学校之外，额外发给我）"
+      },
+      {
+        "paragraph": 412,
+        "text": "> - 源代码+ReadMe说明文件"
+      },
+      {
+        "paragraph": 413,
+        "text": "> - 论文源文件"
+      },
+      {
+        "paragraph": 414,
+        "text": "> - 全部图表可编辑源文件，截图复制的图不予接受"
+      },
+      {
+        "paragraph": 415,
+        "text": ">"
+      },
+      {
+        "paragraph": 416,
+        "text": "> ### 毕业时间提醒"
+      },
+      {
+        "paragraph": 417,
+        "text": "> 我读完论文需要数天时间，给出修改意见，需要反复迭代修改。学校审核还需要周期。**如果有毕业、入职时间节点，论文至少提前23个月发给我。不要指望提交后立刻签字。** 文件过大可以上传网盘给我下载链接。"
+      },
+      {
+        "paragraph": 418,
+        "text": ">"
+      },
+      {
+        "paragraph": 419,
+        "text": "> ### 备份"
+      },
+      {
+        "paragraph": 420,
+        "text": "> 频繁备份全部数据，磁盘损坏不能作为延期理由。"
+      },
+      {
+        "paragraph": 421,
+        "text": ">"
+      },
+      {
+        "paragraph": 422,
+        "text": "> ### 开题会议"
+      },
+      {
+        "paragraph": 423,
+        "text": "> 不强制要求，如果你需要，请提前说明讨论议题；一般有初步实验结果再开会。"
+      },
+      {
+        "paragraph": 424,
+        "text": ">"
+      },
+      {
+        "paragraph": 425,
+        "text": "> ### 我无法提供帮助的事项"
+      },
+      {
+        "paragraph": 426,
+        "text": "> - 调试代码bug"
+      },
+      {
+        "paragraph": 427,
+        "text": "> - 解决电脑环境故障"
+      },
+      {
+        "paragraph": 428,
+        "text": "> - 帮你制定精细时间节点与里程碑"
+      },
+      {
+        "paragraph": 429,
+        "text": "> - 讲解神经网络底层原理"
+      },
+      {
+        "paragraph": 430,
+        "text": ">"
+      },
+      {
+        "paragraph": 431,
+        "text": "> ### 严重错误"
+      },
+      {
+        "paragraph": 432,
+        "text": "> - 无视邮件给出的全部指导；"
+      },
+      {
+        "paragraph": 433,
+        "text": "> - 从不发送进度汇报，临近截止才催签字。"
+      },
+      {
+        "paragraph": 435,
+        "text": "---"
+      },
+      {
+        "paragraph": 437,
+        "text": "# 代码可复现性要求翻译"
+      },
+      {
+        "paragraph": 438,
+        "text": "本套要求目标不是工业级高质量软件，仅保证：导师可以直接运行代码；论文主要结果可以近似复现；后续学生可以接手继续研究。侧重代码组织，不追求完善文档。"
+      },
+      {
+        "paragraph": 440,
+        "text": "1. **文件夹结构（简洁）**"
+      },
+      {
+        "paragraph": 441,
+        "text": "```"
+      },
+      {
+        "paragraph": 442,
+        "text": "project_name/"
+      },
+      {
+        "paragraph": 443,
+        "text": "code/"
+      },
+      {
+        "paragraph": 444,
+        "text": "configs/"
+      },
+      {
+        "paragraph": 445,
+        "text": "data_readme.txt"
+      },
+      {
+        "paragraph": 446,
+        "text": "results/"
+      },
+      {
+        "paragraph": 447,
+        "text": "logs/"
+      },
+      {
+        "paragraph": 448,
+        "text": "thesis_tables/"
+      },
+      {
+        "paragraph": 449,
+        "text": "```"
+      },
+      {
+        "paragraph": 451,
+        "text": "2. **版本控制Git最低要求（GitHub/GitLab私有仓库）**"
+      },
+      {
+        "paragraph": 452,
+        "text": "- 每周至少一次commit；提交信息简短描述改动；不需要复杂分支策略。"
+      },
+      {
+        "paragraph": 454,
+        "text": "3. **两个主入口脚本**"
+      },
+      {
+        "paragraph": 455,
+        "text": "`train.py` 训练脚本；`test.py`评估脚本，保证可运行。"
+      },
+      {
+        "paragraph": 457,
+        "text": "4. **配置文件代替硬编码超参**"
+      },
+      {
+        "paragraph": 458,
+        "text": "超参写yaml/json/txt配置文件，不要直接修改代码改参数。"
+      },
+      {
+        "paragraph": 460,
+        "text": "5. **记录每一组论文图表实验参数**"
+      },
+      {
+        "paragraph": 461,
+        "text": "每一张表格、每一张图，在`thesis_tables/`新建文本文件，记录数据集、随机种子、学习率、epoch、模型权重路径等关键信息，510行即可，方便复现。"
+      },
+      {
+        "paragraph": 463,
+        "text": "6. **日志与模型权重**"
+      },
+      {
+        "paragraph": 464,
+        "text": "每个核心实验保留至少一份最终权重checkpoint，保留指标日志，中间过程日志磁盘不足可删除。"
+      },
+      {
+        "paragraph": 466,
+        "text": "7. **数据说明`data_readme.txt`**"
+      },
+      {
+        "paragraph": 467,
+        "text": "不需要重新分发数据集；写明数据集下载地址，代码读取路径。"
+      },
+      {
+        "paragraph": 469,
+        "text": "8. **极简ReadMe文档（12页上限）**"
+      },
+      {
+        "paragraph": 470,
+        "text": "写明Python版本、依赖库、训练步骤、测试步骤、预估运行时间、GPU硬件需求。不需要详细API文档。"
+      },
+      {
+        "paragraph": 472,
+        "text": "9. **复现标准：近似复现，不需要比特级完全一致**"
+      },
+      {
+        "paragraph": 473,
+        "text": "✅允许：指标±12%浮动，训练随机带来小幅差异"
+      },
+      {
+        "paragraph": 474,
+        "text": "❌不允许：代码无法运行、依赖缺失、参数不明"
+      },
+      {
+        "paragraph": 476,
+        "text": "10. **项目最终提交清单**"
+      },
+      {
+        "paragraph": 477,
+        "text": "完整源码文件夹、配置文件、最终权重、实验日志、ReadMe文档、论文图表对应参数记录文件。"
+      },
+      {
+        "paragraph": 479,
+        "text": "> 核心原则：代码可运行、可读，不追求完美工程质量。这些习惯工作量很小，但可以避免项目末期大量麻烦。"
+      },
+      {
+        "paragraph": 481,
+        "text": "---"
+      },
+      {
+        "paragraph": 483,
+        "text": "# 📋核心要点整理"
+      },
+      {
+        "paragraph": 484,
+        "text": "## 一、课题本身要点"
+      },
+      {
+        "paragraph": 485,
+        "text": "1. **课题方向**：视觉语言模型+轻量化适配器+反事实数据增强，实现桌面机械臂零样本操作；冻结CLIP主干，只训练适配器+扩散动作解码器。"
+      },
+      {
+        "paragraph": 486,
+        "text": "2. **三大研究问题**"
+      },
+      {
+        "paragraph": 487,
+        "text": "①少量样本训练的适配器，零样本性能能否追上全量微调基线"
+      },
+      {
+        "paragraph": 488,
+        "text": "②反事实指令增强能否提升指令转述鲁棒性"
+      },
+      {
+        "paragraph": 489,
+        "text": "③模型跨不同机械臂硬件能否泛化"
+      },
+      {
+        "paragraph": 490,
+        "text": "3. **四个执行阶段总周期：约14个月**"
+      },
+      {
+        "paragraph": 491,
+        "text": "- 阶段1（3月）：仿真环境搭建、数据集处理与统一加载"
+      },
+      {
+        "paragraph": 492,
+        "text": "- 阶段2（5月）：搭建CLIP冻结主干+交叉注意力适配器+扩散动作解码器"
+      },
+      {
+        "paragraph": 493,
+        "text": "- 阶段3（4月）：反事实+转述数据增强，四组对照实验，仿真评估成功率"
+      },
+      {
+        "paragraph": 494,
+        "text": "- 阶段4（2月）：消融实验、跨硬件迁移、定性失败案例分析"
+      },
+      {
+        "paragraph": 495,
+        "text": "4. **交付物**：GitHub可运行PyTorch代码、1万字硕士论文、8页会议投稿稿件。"
+      },
+      {
+        "paragraph": 496,
+        "text": "5. **数据集**：Open XEmbodiment、LIBERO、Bridge、CLIPort，全部公开。"
+      },
+      {
+        "paragraph": 498,
+        "text": "## 二、导师硬性要求（非常关键）"
+      },
+      {
+        "paragraph": 499,
+        "text": "### 时间约束"
+      },
+      {
+        "paragraph": 500,
+        "text": "1. 文献阅读总时长**不超过2个月**，之后立刻启动编码实验。不要空想规划，大量时间留给调实验。"
+      },
+      {
+        "paragraph": 501,
+        "text": "2. 有毕业求职计划，**论文提前23个月提交导师**，预留多轮修改时间。"
+      },
+      {
+        "paragraph": 503,
+        "text": "### 进度汇报"
+      },
+      {
+        "paragraph": 504,
+        "text": "1. **每两周邮件汇报进度，附带图表结果，不要发代码、原始数据。**"
+      },
+      {
+        "paragraph": 505,
+        "text": "2. 邮件回复最新会话，不要改主题，不抄送其他人。"
+      },
+      {
+        "paragraph": 506,
+        "text": "3. 导师不一定回信，但会阅读，必要时提醒。"
+      },
+      {
+        "paragraph": 507,
+        "text": "4. 禁止长期失联，临近截止才找导师。"
+      },
+      {
+        "paragraph": 509,
+        "text": "### 实验要求"
+      },
+      {
+        "paragraph": 510,
+        "text": "1. 必须和SOTA基线做对比，不能只复现不改进。"
+      },
+      {
+        "paragraph": 511,
+        "text": "2. 多次运行求均值、标准差；做消融实验；做统计显著性检验。"
+      },
+      {
+        "paragraph": 512,
+        "text": "3. 图表：禁用彩色；表格图对比；不要过多小数；全部图表要有可编辑源文件。"
+      },
+      {
+        "paragraph": 513,
+        "text": "4. **严禁伪造结果，所有结果需要可以复现。**"
+      },
+      {
+        "paragraph": 514,
+        "text": "5. 数据集严格划分训练/验证/测试集。"
+      },
+      {
+        "paragraph": 516,
+        "text": "### 论文写作"
+      },
+      {
+        "paragraph": 517,
+        "text": "1. **参考文献≥40篇**；优先近35年期刊，其次顶级会议。"
+      },
+      {
+        "paragraph": 518,
+        "text": "2. 禁止抄袭改写，Turnitin看复制句子，不看单纯重复率。"
+      },
+      {
+        "paragraph": 519,
+        "text": "3. 缩写、数学符号首次出现定义；时态区分已有工作（过去时）和自己工作（现在时）。"
+      },
+      {
+        "paragraph": 520,
+        "text": "4. 图表、公式全部编号；图注写说明，图内文字尽量少。"
+      },
+      {
+        "paragraph": 521,
+        "text": "5. 正文不放大段代码，代码放附录。"
+      },
+      {
+        "paragraph": 523,
+        "text": "### 代码与可复现（提交导师额外材料）"
+      },
+      {
+        "paragraph": 524,
+        "text": "1. Git每周提交，文件夹规范，配置文件管理超参，禁止硬编码。"
+      },
+      {
+        "paragraph": 525,
+        "text": "2. 保存关键实验权重、日志，每一张图表保存实验参数记录。"
+      },
+      {
+        "paragraph": 526,
+        "text": "3. ReadMe文档12页，写明环境、运行方式。"
+      },
+      {
+        "paragraph": 527,
+        "text": "4. 提交给导师：源码、配置、权重、日志、ReadMe、图表参数记录、论文源文件+PDF、全部图表可编辑源文件。"
+      },
+      {
+        "paragraph": 528,
+        "text": "5. 标准：近似复现，允许±12%指标误差。"
+      },
+      {
+        "paragraph": 530,
+        "text": "### 资源申请"
+      },
+      {
+        "paragraph": 531,
+        "text": "1. 优先申请EEE学院GPU服务器；备选：NSCC、NTU HPC、Colab。"
+      },
+      {
+        "paragraph": 532,
+        "text": "2. 提交表单填写完整，必要时发给导师签字；长时间无回复主动催管理员。"
+      },
+      {
+        "paragraph": 534,
+        "text": "### 导师不提供帮助"
+      },
+      {
+        "paragraph": 535,
+        "text": "不调试bug，不解决电脑故障，不给精细时间线，不讲解神经网络基础。"
+      },
+      {
+        "paragraph": 537,
+        "text": "如果你需要，我可以帮你进一步输出："
+      },
+      {
+        "paragraph": 538,
+        "text": "1）该项目简易版中文开题摘要；"
+      },
+      {
+        "paragraph": 539,
+        "text": "2）14个月细化里程碑时间表；"
+      },
+      {
+        "paragraph": 540,
+        "text": "3）论文各章节写作大纲。"
+      }
+    ]
+  },
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第七封邮件.docx",
+    "filename": "第七封邮件.docx",
+    "sha256": "8a604074db8d7417e3274d9f8f80246f6cbe63c9e0448efbe7837aacfd67b67d",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "第七封邮件"
+      },
+      {
+        "paragraph": 2,
+        "text": "Lipo 老师关于 DINOv2 主方案与 LIBERO 实验安排的回复"
+      },
+      {
+        "paragraph": 3,
+        "text": "英文原文与中文译文按段落对应排列。"
+      },
+      {
+        "paragraph": 4,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 5,
+        "text": "Dear Zixiao,"
+      },
+      {
+        "paragraph": 6,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 7,
+        "text": "Zixiao："
+      },
+      {
+        "paragraph": 8,
+        "text": "主视觉骨干的选择"
+      },
+      {
+        "paragraph": 9,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 10,
+        "text": "The gap between frozen CLIP (0.445) and frozen DINOv2 (0.830) on the same adapter and diffusion backend is large enough to be conclusive even with one seed and reused development scenes: the visual backbone is a major bottleneck, and DINOv2 closes most of the gap to the native Diffusion Policy upper bound (0.846). You should adopt frozen DINOv2 as the main setup for all LIBERO experiments."
+      },
+      {
+        "paragraph": 11,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 12,
+        "text": "在使用相同 Adapter 和扩散后端的情况下，冻结 CLIP（0.445）与冻结 DINOv2（0.830）之间的差距足够大，即使只有一个随机种子且重复使用了开发场景，也足以得出结论：视觉骨干网络是一个主要瓶颈，而 DINOv2 已经弥补了与原生 Diffusion Policy 性能上限（0.846）之间的大部分差距。你应当将冻结 DINOv2 作为所有 LIBERO 实验的主设置。"
+      },
+      {
+        "paragraph": 13,
+        "text": "论文呈现与五种实验条件"
+      },
+      {
+        "paragraph": 14,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 15,
+        "text": "The CLIP result is not wasted: it becomes a backbone ablation in the thesis, alongside DINOv2, which is exactly the kind of controlled comparison that strengthens the analysis. So the thesis structure should present DINOv2 as the primary backbone and report CLIP as an ablation condition on LIBERO as well, using one seed rather than three since it is a diagnostic rather than a primary result. This means you have five conditions to run on LIBERO in total: the four augmentation conditions (no augmentation, paraphrase only, counterfactual only, and full combined augmentation) with DINOv2 at three seeds each, plus CLIP with the full augmentation at one seed as the backbone ablation. Please also report the Push-T three-way comparison in the thesis as a standalone diagnostic section, since it provides direct evidence for the backbone choice and gives the reader a clear mechanistic explanation."
+      },
+      {
+        "paragraph": 16,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 17,
+        "text": "CLIP 的结果并没有白做：它可以与 DINOv2 一起，构成论文中的视觉骨干消融实验；这种受控比较正有助于加强分析。因此，论文应将 DINOv2 作为主要视觉骨干，同时也在 LIBERO 上报告 CLIP 的消融结果。由于 CLIP 组属于诊断实验，而不是主要结果，使用一个随机种子即可，无需三个。这意味着你总共需要在 LIBERO 上运行五种条件：采用 DINOv2 的四种增强条件（无增强、仅同义改写、仅反事实增强，以及完整的组合增强），每种使用三个随机种子；另外，采用 CLIP 并使用完整增强，以一个随机种子进行视觉骨干消融。还请将 Push-T 的三方对照作为独立的诊断章节写入论文，因为它为视觉骨干的选择提供了直接证据，也能让读者清楚理解背后的机制。"
+      },
+      {
+        "paragraph": 18,
+        "text": "DINOv2 的模型规格"
+      },
+      {
+        "paragraph": 19,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 20,
+        "text": "On the DINOv2 variant, use ViT-L/14 from DINOv2 to match the patch size and embedding dimension of the CLIP backbone you have been using, which will make the comparison cleaner and minimize changes to the adapter architecture."
+      },
+      {
+        "paragraph": 21,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 22,
+        "text": "对于 DINOv2 版本，请使用 DINOv2 的 ViT-L/14，使其图像块大小和嵌入维度与你此前使用的 CLIP 骨干网络一致。这样可以让比较更清晰，并尽量减少对 Adapter 架构的改动。"
+      },
+      {
+        "paragraph": 23,
+        "text": "近期优先级与时间要求"
+      },
+      {
+        "paragraph": 24,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 25,
+        "text": "Please proceed with the LIBERO runs using frozen DINOv2 as the primary backbone. Given where we are in the project timeline, these runs are now the critical path. Please prioritize getting all five conditions launched over the next two weeks even if the individual runs are still ongoing, and update me on their status at the next check-in."
+      },
+      {
+        "paragraph": 26,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 27,
+        "text": "请继续推进 LIBERO 实验，以冻结 DINOv2 作为主要视觉骨干。考虑到目前的项目进度，这些实验已经成为关键路径。请优先确保在接下来的两周内将全部五种条件启动起来，即使届时个别实验仍在运行也没关系，并在下一次进度交流时向我汇报它们的状态。"
+      },
+      {
+        "paragraph": 28,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 29,
+        "text": "Best regards,Lipo"
+      },
+      {
+        "paragraph": 30,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 31,
+        "text": "祝好！Lipo"
+      }
+    ]
+  },
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第三封邮件.docx",
+    "filename": "第三封邮件.docx",
+    "sha256": "bc3cd63357918e80bf7218ae3fdaa6041b8bc5ff6436053f2a1dcd2e5b444645",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "Dear Zixiao,"
+      },
+      {
+        "paragraph": 3,
+        "text": "Thank you for the careful analysis. These are good questions and your thinking is already heading in the right direction."
+      },
+      {
+        "paragraph": 5,
+        "text": "On the Bridge Dataset, the BridgeData V2 version included in the Open X-Embodiment repository under the dataset name \"bridge\" is indeed the same underlying dataset collected on the WidowX robot, with 25,460 episodes. This is the version you should use, and it is the one cited as Walke et al. (CoRL 2023) in the project. The original URL at rail.eecs.berkeley.edu appears to have gone offline, but since the Open X-Embodiment copy is already in a unified RLDS format that your data loader will be reading anyway, using it from there is the correct and convenient choice. You do not need to seek out the original release separately."
+      },
+      {
+        "paragraph": 7,
+        "text": "On the Open X-Embodiment filtering strategy, your proposed criteria are sensible as a starting point, but I want to be more precise about what the thesis must do, because the filtering decisions themselves need to be treated as a documented experimental choice rather than just a preprocessing step. The thesis must clearly state and justify the inclusion and exclusion criteria applied to the Open X-Embodiment subsets, and the cross-embodiment transfer experiment must still be designed around this. Here is what I recommend. For the main adapter training and evaluation experiments, restrict to subsets that satisfy all three of your proposed conditions: single-arm manipulator, EEF position control, and natural language annotations. Applying this filter to the dataset overview, the subsets that qualify and have a meaningful number of episodes include fractal20220817_data (RT-1, 73,499 episodes, templated language), bridge (25,460 episodes, natural language), language_table (442,226 episodes, natural language), bc_z (39,350 episodes, templated language), viola (135 episodes, templated language), berkeley_autolab_ur5 (896 episodes, templated language), austin_mutex (1,500 episodes, natural language), berkeley_fanuc_manipulation (415 episodes, natural language), and utaustin_mutex is already listed. Among these, the ones with natural language annotations as opposed to templated language are bridge, language_table, austin_mutex, and berkeley_fanuc_manipulation. Since your adapter's cross-attention alignment between language and visual features is the key technical claim, you should report results separately for natural-language-annotated subsets versus templated-language subsets, as the paraphrase robustness evaluation is most meaningful for the former. This breakdown must appear as a table in the thesis. Note also that the language_table subset uses a stick-pushing end effector rather than a standard gripper, so you should document whether you include or exclude it and why; if you include it, note the action space difference."
+      },
+      {
+        "paragraph": 9,
+        "text": "For the cross-embodiment transfer experiment, which is one of the research questions in the project plan, you need to deliberately train on demonstrations from one robot type and evaluate on another. A natural pair given the filtered subsets is to train on the WidowX data from bridge and evaluate on a simulated version of the Franka robot using ManiSkill2 or PyBullet, since the Franka appears in many subsets (viola, austin_mutex, stanford_hydra, and others) and is readily available in simulation. The thesis must report quantitative task success rates for this cross-embodiment condition alongside the within-embodiment baseline, with the same three-seed statistical reporting I described in my previous email."
+      },
+      {
+        "paragraph": 11,
+        "text": "One additional point: since you are filtering a large heterogeneous collection down to a specific subset, the thesis must include a table listing all the Open X-Embodiment subsets you considered, which ones were retained after filtering and why, and the total episode counts for the retained subsets. This table will be important for situating the scale of training data used in your experiments."
+      },
+      {
+        "paragraph": 13,
+        "text": "Please proceed with the filtered pipeline as described and keep me updated on your progress."
+      },
+      {
+        "paragraph": 15,
+        "text": "Best regards,"
+      },
+      {
+        "paragraph": 16,
+        "text": "Lipo"
+      },
+      {
+        "paragraph": 21,
+        "text": "# 邮件中文翻译"
+      },
+      {
+        "paragraph": 22,
+        "text": "子潇你好："
+      },
+      {
+        "paragraph": 24,
+        "text": "感谢你细致的分析。你提出的问题质量很高，你的思考方向已经是正确的。"
+      },
+      {
+        "paragraph": 26,
+        "text": "关于 Bridge 数据集：Open XEmbodiment 仓库中数据集名称为 **bridge** 的 BridgeData V2，确实就是 WidowX 机器人采集的原始数据集，共25460条轨迹片段（episodes）。**你应当使用这个版本**，也就是本项目中引用的 Walke 等人（CoRL 2023）论文对应的数据集。该数据集原先伯克利实验室的官网链接现已失效，但 Open XEmbodiment 内这份拷贝已经统一转为 RLDS 格式，你的数据加载器本身就读取该格式，因此直接使用仓库内这份数据集是正确且便捷的方案，你无需再去寻找原始发布版本。"
+      },
+      {
+        "paragraph": 28,
+        "text": "关于 Open XEmbodiment 的筛选策略：你提出的筛选条件可以作为工作起点，但我希望明确毕业论文必须完成的工作。**数据集筛选本身属于需要成文记录的实验设计选择，不能仅仅当作普通预处理步骤。** 论文中必须清晰写明并论证对 Open XEmbodiment 各子数据集采用的纳入、排除标准，跨机器人本体迁移实验也需要围绕这套筛选规则开展。我的建议如下："
+      },
+      {
+        "paragraph": 30,
+        "text": "针对适配器（adapter）的主训练与评估实验，严格采用你提出的三项全部条件进行筛选：单臂机械臂、末端执行器位置控制、带有自然语言标注。对照数据集总览，满足条件且轨迹样本量具备实际意义的子数据集包括："
+      },
+      {
+        "paragraph": 31,
+        "text": "fractal20220817_data（RT1，73499条轨迹，模板化语言）、bridge（25460条轨迹，自然语言）、language_table（442226条轨迹，自然语言）、bc_z（39350条轨迹，模板化语言）、viola（135条轨迹，模板化语言）、berkeley_autolab_ur5（896条轨迹，模板化语言）、austin_mutex（1500条轨迹，自然语言）、berkeley_fanuc_manipulation（415条轨迹，自然语言），以及已列出的 utaustin_mutex。"
+      },
+      {
+        "paragraph": 33,
+        "text": "以上当中，**具备真实自然语言标注（而非模板生成语言）** 的子集为：bridge、language_table、austin_mutex、berkeley_fanuc_manipulation。"
+      },
+      {
+        "paragraph": 35,
+        "text": "你的适配器核心创新点在于语言特征与视觉特征之间的交叉注意力对齐机制，因此你需要**分开汇报自然语言标注子集、模板化语言子集上的实验结果**；改写句式鲁棒性评估只有在自然语言标注的数据上才有实际意义。这部分拆分结果必须在论文中以表格形式呈现。"
+      },
+      {
+        "paragraph": 37,
+        "text": "另外注意：language_table 数据集的末端执行器是推杆，并非标准夹爪。你需要在论文中写明是否选用该数据集，并且说明理由；如果选择使用，要注明其动作空间存在差异。"
+      },
+      {
+        "paragraph": 39,
+        "text": "跨机器人本体迁移实验是项目研究问题之一：实验设计需要**在一类机器人的演示数据上训练，在另一类机器人上做测试评估**。结合筛选后的数据集，一套很合适的实验组合：使用 bridge 数据集的 WidowX 机器人数据做训练，在 ManiSkill2 或 PyBullet 仿真环境下的 Franka 机器人上完成评估。Franka 机器人在多个数据集（viola、austin_mutex、stanford_hydra 等）中都出现，仿真环境也可以直接调用。"
+      },
+      {
+        "paragraph": 41,
+        "text": "论文中必须同时汇报跨本体迁移设置、同本体基线实验下的**任务成功率定量结果**，并且沿用我上一封邮件提到的：采用3个随机种子做统计汇报。"
+      },
+      {
+        "paragraph": 43,
+        "text": "补充一点：你是从庞大混杂的数据集集合筛选出实验子集，**论文必须制作一张表格**：列出所有你考虑过的 Open XEmbodiment 子数据集，标明筛选后保留/舍弃的数据集以及对应的理由，同时给出保留子集的总轨迹数量。该表格可以清晰说明你实验所用训练数据的规模。"
+      },
+      {
+        "paragraph": 45,
+        "text": "请按照上述方案推进筛选数据流水线工作，同步向我更新你的项目进展。"
+      },
+      {
+        "paragraph": 47,
+        "text": "此致"
+      },
+      {
+        "paragraph": 48,
+        "text": "敬礼"
+      },
+      {
+        "paragraph": 49,
+        "text": "Lipo"
+      },
+      {
+        "paragraph": 51,
+        "text": "---"
+      },
+      {
+        "paragraph": 52,
+        "text": "## 关键术语注释（机器人/数据集）"
+      },
+      {
+        "paragraph": 53,
+        "text": "1. **episode**：轨迹片段，机器人完整执行一次任务的整条演示序列"
+      },
+      {
+        "paragraph": 54,
+        "text": "2. **EEF(endeffector)**：末端执行器（夹爪、推杆等）"
+      },
+      {
+        "paragraph": 55,
+        "text": "3. **templated language**：模板化语言，由固定模板生成，句式死板；**natural language**：自然语言，人工真实标注，句式多样"
+      },
+      {
+        "paragraph": 56,
+        "text": "4. **crossembodiment transfer**：跨机器人本体迁移，模型在A机器人数据训练，直接在B机器人运行"
+      },
+      {
+        "paragraph": 57,
+        "text": "5. **withinembodiment baseline**：同本体基线，训练、测试使用同款机器人"
+      },
+      {
+        "paragraph": 58,
+        "text": "6. **RLDS**：Google机器人数据集存储格式，用于机器人演示数据"
+      },
+      {
+        "paragraph": 59,
+        "text": "7. **adapter**：适配器模块，你模型里实现语言视觉对齐的网络组件"
+      },
+      {
+        "paragraph": 60,
+        "text": "8. **threeseed**：3个随机种子，深度学习实验复现规范，降低随机误差"
+      },
+      {
+        "paragraph": 62,
+        "text": "如果你需要，我可以帮你提炼这封邮件的行动清单，方便你写双周进度邮件。"
+      }
+    ]
+  },
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第二封邮件.docx",
+    "filename": "第二封邮件.docx",
+    "sha256": "f5a56b891a4fa05b8f355372117acf4b911c975ff19bff8c10dd6712f66588ea",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "Dear Zixiao,"
+      },
+      {
+        "paragraph": 3,
+        "text": "Thank you for the update. It is good to hear that the PyBullet simulation environment is up and running, and that you are making progress with the background reading."
+      },
+      {
+        "paragraph": 5,
+        "text": "Regarding your question about the datasets, yes, it is perfectly fine to start with small subsets for the purpose of code debugging and early-stage development. However, please be aware that all four datasets, namely Open X-Embodiment, LIBERO, Bridge Dataset, and CLIPort, will eventually need to be used in full for the final benchmarking experiments, as the thesis must include results obtained at the intended data scale. Plan your storage and download schedule accordingly so that there is enough time to run the full experiments before the thesis writing phase."
+      },
+      {
+        "paragraph": 7,
+        "text": "On the experimental side, the core contribution of the thesis is the combination of the lightweight cross-attention adapter with counterfactual instruction augmentation. The thesis must report task success rates for all four training conditions described in the project plan, namely no augmentation, paraphrase-only augmentation, counterfactual-only augmentation, and the full combined augmentation, evaluated on the LIBERO and CLIPort benchmarks at 100 rollout episodes per task split. Each condition must be run with at least three independent random seeds, and the results must be reported as mean and standard deviation so that the comparison is statistically meaningful. The thesis must also include a direct comparison against at least two published baselines: RT-1 (Brohan et al., RSS 2023) and the original CLIPort model (Shridhar et al., CoRL 2022), using the same evaluation protocol and the same task splits. This is necessary to situate the proposed method relative to existing work. The ablation study removing adapter layers one at a time must be completed and reported with the same statistical rigour, including a table or plot showing how performance varies with the number of adapter layers retained. The cross-embodiment transfer experiment, training on one robot embodiment from Open X-Embodiment and evaluating on a different simulated robot arm, must also be fully executed and reported with quantitative results. For the robustness evaluation under instruction paraphrasing, the thesis must report success rates across the full set of paraphrase variants for each task and include a plot showing the distribution of performance across phrasings, not just the average."
+      },
+      {
+        "paragraph": 9,
+        "text": "On the analysis side, every experiment must be accompanied by appropriate figures and tables. Learning curves showing training loss and validation success rate over training steps must be included for the main model and the ablation variants. A confusion-style breakdown showing which task categories the policy handles well and which it fails on, under the different augmentation conditions, will strengthen the qualitative analysis. The qualitative analysis examining failures due to visual ambiguity versus linguistic ambiguity must be supported by concrete examples with accompanying images from the simulator."
+      },
+      {
+        "paragraph": 11,
+        "text": "On the literature review side, the thesis must cover not only the references listed in the project description but also the LoRA paper (Hu et al., ICLR 2022) and the CLIP paper (Radford et al., ICML 2021) as the direct technical ancestors of the adapter and backbone respectively. The review must clearly articulate what gap in the existing literature the proposed combination of parameter-efficient adaptation and counterfactual augmentation addresses, with specific reference to the limitations of the methods it is compared against."
+      },
+      {
+        "paragraph": 13,
+        "text": "Please keep all of this in mind as you structure your timeline over the coming months. Do continue to update me every two weeks, and feel free to reach out if you have questions along the way."
+      },
+      {
+        "paragraph": 15,
+        "text": "Best regards,"
+      },
+      {
+        "paragraph": 16,
+        "text": "Lipo"
+      },
+      {
+        "paragraph": 24,
+        "text": "这是导师 Lipo 给你的回信中文翻译，译文保持了学术邮件严谨、专业的语气："
+      },
+      {
+        "paragraph": 26,
+        "text": "亲爱的："
+      },
+      {
+        "paragraph": 28,
+        "text": "收到你的最新进展汇报了，谢谢。得知 PyBullet 仿真环境已经成功搭建并运行，且你的背景文献阅读也在顺利推进，这非常好。"
+      },
+      {
+        "paragraph": 30,
+        "text": "关于你提出的数据集问题，是的，在代码调试和前期开发阶段使用小规模子集是完全可以的。但请注意，Open X-Embodiment、LIBERO、Bridge Dataset 以及 CLIPort 这全部四个数据集，最终在进行最终的基准测试（Benchmarking）实验时必须完整使用，因为学位论文必须包含在预定数据规模下获得的结果。请据此合理规划你的存储空间和下载时间表，确保在进入论文撰写阶段之前有足够的时间跑完完整的实验。"
+      },
+      {
+        "paragraph": 32,
+        "text": "在实验方面："
+      },
+      {
+        "paragraph": 33,
+        "text": "本论文的核心贡献在于轻量级交叉注意力适配器（Adapter）与反事实指令增强策略的结合。论文必须针对项目计划中描述的所有四种训练条件，汇报在 LIBERO 和 CLIPort 基准上（每个任务划分进行 100 轮仿真测试）的任务成功率："
+      },
+      {
+        "paragraph": 35,
+        "text": "无增强（No augmentation）"
+      },
+      {
+        "paragraph": 37,
+        "text": "仅转述增强（Paraphrase-only augmentation）"
+      },
+      {
+        "paragraph": 39,
+        "text": "仅反事实增强（Counterfactual-only augmentation）"
+      },
+      {
+        "paragraph": 41,
+        "text": "完整组合增强（Full combined augmentation）"
+      },
+      {
+        "paragraph": 43,
+        "text": "每种条件必须在至少 3 个独立的随机种子下运行，并以均值和标准差（Mean ± SD）的形式汇报结果，以保证对比具有统计学意义。此外，论文必须使用相同的评估协议和任务划分，与至少两个已发表的基线模型进行直接对比："
+      },
+      {
+        "paragraph": 45,
+        "text": "RT-1 (Brohan et al., RSS 2023)"
+      },
+      {
+        "paragraph": 47,
+        "text": "原始 CLIPort 模型 (Shridhar et al., CoRL 2022)"
+      },
+      {
+        "paragraph": 49,
+        "text": "这是将你提出的方法与现有工作进行定位所必需的。"
+      },
+      {
+        "paragraph": 51,
+        "text": "逐层移除适配器层的消融实验也必须以相同的统计严谨性完成并汇报，包含一张展示性能如何随保留适配器层数变化的图表或表格。跨机器人本体迁移实验（在 Open X-Embodiment 的某一类机器人样本上训练，并在另一种不同的仿真机械臂上评估）也必须完整执行并汇报定量结果。对于指令转述下的鲁棒性评估，论文必须汇报每个任务在全套转述变体下的成功率，并包含一张展示不同措辞下性能分布的图表（而不仅仅是平均值）。"
+      },
+      {
+        "paragraph": 53,
+        "text": "在分析方面："
+      },
+      {
+        "paragraph": 54,
+        "text": "每个实验都必须配备相应的图表。主要模型及消融变体在训练过程中的学习曲线（展示随训练步数变化的训练损失与验证集成功率）必须纳入论文。一张混淆矩阵风格的细分分析图/表（展示策略在不同增强条件下对哪些任务类别表现良好、对哪些任务类别失败）将极大增强定性分析的说服力。针对视觉歧义与语言歧义导致的失败原因定性分析，必须提供来自仿真器的具体图像示例及相应说明来支持。"
+      },
+      {
+        "paragraph": 56,
+        "text": "在文献综述方面："
+      },
+      {
+        "paragraph": 57,
+        "text": "论文不仅要涵盖项目描述中列出的参考文献，还必须涵盖 LoRA 论文 (Hu et al., ICLR 2022) 和 CLIP 论文 (Radford et al., ICML 2021)，它们分别作为适配器（Adapter）和主干网络（Backbone）的直接技术前身。综述必须清晰阐述：你提出的“参数高效适配与反事实增强相结合”的方法填补了现有文献中的什么空白，并具体说明所对比方法的局限性。"
+      },
+      {
+        "paragraph": 59,
+        "text": "请在规划未来几个月的时间表时牢记以上所有要求。请继续保持每两周向我更新一次进展，在此过程中如有任何问题，随时与我联系。"
+      },
+      {
+        "paragraph": 61,
+        "text": "祝好，"
+      },
+      {
+        "paragraph": 63,
+        "text": "Lipo"
+      },
+      {
+        "paragraph": 65,
+        "text": "💡 导师回信核心要点梳理（供你后续规划参考）："
+      },
+      {
+        "paragraph": 66,
+        "text": "数据集规模：目前调试可以用小数据集，但最终实验必须下载并使用全量 4 个数据集（Open X, LIBERO, Bridge, CLIPort），注意提前准备硬盘空间。"
+      },
+      {
+        "paragraph": 68,
+        "text": "消融与对照实验标准："
+      },
+      {
+        "paragraph": 70,
+        "text": "4 组增强对照实验（LIBERO + CLIPort，每个任务 100 轮）。"
+      },
+      {
+        "paragraph": 72,
+        "text": "必须跑 3 个随机种子，计算 Mean ± SD。"
+      },
+      {
+        "paragraph": 74,
+        "text": "对比 Baseline：RT-1 和 CLIPort。"
+      },
+      {
+        "paragraph": 76,
+        "text": "适配器层数消融：逐层移除并画出性能变化图/表。"
+      },
+      {
+        "paragraph": 78,
+        "text": "跨本体迁移 (Cross-Embodiment)：A 机器人训练  B 机器人测试。"
+      },
+      {
+        "paragraph": 80,
+        "text": "指令转述鲁棒性：画出性能分布图（Boxplot / Distribution Plot）。"
+      },
+      {
+        "paragraph": 82,
+        "text": "论文图表必备项："
+      },
+      {
+        "paragraph": 84,
+        "text": "训练 Loss 与 验证 Success Rate 的学习曲线（Learning Curves）。"
+      },
+      {
+        "paragraph": 86,
+        "text": "任务类别失败/成功混淆矩阵图（Confusion-style Breakdown）。"
+      },
+      {
+        "paragraph": 88,
+        "text": "视觉歧义 vs 语言歧义的仿真失败案例对比图（Simulator Failure Screenshots）。"
+      },
+      {
+        "paragraph": 90,
+        "text": "文献综述加项：必须补上 CLIP (2021) 和 LoRA (2022) 的分析。"
+      }
+    ]
+  },
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第五封邮件.docx",
+    "filename": "第五封邮件.docx",
+    "sha256": "197f793f0d4e7017d38477a9e22a1bca3967a8ade54e98662fce1c6d1c731c38",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "第五封邮件"
+      },
+      {
+        "paragraph": 2,
+        "text": "Lipo 关于训练泛化问题的回信"
+      },
+      {
+        "paragraph": 3,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 4,
+        "text": "Dear Zixiao,"
+      },
+      {
+        "paragraph": 5,
+        "text": "Thank you for the update. The symptom you describe, training loss decreasing while evaluation error exceeds a no-motion baseline, is a classic sign of overfitting combined with a distribution mismatch between training and evaluation, and it is good that you caught it early through the small-sample fitting test."
+      },
+      {
+        "paragraph": 6,
+        "text": "Before comparing with the published Diffusion Policy code line by line, I suggest you first check a few specific things that are the most common culprits in this kind of setup. The action normalization is the single most likely cause: if the training actions are normalized to a certain range but the evaluation predictions are not denormalized back before computing the error, or if the normalization statistics were computed on the training split and the evaluation split has a different range, the predictions will look systematically wrong even if the model has learned something reasonable. Please verify that you apply exactly the same normalization and denormalization at training time and evaluation time, using statistics computed on the training data only. The second thing to check is the noise schedule at inference time: during diffusion denoising, if the number of denoising steps or the beta schedule used at inference differs from what was used during training, the output distribution will be wrong. Make sure your inference loop uses the same schedule and the same number of steps as the training objective assumes. The third thing to check is whether your evaluation is conditioning on the correct context: at evaluation time, the adapter must receive the same format of visual observation and language instruction as it saw during training, including the same image normalization applied to the CLIP backbone input. A mismatch in image preprocessing between training and evaluation will cause the visual embeddings to be out of distribution even for seen tasks."
+      },
+      {
+        "paragraph": 7,
+        "text": "Your plan to resolve these issues before moving to broader experiments is the right one. Please send me a short update once you have identified the root cause, even if it is before the two-week mark, so we can discuss the fix together if needed."
+      },
+      {
+        "paragraph": 8,
+        "text": "Best regards,Lipo"
+      },
+      {
+        "paragraph": 10,
+        "text": "中文翻译"
+      },
+      {
+        "paragraph": 11,
+        "text": "亲爱的 Zixiao："
+      },
+      {
+        "paragraph": 12,
+        "text": "感谢你的进度更新。你所描述的现象，即训练损失不断下降，而评估误差却高于不移动基线，是过拟合与训练和评估之间的分布不匹配共同出现时的典型表现。你通过小样本拟合测试及早发现了这一问题，这一点很好。"
+      },
+      {
+        "paragraph": 13,
+        "text": "在逐行对照已发表的 Diffusion Policy 代码之前，我建议你先检查几个具体方面，因为它们是这类设置中最常见的问题来源。动作归一化是最有可能的原因：如果训练动作被归一化到某个范围，但评估时没有先将预测结果反归一化，再计算误差；或者归一化统计量是根据训练集计算的，而评估集的动作范围不同，那么即使模型已经学到了一些合理的信息，预测结果也会呈现出系统性的偏差。请确认训练和评估时采用完全一致的归一化与反归一化方法，并且仅使用训练数据计算统计量。第二个需要检查的方面是推理时的噪声调度：在扩散去噪过程中，如果推理使用的去噪步数或 beta 调度与训练时使用的不同，输出分布就会出现偏差。请确保推理循环使用的调度和步数与训练目标所假定的一致。第三个需要检查的方面是评估是否使用了正确的条件上下文：评估时，适配器必须接收与训练时相同格式的视觉观测和语言指令，包括对 CLIP 主干输入采用相同的图像归一化方法。训练和评估之间的图像预处理不一致，会导致视觉嵌入偏离训练分布，即使评估的是已经见过的任务也会如此。"
+      },
+      {
+        "paragraph": 14,
+        "text": "你计划先解决这些问题，再开展更大范围的实验，这个方向是正确的。一旦确定了根本原因，请给我发送一份简短的进度更新，即使还没有到两周的汇报时间；这样，如有需要，我们可以一起讨论修复方案。"
+      },
+      {
+        "paragraph": 15,
+        "text": "祝好，Lipo"
+      }
+    ]
+  },
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第六封邮件.docx",
+    "filename": "第六封邮件.docx",
+    "sha256": "85bc7b066764ec739cd33132b171221c6a59bfc0c9858dbe2366648a9f4e0f62",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "第六封邮件"
+      },
+      {
+        "paragraph": 2,
+        "text": "Lipo 老师关于泛化问题与后续实验的回复"
+      },
+      {
+        "paragraph": 3,
+        "text": "英文原文与中文译文按段落对应排列。"
+      },
+      {
+        "paragraph": 4,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 5,
+        "text": "Dear Zixiao,Thank you for the detailed update."
+      },
+      {
+        "paragraph": 6,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 7,
+        "text": "Zixiao：感谢你提供详细的进展汇报。"
+      },
+      {
+        "paragraph": 8,
+        "text": "离线指标与闭环操作"
+      },
+      {
+        "paragraph": 9,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 10,
+        "text": "The offline metrics you report, position error dropping from 7.78 to 4.77 cm and rotation error from 12.74 to 12.04 degrees on Bridge, are meaningful improvements but the absolute values are still too large for reliable manipulation. A position error of nearly 5 cm is on the order of the size of most tabletop objects, so the closed-loop failure is expected given these numbers. The key question your Push-T comparison will answer is whether the gap between your adapter frontend and a directly trained diffusion policy is large enough to be the primary explanation, or whether the remaining error is intrinsic to the difficulty of the task distribution and data scale."
+      },
+      {
+        "paragraph": 11,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 12,
+        "text": "你汇报的离线指标表明，在 Bridge 上，位置误差从 7.78 cm 降至 4.77 cm，旋转误差从 12.74° 降至 12.04°。这些改善是有意义的，但误差的绝对值仍然过大，尚不足以支持可靠的操作。接近 5 cm 的位置误差与大多数桌面物体的尺寸处于同一量级，因此，从这些数值来看，闭环执行失败是可以预期的。你的 Push-T 对照将回答一个关键问题：你的 Adapter 前端与直接训练的扩散策略之间的差距，是否大到足以成为主要解释；还是说，剩余误差主要源于任务分布本身的难度和数据规模。"
+      },
+      {
+        "paragraph": 13,
+        "text": "视觉表示与空间定位"
+      },
+      {
+        "paragraph": 14,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 15,
+        "text": "Regarding likely causes, the most probable explanation at this stage is that CLIP ViT-L/14 features, while semantically rich, are not spatially precise enough for low-level manipulation without additional spatial grounding. CLIP was trained on image-text pairs for recognition, not for pixel-level spatial reasoning, and its visual tokens do not carry reliable spatial coordinates. When the cross-attention adapter queries these tokens for action generation, it receives semantic category information but not precise object location. This is a known limitation in the literature and is one reason why methods like R3M and MVP, which are pre-trained specifically on manipulation video, tend to outperform CLIP for low-level control. Testing whether replacing the CLIP visual encoder with a manipulation-specific visual backbone such as R3M (Nair et al., NeurIPS 2022) or with a spatial-aware backbone such as DINOv2 (Oquab et al., ICLR 2024) improves your offline metrics would be a meaningful contribution in itself and would directly address one of the thesis research questions about what makes the adapter work."
+      },
+      {
+        "paragraph": 16,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 17,
+        "text": "关于可能的原因，现阶段最有可能的解释是：CLIP ViT-L/14 特征虽然包含丰富的语义信息，但如果缺少额外的空间定位机制，其空间精度不足以支持底层操作控制。CLIP 使用图像与文本配对进行训练，目标是识别，而不是像素级的空间推理，其视觉 token 并不携带可靠的空间坐标。当交叉注意力 Adapter 为生成动作而查询这些 token 时，得到的是语义类别信息，而不是精确的物体位置。这是文献中已知的局限，也是 R3M 和 MVP 这类专门在操作视频上预训练的方法，在底层控制中往往优于 CLIP 的原因之一。可以测试：将 CLIP 视觉编码器替换为面向操作任务的视觉骨干网络，例如 R3M（Nair 等，NeurIPS 2022），或具有空间感知能力的骨干网络，例如 DINOv2（Oquab 等，ICLR 2024），是否能够改善离线指标。这项测试本身就可以构成有意义的研究贡献，并且直接回应论文中的一个研究问题：究竟哪些因素使 Adapter 有效。"
+      },
+      {
+        "paragraph": 18,
+        "text": "条件注入架构"
+      },
+      {
+        "paragraph": 19,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 20,
+        "text": "The second likely cause is the conditioning architecture. A single fused context vector from the cross-attention output may be an information bottleneck for the diffusion decoder. The original Diffusion Policy conditions the U-Net at every resolution level through film-style conditioning, whereas passing only a single context vector to the U-Net input may not give the denoiser enough guidance at each denoising step. I recommend checking whether conditioning the U-Net at multiple levels rather than only at the input improves performance once your Push-T diagnostic is done."
+      },
+      {
+        "paragraph": 21,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 22,
+        "text": "第二个可能的原因是条件注入架构。交叉注意力输出的单个融合上下文向量，可能成为扩散解码器的信息瓶颈。原始 Diffusion Policy 通过 FiLM 风格的条件调制，在 U-Net 的每个分辨率层级注入条件；相比之下，如果只把一个上下文向量传入 U-Net 的输入端，可能无法在每个去噪步骤中给予去噪网络足够的引导。我建议，在完成 Push-T 诊断之后，检查在 U-Net 多个层级注入条件，而不是仅在输入端注入，是否能够改善性能。"
+      },
+      {
+        "paragraph": 23,
+        "text": "近期优先事项与后续实验"
+      },
+      {
+        "paragraph": 24,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 25,
+        "text": "For your immediate priorities, complete the Push-T adapter comparison first, as you planned, and report the overlap reward for your adapter versus the native Diffusion Policy. This result belongs in your thesis as a controlled ablation isolating the frontend contribution. Once that result is in hand, if your adapter underperforms significantly, the next experiment should be swapping the CLIP visual backbone for DINOv2 or R3M while keeping everything else identical, to test whether the visual representation is the bottleneck. If your adapter performs comparably to the native policy, the bottleneck is more likely in the data scale or task difficulty, and the priority should shift to running the full training pipeline on the larger Open X-Embodiment subsets. In parallel, please begin running your four training conditions on the LIBERO benchmark, since those results are central to the thesis and need sufficient training time. Do not delay the LIBERO experiments further, as the thesis must include complete benchmark results with three random seeds per condition as I described earlier."
+      },
+      {
+        "paragraph": 26,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 27,
+        "text": "关于当前的优先事项，请先按计划完成 Push-T 的 Adapter 对照，并汇报你的 Adapter 与原生 Diffusion Policy 各自的重叠奖励。这项结果应当写入论文，作为一项用于分离前端贡献的受控消融实验。拿到结果后，如果你的 Adapter 表现明显较差，下一项实验应当是在其他设置完全相同的情况下，把 CLIP 视觉骨干网络替换为 DINOv2 或 R3M，以检验视觉表示是否是瓶颈。如果你的 Adapter 与原生策略表现相当，那么瓶颈更可能在于数据规模或任务难度，此时应将重点转向在规模更大的 Open X-Embodiment 子集上运行完整训练流程。同时，请开始在 LIBERO 基准上运行你的四种训练条件，因为这些结果是论文的核心内容，而且需要足够的训练时间。不要再推迟 LIBERO 实验；正如我此前所说，论文必须包含完整的基准测试结果，每种训练条件都要使用三个随机种子。"
+      },
+      {
+        "paragraph": 28,
+        "text": "英文原文"
+      },
+      {
+        "paragraph": 29,
+        "text": "Please update me with the Push-T comparison result as soon as it is available.Best regards,Lipo"
+      },
+      {
+        "paragraph": 30,
+        "text": "中文译文"
+      },
+      {
+        "paragraph": 31,
+        "text": "Push-T 对照结果出来后，请尽快向我汇报。祝好！Lipo"
+      }
+    ]
+  },
+  {
+    "file": "D:\\ntu_related\\dissertation\\老师邮件\\第四封邮件.docx",
+    "filename": "第四封邮件.docx",
+    "sha256": "11807aa9d02e86091d2c779816c1783706b61f7daebadf82d2af640c9b307403",
+    "paragraphs": [
+      {
+        "paragraph": 1,
+        "text": "Dear Zixiao,"
+      },
+      {
+        "paragraph": 3,
+        "text": "Good progress on the data loader and adapter. Let me answer your two questions."
+      },
+      {
+        "paragraph": 5,
+        "text": "On which Open X-Embodiment subsets to include, you do not need to include all eight I listed. The priority is to have enough data diversity and volume to train the adapter meaningfully and to support the cross-embodiment transfer experiment. I recommend using the following four subsets for the main training runs: bridge_data_v2 (BridgeData V2, 25,460 episodes, natural language), language_table real-robot split (442,226 episodes, natural language), bc_z (39,350 episodes, templated language), and fractal20220817_data (RT-1, 73,499 episodes, templated language). These four together give you well over half a million episodes, cover both natural and templated language, and span multiple robot platforms. The smaller subsets such as viola, berkeley_autolab_ur5, and austin_mutex can be added if storage and compute permit, but they are not required for the core experiments. What is required is that the thesis clearly states which subsets were used and why, with the episode counts, as I mentioned previously."
+      },
+      {
+        "paragraph": 7,
+        "text": "On which versions to use, here are specific answers for each dataset you asked about."
+      },
+      {
+        "paragraph": 9,
+        "text": "For bc_z, use version 1.0.0. This is the standard version cited in the Open X-Embodiment paper and is the one that appears in the dataset overview with 39,350 episodes. Do not use old1.0.1, which is a legacy internal version."
+      },
+      {
+        "paragraph": 11,
+        "text": "For the Bridge data, there are three separate things in the bucket and they are not the same. The folder named bridge contains the original Bridge dataset (v1, pre-2023), which is an older and smaller collection. The folder named bridge_data_v2 contains BridgeData V2, which is the dataset cited as Walke et al. (CoRL 2023) and the one with 25,460 episodes listed in the Open X-Embodiment overview. The folder named bridge_data_msr is a Microsoft Research re-processed version. You should use bridge_data_v2 version 0.0.1, as this is the canonical Open X-Embodiment entry. The rail.eecs.berkeley.edu link that is now accessible again points to yet another packaging of the same underlying data in TFDS format, as the screenshot you attached shows. Since you are already reading TFRecord files through the Open X-Embodiment GCS pipeline, staying with bridge_data_v2 from the GCS bucket is the cleaner choice and avoids format inconsistencies."
+      },
+      {
+        "paragraph": 13,
+        "text": "For language_table, use only the real-robot split, which is the language_table subset with 442,226 episodes. Do not use the simulation splits (language_table_sim and the oracle variants) for training, because those use a scripted oracle controller and the action distribution is very different from human demonstrations. If you want to use simulation data from language_table for evaluation purposes only, that is acceptable, but it must be kept strictly separate from the training data and the thesis must document this clearly. Also recall from my previous email that language_table uses a stick end effector rather than a standard gripper, so if you include it in training you must document this difference and discuss whether it affects the adapter's cross-attention alignment."
+      },
+      {
+        "paragraph": 15,
+        "text": "Best regards,"
+      },
+      {
+        "paragraph": 16,
+        "text": "Lipo"
+      },
+      {
+        "paragraph": 17,
+        "text": "子潇你好："
+      },
+      {
+        "paragraph": 18,
+        "text": "数据加载器和适配器方面进展不错。下面回答你的两个问题。"
+      },
+      {
+        "paragraph": 19,
+        "text": "关于应该使用哪些 Open X-Embodiment 子数据集，你不需要把我之前列出的八个数据集全部纳入。重点是保证数据具有足够的多样性和规模，使适配器能够得到有意义的训练，同时支持跨机器人本体迁移实验。"
+      },
+      {
+        "paragraph": 20,
+        "text": "我建议主训练使用以下四个子数据集："
+      },
+      {
+        "paragraph": 21,
+        "text": "bridge_data_v2：BridgeData V2，25,460 个 episodes，自然语言标注；"
+      },
+      {
+        "paragraph": 22,
+        "text": "language_table 的真实机器人数据划分：442,226 个 episodes，自然语言标注；"
+      },
+      {
+        "paragraph": 23,
+        "text": "bc_z：39,350 个 episodes，模板化语言标注；"
+      },
+      {
+        "paragraph": 24,
+        "text": "fractal20220817_data：RT-1 数据集，73,499 个 episodes，模板化语言标注。"
+      },
+      {
+        "paragraph": 25,
+        "text": "这四个数据集合计超过 50 万个 episodes，覆盖自然语言和模板化语言，同时包含多个机器人平台。"
+      },
+      {
+        "paragraph": 26,
+        "text": "如果存储空间和计算资源允许，你也可以加入 viola、berkeley_autolab_ur5 和 austin_mutex 等较小的数据集，但核心实验不要求使用这些数据集。必须做到的是：按照我之前的要求，在论文中清楚说明使用了哪些子数据集、为什么选择它们，并列出各数据集的 episode 数量。"
+      },
+      {
+        "paragraph": 27,
+        "text": "关于应该使用哪些版本，下面是针对你询问的数据集给出的具体答案。"
+      },
+      {
+        "paragraph": 28,
+        "text": "对于 bc_z，使用 1.0.0 版本。这是 Open X-Embodiment 论文引用的标准版本，也是数据集总览中包含 39,350 个 episodes 的版本。不要使用 old1.0.1，它是遗留的内部版本。"
+      },
+      {
+        "paragraph": 29,
+        "text": "对于 Bridge 数据，存储桶中有三个不同的目录，它们并不是同一个数据集："
+      },
+      {
+        "paragraph": 30,
+        "text": "bridge：原始 Bridge 数据集，即 2023 年以前的 v1 版本，是一个更早、规模更小的数据集；"
+      },
+      {
+        "paragraph": 31,
+        "text": "bridge_data_v2：BridgeData V2，对应 Walke 等人在 CoRL 2023 发表的工作，也是 Open X-Embodiment 数据集总览中列出的、包含 25,460 个 episodes 的数据集；"
+      },
+      {
+        "paragraph": 32,
+        "text": "bridge_data_msr：Microsoft Research 重新处理过的版本。"
+      },
+      {
+        "paragraph": 33,
+        "text": "你应当使用 bridge_data_v2 的 0.0.1 版本，因为这是 Open X-Embodiment 中的规范条目。"
+      },
+      {
+        "paragraph": 34,
+        "text": "你发来的截图显示，之前无法访问的 rail.eecs.berkeley.edu 链接现在已经恢复，但该链接提供的是同一底层数据的另一种 TFDS 打包形式。由于你已经通过 Open X-Embodiment 的 GCS 数据流水线读取 TFRecord 文件，因此继续使用 GCS 存储桶中的 bridge_data_v2 会更加清晰，也能避免不同格式之间的不一致。"
+      },
+      {
+        "paragraph": 35,
+        "text": "对于 language_table，只使用真实机器人数据划分，即包含 442,226 个 episodes 的 language_table 子集。"
+      },
+      {
+        "paragraph": 36,
+        "text": "不要使用以下仿真数据划分进行训练："
+      },
+      {
+        "paragraph": 37,
+        "text": "language_table_sim"
+      },
+      {
+        "paragraph": 38,
+        "text": "其他 language_table oracle 变体"
+      },
+      {
+        "paragraph": 39,
+        "text": "这些仿真数据使用脚本化的 oracle 控制器，其动作分布与人类演示存在很大差异。"
+      },
+      {
+        "paragraph": 40,
+        "text": "如果你希望将 language_table 的仿真数据仅用于评估，这是可以接受的，但必须与训练数据严格分开，并在论文中清楚说明。"
+      },
+      {
+        "paragraph": 41,
+        "text": "此外，请记住我在上一封邮件中提到的：language_table 使用的是推杆式末端执行器，而不是标准夹爪。因此，如果将其纳入训练，必须在论文中记录这种差异，并讨论它是否会影响适配器的交叉注意力对齐。"
+      },
+      {
+        "paragraph": 42,
+        "text": "此致Lipo"
+      },
+      {
+        "paragraph": 43,
+        "text": "核心结论"
+      },
+      {
+        "paragraph": 44,
+        "text": "主训练只需要使用以下四个数据集："
+      },
+      {
+        "paragraph": 45,
+        "text": "数据集"
+      },
+      {
+        "paragraph": 46,
+        "text": "指定版本或划分"
+      },
+      {
+        "paragraph": 47,
+        "text": "Episodes"
+      },
+      {
+        "paragraph": 48,
+        "text": "语言类型"
+      },
+      {
+        "paragraph": 49,
+        "text": "bridge_data_v2"
+      },
+      {
+        "paragraph": 50,
+        "text": "0.0.1"
+      },
+      {
+        "paragraph": 51,
+        "text": "25,460"
+      },
+      {
+        "paragraph": 52,
+        "text": "自然语言"
+      },
+      {
+        "paragraph": 53,
+        "text": "language_table"
+      },
+      {
+        "paragraph": 54,
+        "text": "仅真实机器人划分"
+      },
+      {
+        "paragraph": 55,
+        "text": "442,226"
+      },
+      {
+        "paragraph": 56,
+        "text": "自然语言"
+      },
+      {
+        "paragraph": 57,
+        "text": "bc_z"
+      },
+      {
+        "paragraph": 58,
+        "text": "1.0.0"
+      },
+      {
+        "paragraph": 59,
+        "text": "39,350"
+      },
+      {
+        "paragraph": 60,
+        "text": "模板化语言"
+      },
+      {
+        "paragraph": 61,
+        "text": "fractal20220817_data"
+      },
+      {
+        "paragraph": 62,
+        "text": "邮件未指定数字版本"
+      },
+      {
+        "paragraph": 63,
+        "text": "73,499"
+      },
+      {
+        "paragraph": 64,
+        "text": "模板化语言"
+      },
+      {
+        "paragraph": 65,
+        "text": "总计："
+      },
+      {
+        "paragraph": 66,
+        "text": "25,460 + 442,226 + 39,350 + 73,499 = 580,535 episodes"
+      },
+      {
+        "paragraph": 67,
+        "text": "不要求用于核心实验的数据集"
+      },
+      {
+        "paragraph": 68,
+        "text": "以下数据集可以在资源允许时增加，但并非必需："
+      },
+      {
+        "paragraph": 69,
+        "text": "viola"
+      },
+      {
+        "paragraph": 70,
+        "text": "berkeley_autolab_ur5"
+      },
+      {
+        "paragraph": 71,
+        "text": "austin_mutex"
+      },
+      {
+        "paragraph": 72,
+        "text": "明确不要使用的内容"
+      },
+      {
+        "paragraph": 73,
+        "text": "不使用 bc_z/old1.0.1；"
+      },
+      {
+        "paragraph": 74,
+        "text": "不使用旧版 bridge 代替 BridgeData V2；"
+      },
+      {
+        "paragraph": 75,
+        "text": "不使用 bridge_data_msr；"
+      },
+      {
+        "paragraph": 76,
+        "text": "不使用 language_table_sim 或 oracle 仿真变体进行训练。"
+      },
+      {
+        "paragraph": 77,
+        "text": "Bridge 的最终选择"
+      },
+      {
+        "paragraph": 78,
+        "text": "应当下载："
+      },
+      {
+        "paragraph": 79,
+        "text": "bridge_data_v2/0.0.1"
+      },
+      {
+        "paragraph": 80,
+        "text": "不是："
+      },
+      {
+        "paragraph": 81,
+        "text": "bridge/0.1.0"
+      },
+      {
+        "paragraph": 82,
+        "text": "bridge_data_msr/0.0.1"
+      },
+      {
+        "paragraph": 83,
+        "text": "Language Table 的注意事项"
+      },
+      {
+        "paragraph": 84,
+        "text": "训练只使用真实机器人数据；"
+      },
+      {
+        "paragraph": 85,
+        "text": "仿真数据最多用于评估，且必须与训练集严格分开；"
+      },
+      {
+        "paragraph": 86,
+        "text": "论文必须说明它使用推杆而非标准夹爪；"
+      },
+      {
+        "paragraph": 87,
+        "text": "需要讨论末端执行器差异是否影响跨注意力对齐。"
+      },
+      {
+        "paragraph": 88,
+        "text": "论文必须记录"
+      },
+      {
+        "paragraph": 89,
+        "text": "实际使用的数据集名称；"
+      },
+      {
+        "paragraph": 90,
+        "text": "每个数据集的版本或划分；"
+      },
+      {
+        "paragraph": 91,
+        "text": "每个数据集的 episode 数量；"
+      },
+      {
+        "paragraph": 92,
+        "text": "选择这些数据集的原因；"
+      },
+      {
+        "paragraph": 93,
+        "text": "自然语言与模板化语言的区别；"
+      },
+      {
+        "paragraph": 94,
+        "text": "language_table 的推杆末端执行器差异；"
+      },
+      {
+        "paragraph": 95,
+        "text": "训练数据与仿真评估数据的严格隔离。"
+      }
+    ]
+  }
+]

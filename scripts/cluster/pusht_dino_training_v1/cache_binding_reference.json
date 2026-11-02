@@ -1,0 +1,25 @@
+{
+  "format": "pusht-frozen-dino-cache-binding-v1",
+  "cache_report_sha256": "866965a652cce059aa8e38f0c9cb82c9eff8c6ca7e3e6fae3bc0f038be0edb51",
+  "cache_protocol_sha256": "4a23d555d525e4ca894b3b5783f0adb9f066f09d06071222906625a1a1550e4f",
+  "backbone_weights_sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+  "model_state_sha256": "ea7bdd68230559e97a6ba37e1b53944cb649649b2d8492cfa664a8794269aafc",
+  "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+  "preprocessing": "CLIP camera geometry224; DINO ImageNet mean/std; final native normalized DINO tokens",
+  "files": {
+    "visual.npy": {
+      "bytes": 11954143360,
+      "sha256": "a26e19da0a4a0858853e3ee302a1195b5cc81c57ad6fdf38af0b483219e5966a"
+    },
+    "frame_ids.npy": {
+      "bytes": 90976,
+      "sha256": "e82a61db676ad564c08aa3d713617e711004bcda5df13eaac4e064c0c3701f34"
+    },
+    "text.npz": {
+      "bytes": 40552,
+      "sha256": "fd3aa6f44875b8cbe134aa6a86e2a78aee7461d5e75620cb7d13c95c9961208f"
+    }
+  },
+  "raw_training_images_sha256": "7b05b0ca91d161bad12b2ac5eefe5b58ea7a98f1dfb730d404ed0ba02b842293",
+  "scope": "Cache/IPC identity only; no trained checkpoint or performance verdict"
+}

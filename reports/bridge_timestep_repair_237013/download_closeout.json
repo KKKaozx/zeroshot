@@ -1,0 +1,30 @@
+{
+  "status": "both_arms_closed_raw_results_independently_audited_no_replacement",
+  "raw_results_downloaded": true,
+  "saved_predictions_independently_recomputed": true,
+  "raw_verification_file_received": true,
+  "cluster_full_policy_adam_checked_report_received": true,
+  "full_policy_adam_locally_inspected": false,
+  "control_basic_capability_result_known": true,
+  "control_basic_capability_passed": {
+    "train": false,
+    "validation": false
+  },
+  "min_snr_basic_capability_passed": {
+    "train": false,
+    "validation": false
+  },
+  "selected_replacement_for_original_source": null,
+  "all16384_saved_history_records_checked": true,
+  "actual_noise_tensors_or_full_training_reexecuted": false,
+  "automatic_retry_or_extension": false,
+  "automatic_rollout": false,
+  "independent_audit": "reports/bridge_timestep_repair_237013/independent_array_audit.json",
+  "next_action": "This fixed pair is closed. Preserve originals and separate236840 supervised reference. Source competence and physical OXE-to-LIBERO execution remain unresolved; no automatic additional experiment.",
+  "zip_sha256": "bd7dc60d8323d889794000c5110cddc40eff2eb669c4bbb459e515a02c558dd3",
+  "zip_bytes": 3982335,
+  "both_arms_closed": true,
+  "new_local_training_updates": 0,
+  "new_model_calls": 0,
+  "new_rollouts": 0
+}

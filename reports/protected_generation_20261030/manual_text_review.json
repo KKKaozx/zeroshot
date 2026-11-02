@@ -1,0 +1,1026 @@
+{
+  "format": "local-language-text-review-v1",
+  "review_type": "Codex explicit per-candidate meaning and grammaticality review, not human sign-off or scene validation",
+  "raw_outputs_sha256": "aa043b6c39af372ad8303836043e92997a090f7ffe5c9499f94e1b5e59ea48a5",
+  "candidate_count": 40,
+  "text_decisions": {
+    "accept_text": 39,
+    "reject_grammar": 1
+  },
+  "mechanical_protection_passed_as_run": 40,
+  "post_review_checker_v2_matches": 39,
+  "complete_five_text_accepted_count": 7,
+  "checker_v2_contract": {
+    "format": "protected-training-language-frames-v1",
+    "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+    "checker_version": 2,
+    "checker_source_sha256": "dc15b0ebfe0b2571f6a3408683aa0fd28bd5e1c79d1e42bf040be39bc321b98c",
+    "profile_sha256": "b7dfc993656ba754a1b7ec66a8395ed829f897a6f8719d699387ad698f9519dc",
+    "profiled_instructions": 8,
+    "scope": "Controlled-form recognition for reviewed training frames; not open-language semantic verification",
+    "automatic_training_approval": false
+  },
+  "admitted_training_instructions": 0,
+  "training_bank_created": false,
+  "automatic_bulk_generation": false,
+  "method_scope": "LLM choices inside manually reviewed finite templates/aliases; restricted diversity and eight development instructions only",
+  "grammar_reference": "https://dictionary.cambridge.org/grammar/british-grammar/nearby",
+  "decision": "Close this bounded batch. Reject the nearby+NP output; do not regenerate or edit it to fill the group.",
+  "rows": [
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "original_instruction": "put the silver pot to the lower right of the burner",
+      "source": "Bridge",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "move the silver pot to the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Move preserves the silver pot and lower-right destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "lower_right_of",
+              "roles": {
+                "object": "silver pot",
+                "reference": "burner"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "shift the silver pot to the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Shift preserves the same object and lower-right destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "lower_right_of",
+              "roles": {
+                "object": "silver pot",
+                "reference": "burner"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "reposition the silver pot to the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Reposition preserves the same object and lower-right destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "lower_right_of",
+              "roles": {
+                "object": "silver pot",
+                "reference": "burner"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "position the silver pot to the lower right of the burner",
+          "text_review_decision": "accept_text",
+          "evidence": "Position preserves the same object and lower-right destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "lower_right_of",
+              "roles": {
+                "object": "silver pot",
+                "reference": "burner"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "to the lower right of the burner, place the silver pot",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted destination preserves the moved silver pot and burner reference.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "lower_right_of",
+              "roles": {
+                "object": "silver pot",
+                "reference": "burner"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "original_instruction": "move the yellow object from the table to the top of the drawer",
+      "source": "Bridge",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "shift the yellow object from the table to the top of the drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Shift preserves the table origin and original top-of-drawer expression.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_from_top_of",
+              "relation": null,
+              "roles": {
+                "object": "yellow object",
+                "source": "table",
+                "reference": "drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "transfer the yellow object from the table to the top of the drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Transfer preserves object, origin and destination without resolving top-of ambiguity.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_from_top_of",
+              "relation": null,
+              "roles": {
+                "object": "yellow object",
+                "source": "table",
+                "reference": "drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "reposition the yellow object from the table to the top of the drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Reposition preserves object, origin and destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_from_top_of",
+              "relation": null,
+              "roles": {
+                "object": "yellow object",
+                "source": "table",
+                "reference": "drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "from the table to the top of the drawer, move the yellow object",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted path preserves the original table-to-drawer-top relation.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_from_top_of",
+              "relation": null,
+              "roles": {
+                "object": "yellow object",
+                "source": "table",
+                "reference": "drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "from the table to the top of the drawer, shift the yellow object",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted path plus shift preserves the original relocation goal.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_from_top_of",
+              "relation": null,
+              "roles": {
+                "object": "yellow object",
+                "source": "table",
+                "reference": "drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "original_instruction": "push the green circle closer to the yellow hexagon and blue triangle",
+      "source": "Language Table",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "push the green circle nearer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "accept_text",
+          "evidence": "Nearer preserves closer; explicit push and both references remain.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "push_closer_to_both",
+              "relation": null,
+              "roles": {
+                "object": "green circle",
+                "reference_a": "yellow hexagon",
+                "reference_b": "blue triangle"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "push the green circle so it is closer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "accept_text",
+          "evidence": "Result clause preserves push and closer to both objects.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "push_closer_to_both",
+              "relation": null,
+              "roles": {
+                "object": "green circle",
+                "reference_a": "yellow hexagon",
+                "reference_b": "blue triangle"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "push the green circle so that it is nearer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "accept_text",
+          "evidence": "Result clause and nearer preserve push and both references.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "push_closer_to_both",
+              "relation": null,
+              "roles": {
+                "object": "green circle",
+                "reference_a": "yellow hexagon",
+                "reference_b": "blue triangle"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "by pushing the green circle, move it closer to the yellow hexagon and the blue triangle",
+          "text_review_decision": "accept_text",
+          "evidence": "By pushing is an explicit method for the same move, not an extra sequenced action.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "push_closer_to_both",
+              "relation": null,
+              "roles": {
+                "object": "green circle",
+                "reference_a": "yellow hexagon",
+                "reference_b": "blue triangle"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "make the green circle nearer to the yellow hexagon and the blue triangle by pushing it",
+          "text_review_decision": "accept_text",
+          "evidence": "Goal-first wording retains pushing as the method and preserves both reference objects.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "push_closer_to_both",
+              "relation": null,
+              "roles": {
+                "object": "green circle",
+                "reference_a": "yellow hexagon",
+                "reference_b": "blue triangle"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "original_instruction": "move the blue triangle left side of the blue cube",
+      "source": "Language Table",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "move the blue triangle to the left side of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Move preserves the triangle, cube and left-side destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "left_of",
+              "roles": {
+                "object": "blue triangle",
+                "reference": "blue cube"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "shift the blue triangle to the left side of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Shift preserves the same moved object and left-side destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "left_of",
+              "roles": {
+                "object": "blue triangle",
+                "reference": "blue cube"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "reposition the blue triangle to the left side of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Reposition preserves the same moved object and left-side destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "left_of",
+              "roles": {
+                "object": "blue triangle",
+                "reference": "blue cube"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "position the blue triangle to the left side of the blue cube",
+          "text_review_decision": "accept_text",
+          "evidence": "Position preserves the same moved object and left-side destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "left_of",
+              "roles": {
+                "object": "blue triangle",
+                "reference": "blue cube"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "to the left of the blue cube, place the blue triangle",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted left-of phrase preserves the same target and reference roles.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "left_of",
+              "roles": {
+                "object": "blue triangle",
+                "reference": "blue cube"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "original_instruction": "place grapes in purple bowl",
+      "source": "BC-Z",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "put the grapes inside the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Put inside preserves grape containment in the purple bowl.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "grapes",
+                "destination": "purple bowl"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "insert the grapes into the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Insert into preserves grape containment without an invented quantity.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "grapes",
+                "destination": "purple bowl"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "move the grapes into the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Move into preserves final containment, unlike move to.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "grapes",
+                "destination": "purple bowl"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "deposit the grapes in the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Deposit in preserves the original placement and containment.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "grapes",
+                "destination": "purple bowl"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "into the purple bowl, place the grapes",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted into-bowl destination preserves grapes as the moved object.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "grapes",
+                "destination": "purple bowl"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "original_instruction": "wipe purple bowl with towel",
+      "source": "BC-Z",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "wipe the purple bowl with a towel",
+          "text_review_decision": "accept_text",
+          "evidence": "Wiping action, purple bowl and towel tool remain.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "wipe_with",
+              "relation": null,
+              "roles": {
+                "object": "purple bowl",
+                "tool": "towel"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "use a towel to wipe the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Use-a-towel-to-wipe states the tool and action without adding tool acquisition.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "wipe_with",
+              "relation": null,
+              "roles": {
+                "object": "purple bowl",
+                "tool": "towel"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "with a towel, wipe the purple bowl",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted tool phrase preserves the same wiping command.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "wipe_with",
+              "relation": null,
+              "roles": {
+                "object": "purple bowl",
+                "tool": "towel"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "wipe the purple bowl by using a towel",
+          "text_review_decision": "accept_text",
+          "evidence": "By using a towel preserves the original tool and action.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "wipe_with",
+              "relation": null,
+              "roles": {
+                "object": "purple bowl",
+                "tool": "towel"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "the purple bowl should be wiped with a towel",
+          "text_review_decision": "accept_text",
+          "evidence": "Should be wiped expresses the requested action in passive form, with the same tool.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "wipe_with",
+              "relation": null,
+              "roles": {
+                "object": "purple bowl",
+                "tool": "towel"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "original_instruction": "move apple near redbull can",
+      "source": "Fractal",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "move the apple close to the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "Close to preserves near; Red Bull spacing preserves the product name.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "near",
+              "roles": {
+                "object": "apple",
+                "reference": "redbull can"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "shift the apple nearby the red bull can",
+          "text_review_decision": "reject_grammar",
+          "evidence": "Reject nearby followed directly by a noun phrase under the adopted standard-English policy; use near/close to instead.",
+          "checker_v2": {
+            "status": "unrecognized_or_changed_form",
+            "protected_form_matches": false,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": null
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "reposition the apple near the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "Reposition near preserves the original apple and Red Bull can roles.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "near",
+              "roles": {
+                "object": "apple",
+                "reference": "redbull can"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "position the apple in proximity to the red bull can",
+          "text_review_decision": "accept_text",
+          "evidence": "In proximity to preserves near and the same object/reference roles.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "near",
+              "roles": {
+                "object": "apple",
+                "reference": "redbull can"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "near the red bull can, place the apple",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted proximity phrase preserves the apple as moved object and can as reference.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "relocate_relation",
+              "relation": "near",
+              "roles": {
+                "object": "apple",
+                "reference": "redbull can"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": false,
+      "usable_for_training": false
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "original_instruction": "place rxbar blueberry into top drawer",
+      "source": "Fractal",
+      "candidates": [
+        {
+          "slot": 0,
+          "candidate": "put the rxbar blueberry into the top drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Put into preserves RXBAR Blueberry and the top drawer.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "rxbar blueberry",
+                "destination": "top drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 1,
+          "candidate": "insert the rxbar blueberry into the top drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Insert into preserves product identity and top-drawer containment.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "rxbar blueberry",
+                "destination": "top drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 2,
+          "candidate": "move the rxbar blueberry into the top drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Move into preserves the original product, destination and containment.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "rxbar blueberry",
+                "destination": "top drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 3,
+          "candidate": "deposit the rxbar blueberry into the top drawer",
+          "text_review_decision": "accept_text",
+          "evidence": "Deposit into preserves placement inside the same top drawer.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "rxbar blueberry",
+                "destination": "top drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        },
+        {
+          "slot": 4,
+          "candidate": "into the top drawer, place the rxbar blueberry",
+          "text_review_decision": "accept_text",
+          "evidence": "Fronted into-drawer phrase preserves product identity and destination.",
+          "checker_v2": {
+            "status": "protected_form_matches",
+            "protected_form_matches": true,
+            "original_reuse": false,
+            "needs_text_review": true,
+            "semantic_review_status": "pending",
+            "usable_for_training": false,
+            "frame": {
+              "family": "place_inside",
+              "relation": null,
+              "roles": {
+                "object": "rxbar blueberry",
+                "destination": "top drawer"
+              }
+            }
+          },
+          "usable_for_training": false
+        }
+      ],
+      "complete_five_text_accepted": true,
+      "usable_for_training": false
+    }
+  ]
+}

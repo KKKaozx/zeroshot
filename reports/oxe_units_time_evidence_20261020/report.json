@@ -1,0 +1,194 @@
+{
+  "complete": true,
+  "scope": "Documented nominal loop rates and exact cached metadata; no empirical timestamp or unit calibration",
+  "sources": {
+    "Bridge": {
+      "cache": "bridge_v2",
+      "nominal_control_hz": 5,
+      "nominal_time_evidence": "https://arxiv.org/pdf/2308.12952",
+      "evidence_location": "Section 3.1, system setup; control frequency",
+      "extra_time_evidence": "https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/main/experiments/eval.py",
+      "extra_evidence_location": "STEP_DURATION = 0.2; deployment script, not per-record timestamps",
+      "position_field": "/steps/observation/state",
+      "orientation_field": "/steps/observation/state",
+      "recorded_frame_documentation": "Local state has 7 entries without coordinate/unit descriptions; original controller lineage still needs binding",
+      "cached_dataset_name": "bridge_data_v2",
+      "cached_version": "0.0.1",
+      "metadata_sha256": "075e2ee1896bee3aa07397149960864c16a27b5ca83b97d2fc9eab0f624975ff",
+      "features_sha256": "0de9f7b8a358762407f7a4351e424973eec1c1059ca6e9d2ed20e44d5e1bcfcf",
+      "local_timestamp_fields": [],
+      "position_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "dtype": "float32",
+          "encoding": "none",
+          "shape": {
+            "dimensions": [
+              "7"
+            ]
+          }
+        }
+      },
+      "orientation_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "dtype": "float32",
+          "encoding": "none",
+          "shape": {
+            "dimensions": [
+              "7"
+            ]
+          }
+        }
+      },
+      "position_unit_explicitly_stated_in_local_metadata": false,
+      "position_unit_to_meters_bound_to_cached_export": false,
+      "nominal_16_future_intervals_seconds_illustration_only": 3.2,
+      "nominal_rate_verified_as_actual_record_spacing": false,
+      "all_records_regularly_spaced_proven": false,
+      "source_to_libero_tcp_and_axis_alignment_proven": false
+    },
+    "Language Table": {
+      "cache": "language_table_real",
+      "nominal_control_hz": 5,
+      "nominal_time_evidence": "https://arxiv.org/pdf/2210.06407",
+      "evidence_location": "Section V: real collection batched to 5Hz; Appendix C distinguishes 10Hz blocking simulation",
+      "position_field": "/steps/observation/effector_translation",
+      "orientation_field": null,
+      "recorded_frame_documentation": "Two-dimensional Cartesian position; no tool orientation or real-robot axis calibration in local schema",
+      "cached_dataset_name": "language_table",
+      "cached_version": "0.1.0",
+      "metadata_sha256": "f9c24bb59cc3dd66bc655d78762ed2a4c47b6628d187d684c29c8c886f7dd938",
+      "features_sha256": "aab4b382f0f235a6327006a8f47c13fa3169f4e2cbf71674b0519649af2d95bd",
+      "local_timestamp_fields": [],
+      "position_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "shape": {
+            "dimensions": [
+              "2"
+            ]
+          },
+          "dtype": "float32",
+          "encoding": "none"
+        },
+        "description": "The current end effector translation as a 2D cartesian coordinate."
+      },
+      "orientation_field_metadata": null,
+      "position_unit_explicitly_stated_in_local_metadata": false,
+      "position_unit_to_meters_bound_to_cached_export": false,
+      "nominal_16_future_intervals_seconds_illustration_only": 3.2,
+      "nominal_rate_verified_as_actual_record_spacing": false,
+      "all_records_regularly_spaced_proven": false,
+      "source_to_libero_tcp_and_axis_alignment_proven": false
+    },
+    "BC-Z": {
+      "cache": "bc_z",
+      "nominal_control_hz": 10,
+      "nominal_time_evidence": "https://proceedings.mlr.press/v164/jang22a/jang22a.pdf",
+      "evidence_location": "Section 4 system setup: 10Hz non-real-time teleoperation loop",
+      "position_field": "/steps/observation/present/xyz",
+      "orientation_field": "/steps/observation/present/axis_angle",
+      "recorded_frame_documentation": "Position described as robot frame; axis-angle rotation; position description contains a wording error (axis-angle for xyz)",
+      "catalog_evidence": "https://www.tensorflow.org/datasets/catalog/bc_z",
+      "catalog_documented_version": "0.1.0",
+      "catalog_version_equivalence_to_cache_established": false,
+      "cached_dataset_name": "bc_z",
+      "cached_version": "1.0.0",
+      "metadata_sha256": "2dd37a932985e555619a55c1985f17cfcc8a4f3da0ac67430451f79d629a03b9",
+      "features_sha256": "298f944d5a3322b5d9eae86f3f88406c4146e9600fe3f097b97ed7413514ef4b",
+      "local_timestamp_fields": [],
+      "position_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "shape": {
+            "dimensions": [
+              "3"
+            ]
+          },
+          "dtype": "float32",
+          "encoding": "none"
+        },
+        "description": "The current position of the end effector in axis-angle representation, in robot frame"
+      },
+      "orientation_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "shape": {
+            "dimensions": [
+              "3"
+            ]
+          },
+          "dtype": "float32",
+          "encoding": "none"
+        },
+        "description": "The current rotation of the end effector in axis-angle representation."
+      },
+      "position_unit_explicitly_stated_in_local_metadata": false,
+      "position_unit_to_meters_bound_to_cached_export": false,
+      "nominal_16_future_intervals_seconds_illustration_only": 1.6,
+      "nominal_rate_verified_as_actual_record_spacing": false,
+      "all_records_regularly_spaced_proven": false,
+      "source_to_libero_tcp_and_axis_alignment_proven": false
+    },
+    "Fractal": {
+      "cache": "rt1_fractal",
+      "nominal_control_hz": 3,
+      "nominal_time_evidence": "https://robotics-transformer1.github.io/",
+      "evidence_location": "Approach: RT-1 closed-loop policy commands at 3Hz; this alone is not a timestamp contract for Fractal export",
+      "position_field": "/steps/observation/base_pose_tool_reached",
+      "orientation_field": "/steps/observation/base_pose_tool_reached",
+      "recorded_frame_documentation": "Local metadata identifies base-relative position+quaternion; component ordering and physical units are not explicitly specified",
+      "catalog_evidence": "https://www.tensorflow.org/datasets/catalog/fractal20220817_data",
+      "cached_dataset_name": "fractal20220817_data",
+      "cached_version": "0.1.0",
+      "metadata_sha256": "1c6770c91636a1f765e474f0b9cd3d44f93b031473a0356903ff32a6675c7bd3",
+      "features_sha256": "7e02025e596cabd8d4e4afd6f2486b2110f22c0e42a9aa259d441cf5d538a684",
+      "local_timestamp_fields": [],
+      "position_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "shape": {
+            "dimensions": [
+              "7"
+            ]
+          },
+          "dtype": "float32",
+          "encoding": "none"
+        },
+        "description": "end-effector base-relative position+quaternion pose"
+      },
+      "orientation_field_metadata": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "shape": {
+            "dimensions": [
+              "7"
+            ]
+          },
+          "dtype": "float32",
+          "encoding": "none"
+        },
+        "description": "end-effector base-relative position+quaternion pose"
+      },
+      "position_unit_explicitly_stated_in_local_metadata": false,
+      "position_unit_to_meters_bound_to_cached_export": false,
+      "nominal_16_future_intervals_seconds_illustration_only": 5.333333333333333,
+      "nominal_rate_verified_as_actual_record_spacing": false,
+      "all_records_regularly_spaced_proven": false,
+      "source_to_libero_tcp_and_axis_alignment_proven": false
+    }
+  },
+  "common_16_row_time_horizon_established": false,
+  "unit_conversion_factors_changed": false,
+  "normalization_statistics_fitted": false,
+  "interpolation_or_resampling_added": false,
+  "source_payloads_read": false,
+  "model_or_training_run": false,
+  "training_ready": false,
+  "required_next_evidence": [
+    "Trace cached-version conversion lineage for position units and orientation conventions",
+    "Bind nominal controller rates to exported observation spacing or obtain raw timestamps",
+    "Define a common target time grid only after the source rate binding; no silent interpolation"
+  ]
+}

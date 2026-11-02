@@ -1,0 +1,155 @@
+{
+  "source_sha256": {
+    "code/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "code/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "code/train.py": "95b1945f273adc53c88df20d66dcf8ae9b6faf550c5c69b83be9a64b26a2cce9",
+    "code/replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "code/fit_bridge_adapter_pair.py": "a2798c873783e7b1adbb3573876c96c3ceda45c23b53f28a28a4989526f64914",
+    "code/evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "code/pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "scripts/run_panda_spatial_fixed_trial_20261015.py": "1d7763e06fe2b7b44d9cac560fa0379a2f0c8f5600027f6b2a3dc677771bc271",
+    "scripts/preflight_panda_minimal_generalization_20261015.py": "2601c8eaab821608e54a312c4a2dec7eef9e983df0516ca8d00a34f4484416a5"
+  },
+  "entry_sha256": "f9b2210ee112eb52c77be126de89876ab54c199c64f092d62c2227b764bb2488",
+  "initialization": 43,
+  "selection": [
+    {
+      "episode": "xy_0_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_3",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_3",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_3",
+      "start": 0,
+      "split": "train"
+    }
+  ],
+  "updates": 1024,
+  "draws_per_window": 512,
+  "batch_size": 8,
+  "learning_rate": "First512 at1e-4, last512 at1e-5; same exposure per initial window and rate phase as original",
+  "scope": "Initial-only capacity diagnostic. Removing other stages also changes gradient mixtures and Adam update count; not a single-cause proof.",
+  "fresh": true,
+  "starting_checkpoint": false,
+  "training_only": true,
+  "development_used": false,
+  "test_used": false,
+  "inference": "Unchanged nativeDDPM100, original3 seeds, final fixed update; no model selection",
+  "limits": "No extra updates, initialization search, new data or physical rollout. Initial windows have no closing actions.",
+  "checkpoint": "One final nonCLIP only, <1GiB; no optimizer or intermediate weights",
+  "config": {
+    "action": {
+      "representation": "tool_relative_pose_open_positive_v2",
+      "position_scale_meters": 0.1,
+      "max_normalized_position": 3.0,
+      "dimensions": "local_dx_dy_dz+dqx_dqy_dqz_dqw+gripper"
+    },
+    "model": {
+      "name": "D:\\ntu_related\\dissertation\\hf_cache\\models--openai--clip-vit-large-patch14\\snapshots\\32bd64288804d66eefd0ccbe215aa642df71cc41",
+      "fusion_type": "cross_attention",
+      "adapter_pooling": "cls_patch_mean",
+      "decoder_type": "diffusion",
+      "diffusion_prediction_type": "sample",
+      "num_adapter_layers": 8,
+      "attention_dim": 512,
+      "num_attention_heads": 8,
+      "decoder_hidden_dim": 256,
+      "chunk_size": 16,
+      "action_dim": 8,
+      "num_diffusion_steps": 100,
+      "beta_schedule": "squaredcos_cap_v2",
+      "clip_denoised": true,
+      "dropout": 0.1,
+      "separate_gripper_head": true,
+      "trajectory_conditioned_gripper": true,
+      "gripper_head_type": "legacy",
+      "condition_on_current_gripper": true,
+      "current_gripper_encoding": "panda_measured_finger_width_affine_v1",
+      "gripper_loss_weight": 0.25,
+      "gripper_change_weight": 1.0,
+      "gripper_target_mode": "state",
+      "gripper_transition_decode": "cumulative",
+      "gripper_switch_threshold": 0.0,
+      "balanced_gripper_loss": false,
+      "diffusion_architecture": "multiscale",
+      "diffusion_down_dims": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "frozen_context_dim": 1024
+  }
+}

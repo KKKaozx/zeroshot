@@ -1,0 +1,61 @@
+{
+  "execution_complete": true,
+  "paired_updates": 8192,
+  "total_optimizer_updates": 16384,
+  "random_stream_check": {
+    "matched_updates": 8192,
+    "indices_lr_timesteps_noisy_inputs_rng_all_equal": true
+  },
+  "roles": {
+    "train": {
+      "candidate_basic_capability_passed": false,
+      "candidate_minus_control_bootstrap95": {
+        "path_position_normalized": [
+          -0.014098979893699366,
+          0.00909523852027487
+        ],
+        "path_rotation_deg": [
+          0.3240672793031924,
+          1.68387333790437
+        ],
+        "endpoint_position_normalized": [
+          -0.025786160031866106,
+          0.013041690839942326
+        ],
+        "endpoint_rotation_deg": [
+          0.3528543263901824,
+          2.308542955683087
+        ]
+      },
+      "source_position_within5percent": true,
+      "candidate_rotation_better_control_both_means": false
+    },
+    "validation": {
+      "candidate_basic_capability_passed": false,
+      "candidate_minus_control_bootstrap95": {
+        "path_position_normalized": [
+          -0.04026155185532605,
+          0.0037215578680450025
+        ],
+        "path_rotation_deg": [
+          -0.47910720510065835,
+          1.6602979256150023
+        ],
+        "endpoint_position_normalized": [
+          -0.05841272193612537,
+          0.006090619283829465
+        ],
+        "endpoint_rotation_deg": [
+          -1.1675695741550896,
+          1.9115834603338882
+        ]
+      },
+      "source_position_within5percent": true,
+      "candidate_rotation_better_control_both_means": false
+    }
+  },
+  "candidate_admitted_for_further_source_work": false,
+  "libero_or_main_matrix_admitted": false,
+  "automatic_following_action": false,
+  "scope": "One warm-start paired loss intervention; not fresh13-model results or a unique-cause proof"
+}

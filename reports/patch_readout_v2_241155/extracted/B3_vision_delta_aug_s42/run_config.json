@@ -1,0 +1,170 @@
+{
+  "args": {
+    "cache": "/projects/Zeroshot/caches/patch_readout_bridge_dinov2_aug4_v2",
+    "config": "configs/B3_vision_delta_aug.json",
+    "out": "/projects/Zeroshot/runs/patch-readout-v2-241155/B3_vision_delta_aug_s42",
+    "seed": "42",
+    "steps": "10000",
+    "batch": "64",
+    "lr": "0.0001",
+    "weight_decay": "1e-06",
+    "warmup": "500",
+    "eval_every": "1000",
+    "time_cap": "1500.0",
+    "device": "cuda",
+    "no_amp": "False"
+  },
+  "spec": {
+    "name": "B3_vision_delta_aug",
+    "description": "B2+缓存的通用图像增强(4个版本随机取)",
+    "target": "future_pose",
+    "augment": true,
+    "policy": {
+      "grid": 8,
+      "num_adapter_layers": 8,
+      "readout": "spatial",
+      "use_pose18": false,
+      "use_current2": false,
+      "history": [
+        "state_delta"
+      ],
+      "history_dropout": 0.5
+    }
+  },
+  "resolved_policy": {
+    "readout": "spatial",
+    "num_keypoints": 32,
+    "keypoint_feat_dim": 32,
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "attention_dim": 512,
+    "num_heads": 8,
+    "dropout": 0.1,
+    "num_queries": 8,
+    "readout_dim": 512,
+    "readout_layers": 2,
+    "history": [
+      "state_delta"
+    ],
+    "history_dropout": 0.5,
+    "use_pose18": false,
+    "use_current2": false,
+    "context_dim": 1024,
+    "down_dims": [
+      256,
+      512,
+      1024
+    ],
+    "diffusion_steps": 100,
+    "clip_x0": 5.0,
+    "gripper_loss_weight": 0.25
+  },
+  "trainable_parameters": 133096360,
+  "cache_manifest": {
+    "format": "patch-readout-bridge-cache-v2",
+    "backbone": "dinov2",
+    "rows": 10416,
+    "unique_texts": 880,
+    "visual_views": [
+      10416,
+      4,
+      65,
+      1024
+    ],
+    "grid": 8,
+    "view0": "original image",
+    "augment_seed": 20261102,
+    "augment_spec": {
+      "resized_crop_area": [
+        0.7,
+        1.0
+      ],
+      "resized_crop_aspect": [
+        0.75,
+        1.333
+      ],
+      "brightness": 0.3,
+      "contrast": 0.3,
+      "saturation": 0.3,
+      "hue": 0.05,
+      "blur_probability": 0.3,
+      "blur_radius": [
+        0.5,
+        1.5
+      ],
+      "low_resolution_probability": 0.5,
+      "low_resolution_side": 128
+    },
+    "command8_dir": "/projects/_ssd/Zeroshot/bridge_command8_fresh_scaled_v1",
+    "command8_inputs_sha256": "a3df211518c4e60f63d98b91a528446e609d0895041ea47a1b0cb87bfb706e0d",
+    "rows_sha256": "a43887409ce89b03c06b5e0f127e9c6a37f96784aa2d2f3539f76e7b6b2ba07c",
+    "future_pose_store": "/projects/_ssd/Zeroshot/oxe_dino_main_preflight_v1/inputs",
+    "max_first_command_phase_delta": 0.0,
+    "state_delta": "p_t - p_{t-1} (/position_divisor) and rotvec(q_t*q_{t-1}^-1), from recorded store pose",
+    "prev_command": "encode_commands(raw action[t-1]) with the same clip/divisor as command8 labels",
+    "libero_data_used": false,
+    "seconds": 804.2728595733643,
+    "files_sha256": {
+      "numeric.npz": "1f4232984b8ec84848a3a3eab24e5f39eae7cd8ffc41a9dd4c5cce1d18e9b91b",
+      "text_mask.npy": "c6df31a161fb602a803e66ad47e9cf962d3e042841680906302b9361f8221fd7",
+      "text_tokens.npy": "83a8e73ad3b039fb3e5deea3004e7a18ccc8435508bd69ef5bf94c2100907f0a",
+      "texts.json": "0edea1e2be7d57e74b74562a4bd7839f49f79882a8d38b922f0725b93eea0bf3"
+    }
+  },
+  "feature_stats": {
+    "state_delta": {
+      "mean": [
+        0.002874825382605195,
+        0.000927305722143501,
+        0.003055581822991371,
+        -0.00031112725264392793,
+        -0.0024981775786727667,
+        0.0005014656926505268
+      ],
+      "std": [
+        0.10489481687545776,
+        0.14560677111148834,
+        0.12642203271389008,
+        0.0284111350774765,
+        0.031855981796979904,
+        0.05221123620867729
+      ]
+    },
+    "prev_command": {
+      "mean": [
+        0.004698038566857576,
+        0.0009334670030511916,
+        0.0037756231613457203,
+        3.950116933992831e-06,
+        -0.002297687344253063,
+        0.0002608919166959822
+      ],
+      "std": [
+        0.10732129961252213,
+        0.14951233565807343,
+        0.12764059007167816,
+        0.03002871759235859,
+        0.03174857795238495,
+        0.05226915329694748
+      ]
+    },
+    "motion_mean": [
+      0.021719086915254593,
+      0.00042413812479935586,
+      -0.04661794751882553,
+      -0.001940659829415381,
+      -0.0026012519374489784,
+      0.007020095828920603
+    ],
+    "motion_std": [
+      0.5389416813850403,
+      0.7909367084503174,
+      0.48643746972084045,
+      0.11019685864448547,
+      0.11388056725263596,
+      0.2740411162376404
+    ]
+  },
+  "libero_data_used": false,
+  "encoder_updates": 0
+}

@@ -1,0 +1,49 @@
+{
+  "status": "passed_cpu_only",
+  "date": "2026-10-30",
+  "unittest_command": "training_cache/libero_native_env_v1/Scripts/python.exe -m unittest discover -s tests -p test_language_*.py -v",
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "test_seconds": 0.269,
+  "syntax_checked": [
+    "code/language_training_conditions.py",
+    "code/train.py",
+    "code/step_training_runner.py",
+    "tools/prepare_language_candidate_review_20261030.py",
+    "tests/test_language_eligibility.py",
+    "tests/test_language_candidate_review.py",
+    "tools/audit_main_language_readiness_20261030.py"
+  ],
+  "source_sha256": {
+    "code/language_training_conditions.py": "4af0c3c46680f7ea76bd89374832799e54f7f1da72998273eee1fb06c5343a53",
+    "code/train.py": "ab299d6c05307cd3c77988e23af29658b578825251deeed68806200a6af0816c",
+    "code/step_training_runner.py": "eddb1153c3ea1bce312e143c92b12b32d12cb0397005dc0c6e7bf32c86182e1a",
+    "tools/prepare_language_candidate_review_20261030.py": "8e11deff67aba84dbf7132e8b1743e6ebecf48cf1f9b966d7bbb26f3d9891b1b",
+    "tests/test_language_eligibility.py": "e96966f3232c21d0d2c96fde9ce22770392b3d92fcedfa3cbc5fe5ff9be002f7",
+    "tests/test_language_candidate_review.py": "30c93d0f5a63efbe7e6f77527a095a9da99d57601fb02a2a8dfc806b40554f2d",
+    "tools/audit_main_language_readiness_20261030.py": "1d409a3cf5fea7aa5bdc2b2054122d9f33e1710824a2aaa601acc89fefd77452"
+  },
+  "request_bundle": {
+    "bank_created": false,
+    "bulk_generation_admitted": false,
+    "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+    "format": "local-paraphrase-request-bundle-v1",
+    "model_calls": 0,
+    "prompt_version": "robot-instruction-paraphrases-v3-conservative-abstention",
+    "request_count": 8,
+    "requests_sha256": "b83ecfdf634cba11082bd12d94865020e8ee98e6887659b3510498f094a8d997",
+    "review_queue_sha256": "ed72adb185fc7b1213b441fb26f240d3be8d4e81d1c99c30251ea73e235b75fc",
+    "selection": "First SHA-sorted previously ungenerated training instructions per source",
+    "semantic_approval_granted": false,
+    "training_updates": 0
+  },
+  "fixture_scope": "Synthetic scene/review declarations and real training intervention AST blocks, no real model or optimizer executed",
+  "initial_attempt": "System temporary-directory write was denied before fixture setup. Tests moved to workspace temporary directories; subsequent 8 tests passed.",
+  "models_loaded": 0,
+  "new_training_updates": 0,
+  "new_generation_calls": 0,
+  "new_cluster_jobs": 0,
+  "real_reviewed_bank_created": false,
+  "augmented_training_released": false
+}

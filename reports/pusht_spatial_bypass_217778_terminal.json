@@ -1,0 +1,29 @@
+{
+  "job_id": 217778,
+  "source": "User supplied sacct and preflight stdout",
+  "scheduler_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed_seconds": 238,
+  "node": "gpu-a6000-1",
+  "preflight_pass_reported": true,
+  "original_output_verifier_pass_reported": true,
+  "verified_resources": {
+    "global_control": {"peak_reserved_gib": 8.78125, "warm_update_seconds": 1.9019729026127608},
+    "spatial_candidate": {"peak_reserved_gib": 8.78125, "warm_update_seconds": 1.4903039943892509},
+    "estimated_paired_training_hours_excluding_rollouts_and_io": 7.719314538955689
+  },
+  "local_full_output_received": false,
+  "groups": {
+    "global_control": {
+      "losses": [0.008735833158425521, 0.002374236202740576, 0.01881743103149347, 0.007450958510162309, 0.002832461381331086, 0.005931510855589295, 0.009756773768458515, 0.005100238064187579]
+    },
+    "spatial_candidate": {
+      "losses": [0.008735833158425521, 0.002359559242904652, 0.018746062618447468, 0.007525167922722176, 0.0028291038106544875, 0.00600023318111198, 0.009797711332794279, 0.005103371266159229]
+    }
+  },
+  "first_loss_exact": true,
+  "scope": "Integration, new gradients/complete-state replay/resources; these8 steps do not rank generalization",
+  "pending": ["Prepare bounded formal paired training entry bound to verified preflight217778"],
+  "formal_training_submitted": false,
+  "new_policy_performance_verdict": null
+}

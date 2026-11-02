@@ -1,0 +1,45 @@
+{
+  "selection": "First, middle and last in frozen LT training episode order; chosen before inspecting command values",
+  "observations": "Same-source current effector, current target, action and adjacent target; no image decode",
+  "hypotheses": [
+    "T[t+1]-T[t] equals action[t]",
+    "T[t]-T[t-1] equals action[t]"
+  ],
+  "compared_action_rows": "Common interior rows1..N-2, terminal action excluded",
+  "numeric_summary": "Residuals in recorded source units; neither physical meters nor all-source admission inferred",
+  "records": [
+    {
+      "episode_key": "language_table-train.tfrecord-00626-of-01024::1",
+      "group_id": "bounded-origin-content-fdea56eb56125f749a34d60a1e5f17d26ee60ab14faf04336a43d724d4c16016",
+      "partition": "train",
+      "stage_relative_path": "language_table_real/language_table-train.tfrecord-00626-of-01024",
+      "record_index": 1,
+      "payload_offset": 1090625,
+      "payload_bytes": 682741,
+      "payload_sha256": "18cecc4e2474f8a7bd10cb5fd16ad6559ebc707e89234080bd9dcef315d7d85c",
+      "steps": 12
+    },
+    {
+      "episode_key": "language_table-train.tfrecord-00045-of-01024::0",
+      "group_id": "bounded-origin-content-35a97a59f4994c3ef36d6620a630b142daccb6d0875feea98a670e6882460af8",
+      "partition": "train",
+      "stage_relative_path": "language_table_real/language_table-train.tfrecord-00045-of-01024",
+      "record_index": 0,
+      "payload_offset": 12,
+      "payload_bytes": 708659,
+      "payload_sha256": "b02c6e1853f208ef0baf2e07bd00846582a992f57c87c65717cdd07dc1f14864",
+      "steps": 12
+    },
+    {
+      "episode_key": "language_table-train.tfrecord-00630-of-01024::483",
+      "group_id": "bounded-origin-content-1b7a3ec4ecf7cec6b6f13c858acae4499abee62fd8b7e95466a707e5e0a062db",
+      "partition": "train",
+      "stage_relative_path": "language_table_real/language_table-train.tfrecord-00630-of-01024",
+      "record_index": 483,
+      "payload_offset": 461668796,
+      "payload_bytes": 2365378,
+      "payload_sha256": "1a1306d7b916962524b179ae0e7fef56197d6d4049a065e695e425a3bc59d41e",
+      "steps": 42
+    }
+  ]
+}

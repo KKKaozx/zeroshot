@@ -1,0 +1,41 @@
+{
+  "condition": "interpolated5hz",
+  "comparison": "Existing exactgrip5hz condition; not rerun",
+  "task": "Excluded LIBERO90 engineering demo_0 only",
+  "max_new_runs": 1,
+  "native_step_budget": 200,
+  "high_level_waypoint_times_seconds": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2,
+    1.4,
+    1.6,
+    1.8,
+    2.0,
+    2.2,
+    2.4,
+    2.6,
+    2.8,
+    3.0,
+    3.2
+  ],
+  "original_endpoint_updates_hz": 5,
+  "native_controller_hz": 20,
+  "new_expert_intermediate_pose_information": false,
+  "start_pose": "Actual measured EEF at interval start, already available in original executor",
+  "subtarget_rule": "Linear world position and shortest-arc Slerp at fractions.25,.5,.75,1 of the same0.2s interval",
+  "native_gripper": "Original20Hz schedule, unchanged from both prior exact-gripper controls",
+  "controller_gains_bounds_and_native_conversion_changed": false,
+  "new_model_calls_or_training": 0,
+  "formal40_tasks_accessed": 0,
+  "stop": "One run and report; no alternate interpolation/gains or repeat conditions after outcome",
+  "source_sha256": {
+    "diagnostics\\libero_interpolated_execution_20261026.py": "858cc12d32aa82d3cc2699485c4c301d43e94d83d7ffef14c09c43610710557a",
+    "diagnostics\\run_libero_oracle_execution_20261026.py": "72e4d4822d5c3c7272fc1366d94ba07508692751daf658e5dcb6292dbcd81773"
+  },
+  "interpretation_if_fail": "This one interpolation does not restore success; cannot prove that every5Hz-only executor must fail",
+  "interpretation_if_success": "This engineering failure is sensitive to executor strategy at fixed5Hz information; not evidence of learned generalization"
+}

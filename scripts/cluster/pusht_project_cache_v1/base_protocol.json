@@ -1,0 +1,69 @@
+{
+  "stage": "native_reference_first20k_only",
+  "goal": "Establish a competent trained native Push-T reference before matched frozen-CLIP frontend training",
+  "data_report_sha256": "c6f4f8f2e1e2de7118c92f497f3ad49d2a51031d5ec52895cb6031104bc49879",
+  "required_reports_sha256": {
+    "runs/pusht-float-data-210690/report.json": "c6f4f8f2e1e2de7118c92f497f3ad49d2a51031d5ec52895cb6031104bc49879",
+    "runs/pusht-front-resource-210763/report.json": "8abf8b546590b8b33ed8190c2381e8b919d987199808b69add0c6a6f0f9b44bb",
+    "runs/pusht-online-211193/report.json": "9030306a0e10c498659322ad3203336aeebce5555c5817dece0be58acca82942"
+  },
+  "resource_inputs_sha256": "37df9cff7c1fb56e226e896541b101e5e075ea555a6527431371296707a8f07e",
+  "author_file_sha256": {
+    "diffusion_policy/policy/diffusion_unet_hybrid_image_policy.py": "d8ead767ed3b1501c358aa3dd97ab479ebdf77a62ec9ab7081d6a2211c2d2e76",
+    "diffusion_policy/workspace/train_diffusion_unet_hybrid_workspace.py": "1d69542bdb37906c899f25465e0c178b0581cbf4760de326a78899d67b0cd029",
+    "diffusion_policy/model/diffusion/conditional_unet1d.py": "8a95014f8aa52ade086f967c9018a66bf0c68f2133969c8f7a8522da01b472ac",
+    "diffusion_policy/dataset/pusht_image_dataset.py": "1c3cc71f10cdf71d0bfbea411068a62ef876ee7508dfd7c1d1cfbe770650b0f5",
+    "diffusion_policy/common/sampler.py": "3dc7afb686a418abf4ceee4648dafb7e1be901bb70b1539530f9f9964cad1688",
+    "diffusion_policy/model/diffusion/ema_model.py": "f683be124722abe0703e2cf003566ab2d446783383cdcd5202063e20148ae467",
+    "diffusion_policy/model/common/normalizer.py": "92322852fc04d956d0dd43a2e41fb461dee246bbf97ddc7940186a9307525ed3",
+    "diffusion_policy/model/common/lr_scheduler.py": "feb9453856bfd1ee10b1faba6c64814e071c5e70174398daf3bfcd8d430c80db"
+  },
+  "initial_backend_sha256": "73936e05e8b46d45531cdf8a05cce912250a17d3dfd6b9bbafe324dee72b2e5b",
+  "normalizer_sha256": "c587312123bfb95c527ac4f36cf9c897b27a5959cdb6fcb18686a983b9b6f474",
+  "first_checkpoint_updates": 20000,
+  "native_upper_cap_updates": 84168,
+  "upper_cap_extension_exposed_by_this_entry": false,
+  "lr_horizon_updates": 512400,
+  "lr_schedule": "Author cosine, warmup500, original planned3050 epochs *168 logical batches; no20k cosine compression",
+  "batch_plan": {
+    "algorithm": "RandomState(42+epoch).permutation(10726);168 batches per epoch, final38",
+    "logical_batch": 64,
+    "microbatch": 8,
+    "partial_micro_weight": "actual micro_size / actual logical_size",
+    "checkpoint_identity": "SHA256(sample order digest + raw training image digest), rejects changed pixels at resume"
+  },
+  "diffusion_rng": "SHA256-derived seed by update/micro, reset after original mask; independent from frontend stream",
+  "loss": "Unmodified pinned author compute_loss, epsilon objective, cosineDDPM100; original target and add_noise share local noise",
+  "training_differences_from_original_workspace": [
+    "Train90 frames only for normalizer, shared between future frontend groups",
+    "Explicit deterministic shuffle and separate per-micro frontend/diffusion random streams",
+    "Memory-equivalent sample-weighted microbatch accumulation,64=8x8 except final38",
+    "Deterministic kernels requested and full EMA optimization counter restored",
+    "Fixed20k development endpoint, no original online W&B or repeated validation checkpoint search"
+  ],
+  "startup_checks": [
+    "First original loss/noise/t and representative gradient",
+    "Complete disk restore and update2 exact replay"
+  ],
+  "development": {
+    "start_seed": 5000000,
+    "count": 20,
+    "max_steps": 300,
+    "diffusion_seed_base": 6000000,
+    "serial_batch": 1,
+    "checkpoint": "EMA at20000 only",
+    "competence_mean_score": 0.8,
+    "competence_full_reward_fraction": 0.5,
+    "videos": "first2 seeds, no outcome selection"
+  },
+  "sealed_final": {
+    "start_seed": 5100000,
+    "count": 50,
+    "access_allowed_by_this_entry": false
+  },
+  "if_native20k_passes": "Prepare project family with same20k budget and common plan, fresh matched backend, frozen CLIP",
+  "if_native20k_fails": "No frontend attribution or project run; review bounded native continuation separately",
+  "automatic_other_submission": false,
+  "clip_must_remain_frozen": true,
+  "bridge207558_or_final25_access": false
+}

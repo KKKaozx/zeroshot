@@ -1,0 +1,94 @@
+{
+  "verified": true,
+  "independent_kernel_eigendecomposition_max_difference_cm": 4.263256414560601e-14,
+  "reconstructed_query_predictions": 888,
+  "query_order_invariance": true,
+  "all64_episode_exclusions_checked": true,
+  "saved_metrics_recomputed": true,
+  "source_hashes_match": true,
+  "train_only_statistics_and_labels": true,
+  "primary_metric": "Original40-window mean position error; episode-equal summaries and bootstrap are secondary. No respecification of success.",
+  "paired_episode_uncertainty": {
+    "state_only": {
+      "no_motion": {
+        "episode_equal_improvement_cm": 1.8360538166397107,
+        "paired_episode_bootstrap95_cm": [
+          0.9668892130756919,
+          2.6826697696037405
+        ],
+        "episodes_better": 9
+      },
+      "existing_final_ddpm100": {
+        "episode_equal_improvement_cm": 1.5684043601348414,
+        "paired_episode_bootstrap95_cm": [
+          0.2120517523022924,
+          2.870391455242063
+        ],
+        "episodes_better": 7
+      }
+    },
+    "clip_state": {
+      "no_motion": {
+        "episode_equal_improvement_cm": 1.8276859854280567,
+        "paired_episode_bootstrap95_cm": [
+          0.9054003226184393,
+          2.703329580180455
+        ],
+        "episodes_better": 9
+      },
+      "existing_final_ddpm100": {
+        "episode_equal_improvement_cm": 1.5600365289231874,
+        "paired_episode_bootstrap95_cm": [
+          0.30848830538168986,
+          2.7710902388436374
+        ],
+        "episodes_better": 8
+      }
+    },
+    "learned_condition_state": {
+      "no_motion": {
+        "episode_equal_improvement_cm": 1.4205690327061027,
+        "paired_episode_bootstrap95_cm": [
+          0.37071569531383264,
+          2.4508627284098456
+        ],
+        "episodes_better": 9
+      },
+      "existing_final_ddpm100": {
+        "episode_equal_improvement_cm": 1.1529195762012339,
+        "paired_episode_bootstrap95_cm": [
+          0.269300485892373,
+          1.9410843167923302
+        ],
+        "episodes_better": 8
+      }
+    },
+    "training_task_mean": {
+      "no_motion": {
+        "episode_equal_improvement_cm": 0.30593019499195284,
+        "paired_episode_bootstrap95_cm": [
+          -0.16318617515326525,
+          0.8043941795820403
+        ],
+        "episodes_better": 6
+      },
+      "existing_final_ddpm100": {
+        "episode_equal_improvement_cm": 0.0382807384870838,
+        "paired_episode_bootstrap95_cm": [
+          -1.200967331308236,
+          1.198190236649485
+        ],
+        "episodes_better": 6
+      }
+    }
+  },
+  "limitations": [
+    "Only10 development demonstrations, reused for diagnosis; no fresh test.",
+    "No adjustment for multiple exploratory readout comparisons; intervals are descriptive.",
+    "Learned-context leave-episode-out reuses supervised encoder fitted to all training labels; not end-to-end CV."
+  ],
+  "new_neural_training": false,
+  "reserved_test_used": false,
+  "physical_rollout": false,
+  "prediction_sha256": "0e03751512c4bb6d7a39ebb766d22f8e211f648665f12191733c45003cf85870"
+}

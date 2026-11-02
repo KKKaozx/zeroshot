@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "all_new_catalog_window_bindings_checked": 145812,
+  "actual_cached_original_control_batch_windows": [
+    0,
+    10,
+    10352,
+    10354,
+    22566,
+    22587,
+    118362,
+    118378
+  ],
+  "texts_targets_masks_unchanged": true,
+  "contract": {
+    "format": "original-instruction-control-v1",
+    "mode": "no_augmentation",
+    "seed": 42,
+    "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+    "original_catalog_sha256": "00ad1e337f909d7eef85cb2844e1bfdabce20a8d10e3e95facedb99a2b0d5605",
+    "catalog_scope": "training_only",
+    "negative_fraction": null,
+    "positive_variant_sampling": "Original decoded instruction only",
+    "semantic_review_or_physical_admission_granted": false
+  },
+  "target_binding": {
+    "format": "oxe-nominal-target-binding-v1",
+    "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+    "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+    "label_family": "nominal_resampled_observed_reached_pose",
+    "clock_basis": "user_selected_published_nominal_frequency_assumption",
+    "target_times_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "source_units_or_formal_training_admitted": false
+  },
+  "models_loaded": 0,
+  "training_updates": 0,
+  "images_decoded": 0,
+  "old_resume_or_fit_suites_repeated": false,
+  "main_dataset_automatically_switched": false,
+  "formal_training_ready": false
+}

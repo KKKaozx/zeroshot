@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-16",
+  "stage": "single_training_image_augmentation_arm",
+  "objective": "Improve independent-episode offline generalization. Training fitting is a secondary diagnostic only.",
+  "evidence_gap": "Successful PushT checkpoint has crop_shape84x84 for96x96 images and eval_fixed_crop=true; adapted author Bridge reference203699 disabled crop_shape, and current project uses fixed view tokens. Training-time image augmentation has not been tested in the evidence index.",
+  "official": {
+    "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+    "implementation": "https://github.com/real-stanford/diffusion_policy/blob/5ba07ac6661db573af695b419a7947ecb704690f/diffusion_policy/model/vision/crop_randomizer.py",
+    "checkpoint_config_sha256": "5fc467ea821b26afa743aad1b7e41206540b3665271be7c688d4cc52cc82dbd6",
+    "adapted_bridge_config_sha256": "37fa46ce367fdca510aebd13365a04b386e2902d7be1629850d6f74c969e89f8",
+    "distinction": "This conservative CLIP-compatible pad/shift is inspired by the train-random/eval-fixed principle, not exact reproduction of the84/96 crop or proof that missing augmentation is the root cause."
+  },
+  "inherited_sha256": {
+    "bridge_growth128_v1/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "bridge_growth128_v1/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "bridge_growth128_v1/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "bridge_growth128_v1/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "bridge_growth128_v1/replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "bridge_growth128_v1/evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "bridge_growth128_v1/check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "bridge_growth128_v1/bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "bridge_growth128_v1/trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+    "bridge_growth128_v1/check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+    "bridge_growth128_v1/fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70",
+    "bridge_growth128_v1/growth128_input_contract.py": "bde3fd9da5d0ae8f67c1511418600121ae19729b368c732c0982e282c67b14d1",
+    "bridge_growth128_v1/manifest.json": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+    "bridge_state_conditioning_v1/fit_state_arm.py": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa",
+    "bridge_state_conditioning_v1/state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+    "bridge_state_conditioning_v1/protocol.json": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82",
+    "bridge_state_conditioning_v1/current_pose.npz": "d8246fec1901054d92f20b4340ce65cffe2c18c0a2e714a673d5f74879d6ab7f",
+    "bridge_inner_selection_v1/selection_contract.py": "e51aaea52530bda8e98638d5e01bb8f07e37aed604322ae689271652ce5960ab"
+  },
+  "manifest_sha256": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+  "control": {
+    "job": "202278",
+    "arm": "real",
+    "report_sha256": "69dd96d24241f3cef8733c4cbc8a985157b06e62616da32aefd8332268302ed1",
+    "reuse_existing_without_retraining": true,
+    "path_position_cm": 8.349126815795898,
+    "path_rotation_deg": 15.255946159362793
+  },
+  "input": {
+    "train_windows": 128,
+    "train_episodes": 64,
+    "development_windows": 40,
+    "development_episodes": 10,
+    "intervention": "On normalized224x224 training RGB only: edge-replicate pad8 then crop224x224 with independent per-row integer top-left offsets0..16 inclusive. Fixed8-pixel strength; no interpolation, flips, color changes or label/action/state transforms. Border content can be removed by at most8 pixels.",
+    "augmentation_seed": "CPU-local torch.Generator seed510000+update, independent of unchanged dropout430000+update and diffusion420000+update seeds.",
+    "paired_context": "Both repeated-current Adapter calls receive the same augmented token sequence for that optimization row.",
+    "evaluation": "Use original unshifted cached visual tokens, unchanged language and state. Center offset8 exactly reproduces original pixels; check online center encoding against original cache on4 training rows before updates.",
+    "no_leakage": "Only indices0..127 enter optimization augmentation. No train statistics from development observations or targets."
+  },
+  "unchanged": "CLIP frozen in eval mode; same8layerAdapter,history and real-state ports,multiscale x0-DDPM100,actions,losses,gripper frozen,raw128/40 split and model initialization. Original control202278 reused without retraining.",
+  "recipe": {
+    "initialization_seed": 43,
+    "updates": 8192,
+    "batch_size": 8,
+    "exposures_per_window": 512,
+    "learning_rates": [
+      0.0001,
+      1e-05
+    ],
+    "switch_after_update": 4096,
+    "sampling_steps": 100,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "optimizer": "Adam",
+    "weight_decay": 0,
+    "gradient_clip": 1.0
+  },
+  "screen": {
+    "position_at_most_cm": 7.391093466501333,
+    "rotation_at_most_deg": 15.1185004321,
+    "position_and_rotation_below_reused_control": true,
+    "episodes_position_better_than_reused_control_at_least": 6
+  },
+  "primary": "Original40-window path position AND rotation, all10 episodes and5 tasks; also report endpoint, episode-equal and per-task summaries. State-only ridge6.2798cm remains an auxiliary position reference, not a matched neural control.",
+  "preflight": "16 optimization operations:4 common+4constant+4restored-same-LR+4reduced; four fixed TRAIN windows[0,32,64,96] only. Confirm checkpoint branch restore, RNG isolation, frozen CLIP and unchanged targets/eval cache. No development scoring, no millimetre fitting requirement.",
+  "formal": "One8192-update candidate with original512exposures/window; final original128/40 predictions and one nonCLIP checkpoint only. No inner selection, no old-control retraining.",
+  "resources": "Reuse original token cache, existing models/data/environment. Augmented training views encoded online in batches2; retain frozen visual encoder on GPU. No multiview cache or downloads. Formal allowed only after preflight peak<7.5GiB and conservative time estimate<9000s. One checkpoint<1GiB; retain15GiB planning headroom within200GiB.",
+  "stopping": "One strength, initialization and budget. No additional crops, color changes, seeds or fitting-driven extensions if primary screen fails. Close prior mean-visual, prior-residual and selection candidates.",
+  "interpretation": "Positive paired primary results would support this fixed augmentation recipe, not uniquely prove a module bug. Negative results close this trial; do not claim all augmentation ineffective.",
+  "limits": [
+    "Repeatedly used40-window development set, not an untouched test or new-task zero shot.",
+    "Gripper frozen; no grasp success, object localization or online robot evaluation.",
+    "One training initialization; three sampling seeds are not three independent training runs."
+  ]
+}

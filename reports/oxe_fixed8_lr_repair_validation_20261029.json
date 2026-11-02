@@ -1,0 +1,31 @@
+{
+  "tests_passed": 3,
+  "test_source_sha256": "4ad73e86e4c812224414495e1ade780d23587af4784d6cfb86691db95c57e5da",
+  "coverage": [
+    "Exact5step/15scalar Windows-reference versus archived-Linux difference reproduced; original strict reference rejects production-value fixture",
+    "Actual original qualification.load_source (not mocked out) reproduces failure using CPU source/model/three-groupAdam fixture with archived Linux schedule producer",
+    "Actual repaired loader restores fixture weights and all3Adam states, actual repaired main runs512updates and native100step sampler, saves policy/repair binding and verifies all output metrics/LR history",
+    "Actual preallocation CPU mmap metadata branch checks512entries without model reconstruction/CUDA; already-updated failure log rejected"
+  ],
+  "linux_numeric_producer_in_cpu_test": "Recorded actual Linux LR table supplies native values to Windows CPU fixture only; production computes schedule normally",
+  "real_frozen_models_or_cuda_used": false,
+  "actual_cluster_metadata_check_executed": false,
+  "new_jobs_submitted": 0,
+  "original_v1_bytes_unchanged": true,
+  "package": {
+    "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\oxe_fixed8_lr_repair_v1.zip",
+    "bytes": 13115,
+    "sha256": "6204d809223b0e4265d7b1f87791d65029bfb7edb14c240e21b13e12ae2a7c0e",
+    "members": 9,
+    "old_package_and_files_unchanged": true,
+    "model_or_data_copied": false,
+    "changed_lr_steps": 5,
+    "max_absolute_lr_difference": 2.710505431213761e-20,
+    "actual_gpu_updates": 0,
+    "new_jobs_submitted": 0,
+    "actual_cluster_preallocation_metadata_check_run": false,
+    "shell_validation": "LF/header/static only, Bash not executed locally"
+  },
+  "development_fixture_fix": "Added stand-in original metadata admission to temporary test root; actual load_source remains executed, not mocked",
+  "scope": "CPU regression and actual archive proof, not real cluster repair qualification or a new fit result"
+}

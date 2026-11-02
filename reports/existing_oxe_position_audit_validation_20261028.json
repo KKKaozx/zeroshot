@@ -1,0 +1,13 @@
+{
+  "script": "tools/audit_existing_oxe_position.py",
+  "script_sha256": "198511c1f626f6a13023a446e5aae50d5bdd06d46a1098cbfdd05203b83a1e5d",
+  "tests_passed": 5,
+  "full_npz_json_reader_tested_with_cpu_fixture": true,
+  "real_prediction_files_available": true,
+  "real_model_calls": 0,
+  "gpu_use": false,
+  "new_training_updates": 0,
+  "scope": "CPU method and full reader fixtures only; actual232091 analysis pending download",
+  "actual_232091_audit_passed": true,
+  "actual_result": "reports/oxe_target_eval_repair_232091/position_audit_summary.json"
+}

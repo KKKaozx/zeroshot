@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-17",
+  "stage": "prepared_not_submitted",
+  "objective": "On the fixed806-demo pool, does continuing the unchanged low-LR trajectory from8192 to16170 updates improve same-task held-out performance?",
+  "authorization": "User accepted one finite training-budget comparison after208207 closure; this is a separate experiment with a new frozen protocol.",
+  "baseline_job": "208207",
+  "baseline_report_sha256": "ad9a9c0c9e252aafe8ffaee5e9d378f94aaf7fd742f7b9a4a5960555b8382781",
+  "baseline_effective_runner_sha256": "1200d521646d3b9dd3fecc629095d946df31884217868aceadb02749be6104a3",
+  "baseline_checkpoint_sha256": "5181d8c13c56ba0f886d2ae91c9beb6695a45b9e36fd059a16678e155fdf1a5a",
+  "baseline_development_npz_sha256": "6c358676202b88cfe28ccc76030805a7f61beed83778ab0ae13dc9f290f1b820",
+  "original_input_protocol_sha256": "cf00fb00a4dcc99612f270df09f6366d8c404a5afff2809bba2125732d98c132",
+  "budget_effective_runner_sha256": "428f1a153e1e2e236ff9fa008032ec3e785ab296088cbd4123010356fb908fdb",
+  "schedule_sha256": "5047e6630ebe3d442b19550ff91bee5a04d767ec8e74920863fb12bc1cfd259c",
+  "schedule_tensor_sha256": "2af7e4c3cce9e009f47e1d4530eacefaad1c6c6d0961e48c643b4dbdabdf9120",
+  "recipe": {
+    "train_episodes": 806,
+    "train_windows": 3624,
+    "batch_size": 8,
+    "initialization_seed": 42,
+    "updates": 16170,
+    "prefix_updates": 8192,
+    "extension_updates": 7978,
+    "learning_rate_policy": "1e-4 through4096,1e-5 from4097 through16170; prefix8192 unchanged.",
+    "prefix_schedule_exact": true,
+    "tail_task_labels": "Repeat existing8192-step task-label schedule for7978steps; continue the original per-task window streams.",
+    "state_statistics": "Unchanged original128 training observations",
+    "sampling_steps": 100,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "architecture_loss_augmentation_gripper": "All unchanged; gripper frozen"
+  },
+  "exposure": {
+    "mean_8192": 18.083885209713024,
+    "mean_16170": 35.6953642384106,
+    "reference_405_mean": 35.694989106753816,
+    "min_16170": 23,
+    "max_16170": 73,
+    "interpretation": "Approximately matched average sample exposure; individual/task exposure is not equal. The causal comparison is extra low-LR optimization on the same806 pool, not a pure data-size test."
+  },
+  "tolerances": {
+    "parameters": 1e-05,
+    "loss": 1e-05,
+    "context": 0.0001,
+    "prediction": 0.0001
+  },
+  "replay": "No Adam state was saved in208207. Reconstruct its8192 updates; require all losses, final parameters and old4 predictions within frozen tolerances before any7978-step extension. Stop if mismatched; never reset Adam from weights and call that a continuation.",
+  "preflight": "Complete existing input/cache identity; frozen208207 old4 replay;4 boundary-index warm updates,4 continuation updates and4 exact-restored continuation updates. No new candidate development score.",
+  "stopping": "One fixed endpoint at16170. No intermediate candidate development selection, extra endpoints, seed sweep or automatic further extension.",
+  "development_rule": "For evidence of a generalization gain over208207, require both window-weighted and episode-equal mean path position/rotation no higher, at least one strictly lower. Training metrics diagnostic only. Report all10 episodes/5 tasks without excluding failures.",
+  "qualification_for_future_test": "Require the same four means no worse than frozen405 baseline207558 and all four strictly below the static baseline, in addition to gain over208207. Then freeze candidate/protocol before any new independent test; do not score reserved25 in this runner.",
+  "outcomes": {
+    "train_better_dev_not": "Extra budget did not resolve generalization in this finite test; stop this budget branch, without claiming every possible budget is ruled out.",
+    "train_and_dev_better": "Evidence supporting optimization budget as a contributor, not proof of a unique root cause; future independent assessment still required.",
+    "train_not_better": "Do not infer that data is bad or only generalization is responsible; report optimization remains unresolved at this endpoint."
+  },
+  "untouched": [
+    "Original E dataset",
+    "All earlier packages/checkpoints",
+    "Consumed13 independent-test records",
+    "Reserved25 targets/images"
+  ],
+  "storage": {
+    "new_token_cache": false,
+    "source_data_export": false,
+    "cluster_new_budget_gib": 5,
+    "minimum_planning_headroom_gib": 15,
+    "project_planning_limit_gib": 200,
+    "optimizer_checkpoints": "Save model+Adam+RNG at8192 and16170, each<2GiB, cluster only. Final model<1GiB; do not download PT/cache."
+  },
+  "resource_gate": {
+    "peak_reserved_gib": 12,
+    "estimated_formal_seconds": 12600
+  },
+  "local_actual_project_model_executed": false,
+  "local_gpu_executed": false,
+  "original_8192_experiment_changed": false,
+  "control_means": {
+    "405_dev": {
+      "window_weighted": {
+        "path_position_cm": 6.808207638142424,
+        "path_rotation_deg": 15.138890773585532,
+        "endpoint_position_cm": 8.221684348444297,
+        "endpoint_rotation_deg": 19.032169751852795
+      },
+      "episode_equal": {
+        "path_position_cm": 6.449931664438651,
+        "path_rotation_deg": 15.213292698600346,
+        "endpoint_position_cm": 7.798293218806444,
+        "endpoint_rotation_deg": 19.043426721691493
+      }
+    },
+    "806_dev": {
+      "window_weighted": {
+        "path_position_cm": 6.874325771707133,
+        "path_rotation_deg": 14.503946740949269,
+        "endpoint_position_cm": 8.07685632349614,
+        "endpoint_rotation_deg": 17.96647207652192
+      },
+      "episode_equal": {
+        "path_position_cm": 6.689548734832817,
+        "path_rotation_deg": 15.588495857583407,
+        "endpoint_position_cm": 7.816545706411726,
+        "endpoint_rotation_deg": 19.192475283361425
+      }
+    },
+    "static_dev": {
+      "window_weighted": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102611,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428398
+      },
+      "episode_equal": {
+        "path_position_cm": 7.9601175966494155,
+        "path_rotation_deg": 15.066972166771842,
+        "endpoint_position_cm": 10.145676186549524,
+        "endpoint_rotation_deg": 20.215753076927157
+      }
+    }
+  }
+}

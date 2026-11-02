@@ -1,0 +1,230 @@
+[
+  {
+    "native_tick": 1,
+    "action8": [
+      -0.01607142947614193,
+      0.03214285895228386,
+      0.0,
+      4.336808689942018e-19,
+      1.3349239248727773e-17,
+      0.009642708115279675,
+      0.9999535083770752,
+      1.0
+    ],
+    "observation_vs_current_control_position_m": 0.0,
+    "observation_vs_current_control_orientation_rad": 0.0,
+    "pre_command_controller_cache_vs_current_position_m": 0.0,
+    "converted_native_action": [
+      -0.03214285895228375,
+      0.0642857179045677,
+      0.0,
+      -1.7347503600592876e-18,
+      4.998249474920822e-17,
+      0.03857143020297895,
+      -1.0
+    ],
+    "original_native_action": [
+      -0.03214285714285715,
+      0.0642857142857143,
+      -0.0,
+      0.0,
+      0.0,
+      0.038571428571428576,
+      -1.0
+    ],
+    "saturated": false,
+    "expected_controller_goal": {
+      "row": 0,
+      "position_m": [
+        -0.22109390285776628,
+        0.013986574224810169,
+        1.1660739459034577
+      ],
+      "quaternion_xyzw": [
+        0.9984664715821835,
+        0.02629621935791813,
+        -0.048419939654071355,
+        0.005359423252657218
+      ],
+      "controller_quaternion_xyzw": [
+        0.6874281778151663,
+        0.7246166478711452,
+        -0.03802775219925889,
+        -0.030448383148810966
+      ],
+      "recorded_reference_position_m": [
+        -0.21948676000062342,
+        0.010772288510524454,
+        1.1660739459034577
+      ],
+      "recorded_reference_quaternion_xyzw": [
+        0.9986736176618354,
+        0.016667075703831417,
+        -0.04846936787045733,
+        0.004892274720752367
+      ],
+      "recorded_reference_action8": [
+        -0.01607142947614193,
+        0.03214285895228386,
+        0.0,
+        1.3010426069826053e-18,
+        1.3349239248727773e-17,
+        0.009642708115279675,
+        0.9999535083770752,
+        1.0
+      ],
+      "open_positive": 1.0
+    },
+    "actual_controller_goal_position_m": [
+      -0.2210939029482376,
+      0.01398657440575284,
+      1.1660739459034577
+    ],
+    "actual_controller_goal_quaternion_xyzw": [
+      0.6874281778151663,
+      0.7246166478711452,
+      -0.0380277521992589,
+      -0.030448383148810976
+    ],
+    "controller_goal_position_error_m": 2.023000510565732e-10,
+    "controller_goal_orientation_error_rad": 3.538421318819785e-17,
+    "measured_position_m": [
+      -0.21982561990097035,
+      0.011281522866841602,
+      1.1661507723401319
+    ],
+    "expert_reached_position_error_m": 3.040730833535053e-05,
+    "native_goal": false,
+    "native_goal_components": [
+      {
+        "predicate": [
+          "close",
+          "wooden_cabinet_1_top_region"
+        ],
+        "value": false
+      },
+      {
+        "predicate": [
+          "on",
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_side"
+        ],
+        "value": false
+      }
+    ]
+  },
+  {
+    "native_tick": 2,
+    "action8": [
+      -0.009375072084367275,
+      0.036162786185741425,
+      -2.7561400273157233e-08,
+      7.52283284555233e-08,
+      0.0005357112386263907,
+      0.009374929592013359,
+      0.9999558925628662,
+      1.0
+    ],
+    "observation_vs_current_control_position_m": 6.052486197466411e-05,
+    "observation_vs_current_control_orientation_rad": 0.000380880068234095,
+    "pre_command_controller_cache_vs_current_position_m": 3.028250880339561e-05,
+    "converted_native_action": [
+      -0.01875014416873433,
+      0.07232557237148284,
+      -5.5122799658136046e-08,
+      3.0091774174700824e-07,
+      0.002142876486364597,
+      0.03750027017458067,
+      -1.0
+    ],
+    "original_native_action": [
+      -0.018750000000000003,
+      0.07232142857142856,
+      -0.0,
+      0.0,
+      0.002142857142857143,
+      0.0375,
+      -1.0
+    ],
+    "saturated": false,
+    "expected_controller_goal": {
+      "row": 1,
+      "position_m": [
+        -0.2207894148482819,
+        0.014952101173165634,
+        1.1661556445819272
+      ],
+      "quaternion_xyzw": [
+        0.9983767089086406,
+        0.028395645026549485,
+        -0.049079075540590524,
+        0.005373899548627118
+      ],
+      "controller_quaternion_xyzw": [
+        0.685880187894642,
+        0.7260376942014284,
+        -0.038504067941365745,
+        -0.030904226316970027
+      ],
+      "recorded_reference_position_m": [
+        -0.2198519148482819,
+        0.011336029744594205,
+        1.1661556445819272
+      ],
+      "recorded_reference_quaternion_xyzw": [
+        0.9986251892482862,
+        0.019031869120550878,
+        -0.0485924545055183,
+        0.004928764726760085
+      ],
+      "recorded_reference_action8": [
+        -0.00937500037252903,
+        0.03616071492433548,
+        0.0,
+        -2.710505431213761e-18,
+        0.0005357064073905349,
+        0.009374863468110561,
+        0.9999558925628662,
+        1.0
+      ],
+      "open_positive": 1.0
+    },
+    "actual_controller_goal_position_m": [
+      -0.22078941483272174,
+      0.014952101107100558,
+      1.1661556445819272
+    ],
+    "actual_controller_goal_quaternion_xyzw": [
+      0.685880188272632,
+      0.7260376938403958,
+      -0.03850406796883574,
+      -0.030904226375525406
+    ],
+    "controller_goal_position_error_m": 6.78727698308932e-11,
+    "controller_goal_orientation_error_rad": 1.0533835343518294e-09,
+    "measured_position_m": [
+      -0.22012484855678854,
+      0.012080821517172827,
+      1.1661756897286772
+    ],
+    "expert_reached_position_error_m": 3.6025852747656154e-05,
+    "native_goal": false,
+    "native_goal_components": [
+      {
+        "predicate": [
+          "close",
+          "wooden_cabinet_1_top_region"
+        ],
+        "value": false
+      },
+      {
+        "predicate": [
+          "on",
+          "akita_black_bowl_1",
+          "wooden_cabinet_1_top_side"
+        ],
+        "value": false
+      }
+    ]
+  }
+]

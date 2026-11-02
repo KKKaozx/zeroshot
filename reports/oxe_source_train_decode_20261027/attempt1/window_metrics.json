@@ -1,0 +1,1294 @@
+[
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-2c9db08a7dc786d381e0c3535849c534b356e296516843b3b47c278074972e48",
+    "episode_key": "bridge_data_v2-train.tfrecord-00045-of-01024::36",
+    "window_index": 8259,
+    "input_row": 8,
+    "valid_targets": 12,
+    "payload_sha256": "484f8786dca9d01c6e1b061b8ceff1e3108c564594c392c565c6bf30613832b4",
+    "sampling_seed": 1101,
+    "actual_training_presentations": 8,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3599778711795807,
+        "no_motion_position_normalized": 0.04350200295448303,
+        "model_position_recorded_units": 0.03599778711795807,
+        "no_motion_position_recorded_units": 0.004350200295448303,
+        "model_rotation_deg": 3.9744013408837677,
+        "no_motion_rotation_deg": 0.6985493934430763
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 12,
+        "model_position_normalized": 1.5380250215530396,
+        "no_motion_position_normalized": 0.743194580078125,
+        "model_position_recorded_units": 0.15380250215530397,
+        "no_motion_position_recorded_units": 0.0743194580078125,
+        "model_rotation_deg": 38.20317877403835,
+        "no_motion_rotation_deg": 11.87890150068913
+      },
+      "gripper": {
+        "valid_targets": 12,
+        "correct": 8,
+        "accuracy": 0.6666666666666666,
+        "actual_open_count": 2,
+        "predicted_open_count": 6,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 10,
+        "hold_known_command_accuracy": 0.8333333333333334
+      }
+    },
+    "instruction": "put spatula in pan"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-ca0f1a70f95d6474103629446501eacbdb064a6baaa8f172c070111504163e11",
+    "episode_key": "bridge_data_v2-train.tfrecord-00657-of-01024::32",
+    "window_index": 3367,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "336cf8684fe36193f39e440e8c6fd86b6e64419d704ec59cbf5dfc393893829f",
+    "sampling_seed": 1102,
+    "actual_training_presentations": 11,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.5894487500190735,
+        "no_motion_position_normalized": 0.4207927882671356,
+        "model_position_recorded_units": 0.05894487500190735,
+        "no_motion_position_recorded_units": 0.04207927882671356,
+        "model_rotation_deg": 6.736759684576636,
+        "no_motion_rotation_deg": 4.704185314084175
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.8965833187103271,
+        "no_motion_position_normalized": 1.3687376976013184,
+        "model_position_recorded_units": 0.18965833187103273,
+        "no_motion_position_recorded_units": 0.13687376976013185,
+        "model_rotation_deg": 20.377573643789745,
+        "no_motion_rotation_deg": 13.327494546187982
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 15,
+        "accuracy": 0.9375,
+        "actual_open_count": 10,
+        "predicted_open_count": 9,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 6,
+        "hold_known_command_accuracy": 0.375
+      }
+    },
+    "instruction": "Put the bowl near the two green items."
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-6bdd4e62b186c23d7d0705647ba498cde2197df45273019f776a67ab84ccfa95",
+    "episode_key": "bridge_data_v2-train.tfrecord-00510-of-01024::9",
+    "window_index": 7838,
+    "input_row": 20,
+    "valid_targets": 16,
+    "payload_sha256": "c1b8c9bbfcbb0d44317356b75811b6886a5ef9430b472692af7f4c31b211c981",
+    "sampling_seed": 1103,
+    "actual_training_presentations": 17,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.1560884714126587,
+        "no_motion_position_normalized": 0.09568822383880615,
+        "model_position_recorded_units": 0.01560884714126587,
+        "no_motion_position_recorded_units": 0.009568822383880616,
+        "model_rotation_deg": 1.5796891847199757,
+        "no_motion_rotation_deg": 0.6334375945874045
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.142721176147461,
+        "no_motion_position_normalized": 0.3815304636955261,
+        "model_position_recorded_units": 0.1142721176147461,
+        "no_motion_position_recorded_units": 0.038153046369552614,
+        "model_rotation_deg": 9.160060189912748,
+        "no_motion_rotation_deg": 9.533152499448434
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 11,
+        "accuracy": 0.6875,
+        "actual_open_count": 2,
+        "predicted_open_count": 7,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 2,
+        "hold_known_command_accuracy": 0.125
+      }
+    },
+    "instruction": "move the blue arch in the middle"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-8bf7a08772444a0ac5d64562589df4f9b8ffe8e9197593464218100a4b0cca10",
+    "episode_key": "bridge_data_v2-train.tfrecord-00529-of-01024::35",
+    "window_index": 2254,
+    "input_row": 20,
+    "valid_targets": 16,
+    "payload_sha256": "62ae478c535deb6797b4b7015bed00242574665bbe7eee13484d625e7dec1121",
+    "sampling_seed": 1104,
+    "actual_training_presentations": 13,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.49701356887817383,
+        "no_motion_position_normalized": 0.5227293372154236,
+        "model_position_recorded_units": 0.049701356887817384,
+        "no_motion_position_recorded_units": 0.05227293372154236,
+        "model_rotation_deg": 6.894168718951965,
+        "no_motion_rotation_deg": 7.637479410240266
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.341493844985962,
+        "no_motion_position_normalized": 2.21551513671875,
+        "model_position_recorded_units": 0.1341493844985962,
+        "no_motion_position_recorded_units": 0.221551513671875,
+        "model_rotation_deg": 19.977782484985685,
+        "no_motion_rotation_deg": 12.502236934959253
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "actual_open_count": 3,
+        "predicted_open_count": 12,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 13,
+        "hold_known_command_accuracy": 0.8125
+      }
+    },
+    "instruction": "Move the polimer cutter and place it on the yellow cloth."
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-34ded1f32fcc51da076b7180b1d478716fe87d6eb6736c3be1abc393bf0593a7",
+    "episode_key": "bridge_data_v2-train.tfrecord-00602-of-01024::15",
+    "window_index": 7278,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "04b08e7f0204e4af7401f7b79db07b02b9f9c4727ab0477c05781a1cdc68a5ee",
+    "sampling_seed": 1105,
+    "actual_training_presentations": 7,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.36234331130981445,
+        "no_motion_position_normalized": 0.05365334823727608,
+        "model_position_recorded_units": 0.03623433113098145,
+        "no_motion_position_recorded_units": 0.005365334823727608,
+        "model_rotation_deg": 8.04901762678479,
+        "no_motion_rotation_deg": 2.1156881339005995
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 2.1870412826538086,
+        "no_motion_position_normalized": 1.5437657833099365,
+        "model_position_recorded_units": 0.21870412826538088,
+        "no_motion_position_recorded_units": 0.15437657833099366,
+        "model_rotation_deg": 25.542134249287905,
+        "no_motion_rotation_deg": 9.796693273969547
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "actual_open_count": 3,
+        "predicted_open_count": 6,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 13,
+        "hold_known_command_accuracy": 0.8125
+      }
+    },
+    "instruction": "move the yellow knef to rigth of the blue cloth"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-33af6a19f3ccb1a749084dbefcf7cb4edc87cc244d32d3ec4d8dd9651a23c1e1",
+    "episode_key": "bridge_data_v2-train.tfrecord-00602-of-01024::3",
+    "window_index": 7143,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "e7ddee3f84c6da59af8e25da40ab9862989cb5b8bc3cd966fa8227bb742274d4",
+    "sampling_seed": 1106,
+    "actual_training_presentations": 13,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.7140013575553894,
+        "no_motion_position_normalized": 0.4201715886592865,
+        "model_position_recorded_units": 0.07140013575553894,
+        "no_motion_position_recorded_units": 0.042017158865928654,
+        "model_rotation_deg": 8.721738627774473,
+        "no_motion_rotation_deg": 8.780888943034217
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 2.0568666458129883,
+        "no_motion_position_normalized": 1.2993829250335693,
+        "model_position_recorded_units": 0.20568666458129883,
+        "no_motion_position_recorded_units": 0.12993829250335695,
+        "model_rotation_deg": 24.503858426040154,
+        "no_motion_rotation_deg": 19.94374659832905
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 12,
+        "accuracy": 0.75,
+        "actual_open_count": 9,
+        "predicted_open_count": 13,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 7,
+        "hold_known_command_accuracy": 0.4375
+      }
+    },
+    "instruction": "place the utensil near to straberry"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-84da00549d07378badf39f043bba8c634d62ffb41393066a7e24fce95145b2e2",
+    "episode_key": "bridge_data_v2-train.tfrecord-00045-of-01024::40",
+    "window_index": 8288,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "f30e638f6855cd038a38d59401feb69e2527eb66eedd7288a17808fe16417f7a",
+    "sampling_seed": 1107,
+    "actual_training_presentations": 14,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3131999373435974,
+        "no_motion_position_normalized": 0.14417827129364014,
+        "model_position_recorded_units": 0.031319993734359744,
+        "no_motion_position_recorded_units": 0.014417827129364014,
+        "model_rotation_deg": 3.856724391824409,
+        "no_motion_rotation_deg": 0.7797592129964256
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.1776115894317627,
+        "no_motion_position_normalized": 0.6740593910217285,
+        "model_position_recorded_units": 0.11776115894317628,
+        "no_motion_position_recorded_units": 0.06740593910217285,
+        "model_rotation_deg": 16.045065749034713,
+        "no_motion_rotation_deg": 8.7117240391281
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 15,
+        "accuracy": 0.9375,
+        "actual_open_count": 6,
+        "predicted_open_count": 7,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 6,
+        "hold_known_command_accuracy": 0.375
+      }
+    },
+    "instruction": "fold the cloth from top left to the bottom right"
+  },
+  {
+    "source": "Bridge",
+    "group_id": "bounded-origin-content-b91702dd3c03d50f038c9951dccb5d10bf4ab56aa9eb57927a53d999fd9db01b",
+    "episode_key": "bridge_data_v2-train.tfrecord-00746-of-01024::10",
+    "window_index": 815,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "826501b336c1cc0656390bcc16e24935ab6fea08c2ec444056cb299b5f18d86f",
+    "sampling_seed": 1108,
+    "actual_training_presentations": 18,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.5657047033309937,
+        "no_motion_position_normalized": 0.2783491015434265,
+        "model_position_recorded_units": 0.056570470333099365,
+        "no_motion_position_recorded_units": 0.027834910154342654,
+        "model_rotation_deg": 9.259831526211705,
+        "no_motion_rotation_deg": 5.917613902524368
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.9224271774291992,
+        "no_motion_position_normalized": 1.2289268970489502,
+        "model_position_recorded_units": 0.19224271774291993,
+        "no_motion_position_recorded_units": 0.12289268970489503,
+        "model_rotation_deg": 16.437849899785267,
+        "no_motion_rotation_deg": 16.098205934863024
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "actual_open_count": 8,
+        "predicted_open_count": 11,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 8,
+        "hold_known_command_accuracy": 0.5
+      }
+    },
+    "instruction": "Place the bowl on the yellow towel"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-3e59abea8a0695fd1a071b94486567a920abe16f084ea522fddb3e6458503375",
+    "episode_key": "language_table-train.tfrecord-00269-of-01024::80",
+    "window_index": 12980,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "c68740bf69316b99276ab555a3f88c2b337983464c802800fed12172328c8bbb",
+    "sampling_seed": 1109,
+    "actual_training_presentations": 16,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3878180980682373,
+        "no_motion_position_normalized": 0.4858686625957489,
+        "model_position_recorded_units": 0.03878180980682373,
+        "no_motion_position_recorded_units": 0.048586866259574896
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 0.5903179049491882,
+        "no_motion_position_normalized": 1.033408284187317,
+        "model_position_recorded_units": 0.05903179049491883,
+        "no_motion_position_recorded_units": 0.1033408284187317
+      }
+    },
+    "instruction": "push the red circle towards the red star"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-a627b5bbcf01b1f30157d0368255d48dd7a5f2b32c087d55c2c24b0c20c029fd",
+    "episode_key": "language_table-train.tfrecord-00630-of-01024::319",
+    "window_index": 22162,
+    "input_row": 4,
+    "valid_targets": 12,
+    "payload_sha256": "33d54c16a34c6cd60f044cb01980e8ba7726ec1a1a4056d32d3df31b26d5cb89",
+    "sampling_seed": 1110,
+    "actual_training_presentations": 6,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 1.072921633720398,
+        "no_motion_position_normalized": 1.330301284790039,
+        "model_position_recorded_units": 0.1072921633720398,
+        "no_motion_position_recorded_units": 0.13303012847900392
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 12,
+        "model_position_normalized": 1.5107923746109009,
+        "no_motion_position_normalized": 1.358102798461914,
+        "model_position_recorded_units": 0.1510792374610901,
+        "no_motion_position_recorded_units": 0.1358102798461914
+      }
+    },
+    "instruction": "push the blue cube to the blue triangle"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-8381100e5f5ed00b3aa49d02d844ff7f1a1960feefaf5320126273a5dba0981d",
+    "episode_key": "language_table-train.tfrecord-00626-of-01024::98",
+    "window_index": 10616,
+    "input_row": 12,
+    "valid_targets": 14,
+    "payload_sha256": "d5b890cb2f5a6c6f15fc6c12bdf9c9496cc647559960715fcc106005575f5fd1",
+    "sampling_seed": 1111,
+    "actual_training_presentations": 10,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3128923773765564,
+        "no_motion_position_normalized": 0.5393540859222412,
+        "model_position_recorded_units": 0.03128923773765564,
+        "no_motion_position_recorded_units": 0.05393540859222412
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 14,
+        "model_position_normalized": 0.4992826581001282,
+        "no_motion_position_normalized": 1.3715046644210815,
+        "model_position_recorded_units": 0.04992826581001282,
+        "no_motion_position_recorded_units": 0.13715046644210815
+      }
+    },
+    "instruction": "group up the yellow blocks and the red blocks"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-dd8585cb1005e5873c2d8ffa77302658f149449f1696068ce045d3499fc5d035",
+    "episode_key": "language_table-train.tfrecord-00204-of-01024::384",
+    "window_index": 18717,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "f0ac6ff47b0955333c2a1b92944f1ec5c7ff28d387c060522c917b1a32cf9368",
+    "sampling_seed": 1112,
+    "actual_training_presentations": 14,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.33277973532676697,
+        "no_motion_position_normalized": 0.2007668912410736,
+        "model_position_recorded_units": 0.0332779735326767,
+        "no_motion_position_recorded_units": 0.02007668912410736
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 0.3655434548854828,
+        "no_motion_position_normalized": 0.5801581144332886,
+        "model_position_recorded_units": 0.03655434548854828,
+        "no_motion_position_recorded_units": 0.05801581144332886
+      }
+    },
+    "instruction": "point your arm towards the red star"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-57c16d31885a9b9022acfa4f5a38e5cc5713d812d84aa82256025c02881f234a",
+    "episode_key": "language_table-train.tfrecord-00204-of-01024::168",
+    "window_index": 18138,
+    "input_row": 8,
+    "valid_targets": 14,
+    "payload_sha256": "a9a7206022231a71b3ab13b536f551aed395cdd03e11382c436af5bcf15bc56d",
+    "sampling_seed": 1113,
+    "actual_training_presentations": 10,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.25073376297950745,
+        "no_motion_position_normalized": 0.01110814604908228,
+        "model_position_recorded_units": 0.025073376297950745,
+        "no_motion_position_recorded_units": 0.001110814604908228
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 14,
+        "model_position_normalized": 2.270883321762085,
+        "no_motion_position_normalized": 0.7973942160606384,
+        "model_position_recorded_units": 0.2270883321762085,
+        "no_motion_position_recorded_units": 0.07973942160606384
+      }
+    },
+    "instruction": "keep arm in between blue blocks"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-4697f8d57893e5e60073f91fd9feb77c52e2dd1ec968d4222f692b2195f5e80d",
+    "episode_key": "language_table-train.tfrecord-00045-of-01024::112",
+    "window_index": 16776,
+    "input_row": 8,
+    "valid_targets": 13,
+    "payload_sha256": "c6814ae4de3eb71987e2dfcacebb67c133c7388b83c6e240de3669c5a19d1d52",
+    "sampling_seed": 1114,
+    "actual_training_presentations": 11,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.5403124690055847,
+        "no_motion_position_normalized": 0.41523879766464233,
+        "model_position_recorded_units": 0.05403124690055847,
+        "no_motion_position_recorded_units": 0.04152387976646424
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 13,
+        "model_position_normalized": 3.2191872596740723,
+        "no_motion_position_normalized": 1.3251795768737793,
+        "model_position_recorded_units": 0.3219187259674072,
+        "no_motion_position_recorded_units": 0.13251795768737792
+      }
+    },
+    "instruction": "place the red star to the right of blue cube"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-4aa7793ea5f14116b78fad315ef2c87dcff5a91fdda95806dd8f365e27864448",
+    "episode_key": "language_table-train.tfrecord-00630-of-01024::25",
+    "window_index": 21330,
+    "input_row": 4,
+    "valid_targets": 12,
+    "payload_sha256": "ad48afa7dc19a9f2e077a524c77984f242928c13b4d3745969161be800c16ecc",
+    "sampling_seed": 1115,
+    "actual_training_presentations": 9,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.44915711879730225,
+        "no_motion_position_normalized": 0.455552339553833,
+        "model_position_recorded_units": 0.04491571187973023,
+        "no_motion_position_recorded_units": 0.0455552339553833
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 12,
+        "model_position_normalized": 1.869493842124939,
+        "no_motion_position_normalized": 0.6661738157272339,
+        "model_position_recorded_units": 0.1869493842124939,
+        "no_motion_position_recorded_units": 0.06661738157272339
+      }
+    },
+    "instruction": "slide the blue triangle to the blue cube"
+  },
+  {
+    "source": "Language Table",
+    "group_id": "bounded-origin-content-520efa5cd9eb662efcc4e0a3047f5eea2de1157e6e5b93badfbaec52b3e40bd5",
+    "episode_key": "language_table-train.tfrecord-00805-of-01024::287",
+    "window_index": 19676,
+    "input_row": 4,
+    "valid_targets": 7,
+    "payload_sha256": "ebf37794d21445c57a204e67ee1684f90dac223de5da26ae1364c88c93b8f225",
+    "sampling_seed": 1116,
+    "actual_training_presentations": 6,
+    "metrics": {
+      "first": {
+        "position_dimensions": 2,
+        "valid_targets": 1,
+        "model_position_normalized": 0.2341744601726532,
+        "no_motion_position_normalized": 0.2720358669757843,
+        "model_position_recorded_units": 0.023417446017265323,
+        "no_motion_position_recorded_units": 0.02720358669757843
+      },
+      "valid_path": {
+        "position_dimensions": 2,
+        "valid_targets": 7,
+        "model_position_normalized": 1.3049265146255493,
+        "no_motion_position_normalized": 1.249345064163208,
+        "model_position_recorded_units": 0.13049265146255493,
+        "no_motion_position_recorded_units": 0.12493450641632081
+      }
+    },
+    "instruction": "move the blue cube towards the center"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-6ada858b6ddafe6f3d083503eb2d67230314a546793c6217f683f910e58211ca",
+    "episode_key": "bc_z-train.tfrecord-00076-of-00512::60",
+    "window_index": 32863,
+    "input_row": 100,
+    "valid_targets": 16,
+    "payload_sha256": "7795ddb482c2e4d645434002159ac833b0577e5012952062b17ba432a52f72d0",
+    "sampling_seed": 1117,
+    "actual_training_presentations": 2,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.09207993000745773,
+        "no_motion_position_normalized": 0.03251422196626663,
+        "model_position_recorded_units": 0.009207993000745774,
+        "no_motion_position_recorded_units": 0.003251422196626663,
+        "model_rotation_deg": 1.295559084114884,
+        "no_motion_rotation_deg": 0.3607198456745551
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.2649368047714233,
+        "no_motion_position_normalized": 0.20050324499607086,
+        "model_position_recorded_units": 0.12649368047714235,
+        "no_motion_position_recorded_units": 0.020050324499607086,
+        "model_rotation_deg": 6.7605659606582424,
+        "no_motion_rotation_deg": 2.1970857192647033
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place the pepper on the white sponge"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-f55170de4f04fa1cfa24b1a21222ce9908dcf224b5cdac934770ee60305d9d40",
+    "episode_key": "bc_z-train.tfrecord-00389-of-00512::60",
+    "window_index": 24187,
+    "input_row": 32,
+    "valid_targets": 16,
+    "payload_sha256": "40eb07485299867fbf5659f1082900afd4a4b05c8534a8742c7db4e2a2613e0e",
+    "sampling_seed": 1118,
+    "actual_training_presentations": 2,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3805524408817291,
+        "no_motion_position_normalized": 0.1370713859796524,
+        "model_position_recorded_units": 0.038055244088172915,
+        "no_motion_position_recorded_units": 0.01370713859796524,
+        "model_rotation_deg": 5.38930567835728,
+        "no_motion_rotation_deg": 1.8985370482494235
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 2.8917698860168457,
+        "no_motion_position_normalized": 1.0626879930496216,
+        "model_position_recorded_units": 0.28917698860168456,
+        "no_motion_position_recorded_units": 0.10626879930496216,
+        "model_rotation_deg": 14.188637934860019,
+        "no_motion_rotation_deg": 4.574803925468668
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "knock the eraser over"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-cd20940736104dd78395c8849a1be7f2312751967e4501a63728c9928446b6a7",
+    "episode_key": "bc_z-train.tfrecord-00489-of-00512::54",
+    "window_index": 87444,
+    "input_row": 52,
+    "valid_targets": 16,
+    "payload_sha256": "7779a5418c7f7e47e441b69390f43fd412681ad971dc6c1cdb9e0f35b044c2e0",
+    "sampling_seed": 1119,
+    "actual_training_presentations": 1,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.07339596003293991,
+        "no_motion_position_normalized": 0.2182508409023285,
+        "model_position_recorded_units": 0.007339596003293991,
+        "no_motion_position_recorded_units": 0.02182508409023285,
+        "model_rotation_deg": 4.814833760874727,
+        "no_motion_rotation_deg": 5.300007673243414
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.9962345361709595,
+        "no_motion_position_normalized": 1.460517406463623,
+        "model_position_recorded_units": 0.09962345361709596,
+        "no_motion_position_recorded_units": 0.1460517406463623,
+        "model_rotation_deg": 13.12552653584423,
+        "no_motion_rotation_deg": 16.665457672976057
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 14,
+        "accuracy": 0.875,
+        "actual_open_count": 14,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 14,
+        "hold_known_command_accuracy": 0.875
+      }
+    },
+    "instruction": "place the bottle in the ceramic bowl"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-33e4f36a78b5052f9d03269889df86963e24cc8a248ebb8a0b905660b7b2c167",
+    "episode_key": "bc_z-train.tfrecord-00442-of-00512::47",
+    "window_index": 71460,
+    "input_row": 16,
+    "valid_targets": 14,
+    "payload_sha256": "1c87e5c44b10df22fc904e6141cc417d3fa615689cf8b9664ad5d6e5128ab7ce",
+    "sampling_seed": 1120,
+    "actual_training_presentations": 1,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.0757729783654213,
+        "no_motion_position_normalized": 0.020467126742005348,
+        "model_position_recorded_units": 0.00757729783654213,
+        "no_motion_position_recorded_units": 0.002046712674200535,
+        "model_rotation_deg": 0.9717279499398083,
+        "no_motion_rotation_deg": 0.5597338255668785
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 14,
+        "model_position_normalized": 0.23663367331027985,
+        "no_motion_position_normalized": 0.12795528769493103,
+        "model_position_recorded_units": 0.023663367331027987,
+        "no_motion_position_recorded_units": 0.012795528769493103,
+        "model_rotation_deg": 5.213339235833828,
+        "no_motion_rotation_deg": 2.8024895970148243
+      },
+      "gripper": {
+        "valid_targets": 14,
+        "correct": 14,
+        "accuracy": 1.0,
+        "actual_open_count": 14,
+        "predicted_open_count": 14,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 14,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place towel in plastic cup"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-7cb889d5aee79fcf99e1f8e1b6d6421ed6439dc96a9cc4321b61bd5a6a58bbc4",
+    "episode_key": "bc_z-train.tfrecord-00047-of-00512::40",
+    "window_index": 37850,
+    "input_row": 100,
+    "valid_targets": 16,
+    "payload_sha256": "62caff59e55c5c65f7c023172ad793a7e58f23e54f4123228dbf7fb71d44ea69",
+    "sampling_seed": 1121,
+    "actual_training_presentations": 1,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.16924920678138733,
+        "no_motion_position_normalized": 0.07058205455541611,
+        "model_position_recorded_units": 0.016924920678138732,
+        "no_motion_position_recorded_units": 0.007058205455541611,
+        "model_rotation_deg": 1.6869629181751173,
+        "no_motion_rotation_deg": 3.382665509399634
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.417367935180664,
+        "no_motion_position_normalized": 0.6403387188911438,
+        "model_position_recorded_units": 0.14173679351806642,
+        "no_motion_position_recorded_units": 0.06403387188911439,
+        "model_rotation_deg": 10.048119719516272,
+        "no_motion_rotation_deg": 9.227319042522952
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "actual_open_count": 13,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 13,
+        "hold_known_command_accuracy": 0.8125
+      }
+    },
+    "instruction": "place the pepper in the ceramic cup"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-1ff91c0281fc459422a644ccc65ca79e9874000679c9f65437167d2dbe36dc1f",
+    "episode_key": "bc_z-train.tfrecord-00241-of-00512::2",
+    "window_index": 113515,
+    "input_row": 56,
+    "valid_targets": 16,
+    "payload_sha256": "1b7cb316d410f2457288ff45cad3852a34fd47e9a36ec077974bb984a7793df8",
+    "sampling_seed": 1122,
+    "actual_training_presentations": 3,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.18071219325065613,
+        "no_motion_position_normalized": 0.09523291885852814,
+        "model_position_recorded_units": 0.018071219325065613,
+        "no_motion_position_recorded_units": 0.009523291885852814,
+        "model_rotation_deg": 5.598246208584532,
+        "no_motion_rotation_deg": 0.7471053678601866
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.38940465450286865,
+        "no_motion_position_normalized": 0.5634929537773132,
+        "model_position_recorded_units": 0.03894046545028687,
+        "no_motion_position_recorded_units": 0.056349295377731326,
+        "model_rotation_deg": 20.422753632950055,
+        "no_motion_rotation_deg": 5.39486462968283
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 7,
+        "accuracy": 0.4375,
+        "actual_open_count": 0,
+        "predicted_open_count": 9,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place fork in purple bowl"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-7ae1de3333bc23a7c9bcae9f421d0c4215ebc0c1ccfc176cfcea08f05821e9da",
+    "episode_key": "bc_z-train.tfrecord-00047-of-00512::10",
+    "window_index": 36983,
+    "input_row": 108,
+    "valid_targets": 16,
+    "payload_sha256": "8f878c0d9b34d67d717ed7587ebb6663ea742d52aa85382cfb52697ab3e6ff37",
+    "sampling_seed": 1123,
+    "actual_training_presentations": 2,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.018744569271802902,
+        "no_motion_position_normalized": 0.04789064824581146,
+        "model_position_recorded_units": 0.0018744569271802903,
+        "no_motion_position_recorded_units": 0.004789064824581146,
+        "model_rotation_deg": 0.6749323572780779,
+        "no_motion_rotation_deg": 0.8269944329717103
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.3725746273994446,
+        "no_motion_position_normalized": 0.19697308540344238,
+        "model_position_recorded_units": 0.03725746273994446,
+        "no_motion_position_recorded_units": 0.01969730854034424,
+        "model_rotation_deg": 11.46996920942343,
+        "no_motion_rotation_deg": 3.219409028013022
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place eraser in tray"
+  },
+  {
+    "source": "BC-Z",
+    "group_id": "bounded-origin-content-915cfa5d0aa6593b538c3abe6c38b945f0b1db7004f469b677f9e5f53ba190cd",
+    "episode_key": "bc_z-train.tfrecord-00429-of-00512::52",
+    "window_index": 44499,
+    "input_row": 52,
+    "valid_targets": 16,
+    "payload_sha256": "51c0410b4804604173a8585c62a5bc72aeec4ec13702bf3f16593764a9f5b439",
+    "sampling_seed": 1124,
+    "actual_training_presentations": 4,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.17072349786758423,
+        "no_motion_position_normalized": 0.14415794610977173,
+        "model_position_recorded_units": 0.017072349786758423,
+        "no_motion_position_recorded_units": 0.014415794610977174,
+        "model_rotation_deg": 1.910496860809886,
+        "no_motion_rotation_deg": 1.782121013384441
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.6238836050033569,
+        "no_motion_position_normalized": 0.5218901038169861,
+        "model_position_recorded_units": 0.06238836050033569,
+        "no_motion_position_recorded_units": 0.05218901038169861,
+        "model_rotation_deg": 10.358267561023395,
+        "no_motion_rotation_deg": 8.998432807763976
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "pick up the ceramic cup"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-d60261779a92564a2858edc324c1cc2cfa6be4fb428edd44269bcaf646dac458",
+    "episode_key": "fractal20220817_data-train.tfrecord-00743-of-01024::16",
+    "window_index": 125139,
+    "input_row": 20,
+    "valid_targets": 16,
+    "payload_sha256": "b1d994f8c74f52df5288a8370b4bfcbb7fbbbd9ef8a67ab2d8f25f7680248827",
+    "sampling_seed": 1125,
+    "actual_training_presentations": 5,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.34290727972984314,
+        "no_motion_position_normalized": 0.29123589396476746,
+        "model_position_recorded_units": 0.03429072797298432,
+        "no_motion_position_recorded_units": 0.029123589396476746,
+        "model_rotation_deg": 4.865111539356879,
+        "no_motion_rotation_deg": 4.371709272543515
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 2.0731794834136963,
+        "no_motion_position_normalized": 1.3004283905029297,
+        "model_position_recorded_units": 0.20731794834136963,
+        "no_motion_position_recorded_units": 0.13004283905029299,
+        "model_rotation_deg": 12.949725633136747,
+        "no_motion_rotation_deg": 7.545733665271548
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 10,
+        "accuracy": 0.625,
+        "actual_open_count": 0,
+        "predicted_open_count": 6,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "place green can into top drawer"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-ecae5d0e6ceafe848dd2c8e0fc41b2aed3e8cc85777001633f4159306bf460b8",
+    "episode_key": "fractal20220817_data-train.tfrecord-00037-of-01024::3",
+    "window_index": 122833,
+    "input_row": 16,
+    "valid_targets": 16,
+    "payload_sha256": "00ae13b68537f36bb45b941d3771efbd28ff4f51f6a8ad3c98f3660f9650d313",
+    "sampling_seed": 1126,
+    "actual_training_presentations": 6,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.0256696455180645,
+        "no_motion_position_normalized": 0.0002375131007283926,
+        "model_position_recorded_units": 0.00256696455180645,
+        "no_motion_position_recorded_units": 2.375131007283926e-05,
+        "model_rotation_deg": 0.5387920225593664,
+        "no_motion_rotation_deg": 0.005698818792299543
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.7188036441802979,
+        "no_motion_position_normalized": 1.9615931510925293,
+        "model_position_recorded_units": 0.17188036441802979,
+        "no_motion_position_recorded_units": 0.19615931510925294,
+        "model_rotation_deg": 28.722224849419366,
+        "no_motion_rotation_deg": 21.606864053522134
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 15,
+        "accuracy": 0.9375,
+        "actual_open_count": 1,
+        "predicted_open_count": 0,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 15,
+        "hold_known_command_accuracy": 0.9375
+      }
+    },
+    "instruction": "place water bottle into middle drawer"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-77a5a9b64ce986b277c428944523cf2abdfb05a743dca122b2784d42c1ef797b",
+    "episode_key": "fractal20220817_data-train.tfrecord-00374-of-01024::80",
+    "window_index": 130187,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "23f617a946dec890a9b06d73ef0ef42f6c924754e7a59b4827d592afb49610af",
+    "sampling_seed": 1127,
+    "actual_training_presentations": 7,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.3174505829811096,
+        "no_motion_position_normalized": 0.3382819890975952,
+        "model_position_recorded_units": 0.031745058298110966,
+        "no_motion_position_recorded_units": 0.03382819890975952,
+        "model_rotation_deg": 1.4902573650732436,
+        "no_motion_rotation_deg": 1.1252321723336909
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.7776273488998413,
+        "no_motion_position_normalized": 1.2806737422943115,
+        "model_position_recorded_units": 0.17776273488998415,
+        "no_motion_position_recorded_units": 0.12806737422943115,
+        "model_rotation_deg": 23.844972460269602,
+        "no_motion_rotation_deg": 11.27259913580453
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 15,
+        "accuracy": 0.9375,
+        "actual_open_count": 5,
+        "predicted_open_count": 6,
+        "hold_baseline_available": false
+      }
+    },
+    "instruction": "pick brown chip bag"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-902976861a4dc25ae55cb54e4962686c7a89929cf9ba068160c37c8da75cc5b9",
+    "episode_key": "fractal20220817_data-train.tfrecord-00037-of-01024::86",
+    "window_index": 123551,
+    "input_row": 20,
+    "valid_targets": 16,
+    "payload_sha256": "46f8f75b3a353e7a45f18a2d68a2cdc8baaf073c1450bf09947b532f34476577",
+    "sampling_seed": 1128,
+    "actual_training_presentations": 4,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.13171234726905823,
+        "no_motion_position_normalized": 0.21602439880371094,
+        "model_position_recorded_units": 0.013171234726905824,
+        "no_motion_position_recorded_units": 0.021602439880371097,
+        "model_rotation_deg": 1.6561959267063242,
+        "no_motion_rotation_deg": 1.1227559089767036
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.808626413345337,
+        "no_motion_position_normalized": 0.8082332611083984,
+        "model_position_recorded_units": 0.1808626413345337,
+        "no_motion_position_recorded_units": 0.08082332611083985,
+        "model_rotation_deg": 11.385027356391532,
+        "no_motion_rotation_deg": 2.8427025750451804
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 16,
+        "predicted_open_count": 16,
+        "hold_baseline_available": false
+      }
+    },
+    "instruction": "open top drawer"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-3011fc33bbbe80a8b5bf8ad6723b8bfde28b04361ca65fbbcdfef39959df050a",
+    "episode_key": "fractal20220817_data-train.tfrecord-00695-of-01024::78",
+    "window_index": 128647,
+    "input_row": 8,
+    "valid_targets": 16,
+    "payload_sha256": "0493e664541ea3b394443ddb0b09a35363c804041c34e5bff1c0d19c3fcecfd6",
+    "sampling_seed": 1129,
+    "actual_training_presentations": 3,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.05291571468114853,
+        "no_motion_position_normalized": 0.054594941437244415,
+        "model_position_recorded_units": 0.005291571468114853,
+        "no_motion_position_recorded_units": 0.005459494143724442,
+        "model_rotation_deg": 2.444787498504527,
+        "no_motion_rotation_deg": 1.5489265410365003
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.4780497550964355,
+        "no_motion_position_normalized": 1.2331161499023438,
+        "model_position_recorded_units": 0.14780497550964355,
+        "no_motion_position_recorded_units": 0.12331161499023438,
+        "model_rotation_deg": 22.720133852241183,
+        "no_motion_rotation_deg": 17.692167226525847
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "actual_open_count": 6,
+        "predicted_open_count": 9,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 10,
+        "hold_known_command_accuracy": 0.625
+      }
+    },
+    "instruction": "move green rice chip bag near orange"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-3f1fc50a29fba1a3a7c20a87654f243104480f6f5fb1c95742ece6316503df83",
+    "episode_key": "fractal20220817_data-train.tfrecord-00121-of-01024::14",
+    "window_index": 133134,
+    "input_row": 28,
+    "valid_targets": 16,
+    "payload_sha256": "f3ed3dc8283792d2bc455013142ada4839b56da3fb2647c8de6b4f35debc793a",
+    "sampling_seed": 1130,
+    "actual_training_presentations": 1,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.4505559206008911,
+        "no_motion_position_normalized": 0.00013854220742359757,
+        "model_position_recorded_units": 0.04505559206008911,
+        "no_motion_position_recorded_units": 1.3854220742359758e-05,
+        "model_rotation_deg": 1.484239320702708,
+        "no_motion_rotation_deg": 0.0019131114796378213
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 2.172355890274048,
+        "no_motion_position_normalized": 0.588007926940918,
+        "model_position_recorded_units": 0.2172355890274048,
+        "no_motion_position_recorded_units": 0.0588007926940918,
+        "model_rotation_deg": 6.37738134754365,
+        "no_motion_rotation_deg": 2.47703872814756
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 2,
+        "accuracy": 0.125,
+        "actual_open_count": 0,
+        "predicted_open_count": 14,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "pick blue chip bag from top drawer and place on counter"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-80dbee44bf3a2c55e3588f6e905cf16df98ec5a7cfef5b8cd8aa2c7836d2eab6",
+    "episode_key": "fractal20220817_data-train.tfrecord-00295-of-01024::11",
+    "window_index": 136188,
+    "input_row": 32,
+    "valid_targets": 16,
+    "payload_sha256": "b9b4c6c64b6de17b78dba8df538372833f3d6e88b0caa8dcf020ff358e019e4f",
+    "sampling_seed": 1131,
+    "actual_training_presentations": 3,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.15690137445926666,
+        "no_motion_position_normalized": 0.007496121805161238,
+        "model_position_recorded_units": 0.015690137445926667,
+        "no_motion_position_recorded_units": 0.0007496121805161238,
+        "model_rotation_deg": 1.798645737324186,
+        "no_motion_rotation_deg": 0.06452549369059604
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 1.141775369644165,
+        "no_motion_position_normalized": 0.09382039308547974,
+        "model_position_recorded_units": 0.11417753696441652,
+        "no_motion_position_recorded_units": 0.009382039308547974,
+        "model_rotation_deg": 11.055651621553434,
+        "no_motion_rotation_deg": 0.8976337449988772
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 12,
+        "accuracy": 0.75,
+        "actual_open_count": 10,
+        "predicted_open_count": 14,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 10,
+        "hold_known_command_accuracy": 0.625
+      }
+    },
+    "instruction": "pick orange from middle drawer and place on counter"
+  },
+  {
+    "source": "Fractal",
+    "group_id": "bounded-origin-content-a34c71da9acd6287188c9e3b9226b4e88d9941e343d2268906cb96683e06199b",
+    "episode_key": "fractal20220817_data-train.tfrecord-00524-of-01024::66",
+    "window_index": 140547,
+    "input_row": 12,
+    "valid_targets": 16,
+    "payload_sha256": "a791803434c93ac9cdaf8418b2b5f8ad5f402186e3d6abb378f3e76fd21244ea",
+    "sampling_seed": 1132,
+    "actual_training_presentations": 9,
+    "metrics": {
+      "first": {
+        "position_dimensions": 3,
+        "valid_targets": 1,
+        "model_position_normalized": 0.12349883466959,
+        "no_motion_position_normalized": 0.08817684650421143,
+        "model_position_recorded_units": 0.012349883466959,
+        "no_motion_position_recorded_units": 0.008817684650421143,
+        "model_rotation_deg": 1.8954790323521842,
+        "no_motion_rotation_deg": 1.699879381673841
+      },
+      "valid_path": {
+        "position_dimensions": 3,
+        "valid_targets": 16,
+        "model_position_normalized": 0.6654081344604492,
+        "no_motion_position_normalized": 0.5587443113327026,
+        "model_position_recorded_units": 0.06654081344604493,
+        "no_motion_position_recorded_units": 0.055874431133270265,
+        "model_rotation_deg": 7.618710457959552,
+        "no_motion_rotation_deg": 7.377779357005472
+      },
+      "gripper": {
+        "valid_targets": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "actual_open_count": 0,
+        "predicted_open_count": 0,
+        "hold_baseline_available": true,
+        "hold_known_command_correct": 16,
+        "hold_known_command_accuracy": 1.0
+      }
+    },
+    "instruction": "pick apple from white bowl"
+  }
+]

@@ -1,0 +1,141 @@
+{
+  "stage": "offline_final_checkpoint",
+  "complete": true,
+  "checkpoint_sha256": "967abf071dfdefd8121652e5b974690bc3b9f9ede01a7d45d06a04b961481d7b",
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "groups": {
+    "train": {
+      "position_cm": 1.3390363454818726,
+      "rotation_deg": 0.22918231785297394,
+      "endpoint_position_cm": 1.9193916320800781,
+      "endpoint_rotation_deg": 0.3006748855113983,
+      "seed_position_cm": [
+        1.3164112567901611,
+        1.3483024835586548,
+        1.3523955345153809
+      ],
+      "seed_rotation_deg": [
+        0.22839245200157166,
+        0.23104900121688843,
+        0.2281056046485901
+      ],
+      "windows_all_three_seeds_pass": 88,
+      "windows": 128,
+      "static_position_cm": 3.9588160514831543,
+      "static_rotation_deg": 0.0,
+      "pose_fit_passed": false,
+      "gripper": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "seed_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed_balanced_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "open_targets": 864,
+        "closed_targets": 1184,
+        "always_open_accuracy": 0.421875,
+        "always_closed_accuracy": 0.578125,
+        "open_to_closed": {
+          "target_pairs": 16,
+          "seed_correct_pairs": [
+            16,
+            16,
+            16
+          ],
+          "seed_pair_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "closed_to_open": {
+          "target_pairs": 0,
+          "seed_correct_pairs": [
+            0,
+            0,
+            0
+          ],
+          "seed_pair_accuracy": null
+        },
+        "observed_state_and_events_fit_passed": true,
+        "release_evaluated": false
+      },
+      "episodes": 16
+    },
+    "development": {
+      "position_cm": 1.2546457052230835,
+      "rotation_deg": 0.2284449338912964,
+      "endpoint_position_cm": 1.7578762769699097,
+      "endpoint_rotation_deg": 0.33018752932548523,
+      "seed_position_cm": [
+        1.2575318813323975,
+        1.3551948070526123,
+        1.1512103080749512
+      ],
+      "seed_rotation_deg": [
+        0.22814610600471497,
+        0.22856763005256653,
+        0.22862105071544647
+      ],
+      "windows_all_three_seeds_pass": 23,
+      "windows": 32,
+      "static_position_cm": 3.7937278747558594,
+      "static_rotation_deg": 0.0,
+      "pose_fit_passed": false,
+      "gripper": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "seed_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seed_balanced_accuracy": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "open_targets": 216,
+        "closed_targets": 296,
+        "always_open_accuracy": 0.421875,
+        "always_closed_accuracy": 0.578125,
+        "open_to_closed": {
+          "target_pairs": 4,
+          "seed_correct_pairs": [
+            4,
+            4,
+            4
+          ],
+          "seed_pair_accuracy": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "closed_to_open": {
+          "target_pairs": 0,
+          "seed_correct_pairs": [
+            0,
+            0,
+            0
+          ],
+          "seed_pair_accuracy": null
+        },
+        "observed_state_and_events_fit_passed": true,
+        "release_evaluated": false
+      },
+      "episodes": 4
+    }
+  },
+  "test_used": false
+}

@@ -1,0 +1,53 @@
+{
+  "stage": "fixed_readout_independent_demonstration_generalization",
+  "entry_sha256": "81e2b471c242d8ddcc169db5f6006fc8b1a1c6de9f69223e056a7285b5682c32",
+  "source_sha256": {
+    "cluster_packages\\bridge_growth128_v1\\manifest.json": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+    "reports\\bridge_condition_input_audit_20261013\\raw_audit.json": "0502c0ad86c510d3473b7d64398828d77fbb442d3c0ebf052c19f1c8f343c83e",
+    "reports\\bridge_condition_input_audit_20261013\\observed_states.npz": "6267c4323cf89b44ba70c57f95cb2df74b95853cc8f0f23d487936c147c9c605",
+    "reports\\bridge_condition_input_audit_20261013\\input_windows.csv": "85d2e184b3f88bb2a6c645f30f9cc278704c9bfa8e5ab4edcdca265b637a525f",
+    "reports\\bridge_growth128_generalization_201663_20261013\\encoding.json": "681dea641a2f4d1019382a711853c7b2110fa400a2f360141233028b4f91a700",
+    "reports\\bridge_growth128_generalization_201663_20261013\\frozen_visual_descriptors.npz": "f63ce677100754abe628fb5f326877c58ba0b4a6d0acbd8a00ceea93f9cade2c",
+    "reports\\bridge-state-fit-202278\\real\\reduced_u8192_train.npz": "6219cfb072371f6efc6781c9dfed662a6a0659f34ee03a1ee774cc0a90ed37bf",
+    "reports\\bridge-state-fit-202278\\real\\reduced_u8192_development.npz": "b822c904ba1dca3fd71b002e685e5398af6788964610a885c56d5090ced1136f"
+  },
+  "reused_model": "202278 real-state final, initialization43, update8192",
+  "train_windows": 128,
+  "train_episodes": 64,
+  "development_windows": 40,
+  "development_episodes": 10,
+  "arms": {
+    "state_only": [
+      "xyz",
+      "rotation"
+    ],
+    "clip_state": [
+      "clip",
+      "xyz",
+      "rotation"
+    ],
+    "learned_condition_state": [
+      "context",
+      "xyz",
+      "rotation"
+    ]
+  },
+  "ridge_lambda": 1.0,
+  "lambda_selected_on_development": false,
+  "algorithm": "Per-task intercept; each feature block centered and normalized to training mean squared row norm1; equally weighted blocks; fixed ridge1.0; target XYZ in centimetres.",
+  "target": "All16 future tool-relative measured XYZ targets, same existing labels; no quaternion/gripper readout.",
+  "train_leave_episode_out": "All windows of each of64 train episodes excluded from readout fit and feature statistics. Supervised context encoder still saw these train labels; its auxiliary CV is not end-to-end validation.",
+  "baselines": [
+    "no_motion",
+    "training_task_mean",
+    "existing_final_ddpm100"
+  ],
+  "limits": [
+    "CLIP pooled descriptor is not full visual tokens.",
+    "Saved learned context includes Adapter, repeated-current/history and real-state projections; cannot uniquely blame Adapter.",
+    "Different readout architecture/objective; performance difference does not prove a unique defective module.",
+    "Development repeatedly used in prior diagnostics; no untouched final test.",
+    "No rotation/gripper/physical success or complete policy evaluation."
+  ],
+  "stopping": "One fixed CPU analysis. No lambda sweep, neural training, new encoding, downloads, checkpoints or simulations."
+}

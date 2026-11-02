@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-17",
+  "failure_job": "208005",
+  "diagnostic_job": "208034",
+  "original_protocol_sha256": "ca9cebf05244ea8193e5ff5450a080e21175135f1f57b75ae2ed8b7290641858",
+  "original_entry_sha256": "d74489a827a6ae497d53001a22b17d1f36ee5654249759c4f35c1de09df1714a",
+  "original_assets_sha256": "3e29115a54fc5d8af7450e62c55890c4eb5109271fe07fc715db2f46de70fde9",
+  "diagnostic_entry_sha256": "44bd4f364c8717b947b1f73036453e7d78d7cfc35edcfdc14c31603ad5eeff7d",
+  "diagnostic_contract_sha256": "dc54e243850142a7c0e39697ad96ca718edcc2db62af6ed502e3a8119499f1f5",
+  "unchanged_replay_guard": {
+    "context_atol": 0.0001,
+    "prediction_atol": 0.0001,
+    "rtol": 0,
+    "windows": "First4 of the already-scored40 development windows, same order and batch2; interface check only, not rescoring model selection."
+  },
+  "change": "Wrap original context body with inference_mode(False)+no_grad and original prefix parameter requires_grad flags. No changes to model values, source files, CLIP encoding, batch sizes, DDPM, RNG rules, metrics, test rows or tolerances.",
+  "evidence_required": "Independently check all16 saved diagnostic arrays against old reference arrays and recorded differences. Original-style cases exact0 on both models; failed-style cases reproduce >1e-4 prediction mismatch. Failed208005 report must confirm no new test scores.",
+  "actual_gpu_diagnostic_report_downloaded_locally": false,
+  "automatic_runtime_diagnostic_array_check_required": true,
+  "no_training": true,
+  "new_data_or_weights": false,
+  "original_package_modified": false,
+  "original_atomic_claim_preserved": true,
+  "limits": "Identifies and restores a joint context-execution mode difference in the NEW evaluation entry. Does not isolate individual backend kernel or explain historical generalization error. New13episode scores still unknown."
+}

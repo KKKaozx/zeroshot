@@ -1,0 +1,66 @@
+{
+  "terminal_receipt_checked": true,
+  "terminal_sha256": "7c98eb8eda82935a4be4d248fddc5cb849c86e62d6d8d022724d55ff02247360",
+  "visible_loss_composition_and_finiteness_checked": true,
+  "same_initial_forward_components_logged": true,
+  "program_complete": true,
+  "new_head_updates_reported": 4096,
+  "source_pose_updates_reported": 0,
+  "protected_source_files_unchanged_reported": true,
+  "selected_head": null,
+  "raw_results_downloaded": true,
+  "candidate_metrics_independently_recomputed": true,
+  "source_files_rehashed_locally": true,
+  "latest_adam_locally_inspected": false,
+  "program_elapsed_seconds": 22.58993073599413,
+  "peak_reserved_gib": 0.08984375,
+  "slurm_final_state_received": false,
+  "new_training_or_sampling": 0,
+  "automatic_following_action": false,
+  "functional_closeout_complete": true,
+  "next_action": "Return to mainline source-policy capability and common OXE-to-LIBERO action/state contract. No further gripper tuning, old experiment repeats, or automatic training/formal evaluation.",
+  "protected_state_and_selection_recomputed": true,
+  "small_archive_bytes": 2676136,
+  "small_archive_sha256": "ff2c209178e33962203b5dbe72b38afefa937077b3b424a5207805a27f171656",
+  "arm_metrics": {
+    "state_control": {
+      "train": {
+        "balanced_accuracy": 0.9246399846921876,
+        "opening_f1": 0.19295558958652373,
+        "closing_f1": 0.29294145988918335,
+        "accuracy": 0.9408133623819899
+      },
+      "development": {
+        "balanced_accuracy": 0.8785426048517443,
+        "opening_f1": 0.05263157894736842,
+        "closing_f1": 0.17886178861788618,
+        "accuracy": 0.8932291666666666
+      }
+    },
+    "event_aware": {
+      "train": {
+        "balanced_accuracy": 0.9113453259955272,
+        "opening_f1": 0.24944567627494457,
+        "closing_f1": 0.3628783759289469,
+        "accuracy": 0.9309980936819172
+      },
+      "development": {
+        "balanced_accuracy": 0.864363186067524,
+        "opening_f1": 0.0821917808219178,
+        "closing_f1": 0.20270270270270271,
+        "accuracy": 0.8807291666666667
+      }
+    }
+  },
+  "head_local_sha256": {
+    "state_control": "a0e2634632d7a9b532af0d1e851d0ebc470294fb73216045cbd36820f85717e7",
+    "event_aware": "7e21315f5de00d34e67cf58f93b3d7fe37184eaf3f0be313b069007dd21e14c2"
+  },
+  "cluster_full_head_adam_verification_received": true,
+  "local_source_pose_sha256": "730f06ecb417ff98d7e5270c114c2b062ce38347f0987c136b9d0359e8c4a6f5",
+  "local_original_gripper_sha256": "61bfbe190185892901fdc6c808a0531e2d0499b285ee01243753920a24c9117d",
+  "functional_performance_accepted": false,
+  "real_head_loading_verified": true,
+  "real_whole_policy_engineering_trial": "reports/dino_gripper_function_closeout_20261031/run1/report.json",
+  "new_training_or_sampling_scope": "This saved-array audit invocation only; the separately recorded whole-policy engineering trial made50 policy calls."
+}

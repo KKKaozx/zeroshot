@@ -1,0 +1,22 @@
+{
+  "script": "D:\\ntu_related\\dissertation\\Zero_shot\\scripts\\cluster\\repair_libero_parent_overlay_20261026.py",
+  "bytes": 7851,
+  "sha256": "d6546276a5cade5776e33c90573fcabee3cdff45695e37ddc9c4feb7e0bf18f1",
+  "python_syntax_passed": true,
+  "local_nested_venv_mechanism_checks_passed": true,
+  "evidence": "Headless OpenCV installation and preceding import/version checks completed; dependency collection then reported transformers metadata absent in nested eval environment",
+  "diagnosis": "Child venv created from a venv with --system-site-packages inherits base site packages, not automatically the parent venv overlay",
+  "repair": "Bind existing working parent overlay to child .pth only; child simulator pins retain precedence; fresh-process full model-entry import audit precedes evaluation resubmission",
+  "software_installs_required": false,
+  "training_environment_modified": false,
+  "training_retry_job_227920_modified": false,
+  "evaluation_code_or_protocol_modified": false,
+  "real_model_forwards": 0,
+  "real_physics_steps": 0,
+  "new_agent_submissions": 0,
+  "actual_cluster_overlay_verified": true,
+  "actual_evaluation_retry_submitted": true,
+  "evaluation_retry_job_id": 227964,
+  "actual_native_EGL_context_verified": false,
+  "actual_evaluation_episode_completed": false
+}

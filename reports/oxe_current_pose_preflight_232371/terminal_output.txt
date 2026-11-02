@@ -1,0 +1,61 @@
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+CURRENT_POSE_ZERO_ENDPOINT_REPLAY 1101 120/120 exact
+CURRENT_POSE_ZERO_ENDPOINT_REPLAY 1102 120/120 exact
+CURRENT_POSE_ZERO_ENDPOINT_REPLAY 1103 120/120 exact
+CURRENT_POSE_ENGINEERING_UPDATE mask_control {"update": 8193, "indices": [135922, 119084, 19142, 54213, 14391, 38211, 10187, 11415], "loss": 0.09311489760875702, "pose_loss": 0.04803570732474327, "gripper_loss": 0.1803167462348938, "gradient_norm": 0.3303057551383972, "pose_value_grad_norm": 0.0, "mask_grad_norm": 0.009706246666610241, "base_gradient_sha256_before_clipping": "c3fb670a5817024cdf87da1af1c4b40e8d7f84d791452f3ae64d1fb19b4c43bd", "measured_update_seconds": 0.9745820467360318}
+CURRENT_POSE_ENGINEERING_UPDATE mask_control {"update": 8194, "indices": [126232, 46803, 69332, 17378, 140659, 64287, 80579, 18379], "loss": 0.4048926830291748, "pose_loss": 0.21271327137947083, "gripper_loss": 0.7687175869941711, "gradient_norm": 1.2564852237701416, "pose_value_grad_norm": 0.0, "mask_grad_norm": 0.05438536778092384, "base_gradient_sha256_before_clipping": null, "measured_update_seconds": 0.36433875001966953}
+CURRENT_POSE_ENGINEERING_UPDATE mask_control {"update": 8194, "indices": [126232, 46803, 69332, 17378, 140659, 64287, 80579, 18379], "loss": 0.4048926830291748, "pose_loss": 0.21271327137947083, "gripper_loss": 0.7687175869941711, "gradient_norm": 1.2564852237701416, "pose_value_grad_norm": 0.0, "mask_grad_norm": 0.05438536778092384, "base_gradient_sha256_before_clipping": null, "measured_update_seconds": 0.3624597927555442}
+Loading weights: 100%|██████████| 439/439 [00:00<00:00, 1911.37it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 4298.34it/s]
+[transformers] CLIPTextModel LOAD REPORT from: /projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+CURRENT_POSE_ENGINEERING_UPDATE real_pose {"update": 8193, "indices": [135922, 119084, 19142, 54213, 14391, 38211, 10187, 11415], "loss": 0.09311489760875702, "pose_loss": 0.04803570732474327, "gripper_loss": 0.1803167462348938, "gradient_norm": 0.33038732409477234, "pose_value_grad_norm": 0.007341539952903986, "mask_grad_norm": 0.009706246666610241, "base_gradient_sha256_before_clipping": "c3fb670a5817024cdf87da1af1c4b40e8d7f84d791452f3ae64d1fb19b4c43bd", "measured_update_seconds": 1.2711092056706548}
+CURRENT_POSE_ENGINEERING_UPDATE real_pose {"update": 8194, "indices": [126232, 46803, 69332, 17378, 140659, 64287, 80579, 18379], "loss": 0.40476709604263306, "pose_loss": 0.2127411663532257, "gripper_loss": 0.7681037187576294, "gradient_norm": 1.2567110061645508, "pose_value_grad_norm": 0.03524085134267807, "mask_grad_norm": 0.054342374205589294, "base_gradient_sha256_before_clipping": null, "measured_update_seconds": 0.27182696713134646}
+CURRENT_POSE_ENGINEERING_UPDATE real_pose {"update": 8194, "indices": [126232, 46803, 69332, 17378, 140659, 64287, 80579, 18379], "loss": 0.40476709604263306, "pose_loss": 0.2127411663532257, "gripper_loss": 0.7681037187576294, "gradient_norm": 1.2567110061645508, "pose_value_grad_norm": 0.03524085134267807, "mask_grad_norm": 0.054342374205589294, "base_gradient_sha256_before_clipping": null, "measured_update_seconds": 0.2740762340836227}
+CURRENT_POSE_PREFLIGHT_REPORT /projects/Zeroshot/runs/oxe-pose-preflight-232371/report.json
+CURRENT POSE PREFLIGHT PASSED; no formal submission or generalization verdict
+^C

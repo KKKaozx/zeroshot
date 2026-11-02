@@ -1,0 +1,57 @@
+{
+  "stage": "matched_project_frontend_training",
+  "native_reference_job": 212158,
+  "base_protocol_sha256": "78405a674443df59e6946b3aa86a6d7cbc2b9b22b6b12213b5169fafb2c02911",
+  "cache_directory": "runs/pusht-project-cache-213439",
+  "cache_report_sha256": "7e64dcda43fbed465c1774df6e20b073f92ea6e7656f36fac668f6af0f2fd967",
+  "required_reports_sha256": {
+    "runs/pusht-project-cache-213439/report.json": "7e64dcda43fbed465c1774df6e20b073f92ea6e7656f36fac668f6af0f2fd967",
+    "runs/pusht-native84k-212158/report.json": "cf3a27bb0a2d35b710b3884b740fb8034f01f90c024afdd0cc558207ae0e5697"
+  },
+  "sample_order_sha256": "b6481e424f6ee5f86e263b2fca4d20d4644b5e87c5ff5a334e8b3d7bcde488ec",
+  "sample_plan_sha256": "4c7224b54a7e986576444564bab79f7dae55f01e3b474eeae96b8eba9554d64c",
+  "total_updates": 84168,
+  "segment_endpoints": [
+    42084,
+    84168
+  ],
+  "clip_vision_and_text_frozen": true,
+  "trained_native_weights_allowed": false,
+  "fresh_backend_seed": 42,
+  "adapter_projection_seed": 43,
+  "evaluation": "Fixed endpoint EMA; same dev20 seed/sample plan; no segment1 scoring or final50 access",
+  "comparison_scope": "Frontend family including preprocessing, not Adapter-only attribution",
+  "automatic_following_segment_submission": false,
+  "reused_files_byte_identical": {
+    "training_core.py": "pusht_native_extension_v1/training_core.py",
+    "checkpoint_config.yaml": "pusht_native_extension_v1/checkpoint_config.yaml",
+    "base_protocol.json": "pusht_native_extension_v1/training_protocol.json",
+    "base_verifier.py": "pusht_native_extension_v1/base_verifier.py",
+    "native_data.py": "pusht_project_cache_v1/native_data.py",
+    "cache_tools.py": "pusht_project_cache_v1/cache_tools.py",
+    "project_frontend.py": "pusht_frontend_resource_v1/project_frontend.py",
+    "frozen_adapter.py": "pusht_frontend_resource_v1/frozen_adapter.py",
+    "live_client.py": "pusht_live_bridge_v1/live_client.py",
+    "clip_worker.py": "pusht_live_bridge_v1/clip_worker.py",
+    "wire.py": "pusht_live_bridge_v1/wire.py",
+    "live_contract.json": "pusht_live_bridge_v1/live_contract.json",
+    "resource_probe.py": "pusht_live_bridge_v1/resource_probe.py"
+  },
+  "bundle_sources_sha256": {
+    "base_verifier.py": "c2b9e2e789703055cdebdbf904fbbd71156f197a2aa10e9f6b0530ff3a8995a8",
+    "cache_tools.py": "5130c7cd1d212017374e6fe58a03dd28891086ab159360de879c1a9ed7b5033a",
+    "checkpoint_config.yaml": "5fc467ea821b26afa743aad1b7e41206540b3665271be7c688d4cc52cc82dbd6",
+    "clip_worker.py": "10f241fee9b761fe28f6178df6b4a242f0bbde4bd10625ad8758a530b34b0e7e",
+    "evaluate_project.py": "12397e42f578ecb405eaafc9abe908a1ad6b5ca070b14e29c2c995ffd0044c2a",
+    "frozen_adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "live_client.py": "968d9f46efc104ca6ddaf2596c26b334cc030090899c730ac5260f7915a36fc6",
+    "native_data.py": "438a437fc2dd22564eac8c74eb55c394d70366f802d2b697874029c2821a9580",
+    "project_frontend.py": "fe2670da5542fb61753aa1851d77eef06ad8c76ffce43d7e7c74339bf6501441",
+    "resource_probe.py": "d769356fd2ed37d037143e66f3301f13e7c10246ae3df0b3a8c49b9d9b9d7fb2",
+    "token_binding.py": "66d0e352db13e427834028a9a8e18e70cf5188cdb8308749c4d05df357b1068b",
+    "train_project.py": "4c727f1be2158e99772d5f37862836bf9c8e533a5be92670cd4cab5fd2d36c6c",
+    "training_core.py": "fbe5340c7e07987b9ceb7975600f7ca8db8fcd09b7e8f9804b80cce7365addad",
+    "verify_segment.py": "a530f98c78362ebd6c7a381fff3b332fb5ec4af641102a697324c61f079a8fc8",
+    "wire.py": "31b449b9b6e0ec0ed62004eaeff0a49a0fbefb8a35695153a239b5e3de9e0b21"
+  }
+}

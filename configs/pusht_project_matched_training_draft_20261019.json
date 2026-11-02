@@ -1,0 +1,45 @@
+{
+  "status": "entry_prepared_cache213439_and_native_summary_verified_not_submitted",
+  "native_reference_job": 212158,
+  "native_reference_updates": 84168,
+  "goal": "Matched frozen-CLIP/project-Adapter frontend family comparison in the established Push-T diffusion pipeline",
+  "initialization": {
+    "backend": "Fresh author policy seed42, same initial backend SHA as native; do not load trained native weights",
+    "adapter_and_projection_seed": 43,
+    "clip_vision_and_text_requires_grad": false,
+    "adapter": "Existing8-layer, attention512, heads8, dropout0.1, cls_patch_mean",
+    "projection": "Existing Linear1024to64, preserve native position columns64/65"
+  },
+  "data": {
+    "train_episodes": 90,
+    "windows": 10726,
+    "train_frames": 11356,
+    "normalizer": "Native train-only statistics, same SHA",
+    "feature_cache": "Once-only FP32 frozen CLIP tokens; source global frame IDs select identical two observation frames"
+  },
+  "matched_training": {
+    "total_updates": 84168,
+    "proposed_segment_endpoints": [42084, 84168],
+    "segments_are_continuous_training_not_separate_experiments": true,
+    "logical_batch": 64,
+    "microbatch": 8,
+    "tail_weighting": "Actual micro_size divided by actual logical batch size",
+    "sample_and_noise_plan": "Exact native BatchPlan and independent frontend/diffusion RNG streams",
+    "objective": "Pinned author epsilon compute_loss, cosineDDPM100",
+    "optimizer": "Same native AdamW",
+    "lr_horizon": 512400,
+    "lr_warmup": 500,
+    "ema": "Same native update rule and continuous counter",
+    "segment_resume": "Raw/EMA/Adam/LR/EMA counter/all RNG, complete-state digest proof; no reset"
+  },
+  "evaluation": {
+    "only_after_total_updates": 84168,
+    "checkpoint": "Fixed endpoint EMA",
+    "development": "Same20 environment seeds5000000..5000019 and same per-decision sampling seed plan",
+    "first_segment_development_scoring": false,
+    "final50_access": false,
+    "interpretation": "Frontend family includes preprocessing; cannot attribute all differences to Adapter alone"
+  },
+  "expected_total_project_pure_training_hours_from_resource_probe": 24.248185030965445,
+  "no_automatic_training_submission": true
+}

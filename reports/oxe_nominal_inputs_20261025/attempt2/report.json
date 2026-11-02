@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "target_binding": {
+    "format": "oxe-nominal-target-binding-v1",
+    "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+    "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+    "label_family": "nominal_resampled_observed_reached_pose",
+    "clock_basis": "user_selected_published_nominal_frequency_assumption",
+    "target_times_seconds": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6,
+      2.8,
+      3.0,
+      3.2
+    ],
+    "source_units_or_formal_training_admitted": false
+  },
+  "store_checksums_verified": true,
+  "real_cached_chunk_recomputation": [
+    {
+      "source": "Bridge",
+      "window": 0,
+      "exact": true
+    },
+    {
+      "source": "Bridge",
+      "window": 5147,
+      "exact": true
+    },
+    {
+      "source": "Bridge",
+      "window": 10351,
+      "exact": true
+    },
+    {
+      "source": "Language Table",
+      "window": 10352,
+      "exact": true
+    },
+    {
+      "source": "Language Table",
+      "window": 16437,
+      "exact": true
+    },
+    {
+      "source": "Language Table",
+      "window": 22565,
+      "exact": true
+    },
+    {
+      "source": "BC-Z",
+      "window": 22566,
+      "exact": true
+    },
+    {
+      "source": "BC-Z",
+      "window": 70282,
+      "exact": true
+    },
+    {
+      "source": "BC-Z",
+      "window": 118361,
+      "exact": true
+    },
+    {
+      "source": "Fractal",
+      "window": 118362,
+      "exact": true
+    },
+    {
+      "source": "Fractal",
+      "window": 131835,
+      "exact": true
+    },
+    {
+      "source": "Fractal",
+      "window": 145811,
+      "exact": true
+    }
+  ],
+  "independent_scipy_slerp_comparisons": 128,
+  "independent_scipy_slerp_max_sign_equivalent_component_difference": 3.727622801541486e-07,
+  "independent_scipy_slerp_max_angle_difference_deg": 5.7005945138216206e-05,
+  "independent_scipy_slerp_tolerances": {
+    "component": 1e-06,
+    "angle_deg": 0.0001,
+    "reason": "normalized-linear fallback for nearly identical endpoints, dot>.9995"
+  },
+  "changed_clock_label_family_or_dataset_binding_rejected": true,
+  "original_instruction_catalog": {
+    "windows": 145812,
+    "unique_canonical_instructions": 3686,
+    "sha256": "00ad1e337f909d7eef85cb2844e1bfdabce20a8d10e3e95facedb99a2b0d5605"
+  },
+  "raw_payload_rereads": 0,
+  "images_decoded": 0,
+  "models_loaded": 0,
+  "training_updates": 0,
+  "formal_training_ready": false,
+  "main_training_dataset_automatically_replaced": false
+}

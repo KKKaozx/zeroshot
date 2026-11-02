@@ -1,0 +1,278 @@
+ (https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/main/data_processing/bridgedata_raw_to_numpy.py)
+citeturn21view0 [wordlim: 200] Crawled: today; Content type: text/plain; Source: open({"ref_id":"https://raw.githubusercontent.com/rail-berkeley/bridge_data_v2/main/data_processing/bridgedata_raw_to_numpy.py","lineno":null}); Total lines: 275
+L0: """
+L1: Converts data from the BridgeData raw format to numpy format.
+L2: 
+L3: Consider the following directory structure for the input data:
+L4:     bridgedata_raw/
+L5:         rss/
+L6:             toykitchen2/
+L7:                 set_table/
+L8:                     00/
+L9:                         2022-01-01_00-00-00/
+L10:                             collection_metadata.json
+L11:                             config.json
+L12:                             diagnostics.png
+L13:                             raw/
+L14:                                 traj_group0/
+L15:                                     traj0/
+L16:                                         obs_dict.pkl
+L17:                                         policy_out.pkl
+L18:                                         agent_data.pkl
+L19:                                         images0/
+L20:                                             im_0.jpg
+L21:                                             im_1.jpg
+L22:                                             ...
+L23:                                     ...
+L24:                                 ...
+L25:                     01/
+L26:                     ...
+L27: The --depth parameter controls how much of the data to process at the
+L28: --input_path; for example, if --depth=5, then --input_path should be
+L29: "bridgedata_raw", and all data will be processed. If --depth=3, then
+L30: --input_path should be "bridgedata_raw/rss/toykitchen2", and only data
+L31: under "toykitchen2" will be processed.
+L32: 
+L33: The same directory structure will be replicated under --output_path.  For
+L34: example, in the second case, the output will be written to
+L35: "{output_path}/set_table/00/...".
+L36: Squashes images to 128x128.
+L37: 
+L38: Can write directly to Google Cloud Storage, but not read from it.
+L39: 
+L40: Written by Kevin Black (kvablack@berkeley.edu).
+L41: """
+L42: import copy
+L43: import glob
+L44: import os
+L45: import pickle
+L46: import random
+L47: from collections import defaultdict
+L48: from datetime import datetime
+L49: from functools import partial
+L50: from multiprocessing import Pool
+L51: 
+L52: import numpy as np
+L53: import tensorflow as tf
+L54: import tqdm
+L55: from absl import app, flags, logging
+L56: from PIL import Image
+L57: 
+L58: FLAGS = flags.FLAGS
+L59: flags.DEFINE_string("input_path", None, "Input path", required=True)
+L60: flags.DEFINE_string("output_path", None, "Output path", required=True)
+L61: flags.DEFINE_integer(
+L62:     "depth",
+L63:     5,
+L64:     "Number of directories deep to traverse to the dated directory. Looks for"
+L65:     "{input_path}/dir_1/dir_2/.../dir_{depth-1}/2022-01-01_00-00-00/...",
+L66: )
+L67: flags.DEFINE_bool("overwrite", False, "Overwrite existing files")
+L68: flags.DEFINE_float(
+L69:     "train_proportion", 0.9, "Proportion of data to use for training (rather than val)"
+L70: )
+L71: flags.DEFINE_integer("num_workers", 8, "Number of threads to use")
+L72: flags.DEFINE_integer("im_size", 128, "Image size")
+L73: 
+L74: def squash(path):  # squash from 480x640 to im_size
+L75:     im = Image.open(path)
+L76:     im = im.resize((FLAGS.im_size, FLAGS.im_size), Image.Resampling.LANCZOS)
+L77:     out = np.asarray(im).astype(np.uint8)
+L78:     return out
+L79: 
+L80: def process_images(path):  # processes images at a trajectory level
+L81:     names = sorted(
+L82:         [x for x in os.listdir(path) if "images" in x and not "depth" in x],
+L83:         key=lambda x: int(x.split("images")[1]),
+L84:     )
+L85:     image_path = [
+L86:         os.path.join(path, x)
+L87:         for x in os.listdir(path)
+L88:         if "images" in x and not "depth" in x
+L89:     ]
+L90:     image_path = sorted(image_path, key=lambda x: int(x.split("images")[1]))
+L91: 
+L92:     images_out = defaultdict(list)
+L93:     tlen = len(glob.glob(image_path[0] + "/im_*.jpg"))
+L94: 
+L95:     for i, name in enumerate(names):
+L96:         for t in range(tlen):
+L97:             images_out[name].append(squash(image_path[i] + "/im_{}.jpg".format(t)))
+L98: 
+L99:     images_out = dict(images_out)
+L100: 
+L101:     obs, next_obs = dict(), dict()
+L102: 
+L103:     for n in names:
+L104:         obs[n] = images_out[n][:-1]
+L105:         next_obs[n] = images_out[n][1:]
+L106:     return obs, next_obs
+L107: 
+L108: def process_state(path):
+L109:     fp = os.path.join(path, "obs_dict.pkl")
+L110:     with open(fp, "rb") as f:
+L111:         x = pickle.load(f)
+L112:     return x["full_state"][:-1], x["full_state"][1:]
+L113: 
+L114: 
+L115: def process_time(path):
+L116:     fp = os.path.join(path, "obs_dict.pkl")
+L117:     with open(fp, "rb") as f:
+L118:         x = pickle.load(f)
+L119:     return x["time_stamp"][:-1], x["time_stamp"][1:]
+L120: 
+L121: def process_actions(path):  # gets actions
+L122:     fp = os.path.join(path, "policy_out.pkl")
+L123:     with open(fp, "rb") as f:
+L124:         act_list = pickle.load(f)
+L125:     if isinstance(act_list[0], dict):
+L126:         act_list = [x["actions"] for x in act_list]
+L127:     return act_list
+L128: # processes each data collection attempt
+L129: def process_dc(path, train_ratio=0.9):
+L130:     # a mystery left by the greats of the past
+L131:     if "lmdb" in path:
+L132:         logging.warning(f"Skipping {path} because uhhhh lmdb?")
+L133:         return [], [], [], []
+L134: 
+L135:     all_dicts_train = list()
+L136:     all_dicts_test = list()
+L137:     all_rews_train = list()
+L138:     all_rews_test = list()
+L139:     # Data collected prior to 7-23 has a delay of 1, otherwise a delay of 0
+L140:     date_time = datetime.strptime(path.split("/")[-1], "%Y-%m-%d_%H-%M-%S")
+L141:     latency_shift = date_time < datetime(2021, 7, 23)
+L142: 
+L143:     search_path = os.path.join(path, "raw", "traj_group*", "traj*")
+L144:     all_traj = glob.glob(search_path)
+L145:     if all_traj == []:
+L146:         logging.info(f"no trajs found in {search_path}")
+L147:         return [], [], [], []
+L148: 
+L149:     random.shuffle(all_traj)
+L150:     num_traj = len(all_traj)
+L151:     for itraj, tp in tqdm.tqdm(enumerate(all_traj)):
+L152:         try:
+L153:             out = dict()
+L154: 
+L155:             ld = os.listdir(tp)
+L156: 
+L157:             assert "obs_dict.pkl" in ld, tp + ":" + str(ld)
+L158:             assert "policy_out.pkl" in ld, tp + ":" + str(ld)
+L159:             # assert "agent_data.pkl" in ld, tp + ":" + str(ld) # not used
+L160:             obs, next_obs = process_images(tp)
+L161:             acts = process_actions(tp)
+L162:             state, next_state = process_state(tp)
+L163:             time_stamp, next_time_stamp = process_time(tp)
+L164:             term = [0] * len(acts)
+L165:             if "lang.txt" in ld:
+L166:                 with open(os.path.join(tp, "lang.txt")) as f:
+L167:                     lang = list(f)
+L168:                     lang = [l.strip() for l in lang if "confidence" not in l]
+L169:             else:
+L170:                 # empty string is a placeholder for data with no language label
+L171:                 lang = [""]
+L172:             out["observations"] = obs
+L173:             out["observations"]["state"] = state
+L174:             out["observations"]["time_stamp"] = time_stamp
+L175:             out["next_observations"] = next_obs
+L176:             out["next_observations"]["state"] = next_state
+L177:             out["next_observations"]["time_stamp"] = next_time_stamp
+L178:             out["observations"] = [
+L179:                 dict(zip(out["observations"], t))
+L180:                 for t in zip(*out["observations"].values())
+L181:             ]
+L182:             out["next_observations"] = [
+L183:                 dict(zip(out["next_observations"], t))
+L184:                 for t in zip(*out["next_observations"].values())
+L185:             ]
+L186: 
+L187:             out["actions"] = acts
+L188:             out["terminals"] = term
+L189:             out["language"] = lang
+L190:             # shift the actions according to camera latency
+L191:             if latency_shift:
+L192:                 out["observations"] = out["observations"][1:]
+L193:                 out["next_observations"] = out["next_observations"][1:]
+L194:                 out["actions"] = out["actions"][:-1]
+L195:                 out["terminals"] = term[:-1]
+L196: 
+L197:             labeled_rew = copy.deepcopy(out["terminals"])[:]
+L198:             labeled_rew[-2:] = [1, 1]
+L199:             traj_len = len(out["observations"])
+L200:             assert len(out["next_observations"]) == traj_len
+L201:             assert len(out["actions"]) == traj_len
+L202:             assert len(out["terminals"]) == traj_len
+L203:             assert len(labeled_rew) == traj_len
+L204:             if itraj < int(num_traj * train_ratio):
+L205:                 all_dicts_train.append(out)
+L206:                 all_rews_train.append(labeled_rew)
+L207:             else:
+L208:                 all_dicts_test.append(out)
+L209:                 all_rews_test.append(labeled_rew)
+L210:         except FileNotFoundError as e:
+L211:             logging.error(e)
+L212:             continue
+L213:         except AssertionError as e:
+L214:             logging.error(e)
+L215:             continue
+L216: 
+L217:     return all_dicts_train, all_dicts_test, all_rews_train, all_rews_test
+L218: 
+L219: def make_numpy(path, train_proportion):
+L220:     dirname = os.path.abspath(path)
+L221:     outpath = os.path.join(
+L222:         FLAGS.output_path, *dirname.split(os.sep)[-(max(FLAGS.depth - 1, 1)) :]
+L223:     )
+L224: 
+L225:     if os.path.exists(outpath):
+L226:         if FLAGS.overwrite:
+L227:             logging.info(f"Deleting {outpath}")
+L228:             tf.io.gfile.rmtree(outpath)
+L229:         else:
+L230:             logging.info(f"Skipping {outpath}")
+L231:             return
+L232:     outpath_train = tf.io.gfile.join(outpath, "train")
+L233:     outpath_val = tf.io.gfile.join(outpath, "val")
+L234:     tf.io.gfile.makedirs(outpath_train)
+L235:     tf.io.gfile.makedirs(outpath_val)
+L236: 
+L237:     lst_train = []
+L238:     lst_val = []
+L239:     rew_train_l = []
+L240:     rew_val_l = []
+L241:     for dated_folder in os.listdir(path):
+L242:         curr_train, curr_val, rew_train, rew_val = process_dc(
+L243:             os.path.join(path, dated_folder), train_ratio=train_proportion
+L244:         )
+L245:         lst_train.extend(curr_train)
+L246:         lst_val.extend(curr_val)
+L247:         rew_train_l.extend(rew_train)
+L248:         rew_val_l.extend(rew_val)
+L249: 
+L250:     if len(lst_train) == 0 or len(lst_val) == 0:
+L251:         return
+L252:     with tf.io.gfile.GFile(tf.io.gfile.join(outpath_train, "out.npy"), "wb") as f:
+L253:         np.save(f, lst_train)
+L254:     with tf.io.gfile.GFile(tf.io.gfile.join(outpath_val, "out.npy"), "wb") as f:
+L255:         np.save(f, lst_val)
+L256: 
+L257:     # doesn't seem like these are ever used anymore
+L258:     # np.save(os.path.join(outpath_train, "out_rew.npy"), rew_train_l)
+L259:     # np.save(os.path.join(outpath_val, "out_rew.npy"), rew_val_l)
+L260: 
+L261: 
+L262: def main(_):
+L263:     assert FLAGS.depth >= 1
+L264:     # each path is a directory that contains dated directories
+L265:     paths = glob.glob(os.path.join(FLAGS.input_path, *("*" * (FLAGS.depth - 1))))
+L266: 
+L267:     worker_fn = partial(make_numpy, train_proportion=FLAGS.train_proportion)
+L268: 
+L269:     with Pool(FLAGS.num_workers) as p:
+L270:         list(tqdm.tqdm(p.imap(worker_fn, paths), total=len(paths)))
+L271: 
+L272: 
+L273: if __name__ == "__main__":
+L274:     app.run(main)
+

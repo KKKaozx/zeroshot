@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "real_cached_train_validation_identity_checked": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+  "training_protocol_sha256": "297e03087cf4efaf61b476b84b046404565014984d32c0d777a03b62fada51be",
+  "seeds_and_both_segment_endpoints_accepted": true,
+  "changed_options_rejected": [
+    "total_updates",
+    "learning_rate",
+    "seed",
+    "language_condition",
+    "max_normalized_position",
+    "oxe_input_preflight"
+  ],
+  "stage1_next_learning_rate": [
+    0.0001024930691738073,
+    0.0001024930691738073
+  ],
+  "full_horizon_end_learning_rate": [
+    0.0,
+    0.0
+  ],
+  "tiny_synthetic_export": {
+    "all_learned_tensors_preserved": true,
+    "incomplete_state_retained": true,
+    "only_completed_fixture_optimizer_removed": true,
+    "inference_checkpoint_reader_accepted": true,
+    "changed_export_config_rejected": true
+  },
+  "actual_cluster_binding_fabricated_or_packaged": false,
+  "synthetic_binding_fixture_only": true,
+  "real_models_loaded": 0,
+  "optimizer_updates": 0,
+  "source_images_decoded": 0,
+  "old_resume_or_resource_suites_repeated": false,
+  "new_cluster_jobs": 0
+}

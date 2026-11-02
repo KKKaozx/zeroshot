@@ -1,0 +1,32 @@
+{
+  "format": "current-pose-engineering-preflight-submission-v1",
+  "job_id": 232371,
+  "reported_date": "2026-10-28",
+  "submission_source": "User pasted OXE CURRENT POSE PREFLIGHT: 232371",
+  "submitted_by_agent": false,
+  "status": "engineering_and_resource_receipt_verified",
+  "slurm_state_observed": null,
+  "source_training_job": 231297,
+  "source_update": 8192,
+  "source_target": "sample",
+  "roles": [
+    "mask_control",
+    "real_pose"
+  ],
+  "planned_physical_disposable_optimizer_calls": 6,
+  "planned_logical_updates_per_role": 2,
+  "actual_engineering_updates_observed": 6,
+  "zero_endpoint_replay_observed": true,
+  "gradient_and_restore_checks_observed": true,
+  "log_path": "/projects/Zeroshot/logs/oxe-pose-preflight-232371.out",
+  "output_directory": "/projects/Zeroshot/runs/oxe-pose-preflight-232371",
+  "package_sha256": "157cdebd020f19aebee79e1963dcc9d280545be6c698569447c6575639bf0e90",
+  "protocol_sha256": "0f695639fe421a60344794de32129fa6f881b1e3c23bfe7b26423b7b5f826795",
+  "formal_training_submitted": false,
+  "generalization_verdict": null,
+  "automatic_following_action": false,
+  "result": "reports/oxe_current_pose_preflight_232371/analysis.json",
+  "resource_receipt_pending": false,
+  "resource_receipt": "reports/oxe_current_pose_preflight_232371/verified_resource_receipt.json",
+  "formal_training_package": "cluster_packages/oxe_current_pose_formal_v1.zip"
+}

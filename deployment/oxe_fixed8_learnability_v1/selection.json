@@ -1,0 +1,92 @@
+{
+  "source_selection_sha256": "eb9d9ff1362218d393dc579a50dbd73ff15ad503e3892b7b02dc818c97b4e151",
+  "rows": [
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-9c363d14467cc6a242c98c0ee22159bc4f206364d6461a9188ef0e0fa3ce3dcd",
+      "episode_key": "bridge_data_v2-train.tfrecord-00128-of-01024::13",
+      "window_index": 9759,
+      "input_row": 8,
+      "payload_sha256": "dd216f6e47809d14066d30758e23b1747d3788354f7769fd29c5f95ab592e30e",
+      "prefix_presentations": 3
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-097dbd392ac5ad8c0ca95861c4263ac3c1ea652370077e7c9239d2247564aacd",
+      "episode_key": "bridge_data_v2-train.tfrecord-00181-of-01024::30",
+      "window_index": 5333,
+      "input_row": 20,
+      "payload_sha256": "adf489a4b5f9d32873ece303285786a8890cc191f135f5de13aa99f49dad9a88",
+      "prefix_presentations": 2
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-ba13a6613c3d3096fb6cb679efa9af088f2a7ea84a0a9e31bf7663f9c8f8c24d",
+      "episode_key": "bridge_data_v2-train.tfrecord-00895-of-01024::42",
+      "window_index": 2514,
+      "input_row": 20,
+      "payload_sha256": "24a7587b652deae800ddc542d9068d928b518e3e75b9aac6733cc625fb73887a",
+      "prefix_presentations": 1
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-82166f40abd63665979eb8ce9217a2442d71fec519c7b438d46990a794221feb",
+      "episode_key": "bridge_data_v2-train.tfrecord-01019-of-01024::11",
+      "window_index": 497,
+      "input_row": 16,
+      "payload_sha256": "852bf1921a06736eba54070fd0a4560b9051fdbc01d7e43de3887d44ef1fdbb5",
+      "prefix_presentations": 1
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-3169c8a3d8a6edf4b288d0a387d69979a428d598192a5a28f852ac8dd071015e",
+      "episode_key": "bridge_data_v2-train.tfrecord-00200-of-01024::10",
+      "window_index": 251,
+      "input_row": 16,
+      "payload_sha256": "1d4d537a0efa11fcda8b7148242759573bf01a71ad0ddb14f48aa25d3bcbce7a",
+      "prefix_presentations": 5
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-62451c115d953c5144f1d27851ab72551589f727a391485f597402c169b426f7",
+      "episode_key": "bridge_data_v2-train.tfrecord-00106-of-01024::21",
+      "window_index": 3550,
+      "input_row": 16,
+      "payload_sha256": "5c15ae462a478c80ed1464407037aa130225e0ef701383a271d6da97c664616b",
+      "prefix_presentations": 3
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-d148f5546684a4c4469bead0cb6fe67229151fd2f82831c793faf0399cd9f488",
+      "episode_key": "bridge_data_v2-train.tfrecord-00529-of-01024::15",
+      "window_index": 2188,
+      "input_row": 12,
+      "payload_sha256": "5838f9b21946b5740634b8158b6aaeb78053c75781c191ea696a7dabe2d62dc8",
+      "prefix_presentations": 2
+    },
+    {
+      "role": "train",
+      "source": "Bridge",
+      "group_id": "bounded-origin-content-c6449e9c9a149774b48c45ad07193322928c39527e77c7b032766a6446c19f61",
+      "episode_key": "bridge_data_v2-train.tfrecord-00356-of-01024::54",
+      "window_index": 4103,
+      "input_row": 12,
+      "payload_sha256": "0de4ccb042d3dea39dbc20cb5cd5a94ea81a10ab32c7fca2a8fdae6ace856e48",
+      "prefix_presentations": 2
+    }
+  ],
+  "selection_rule": "Exactly published first8seen-training Bridge windows, no new error-based selection",
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "generation_steps": 100
+}

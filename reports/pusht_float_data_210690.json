@@ -1,0 +1,220 @@
+{
+  "stage": "cached_float32_image_integrity_repair",
+  "origin_job": 210631,
+  "downloaded": false,
+  "extracted_again": false,
+  "data_modified": false,
+  "model_executed": false,
+  "training_updates": 0,
+  "gpu_used": false,
+  "runtime_compatibility_verified": false,
+  "formal_training_ready": false,
+  "errors": [],
+  "origin_report_sha256": "019029e58931b23c95d35290ff9b649dc0550dee176975f7f6f72d42e5dd7e6b",
+  "archive_sha256": "63d52a114a3f010861f0181309d165b7d69133ccae426ece2fc94caed147bdf9",
+  "dataset_path": "/projects/_ssd/Zeroshot/runs/pusht-data-prepare-210631/extraction_staging/pusht/pusht_cchi_v7_replay.zarr",
+  "preserve_origin_run_data": true,
+  "active_environment_from_origin_210631": {
+    "python": "3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]",
+    "executable": "/projects/_ssd/Zeroshot/envs/multitask-preflight-v1/bin/python",
+    "packages": {
+      "torch": "2.5.1+cu118",
+      "torchvision": null,
+      "numpy": "1.26.4",
+      "transformers": "5.17.0",
+      "huggingface-hub": "1.33.0",
+      "safetensors": "0.8.0",
+      "Pillow": "12.3.0",
+      "zarr": null,
+      "numcodecs": null,
+      "diffusers": null,
+      "dill": null,
+      "omegaconf": null
+    }
+  },
+  "arrays": {
+    "meta/episode_ends": {
+      "shape": [
+        206
+      ],
+      "chunks": [
+        208
+      ],
+      "dtype": "int64",
+      "stored_chunks_checked": 1,
+      "decoded_sha256": "82db02e667c59a83fedb211ab9b84182591b75009df1385210d5235197f93d72",
+      "raw_min": 161.0,
+      "raw_max": 25650.0
+    },
+    "data/action": {
+      "shape": [
+        25650,
+        2
+      ],
+      "chunks": [
+        161,
+        2
+      ],
+      "dtype": "float32",
+      "stored_chunks_checked": 160,
+      "decoded_sha256": "6691b085749144b8db1aede97a80fb380afd08953fcd03660b441d0ffe9d6a8f",
+      "raw_min": 12.0,
+      "raw_max": 511.0
+    },
+    "data/state": {
+      "shape": [
+        25650,
+        5
+      ],
+      "chunks": [
+        161,
+        5
+      ],
+      "dtype": "float32",
+      "stored_chunks_checked": 160,
+      "decoded_sha256": "dcdc539bfdba9fc01cba8d2fe91cc580539ec046a88b0ffbe91be5511948d4dc",
+      "raw_min": 0.00021559125161729753,
+      "raw_max": 510.9578857421875
+    },
+    "data/img": {
+      "shape": [
+        25650,
+        96,
+        96,
+        3
+      ],
+      "chunks": [
+        161,
+        96,
+        96,
+        3
+      ],
+      "dtype": "float32",
+      "stored_chunks_checked": 160,
+      "decoded_sha256": "3f7650895d1a500d7162b10475df689731f4fece2b15eaf7d913a560c2a0783d",
+      "raw_min": 65.0,
+      "raw_max": 255.0
+    }
+  },
+  "image_processing_contract": {
+    "storage_dtype_preserved": "float32",
+    "raw_range": [
+      65.0,
+      255.0
+    ],
+    "author_operation": "np.moveaxis(image, -1, 1) / 255",
+    "range_after_author_divide_255": [
+      0.2549019607843137,
+      1.0
+    ],
+    "uint8_conversion_performed": false,
+    "normalization_statistics_fitted": false
+  },
+  "author_recipe_counts": {
+    "episodes": 206,
+    "frames": 25650,
+    "length_min": 49,
+    "length_max": 246,
+    "train_episode_ids": [
+      7,
+      9,
+      10,
+      11,
+      13,
+      16,
+      20,
+      25,
+      26,
+      27,
+      32,
+      33,
+      35,
+      42,
+      44,
+      50,
+      51,
+      56,
+      58,
+      60,
+      61,
+      63,
+      65,
+      67,
+      71,
+      73,
+      76,
+      77,
+      78,
+      81,
+      84,
+      85,
+      86,
+      89,
+      91,
+      93,
+      94,
+      97,
+      98,
+      102,
+      103,
+      109,
+      110,
+      111,
+      112,
+      117,
+      118,
+      119,
+      120,
+      122,
+      125,
+      126,
+      128,
+      129,
+      130,
+      131,
+      132,
+      135,
+      137,
+      138,
+      140,
+      141,
+      145,
+      148,
+      156,
+      158,
+      159,
+      160,
+      161,
+      163,
+      165,
+      166,
+      167,
+      170,
+      172,
+      174,
+      176,
+      178,
+      179,
+      183,
+      184,
+      185,
+      188,
+      189,
+      192,
+      194,
+      195,
+      198,
+      200,
+      203
+    ],
+    "train_episodes": 90,
+    "train_windows": 10726,
+    "original_val_mask_episodes": 4,
+    "author_validation_complement_episodes": 116,
+    "author_validation_complement_windows": 13482,
+    "scope": "Existing checkpoint recipe only; not a new experiment split or budget."
+  },
+  "all_expected_chunks_present_and_decoded": true,
+  "elapsed_seconds": 4.359060734976083,
+  "data_integrity_passed": true
+}

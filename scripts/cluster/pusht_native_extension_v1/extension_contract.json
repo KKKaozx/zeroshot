@@ -1,0 +1,34 @@
+{
+  "stage": "native_predeclared_cap_continuation",
+  "source_job": 211309,
+  "source_checkpoint": "runs/pusht-native20k-211309/latest.pt",
+  "source_checkpoint_sha256": "a9b28a1f09f7d733b8cd1936403ee3e650a4fdfdfcd64cc4ab7fd8f0a3f63551",
+  "source_completed_updates": 20000,
+  "target_updates": 84168,
+  "new_updates": 64168,
+  "base_protocol_sha256": "78405a674443df59e6946b3aa86a6d7cbc2b9b22b6b12213b5169fafb2c02911",
+  "sample_plan_sha256": "4c7224b54a7e986576444564bab79f7dae55f01e3b474eeae96b8eba9554d64c",
+  "sample_order_sha256": "b6481e424f6ee5f86e263b2fca4d20d4644b5e87c5ff5a334e8b3d7bcde488ec",
+  "raw_training_images_sha256": "7b05b0ca91d161bad12b2ac5eefe5b58ea7a98f1dfb730d404ed0ba02b842293",
+  "required_reference_files_sha256": {
+    "runs/pusht-native20k-211309/development.json": "2f94e9769ddcb55465b2e16dc3bcef8731b99d64850045c5a5102f321b6d2c4b",
+    "runs/pusht-native20k-211309/device_repair.json": "6ca6ccf034e03888eb0dc424a74681d6c28fabb7ad4b43a0ed6cc11e6f7f1acd",
+    "runs/pusht-native20k-211309/latest.json": "1818540973ae133115b98f4746a139a09cb071acb3779cf1927e72adf8069ec0",
+    "runs/pusht-native20k-211309/report.json": "317120f9fad180cc75a1b988f301339d372b7306155a4e5c3602b518fdab0ab0",
+    "runs/pusht-native20k-211309/startup_checks.json": "fda181a62b63942136f8b37cdecdc7f01b40dc4f93d150caf217f3b224b5719e"
+  },
+  "original_runner_sha256": "4cf848f91dc8798773303fed54290d03fffc77f4b4afefd3fba2a57f0346f422",
+  "repaired_training_core_sha256": "fbe5340c7e07987b9ceb7975600f7ca8db8fcd09b7e8f9804b80cce7365addad",
+  "effective_runner_changed_functions": [
+    "evaluate",
+    "main"
+  ],
+  "algorithm_or_hyperparameter_change": false,
+  "resume": "Restore raw/EMA/Adam/LR/EMA counter/all RNG and compare complete state digest; continue sample/noise plan at saved counter",
+  "lr_horizon_updates": 512400,
+  "lr_restarted": false,
+  "evaluation": "Only endpoint84168 EMA; same20 dev seeds/sampling streams and same competence gate",
+  "cap_failure": "Stop this module-comparison branch, no extra native budget or project attribution",
+  "automatic_project_training_or_final_access": false,
+  "clip_unfreeze_allowed": false
+}

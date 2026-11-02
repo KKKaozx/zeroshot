@@ -7,6 +7,10 @@ Quaternions use ``xyzw`` ordering; the gripper convention is ``-1 = closed``
 and ``+1 = open``. This removes incompatible world-coordinate origins from
 different robots while preserving the requested 3+4+1=8 dimensions.
 
+This is the legacy default. Explicit action_frame="source_cartesian" uses
+recorded-frame translation and a left-multiplied relative rotation instead;
+its separately identified checkpoints cannot be interchanged with the default.
+
 Files are discovered recursively below one root. Their parser is selected from
 internal fields and tensor shapes, never from dataset or directory names.
 """
@@ -388,18 +392,55 @@ class UnifiedRobotDataset(
         bridge_window_horizon: int | None = None,
         rt1_gripper_policy: str = "legacy_threshold_v1",
         bcz_reached_gripper_policy: str = "future_measured_v1",
+        oxe_command_input: bool = False,
+        action_frame: str = "tool",
+        language_table_groups: str | Path | None = None,
+        oxe_window_manifest: str | Path | None = None,
     ) -> None:
         if chunk_size <= 0 or stride <= 0 or min_trajectory_steps < 2:
             raise ValueError(
                 "chunk_size/stride must be positive and min_trajectory_steps >= 2"
             )
         self.data_dir = Path(data_dir)
+        self._oxe_window_manifest_path = oxe_window_manifest
+        self.oxe_window_manifest = None
+        from cartesian_action_contract import representation_for_frame
+        self.action_frame = action_frame
+        self.action_representation = representation_for_frame(action_frame)
+        self.language_table_groups_sha256 = None
+        self._language_table_groups = {}
+        if action_frame != "tool" and not oxe_command_input:
+            raise ValueError("新笛卡尔表示须使用显式命令/缺失输入，不能沿用旧占位语义")
+        if language_table_groups is not None:
+            if action_frame != "source_cartesian":
+                raise ValueError("Language Table分组接入仅用于新的source_cartesian表示")
+            import hashlib
+            payload = Path(language_table_groups).read_bytes()
+            manifest = json.loads(payload)
+            if (manifest.get("format") != "language-table-exact-jpeg-overlap-groups-v1"
+                    or manifest.get("source") != "language_table_real_0.1.0_existing_train_cache"):
+                raise ValueError("需要已验收的真实Language Table缓存身份/重叠组清单")
+            for row in manifest["episode_rows"]:
+                key = (row["shard"], row["record_index"])
+                if key in self._language_table_groups or row.get("errors"):
+                    raise ValueError("Language Table清单包含重复或未通过结构检查的记录")
+                self._language_table_groups[key] = row
+            memberships = {key: group["group_id"] for group in manifest["groups"] for key in group["episode_keys"]}
+            if (len(memberships) != len(self._language_table_groups)
+                    or any(memberships.get(row["episode_key"]) != row["group_id"]
+                           for row in self._language_table_groups.values())):
+                raise ValueError("Language Table记录与共享帧组成员关系不一致")
+            self.language_table_groups_sha256 = hashlib.sha256(payload).hexdigest()
         if rt1_gripper_policy not in {"legacy_threshold_v1", "relative_scan_v2"}:
             raise ValueError("Unknown RT-1 gripper policy")
         self.rt1_gripper_policy = rt1_gripper_policy
         if bcz_reached_gripper_policy not in {"future_measured_v1", "preceding_command_v2"}:
             raise ValueError("Unknown BC-Z reached-pose gripper policy")
         self.bcz_reached_gripper_policy = bcz_reached_gripper_policy
+        self.oxe_command_input = bool(oxe_command_input)
+        if self.oxe_command_input and (bcz_target != "reached" or bcz_current_gripper != "binary"
+                or bridge_current_gripper != "binary"):
+            raise ValueError("新命令/可用性输入不能混用旧连续测量或原生命令诊断模式")
         self.chunk_size = chunk_size
         self.stride = stride
         if bcz_target not in {"reached", "first_command", "native_commands"}:
@@ -479,6 +520,24 @@ class UnifiedRobotDataset(
             f"采样步长={stride}，最短轨迹={min_trajectory_steps}"
         )
         self._scan()
+        if self.oxe_command_input:
+            supported = {"tfrecord_bridge_state_action", "tfrecord_bc_z_pose", "tfrecord_rt1_pose"}
+            if action_frame == "source_cartesian":
+                supported.add("tfrecord_language_table_xy")
+            if not set(self.source_counts).issubset(supported):
+                raise ValueError("新输入仅开放已定义的3D OXE源；Language Table坐标合同尚未验收，不能只改夹爪就混入")
+            if action_frame == "source_cartesian":
+                for sample in self.samples:
+                    if sample["source"] == "tfrecord_language_table_xy":
+                        key = (Path(sample["file_path"]).name, sample["record_index"])
+                        if key not in self._language_table_groups:
+                            raise ValueError("Language Table实记录必须在已核对real身份/共享帧组清单中")
+            if action_frame != "tool" and bcz_target != "reached":
+                raise ValueError("新笛卡尔表示只定义未来实际到达位置，不转换原生控制诊断")
+            if (("tfrecord_bridge_state_action" in self.source_counts and bridge_gripper_policy != "reverse_scan_valid_steps_v2")
+                    or ("tfrecord_bc_z_pose" in self.source_counts and bcz_reached_gripper_policy != "preceding_command_v2")
+                    or ("tfrecord_rt1_pose" in self.source_counts and rt1_gripper_policy != "relative_scan_v2")):
+                raise ValueError("新输入模式要求显式使用已定义的各源夹爪目标策略")
         if bridge_current_gripper == "continuous" and set(self.source_counts) != {"tfrecord_bridge_state_action"}:
             raise ValueError("连续Bridge测量输入只允许单独Bridge来源，不能混评其他数据集")
         if self._bridge_selected:
@@ -575,6 +634,10 @@ class UnifiedRobotDataset(
         return True
 
     def _scan(self) -> None:
+        if getattr(self, "_oxe_window_manifest_path", None) is not None:
+            from oxe_window_index import attach_index
+            attach_index(self, self._oxe_window_manifest_path)
+            return
         if "auto" in self.sources:
             self._scan_hdf5()
             if not self._limit_reached():
@@ -976,6 +1039,12 @@ class UnifiedRobotDataset(
     def group_key(self, index: int) -> str:
         """Trajectory key used for leakage-free train/validation/test splits."""
         sample = self.samples[index]
+        if getattr(self, "oxe_window_manifest", None) is not None:
+            return sample["source"] + ":" + sample["oxe_group_id"]
+        if (getattr(self, "action_frame", "tool") == "source_cartesian"
+                and sample["source"] == "tfrecord_language_table_xy"):
+            row = self._language_table_groups[Path(sample["file_path"]).name, sample["record_index"]]
+            return "language_table_real:" + row["group_id"]
         if sample["source"].startswith("hdf5_"):
             return f"{sample['source']}:{sample['file_path']}:{sample['demo_key']}"
         if sample["source"] == "cliport":
@@ -1017,7 +1086,24 @@ class UnifiedRobotDataset(
             supervision_mask[:, 2:] = 0.0
         elif sample["source"] == "hdf5_position3_action4":
             supervision_mask[:, 3:7] = 0.0
+        if getattr(self, "action_frame", "tool") == "source_cartesian":
+            # Padding is a storage convention, not another measured future.
+            valid = max(0, min(self.chunk_size, sample["trajectory_steps"] - sample["start_index"] - 1))
+            supervision_mask[valid:] = 0.0
+        if getattr(self, "oxe_window_manifest", None) is not None:
+            from oxe_window_index import layout_for_window
+            layout = layout_for_window(self.oxe_window_manifest, sample["oxe_window_index"])
+            expected = torch.tensor(layout["supervision_masks"], dtype=torch.float32)
+            if (not torch.equal(supervision_mask, expected) or not result[0].strip()
+                    or not torch.isfinite(result[2]).all() or not torch.isfinite(result[3]).all()):
+                raise ValueError("索引窗口的语言/输入/目标/mask与绑定协议不一致")
         return (*result, supervision_mask)
+
+    def _encode_oxe_reached_pose(self, *args):
+        if getattr(self, "action_frame", "tool") == "source_cartesian":
+            from cartesian_action_contract import encode_source_pose
+            return encode_source_pose(*args, position_scale_meters=POSITION_SCALE_METERS)
+        return relative_pose_action(*args)
 
     def _get_libero(
         self, sample: Dict[str, Any]
@@ -1041,10 +1127,26 @@ class UnifiedRobotDataset(
 
             start = int(sample["start_index"])
             image = np.asarray(observation[image_key][start])
+            convention = data_group.attrs.get("macros_image_convention")
+            if isinstance(convention, bytes):
+                convention = convention.decode("utf-8")
+            if convention == "opengl":
+                image = image[::-1].copy()
+            elif convention != "opencv":
+                raise ValueError("LIBERO images require an explicit OpenGL/OpenCV convention")
             positions = np.asarray(observation["ee_pos"])
             orientations = np.asarray(observation["ee_ori"])
             recorded_actions = np.asarray(demo["actions"])
-            current_command_index = min(max(start - 1, 0), len(recorded_actions) - 1)
+            if (recorded_actions.ndim != 2 or recorded_actions.shape[1] != 7
+                    or len(recorded_actions) != len(positions) or len(orientations) != len(positions)
+                    or len(observation[image_key]) != len(positions)
+                    or not np.isfinite(recorded_actions).all()
+                    or not np.isin(recorded_actions[:, -1], [-1.0, 1.0]).all()):
+                raise ValueError("Expected aligned LIBERO post-step rows and explicit binary gripper commands")
+            # Official scripts/create_dataset.py saves obs[j] AFTER step(actions[j]).
+            # Therefore actions[start] is the command already sent at this image;
+            # actions[target_index] produces that future row's reached pose.
+            current_command_index = start
             # RoboSuite/LIBERO 的夹爪控制约定为 -1=张开、+1=闭合；统一模型
             # 合同则规定 +1=张开、-1=闭合，因此这里必须翻转符号。
             current_gripper = (
@@ -1066,7 +1168,7 @@ class UnifiedRobotDataset(
                     if orientation.shape[-1] == 3
                     else normalise_quaternion(orientation[:4])
                 )
-                source_index = min(target_index - 1, len(recorded_actions) - 1)
+                source_index = target_index
                 gripper = (
                     1.0 if float(recorded_actions[source_index, -1]) < 0.0 else -1.0
                 )
@@ -1262,7 +1364,7 @@ class UnifiedRobotDataset(
         )
 
     @staticmethod
-    def _load_tfrecord_example(file_path: str, record_index: int) -> Any:
+    def _load_tfrecord_example(file_path: str, record_index: int, expected_payload_sha256=None) -> Any:
         import tensorflow as tf
 
         # TFRecord 是可随机寻址的未压缩容器。旧实现每取第 N 条记录都从头
@@ -1295,6 +1397,10 @@ class UnifiedRobotDataset(
             if len(payload) != record_length:
                 raise ValueError(f"Truncated TFRecord payload: {file_path}")
         example = tf.train.Example()
+        if expected_payload_sha256 is not None:
+            import hashlib
+            if hashlib.sha256(payload).hexdigest() != expected_payload_sha256:
+                raise ValueError("Language Table载入payload与已分组真实记录不一致")
         example.ParseFromString(payload)
         return example
 
@@ -1317,7 +1423,13 @@ class UnifiedRobotDataset(
         """
         from PIL import Image
 
-        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"])
+        source_cartesian = getattr(self, "action_frame", "tool") == "source_cartesian"
+        if source_cartesian:
+            row = self._language_table_groups[Path(sample["file_path"]).name, sample["record_index"]]
+            example = self._load_tfrecord_example(sample["file_path"], sample["record_index"],
+                                                  expected_payload_sha256=row["payload_sha256"])
+        else:
+            example = self._load_tfrecord_example(sample["file_path"], sample["record_index"])
         feature = example.features.feature
         required = (
             "steps/observation/instruction",
@@ -1359,16 +1471,28 @@ class UnifiedRobotDataset(
                 [positions[target_index, 0], positions[target_index, 1], 0.0],
                 dtype=np.float32,
             )
-            actions.append(
-                relative_pose_action(reference, identity, target, identity, +1.0)
-            )
+            if source_cartesian:
+                from cartesian_action_contract import encode_source_planar
+                encoded, _ = encode_source_planar(positions[start], positions[target_index], POSITION_SCALE_METERS)
+                actions.append(encoded)
+            else:
+                actions.append(relative_pose_action(reference, identity, target, identity, +1.0))
 
         image = np.asarray(Image.open(io.BytesIO(images[start])).convert("RGB"))
         instruction = self._decode_language_table_instruction(instructions[start])
+        # The opt-in command interface distinguishes a missing gripper from a
+        # known open command. This fixes the feature contract only: constructor
+        # admission still rejects LT until its planar coordinate contract is
+        # resolved. Legacy checkpoints retain their one-column placeholder.
+        if self.oxe_command_input:
+            from oxe_source_semantics import last_command_features
+            current_gripper = torch.from_numpy(last_command_features("language_table", []))
+        else:
+            current_gripper = torch.tensor([1.0], dtype=torch.float32)
         return (
             instruction,
             prepare_image(image),
-            torch.tensor([1.0], dtype=torch.float32),
+            current_gripper,
             pad_action_chunk(actions, self.chunk_size),
         )
 
@@ -1557,7 +1681,8 @@ class UnifiedRobotDataset(
         """
         from PIL import Image
 
-        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"])
+        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"],
+                                                  expected_payload_sha256=sample.get("payload_sha256"))
         feature = example.features.feature
         language_key = "steps/language_instruction"
         image_key = "steps/observation/image_0"
@@ -1634,7 +1759,7 @@ class UnifiedRobotDataset(
                 1.0 if float(gripper_commands[command_index]) >= 0.5 else -1.0
             )
             actions.append(
-                relative_pose_action(
+                self._encode_oxe_reached_pose(
                     reference_position,
                     reference_quaternion,
                     target_position,
@@ -1645,12 +1770,11 @@ class UnifiedRobotDataset(
 
         image = np.asarray(Image.open(io.BytesIO(images[start])).convert("RGB"))
         instruction = languages[start].decode("utf-8", errors="replace")
-        return (
-            instruction,
-            prepare_image(image),
-            torch.tensor([current_gripper], dtype=torch.float32),
-            pad_action_chunk(actions, self.chunk_size),
-        )
+        current_input = torch.tensor([current_gripper], dtype=torch.float32)
+        if getattr(self, "oxe_command_input", False):
+            from oxe_source_semantics import last_command_features
+            current_input = torch.from_numpy(last_command_features("bridge", raw_actions[:start, 6]))
+        return (instruction, prepare_image(image), current_input, pad_action_chunk(actions, self.chunk_size))
 
     def _get_tfrecord_bc_z_pose(
         self, sample: Dict[str, Any]
@@ -1668,7 +1792,8 @@ class UnifiedRobotDataset(
         """
         from PIL import Image
 
-        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"])
+        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"],
+                                                  expected_payload_sha256=sample.get("payload_sha256"))
         feature = example.features.feature
         language_key = "steps/observation/natural_language_instruction"
         image_key = "steps/observation/image"
@@ -1739,7 +1864,7 @@ class UnifiedRobotDataset(
                 closed = sensed_close[target_index]
             gripper = 1.0 if float(closed) < 0.5 else -1.0
             actions.append(
-                relative_pose_action(
+                self._encode_oxe_reached_pose(
                     reference_position,
                     reference_quaternion,
                     xyz[target_index],
@@ -1750,12 +1875,16 @@ class UnifiedRobotDataset(
 
         image = np.asarray(Image.open(io.BytesIO(images[start])).convert("RGB"))
         instruction = languages[start].decode("utf-8", errors="replace")
-        return (
-            instruction,
-            prepare_image(image),
-            torch.tensor([current_gripper], dtype=torch.float32),
-            pad_action_chunk(actions, self.chunk_size),
-        )
+        current_input = torch.tensor([current_gripper], dtype=torch.float32)
+        if getattr(self, "oxe_command_input", False):
+            from oxe_source_semantics import last_command_features
+            field = feature["steps/action/future/target_close"]
+            kind = field.WhichOneof("kind")
+            commands = np.asarray(getattr(field, kind).value, dtype=np.float32) if kind else np.asarray([])
+            if commands.size != step_count * 10:
+                raise ValueError("BC-Z命令输入要求每观测10个原生夹爪命令")
+            current_input = torch.from_numpy(last_command_features("bc_z", commands.reshape(step_count, 10)[:start, 0]))
+        return (instruction, prepare_image(image), current_input, pad_action_chunk(actions, self.chunk_size))
 
     def _get_tfrecord_rt1_pose(
         self, sample: Dict[str, Any]
@@ -1768,7 +1897,8 @@ class UnifiedRobotDataset(
         """
         from PIL import Image
 
-        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"])
+        example = self._load_tfrecord_example(sample["file_path"], sample["record_index"],
+                                                  expected_payload_sha256=sample.get("payload_sha256"))
         feature = example.features.feature
         language_key = "steps/observation/natural_language_instruction"
         image_key = "steps/observation/image"
@@ -1812,7 +1942,7 @@ class UnifiedRobotDataset(
             command_index = min(target_index - 1, len(commanded_closed) - 1)
             gripper = float(absolute_gripper[command_index])
             actions.append(
-                relative_pose_action(
+                self._encode_oxe_reached_pose(
                     reference_position,
                     reference_quaternion,
                     poses[target_index, :3],
@@ -1823,12 +1953,11 @@ class UnifiedRobotDataset(
 
         image = np.asarray(Image.open(io.BytesIO(images[start])).convert("RGB"))
         instruction = languages[start].decode("utf-8", errors="replace")
-        return (
-            instruction,
-            prepare_image(image),
-            torch.tensor([current_gripper], dtype=torch.float32),
-            pad_action_chunk(actions, self.chunk_size),
-        )
+        current_input = torch.tensor([current_gripper], dtype=torch.float32)
+        if getattr(self, "oxe_command_input", False):
+            from oxe_source_semantics import last_command_features
+            current_input = torch.from_numpy(last_command_features("fractal", commanded_closed[:start]))
+        return (instruction, prepare_image(image), current_input, pad_action_chunk(actions, self.chunk_size))
 
 
 if __name__ == "__main__":

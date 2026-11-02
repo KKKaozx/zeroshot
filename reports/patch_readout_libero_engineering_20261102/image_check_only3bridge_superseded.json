@@ -1,0 +1,42 @@
+{
+  "bridge_images": 3,
+  "bridge_validation_images": 1,
+  "libero_images": 50,
+  "anchor_slot": 10399,
+  "shared_instruction": "turn lever vertical to front",
+  "dino_cls_cosine": {
+    "bridge_bridge_mean": 0.25902631878852844,
+    "libero_libero_mean": 0.8815726637840271,
+    "bridge_libero_mean": 0.18058253824710846,
+    "bridge_nearest_other_bridge_mean": 0.32374098896980286,
+    "libero_nearest_bridge_mean": 0.22379380464553833
+  },
+  "policy_context_spread": {
+    "bridge": 16.03312873840332,
+    "libero": 3.9728996753692627,
+    "distance_between_means": 19.8223934173584
+  },
+  "first_waypoint_spread_m": {
+    "bridge": 0.00516702001914382,
+    "libero": 0.0016700637061148882,
+    "libero_task_instruction": 0.0017030772287398577
+  },
+  "mean_first_waypoint_m": {
+    "bridge": [
+      -0.00139999995008111,
+      -0.0024999999441206455,
+      -0.0031999999191612005
+    ],
+    "libero": [
+      -0.005499999970197678,
+      0.013500000350177288,
+      0.0044999998062849045
+    ],
+    "libero_task_instruction": [
+      -0.0032999999821186066,
+      0.011500000022351742,
+      0.0019000000320374966
+    ]
+  },
+  "note": "Numeric inputs fixed to one Bridge dev window, history masked; only the image changes."
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-29",
+  "formal_tests_passed": 4,
+  "unchanged_preflight_regression_tests_passed": 8,
+  "test_source_sha256": "1d707c94d86e33aec3b29bc5ea29e544c5d8414362acd2e818ae16c336a0aadf",
+  "coverage": [
+    "Actual metadata/check-only entry; original files, report and exact resource receipt bound; altered receipt rejected; no CUDA init",
+    "Actual promoted run_arm from qualified source, two-step CPU toy fixture; first two updates equal original preflight",
+    "Nonempty sourceAdam retained, new cold port group; core/port/Adam/plan/schedule/RNG after interruption/resume equal continuous run",
+    "Own formal checkpoint format; engineering-format checkpoint rejected",
+    "Actual endpoint evaluator main with original120 real numeric labels and CPU encoder/sampler stand-ins;90 batches; save/read/metrics verification",
+    "Real source availability masks; LT rotation remainsnull; fixed Bridge64 bootstrap and gate directions"
+  ],
+  "python_source_compilation_passed": true,
+  "shell_validation": "LF/header/static only; Bash not executed locally",
+  "real_frozen_encoders_loaded": 0,
+  "cuda_formal_training_executed": false,
+  "formal_jobs_submitted": 0,
+  "passed_preflight_code_and_zip_unchanged": true,
+  "old_source_weights_and_artifacts_unchanged": true,
+  "cpu_fixture_horizon_note": "Formal driver loop shortened to2 in disposable toy fixture only; package remains2048per role",
+  "development_fix": "Corrected indentation in new CPU test fixture before final passing run; no passed preflight files altered",
+  "package": {
+    "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\oxe_current_pose_formal_v1.zip",
+    "bytes": 20603,
+    "sha256": "ad9dc78380c2d7eb2fab08c0ecbedd2b850c25e3ddfaee7a4b67bfc22b63a900",
+    "members": 14,
+    "passed_preflight_zip_unchanged": true,
+    "contains_model_or_data_bytes": false,
+    "cluster_formal_submitted": false,
+    "python_sources_compiled": true,
+    "shell_checks": "LF/header/static checks only; Bash not executed locally"
+  },
+  "scope": "CPU control-flow and state checks do not qualify actual CUDA kernels or task performance"
+}

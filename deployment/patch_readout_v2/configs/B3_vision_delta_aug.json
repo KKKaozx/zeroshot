@@ -1,0 +1,17 @@
+{
+  "name": "B3_vision_delta_aug",
+  "description": "B2+缓存的通用图像增强(4个版本随机取)",
+  "target": "future_pose",
+  "augment": true,
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "spatial",
+    "use_pose18": false,
+    "use_current2": false,
+    "history": [
+      "state_delta"
+    ],
+    "history_dropout": 0.5
+  }
+}

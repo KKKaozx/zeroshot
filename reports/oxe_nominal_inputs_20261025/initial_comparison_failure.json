@@ -1,0 +1,13 @@
+{
+  "passed": false,
+  "stage": "initial independent SciPy SLERP comparison before catalogue creation",
+  "initial_component_atol": 1e-7,
+  "observed_max_sign_equivalent_component_difference": 3.727622801541486e-7,
+  "observed_max_angle_difference_deg": 0.000057005945138216206,
+  "cause": "Production shortest-path interpolation uses normalized-linear fallback for dot > .9995, while SciPy follows the exact curve",
+  "repair": "Keep the generated targets and interpolation unchanged; explicitly check both 1e-6 component tolerance and 1e-4 degree angular tolerance",
+  "target_labels_changed": false,
+  "old_checkpoint_replay_guard_changed": false,
+  "training_updates": 0,
+  "following_report": "attempt2/report.json"
+}

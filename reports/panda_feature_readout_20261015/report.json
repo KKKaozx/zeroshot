@@ -1,0 +1,103 @@
+{
+  "complete": true,
+  "source_unchanged": true,
+  "folds": 16,
+  "feature_dimension": 1024,
+  "readouts": {
+    "clip_pooled": {
+      "resubstitution": {
+        "path_position_cm": 0.007754818078102653,
+        "endpoint_position_cm": 0.011914772305537119,
+        "future_step12_position_cm": 0.011829151109325125,
+        "max_window_path_cm": 0.01439664361053037
+      },
+      "leave_one_position_out": {
+        "path_position_cm": 3.2528594419054997,
+        "endpoint_position_cm": 4.997831990400727,
+        "future_step12_position_cm": 4.961884030893612,
+        "max_window_path_cm": 6.282166912491898
+      },
+      "wrong_alignment_control": {
+        "path_position_cm": 7.537714490905733,
+        "endpoint_position_cm": 11.581027655170516,
+        "future_step12_position_cm": 11.498027014094742,
+        "max_window_path_cm": 14.574501787545426
+      },
+      "interpretations": "Training fit alone is not evidence; cross-validation evaluates an auxiliary readout of original training-policy representations"
+    },
+    "adapter_mixed": {
+      "resubstitution": {
+        "path_position_cm": 2.2817829398750895,
+        "endpoint_position_cm": 3.505623521013421,
+        "future_step12_position_cm": 3.4805525496478644,
+        "max_window_path_cm": 4.356708104946929
+      },
+      "leave_one_position_out": {
+        "path_position_cm": 4.492234092405509,
+        "endpoint_position_cm": 6.90168776566741,
+        "future_step12_position_cm": 6.852295941134406,
+        "max_window_path_cm": 8.149415661685126
+      },
+      "wrong_alignment_control": {
+        "path_position_cm": 7.890491103994666,
+        "endpoint_position_cm": 12.12293483478961,
+        "future_step12_position_cm": 12.03618657266728,
+        "max_window_path_cm": 12.6070540358353
+      },
+      "interpretations": "Training fit alone is not evidence; cross-validation evaluates an auxiliary readout of original training-policy representations"
+    },
+    "adapter_initial_only": {
+      "resubstitution": {
+        "path_position_cm": 1.377459380769536,
+        "endpoint_position_cm": 2.1163862343835844,
+        "future_step12_position_cm": 2.1011616196664296,
+        "max_window_path_cm": 2.300406539672651
+      },
+      "leave_one_position_out": {
+        "path_position_cm": 2.9070028311287954,
+        "endpoint_position_cm": 4.466465125839053,
+        "future_step12_position_cm": 4.434318282474722,
+        "max_window_path_cm": 5.5533915992425555
+      },
+      "wrong_alignment_control": {
+        "path_position_cm": 7.739968462714376,
+        "endpoint_position_cm": 11.891818039884946,
+        "future_step12_position_cm": 11.806509384184048,
+        "max_window_path_cm": 11.352071599538629
+      },
+      "interpretations": "Training fit alone is not evidence; cross-validation evaluates an auxiliary readout of original training-policy representations"
+    }
+  },
+  "mean_target_leave_one_out": {
+    "path_position_cm": 5.835999829527888,
+    "endpoint_position_cm": 8.966325032819192,
+    "future_step12_position_cm": 8.902200731222718,
+    "max_window_path_cm": 6.986383882978937
+  },
+  "native_policy_comparison": {
+    "original_mixed": {
+      "path_position_cm": 7.151732668080645,
+      "endpoint_position_cm": 10.941630665419678,
+      "future_step12_position_cm": 10.886279366450802,
+      "max_window_path_cm": 12.288147290259078
+    },
+    "initial_only": {
+      "path_position_cm": 4.2926398293053545,
+      "endpoint_position_cm": 6.507689145931683,
+      "future_step12_position_cm": 6.52496190892134,
+      "max_window_path_cm": 10.228185814144581
+    }
+  },
+  "max_dual_svd_prediction_difference_m": 1.765254609153999e-13,
+  "output_sha256": "8a6afe14e4bcfa8d6d09dd770b7595e04e9be8b7ca336645d1d9d97ec0eb8bde",
+  "neural_training_updates": 0,
+  "model_inference": false,
+  "development_used": false,
+  "test_used": false,
+  "limitations": [
+    "Representations were learned using these16 policy-training observations; auxiliary heldout folds are not policy-heldout data.",
+    "Success proves a simple geometric readout exists in the inspected pooled representation; not a complete policy or physical grasp.",
+    "Failure of one fixed linear readout does not prove information absence or uniquely blame CLIP/Adapter.",
+    "This is a posthoc module diagnostic, not replacement of the required diffusion method."
+  ]
+}

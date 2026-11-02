@@ -1,0 +1,68 @@
+{
+  "scope": "Existing completed seed42 update-index history and already-frozen source instruction metadata only; no images, model or new training",
+  "training_updates": 65536,
+  "total_window_presentations": 524276,
+  "source_exposure": {
+    "Bridge": {
+      "training_windows": 10352,
+      "actual_window_presentations": 131244,
+      "mean_presentations_per_window": 12.678129829984544,
+      "windows_never_sampled": 0,
+      "sampled_window_fraction": 1.0,
+      "max_presentations": 28
+    },
+    "Language Table": {
+      "training_windows": 12214,
+      "actual_window_presentations": 131033,
+      "mean_presentations_per_window": 10.728098902898314,
+      "windows_never_sampled": 1,
+      "sampled_window_fraction": 0.9999181267398067,
+      "max_presentations": 27
+    },
+    "BC-Z": {
+      "training_windows": 95796,
+      "actual_window_presentations": 131204,
+      "mean_presentations_per_window": 1.3696187732264395,
+      "windows_never_sampled": 24389,
+      "sampled_window_fraction": 0.7454069063426448,
+      "max_presentations": 9
+    },
+    "Fractal": {
+      "training_windows": 27450,
+      "actual_window_presentations": 130795,
+      "mean_presentations_per_window": 4.764845173041894,
+      "windows_never_sampled": 231,
+      "sampled_window_fraction": 0.9915846994535519,
+      "max_presentations": 16
+    }
+  },
+  "fixed_validation_instruction_overlap": {
+    "Bridge": {
+      "selected_windows": 8,
+      "exact_instruction_seen_in_training_same_source": 4,
+      "normalized_instruction_seen_in_training_same_source": 4,
+      "canonical_rule": "UnicodeNFKC,casefold,whitespace; no semantic equivalence inferred"
+    },
+    "Language Table": {
+      "selected_windows": 8,
+      "exact_instruction_seen_in_training_same_source": 2,
+      "normalized_instruction_seen_in_training_same_source": 2,
+      "canonical_rule": "UnicodeNFKC,casefold,whitespace; no semantic equivalence inferred"
+    },
+    "BC-Z": {
+      "selected_windows": 8,
+      "exact_instruction_seen_in_training_same_source": 8,
+      "normalized_instruction_seen_in_training_same_source": 8,
+      "canonical_rule": "UnicodeNFKC,casefold,whitespace; no semantic equivalence inferred"
+    },
+    "Fractal": {
+      "selected_windows": 8,
+      "exact_instruction_seen_in_training_same_source": 8,
+      "normalized_instruction_seen_in_training_same_source": 8,
+      "canonical_rule": "UnicodeNFKC,casefold,whitespace; no semantic equivalence inferred"
+    }
+  },
+  "interpretation_limit": "Coverage counts do not prove convergence or budget as the unique cause. Exact text overlap does not establish identical tasks/objects or semantic novelty. No extra training admitted.",
+  "new_inference_calls": 0,
+  "optimizer_updates": 0
+}

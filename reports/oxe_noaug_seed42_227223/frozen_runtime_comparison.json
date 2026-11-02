@@ -1,0 +1,50 @@
+{
+  "expected_cluster_frozen_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "actual_local_frozen_sha256": "7cd8554464b8b23cb6014cde9575d48300441f8f13d19203d69f6518d42782ea",
+  "local_profile_matches_actual_loader_failure": true,
+  "same_key_order": true,
+  "missing_keys": [],
+  "extra_keys": [],
+  "changed_keys": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "changed_encoder_keys": [],
+  "changed_schedule_keys": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "unchanged_frozen_tensor_count": 639,
+  "local_torch_version": "2.11.0+cu128",
+  "guard_weakened": false,
+  "model_forward_calls": 0,
+  "optimizer_updates": 0,
+  "neural_models_constructed": 0,
+  "schedule_differences": {
+    "betas": {
+      "max_abs": 0.0,
+      "unequal_values": 0
+    },
+    "alphas": {
+      "max_abs": 0.0,
+      "unequal_values": 0
+    },
+    "alpha_bars": {
+      "max_abs": 0.0,
+      "unequal_values": 0
+    },
+    "posterior_variance": {
+      "max_abs": 0.0,
+      "unequal_values": 0
+    },
+    "posterior_mean_x0": {
+      "max_abs": 7.450580596923828e-09,
+      "unequal_values": 15
+    },
+    "posterior_mean_xt": {
+      "max_abs": 1.1920928955078125e-07,
+      "unequal_values": 14
+    }
+  },
+  "classification": "Frozen encoder tensors identical; only derived diffusion constants differ across runtimes"
+}

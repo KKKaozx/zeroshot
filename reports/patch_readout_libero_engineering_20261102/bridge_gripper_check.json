@@ -1,0 +1,95 @@
+{
+  "windows": 64,
+  "history": "masked",
+  "true_current_counts": {
+    "[0, 0]": 1,
+    "[1, 1]": 19,
+    "[-1, 1]": 44
+  },
+  "label_first_command_y": {
+    "mean_m": 0.0031,
+    "fraction_plus_y": 0.531
+  },
+  "results": {
+    "pose_own__unknown": {
+      "mean_first_waypoint_m": [
+        -0.0007999999797903001,
+        0.0013000000035390258,
+        -0.0015999999595806003
+      ],
+      "mean_y_m": 0.0013,
+      "fraction_plus_y": 0.641,
+      "corr_y_with_label": 0.386
+    },
+    "pose_own__open": {
+      "mean_first_waypoint_m": [
+        0.0008999999845400453,
+        0.00039999998989515007,
+        -0.0008999999845400453
+      ],
+      "mean_y_m": 0.0004,
+      "fraction_plus_y": 0.578,
+      "corr_y_with_label": 0.362
+    },
+    "pose_own__closed": {
+      "mean_first_waypoint_m": [
+        0.0006000000284984708,
+        0.0020000000949949026,
+        0.005499999970197678
+      ],
+      "mean_y_m": 0.002,
+      "fraction_plus_y": 0.547,
+      "corr_y_with_label": 0.637
+    },
+    "pose_own__true": {
+      "mean_first_waypoint_m": [
+        0.0010000000474974513,
+        0.0017999999690800905,
+        0.0038999998942017555
+      ],
+      "mean_y_m": 0.0018,
+      "fraction_plus_y": 0.609,
+      "corr_y_with_label": 0.66
+    },
+    "pose_median__unknown": {
+      "mean_first_waypoint_m": [
+        -0.0003000000142492354,
+        0.0006000000284984708,
+        -0.0013000000035390258
+      ],
+      "mean_y_m": 0.0006,
+      "fraction_plus_y": 0.578,
+      "corr_y_with_label": 0.444
+    },
+    "pose_median__open": {
+      "mean_first_waypoint_m": [
+        0.0012000000569969416,
+        -0.0007999999797903001,
+        0.002199999988079071
+      ],
+      "mean_y_m": -0.0008,
+      "fraction_plus_y": 0.547,
+      "corr_y_with_label": 0.323
+    },
+    "pose_median__closed": {
+      "mean_first_waypoint_m": [
+        0.0019000000320374966,
+        0.0013000000035390258,
+        0.005799999926239252
+      ],
+      "mean_y_m": 0.0013,
+      "fraction_plus_y": 0.531,
+      "corr_y_with_label": 0.603
+    },
+    "pose_median__true": {
+      "mean_first_waypoint_m": [
+        0.0017999999690800905,
+        0.00019999999494757503,
+        0.004699999932199717
+      ],
+      "mean_y_m": 0.0002,
+      "fraction_plus_y": 0.547,
+      "corr_y_with_label": 0.606
+    }
+  }
+}

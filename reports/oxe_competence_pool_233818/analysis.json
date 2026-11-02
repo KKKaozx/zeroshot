@@ -1,0 +1,203 @@
+{
+  "job_id": 233818,
+  "status": "raw_array_audit_complete_not_adopted",
+  "terminal_sha256": "8bef9d06b24eb5232cb3dcd5bf8dba0e7fca459f3e13bf284c445e86276ede19",
+  "output_verified_reported": true,
+  "completion_marker_observed": true,
+  "new_updates": 4096,
+  "source_schedule_endpoint": 14336,
+  "control_retrained": false,
+  "printed_update_rows_checked": 18,
+  "all_printed_indices_lrs_masks_token_shapes_match_plan": true,
+  "original_source_and_control_means_per_window_and_motion_recomputed_from_downloaded_prior_arrays": true,
+  "candidate_printed_per_window_means_recomputed": true,
+  "source_replay_and_all_actual_noise_t_rng_matching_reported": true,
+  "training_anchor_metrics_worse_than_both_control_and_static": 14,
+  "training_anchor_available_metrics": 14,
+  "train32_summary": {
+    "Bridge": {
+      "moderate_pool": {
+        "path_position_normalized": 1.5829878377463642,
+        "path_rotation_deg": 17.375706954490482,
+        "endpoint_position_normalized": 1.9176984632275302,
+        "endpoint_rotation_deg": 20.66081923614606
+      },
+      "replacement": {
+        "path_position_normalized": 1.1486191378081039,
+        "path_rotation_deg": 10.174388902547776,
+        "endpoint_position_normalized": 1.5770895609856308,
+        "endpoint_rotation_deg": 14.752029082980279
+      },
+      "static": {
+        "path_position_normalized": 0.8854155122030833,
+        "path_rotation_deg": 9.915310143340463,
+        "endpoint_position_normalized": 1.3268808784454649,
+        "endpoint_rotation_deg": 14.783837884331922
+      },
+      "source232587": {
+        "path_position_normalized": 1.6726405329108665,
+        "path_rotation_deg": 16.120382305602796,
+        "endpoint_position_normalized": 2.38945094014149,
+        "endpoint_rotation_deg": 21.152069035082423
+      },
+      "candidate_motion": {
+        "windows": 8,
+        "prediction_amplitude": 1.083566418709717,
+        "expert_amplitude": 0.8854155122030832,
+        "prediction_to_expert_amplitude_ratio": 1.2237942567931708,
+        "mean_direction_cosine_nonzero_pairs": -0.12269455635156229,
+        "positive_direction_fraction_nonzero_pairs": 0.4437560125060125,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    },
+    "Language Table": {
+      "moderate_pool": {
+        "path_position_normalized": 1.2446224317555206,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 1.6023313517324747,
+        "endpoint_rotation_deg": null
+      },
+      "replacement": {
+        "path_position_normalized": 0.6665746881616811,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 0.9076058942605767,
+        "endpoint_rotation_deg": null
+      },
+      "static": {
+        "path_position_normalized": 0.6229287497194318,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 0.8655653908885874,
+        "endpoint_rotation_deg": null
+      },
+      "source232587": {
+        "path_position_normalized": 1.1161200226886783,
+        "path_rotation_deg": null,
+        "endpoint_position_normalized": 1.3328686456945729,
+        "endpoint_rotation_deg": null
+      },
+      "candidate_motion": {
+        "windows": 8,
+        "prediction_amplitude": 1.0999603531007374,
+        "expert_amplitude": 0.6229287497194318,
+        "prediction_to_expert_amplitude_ratio": 1.7657883884732586,
+        "mean_direction_cosine_nonzero_pairs": -0.09669756269586288,
+        "positive_direction_fraction_nonzero_pairs": 0.4551917989417989,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    },
+    "BC-Z": {
+      "moderate_pool": {
+        "path_position_normalized": 1.0720398777781899,
+        "path_rotation_deg": 16.01850814247463,
+        "endpoint_position_normalized": 1.5244806816296457,
+        "endpoint_rotation_deg": 20.285862686544128
+      },
+      "replacement": {
+        "path_position_normalized": 0.6496172237468176,
+        "path_rotation_deg": 8.136992217996559,
+        "endpoint_position_normalized": 1.1811473365890084,
+        "endpoint_rotation_deg": 13.87042110938864
+      },
+      "static": {
+        "path_position_normalized": 0.5464564176414228,
+        "path_rotation_deg": 8.251046109774062,
+        "endpoint_position_normalized": 1.0883822188208625,
+        "endpoint_rotation_deg": 14.003761859199567
+      },
+      "source232587": {
+        "path_position_normalized": 1.3241604098864963,
+        "path_rotation_deg": 13.338113835091029,
+        "endpoint_position_normalized": 2.0606529699997176,
+        "endpoint_rotation_deg": 16.929831241705624
+      },
+      "candidate_motion": {
+        "windows": 8,
+        "prediction_amplitude": 0.9868584526392026,
+        "expert_amplitude": 0.5464564176414228,
+        "prediction_to_expert_amplitude_ratio": 1.805923438320319,
+        "mean_direction_cosine_nonzero_pairs": 0.1365941735907966,
+        "positive_direction_fraction_nonzero_pairs": 0.6635416666666667,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    },
+    "Fractal": {
+      "moderate_pool": {
+        "path_position_normalized": 1.9863122822321857,
+        "path_rotation_deg": 24.604186407403734,
+        "endpoint_position_normalized": 2.5118301922167534,
+        "endpoint_rotation_deg": 34.87733240312174
+      },
+      "replacement": {
+        "path_position_normalized": 1.1515825881879378,
+        "path_rotation_deg": 16.376729173388753,
+        "endpoint_position_normalized": 1.832187015774414,
+        "endpoint_rotation_deg": 28.07420148761678
+      },
+      "static": {
+        "path_position_normalized": 1.257950527150177,
+        "path_rotation_deg": 16.639596305852248,
+        "endpoint_position_normalized": 2.1487310962251023,
+        "endpoint_rotation_deg": 28.359996471821844
+      },
+      "source232587": {
+        "path_position_normalized": 2.214211360140416,
+        "path_rotation_deg": 19.54950560324358,
+        "endpoint_position_normalized": 3.559399597307467,
+        "endpoint_rotation_deg": 31.85007846604151
+      },
+      "candidate_motion": {
+        "windows": 8,
+        "prediction_amplitude": 2.3277683094640045,
+        "expert_amplitude": 1.2579505271501772,
+        "prediction_to_expert_amplitude_ratio": 1.8504450367674197,
+        "mean_direction_cosine_nonzero_pairs": 0.3890262580863715,
+        "positive_direction_fraction_nonzero_pairs": 0.7760416666666666,
+        "scope": "Descriptive window-equal masked position norms/cosines; zero vectors excluded from direction; not an added admission gate"
+      }
+    }
+  },
+  "better_static_window_counts": {
+    "Bridge": {
+      "windows": 8,
+      "all_available_four_metrics_better_static": 0
+    },
+    "Language Table": {
+      "windows": 8,
+      "all_available_four_metrics_better_static": 2
+    },
+    "BC-Z": {
+      "windows": 8,
+      "all_available_four_metrics_better_static": 0
+    },
+    "Fractal": {
+      "windows": 8,
+      "all_available_four_metrics_better_static": 1
+    }
+  },
+  "limited_training_anchor_support": false,
+  "conclusion": "This512window intervention did not establish competence on the original32seen training anchors; every available source-level mean worsened versus equal-update full-pool control and static. Pool reduction/repetition did not solve the issue under this fixed checkpoint/LR/budget.",
+  "causal_limits": [
+    "Only32anchors evaluated, not all512;8groups per source",
+    "One source checkpoint/training seed and different allocation from old control",
+    "Pool diversity/membership/exposure change together; does not isolate or prove mixed-source interference",
+    "No evidence here that DINO inherently cannot fit, that the complete x0horizon failed, or that more/fewer updates alone explain it"
+  ],
+  "candidate_report_arrays_full_checkpoint_downloaded": false,
+  "candidate_metrics_independently_recomputed_from_raw_predictions": true,
+  "validation_metrics_received": true,
+  "slurm_final_state_received": false,
+  "elapsed_total_received": true,
+  "next_action": "Bounded intervention closed; source training competence remains unresolved. No extra training/variant/seed/LIBERO authorized by this audit.",
+  "new_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "gpu_used_by_review": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false,
+  "raw_endpoint_files_downloaded": true,
+  "candidate_report_arrays_downloaded": true,
+  "all_reported_metric_tree_recomputed": true,
+  "elapsed_seconds_reported": 1499.2224463936873,
+  "peak_reserved_gib_reported": 4.5703125,
+  "download_verification": "reports/oxe_competence_pool_233818/download_verification.json",
+  "independent_array_audit": "reports/oxe_competence_pool_233818/independent_array_audit.json"
+}

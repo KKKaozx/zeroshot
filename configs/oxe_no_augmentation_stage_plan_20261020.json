@@ -1,0 +1,280 @@
+{
+  "status": "engineering_actual_windows_and_train_instruction_catalog_integrated_physical_admission_pending",
+  "purpose": "Prepare an OXE-only no-augmentation main baseline before the matched language conditions",
+  "candidate_manifest": "reports/oxe_baseline_candidates_20261020/episode_candidates.json",
+  "inventory_report": "reports/oxe_baseline_candidates_20261020/report.json",
+  "source_units_time_evidence_report": "reports/oxe_units_time_evidence_20261020/report.json",
+  "source_conversion_lineage_review": "reports/oxe_conversion_lineage_20261020/report.json",
+  "source_conversion_lineage_review_complete": true,
+  "source_pose_support_addendum": "reports/oxe_pose_source_support_20261020/report.json",
+  "fractal_quaternion_order_support": "same_named_0.1.0_release_in_independent_system_identification_code_supports_xyzw",
+  "exact_export_physical_contracts_complete": false,
+  "remaining_source_evidence_note": "docs/OXE_REMAINING_SOURCE_EVIDENCE_20261020.md",
+  "requested_missing_source_information": "Answered: both from gs://gresearch/robotics; local BC-Z 1.0.0 and Language Table 0.1.0 metadata byte-identical to corresponding bucket objects",
+  "bucket_release_binding_report": "reports/oxe_bucket_release_evidence_20261020/report.json",
+  "bucket_metadata_byte_identity_verification": "reports/oxe_bucket_release_evidence_20261020/verification.json",
+  "language_table_control_vs_training_pair_hz_conflict_resolved": false,
+  "bucket_sidecar_listing_report": "reports/oxe_bucket_sidecars_20261020/report.json",
+  "main_runner_static_readiness_report": "reports/oxe_runner_readiness_20261020/report.json",
+  "remaining_items_note": "docs/OXE_MAIN_TRAINING_REMAINING_ITEMS_20261020.md",
+  "next_independent_engineering_work": "Resolve common physical action units/frame/TCP and target-time protocol; bind final bounded train/validation windows and original catalogue, then qualify formal configuration resources/resume. Do not repeat train numeric scan or old model fits.",
+  "fixed_update_resume_component": "code/step_training_state.py",
+  "fixed_update_resume_component_cpu_report": "reports/step_training_state_20261020/report.json",
+  "fixed_update_resume_component_cuda_report": "reports/step_training_state_cuda_20261020/report.json",
+  "fixed_update_resume_component_passed": true,
+  "fixed_update_resume_main_runner_integrated": true,
+  "fixed_update_resume_main_runner_qualified": true,
+  "fixed_update_resume_main_runner_qualification_scope": "Synthetic dependencies through actual train(parse_args) entry; same-environment CPU and CUDA; 48 ordinary plus 4 language resume paths per device; not real CLIP/data/resource qualification",
+  "fixed_update_resume_main_runner_cpu_report": "reports/step_main_runner_20261020/report.json",
+  "fixed_update_resume_main_runner_cuda_report": "reports/step_main_runner_cuda_20261020/report.json",
+  "fixed_update_resume_main_runner_note": "docs/OXE_MAIN_FIXED_UPDATE_INTEGRATION_20261020.md",
+  "fixed_update_real_model_resource_preflight_passed": false,
+  "bcz_paper_target_crosswalk_report": "reports/bcz_paper_target_crosswalk_20261020/report.json",
+  "bcz_paper_target_crosswalk_note": "docs/BCZ_PAPER_TARGET_CROSSWALK_20261020.md",
+  "checkpoint_to_execution_target_time_contract_bound": false,
+  "window_target_protocol_component": "code/window_target_protocol.py",
+  "window_target_protocol_component_report": "reports/window_target_protocol_20261020/report.json",
+  "window_target_protocol_component_note": "docs/WINDOW_TARGET_PROTOCOL_20261020.md",
+  "window_target_protocol_component_synthetic_checks_passed": true,
+  "window_target_protocol_bound_to_real_window_manifest": true,
+  "window_target_protocol_integrated_into_existing_entrypoints": false,
+  "formal_window_target_contract_requirements": [
+    "Explicit observed-reached versus native-setpoint label family; tensor shape alone is insufficient",
+    "Per-source units/frame/TCP/reference and relative-versus-incremental geometry",
+    "Target row/slot mapping and source-backed timing; unknown stays unknown",
+    "Pose/gripper row/slot pairing, command association and valid supervision masks",
+    "Same qualified contract in window manifest, training checkpoint, evaluation and executor"
+  ],
+  "origin_content_group_manifest": "reports/oxe_origin_groups_20261020/episode_groups.json",
+  "origin_content_group_report": "reports/oxe_origin_groups_20261020/report.json",
+  "frozen_engineering_episode_role_manifest": "reports/oxe_episode_roles_20261020/episode_roles.json",
+  "episode_role_report": "reports/oxe_episode_roles_20261020/report.json",
+  "engineering_role_counts": {
+    "train": 4127,
+    "validation": 516,
+    "source_holdout": 515
+  },
+  "main_runner_window_manifest_created": true,
+  "candidate_episodes": 5158,
+  "candidate_counts": {
+    "Bridge": 399,
+    "Language Table": 3436,
+    "BC-Z": 643,
+    "Fractal": 680
+  },
+  "existing_cache_shards": 32,
+  "existing_cache_bytes": 6050435258,
+  "candidate_pool_is_full_required_training_data": false,
+  "candidate_pool_is_a_completed_training_manifest": false,
+  "libero_or_cliport_demonstrations_used_for_training": false,
+  "new_source_semantics_module": "code/oxe_source_semantics.py",
+  "new_source_semantics_check": "reports/oxe_source_semantics_20261020.json",
+  "planned_gripper_input": {
+    "features": [
+      "last_open_positive_command",
+      "availability"
+    ],
+    "unknown": [
+      0,
+      0
+    ],
+    "known_open": [
+      1,
+      1
+    ],
+    "known_closed": [
+      -1,
+      1
+    ],
+    "causal_history_only": true,
+    "main_training_integration_complete": true,
+    "integration_scope": "Opt-in mode for the three defined 3D source schemas; Language Table remains explicitly rejected",
+    "cli_flag": "--oxe-command-input",
+    "gripper_target_mode_required": "state",
+    "integration_report": "reports/oxe_command_chain_integration_20261020/report.json"
+  },
+  "language_table_frame_admission": {
+    "real_tool_orientation_present_in_feature_schema": false,
+    "real_calibration_obtained": false,
+    "projected_xy_loss_kernel_implemented": true,
+    "synthetic_projection_gradient_checks_passed": true,
+    "tool_projection_loss_integrated": false,
+    "tool_frame_source_admitted": false,
+    "source_cartesian_masked_loss_checked": true,
+    "missing_command_feature_parser_checked": true,
+    "partial_supervision_check": "reports/language_table_overlap_20261020/partial_supervision_check.json",
+    "existing_cache_group_manifest": "reports/language_table_overlap_20261020/episode_groups.json",
+    "existing_cache_group_report": "reports/language_table_overlap_20261020/report.json",
+    "exact_encoded_frame_groups": 3370,
+    "grouped_records": 3436,
+    "origin_independence_proven": false,
+    "engineering_episode_roles_frozen": true,
+    "main_window_partitions_frozen": false
+  },
+  "source_cartesian_interface_candidate": {
+    "representation": "source_cartesian_delta_pose_open_positive_v1",
+    "cli_flag": "--action-frame source_cartesian",
+    "requires_command_availability_input": true,
+    "requires_verified_real_lt_group_manifest": true,
+    "all_four_source_parsers_and_libero_runtime_integrated": true,
+    "test_report": "reports/oxe_cartesian_interface_20261020/report.json",
+    "tool_orientation_not_required_for_planar_xy": true,
+    "physical_cross_robot_frame_alignment_proven": false,
+    "default_enabled": false,
+    "formal_training_protocol_frozen": false
+  },
+  "source_contracts": {
+    "Bridge": {
+      "target": "Future measured reached poses relative to observation tool frame",
+      "gripper_target_policy": "reverse_scan_valid_steps_v2",
+      "existing_input": "Measured opening; binary threshold or affine continuous encoding according to explicit existing mode",
+      "existing_good_reference": "207558 offline pose reference only, not a fully trained gripper baseline",
+      "prior_checks_reused": [
+        "reports/bridge_expansion_source_audit_verified_v1.json",
+        "docs/TEACHER_THREE_CONTRACT_CHECKS_20261011.md"
+      ],
+      "remaining": [
+        "Source units/axes, target timing and deployment binding",
+        "Whole candidate-pool eligibility and origin/content deduplication"
+      ]
+    },
+    "Language Table": {
+      "target": "Current parser uses future planar effector_translation differences with assumed identity orientation",
+      "valid_output_dimensions": [
+        "x",
+        "y"
+      ],
+      "existing_input": "Gripper placeholder +1, no measured gripper",
+      "opt_in_candidate_target": "Recorded-source XY reached displacement; z/rotation/gripper masked; temporal padding masked",
+      "opt_in_candidate_input": "No gripper command: [0,0]; verified real-record/group binding required",
+      "real_data_identity_evidence": "Local metadata name language_table and 442226 train episodes agree with author real-data description",
+      "prior_checks_reused": [
+        "reports/core_source_fixed_record_checks.json"
+      ],
+      "remaining": [
+        "Recorded-source coordinate units/axes provenance and real recording timing",
+        "Origin/session or content alias checks beyond exact encoded-frame groups",
+        "Freeze the new representation and common time-window protocol; legacy tool-frame path still requires real orientation evidence"
+      ]
+    },
+    "BC-Z": {
+      "target": "Future measured xyz/axis-angle poses; keep native ten-command diagnostic separate",
+      "gripper_target_policy": "preceding_command_v2",
+      "existing_input": "Thresholded sensed_close, a measurement rather than last command",
+      "prior_checks_reused": [
+        "reports/core_source_fixed_record_checks.json",
+        "reports/bcz_measured_command_label_check.json"
+      ],
+      "remaining": [
+        "Units, timing and recorded-frame provenance",
+        "Candidate-pool validity and full-episode partitioning"
+      ]
+    },
+    "Fractal": {
+      "target": "Future measured base_pose_tool_reached relative poses",
+      "gripper_target_policy": "relative_scan_v2",
+      "existing_input": "Thresholded gripper_closed measurement",
+      "prior_checks_reused": [
+        "reports/core_source_fixed_record_checks.json"
+      ],
+      "remaining": [
+        "Physical units, quaternion convention and timing provenance",
+        "Candidate-pool validity and origin/content deduplication"
+      ]
+    }
+  },
+  "training_design": {
+    "language_condition": "no_augmentation",
+    "clip_vision_and_text_frozen": true,
+    "adapter": {
+      "layers": 8,
+      "attention_channels": 512
+    },
+    "action_representation": null,
+    "action_representation_candidates": [
+      "source_cartesian_delta_pose_open_positive_v1",
+      "tool_relative_pose_open_positive_v2_requires_real_LT_mapping"
+    ],
+    "output_horizon": 16,
+    "source_sampling_proposal": {
+      "Bridge": 0.25,
+      "Language Table": 0.25,
+      "BC-Z": 0.25,
+      "Fractal": 0.25
+    },
+    "sampling_proposal_accepted": false,
+    "update_budget": null,
+    "batch_size": null,
+    "learning_rate": null,
+    "decoder_architecture_and_objective_frozen": false,
+    "first_engineering_training_seed": 42,
+    "formal_independent_training_seeds": [
+      42,
+      43,
+      44
+    ],
+    "same_split_across_seeds_and_conditions": true,
+    "additional_requirements": [
+      "Explicit main-runner architecture/settings including multiscale if chosen; never assume model support means CLI integration",
+      "Step-based fixed budget and complete optimizer/scheduler/RNG resume",
+      "Source-weight and partial-supervision loss accounting",
+      "Frozen backbone identity and complete gripper training provenance"
+    ]
+  },
+  "next_bounded_work": [
+    "Qualify real candidate source targets, units and timing for the integrated opt-in command-input mode; no new fitting experiment",
+    "Qualify the new explicit source-Cartesian candidate on source units/axes/timing and target ranges; keep old tool-frame baseline frozen",
+    "Check only remaining source-contract items, reusing existing numeric probes",
+    "Use the frozen engineering episode roles; finish export unit/rate binding, then enumerate valid windows without moving episode roles",
+    "Fix architecture, source sampling and step budget; qualify the actual mixed-source runner before submission"
+  ],
+  "training_ready": false,
+  "new_jobs_submitted": false,
+  "pusht214273_and_bridge207558_modified": false,
+  "engineering_window_manifest": "reports/oxe_window_index_20261025/window_index.json",
+  "actual_main_prepare_split_manifest": "reports/oxe_window_index_20261025/main_prepare_seed42/split_manifest.json",
+  "engineering_window_manifest_report": "reports/oxe_window_index_20261025/report.json",
+  "engineering_window_manifest_checks": "reports/oxe_window_index_20261025/integration_checks.json",
+  "window_target_protocol_dataset_prepare_integration_complete": true,
+  "window_target_protocol_checkpoint_executor_integration_complete": false,
+  "window_target_protocol_integration_scope": "Explicit new engineering index in actual Dataset and prepare-only train entry; source contracts remain unknown and actual training/complete checkpoint/executor binding is not admitted",
+  "training_instruction_catalog": "reports/oxe_train_language_20261025/instruction_catalog.json",
+  "training_instruction_catalog_checks": "reports/oxe_train_language_20261025/catalog_checks.json",
+  "training_instruction_catalog_complete": true,
+  "reviewed_language_bank_complete": false,
+  "indexed_window_counts": {
+    "train": 35933,
+    "validation": 5021,
+    "test": 4095
+  },
+  "indexed_episode_counts": {
+    "train": 3363,
+    "test": 415,
+    "validation": 440
+  },
+  "last_preparation_update": "2026-10-25",
+  "local_language_generation_preparation": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "asset_manifest": "reports/local_paraphrase_model_assets_20261025.json",
+    "pilot_report": "reports/local_paraphrase_pilot_20261025_v2/report.json",
+    "text_review": "reports/local_paraphrase_pilot_20261025_v2/text_review.json",
+    "pilot_instructions": 8,
+    "structural_passing_groups": 7,
+    "complete_five_text_accepted_groups": 2,
+    "full_catalog_generated": false,
+    "reviewed_training_bank_ready": false,
+    "automatic_full_generation": false,
+    "status": "local_candidate_chain_runs_quality_not_ready_for_training",
+    "training_updates": 0
+  },
+  "main_visual_backbone": "frozen_dinov2_vitl14",
+  "teacher7_execution_plan": "configs/libero_five_condition_plan_20261025.json",
+  "main_dino_integration_report": "reports/main_dino_integration_20261025/attempt3/report.json",
+  "original_instruction_control_report": "reports/original_instruction_control_20261025/attempt2/report.json",
+  "bounded_candidate_pool": "reports/oxe_bounded_pool_plan_20261025/candidate_shards.json",
+  "bounded_candidate_record_report": "reports/oxe_bounded_records_20261025/report.json",
+  "bounded_candidate_train_numeric_report": "reports/oxe_bounded_numeric_20261025/report.json",
+  "bounded_train_numeric_qualified": true,
+  "formal_physical_execution_qualified": false
+}

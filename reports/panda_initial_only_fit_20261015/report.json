@@ -1,0 +1,109 @@
+{
+  "complete": true,
+  "updates": 1024,
+  "initialization": 43,
+  "initial_group_sha256": {
+    "clip": "404527ba08cabe218719acf9844c3b40a7b53a73e7973054dc4c1d572b914613",
+    "adapter": "3c9084003a9a8963621fde311797ccfc849a6d5800cfc02e410b7d75c355a5e4",
+    "decoder": "980b2dcacaa70e292c4a0f5bc985ca9a8255dfa7dcd11b525dc9ef74a692404b",
+    "gripper": "6ac1ac6d965881c5da5f18a62dd153ea011fe136d0f96bc6fe270067ee32e581"
+  },
+  "final_group_sha256": {
+    "clip": "404527ba08cabe218719acf9844c3b40a7b53a73e7973054dc4c1d572b914613",
+    "adapter": "f4b10e4ae25313390aa281ef6aa693f0c8a6d2f3d2e43ed7fdd2f6b598285b89",
+    "decoder": "65a043cf5decfcc5aca0556f4ed1ffd53a6ed8c4540dec27115199888ab5d783",
+    "gripper": "cc017fe17ff9864b331e2ce5d11a521671646b8ca0d401fa5f8cb20c9902eb0c"
+  },
+  "original_initialization_exact": true,
+  "clip_unchanged": true,
+  "source_unchanged": true,
+  "checkpoint_sha256": "e5d37f6d7251a0fe5581a93715504eaf182ac7414ed577f7e322b2d5cb99ec1f",
+  "checkpoint_bytes": 526174679,
+  "draws_per_window": [
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512
+  ],
+  "metrics": {
+    "position_cm": 4.29263973236084,
+    "rotation_deg": 0.6725605130195618,
+    "endpoint_position_cm": 6.507688999176025,
+    "endpoint_rotation_deg": 0.7628459334373474,
+    "seed_position_cm": [
+      4.896424293518066,
+      3.5036866664886475,
+      4.477808475494385
+    ],
+    "seed_rotation_deg": [
+      0.6732605695724487,
+      0.6684449315071106,
+      0.6759758591651917
+    ],
+    "windows_all_three_seeds_pass": 0,
+    "windows": 16,
+    "static_position_cm": 5.519538879394531,
+    "static_rotation_deg": 0.0,
+    "pose_fit_passed": false
+  },
+  "gripper": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "seed_accuracy": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "seed_balanced_accuracy": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "open_targets": 256,
+    "closed_targets": 0,
+    "always_open_accuracy": 1.0,
+    "always_closed_accuracy": 0.0,
+    "open_to_closed": {
+      "target_pairs": 0,
+      "seed_correct_pairs": [
+        0,
+        0,
+        0
+      ],
+      "seed_pair_accuracy": null
+    },
+    "closed_to_open": {
+      "target_pairs": 0,
+      "seed_correct_pairs": [
+        0,
+        0,
+        0
+      ],
+      "seed_pair_accuracy": null
+    },
+    "observed_state_and_events_fit_passed": false,
+    "release_evaluated": false
+  },
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false,
+  "peak_reserved_gib": 3.017578125,
+  "elapsed_seconds": 221.34399999992456
+}

@@ -1,0 +1,624 @@
+{
+  "review_complete": true,
+  "scope": "Exact cached schemas, reused prior BC-Z audit, new3 LT training-record target/action association only",
+  "metadata": {
+    "Bridge": {
+      "features_path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\features.json",
+      "features_sha256": "0de9f7b8a358762407f7a4351e424973eec1c1059ca6e9d2ed20e44d5e1bcfcf",
+      "observation_fields": [
+        "image_0",
+        "image_1",
+        "image_2",
+        "image_3",
+        "state"
+      ],
+      "action": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "dtype": "float32",
+          "encoding": "none",
+          "shape": {
+            "dimensions": [
+              "7"
+            ]
+          }
+        }
+      },
+      "observations": {
+        "state": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "dtype": "float32",
+            "encoding": "none",
+            "shape": {
+              "dimensions": [
+                "7"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Language Table": {
+      "features_path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\features.json",
+      "features_sha256": "aab4b382f0f235a6327006a8f47c13fa3169f4e2cbf71674b0519649af2d95bd",
+      "observation_fields": [
+        "effector_target_translation",
+        "instruction",
+        "rgb",
+        "effector_translation"
+      ],
+      "action": {
+        "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+        "tensor": {
+          "shape": {
+            "dimensions": [
+              "2"
+            ]
+          },
+          "dtype": "float32",
+          "encoding": "none"
+        },
+        "description": "An action representing a 2D delta cartesian setpoint for the robot."
+      },
+      "observations": {
+        "effector_target_translation": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "2"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "The target location for the end effector as a 2D cartesian setpoint."
+        },
+        "effector_translation": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "2"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "The current end effector translation as a 2D cartesian coordinate."
+        }
+      }
+    },
+    "BC-Z": {
+      "features_path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\features.json",
+      "features_sha256": "298f944d5a3322b5d9eae86f3f88406c4146e9600fe3f097b97ed7413514ef4b",
+      "observation_fields": [
+        "natural_language_embedding",
+        "episode_success",
+        "present/autonomous",
+        "natural_language_instruction",
+        "present/axis_angle",
+        "image",
+        "sequence_length",
+        "present/sensed_close",
+        "present/intervention",
+        "present/xyz"
+      ],
+      "action": {
+        "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict",
+        "featuresDict": {
+          "features": {
+            "future/target_close": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "10"
+                  ]
+                },
+                "dtype": "int64",
+                "encoding": "none"
+              },
+              "description": "The next 10 actions for the gripper. Each action is the value the gripper closure should be changed to (notably it is *not* a delta.)"
+            },
+            "future/axis_angle_residual": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "30"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              },
+              "description": "The next 10 actions for the rotation. Each action is a 3D delta to add to the current axis angle."
+            },
+            "future/xyz_residual": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "30"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              },
+              "description": "The next 10 actions for the positions. Each action is a 3D delta to add to current position."
+            }
+          }
+        }
+      },
+      "observations": {
+        "natural_language_embedding": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "512"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "An embedding of the task via Universal Sentence Encoder (https://tfhub.dev/google/universal-sentence-encoder/4)"
+        },
+        "episode_success": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {},
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "A 0-1 success label"
+        },
+        "present/autonomous": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {},
+            "dtype": "int64",
+            "encoding": "none"
+          },
+          "description": "Episodes are collected via DAgger. This is a 0/1 label for whether the action is from the policy or the teleoperator. 1 = from policy."
+        },
+        "present/axis_angle": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "The current rotation of the end effector in axis-angle representation."
+        },
+        "sequence_length": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {},
+            "dtype": "int64",
+            "encoding": "none"
+          },
+          "description": "Length of the episode"
+        },
+        "present/sensed_close": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "1"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "How much the gripper is currently closed. Scaled from 0 to 1, but not all values from 0 to 1 are reachable. The range in the data is about 0.2 to 1"
+        },
+        "present/intervention": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {},
+            "dtype": "int64",
+            "encoding": "none"
+          },
+          "description": "Episodes are collected via DAgger. This is a 0/1 label for whether the action is from the policy or the teleoperator. 1 = from teleoperator. This is exactly the opposite of present/autonomous"
+        },
+        "present/xyz": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "The current position of the end effector in axis-angle representation, in robot frame"
+        }
+      }
+    },
+    "Fractal": {
+      "features_path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\features.json",
+      "features_sha256": "7e02025e596cabd8d4e4afd6f2486b2110f22c0e42a9aa259d441cf5d538a684",
+      "observation_fields": [
+        "rotation_delta_to_go",
+        "orientation_start",
+        "height_to_bottom",
+        "natural_language_instruction",
+        "natural_language_embedding",
+        "workspace_bounds",
+        "robot_orientation_positions_box",
+        "gripper_closedness_commanded",
+        "base_pose_tool_reached",
+        "vector_to_go",
+        "src_rotation",
+        "gripper_closed",
+        "image",
+        "orientation_box"
+      ],
+      "action": {
+        "pythonClassName": "tensorflow_datasets.core.features.features_dict.FeaturesDict",
+        "featuresDict": {
+          "features": {
+            "gripper_closedness_action": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "1"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              },
+              "description": "continuous gripper position"
+            },
+            "terminate_episode": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "3"
+                  ]
+                },
+                "dtype": "int32",
+                "encoding": "none"
+              }
+            },
+            "base_displacement_vector": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "2"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              }
+            },
+            "rotation_delta": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "3"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              },
+              "description": "rpy commanded orientation displacement, in base-relative frame"
+            },
+            "base_displacement_vertical_rotation": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "1"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              }
+            },
+            "world_vector": {
+              "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+              "tensor": {
+                "shape": {
+                  "dimensions": [
+                    "3"
+                  ]
+                },
+                "dtype": "float32",
+                "encoding": "none"
+              },
+              "description": "commanded end-effector displacement, in base-relative frame"
+            }
+          }
+        }
+      },
+      "observations": {
+        "rotation_delta_to_go": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "rotational displacement from current orientation to target"
+        },
+        "orientation_start": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "4"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        },
+        "height_to_bottom": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "1"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "height of end-effector from ground"
+        },
+        "natural_language_embedding": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "512"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        },
+        "workspace_bounds": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "3",
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        },
+        "robot_orientation_positions_box": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "3",
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        },
+        "gripper_closedness_commanded": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "1"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "continuous gripper position"
+        },
+        "base_pose_tool_reached": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "7"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "end-effector base-relative position+quaternion pose"
+        },
+        "vector_to_go": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          },
+          "description": "displacement from current end-effector position to target"
+        },
+        "src_rotation": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "4"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        },
+        "gripper_closed": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "1"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        },
+        "orientation_box": {
+          "pythonClassName": "tensorflow_datasets.core.features.tensor_feature.Tensor",
+          "tensor": {
+            "shape": {
+              "dimensions": [
+                "2",
+                "3"
+              ]
+            },
+            "dtype": "float32",
+            "encoding": "none"
+          }
+        }
+      }
+    }
+  },
+  "new_lt_checks": [
+    {
+      "episode_key": "language_table-train.tfrecord-00626-of-01024::1",
+      "payload_sha256": "18cecc4e2474f8a7bd10cb5fd16ad6559ebc707e89234080bd9dcef315d7d85c",
+      "steps": 12,
+      "pre_action_observation_hypothesis": {
+        "rows": 10,
+        "mean_l2": 0.011262977883024407,
+        "max_l2": 0.01980172952179681,
+        "median_l2": 0.014281520221537797,
+        "max_abs_component": 0.019797787070274353
+      },
+      "post_action_observation_hypothesis": {
+        "rows": 10,
+        "mean_l2": 0.030002094761116725,
+        "max_l2": 0.05497065390551796,
+        "median_l2": 0.025229587661070023,
+        "max_abs_component": 0.047766685485839844
+      },
+      "current_desired_minus_current_reached": {
+        "rows": 12,
+        "mean_l2": 0.0008694163294258782,
+        "max_l2": 0.0037002583093139105,
+        "median_l2": 2.0385294985024555e-08,
+        "max_abs_component": 0.003249257802963257
+      },
+      "action_range": [
+        -0.05494379997253418,
+        0.06334714591503143
+      ],
+      "pre_action_all_components_within_1e_6": false,
+      "post_action_all_components_within_1e_6": false
+    },
+    {
+      "episode_key": "language_table-train.tfrecord-00045-of-01024::0",
+      "payload_sha256": "b02c6e1853f208ef0baf2e07bd00846582a992f57c87c65717cdd07dc1f14864",
+      "steps": 12,
+      "pre_action_observation_hypothesis": {
+        "rows": 10,
+        "mean_l2": 0.005756347606036594,
+        "max_l2": 0.011112138675158425,
+        "median_l2": 0.006805428848656815,
+        "max_abs_component": 0.011112138628959656
+      },
+      "post_action_observation_hypothesis": {
+        "rows": 10,
+        "mean_l2": 0.01617605848198215,
+        "max_l2": 0.025114204009946014,
+        "median_l2": 0.01623983257397609,
+        "max_abs_component": 0.02084103226661682
+      },
+      "current_desired_minus_current_reached": {
+        "rows": 12,
+        "mean_l2": 0.0005273101699978549,
+        "max_l2": 0.001628562812399809,
+        "median_l2": 0.0003489933498214677,
+        "max_abs_component": 0.0016285628080368042
+      },
+      "action_range": [
+        -0.04147776961326599,
+        0.02383476495742798
+      ],
+      "pre_action_all_components_within_1e_6": false,
+      "post_action_all_components_within_1e_6": false
+    },
+    {
+      "episode_key": "language_table-train.tfrecord-00630-of-01024::483",
+      "payload_sha256": "1a1306d7b916962524b179ae0e7fef56197d6d4049a065e695e425a3bc59d41e",
+      "steps": 42,
+      "pre_action_observation_hypothesis": {
+        "rows": 40,
+        "mean_l2": 0.012406930545080224,
+        "max_l2": 0.03595942577433832,
+        "median_l2": 0.011336426595794712,
+        "max_abs_component": 0.03337627276778221
+      },
+      "post_action_observation_hypothesis": {
+        "rows": 40,
+        "mean_l2": 0.03752527804680676,
+        "max_l2": 0.11400023459059859,
+        "median_l2": 0.036128562823960195,
+        "max_abs_component": 0.10567338764667511
+      },
+      "current_desired_minus_current_reached": {
+        "rows": 42,
+        "mean_l2": 0.0013954375417824544,
+        "max_l2": 0.007939881001613872,
+        "median_l2": 0.0011300957920229121,
+        "max_abs_component": 0.006846368312835693
+      },
+      "action_range": [
+        -0.06340010464191437,
+        0.10601213574409485
+      ],
+      "pre_action_all_components_within_1e_6": false,
+      "post_action_all_components_within_1e_6": false
+    }
+  ],
+  "new_training_records_read": 3,
+  "new_source_payload_bytes_read": 3756778,
+  "images_decoded": 0,
+  "prior_bcz_numeric_roundtrip_reused": {
+    "checked_input_steps": 3332,
+    "checked_8d_targets": 33320,
+    "max_position_roundtrip_error_native_units": 3.199631864109483e-07,
+    "min_quaternion_abs_dot": 0.9999998807907104,
+    "gripper_mismatches": 0,
+    "continuous_input_roundtrip_max_error": 1.4901161193847656e-08,
+    "target_switches_between_waypoints": 1332,
+    "activation": "diagnostic_only_not_connected_to_training_or_control"
+  },
+  "prior_bcz_coverage_limit": "23 selected historical training episodes, not the current 643-episode BC-Z candidate pool",
+  "prior_bcz_adaptive_target_time_warning": "Training target selection depends on arm/gripper motion, not a universal next-row interval",
+  "bcz_prior_audit_sha256": "5eb9903916d3770a731520035e7ec9d1fee75f511766d9079f95662739a51e39",
+  "models_loaded": 0,
+  "simulator_steps": 0,
+  "training_updates": 0,
+  "labels_generated": 0,
+  "new_jobs": 0,
+  "all_sources_executable_goal_contract_ready": false,
+  "source_payloads_modified": false,
+  "elapsed_seconds": 7.702999999979511
+}

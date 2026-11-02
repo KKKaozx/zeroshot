@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-17",
+  "job_id": "208034",
+  "stage": "completed_terminal_context_execution_localized",
+  "source": "user_reported_job_id",
+  "failure_job": "208005",
+  "slurm_state_verified": true,
+  "report_verified": false,
+  "results_available": true,
+  "training": false,
+  "new_holdout_scored": false,
+  "old_windows": 4,
+  "new_windows": 0,
+  "original_tolerance_unchanged": true,
+  "protocol_sha256": "dc54e243850142a7c0e39697ad96ca718edcc2db62af6ed502e3a8119499f1f5",
+  "entry_sha256": "44bd4f364c8717b947b1f73036453e7d78d7cfc35edcfdc14c31603ad5eeff7d",
+  "archive_sha256": "70faa2ee8a8e2c48eefbaa749efb8d4b25ffc4aa1656a4f66bb01f9d9c63048f",
+  "cluster_output": "/projects/Zeroshot/runs/bridge-replay-diag-208034",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-replay-diag-208034.out",
+  "next_step": "Upload code-only context restoration, verify saved208034 arrays on cluster then retain original strict replay guards before new13episode evaluation. Do not rerun diagnostic or retrain.",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:02:00",
+  "node": "gpu-a6000-1",
+  "diagnostic_evidence_level": "user_pasted_paired_case_outputs; full saved arrays gated by corrected entry on cluster",
+  "terminal_differences": {
+    "coverage": {
+      "original_style_context": 0.0,
+      "original_style_prediction": 0.0,
+      "failed_style_context": 9.5367431640625e-07,
+      "failed_style_prediction": 0.00011682510375976562
+    },
+    "rotation_weight": {
+      "original_style_context": 0.0,
+      "original_style_prediction": 0.0,
+      "failed_style_context": 1.430511474609375e-06,
+      "failed_style_prediction": 0.00013771653175354004
+    }
+  },
+  "localized_scope": "joint context computation/parameter-flag bundle in new evaluator; not historical poor generalization root cause"
+}

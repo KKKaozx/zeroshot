@@ -1,0 +1,50 @@
+{
+  "terminal_sha256": "eb04ba9e713c3ab5ed524735cabd1dc120e2af9989d49f60f05c261d220b7aa9",
+  "complete_endpoint_received": true,
+  "reported_optimizer_updates": 4096,
+  "visible_update_points_checked": 18,
+  "all4096_updates_independently_traced": false,
+  "visible_losses_and_gradients_finite": true,
+  "reported_policy_sha256": "cb79d8333de212aa95810050908dba90e543ccf0f76560e70fc29deb4d824bd8",
+  "raw_small_results_downloaded": true,
+  "policy_downloaded": true,
+  "saved_predictions_independently_recomputed": true,
+  "local_model_restored": true,
+  "offline_improvement_from_reported_metrics": {
+    "train": {
+      "vs_train_mean_mse_reduction_percent": 94.62482131121634,
+      "vs_previous_hold_mse_reduction_percent": 92.52434802359015
+    },
+    "development": {
+      "vs_train_mean_mse_reduction_percent": 77.3130203378289,
+      "vs_previous_hold_mse_reduction_percent": 68.52870881766205
+    }
+  },
+  "new_frames_encoded_reported": 1888,
+  "encoder_updates_reported": 0,
+  "original_oxe_weights_not_loaded_reported": true,
+  "target_supervised": true,
+  "zero_shot": false,
+  "formal_matrix_admitted": false,
+  "learned_task_success_still_unmeasured": false,
+  "program_elapsed_seconds": 665.9169721179642,
+  "elapsed_scope": "After CPU admission; includes loading/encoding/training/offline sampling; before final verifier/ZIP",
+  "peak_reserved_gib": 5.666015625,
+  "memory_efficient_attention_nondeterminism_warning_seen": true,
+  "bitwise_gpu_training_reproducibility_claimed": false,
+  "sacct_final_state_received": false,
+  "cluster_full_state_and_adam_verification_inferred_from_complete_print_order": true,
+  "full_state_and_adam_locally_inspected": false,
+  "automatic_retraining_or_extension": false,
+  "local_new_training_or_rollouts": 5,
+  "next_action": "Fixed target-supervised control closed. Preserve endpoint and successful native-action reference; return to OXE source capability/common contract. No extra training or rollouts authorized.",
+  "cluster_full_state_and_adam_verification_received": true,
+  "local_new_training_updates": 0,
+  "local_rollouts": 5,
+  "learned_task_success": {
+    "successes": 5,
+    "trials": 5,
+    "scope": "One target-supervised task/five fixed heldout demo initial states"
+  },
+  "fixed_rollout_audit_passed": true
+}

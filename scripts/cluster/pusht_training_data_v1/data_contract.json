@@ -1,0 +1,22 @@
+{
+  "source_report": "pusht_module_assets_210557.json",
+  "source_report_sha256": "ff1336c570334c055af9aa809185d368e6879a46e3020f69ff8ab8e1b52899f7",
+  "author_dataset_config": {
+    "task.dataset.zarr_path": "data/pusht/pusht_cchi_v7_replay.zarr",
+    "task.dataset.horizon": 16,
+    "task.dataset.pad_before": 1,
+    "task.dataset.pad_after": 7,
+    "task.dataset.seed": 42,
+    "task.dataset.val_ratio": 0.02,
+    "task.dataset.max_train_episodes": 90
+  },
+  "previously_checked_zarr_directories": [
+    "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/source/data/pusht/pusht_cchi_v7_replay.zarr",
+    "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/data/pusht/pusht_cchi_v7_replay.zarr",
+    "/projects/_ssd/Zeroshot/data/pusht/pusht_cchi_v7_replay.zarr"
+  ],
+  "official_archive_url": "https://diffusion-policy.cs.columbia.edu/data/training/pusht.zip",
+  "source_directory_listed_size": "29 MB",
+  "training_split_defined": false,
+  "formal_training_authorized_by_this_package": false
+}

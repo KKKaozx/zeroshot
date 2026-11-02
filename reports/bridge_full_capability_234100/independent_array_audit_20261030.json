@@ -1,0 +1,1476 @@
+{
+  "job_id": 234100,
+  "audit_date": "2026-10-30",
+  "download_verified": true,
+  "archive_bytes": 938429,
+  "archive_sha256": "31aa1cfa990b5f0062778b803ca503ac446f036002b1f47834d6ccfb20124839",
+  "files_sha256": {
+    "report.json": "9e950be6a4eea01efe45f451273017f251d7cb9084af9a2d3b51bd473fb4af35",
+    "predictions_and_targets.npz": "a698e585329dd6c0e1bb830b8701558a1e499d74c8bd05980b4c77f946e63c2f",
+    "initial_predictions.npz": "8405e83ac21fadf8ff5706e0e27f701c81532f7079c02483d5b0b0a082f7a6ee",
+    "initialization.json": "80de9f47967ccdd990db61fd7d3b509333b880ea89c931344161f28748d68c37",
+    "zero_update_guard.json": "308410de21711b3e0553789a4066798c286df587005452dca2f65331013f2650",
+    "verification.json": "64572161b36fb8318e3f9a87ebe55ed2cefda1bb57b731eded1f2d73d8a8ddad"
+  },
+  "all192_targets_masks_exact_to_local_bound_stores": true,
+  "all_per_window_means_and_bootstraps_independently_recomputed": true,
+  "comparison_atol": 1e-10,
+  "original_small_verifier": {
+    "verified": true,
+    "arrays_metrics_recomputed": true,
+    "full_policy_adam_plan_checked": false,
+    "training_passed": false,
+    "development_passed": false,
+    "automatic_following_action": false
+  },
+  "roles": {
+    "train": {
+      "windows": 128,
+      "metrics": {
+        "path_position_normalized": {
+          "initial": 1.1333405232128881,
+          "final": 0.5784083249280698,
+          "static": 0.774201744961688,
+          "improvement_vs_initial_pct": 48.96429510096845,
+          "improvement_vs_static_pct": 25.289715672664524,
+          "after_minus_static_ci95": [
+            -0.2646358058525911,
+            -0.1275665704872738
+          ],
+          "windows_better_static": 86,
+          "windows_worse_static": 42,
+          "windows_tied_static": 0,
+          "median_after_minus_static": -0.1030522700752517,
+          "after_minus_static_quantiles": [
+            -1.474483947351609,
+            -0.3667052361013637,
+            -0.1030522700752517,
+            0.06195895301583251,
+            0.8174514358353727
+          ]
+        },
+        "path_rotation_deg": {
+          "initial": 132.85486941042228,
+          "final": 13.051022746179704,
+          "static": 10.803814618203166,
+          "improvement_vs_initial_pct": 90.17648144618487,
+          "improvement_vs_static_pct": -20.800135946337473,
+          "after_minus_static_ci95": [
+            1.0820008726571666,
+            3.484465303235941
+          ],
+          "windows_better_static": 46,
+          "windows_worse_static": 82,
+          "windows_tied_static": 0,
+          "median_after_minus_static": 0.7105543896490714,
+          "after_minus_static_quantiles": [
+            -12.996544825666561,
+            -0.8286520788124758,
+            0.7105543896490714,
+            3.7530658710967577,
+            33.98051888712682
+          ]
+        },
+        "endpoint_position_normalized": {
+          "initial": 1.3852218300911208,
+          "final": 0.7453122347085374,
+          "static": 1.1741646123290828,
+          "improvement_vs_initial_pct": 46.19545992431333,
+          "improvement_vs_static_pct": 36.52404212471284,
+          "after_minus_static_ci95": [
+            -0.5470031287477609,
+            -0.31283234552005756
+          ],
+          "windows_better_static": 91,
+          "windows_worse_static": 37,
+          "windows_tied_static": 0,
+          "median_after_minus_static": -0.2438580797778963,
+          "after_minus_static_quantiles": [
+            -2.448271164276014,
+            -0.7918317247863522,
+            -0.2438580797778963,
+            0.06587422502130805,
+            1.2200037179170613
+          ]
+        },
+        "endpoint_rotation_deg": {
+          "initial": 138.0714446878482,
+          "final": 18.816642081882605,
+          "static": 16.713671610952822,
+          "improvement_vs_initial_pct": 86.37180763595018,
+          "improvement_vs_static_pct": -12.58233690287216,
+          "after_minus_static_ci95": [
+            0.08949307820253528,
+            4.113812294551754
+          ],
+          "windows_better_static": 51,
+          "windows_worse_static": 77,
+          "windows_tied_static": 0,
+          "median_after_minus_static": 1.346047453870062,
+          "after_minus_static_quantiles": [
+            -39.904176637667874,
+            -2.694048653326642,
+            1.346047453870062,
+            4.813069355061456,
+            45.69924242670895
+          ]
+        }
+      },
+      "failed_gate_components": [
+        "path_rotation_deg_mean_not_better_static",
+        "endpoint_rotation_deg_mean_not_better_static"
+      ],
+      "basic_capability_passed": false,
+      "path_position_and_rotation_both_better_windows": 40,
+      "all4_better_windows": 30,
+      "mean_within_window_sampling_error_std": {
+        "path_position_normalized": 0.13427962285437203,
+        "path_rotation_deg": 3.5739239290209093,
+        "endpoint_position_normalized": 0.217918750958647,
+        "endpoint_rotation_deg": 5.810339152168815
+      },
+      "rotation_geometry": {
+        "per_window": [
+          {
+            "selection_index": 0,
+            "predicted_angle_from_identity_deg": 13.99541386686056,
+            "expert_angle_from_identity_deg": 8.492037110069052,
+            "rotation_vector_direction_cosine": 0.06714913629744863
+          },
+          {
+            "selection_index": 1,
+            "predicted_angle_from_identity_deg": 19.568651888688066,
+            "expert_angle_from_identity_deg": 35.61835650736255,
+            "rotation_vector_direction_cosine": 0.10536642679579061
+          },
+          {
+            "selection_index": 2,
+            "predicted_angle_from_identity_deg": 5.510678375690904,
+            "expert_angle_from_identity_deg": 0.06214815776672124,
+            "rotation_vector_direction_cosine": 0.11957237409085449
+          },
+          {
+            "selection_index": 3,
+            "predicted_angle_from_identity_deg": 6.03081552814664,
+            "expert_angle_from_identity_deg": 6.805729142479972,
+            "rotation_vector_direction_cosine": 0.48810642517830954
+          },
+          {
+            "selection_index": 4,
+            "predicted_angle_from_identity_deg": 6.826416323518224,
+            "expert_angle_from_identity_deg": 13.067057375475965,
+            "rotation_vector_direction_cosine": -0.06692454454882772
+          },
+          {
+            "selection_index": 5,
+            "predicted_angle_from_identity_deg": 3.5945370866123967,
+            "expert_angle_from_identity_deg": 10.470160413957668,
+            "rotation_vector_direction_cosine": 0.4955572555722945
+          },
+          {
+            "selection_index": 6,
+            "predicted_angle_from_identity_deg": 1.0487511555653681,
+            "expert_angle_from_identity_deg": 7.220862567915778,
+            "rotation_vector_direction_cosine": -0.013209933450654862
+          },
+          {
+            "selection_index": 7,
+            "predicted_angle_from_identity_deg": 4.454423128151093,
+            "expert_angle_from_identity_deg": 7.011363308350426,
+            "rotation_vector_direction_cosine": 0.15230224339995876
+          },
+          {
+            "selection_index": 8,
+            "predicted_angle_from_identity_deg": 9.350951389832261,
+            "expert_angle_from_identity_deg": 17.718300660947584,
+            "rotation_vector_direction_cosine": 0.1987579551544709
+          },
+          {
+            "selection_index": 9,
+            "predicted_angle_from_identity_deg": 11.850549436529661,
+            "expert_angle_from_identity_deg": 7.940307456632163,
+            "rotation_vector_direction_cosine": -0.09648268434243451
+          },
+          {
+            "selection_index": 10,
+            "predicted_angle_from_identity_deg": 1.3635287051331648,
+            "expert_angle_from_identity_deg": 3.175530611166317,
+            "rotation_vector_direction_cosine": -0.20792773380237362
+          },
+          {
+            "selection_index": 11,
+            "predicted_angle_from_identity_deg": 5.527914495321791,
+            "expert_angle_from_identity_deg": 11.969653659430513,
+            "rotation_vector_direction_cosine": 0.004266360311173195
+          },
+          {
+            "selection_index": 12,
+            "predicted_angle_from_identity_deg": 6.482985138874208,
+            "expert_angle_from_identity_deg": 12.448292712194386,
+            "rotation_vector_direction_cosine": 0.12452083762827558
+          },
+          {
+            "selection_index": 13,
+            "predicted_angle_from_identity_deg": 4.8721838951536425,
+            "expert_angle_from_identity_deg": 6.840658279959753,
+            "rotation_vector_direction_cosine": 0.08081039921362117
+          },
+          {
+            "selection_index": 14,
+            "predicted_angle_from_identity_deg": 5.960374986019066,
+            "expert_angle_from_identity_deg": 8.422509697778015,
+            "rotation_vector_direction_cosine": 0.5830020581313451
+          },
+          {
+            "selection_index": 15,
+            "predicted_angle_from_identity_deg": 3.9230394900536596,
+            "expert_angle_from_identity_deg": 5.7722568261461085,
+            "rotation_vector_direction_cosine": -0.29564353585679787
+          },
+          {
+            "selection_index": 16,
+            "predicted_angle_from_identity_deg": 4.650392574640954,
+            "expert_angle_from_identity_deg": 4.648815240942127,
+            "rotation_vector_direction_cosine": 0.020595079811033482
+          },
+          {
+            "selection_index": 17,
+            "predicted_angle_from_identity_deg": 3.3292567096501076,
+            "expert_angle_from_identity_deg": 6.39905234299062,
+            "rotation_vector_direction_cosine": -0.3795795999491653
+          },
+          {
+            "selection_index": 18,
+            "predicted_angle_from_identity_deg": 3.7572106812910633,
+            "expert_angle_from_identity_deg": 5.291070726113573,
+            "rotation_vector_direction_cosine": 0.2562343617441792
+          },
+          {
+            "selection_index": 19,
+            "predicted_angle_from_identity_deg": 2.655584315337337,
+            "expert_angle_from_identity_deg": 2.851213131036078,
+            "rotation_vector_direction_cosine": 0.22655849804618716
+          },
+          {
+            "selection_index": 20,
+            "predicted_angle_from_identity_deg": 6.00959566774524,
+            "expert_angle_from_identity_deg": 9.048288493000323,
+            "rotation_vector_direction_cosine": 0.3757764175515324
+          },
+          {
+            "selection_index": 21,
+            "predicted_angle_from_identity_deg": 32.576953657975764,
+            "expert_angle_from_identity_deg": 7.099379755746908,
+            "rotation_vector_direction_cosine": 0.4237645297360006
+          },
+          {
+            "selection_index": 22,
+            "predicted_angle_from_identity_deg": 5.336558471487177,
+            "expert_angle_from_identity_deg": 5.211050189471666,
+            "rotation_vector_direction_cosine": 0.30319129993099836
+          },
+          {
+            "selection_index": 23,
+            "predicted_angle_from_identity_deg": 8.544941893067987,
+            "expert_angle_from_identity_deg": 10.198378987199348,
+            "rotation_vector_direction_cosine": 0.12300647474586235
+          },
+          {
+            "selection_index": 24,
+            "predicted_angle_from_identity_deg": 3.1070447106177226,
+            "expert_angle_from_identity_deg": 7.208516237236994,
+            "rotation_vector_direction_cosine": 0.4252336144415514
+          },
+          {
+            "selection_index": 25,
+            "predicted_angle_from_identity_deg": 5.193221026531557,
+            "expert_angle_from_identity_deg": 5.792123420645736,
+            "rotation_vector_direction_cosine": -0.1755444314222103
+          },
+          {
+            "selection_index": 26,
+            "predicted_angle_from_identity_deg": 10.821034854904234,
+            "expert_angle_from_identity_deg": 12.161714028332085,
+            "rotation_vector_direction_cosine": 0.2883824705963785
+          },
+          {
+            "selection_index": 27,
+            "predicted_angle_from_identity_deg": 11.018765992891732,
+            "expert_angle_from_identity_deg": 4.709741482776826,
+            "rotation_vector_direction_cosine": 0.015408974204615586
+          },
+          {
+            "selection_index": 28,
+            "predicted_angle_from_identity_deg": 4.480481235506218,
+            "expert_angle_from_identity_deg": 5.33044520868473,
+            "rotation_vector_direction_cosine": 0.05854277977443348
+          },
+          {
+            "selection_index": 29,
+            "predicted_angle_from_identity_deg": 1.4865225388585757,
+            "expert_angle_from_identity_deg": 8.330249833923009,
+            "rotation_vector_direction_cosine": 0.5720237026271958
+          },
+          {
+            "selection_index": 30,
+            "predicted_angle_from_identity_deg": 10.704696716450359,
+            "expert_angle_from_identity_deg": 15.55012630525347,
+            "rotation_vector_direction_cosine": 0.6137697737859708
+          },
+          {
+            "selection_index": 31,
+            "predicted_angle_from_identity_deg": 9.863856996173256,
+            "expert_angle_from_identity_deg": 14.100115833984638,
+            "rotation_vector_direction_cosine": 0.9733601274562491
+          },
+          {
+            "selection_index": 32,
+            "predicted_angle_from_identity_deg": 14.196257423337094,
+            "expert_angle_from_identity_deg": 15.943704799633252,
+            "rotation_vector_direction_cosine": 0.9219526760037677
+          },
+          {
+            "selection_index": 33,
+            "predicted_angle_from_identity_deg": 21.323667955495512,
+            "expert_angle_from_identity_deg": 12.312609093461834,
+            "rotation_vector_direction_cosine": -0.5390357830292322
+          },
+          {
+            "selection_index": 34,
+            "predicted_angle_from_identity_deg": 5.799876054565829,
+            "expert_angle_from_identity_deg": 10.500020732763877,
+            "rotation_vector_direction_cosine": 0.6874945176347272
+          },
+          {
+            "selection_index": 35,
+            "predicted_angle_from_identity_deg": 20.191036389067982,
+            "expert_angle_from_identity_deg": 22.032213207075124,
+            "rotation_vector_direction_cosine": 0.44271778410512974
+          },
+          {
+            "selection_index": 36,
+            "predicted_angle_from_identity_deg": 6.638430334580122,
+            "expert_angle_from_identity_deg": 15.925096653257361,
+            "rotation_vector_direction_cosine": -0.0454510494534423
+          },
+          {
+            "selection_index": 37,
+            "predicted_angle_from_identity_deg": 3.7082559896682854,
+            "expert_angle_from_identity_deg": 10.647624599058615,
+            "rotation_vector_direction_cosine": 0.41278865586544583
+          },
+          {
+            "selection_index": 38,
+            "predicted_angle_from_identity_deg": 8.149289469491025,
+            "expert_angle_from_identity_deg": 6.6036937671558595,
+            "rotation_vector_direction_cosine": 0.19989107730688452
+          },
+          {
+            "selection_index": 39,
+            "predicted_angle_from_identity_deg": 5.654767746231048,
+            "expert_angle_from_identity_deg": 4.429790556107093,
+            "rotation_vector_direction_cosine": -0.3564128760150858
+          },
+          {
+            "selection_index": 40,
+            "predicted_angle_from_identity_deg": 2.971739790491637,
+            "expert_angle_from_identity_deg": 3.6711211566662207,
+            "rotation_vector_direction_cosine": 0.016836583894050884
+          },
+          {
+            "selection_index": 41,
+            "predicted_angle_from_identity_deg": 8.553265059331945,
+            "expert_angle_from_identity_deg": 6.819027230866396,
+            "rotation_vector_direction_cosine": 0.21787059128663022
+          },
+          {
+            "selection_index": 42,
+            "predicted_angle_from_identity_deg": 7.600483694061409,
+            "expert_angle_from_identity_deg": 4.546968928581389,
+            "rotation_vector_direction_cosine": 0.6599606088001364
+          },
+          {
+            "selection_index": 43,
+            "predicted_angle_from_identity_deg": 2.8587299799035275,
+            "expert_angle_from_identity_deg": 5.754978169580483,
+            "rotation_vector_direction_cosine": -0.8836772417857016
+          },
+          {
+            "selection_index": 44,
+            "predicted_angle_from_identity_deg": 8.790781187377588,
+            "expert_angle_from_identity_deg": 4.424053679721207,
+            "rotation_vector_direction_cosine": 0.4769143919135696
+          },
+          {
+            "selection_index": 45,
+            "predicted_angle_from_identity_deg": 4.980599616630049,
+            "expert_angle_from_identity_deg": 14.82787479401065,
+            "rotation_vector_direction_cosine": 0.1929151289327434
+          },
+          {
+            "selection_index": 46,
+            "predicted_angle_from_identity_deg": 4.056950966307134,
+            "expert_angle_from_identity_deg": 5.4671666259368195,
+            "rotation_vector_direction_cosine": 0.11061169160131745
+          },
+          {
+            "selection_index": 47,
+            "predicted_angle_from_identity_deg": 38.8470564306714,
+            "expert_angle_from_identity_deg": 8.808237772739561,
+            "rotation_vector_direction_cosine": -0.2218586117134607
+          },
+          {
+            "selection_index": 48,
+            "predicted_angle_from_identity_deg": 3.588085368402387,
+            "expert_angle_from_identity_deg": 10.093622719880518,
+            "rotation_vector_direction_cosine": 0.07011719747235946
+          },
+          {
+            "selection_index": 49,
+            "predicted_angle_from_identity_deg": 5.129145069086822,
+            "expert_angle_from_identity_deg": 4.982163693275711,
+            "rotation_vector_direction_cosine": 0.07740927094541634
+          },
+          {
+            "selection_index": 50,
+            "predicted_angle_from_identity_deg": 11.368072491584954,
+            "expert_angle_from_identity_deg": 21.394601322864915,
+            "rotation_vector_direction_cosine": 0.8593075502638658
+          },
+          {
+            "selection_index": 51,
+            "predicted_angle_from_identity_deg": 20.571925228105027,
+            "expert_angle_from_identity_deg": 5.507521353460212,
+            "rotation_vector_direction_cosine": -0.026479313674546708
+          },
+          {
+            "selection_index": 52,
+            "predicted_angle_from_identity_deg": 1.8229299235295542,
+            "expert_angle_from_identity_deg": 6.828910726873698,
+            "rotation_vector_direction_cosine": 0.1523929393253774
+          },
+          {
+            "selection_index": 53,
+            "predicted_angle_from_identity_deg": 8.680773163100925,
+            "expert_angle_from_identity_deg": 10.472324056037058,
+            "rotation_vector_direction_cosine": 0.42837441031320556
+          },
+          {
+            "selection_index": 54,
+            "predicted_angle_from_identity_deg": 23.43678102506556,
+            "expert_angle_from_identity_deg": 20.40580451343381,
+            "rotation_vector_direction_cosine": -0.6569897333423865
+          },
+          {
+            "selection_index": 55,
+            "predicted_angle_from_identity_deg": 1.5917492129012942,
+            "expert_angle_from_identity_deg": 12.951263762908546,
+            "rotation_vector_direction_cosine": 0.5729516135425853
+          },
+          {
+            "selection_index": 56,
+            "predicted_angle_from_identity_deg": 5.38765553495272,
+            "expert_angle_from_identity_deg": 7.7247320382389475,
+            "rotation_vector_direction_cosine": 0.6352810775140582
+          },
+          {
+            "selection_index": 57,
+            "predicted_angle_from_identity_deg": 6.502936291633408,
+            "expert_angle_from_identity_deg": 5.031534268117783,
+            "rotation_vector_direction_cosine": -0.06097469451459547
+          },
+          {
+            "selection_index": 58,
+            "predicted_angle_from_identity_deg": 3.7862301602230133,
+            "expert_angle_from_identity_deg": 9.582141268472597,
+            "rotation_vector_direction_cosine": 0.5834490244227876
+          },
+          {
+            "selection_index": 59,
+            "predicted_angle_from_identity_deg": 13.767636195136548,
+            "expert_angle_from_identity_deg": 2.505296145684067,
+            "rotation_vector_direction_cosine": -0.0184712891426836
+          },
+          {
+            "selection_index": 60,
+            "predicted_angle_from_identity_deg": 13.37568015194891,
+            "expert_angle_from_identity_deg": 6.277662871051032,
+            "rotation_vector_direction_cosine": 0.6603923873111941
+          },
+          {
+            "selection_index": 61,
+            "predicted_angle_from_identity_deg": 5.049106617238064,
+            "expert_angle_from_identity_deg": 13.512887403750824,
+            "rotation_vector_direction_cosine": 0.40105645235824544
+          },
+          {
+            "selection_index": 62,
+            "predicted_angle_from_identity_deg": 9.55478834361397,
+            "expert_angle_from_identity_deg": 15.55700974558028,
+            "rotation_vector_direction_cosine": 0.6590143952891458
+          },
+          {
+            "selection_index": 63,
+            "predicted_angle_from_identity_deg": 0.8802345605795662,
+            "expert_angle_from_identity_deg": 11.841718779716023,
+            "rotation_vector_direction_cosine": -0.027340281644150026
+          },
+          {
+            "selection_index": 64,
+            "predicted_angle_from_identity_deg": 4.2572306638115744,
+            "expert_angle_from_identity_deg": 9.288090121067167,
+            "rotation_vector_direction_cosine": 0.31415733657664113
+          },
+          {
+            "selection_index": 65,
+            "predicted_angle_from_identity_deg": 5.6816385860412195,
+            "expert_angle_from_identity_deg": 6.4497965966927575,
+            "rotation_vector_direction_cosine": 0.38743474668500416
+          },
+          {
+            "selection_index": 66,
+            "predicted_angle_from_identity_deg": 17.426810214360216,
+            "expert_angle_from_identity_deg": 29.253004824327718,
+            "rotation_vector_direction_cosine": 0.32165783859320357
+          },
+          {
+            "selection_index": 67,
+            "predicted_angle_from_identity_deg": 8.837127932915436,
+            "expert_angle_from_identity_deg": 17.256647683797087,
+            "rotation_vector_direction_cosine": 0.21896073683614078
+          },
+          {
+            "selection_index": 68,
+            "predicted_angle_from_identity_deg": 12.396156153685185,
+            "expert_angle_from_identity_deg": 25.886195791921082,
+            "rotation_vector_direction_cosine": 0.5506660671030139
+          },
+          {
+            "selection_index": 69,
+            "predicted_angle_from_identity_deg": 2.339680827897948,
+            "expert_angle_from_identity_deg": 5.564589812592049,
+            "rotation_vector_direction_cosine": -0.3762603502175708
+          },
+          {
+            "selection_index": 70,
+            "predicted_angle_from_identity_deg": 6.744479705767993,
+            "expert_angle_from_identity_deg": 18.57592134626149,
+            "rotation_vector_direction_cosine": 0.5348197745827711
+          },
+          {
+            "selection_index": 71,
+            "predicted_angle_from_identity_deg": 8.357597754024225,
+            "expert_angle_from_identity_deg": 5.826897059187693,
+            "rotation_vector_direction_cosine": 0.4405652759755337
+          },
+          {
+            "selection_index": 72,
+            "predicted_angle_from_identity_deg": 2.665446566428362,
+            "expert_angle_from_identity_deg": 4.013760466035984,
+            "rotation_vector_direction_cosine": 0.494983396458512
+          },
+          {
+            "selection_index": 73,
+            "predicted_angle_from_identity_deg": 1.1567271374058832,
+            "expert_angle_from_identity_deg": 7.572216887341663,
+            "rotation_vector_direction_cosine": 0.11542081979434315
+          },
+          {
+            "selection_index": 74,
+            "predicted_angle_from_identity_deg": 2.15952542343188,
+            "expert_angle_from_identity_deg": 11.73905259823065,
+            "rotation_vector_direction_cosine": 0.654085385647083
+          },
+          {
+            "selection_index": 75,
+            "predicted_angle_from_identity_deg": 9.836890380252084,
+            "expert_angle_from_identity_deg": 7.90392755616859,
+            "rotation_vector_direction_cosine": -0.17395915019012334
+          },
+          {
+            "selection_index": 76,
+            "predicted_angle_from_identity_deg": 5.029148365729885,
+            "expert_angle_from_identity_deg": 6.383734120879031,
+            "rotation_vector_direction_cosine": 0.2124240728027181
+          },
+          {
+            "selection_index": 77,
+            "predicted_angle_from_identity_deg": 10.572505862310699,
+            "expert_angle_from_identity_deg": 16.76070050699282,
+            "rotation_vector_direction_cosine": -0.17658825926229893
+          },
+          {
+            "selection_index": 78,
+            "predicted_angle_from_identity_deg": 3.4348836575560298,
+            "expert_angle_from_identity_deg": 4.465976611828987,
+            "rotation_vector_direction_cosine": 0.23864293740409237
+          },
+          {
+            "selection_index": 79,
+            "predicted_angle_from_identity_deg": 22.08293571957878,
+            "expert_angle_from_identity_deg": 23.646911050749498,
+            "rotation_vector_direction_cosine": 0.6356553243920404
+          },
+          {
+            "selection_index": 80,
+            "predicted_angle_from_identity_deg": 13.713662977135819,
+            "expert_angle_from_identity_deg": 16.664504563117617,
+            "rotation_vector_direction_cosine": 0.68451217216487
+          },
+          {
+            "selection_index": 81,
+            "predicted_angle_from_identity_deg": 31.036444102096716,
+            "expert_angle_from_identity_deg": 40.205766019367374,
+            "rotation_vector_direction_cosine": -0.10655252571640274
+          },
+          {
+            "selection_index": 82,
+            "predicted_angle_from_identity_deg": 6.25853435374853,
+            "expert_angle_from_identity_deg": 18.74730413623374,
+            "rotation_vector_direction_cosine": 0.31267260051791296
+          },
+          {
+            "selection_index": 83,
+            "predicted_angle_from_identity_deg": 4.697585335241365,
+            "expert_angle_from_identity_deg": 26.758017122431205,
+            "rotation_vector_direction_cosine": -0.34543001913724
+          },
+          {
+            "selection_index": 84,
+            "predicted_angle_from_identity_deg": 7.164880496494746,
+            "expert_angle_from_identity_deg": 19.0672130784512,
+            "rotation_vector_direction_cosine": 0.2705660174122399
+          },
+          {
+            "selection_index": 85,
+            "predicted_angle_from_identity_deg": 18.060485768854832,
+            "expert_angle_from_identity_deg": 7.815320540534874,
+            "rotation_vector_direction_cosine": 0.13663066254413958
+          },
+          {
+            "selection_index": 86,
+            "predicted_angle_from_identity_deg": 11.036430709080909,
+            "expert_angle_from_identity_deg": 37.033854216081814,
+            "rotation_vector_direction_cosine": 0.4391769394043729
+          },
+          {
+            "selection_index": 87,
+            "predicted_angle_from_identity_deg": 2.8623449477187144,
+            "expert_angle_from_identity_deg": 8.1754526940998,
+            "rotation_vector_direction_cosine": 0.4986589472940324
+          },
+          {
+            "selection_index": 88,
+            "predicted_angle_from_identity_deg": 2.1039436991920595,
+            "expert_angle_from_identity_deg": 1.5305470085226454,
+            "rotation_vector_direction_cosine": 0.27943576353617466
+          },
+          {
+            "selection_index": 89,
+            "predicted_angle_from_identity_deg": 39.377759155369006,
+            "expert_angle_from_identity_deg": 6.7091479035601935,
+            "rotation_vector_direction_cosine": -0.00033969263140053624
+          },
+          {
+            "selection_index": 90,
+            "predicted_angle_from_identity_deg": 5.154498224815875,
+            "expert_angle_from_identity_deg": 8.154989382431383,
+            "rotation_vector_direction_cosine": -0.23631947133006048
+          },
+          {
+            "selection_index": 91,
+            "predicted_angle_from_identity_deg": 4.099309974143943,
+            "expert_angle_from_identity_deg": 11.823922980499471,
+            "rotation_vector_direction_cosine": -0.057335097033676986
+          },
+          {
+            "selection_index": 92,
+            "predicted_angle_from_identity_deg": 3.6845403768214666,
+            "expert_angle_from_identity_deg": 5.076245601894832,
+            "rotation_vector_direction_cosine": 0.01403039896920529
+          },
+          {
+            "selection_index": 93,
+            "predicted_angle_from_identity_deg": 26.888587572460466,
+            "expert_angle_from_identity_deg": 18.76866179812724,
+            "rotation_vector_direction_cosine": 0.28874500821446974
+          },
+          {
+            "selection_index": 94,
+            "predicted_angle_from_identity_deg": 15.447491048596627,
+            "expert_angle_from_identity_deg": 7.93170180346798,
+            "rotation_vector_direction_cosine": -0.1619790693536234
+          },
+          {
+            "selection_index": 95,
+            "predicted_angle_from_identity_deg": 12.962044177877507,
+            "expert_angle_from_identity_deg": 0.08789076030254629,
+            "rotation_vector_direction_cosine": -0.0023285276908843206
+          },
+          {
+            "selection_index": 96,
+            "predicted_angle_from_identity_deg": 3.580900496316421,
+            "expert_angle_from_identity_deg": 3.6272168114657553,
+            "rotation_vector_direction_cosine": 0.03499172147346796
+          },
+          {
+            "selection_index": 97,
+            "predicted_angle_from_identity_deg": 12.552724708798271,
+            "expert_angle_from_identity_deg": 15.028683479267475,
+            "rotation_vector_direction_cosine": -0.22394291702842054
+          },
+          {
+            "selection_index": 98,
+            "predicted_angle_from_identity_deg": 5.37509657593195,
+            "expert_angle_from_identity_deg": 11.620179340942803,
+            "rotation_vector_direction_cosine": 0.22519343449037627
+          },
+          {
+            "selection_index": 99,
+            "predicted_angle_from_identity_deg": 6.318032524006564,
+            "expert_angle_from_identity_deg": 12.83136745113644,
+            "rotation_vector_direction_cosine": 0.36186276523768535
+          },
+          {
+            "selection_index": 100,
+            "predicted_angle_from_identity_deg": 5.733740626482299,
+            "expert_angle_from_identity_deg": 11.013099299228404,
+            "rotation_vector_direction_cosine": 0.2914067989092149
+          },
+          {
+            "selection_index": 101,
+            "predicted_angle_from_identity_deg": 27.32489644724986,
+            "expert_angle_from_identity_deg": 16.704878564011498,
+            "rotation_vector_direction_cosine": 0.3726904512781231
+          },
+          {
+            "selection_index": 102,
+            "predicted_angle_from_identity_deg": 15.090160647055919,
+            "expert_angle_from_identity_deg": 24.370304605334557,
+            "rotation_vector_direction_cosine": -0.4408096030920444
+          },
+          {
+            "selection_index": 103,
+            "predicted_angle_from_identity_deg": 12.87204510541695,
+            "expert_angle_from_identity_deg": 10.67900737292765,
+            "rotation_vector_direction_cosine": 0.7017779739517996
+          },
+          {
+            "selection_index": 104,
+            "predicted_angle_from_identity_deg": 1.876305079982593,
+            "expert_angle_from_identity_deg": 4.432996085131733,
+            "rotation_vector_direction_cosine": -0.104155766529285
+          },
+          {
+            "selection_index": 105,
+            "predicted_angle_from_identity_deg": 40.43045702870859,
+            "expert_angle_from_identity_deg": 31.996392999515134,
+            "rotation_vector_direction_cosine": 0.9570914427792817
+          },
+          {
+            "selection_index": 106,
+            "predicted_angle_from_identity_deg": 4.887926362966055,
+            "expert_angle_from_identity_deg": 7.909430079179072,
+            "rotation_vector_direction_cosine": 0.13943884655791236
+          },
+          {
+            "selection_index": 107,
+            "predicted_angle_from_identity_deg": 5.704671657555979,
+            "expert_angle_from_identity_deg": 3.995432265545744,
+            "rotation_vector_direction_cosine": 0.03209816324291745
+          },
+          {
+            "selection_index": 108,
+            "predicted_angle_from_identity_deg": 26.34001572859059,
+            "expert_angle_from_identity_deg": 26.592080322066153,
+            "rotation_vector_direction_cosine": 0.2540952453684489
+          },
+          {
+            "selection_index": 109,
+            "predicted_angle_from_identity_deg": 5.28427485508155,
+            "expert_angle_from_identity_deg": 7.769005061735234,
+            "rotation_vector_direction_cosine": -0.1706103601205314
+          },
+          {
+            "selection_index": 110,
+            "predicted_angle_from_identity_deg": 12.509647920170734,
+            "expert_angle_from_identity_deg": 13.809318331750369,
+            "rotation_vector_direction_cosine": 0.08846722155505904
+          },
+          {
+            "selection_index": 111,
+            "predicted_angle_from_identity_deg": 8.95602287462298,
+            "expert_angle_from_identity_deg": 8.067283751037138,
+            "rotation_vector_direction_cosine": 0.025558378813494004
+          },
+          {
+            "selection_index": 112,
+            "predicted_angle_from_identity_deg": 2.0227875185052007,
+            "expert_angle_from_identity_deg": 2.200834103100453,
+            "rotation_vector_direction_cosine": -0.0010474413364769397
+          },
+          {
+            "selection_index": 113,
+            "predicted_angle_from_identity_deg": 3.147209569372522,
+            "expert_angle_from_identity_deg": 10.912724354521718,
+            "rotation_vector_direction_cosine": 0.39538983138684997
+          },
+          {
+            "selection_index": 114,
+            "predicted_angle_from_identity_deg": 14.66207255345025,
+            "expert_angle_from_identity_deg": 17.031063402416585,
+            "rotation_vector_direction_cosine": 0.7971578528135058
+          },
+          {
+            "selection_index": 115,
+            "predicted_angle_from_identity_deg": 7.920307185496726,
+            "expert_angle_from_identity_deg": 6.770803205225091,
+            "rotation_vector_direction_cosine": 0.13831703362331818
+          },
+          {
+            "selection_index": 116,
+            "predicted_angle_from_identity_deg": 15.013722353494504,
+            "expert_angle_from_identity_deg": 11.727911192013638,
+            "rotation_vector_direction_cosine": -0.48822407978671023
+          },
+          {
+            "selection_index": 117,
+            "predicted_angle_from_identity_deg": 21.09151921575734,
+            "expert_angle_from_identity_deg": 6.079447059720967,
+            "rotation_vector_direction_cosine": -0.013707267716026178
+          },
+          {
+            "selection_index": 118,
+            "predicted_angle_from_identity_deg": 9.17273696566967,
+            "expert_angle_from_identity_deg": 12.880599704005016,
+            "rotation_vector_direction_cosine": 0.028177540570209252
+          },
+          {
+            "selection_index": 119,
+            "predicted_angle_from_identity_deg": 9.656606363724903,
+            "expert_angle_from_identity_deg": 12.860731754261625,
+            "rotation_vector_direction_cosine": 0.2091788965884596
+          },
+          {
+            "selection_index": 120,
+            "predicted_angle_from_identity_deg": 7.56476481711901,
+            "expert_angle_from_identity_deg": 5.583665054055377,
+            "rotation_vector_direction_cosine": -0.2005212794548284
+          },
+          {
+            "selection_index": 121,
+            "predicted_angle_from_identity_deg": 7.219985436099414,
+            "expert_angle_from_identity_deg": 10.620045772071038,
+            "rotation_vector_direction_cosine": 0.5309333872454056
+          },
+          {
+            "selection_index": 122,
+            "predicted_angle_from_identity_deg": 4.2263057414387175,
+            "expert_angle_from_identity_deg": 6.310361625987895,
+            "rotation_vector_direction_cosine": -0.1908951794614236
+          },
+          {
+            "selection_index": 123,
+            "predicted_angle_from_identity_deg": 3.1048906267122134,
+            "expert_angle_from_identity_deg": 10.139747967282098,
+            "rotation_vector_direction_cosine": 0.3078294439393203
+          },
+          {
+            "selection_index": 124,
+            "predicted_angle_from_identity_deg": 8.16936561576425,
+            "expert_angle_from_identity_deg": 7.004584529267715,
+            "rotation_vector_direction_cosine": 0.2029033310916882
+          },
+          {
+            "selection_index": 125,
+            "predicted_angle_from_identity_deg": 13.806855142408933,
+            "expert_angle_from_identity_deg": 9.601390295990408,
+            "rotation_vector_direction_cosine": -0.11100991105725046
+          },
+          {
+            "selection_index": 126,
+            "predicted_angle_from_identity_deg": 2.338510312788225,
+            "expert_angle_from_identity_deg": 0.0,
+            "rotation_vector_direction_cosine": null
+          },
+          {
+            "selection_index": 127,
+            "predicted_angle_from_identity_deg": 11.154543338042176,
+            "expert_angle_from_identity_deg": 3.230840505687214,
+            "rotation_vector_direction_cosine": 0.1236007993208674
+          }
+        ],
+        "predicted_angle_mean_deg": 9.338661559556419,
+        "expert_angle_mean_deg": 10.803814618203226,
+        "direction_cosine_window_mean": 0.1822283707058288,
+        "scope": "Shortest rotation-vector diagnostic under recorded left-relative xyzw; near-zero axes excluded; descriptive, no physical calibration or causal claim"
+      },
+      "reported_motion_and_gripper": {
+        "before": {
+          "gripper_accuracy_window_equal": 0.5028434781364469,
+          "gripper_scope": "Observed masked commands only; no static/unknown-gripper baseline or grasp-success claim",
+          "amplitude_ratio_of_window_equal_means": 0.9648901635343844,
+          "numeric_static_windows": 1,
+          "target_amplitude_quantiles": [
+            0.0,
+            0.4596297711952003,
+            0.7124431430427498,
+            1.0373032403809155,
+            2.1935158967317454
+          ]
+        },
+        "after": {
+          "gripper_accuracy_window_equal": 0.9724016001359751,
+          "gripper_scope": "Observed masked commands only; no static/unknown-gripper baseline or grasp-success claim",
+          "amplitude_ratio_of_window_equal_means": 0.9660858927818586,
+          "numeric_static_windows": 1,
+          "target_amplitude_quantiles": [
+            0.0,
+            0.4596297711952003,
+            0.7124431430427498,
+            1.0373032403809155,
+            2.1935158967317454
+          ]
+        }
+      }
+    },
+    "validation": {
+      "windows": 64,
+      "metrics": {
+        "path_position_normalized": {
+          "initial": 1.2540750532037577,
+          "final": 0.9439299470008339,
+          "static": 1.0241369636028934,
+          "improvement_vs_initial_pct": 24.730984434352877,
+          "improvement_vs_static_pct": 7.831668951767234,
+          "after_minus_static_ci95": [
+            -0.19413745508113645,
+            0.03191667125208038
+          ],
+          "windows_better_static": 37,
+          "windows_worse_static": 27,
+          "windows_tied_static": 0,
+          "median_after_minus_static": -0.10349641232183239,
+          "after_minus_static_quantiles": [
+            -1.4316901958399393,
+            -0.31450105377997195,
+            -0.10349641232183239,
+            0.2786049180357357,
+            0.9751336723343366
+          ]
+        },
+        "path_rotation_deg": {
+          "initial": 130.18422440765363,
+          "final": 15.66305771862515,
+          "static": 12.063044075899477,
+          "improvement_vs_initial_pct": 87.96854396921513,
+          "improvement_vs_static_pct": -29.843326610387443,
+          "after_minus_static_ci95": [
+            1.894283886483402,
+            5.5757760046618134
+          ],
+          "windows_better_static": 18,
+          "windows_worse_static": 46,
+          "windows_tied_static": 0,
+          "median_after_minus_static": 1.342667383715682,
+          "after_minus_static_quantiles": [
+            -5.6205056743038835,
+            -0.5372750322457596,
+            1.342667383715682,
+            4.016844132742454,
+            34.60710905276537
+          ]
+        },
+        "endpoint_position_normalized": {
+          "initial": 1.4740886925753585,
+          "final": 1.1884956389541559,
+          "static": 1.3696822176356824,
+          "improvement_vs_initial_pct": 19.37421099962765,
+          "improvement_vs_static_pct": 13.228366138408887,
+          "after_minus_static_ci95": [
+            -0.34169652138300005,
+            -0.023256216315735965
+          ],
+          "windows_better_static": 37,
+          "windows_worse_static": 27,
+          "windows_tied_static": 0,
+          "median_after_minus_static": -0.13592695572581937,
+          "after_minus_static_quantiles": [
+            -2.141247648441445,
+            -0.5389625240389574,
+            -0.13592695572581937,
+            0.25073074815165186,
+            1.28116236940075
+          ]
+        },
+        "endpoint_rotation_deg": {
+          "initial": 134.11291810582827,
+          "final": 20.701301128637937,
+          "static": 16.297180059569865,
+          "improvement_vs_initial_pct": 84.56427507430524,
+          "improvement_vs_static_pct": -27.023822851376856,
+          "after_minus_static_ci95": [
+            1.6089342174156538,
+            7.454126641006946
+          ],
+          "windows_better_static": 25,
+          "windows_worse_static": 39,
+          "windows_tied_static": 0,
+          "median_after_minus_static": 2.0642885856219566,
+          "after_minus_static_quantiles": [
+            -23.605260357085445,
+            -1.4784868901256827,
+            2.0642885856219566,
+            6.988502537752083,
+            52.23787883920984
+          ]
+        }
+      },
+      "failed_gate_components": [
+        "path_rotation_deg_mean_not_better_static",
+        "endpoint_rotation_deg_mean_not_better_static",
+        "path_position_ci_upper_not_below_zero"
+      ],
+      "basic_capability_passed": false,
+      "path_position_and_rotation_both_better_windows": 13,
+      "all4_better_windows": 9,
+      "mean_within_window_sampling_error_std": {
+        "path_position_normalized": 0.14673067744937965,
+        "path_rotation_deg": 3.804948796747334,
+        "endpoint_position_normalized": 0.21847673922633176,
+        "endpoint_rotation_deg": 6.1230399383560865
+      },
+      "rotation_geometry": {
+        "per_window": [
+          {
+            "selection_index": 128,
+            "predicted_angle_from_identity_deg": 11.419688736277124,
+            "expert_angle_from_identity_deg": 13.801145442421634,
+            "rotation_vector_direction_cosine": 0.05278473882351982
+          },
+          {
+            "selection_index": 129,
+            "predicted_angle_from_identity_deg": 4.990476766827022,
+            "expert_angle_from_identity_deg": 11.139280067353498,
+            "rotation_vector_direction_cosine": -0.24218110932596135
+          },
+          {
+            "selection_index": 130,
+            "predicted_angle_from_identity_deg": 19.916377599966516,
+            "expert_angle_from_identity_deg": 10.94196728127284,
+            "rotation_vector_direction_cosine": 0.32287332062234864
+          },
+          {
+            "selection_index": 131,
+            "predicted_angle_from_identity_deg": 4.077916963747704,
+            "expert_angle_from_identity_deg": 14.76087040024585,
+            "rotation_vector_direction_cosine": -0.008155009059835966
+          },
+          {
+            "selection_index": 132,
+            "predicted_angle_from_identity_deg": 7.823419125118892,
+            "expert_angle_from_identity_deg": 5.657108067454258,
+            "rotation_vector_direction_cosine": 0.4928146286638095
+          },
+          {
+            "selection_index": 133,
+            "predicted_angle_from_identity_deg": 2.050556059430675,
+            "expert_angle_from_identity_deg": 7.268213340906341,
+            "rotation_vector_direction_cosine": -0.47412053805859405
+          },
+          {
+            "selection_index": 134,
+            "predicted_angle_from_identity_deg": 13.04128915480579,
+            "expert_angle_from_identity_deg": 15.66417016464419,
+            "rotation_vector_direction_cosine": 0.22818755289350248
+          },
+          {
+            "selection_index": 135,
+            "predicted_angle_from_identity_deg": 5.288706519467821,
+            "expert_angle_from_identity_deg": 20.34662779065901,
+            "rotation_vector_direction_cosine": 0.35062327067790927
+          },
+          {
+            "selection_index": 136,
+            "predicted_angle_from_identity_deg": 28.153405712310757,
+            "expert_angle_from_identity_deg": 11.713383143103446,
+            "rotation_vector_direction_cosine": -0.0022673537661528167
+          },
+          {
+            "selection_index": 137,
+            "predicted_angle_from_identity_deg": 7.937679630631682,
+            "expert_angle_from_identity_deg": 10.821209134532833,
+            "rotation_vector_direction_cosine": 0.28112817838885196
+          },
+          {
+            "selection_index": 138,
+            "predicted_angle_from_identity_deg": 4.021780186872609,
+            "expert_angle_from_identity_deg": 6.370276776058096,
+            "rotation_vector_direction_cosine": 0.16607712679332295
+          },
+          {
+            "selection_index": 139,
+            "predicted_angle_from_identity_deg": 13.396785591839407,
+            "expert_angle_from_identity_deg": 4.424999705902871,
+            "rotation_vector_direction_cosine": -0.4804501683059445
+          },
+          {
+            "selection_index": 140,
+            "predicted_angle_from_identity_deg": 10.254061366824303,
+            "expert_angle_from_identity_deg": 6.204672634397182,
+            "rotation_vector_direction_cosine": 0.31071871556130537
+          },
+          {
+            "selection_index": 141,
+            "predicted_angle_from_identity_deg": 8.279235116337562,
+            "expert_angle_from_identity_deg": 10.169155943282265,
+            "rotation_vector_direction_cosine": -0.23077478412788932
+          },
+          {
+            "selection_index": 142,
+            "predicted_angle_from_identity_deg": 9.5610548049366,
+            "expert_angle_from_identity_deg": 11.120609107504993,
+            "rotation_vector_direction_cosine": 0.6520632764658982
+          },
+          {
+            "selection_index": 143,
+            "predicted_angle_from_identity_deg": 9.276798711077747,
+            "expert_angle_from_identity_deg": 13.856315794120846,
+            "rotation_vector_direction_cosine": -0.003103906721326058
+          },
+          {
+            "selection_index": 144,
+            "predicted_angle_from_identity_deg": 9.007217098110921,
+            "expert_angle_from_identity_deg": 5.562629693970392,
+            "rotation_vector_direction_cosine": 0.1940728246215337
+          },
+          {
+            "selection_index": 145,
+            "predicted_angle_from_identity_deg": 7.0475694489960485,
+            "expert_angle_from_identity_deg": 6.3107386785639985,
+            "rotation_vector_direction_cosine": 0.0007607887408999278
+          },
+          {
+            "selection_index": 146,
+            "predicted_angle_from_identity_deg": 10.52015011395539,
+            "expert_angle_from_identity_deg": 10.843251400640039,
+            "rotation_vector_direction_cosine": 0.6809571409681254
+          },
+          {
+            "selection_index": 147,
+            "predicted_angle_from_identity_deg": 3.2209115597882403,
+            "expert_angle_from_identity_deg": 9.405206727599541,
+            "rotation_vector_direction_cosine": -0.13465464165662255
+          },
+          {
+            "selection_index": 148,
+            "predicted_angle_from_identity_deg": 4.721085240474252,
+            "expert_angle_from_identity_deg": 5.976834456839914,
+            "rotation_vector_direction_cosine": -0.37782428467491774
+          },
+          {
+            "selection_index": 149,
+            "predicted_angle_from_identity_deg": 14.204645143451675,
+            "expert_angle_from_identity_deg": 16.62856171573626,
+            "rotation_vector_direction_cosine": 0.5777973362561072
+          },
+          {
+            "selection_index": 150,
+            "predicted_angle_from_identity_deg": 2.4757884829281016,
+            "expert_angle_from_identity_deg": 3.3452421936359604,
+            "rotation_vector_direction_cosine": -0.17340839569730185
+          },
+          {
+            "selection_index": 151,
+            "predicted_angle_from_identity_deg": 34.875568483702246,
+            "expert_angle_from_identity_deg": 12.036680766313573,
+            "rotation_vector_direction_cosine": -0.6669205845793162
+          },
+          {
+            "selection_index": 152,
+            "predicted_angle_from_identity_deg": 40.75554418326687,
+            "expert_angle_from_identity_deg": 32.066700581028655,
+            "rotation_vector_direction_cosine": 0.7455155920924287
+          },
+          {
+            "selection_index": 153,
+            "predicted_angle_from_identity_deg": 15.746902263003086,
+            "expert_angle_from_identity_deg": 24.950258451637573,
+            "rotation_vector_direction_cosine": -0.7335699492876503
+          },
+          {
+            "selection_index": 154,
+            "predicted_angle_from_identity_deg": 3.0468059811753014,
+            "expert_angle_from_identity_deg": 7.3082976668015505,
+            "rotation_vector_direction_cosine": 0.35842509365590747
+          },
+          {
+            "selection_index": 155,
+            "predicted_angle_from_identity_deg": 2.7837888299882216,
+            "expert_angle_from_identity_deg": 7.009738116867355,
+            "rotation_vector_direction_cosine": 0.19279069057463802
+          },
+          {
+            "selection_index": 156,
+            "predicted_angle_from_identity_deg": 11.21868979909977,
+            "expert_angle_from_identity_deg": 28.38399233437512,
+            "rotation_vector_direction_cosine": 0.3034547093999739
+          },
+          {
+            "selection_index": 157,
+            "predicted_angle_from_identity_deg": 11.220385910505748,
+            "expert_angle_from_identity_deg": 10.363529969006338,
+            "rotation_vector_direction_cosine": 0.5743178186353894
+          },
+          {
+            "selection_index": 158,
+            "predicted_angle_from_identity_deg": 19.052413373603198,
+            "expert_angle_from_identity_deg": 6.311550486382783,
+            "rotation_vector_direction_cosine": -0.5158974659223521
+          },
+          {
+            "selection_index": 159,
+            "predicted_angle_from_identity_deg": 6.62419759633608,
+            "expert_angle_from_identity_deg": 7.245715970108792,
+            "rotation_vector_direction_cosine": -0.3088846535890656
+          },
+          {
+            "selection_index": 160,
+            "predicted_angle_from_identity_deg": 6.233518069434899,
+            "expert_angle_from_identity_deg": 7.722573281546642,
+            "rotation_vector_direction_cosine": 0.4008138883882618
+          },
+          {
+            "selection_index": 161,
+            "predicted_angle_from_identity_deg": 1.98101010363993,
+            "expert_angle_from_identity_deg": 6.4257683680467474,
+            "rotation_vector_direction_cosine": -0.07877665732451164
+          },
+          {
+            "selection_index": 162,
+            "predicted_angle_from_identity_deg": 3.817883225289863,
+            "expert_angle_from_identity_deg": 16.268884985051354,
+            "rotation_vector_direction_cosine": -0.20273616383673704
+          },
+          {
+            "selection_index": 163,
+            "predicted_angle_from_identity_deg": 4.569347127932561,
+            "expert_angle_from_identity_deg": 13.18682591078534,
+            "rotation_vector_direction_cosine": 0.3573698517739957
+          },
+          {
+            "selection_index": 164,
+            "predicted_angle_from_identity_deg": 8.75154413485219,
+            "expert_angle_from_identity_deg": 21.214204100241226,
+            "rotation_vector_direction_cosine": 0.528495025493851
+          },
+          {
+            "selection_index": 165,
+            "predicted_angle_from_identity_deg": 5.948690410657903,
+            "expert_angle_from_identity_deg": 9.696144032327542,
+            "rotation_vector_direction_cosine": -0.4053694657882782
+          },
+          {
+            "selection_index": 166,
+            "predicted_angle_from_identity_deg": 5.837731478420875,
+            "expert_angle_from_identity_deg": 15.249337278601796,
+            "rotation_vector_direction_cosine": 0.19577451322651104
+          },
+          {
+            "selection_index": 167,
+            "predicted_angle_from_identity_deg": 4.05155857481645,
+            "expert_angle_from_identity_deg": 4.576806361556309,
+            "rotation_vector_direction_cosine": 0.02160633733276206
+          },
+          {
+            "selection_index": 168,
+            "predicted_angle_from_identity_deg": 4.952949342893426,
+            "expert_angle_from_identity_deg": 13.539959344092706,
+            "rotation_vector_direction_cosine": 0.5789846071819095
+          },
+          {
+            "selection_index": 169,
+            "predicted_angle_from_identity_deg": 45.55072325862796,
+            "expert_angle_from_identity_deg": 16.600506300868062,
+            "rotation_vector_direction_cosine": 0.907792183758802
+          },
+          {
+            "selection_index": 170,
+            "predicted_angle_from_identity_deg": 24.69247505696528,
+            "expert_angle_from_identity_deg": 26.968358114647256,
+            "rotation_vector_direction_cosine": -0.5097140793647986
+          },
+          {
+            "selection_index": 171,
+            "predicted_angle_from_identity_deg": 2.4994313204810426,
+            "expert_angle_from_identity_deg": 12.311060132931532,
+            "rotation_vector_direction_cosine": -0.27447032006586064
+          },
+          {
+            "selection_index": 172,
+            "predicted_angle_from_identity_deg": 15.497291763947963,
+            "expert_angle_from_identity_deg": 11.674067724422878,
+            "rotation_vector_direction_cosine": 0.8519775384957343
+          },
+          {
+            "selection_index": 173,
+            "predicted_angle_from_identity_deg": 8.198552565838574,
+            "expert_angle_from_identity_deg": 10.260888401876148,
+            "rotation_vector_direction_cosine": 0.13596761969845747
+          },
+          {
+            "selection_index": 174,
+            "predicted_angle_from_identity_deg": 6.528105341211699,
+            "expert_angle_from_identity_deg": 18.650790917110456,
+            "rotation_vector_direction_cosine": -0.4956889326011152
+          },
+          {
+            "selection_index": 175,
+            "predicted_angle_from_identity_deg": 38.60230845577423,
+            "expert_angle_from_identity_deg": 2.999234268443174,
+            "rotation_vector_direction_cosine": 0.05179502697462904
+          },
+          {
+            "selection_index": 176,
+            "predicted_angle_from_identity_deg": 10.36420593246331,
+            "expert_angle_from_identity_deg": 3.6606219821000012,
+            "rotation_vector_direction_cosine": 0.1486738062957875
+          },
+          {
+            "selection_index": 177,
+            "predicted_angle_from_identity_deg": 22.868557003240976,
+            "expert_angle_from_identity_deg": 16.135652767671374,
+            "rotation_vector_direction_cosine": 0.2572473812058591
+          },
+          {
+            "selection_index": 178,
+            "predicted_angle_from_identity_deg": 8.23737693887467,
+            "expert_angle_from_identity_deg": 4.271488833294464,
+            "rotation_vector_direction_cosine": 0.3833962892813177
+          },
+          {
+            "selection_index": 179,
+            "predicted_angle_from_identity_deg": 4.216096656859039,
+            "expert_angle_from_identity_deg": 6.7571933366266235,
+            "rotation_vector_direction_cosine": -0.4716262677679003
+          },
+          {
+            "selection_index": 180,
+            "predicted_angle_from_identity_deg": 4.253913899479211,
+            "expert_angle_from_identity_deg": 5.984936573599449,
+            "rotation_vector_direction_cosine": 0.11478539011908166
+          },
+          {
+            "selection_index": 181,
+            "predicted_angle_from_identity_deg": 3.4993003935718856,
+            "expert_angle_from_identity_deg": 10.290320159943958,
+            "rotation_vector_direction_cosine": 0.17834315031718853
+          },
+          {
+            "selection_index": 182,
+            "predicted_angle_from_identity_deg": 17.526212506639865,
+            "expert_angle_from_identity_deg": 21.551290540387676,
+            "rotation_vector_direction_cosine": -0.020799375763612234
+          },
+          {
+            "selection_index": 183,
+            "predicted_angle_from_identity_deg": 4.506853033357335,
+            "expert_angle_from_identity_deg": 14.26998121343755,
+            "rotation_vector_direction_cosine": 0.5355280426359955
+          },
+          {
+            "selection_index": 184,
+            "predicted_angle_from_identity_deg": 3.3328313202950968,
+            "expert_angle_from_identity_deg": 14.67204330417225,
+            "rotation_vector_direction_cosine": -0.250959575021387
+          },
+          {
+            "selection_index": 185,
+            "predicted_angle_from_identity_deg": 5.8358355476066635,
+            "expert_angle_from_identity_deg": 7.894728424285698,
+            "rotation_vector_direction_cosine": -0.42699666887085574
+          },
+          {
+            "selection_index": 186,
+            "predicted_angle_from_identity_deg": 3.351850806444579,
+            "expert_angle_from_identity_deg": 11.708980161021941,
+            "rotation_vector_direction_cosine": 0.33334213117517353
+          },
+          {
+            "selection_index": 187,
+            "predicted_angle_from_identity_deg": 5.267344753364573,
+            "expert_angle_from_identity_deg": 16.91499081007224,
+            "rotation_vector_direction_cosine": 0.3488640513932503
+          },
+          {
+            "selection_index": 188,
+            "predicted_angle_from_identity_deg": 4.819898168194511,
+            "expert_angle_from_identity_deg": 14.828500840964978,
+            "rotation_vector_direction_cosine": 0.054211898746710584
+          },
+          {
+            "selection_index": 189,
+            "predicted_angle_from_identity_deg": 3.1013388501315973,
+            "expert_angle_from_identity_deg": 18.04083493509215,
+            "rotation_vector_direction_cosine": 0.007704701363050584
+          },
+          {
+            "selection_index": 190,
+            "predicted_angle_from_identity_deg": 5.797153555438693,
+            "expert_angle_from_identity_deg": 9.691730114648088,
+            "rotation_vector_direction_cosine": -0.16356397189762473
+          },
+          {
+            "selection_index": 191,
+            "predicted_angle_from_identity_deg": 7.907951250383299,
+            "expert_angle_from_identity_deg": 20.007183334331557,
+            "rotation_vector_direction_cosine": 0.700396404994974
+          }
+        ],
+        "predicted_angle_mean_deg": 10.290792756281057,
+        "expert_angle_mean_deg": 12.063044075899487,
+        "direction_cosine_window_mean": 0.09258622375958067,
+        "scope": "Shortest rotation-vector diagnostic under recorded left-relative xyzw; near-zero axes excluded; descriptive, no physical calibration or causal claim"
+      },
+      "reported_motion_and_gripper": {
+        "before": {
+          "gripper_accuracy_window_equal": 0.3291610082625708,
+          "gripper_scope": "Observed masked commands only; no static/unknown-gripper baseline or grasp-success claim",
+          "amplitude_ratio_of_window_equal_means": 0.7379517040533291,
+          "numeric_static_windows": 0,
+          "target_amplitude_quantiles": [
+            0.23280326170621318,
+            0.7419252860800247,
+            0.9689215761707668,
+            1.2733182467540167,
+            2.2602529540499106
+          ]
+        },
+        "after": {
+          "gripper_accuracy_window_equal": 0.771835644101269,
+          "gripper_scope": "Observed masked commands only; no static/unknown-gripper baseline or grasp-success claim",
+          "amplitude_ratio_of_window_equal_means": 0.8893798391885395,
+          "numeric_static_windows": 0,
+          "target_amplitude_quantiles": [
+            0.23280326170621318,
+            0.7419252860800247,
+            0.9689215761707668,
+            1.2733182467540167,
+            2.2602529540499106
+          ]
+        }
+      }
+    }
+  },
+  "training_hours_reported": 5.984999460759443,
+  "process_hours_reported": 6.036491476814133,
+  "peak_reserved_gib_reported": 4.53515625,
+  "full_weights_adam_history_downloaded": false,
+  "slurm_final_state_received": false,
+  "new_neural_model_calls": 0,
+  "new_optimizer_updates": 0,
+  "gpu_used": false,
+  "main_model_replaced": false,
+  "automatic_following_action": false,
+  "scope": "One fresh Bridge-only training seed;128training+64reused development groups; not all10352windows or LIBERO; comparison to initial establishes learning, not mixing causality."
+}

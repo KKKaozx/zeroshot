@@ -1,0 +1,664 @@
+{
+  "date": "2026-10-26",
+  "root": "D:\\ntu_related\\dissertation\\Zero_shot",
+  "status": "completed",
+  "free_bytes_before_execution": 61591838720,
+  "deleted": [
+    {
+      "path": "results/bcz_balanced_fit_v1/best.pt",
+      "bytes": 28519785,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_cls_regression_fit_control_v1/best.pt",
+      "bytes": 649913073,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_first_command_fit_v1/best.pt",
+      "bytes": 649543345,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_low_v1/best.pt",
+      "bytes": 651355873,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_lr_split_v1/best.pt",
+      "bytes": 651355873,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_native_adapter_fit_v1/best.pt",
+      "bytes": 651355809,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_native_sequence_fit_v1/best.pt",
+      "bytes": 28743081,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v1/best.pt",
+      "bytes": 719888929,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_overfit_cosine_v2/best.pt",
+      "bytes": 719891041,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_overfit_regression_v1/best.pt",
+      "bytes": 649915249,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_overfit_x0_v1/best.pt",
+      "bytes": 719891617,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_patch_pool_regression_fit_v1/best.pt",
+      "bytes": 649913073,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_fit_v1/best.pt",
+      "bytes": 651355937,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "results/bcz_pool_seen_probe_rotation4_v1/best.pt",
+      "bytes": 651356001,
+      "category": "retired historical BC-Z small-sample fit checkpoint"
+    },
+    {
+      "path": "cluster_packages/bridge_author_observation_probe_v1.zip",
+      "bytes": 8533,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_author_observation_probe_v1.sha256",
+      "bytes": 105,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_author_preflight_v1.zip",
+      "bytes": 29875,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_author_preflight_v1.sha256",
+      "bytes": 97,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_author_reference_v1.zip",
+      "bytes": 11978,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_author_reference_v1.sha256",
+      "bytes": 97,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_batch_control_v1.zip",
+      "bytes": 60534,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_batch_control_v1.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_batch_control_v2.zip",
+      "bytes": 56016,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_batch_control_v2.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_batch_input_audit_v1.zip",
+      "bytes": 36531137,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_batch_input_audit_v1.sha256",
+      "bytes": 98,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_coverage_replication_v1.zip",
+      "bytes": 194670,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_coverage_replication_v1.sha256",
+      "bytes": 101,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_demo806_budget_v1.zip",
+      "bytes": 304221,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_demo806_budget_v1.sha256",
+      "bytes": 95,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_demo806_code_v1.zip",
+      "bytes": 1977493,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_fixed_context_import_repair_v1.zip",
+      "bytes": 6905,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_fixed_context_import_repair_v1.sha256",
+      "bytes": 108,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_fixed_context_v1.zip",
+      "bytes": 23720,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_fixed_context_v1.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_growth128_v1.zip",
+      "bytes": 32854589,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_growth128_v1.sha256",
+      "bytes": 90,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_growth64_replication_v1.zip",
+      "bytes": 16823998,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_growth64_replication_v1.sha256",
+      "bytes": 101,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_growth64_v1.zip",
+      "bytes": 16823540,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_growth64_v1.sha256",
+      "bytes": 89,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_heldout_context_repair_v1.zip",
+      "bytes": 6827,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_heldout_context_repair_v1.sha256",
+      "bytes": 104,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_heldout_evaluation_v1.zip",
+      "bytes": 56106743,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_heldout_evaluation_v1.sha256",
+      "bytes": 100,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_heldout_replay_probe_v1.zip",
+      "bytes": 9068,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_heldout_replay_probe_v1.sha256",
+      "bytes": 102,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_history_generalization_v1.zip",
+      "bytes": 50644,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_history_generalization_v1.sha256",
+      "bytes": 103,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_image_augmentation_v1.zip",
+      "bytes": 13146,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_image_augmentation_v1.sha256",
+      "bytes": 99,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_inner_selection_v1.zip",
+      "bytes": 15796,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_inner_selection_v1.sha256",
+      "bytes": 96,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_late_lr_pair_v1.zip",
+      "bytes": 68862,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_late_lr_pair_v1.sha256",
+      "bytes": 93,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_late_lr_replication_v1.zip",
+      "bytes": 75245,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_late_lr_replication_v1.sha256",
+      "bytes": 100,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_prefix_formal_v1.unpublished-draft.zip",
+      "bytes": 14196,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_prefix_formal_v1.zip",
+      "bytes": 15115,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_prefix_formal_v1.sha256",
+      "bytes": 95,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_prefix_pair_v1.zip",
+      "bytes": 25978393,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_prefix_pair_v1.sha256",
+      "bytes": 93,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_project_condition_probe_v1.zip",
+      "bytes": 13298,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_project_condition_probe_v1.sha256",
+      "bytes": 104,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_rotation_weight_v1.zip",
+      "bytes": 197313,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_rotation_weight_v1.sha256",
+      "bytes": 96,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_spatial_formal_v1.zip",
+      "bytes": 16276,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_spatial_readout_v1.unpublished-draft.zip",
+      "bytes": 837665,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_spatial_readout_v1.zip",
+      "bytes": 837757,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_state_conditioning_v1.zip",
+      "bytes": 28958,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_state_conditioning_v1.sha256",
+      "bytes": 99,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_state_prior_v1.zip",
+      "bytes": 45164,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_state_prior_v1.sha256",
+      "bytes": 93,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_state_replication_v1.zip",
+      "bytes": 29288,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_state_replication_v1.sha256",
+      "bytes": 98,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_training_coverage_v1.zip",
+      "bytes": 193558,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_training_coverage_v1.sha256",
+      "bytes": 98,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_training_trace_v1.zip",
+      "bytes": 63008,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_training_trace_v1.sha256",
+      "bytes": 95,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_visual_variation_v1.zip",
+      "bytes": 10022,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_visual_variation_v1.sha256",
+      "bytes": 97,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/bridge_window_coverage_v1.zip",
+      "bytes": 20171931,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/bridge_window_coverage_v1.sha256",
+      "bytes": 96,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "cluster_packages/pusht_endpoint_action_audit_v1.zip",
+      "bytes": 33859,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_float_image_repair_v1.zip",
+      "bytes": 6885,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_frontend_resource_v1.zip",
+      "bytes": 14782,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_module_assets_v1.zip",
+      "bytes": 7525,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_native_device_repair_v1.zip",
+      "bytes": 8645,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_spatial_bypass_formal_v1.zip",
+      "bytes": 87796,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_spatial_bypass_preflight_v1.zip",
+      "bytes": 41089,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_spatial_diagnostic_v1.zip",
+      "bytes": 33833,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_zero_block_formal_v1.zip",
+      "bytes": 67105,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "cluster_packages/pusht_zero_block_preflight_v1.zip",
+      "bytes": 50768,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_chain_probe_v1.zip",
+      "bytes": 8832,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_chain_probe_v1.sha256",
+      "bytes": 92,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_conditioning_probe_v1.zip",
+      "bytes": 7237,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_conditioning_probe_v1.sha256",
+      "bytes": 99,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_ddim_steps_v1.zip",
+      "bytes": 12786,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_ddim_steps_v1.sha256",
+      "bytes": 91,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_endpoint_metrics_v1.zip",
+      "bytes": 3695,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_endpoint_metrics_v1.sha256",
+      "bytes": 98,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_epsilon_control_v1.zip",
+      "bytes": 17981,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_epsilon_control_v1.sha256",
+      "bytes": 96,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_epsilon_steps_v1.zip",
+      "bytes": 16599,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_epsilon_steps_v1.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_epsilon_steps_v2.zip",
+      "bytes": 16747,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_epsilon_steps_v2.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_full_chain_probe_v1.zip",
+      "bytes": 23900,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_full_chain_probe_v1.sha256",
+      "bytes": 97,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_head_control_v1.zip",
+      "bytes": 14499,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_head_control_v1.sha256",
+      "bytes": 93,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_one_step_image_probe_v1.zip",
+      "bytes": 24532,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_one_step_image_probe_v1.sha256",
+      "bytes": 101,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_one_step_sampler_v1.zip",
+      "bytes": 7975,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_one_step_sampler_v1.sha256",
+      "bytes": 97,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/bridge_one_step_sampler_v2.zip",
+      "bytes": 8263,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/bridge_one_step_sampler_v2.sha256",
+      "bytes": 97,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/multitask_preflight_v1.zip",
+      "bytes": 5160686,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/multitask_preflight_v1.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": "training_cache/exports/multitask_preflight_v2.zip",
+      "bytes": 5163046,
+      "category": "retired debug delivery archive, all member content preserved"
+    },
+    {
+      "path": "training_cache/exports/multitask_preflight_v2.sha256",
+      "bytes": 94,
+      "category": "checksum sidecar preserved in retired contents"
+    },
+    {
+      "path": ".tmp/bridge_official_unet_evaluation_v1",
+      "bytes": 72749,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/bridge_official_unet_preflight_v1",
+      "bytes": 18450,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/bridge_official_unet_real_preflight_v1",
+      "bytes": 48426,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/bridge_official_unet_training_v1",
+      "bytes": 52890,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/multiscale_noise_probe_v1",
+      "bytes": 67083,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/multiscale_noise_probe_v2",
+      "bytes": 70643,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/multiscale_tail_probe_v1",
+      "bytes": 90535,
+      "category": "obsolete local diagnostic wrapper, exact files preserved in blobs"
+    },
+    {
+      "path": ".tmp/libero_pip_cache",
+      "bytes": 344026692,
+      "category": "regenerable pip download/Numba compilation cache; installed environments retained"
+    },
+    {
+      "path": ".tmp/libero_numba",
+      "bytes": 763459,
+      "category": "regenerable pip download/Numba compilation cache; installed environments retained"
+    }
+  ],
+  "deleted_bytes": 8639558621,
+  "retained_snapshot_bytes": 151223889,
+  "cluster_contacted": false,
+  "error": null,
+  "free_bytes_after_execution": 70231228416,
+  "net_freed_bytes_after_snapshot": 8488334732
+}

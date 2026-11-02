@@ -1,0 +1,23 @@
+{
+  "small_real_cuda_continuation_passed": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu128",
+  "full_source_state_digest_matches_after_restore": true,
+  "next_update_loss_and_full_state_match_uninterrupted": true,
+  "lr_and_ema_counters_continue_without_reset": true,
+  "sample_order_matches_211309": true,
+  "base_protocol_and_repaired_core_byte_identical": true,
+  "generated_runner_binds_repaired_core": true,
+  "unrelated_resume_rejected": true,
+  "generated_loop": {
+    "actual_generated_loop_start_index": 20000,
+    "actual_generated_loop_last_index": 84167,
+    "new_updates_only": 64168,
+    "last_checkpoint": 84168,
+    "checkpoint_count": 33
+  },
+  "python39_AST": true,
+  "full_native_policy_or_training_dataset_executed": false,
+  "development_or_final_scored": false,
+  "actual_cluster_torch112_entry_executed_locally": false
+}

@@ -1,0 +1,68 @@
+{
+  "format": "current-oxe-fixed8-learnability-protocol-v1",
+  "source_job": 232587,
+  "source_identity": {
+    "role": "real_pose",
+    "completed_update": 10240,
+    "additional_updates": 2048,
+    "base_learned_sha256": "b53adab691250aeeaaee5234f15d4e7ba54da6f9207b27975098ac2116db71f9",
+    "port_sha256": "a3ca92257eb417c82c5f5dc7a5f781eb05d66581c0557a3fc177b4ed0eaca6ef",
+    "contract_sha256": "079e989b79e4282dd7e3a688fb7d6f51a7868403972f14114220327d25857b71",
+    "frozen_state_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+    "formal_contract_sha256": "c97f9e5ffbdb271fe3922e63f86e50e1d23ee6f7134996e4de6af687e74b6a01"
+  },
+  "formal_bundle_files": {
+    "SHA256SUMS": "7e315aeca5aea1855cb39a7d93fa216dc2aa93d16ec0a105fb3e189c4d20ee21",
+    "README.md": "cd8fb12b7bf4014e2002119a877c0afc8343152f8f0905222ce986edd042ef39",
+    "binding.py": "6dbe797ec5addad4271a0251e162976b9984e75f9843dd1f9a089e2fb85c3982",
+    "evaluate_formal.py": "659790081c0583cc0e34b0fb2c6a31d62bebdc12df03200b673c35ea21181475",
+    "expected_preflight_receipt.json": "3162af2fa69ebed1bd0d4ff53887f32ef18c5a46fcdf1d90f9db96a38a845c8b",
+    "formal_contract.json": "c97f9e5ffbdb271fe3922e63f86e50e1d23ee6f7134996e4de6af687e74b6a01",
+    "formal_state.py": "15cd3b637a0ae3be7273aab2f0af0029a86765fd8033c50e074ef12292217b35",
+    "instrument_formal.py": "8c5d816aa1bf99467af246f8f6d87c9187d18b2409dd04f6e5fd630c5b730dbe",
+    "job.sh": "b344caad203a4dcd7586c459fa8aa5c5ddccac18f93a0fa826cf2809c80c676d",
+    "pair_metrics.py": "c34135cbe8443702508532ea58df1970424cb457cb9e7f1cf96efd5acaec8b3d",
+    "run_formal.py": "eed2f2c754062e690b2f5a0de041627115e300faaa753abec596eebf67f4f940",
+    "runtime_inputs.py": "6ca90baffff6c94593522ec015014f7dd37c7f3bf902ee400c91445006d24cb5",
+    "submit_once.sh": "d72d8e823b0abb9470be167340f9cf5a6cc0e3b6d8918047998f0c60d0ef5990",
+    "verify_formal.py": "2bb23805c57f3c77b21fbce6a3068cb71af4c751e31b3cb4b00cef7340935647"
+  },
+  "fixed_training_windows": 8,
+  "updates": 512,
+  "batch_size": 8,
+  "source_schedule_start": 10240,
+  "source_schedule_end": 10752,
+  "lr_horizon": 65536,
+  "batch_intervention": "Repeat the same ordered eight selected train windows; original full-pool plan is preserved and not advanced",
+  "restore_original_adam_three_groups": true,
+  "frozen_feature_cache_only": true,
+  "dropout_and_loss_unchanged": true,
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "generation_steps": 100,
+  "evaluation_endpoints": [
+    "source10240",
+    "diagnostic10752"
+  ],
+  "fit_gate": {
+    "mean_static_fraction": 0.1,
+    "window_static_fraction": 0.2,
+    "required_windows": 7,
+    "mean_position_floor": 0.001,
+    "mean_rotation_floor_deg": 0.1,
+    "window_position_floor": 0.002,
+    "window_rotation_floor_deg": 0.2
+  },
+  "runtime_cap_seconds": 600,
+  "slurm_cap_minutes": 20,
+  "output_reserve_gib": 2,
+  "one_diagnostic_policy_only": true,
+  "no_new_encoder_cache_on_disk": true,
+  "original_source_overwritten": false,
+  "training_submitted": false,
+  "automatic_extension_or_libero_submission": false,
+  "scope": "Current OXE repeated-eight-window generation fit only; not generic CLIP/DINO viability or task/generalization success"
+}

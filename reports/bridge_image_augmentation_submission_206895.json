@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-16",
+  "job_id": "206895",
+  "stage": "cluster_preflight",
+  "source": "user_reported_submission_id",
+  "slurm_state_verified": true,
+  "slurm_evidence_source": "user_pasted_sacct_output",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:04:23",
+  "node": "gpu-a6000-1",
+  "report_verified": true,
+  "formal_job_submitted": true,
+  "formal_job_id": "206915",
+  "validator_success_inferred_from_user_returning_id_after_gated_command": true,
+  "objective": "Independent-episode generalization; training fitting is secondary only",
+  "protocol_sha256": "1e566a650097d1a78571c531eabbd50c9877ee5aa994b85c912c98082539a0ea",
+  "entry_sha256": "10a451db84183c32dd117c3fb3d7d98b4e96d8a2ccbfdd975240455810c96c42",
+  "archive_sha256": "12d8aff48bb7e2ea1b2a93a4e1189cf5e680fbf7e6f0c1672e04fef0b2fbf640",
+  "cluster_output": "/projects/Zeroshot/runs/bridge-aug-preflight-206895",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-aug-preflight-206895.out",
+  "terminal_evidence": {
+    "constant_and_restored_same_lr_first_loss": 0.1443534642457962,
+    "constant_and_restored_same_lr_train_position_mm": 126.97201728820801,
+    "constant_and_restored_same_lr_train_rotation_deg": 32.62559127807617,
+    "reduced_train_position_mm": 126.47297859191895,
+    "reduced_train_rotation_deg": 22.206716537475586,
+    "training_fit_gate": false,
+    "interpretation": "Bounded preflight; fitting gate is not required and no development score was provided. Matching terminal values do not independently verify all parameter/Adam state or resource checks."
+  },
+  "next_step": "Preflight audited with formal206915 artifacts; do not repeat.",
+  "independent_analysis": "reports/bridge_image_augmentation_analysis_206915/analysis.json"
+}

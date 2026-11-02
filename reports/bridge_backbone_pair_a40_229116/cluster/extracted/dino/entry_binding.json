@@ -1,0 +1,23 @@
+{
+  "original_entry_sha256": "9f1ae8751bac9fea32c4c72fa3b6d5267efe003a8f4b354b704e7695e241ab3a",
+  "effective_entry_sha256": "80141b8c076a99a9b2dbabab6548c6ab8bcbb036364c6cc9a7cb324567232f22",
+  "source_preflight_admission": "Explicit same-input/source-initialization engineering binding; not a fabricated A40 preflight",
+  "training_loop_sampler_loss_optimizer_changed": false,
+  "source_preflight_gpu": "NVIDIA RTX A6000",
+  "training_gpu": "NVIDIA A40",
+  "arm": "dino",
+  "visual_settings": {
+    "visual_backbone": "dinov2",
+    "dino_assets": "/projects/Zeroshot/dinov2_large_frozen_assets_20261023",
+    "visual_input_contract": "canonical_clip_224_letterbox_to_dino_imagenet_v1",
+    "visual_asset_identity": {
+      "repository": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "sha256": {
+        "model.safetensors": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+        "config.json": "12df51c069a2dc1305e34ba71ef58bc2407ea553b75f4722a1715c1bce3bbed0",
+        "preprocessor_config.json": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "format": "bridge-command8-motion-standardization-v1",
+  "fit_partition": "train",
+  "fit_unique_command_rows": 39572,
+  "duplicate_future_windows_counted_once": true,
+  "mean": [
+    0.004592788495222368,
+    0.00033992847833516654,
+    0.0028792580033181847,
+    -5.136307753380187e-05,
+    -0.0010359685447195754,
+    1.3521739816083988e-05,
+    0.9994252100805295
+  ],
+  "std_before_floor": [
+    0.10411886242567416,
+    0.14395870458551283,
+    0.12645784034151852,
+    0.015038875967714227,
+    0.01590782307693636,
+    0.025837100812439933,
+    0.0011792281518660953
+  ],
+  "scale": [
+    0.10411886242567416,
+    0.14395870458551283,
+    0.12645784034151852,
+    0.015038875967714227,
+    0.01590782307693636,
+    0.025837100812439933,
+    0.0011792281518660953
+  ],
+  "std_floor": 0.001,
+  "physical_position_divisor": 0.1,
+  "physical_motion_order": [
+    "dx/.1",
+    "dy/.1",
+    "dz/.1",
+    "delta_qx",
+    "delta_qy",
+    "delta_qz",
+    "delta_qw"
+  ],
+  "physical_lower": [
+    -0.5,
+    -0.5,
+    -0.5,
+    -1,
+    -1,
+    -1,
+    0
+  ],
+  "physical_upper": [
+    0.5,
+    0.5,
+    0.5,
+    1,
+    1,
+    1,
+    1
+  ],
+  "formula": "z=(physical_motion-mean)/scale; inverse before physical clipping and quaternion normalization",
+  "ddpm_clean_clip": "Inverse -> physical bounds -> standardize; never apply old +/-1 quaternion or +/-.5 XYZ clamps directly in standardized space",
+  "libero_data_used": false,
+  "development_data_fit": false,
+  "inputs_sha256": "a3df211518c4e60f63d98b91a528446e609d0895041ea47a1b0cb87bfb706e0d",
+  "rows_sha256": "a43887409ce89b03c06b5e0f127e9c6a37f96784aa2d2f3539f76e7b6b2ba07c",
+  "unique_keys_sha256": "a52c2f4c0f2d1fe7b8d41044364e4b9b37164aceb39615a80e8a7c3cc54b86bf"
+}

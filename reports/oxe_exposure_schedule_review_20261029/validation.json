@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "cpu_tests_passed": 4,
+  "test_source_sha256": "487cb85a368b252594045c778d1b8c5b5a761f2b6476e82b07cdb4cf7869d4c1",
+  "coverage": [
+    "Actual old8192DINO bound schedule and two complete loss/LR histories",
+    "Current matched8192/2048prefix indices against archived full65536history",
+    "Count denominator includes never-sampled eligible windows; source counts agree with prior qualified mixture audit",
+    "Warmup-low-LR separated from late-low-LR exposures",
+    "Candidate within-source cycles deterministic, no replacement within one cycle, source slots/LR/tail lengths unchanged",
+    "Actual full-budget candidate covers all four sources with unchanged presentation counts and adjacent count values"
+  ],
+  "report": "reports/oxe_exposure_schedule_review_20261029/report.json",
+  "new_model_calls": 0,
+  "new_training_updates": 0,
+  "new_sampling_calls": 0,
+  "new_cluster_jobs": 0,
+  "old_main_protocol_modified": false,
+  "scope": "CPU exposure/schedule accounting, not a new performance result or causal training conclusion"
+}

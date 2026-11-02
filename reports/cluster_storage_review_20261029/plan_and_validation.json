@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "status": "authorized_cleanup_code_ready_not_executed_on_cluster",
+  "user_explicit_authorization": "一定要把所有能删的都删掉",
+  "inventory": "reports/cluster_storage_review_20261029/inventory.txt",
+  "inventory_sha256": "bdec8aa846d7306cc0509a712cb9e7724beb0a7ec8fb78a709776e9e6593699c",
+  "inventory_reported_project_du": "179GiB, not authoritative quota",
+  "job_state_observed_from_user_inventory": {
+    "job": 233531,
+    "state": "PENDING"
+  },
+  "script": "scripts/cluster_reclaim_space_20261029.py",
+  "script_bytes": 16615,
+  "script_sha256": "3adf5e69a605903dcebe97f686abbefe9c73a6f3cb71e51f5ac268315fba1816",
+  "python39_syntax_passed": true,
+  "cpu_tests_passed": 10,
+  "cpu_tests_elapsed_seconds": 1.509,
+  "test_file": "tests/test_cluster_reclaim_space_20261029.py",
+  "test_limit": "Tiny own-workspace files only; inode alias rejection exercised with stat fixture because Windows prevents hardlink creation",
+  "estimated_reclaim_gib_rounded": 50,
+  "remote_deletion_executed": false,
+  "cluster_accessed": false,
+  "gpu_requested": false,
+  "job_cancelled": false,
+  "current_oxe_dependencies_preserved": true,
+  "main_preflight226133_retained_for_future_binding": true,
+  "conda_extracted_packages_retained": true,
+  "final_models_reports_predictions_raw_data_envs_retained": true,
+  "old_feature_caches_must_be_rebuilt_before_old_cached_training_reuse": true,
+  "plan": "docs/CLUSTER_STORAGE_RECLAIM_20261029.md"
+}

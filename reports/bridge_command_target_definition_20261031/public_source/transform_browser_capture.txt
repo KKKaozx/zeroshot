@@ -1,0 +1,162 @@
+ (https://raw.githubusercontent.com/rail-berkeley/bridge_data_robot/main/widowx_envs/widowx_envs/utils/transformation_utils.py)
+citeturn20view0 [wordlim: 200] Crawled: yesterday; Content type: text/plain; Source: open({"ref_id":"https://raw.githubusercontent.com/rail-berkeley/bridge_data_robot/main/widowx_envs/widowx_envs/utils/transformation_utils.py","lineno":null}); Total lines: 159
+L0: import numpy as np
+L1: import math
+L2: 
+L3: def TransToRp(T):
+L4:     """Converts a homogeneous transformation matrix into a rotation matrix
+L5:     and position vector
+L6: 
+L7:     :param T: A homogeneous transformation matrix
+L8:     :return R: The corresponding rotation matrix,
+L9:     :return p: The corresponding position vector.
+L10:     Example Input:
+L11:         T = np.array([[1, 0,  0, 0],
+L12:                       [0, 0, -1, 0],
+L13:                       [0, 1,  0, 3],
+L14:                       [0, 0,  0, 1]])
+L15:     Output:
+L16:         (np.array([[1, 0,  0],
+L17:                    [0, 0, -1],
+L18:                    [0, 1,  0]]),
+L19:          np.array([0, 0, 3]))
+L20:     """
+L21:     T = np.array(T)
+L22:     return T[0: 3, 0: 3], T[0: 3, 3]
+L23: 
+L24: def RpToTrans(R, p):
+L25:     """Converts a rotation matrix and a position vector into homogeneous
+L26:     transformation matrix
+L27:     :param R: A 3x3 rotation matrix
+L28:     :param p: A 3-vector
+L29:     :return: A homogeneous transformation matrix corresponding to the inputs
+L30: 
+L31:     Example Input:
+L32:         R = np.array([[1, 0,  0],
+L33:                       [0, 0, -1],
+L34:                       [0, 1,  0]])
+L35:         p = np.array([1, 2, 5])
+L36:     Output:
+L37:         np.array([[1, 0,  0, 1],
+L38:                   [0, 0, -1, 2],
+L39:                   [0, 1,  0, 5],
+L40:                   [0, 0,  0, 1]])
+L41:     """
+L42:     return np.r_[np.c_[R, p], [[0, 0, 0, 1]]]
+L43: def TransInv(T):
+L44:     """Inverts a homogeneous transformation matrix
+L45: 
+L46:     :param T: A homogeneous transformation matrix
+L47:     :return: The inverse of T
+L48:     Uses the structure of transformation matrices to avoid taking a matrix
+L49:     inverse, for efficiency.
+L50:     Example input:
+L51:         T = np.array([[1, 0,  0, 0],
+L52:                       [0, 0, -1, 0],
+L53:                       [0, 1,  0, 3],
+L54:                       [0, 0,  0, 1]])
+L55:     Output:
+L56:         np.array([[1,  0, 0,  0],
+L57:                   [0,  0, 1, -3],
+L58:                   [0, -1, 0,  0],
+L59:                   [0,  0, 0,  1]])
+L60:     """
+L61:     R, p = TransToRp(T)
+L62:     Rt = np.array(R).T
+L63:     return np.r_[np.c_[Rt, -np.dot(Rt, p)], [[0, 0, 0, 1]]]
+L64: # Calculates Rotation Matrix given euler angles.
+L65: def eulerAnglesToRotationMatrix(theta):
+L66: 
+L67:     R_x = np.array([[1,         0,                  0                   ],
+L68:                     [0,         math.cos(theta[0]), -math.sin(theta[0]) ],
+L69:                     [0,         math.sin(theta[0]), math.cos(theta[0])  ]
+L70:                     ])
+L71:     R_y = np.array([[math.cos(theta[1]),    0,      math.sin(theta[1])  ],
+L72:                     [0,                     1,      0                   ],
+L73:                     [-math.sin(theta[1]),   0,      math.cos(theta[1])  ]
+L74:                     ])
+L75: 
+L76:     R_z = np.array([[math.cos(theta[2]),    -math.sin(theta[2]),    0],
+L77:                     [math.sin(theta[2]),    math.cos(theta[2]),     0],
+L78:                     [0,                     0,                      1]
+L79:                     ])
+L80:     R = np.dot(R_z, np.dot( R_y, R_x ))
+L81: 
+L82:     return R
+L83: # Checks if a matrix is a valid rotation matrix.
+L84: def isRotationMatrix(R, thresh=1e-6):
+L85:     Rt = np.transpose(R)
+L86:     shouldBeIdentity = np.dot(Rt, R)
+L87:     I = np.identity(3, dtype = R.dtype)
+L88:     n = np.linalg.norm(I - shouldBeIdentity)
+L89:     return n < thresh
+L90: # Calculates rotation matrix to euler angles
+L91: # The result is the same as MATLAB except the order
+L92: # of the euler angles ( x and z are swapped ).
+L93: def rotationMatrixToEulerAngles(R, check_error_thresh=1e-6):
+L94: 
+L95:     assert(isRotationMatrix(R, check_error_thresh))
+L96: 
+L97:     sy = math.sqrt(R[0,0] * R[0,0] +  R[1,0] * R[1,0])
+L98: 
+L99:     singular = sy < 1e-6
+L100:     if  not singular :
+L101:         x = math.atan2(R[2,1] , R[2,2])
+L102:         y = math.atan2(-R[2,0], sy)
+L103:         z = math.atan2(R[1,0], R[0,0])
+L104:     else :
+L105:         x = math.atan2(-R[1,2], R[1,1])
+L106:         y = math.atan2(-R[2,0], sy)
+L107:         z = 0
+L108: 
+L109:     return np.array([x, y, z])
+L110: 
+L111: def transform2state(eep, desired_gripper_position, default_rotation):
+L112:     assert eep.shape == (4, 4)
+L113:     if isinstance(desired_gripper_position, float):
+L114:         desired_gripper_position = np.array([desired_gripper_position])
+L115:     assert desired_gripper_position.shape == (1,)
+L116: 
+L117:     rot, xyz = TransToRp(eep)
+L118:     euler = rotationMatrixToEulerAngles(rot.dot(default_rotation.transpose()), check_error_thresh=1e-5)
+L119:     return np.concatenate([xyz, euler, desired_gripper_position])
+L120: def state2transform(state, default_rotation):
+L121:     assert state.shape == (7,)
+L122:     xyz, euler, gripper_state = state[:3], state[3:6], state[6:]
+L123:     trans = RpToTrans(eulerAnglesToRotationMatrix(euler).dot(default_rotation), xyz)
+L124:     return trans, gripper_state
+L125: def action2transform_local(actions, current_eef_position):
+L126:     """
+L127:     actions: [xyz deltas, and euler rotation angles, grasp_action], the rotation is around the position of the end-effector (axes are the same as world)
+L128:     current_eef_position: xyz of current end-effector
+L129: 
+L130:     return: transformation (4x4) and desired gripper state
+L131:     """
+L132:     assert current_eef_position.shape == (3,)
+L133:     assert actions.shape == (7,)
+L134: 
+L135:     Teef = RpToTrans(np.eye(3), current_eef_position)
+L136:     xyz, euler, gripper_state = actions[:3], actions[3:6], actions[6]
+L137:     trans = RpToTrans(eulerAnglesToRotationMatrix(euler), xyz)
+L138: 
+L139:     trans = Teef.dot(trans).dot(TransInv(Teef))
+L140:     return trans, gripper_state
+L141: 
+L142: def transform2action_local(transform, gripper_action, current_eef_position):
+L143:     """
+L144:     transform: 4x4 matrix, transform between current eef_pose in world coordinates to next eef_pose
+L145:     current_eef_position: xyz of current end-effector
+L146:     return: [xyz deltas, and euler rotation angles, grasp_action], the rotation is around the position of the end-effector (axes are the same as world)
+L147:     """
+L148:     assert current_eef_position.shape == (3,)
+L149:     assert transform.shape == (4, 4)
+L150:     Teef = RpToTrans(np.eye(3), current_eef_position)
+L151:     transform = TransInv(Teef).dot(transform).dot(Teef)
+L152: 
+L153:     if isinstance(gripper_action, float):
+L154:         gripper_action = np.array([gripper_action])
+L155:     assert gripper_action.shape == (1,)
+L156:     rot, xyz = TransToRp(transform)
+L157:     euler = rotationMatrixToEulerAngles(rot, check_error_thresh=1e-5)
+L158:     return np.concatenate([xyz, euler, gripper_action])
+

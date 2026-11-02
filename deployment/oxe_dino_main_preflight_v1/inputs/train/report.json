@@ -1,0 +1,84 @@
+{
+  "complete": true,
+  "dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+  "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+  "clock_is_nominal_assumption": true,
+  "measured_timestamps_used": false,
+  "eligible_training_episodes": 8918,
+  "raw_observation_rows": 582766,
+  "training_windows": 145812,
+  "old_training_windows": 146287,
+  "zero_valid_common_grid_tail_windows_omitted": {
+    "BC-Z": 475
+  },
+  "by_source": {
+    "Bridge": {
+      "episodes": 1151,
+      "source_rows": 40723,
+      "windows": 10352,
+      "valid_targets": 130668,
+      "unknown_current_gripper_windows": 1376,
+      "position_components": 392004,
+      "position_components_outside_normalized3": 127,
+      "position_components_outside_candidate10": 0
+    },
+    "Language Table": {
+      "episodes": 2565,
+      "source_rows": 48405,
+      "windows": 12214,
+      "valid_targets": 122976,
+      "unknown_current_gripper_windows": 12214,
+      "position_components": 245952,
+      "position_components_outside_normalized3": 3185,
+      "position_components_outside_candidate10": 0
+    },
+    "BC-Z": {
+      "episodes": 2739,
+      "source_rows": 385074,
+      "windows": 95796,
+      "valid_targets": 1374059,
+      "unknown_current_gripper_windows": 2739,
+      "position_components": 4122177,
+      "position_components_outside_normalized3": 8660,
+      "position_components_outside_candidate10": 0
+    },
+    "Fractal": {
+      "episodes": 2463,
+      "source_rows": 108564,
+      "windows": 27450,
+      "valid_targets": 394862,
+      "unknown_current_gripper_windows": 11040,
+      "position_components": 1184586,
+      "position_components_outside_normalized3": 11350,
+      "position_components_outside_candidate10": 0
+    }
+  },
+  "max_abs_normalized_position_component_by_source": {
+    "Bridge": 3.7031636238098145,
+    "Language Table": 6.037961483001709,
+    "BC-Z": 5.568922996520996,
+    "Fractal": 7.660009384155273
+  },
+  "max_abs_normalized_position_component": 7.660009384155273,
+  "ceil_train_max_only_bound_candidate": 8.0,
+  "position_scale_physical_units_qualified": false,
+  "position_bound_finally_frozen": false,
+  "new_first_tail_numeric_checks_by_source": {
+    "Bridge": 2302,
+    "Language Table": 5130,
+    "BC-Z": 5478,
+    "Fractal": 4926
+  },
+  "source_payload_bytes_read": 12161210550,
+  "images_decoded": 0,
+  "validation_test_quarantine_numeric_records_read": 0,
+  "roles_unchanged": true,
+  "original_training_instruction_rows": 145812,
+  "new_artifact_bytes": 197345595,
+  "source_files_and_old_labels_modified": false,
+  "models_loaded": 0,
+  "training_updates": 0,
+  "new_cluster_jobs": 0,
+  "formal_training_ready": false,
+  "elapsed_seconds": 146.10899999999674
+}

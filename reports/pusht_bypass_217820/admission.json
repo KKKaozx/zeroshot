@@ -1,0 +1,121 @@
+{
+  "scores": {
+    "global_control": {
+      "mean_score": 0.28180136259665395,
+      "full_reward_fraction": 0.05,
+      "reference_competence_gate_passed": false
+    },
+    "spatial_candidate": {
+      "mean_score": 0.39077456633648944,
+      "full_reward_fraction": 0.15,
+      "reference_competence_gate_passed": false
+    },
+    "unchanged215999": {
+      "mean_score": 0.44548841481267654,
+      "full_reward_fraction": 0.25,
+      "reference_competence_gate_passed": false
+    }
+  },
+  "paired_mean_gain": 0.10897320373983552,
+  "paired_mean_gain_episode_bootstrap95": [
+    -0.00408811189466344,
+    0.24210061259152352
+  ],
+  "paired_candidate_better_worse_equal": [
+    10,
+    5,
+    5
+  ],
+  "per_seed_gain": [
+    {
+      "environment_seed": 5000000,
+      "candidate_minus_control": -0.002403647397745845
+    },
+    {
+      "environment_seed": 5000001,
+      "candidate_minus_control": 0.017735263943180923
+    },
+    {
+      "environment_seed": 5000002,
+      "candidate_minus_control": 0.0
+    },
+    {
+      "environment_seed": 5000003,
+      "candidate_minus_control": 0.025463667188939887
+    },
+    {
+      "environment_seed": 5000004,
+      "candidate_minus_control": -0.0007747968970466257
+    },
+    {
+      "environment_seed": 5000005,
+      "candidate_minus_control": 0.001130437312905526
+    },
+    {
+      "environment_seed": 5000006,
+      "candidate_minus_control": 0.0
+    },
+    {
+      "environment_seed": 5000007,
+      "candidate_minus_control": 0.12924100671618188
+    },
+    {
+      "environment_seed": 5000008,
+      "candidate_minus_control": 0.2812241379273907
+    },
+    {
+      "environment_seed": 5000009,
+      "candidate_minus_control": 0.0
+    },
+    {
+      "environment_seed": 5000010,
+      "candidate_minus_control": 0.7871230886488221
+    },
+    {
+      "environment_seed": 5000011,
+      "candidate_minus_control": 2.718179231532558e-05
+    },
+    {
+      "environment_seed": 5000012,
+      "candidate_minus_control": -0.3937379981888284
+    },
+    {
+      "environment_seed": 5000013,
+      "candidate_minus_control": 0.0
+    },
+    {
+      "environment_seed": 5000014,
+      "candidate_minus_control": 0.7831447728901553
+    },
+    {
+      "environment_seed": 5000015,
+      "candidate_minus_control": 0.03003232859856597
+    },
+    {
+      "environment_seed": 5000016,
+      "candidate_minus_control": -0.0038731949487223988
+    },
+    {
+      "environment_seed": 5000017,
+      "candidate_minus_control": 0.5543397188056058
+    },
+    {
+      "environment_seed": 5000018,
+      "candidate_minus_control": -0.029207891595009767
+    },
+    {
+      "environment_seed": 5000019,
+      "candidate_minus_control": 0.0
+    }
+  ],
+  "gates": {
+    "mean_gain_at_least0_05_vs_global_control": true,
+    "mean_gain_at_least0_05_vs_unchanged215999": false,
+    "paired_mean_gain_bootstrap95_lower_positive": false,
+    "full_reward_fraction_no_worse_than_both": false
+  },
+  "development_admission_passed": false,
+  "decision": "Close this bounded bypass variant; no extra budget/seeds/variants or final50 access",
+  "scope": "Reused dev20, one source training seed, fixed endpoint. Not independent final confirmation or robot grasp success.",
+  "automatic_following_action": false
+}

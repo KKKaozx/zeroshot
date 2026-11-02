@@ -1,0 +1,39 @@
+{
+  "synthetic_new_format_tests_passed": 3,
+  "real235928_head_restored_on_cpu": true,
+  "real236140_head_restored": true,
+  "full_source_pose_restored": true,
+  "real_policy_forward_or_sampling": true,
+  "training_updates": 0,
+  "simulator_started": true,
+  "original_offline_admission_unchanged": true,
+  "functional_closeout_complete": true,
+  "both_real236140_heads_cpu_restored": true,
+  "policy_calls": 50,
+  "native_steps": 200,
+  "functional_performance_accepted": false,
+  "actual_head_metadata": {
+    "state_control": {
+      "head_format": "gripper-event-repair-head-v1",
+      "head_mode": "state_control",
+      "total_head_updates": 4096,
+      "head_sha256": "a0e2634632d7a9b532af0d1e851d0ebc470294fb73216045cbd36820f85717e7",
+      "offline_head_admitted": false,
+      "paired_selected_head": null,
+      "explicit_unadmitted_engineering_mode": true,
+      "formal_scoring_admitted": false,
+      "original_receipt_not_rewritten": true
+    },
+    "event_aware": {
+      "head_format": "gripper-event-repair-head-v1",
+      "head_mode": "event_aware",
+      "total_head_updates": 4096,
+      "head_sha256": "7e21315f5de00d34e67cf58f93b3d7fe37184eaf3f0be313b069007dd21e14c2",
+      "offline_head_admitted": false,
+      "paired_selected_head": null,
+      "explicit_unadmitted_engineering_mode": true,
+      "formal_scoring_admitted": false,
+      "original_receipt_not_rewritten": true
+    }
+  }
+}

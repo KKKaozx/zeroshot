@@ -1,0 +1,36 @@
+{
+  "terminal_complete_received": true,
+  "completed_updates": {
+    "absolute": 2048,
+    "relative": 2048
+  },
+  "total_new_pose_copy_updates_reported": 4096,
+  "all_parameter_updates_independently_traced": false,
+  "native_guard_within_declared_tolerance": true,
+  "protected_original_files_unchanged_cluster_reported": true,
+  "frozen_adapter_history_unchanged_cluster_reported": true,
+  "raw_results_downloaded": false,
+  "candidate_saved_predictions_independently_recomputed": false,
+  "source_baseline_recomputed_from_existing_arrays_with_frozen_metric": true,
+  "development_relative_vs_control_percent": {
+    "episode_position_cm": 30.875363389022993,
+    "episode_rotation_deg": 10.368356554989422
+  },
+  "development_control_vs_original_percent": {
+    "episode_position_cm": -1.4016055916185821,
+    "episode_rotation_deg": -1.2320931831464321
+  },
+  "absolute_development_protection_passes": true,
+  "absolute_overall_protection_fails_implies_at_least_one_train_metric_exceeds5percent": true,
+  "exact_training_metrics_not_printed": true,
+  "review_candidate": false,
+  "formal_matrix_admitted": false,
+  "program_elapsed_seconds": 901.4114813129418,
+  "elapsed_scope": "After CPU artifact/cache admission, before final CPU endpoint verification and ZIP;3300s alarm still covers verification/packing",
+  "peak_reserved_gib": 1.791015625,
+  "sacct_final_state_received": false,
+  "control_cannot_be_promoted_from_development_only": true,
+  "candidate_round_closed_no_new_training_or_simulation": true,
+  "new_local_training_sampling_or_simulations": 0,
+  "next_action": "Retrieve existing small_results.zip once; audit saved arrays and retain artifacts. Do not extend, retrain, tune or roll out either arm."
+}

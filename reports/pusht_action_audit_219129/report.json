@@ -1,0 +1,2664 @@
+{
+  "complete": true,
+  "errors": [],
+  "training_updates": 0,
+  "environment_steps": 0,
+  "policy_rollouts": 0,
+  "final50_accessed": false,
+  "automatic_submission": false,
+  "groups": {
+    "native212158": {
+      "checkpoint_sha256": "65df7f1e3d6d91b0a90e549a2ce991942049f99376821cfb51ef4b2bf5b11a26",
+      "state_sha256": "11c4bc601ba8a814c778ac8fa8b3eba1e1bb08a857615128e98ff133c9eb9bd9",
+      "state_unchanged": true,
+      "all_frozen": true,
+      "common_noise_traces": [
+        {
+          "sampling_seed": 1001,
+          "batch_index": 0,
+          "initial_noise_sha256": "41078ff34b38b71fd0dea4e2d80318f7f72e10224bee66e11a97dd37ad158860",
+          "sampling_rng_after_sha256": "72aaabd82149814d0fb7ed10261c0c72b60d1c3b3fd7306fb437958bf918e5ee",
+          "sampling_cuda_rng_after_sha256": "4bb6c161dfecc2bff187f04c6ebd51269690fa242501df2d34098835ea1eb513",
+          "teacher_noise_sha256": "bf1ab679a91fb5204042f40afd60a6a818908482fc6c9e59ab17334d569dac53"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 1,
+          "initial_noise_sha256": "6af28e369477b4aec461e73d8c1a516e1b025cabe84f466c4a4c5f8f77a64cc5",
+          "sampling_rng_after_sha256": "776b27b33d5759e5d4b7222d7e0792ef28a3ff3b9b524968009cda499dbf687e",
+          "sampling_cuda_rng_after_sha256": "fbc26fd866d4c138b827fb6743ed39754f0adf43530ff8507370ee1547c734bf",
+          "teacher_noise_sha256": "742e36b02011ff0e5e431917459c8095459024213fca106bfd7c45dfd1bafc53"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 2,
+          "initial_noise_sha256": "494a0a0c2a925b96a4779b433fe50ce27ec42ef08e5fceb680b23f71cb32711c",
+          "sampling_rng_after_sha256": "202c0790a8c7362dfdb2d05f458da6eb92226de30f2aa4b370e3cf1c670b08b4",
+          "sampling_cuda_rng_after_sha256": "0f63a9ceee54f5ffed6cc5d0c070ffbdd23d941ffe8f10f73ad9c0b5b5ae4b05",
+          "teacher_noise_sha256": "83212a632844b4fd9b63dd39cdfc0d9e8971624aa088c954fe7b5cc613e33514"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 3,
+          "initial_noise_sha256": "43a3135e9f3da07f573db3afea2bbaee793bffaaeb742da5211b5959b1839859",
+          "sampling_rng_after_sha256": "f917c74a3755fead885b205b67b21dda8bb5b0473ca2744d767c4c16e5bf6f8c",
+          "sampling_cuda_rng_after_sha256": "da89197c482f5f3192862a716e6db06d2f1bc9de81ece6c07a43213f56df9323",
+          "teacher_noise_sha256": "9f55d98ea1f63916fde4a65366fa97db960f242f69921fdb620cd424c2c0d732"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 4,
+          "initial_noise_sha256": "15033ac0f5c991886f599101a945192ad1cc56ac969ea839de88062514da7bf9",
+          "sampling_rng_after_sha256": "28d0c781650015453b29b43a587d28378f772e9ee781a16ae8bf63d93686fe86",
+          "sampling_cuda_rng_after_sha256": "0e1578abf70658aa0ec0a11711ed7e7d5e49689f3b65fd832a6b2b886d9e2e3b",
+          "teacher_noise_sha256": "f93fbce79db204edf29a9239bb0ad80d69c98388db222695bf43ccc749052afc"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 5,
+          "initial_noise_sha256": "f1313488354858b85fa681a1a4daa92005bf0cf07a84ebab9a823b4d8c6a14d7",
+          "sampling_rng_after_sha256": "596276239593c07589c78b1276fbabf109e6045d1d47aaa991f8aef35696ead8",
+          "sampling_cuda_rng_after_sha256": "9239edeaea0cc88ee368b6e58f6dae5fafe569db756d45c362593df2c78d197e",
+          "teacher_noise_sha256": "a5669221d97b867c3bb2290be34a9ec8311cfc1548e0835a4d193b1553fdf6fa"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 6,
+          "initial_noise_sha256": "5102dc7f7980c2a0e0bc59937cc6506a2bb56ec733ad2cbb1d53b289737a4a9a",
+          "sampling_rng_after_sha256": "f22e68d695f4104bfc62e17637a1277334a2272127f485e452f9415cfb9050fb",
+          "sampling_cuda_rng_after_sha256": "141736deee91ec2be9a8ebe9f724f0a2c1dbbec93517e1cfac111f2afa0ab900",
+          "teacher_noise_sha256": "6af54b661e0bf7848da3f1f9ed706e754e5efaff336161501932fbf5c7cd3286"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 7,
+          "initial_noise_sha256": "c6a60af6364adf17aa36b3f9b7fae16e3d63a693524d8cc0b1b816e7a71d8abd",
+          "sampling_rng_after_sha256": "a4aab7c50e9a741f622236f59269053258a01f4435ebe8bfcfa3e3e2033a1424",
+          "sampling_cuda_rng_after_sha256": "cf7a172874b834c74d47e2d9084992c0587924f4902a639b45ecc55db4f0a77c",
+          "teacher_noise_sha256": "83e264eb76794406e8270d8c5307dcf5c488ca8de5bdcedfa05c89f2743f8168"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 8,
+          "initial_noise_sha256": "017c4e9692b2a14234701ed5432f143129452df1ac2820f555a249379e3069f5",
+          "sampling_rng_after_sha256": "63025e82d703df43e7d27a9c2758b0e0dafd3185429dcab00552a3b6219f7c4f",
+          "sampling_cuda_rng_after_sha256": "a8e91e24e44d97da7ae1fb99728c4599eff1382807455c8f59f3f1bca654d49d",
+          "teacher_noise_sha256": "b7f27f1c7c321a4b22840f9092a5efa9c7e06cb5c41fd615fc322eed8b71f876"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 9,
+          "initial_noise_sha256": "75fdf82e7f30bda5f901ac7cb0c9ce1e226007ee7bb78364a4ea9845941425e2",
+          "sampling_rng_after_sha256": "89f33c53c7eabc98c9c483c27fd8da6083ddf04b5b6f2b381776abd71a96d7f2",
+          "sampling_cuda_rng_after_sha256": "89d251ce91472d80d27bab00521dfc6c87673005d6b1e7996aebb8d5ed1661e9",
+          "teacher_noise_sha256": "9034ef8e11fb640c2a44426a3e82b51664ad40bf9c9a9efce427cb0ca1a8fa8b"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 10,
+          "initial_noise_sha256": "bd8c5e3d09e9442d6513fe9fa74ea7ead9a0694517512049552ba268149e75ab",
+          "sampling_rng_after_sha256": "122c420b2e6579d47ec13ed8c65c4061686ba7aba6a3a828d93aa172a060d05b",
+          "sampling_cuda_rng_after_sha256": "45392069b6bcd08db56b1a04b191d42ef1b5880a7eabe4a7b3505f52efe6da80",
+          "teacher_noise_sha256": "3e88629de5ec679fa708f83a1d97c3e2ba194f50b93f870897cd741c6a0a8d40"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 11,
+          "initial_noise_sha256": "a1d3c28459c878faddca59efc01831fc327978e90a8669b0b5506d919f049977",
+          "sampling_rng_after_sha256": "1d7c5ca53b19b636286e5e231c9329ee315e623d17edad355cba6e0ed8ca999d",
+          "sampling_cuda_rng_after_sha256": "9021e82557a645382e6293b5c7ac28cb3f52a47e1f3017b50f68a9e286d53afb",
+          "teacher_noise_sha256": "9a7e1b824bf99172a77ada511dbdbb8b59c8be376a82af18cdefb38d481ca040"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 12,
+          "initial_noise_sha256": "92e1128f9e650086eac256f7bff5bb21db368c1225dc4bc752251f5dd72278c1",
+          "sampling_rng_after_sha256": "0877758eb399f0600088c429610eb10e6020493ed62a2b6e5ab1be440d6be149",
+          "sampling_cuda_rng_after_sha256": "7977faeb8bec46b617ad20ba8ef3c462e97e067aeb9a96b6d2bd42a04bfed4c0",
+          "teacher_noise_sha256": "52ec95add7bc53bcac65ea2ff02676f1e36077499162c3a8674d9580f6d70703"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 13,
+          "initial_noise_sha256": "116f2a16f10134b1c39d659b4e5c2258057953573804284de59c800a7436bd00",
+          "sampling_rng_after_sha256": "24f45b34075b174cf2019f8b00be0d9b4088a40a7d29d0688cd6bfabab994a1e",
+          "sampling_cuda_rng_after_sha256": "69a547e5480546b27ca3e4edf4efb37371f01833c78f16979fa3a3d03186bd34",
+          "teacher_noise_sha256": "3a781d1344317f2adf077adb84092c51b5d143a3c932f9e945f70e270b496833"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 14,
+          "initial_noise_sha256": "ec15644b8ad9ac19e4830a725996f00bb85eeb1a7a73646dbeb983155f918523",
+          "sampling_rng_after_sha256": "68119818f620f1fea05bddeda1b5ef3fb2379f5cb64ec706ed41242f07cca475",
+          "sampling_cuda_rng_after_sha256": "53c1bd1e926b6e317636e7b4046ff127627aaae5822a25ddc8a3006d526fd83d",
+          "teacher_noise_sha256": "fb07a0b2726cae8f44b2cb4c92c4a7a872e6c947b3d62e8c963365090713df11"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 15,
+          "initial_noise_sha256": "376f93cb3ce523af8363ad420015d6104a88ef8290cf6ef92656f5d3568ce618",
+          "sampling_rng_after_sha256": "5f5f46f6da1e39a13c43676fba393a5aaea42b5baa1bf32520a3aa1186b1f0bb",
+          "sampling_cuda_rng_after_sha256": "dea348747d4e3768e6ff249ebe2406548dd17fbeaa195eb4a0fef3cad3876ed7",
+          "teacher_noise_sha256": "0d91d49c96169376eabc3372810bd9fee5e1c056911d9f2c92acce3a18b68bd4"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 0,
+          "initial_noise_sha256": "18888cbb03ecece1bb2be12eb4a3f7ed648149637e5e24b6bca8923d4eec731c",
+          "sampling_rng_after_sha256": "b07f4adb6299325879f159695b7b2430352f13de973a8676215c9b50bcb70445",
+          "sampling_cuda_rng_after_sha256": "ccbaa9a77a60419851068e54215f3e671e743c3ec677144f73bad9b798d780a7",
+          "teacher_noise_sha256": "12e203d6ce292965e6870e3b20d6d3d60951c7007b8802709ff6084481010822"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 1,
+          "initial_noise_sha256": "7f917472c65f59af09ee43977cae6638b2f8854b2494dada73d2221c332411cb",
+          "sampling_rng_after_sha256": "a58e19e4d08f4b4dc6a499c873ff33b88c96c09d7ec1379659539522bb36a7c5",
+          "sampling_cuda_rng_after_sha256": "224d42731507af829d2825a1639fe3243a4a4a5cb885d7f7df864412c30cbaf4",
+          "teacher_noise_sha256": "bd65e30a3b7e97bfa1d4437f93cc1ced0fe7defc76a9db93089824652b3954d4"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 2,
+          "initial_noise_sha256": "750187f05158be26b849724add145ebe5d663158e9c30b7f093c20d7825f4821",
+          "sampling_rng_after_sha256": "50910af7717d7eacb70270c4099f1e409e9eda17484d7ff9cb2e73ee2dc0afa6",
+          "sampling_cuda_rng_after_sha256": "e594ec71120e34fdd28d3b9548a9477572efdb2ae7850616c7e784d31d87cb97",
+          "teacher_noise_sha256": "ee1af9ac6b5ae3d40ac825a8e317d665f7710a29d8de49f845ea93dffdb290d1"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 3,
+          "initial_noise_sha256": "a6b5e9c5c4583ea8adb1b5f874ca340409b66d02106496f5dcc292fd5825904d",
+          "sampling_rng_after_sha256": "604a695640a433ceba7777cfe9c5a5910bb7921ee8247bf8b060eaabe4dcd183",
+          "sampling_cuda_rng_after_sha256": "cdacdee1c881d3c6bf55712dbc8c9de6c0d7ef44d2016a878c63ce2558576e63",
+          "teacher_noise_sha256": "08618b27ee4b8899027a0e1f919e054301b9913f79dbecad26edc43394a67c45"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 4,
+          "initial_noise_sha256": "a45bc960eaf55b8131b71bb3651a62843e1ad3c3e16d77f07331736f6f8505e7",
+          "sampling_rng_after_sha256": "e45b11666c22882aea48807743ba2b5fe3a6169e007bd1c7bb963fbfa7e7da7f",
+          "sampling_cuda_rng_after_sha256": "6124badc2e2f7de38af8b3053ad914fcae6a28edcfeb8f93db05460d746d42c3",
+          "teacher_noise_sha256": "5aa404ab8a44dfb9043ca94dfe4f2939f6b3ff66ab50286ee1eedf8c1cafe044"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 5,
+          "initial_noise_sha256": "a5f845dadbccb2188e21e58961d3b80ab5805c8ed6410cc51e444310182001cc",
+          "sampling_rng_after_sha256": "a0ef1788c3759a14c4db0d8f4d1424a8bce4a80336d1b3844cc386c716f96460",
+          "sampling_cuda_rng_after_sha256": "1752a2f2efa7c43fc19039cec53ee284eb8808518581d067e8b92627c9b8e5c3",
+          "teacher_noise_sha256": "7cde9a99e76f63eef04a89028c791637e729cd86f2813c5a3bd6147f6e2a0206"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 6,
+          "initial_noise_sha256": "5af3ef6aa1734bdf7f66caa339210946c895cde6ca8621f9f80bf96034644c7e",
+          "sampling_rng_after_sha256": "dd691f2add9d54138f0013a7d59cccee826d11562df798c243ecccf9f872c1ea",
+          "sampling_cuda_rng_after_sha256": "f61632c141c5daf36e8fbe0f132f8679487771ba9483c78e3e57dc50fa485aca",
+          "teacher_noise_sha256": "83e3dfdcbcaa3a091128a1314d9574f44273e79762daa37ab2c877cf583f2cf3"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 7,
+          "initial_noise_sha256": "43c3f418fab47c8fd29feef40841329a75cc34fb79b8a9d396ad4b48b7e45014",
+          "sampling_rng_after_sha256": "0ff0ee358eea809fb6a5cedbfbad0ea4a4c3456fb1fb4ce73826532401775c9e",
+          "sampling_cuda_rng_after_sha256": "68cec9062d2cf60f1a30efef734b14dfebd17560f78da28a3bd00c9ee6f765ba",
+          "teacher_noise_sha256": "3885a5313dfaa7a64ae45da6f135a24711437fb158f0df0ef18fe89246170dfc"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 8,
+          "initial_noise_sha256": "d0981eb54d4a9a00633c7518675bddb7b6a6a32f332b3f9799ca0c187dd79edb",
+          "sampling_rng_after_sha256": "c6a39337f879a17714f0544190297c81b0c64090c1a73785983c2436baf4609f",
+          "sampling_cuda_rng_after_sha256": "eb054890afcc24f254b5606dfbeea548f01a1f893b204431d4fa7d19d0dd8330",
+          "teacher_noise_sha256": "3e8ba472acfc65b6863e340719960d209dff61b81ffd951fd51441212412d0fc"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 9,
+          "initial_noise_sha256": "50b5da39f842ad1d02bd67963a48cea9731ad26e6e66f9b9be2c400962893dbc",
+          "sampling_rng_after_sha256": "0282e8313b9d7cd9e8bc5026691a01fa93fbf8fe37959eb46d8ad2fab9f2951f",
+          "sampling_cuda_rng_after_sha256": "dc0ea1f552f273043635b1549fcc99191268c77621afbacca686ef8cd3adc387",
+          "teacher_noise_sha256": "5be7b9fc649a7baaaed2deb9e022e89a6254cea4a09c36f8461ccc00769bf327"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 10,
+          "initial_noise_sha256": "e8c5e460cc08ab9b54d12ebfd8679d79c80c1499235670bd013592ad7a613b8a",
+          "sampling_rng_after_sha256": "a99a40297b5dc2f25392cea4c3153115c8b657037bf9bf065c1b7f9d8c55b518",
+          "sampling_cuda_rng_after_sha256": "9a14d40bf6609d6daefb3f36aaa25443f0ddb3bd1942576669a43ffd141f5a12",
+          "teacher_noise_sha256": "8f8e0681084d60d29648b7bf493a9e019372105f96cb5fe8aec1c4a0d4a7abca"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 11,
+          "initial_noise_sha256": "14918701ae538c2a356f04bf6bf281eda5f3acc5b2a1b3bfe588036b2a850179",
+          "sampling_rng_after_sha256": "1220d8c7620ee39433b5a3b935384a01135777bedb1ad2d8374bec270ff8b120",
+          "sampling_cuda_rng_after_sha256": "b63fe58468b8fd0c24f51b7d5dc7eb4a33415afa9edb2841146b435a900869a3",
+          "teacher_noise_sha256": "e49de3e1e13f251f2a2be8137110dc763b97bbc926a88cc889c4fdea6b961c4c"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 12,
+          "initial_noise_sha256": "b94694493edbd05a7aa461b94fadfb4995a422ae1f5aee4ff23ccee79400a5bf",
+          "sampling_rng_after_sha256": "b7ee8bee780d5f3c37d95efa0226ff85d49ddcfdc90b50c407061b3c51b5ff16",
+          "sampling_cuda_rng_after_sha256": "df9c352c60ae566b36a93249744b541bd6f7b61c5bf2cab45c8632a52e1e62fa",
+          "teacher_noise_sha256": "ade469c13fd67ddf8e74e78634fb86ea01bff1f2c6aee316f0369edc993828c7"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 13,
+          "initial_noise_sha256": "52a9afcfc90d8b18aa19d8862ade04c65ea5882ce5d05ed941d0303d8a6ae65b",
+          "sampling_rng_after_sha256": "9be1a2d85fa7621dd755a559f7bd645f5006952827070d26ca5f63a4702f64e2",
+          "sampling_cuda_rng_after_sha256": "906b00d2f9bdf621bf6c5d36904b2976a7a7d3be4f98b7ecf3b978b77ccd1f66",
+          "teacher_noise_sha256": "173c7a4712a992aa98a9a9e105b8934dd6575c56716b33acadd154da1a85250c"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 14,
+          "initial_noise_sha256": "99af9dfe670c100cdde446274eae46b57524f8952cbc8d73d7bb8f5e93d53e55",
+          "sampling_rng_after_sha256": "d20f04279bcd01b6898ee784e732436355b023bffaeee8e47ed99a5c58618e90",
+          "sampling_cuda_rng_after_sha256": "ef97c39418bc6e7a5cb4209829d95d685547b8e079f777bb3d772e69610fe5f7",
+          "teacher_noise_sha256": "3ccf4529d580415e41a23b34ad37a1374e6bd109c5bc872fbbddd526c8007e08"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 15,
+          "initial_noise_sha256": "a09d5f4ec4787a4683a1a8140d92086633fc19560d3047ed8e26d7f065a78707",
+          "sampling_rng_after_sha256": "26b8902a7fd976fd7405e3f2f1aee4500ea867f56c56530b8fcada4e7d2399f9",
+          "sampling_cuda_rng_after_sha256": "b2cbbbc246b835509fe497d939a36d1a42328aa47f4c68dfa14b74fff57f417f",
+          "teacher_noise_sha256": "3e3b4a094a20310e05533b18a44ac32a088542b96051ce2758e4abceb530c777"
+        }
+      ],
+      "predictions_sha256": "6af8564e3ad9a8f10225113bb2805d9b55b8f50f086bead86eff3adb5c485239",
+      "action_metrics": {
+        "train": {
+          "full16": {
+            "episode_equal_mean_pixels": 6.4711496776935835,
+            "per_sampling_seed": [
+              5.672969953924207,
+              7.26932940146296
+            ],
+            "per_episode": [
+              {
+                "episode_id": 16,
+                "per_sampling_seed": [
+                  5.569203097369431,
+                  12.461232955944553
+                ],
+                "mean": 9.015218026656992
+              },
+              {
+                "episode_id": 27,
+                "per_sampling_seed": [
+                  3.501074251267552,
+                  3.166327308117815
+                ],
+                "mean": 3.333700779692684
+              },
+              {
+                "episode_id": 42,
+                "per_sampling_seed": [
+                  4.665453602549924,
+                  6.036441378042434
+                ],
+                "mean": 5.350947490296179
+              },
+              {
+                "episode_id": 56,
+                "per_sampling_seed": [
+                  4.827506382134818,
+                  4.182359203932144
+                ],
+                "mean": 4.504932793033481
+              },
+              {
+                "episode_id": 65,
+                "per_sampling_seed": [
+                  9.221534632754677,
+                  6.957802456930914
+                ],
+                "mean": 8.089668544842795
+              },
+              {
+                "episode_id": 81,
+                "per_sampling_seed": [
+                  6.255161266744653,
+                  13.384611338620063
+                ],
+                "mean": 9.819886302682358
+              },
+              {
+                "episode_id": 84,
+                "per_sampling_seed": [
+                  2.9044317946471194,
+                  3.3629241715987597
+                ],
+                "mean": 3.1336779831229395
+              },
+              {
+                "episode_id": 128,
+                "per_sampling_seed": [
+                  8.401497802800026,
+                  10.926523544725212
+                ],
+                "mean": 9.664010673762618
+              },
+              {
+                "episode_id": 131,
+                "per_sampling_seed": [
+                  4.4358557705451,
+                  3.3132359142782475
+                ],
+                "mean": 3.8745458424116737
+              },
+              {
+                "episode_id": 156,
+                "per_sampling_seed": [
+                  4.569477729415012,
+                  8.889514076249558
+                ],
+                "mean": 6.729495902832285
+              },
+              {
+                "episode_id": 166,
+                "per_sampling_seed": [
+                  9.03037843107586,
+                  12.622962575320939
+                ],
+                "mean": 10.8266705031984
+              },
+              {
+                "episode_id": 170,
+                "per_sampling_seed": [
+                  4.328447393604485,
+                  6.197815837915547
+                ],
+                "mean": 5.263131615760016
+              },
+              {
+                "episode_id": 174,
+                "per_sampling_seed": [
+                  3.610750668761331,
+                  6.5743683800547545
+                ],
+                "mean": 5.092559524408044
+              },
+              {
+                "episode_id": 179,
+                "per_sampling_seed": [
+                  7.472788587306791,
+                  6.98619422206888
+                ],
+                "mean": 7.229491404687835
+              },
+              {
+                "episode_id": 184,
+                "per_sampling_seed": [
+                  5.64681116272606,
+                  4.2881328965896035
+                ],
+                "mean": 4.967472029657831
+              },
+              {
+                "episode_id": 194,
+                "per_sampling_seed": [
+                  6.3271466890844765,
+                  6.958824163017931
+                ],
+                "mean": 6.6429854260512045
+              }
+            ]
+          },
+          "executed8": {
+            "episode_equal_mean_pixels": 6.201808273101118,
+            "per_sampling_seed": [
+              5.211916311143943,
+              7.1917002350582955
+            ],
+            "per_episode": [
+              {
+                "episode_id": 16,
+                "per_sampling_seed": [
+                  5.676055264058129,
+                  13.304584205008243
+                ],
+                "mean": 9.490319734533186
+              },
+              {
+                "episode_id": 27,
+                "per_sampling_seed": [
+                  2.594745470591727,
+                  3.1153852757353473
+                ],
+                "mean": 2.855065373163537
+              },
+              {
+                "episode_id": 42,
+                "per_sampling_seed": [
+                  3.9982858477368874,
+                  4.996161200730998
+                ],
+                "mean": 4.4972235242339424
+              },
+              {
+                "episode_id": 56,
+                "per_sampling_seed": [
+                  5.150823024786101,
+                  2.479297579601223
+                ],
+                "mean": 3.815060302193662
+              },
+              {
+                "episode_id": 65,
+                "per_sampling_seed": [
+                  8.288549587728964,
+                  8.396051637438928
+                ],
+                "mean": 8.342300612583946
+              },
+              {
+                "episode_id": 81,
+                "per_sampling_seed": [
+                  4.475126416887621,
+                  13.008152102171541
+                ],
+                "mean": 8.741639259529581
+              },
+              {
+                "episode_id": 84,
+                "per_sampling_seed": [
+                  3.4352474937763593,
+                  4.05273820389084
+                ],
+                "mean": 3.7439928488335994
+              },
+              {
+                "episode_id": 128,
+                "per_sampling_seed": [
+                  8.838271754971839,
+                  10.850464510775407
+                ],
+                "mean": 9.844368132873623
+              },
+              {
+                "episode_id": 131,
+                "per_sampling_seed": [
+                  3.6558073550665515,
+                  2.6449495562325396
+                ],
+                "mean": 3.1503784556495456
+              },
+              {
+                "episode_id": 156,
+                "per_sampling_seed": [
+                  3.942226971053051,
+                  6.483800525951998
+                ],
+                "mean": 5.213013748502524
+              },
+              {
+                "episode_id": 166,
+                "per_sampling_seed": [
+                  7.787382555191868,
+                  16.951207486065897
+                ],
+                "mean": 12.369295020628883
+              },
+              {
+                "episode_id": 170,
+                "per_sampling_seed": [
+                  3.861593155323128,
+                  6.148868228276472
+                ],
+                "mean": 5.0052306917998
+              },
+              {
+                "episode_id": 174,
+                "per_sampling_seed": [
+                  2.207887567324869,
+                  5.027954453624772
+                ],
+                "mean": 3.6179210104748205
+              },
+              {
+                "episode_id": 179,
+                "per_sampling_seed": [
+                  7.285863199731708,
+                  6.1240266024521235
+                ],
+                "mean": 6.704944901091916
+              },
+              {
+                "episode_id": 184,
+                "per_sampling_seed": [
+                  5.470182926714892,
+                  4.385903206638373
+                ],
+                "mean": 4.928043066676633
+              },
+              {
+                "episode_id": 194,
+                "per_sampling_seed": [
+                  6.7226123873593835,
+                  7.09765898633803
+                ],
+                "mean": 6.910135686848706
+              }
+            ]
+          }
+        },
+        "unseen_demo": {
+          "full16": {
+            "episode_equal_mean_pixels": 32.45595458098976,
+            "per_sampling_seed": [
+              32.21222156335431,
+              32.69968759862521
+            ],
+            "per_episode": [
+              {
+                "episode_id": 15,
+                "per_sampling_seed": [
+                  42.16919502152328,
+                  41.81133613722583
+                ],
+                "mean": 41.99026557937456
+              },
+              {
+                "episode_id": 23,
+                "per_sampling_seed": [
+                  30.002526483737388,
+                  28.675428954110117
+                ],
+                "mean": 29.338977718923754
+              },
+              {
+                "episode_id": 39,
+                "per_sampling_seed": [
+                  19.997037178985696,
+                  18.375833858211774
+                ],
+                "mean": 19.186435518598735
+              },
+              {
+                "episode_id": 45,
+                "per_sampling_seed": [
+                  24.202879433431935,
+                  25.862361002199076
+                ],
+                "mean": 25.032620217815506
+              },
+              {
+                "episode_id": 62,
+                "per_sampling_seed": [
+                  11.919908414263595,
+                  12.712800961206892
+                ],
+                "mean": 12.316354687735242
+              },
+              {
+                "episode_id": 64,
+                "per_sampling_seed": [
+                  51.847272704443014,
+                  49.05456338268418
+                ],
+                "mean": 50.4509180435636
+              },
+              {
+                "episode_id": 87,
+                "per_sampling_seed": [
+                  20.34794189717379,
+                  18.04603639542599
+                ],
+                "mean": 19.19698914629989
+              },
+              {
+                "episode_id": 88,
+                "per_sampling_seed": [
+                  61.08518235132498,
+                  56.50412303819656
+                ],
+                "mean": 58.79465269476077
+              },
+              {
+                "episode_id": 92,
+                "per_sampling_seed": [
+                  28.67502716359389,
+                  29.52516266516266
+                ],
+                "mean": 29.100094914378275
+              },
+              {
+                "episode_id": 107,
+                "per_sampling_seed": [
+                  47.629935105051864,
+                  62.76966851925473
+                ],
+                "mean": 55.1998018121533
+              },
+              {
+                "episode_id": 127,
+                "per_sampling_seed": [
+                  32.26957922771429,
+                  34.35413371780505
+                ],
+                "mean": 33.31185647275967
+              },
+              {
+                "episode_id": 152,
+                "per_sampling_seed": [
+                  21.781611415779153,
+                  18.992188677203764
+                ],
+                "mean": 20.386900046491455
+              },
+              {
+                "episode_id": 164,
+                "per_sampling_seed": [
+                  50.98426811437696,
+                  54.021226144076834
+                ],
+                "mean": 52.50274712922689
+              },
+              {
+                "episode_id": 180,
+                "per_sampling_seed": [
+                  25.689109098655848,
+                  26.173443871725322
+                ],
+                "mean": 25.931276485190583
+              },
+              {
+                "episode_id": 204,
+                "per_sampling_seed": [
+                  14.826215547563994,
+                  15.063610788659718
+                ],
+                "mean": 14.944913168111857
+              },
+              {
+                "episode_id": 205,
+                "per_sampling_seed": [
+                  31.967855856049333,
+                  31.253083464854825
+                ],
+                "mean": 31.61046966045208
+              }
+            ]
+          },
+          "executed8": {
+            "episode_equal_mean_pixels": 27.927998201146757,
+            "per_sampling_seed": [
+              27.708016663647683,
+              28.14797973864582
+            ],
+            "per_episode": [
+              {
+                "episode_id": 15,
+                "per_sampling_seed": [
+                  22.316162630471737,
+                  23.03750433441803
+                ],
+                "mean": 22.676833482444884
+              },
+              {
+                "episode_id": 23,
+                "per_sampling_seed": [
+                  29.454086466794088,
+                  28.494732002865465
+                ],
+                "mean": 28.97440923482978
+              },
+              {
+                "episode_id": 39,
+                "per_sampling_seed": [
+                  22.666169612405604,
+                  20.37395818914636
+                ],
+                "mean": 21.52006390077598
+              },
+              {
+                "episode_id": 45,
+                "per_sampling_seed": [
+                  7.735967190977058,
+                  8.280977189443309
+                ],
+                "mean": 8.008472190210185
+              },
+              {
+                "episode_id": 62,
+                "per_sampling_seed": [
+                  12.556556465805752,
+                  13.890356546825712
+                ],
+                "mean": 13.223456506315733
+              },
+              {
+                "episode_id": 64,
+                "per_sampling_seed": [
+                  51.368981483281054,
+                  48.62217302894551
+                ],
+                "mean": 49.995577256113286
+              },
+              {
+                "episode_id": 87,
+                "per_sampling_seed": [
+                  13.339279402429945,
+                  9.460741597312676
+                ],
+                "mean": 11.40001049987131
+              },
+              {
+                "episode_id": 88,
+                "per_sampling_seed": [
+                  36.96317689159488,
+                  36.83783703498692
+                ],
+                "mean": 36.900506963290894
+              },
+              {
+                "episode_id": 92,
+                "per_sampling_seed": [
+                  24.490841058065833,
+                  25.43723942449791
+                ],
+                "mean": 24.96404024128187
+              },
+              {
+                "episode_id": 107,
+                "per_sampling_seed": [
+                  57.618175094770685,
+                  69.79443546311748
+                ],
+                "mean": 63.706305278944086
+              },
+              {
+                "episode_id": 127,
+                "per_sampling_seed": [
+                  37.50409629443726,
+                  38.023106507695644
+                ],
+                "mean": 37.76360140106645
+              },
+              {
+                "episode_id": 152,
+                "per_sampling_seed": [
+                  19.102444442074397,
+                  16.017148424067656
+                ],
+                "mean": 17.559796433071025
+              },
+              {
+                "episode_id": 164,
+                "per_sampling_seed": [
+                  43.51598448399723,
+                  48.69031979269995
+                ],
+                "mean": 46.10315213834859
+              },
+              {
+                "episode_id": 180,
+                "per_sampling_seed": [
+                  29.43787025251666,
+                  28.498402991605527
+                ],
+                "mean": 28.968136622061095
+              },
+              {
+                "episode_id": 204,
+                "per_sampling_seed": [
+                  9.39697222048588,
+                  10.492700231302294
+                ],
+                "mean": 9.944836225894086
+              },
+              {
+                "episode_id": 205,
+                "per_sampling_seed": [
+                  25.861502628254875,
+                  24.41604305940266
+                ],
+                "mean": 25.138772843828768
+              }
+            ]
+          }
+        }
+      },
+      "epsilon_mse_all16": {
+        "train": {
+          "0": 0.1568050980567932,
+          "49": 0.0005511763738468289,
+          "99": 4.390254252939485e-05
+        },
+        "unseen_demo": {
+          "0": 1.1408748626708984,
+          "49": 0.014384427107870579,
+          "99": 3.433736856095493e-05
+        }
+      }
+    },
+    "project215999": {
+      "checkpoint_sha256": "9546973d4245d1165e7a5eb96bd59dab21dd38422ea78861f0133f4610224d13",
+      "state_sha256": "4814aafa76c99dfa251b9a8c073c48a07b1d0d219899965b2352aeef630a2bf3",
+      "state_unchanged": true,
+      "all_frozen": true,
+      "common_noise_traces": [
+        {
+          "sampling_seed": 1001,
+          "batch_index": 0,
+          "initial_noise_sha256": "41078ff34b38b71fd0dea4e2d80318f7f72e10224bee66e11a97dd37ad158860",
+          "sampling_rng_after_sha256": "72aaabd82149814d0fb7ed10261c0c72b60d1c3b3fd7306fb437958bf918e5ee",
+          "sampling_cuda_rng_after_sha256": "4bb6c161dfecc2bff187f04c6ebd51269690fa242501df2d34098835ea1eb513",
+          "teacher_noise_sha256": "bf1ab679a91fb5204042f40afd60a6a818908482fc6c9e59ab17334d569dac53"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 1,
+          "initial_noise_sha256": "6af28e369477b4aec461e73d8c1a516e1b025cabe84f466c4a4c5f8f77a64cc5",
+          "sampling_rng_after_sha256": "776b27b33d5759e5d4b7222d7e0792ef28a3ff3b9b524968009cda499dbf687e",
+          "sampling_cuda_rng_after_sha256": "fbc26fd866d4c138b827fb6743ed39754f0adf43530ff8507370ee1547c734bf",
+          "teacher_noise_sha256": "742e36b02011ff0e5e431917459c8095459024213fca106bfd7c45dfd1bafc53"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 2,
+          "initial_noise_sha256": "494a0a0c2a925b96a4779b433fe50ce27ec42ef08e5fceb680b23f71cb32711c",
+          "sampling_rng_after_sha256": "202c0790a8c7362dfdb2d05f458da6eb92226de30f2aa4b370e3cf1c670b08b4",
+          "sampling_cuda_rng_after_sha256": "0f63a9ceee54f5ffed6cc5d0c070ffbdd23d941ffe8f10f73ad9c0b5b5ae4b05",
+          "teacher_noise_sha256": "83212a632844b4fd9b63dd39cdfc0d9e8971624aa088c954fe7b5cc613e33514"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 3,
+          "initial_noise_sha256": "43a3135e9f3da07f573db3afea2bbaee793bffaaeb742da5211b5959b1839859",
+          "sampling_rng_after_sha256": "f917c74a3755fead885b205b67b21dda8bb5b0473ca2744d767c4c16e5bf6f8c",
+          "sampling_cuda_rng_after_sha256": "da89197c482f5f3192862a716e6db06d2f1bc9de81ece6c07a43213f56df9323",
+          "teacher_noise_sha256": "9f55d98ea1f63916fde4a65366fa97db960f242f69921fdb620cd424c2c0d732"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 4,
+          "initial_noise_sha256": "15033ac0f5c991886f599101a945192ad1cc56ac969ea839de88062514da7bf9",
+          "sampling_rng_after_sha256": "28d0c781650015453b29b43a587d28378f772e9ee781a16ae8bf63d93686fe86",
+          "sampling_cuda_rng_after_sha256": "0e1578abf70658aa0ec0a11711ed7e7d5e49689f3b65fd832a6b2b886d9e2e3b",
+          "teacher_noise_sha256": "f93fbce79db204edf29a9239bb0ad80d69c98388db222695bf43ccc749052afc"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 5,
+          "initial_noise_sha256": "f1313488354858b85fa681a1a4daa92005bf0cf07a84ebab9a823b4d8c6a14d7",
+          "sampling_rng_after_sha256": "596276239593c07589c78b1276fbabf109e6045d1d47aaa991f8aef35696ead8",
+          "sampling_cuda_rng_after_sha256": "9239edeaea0cc88ee368b6e58f6dae5fafe569db756d45c362593df2c78d197e",
+          "teacher_noise_sha256": "a5669221d97b867c3bb2290be34a9ec8311cfc1548e0835a4d193b1553fdf6fa"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 6,
+          "initial_noise_sha256": "5102dc7f7980c2a0e0bc59937cc6506a2bb56ec733ad2cbb1d53b289737a4a9a",
+          "sampling_rng_after_sha256": "f22e68d695f4104bfc62e17637a1277334a2272127f485e452f9415cfb9050fb",
+          "sampling_cuda_rng_after_sha256": "141736deee91ec2be9a8ebe9f724f0a2c1dbbec93517e1cfac111f2afa0ab900",
+          "teacher_noise_sha256": "6af54b661e0bf7848da3f1f9ed706e754e5efaff336161501932fbf5c7cd3286"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 7,
+          "initial_noise_sha256": "c6a60af6364adf17aa36b3f9b7fae16e3d63a693524d8cc0b1b816e7a71d8abd",
+          "sampling_rng_after_sha256": "a4aab7c50e9a741f622236f59269053258a01f4435ebe8bfcfa3e3e2033a1424",
+          "sampling_cuda_rng_after_sha256": "cf7a172874b834c74d47e2d9084992c0587924f4902a639b45ecc55db4f0a77c",
+          "teacher_noise_sha256": "83e264eb76794406e8270d8c5307dcf5c488ca8de5bdcedfa05c89f2743f8168"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 8,
+          "initial_noise_sha256": "017c4e9692b2a14234701ed5432f143129452df1ac2820f555a249379e3069f5",
+          "sampling_rng_after_sha256": "63025e82d703df43e7d27a9c2758b0e0dafd3185429dcab00552a3b6219f7c4f",
+          "sampling_cuda_rng_after_sha256": "a8e91e24e44d97da7ae1fb99728c4599eff1382807455c8f59f3f1bca654d49d",
+          "teacher_noise_sha256": "b7f27f1c7c321a4b22840f9092a5efa9c7e06cb5c41fd615fc322eed8b71f876"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 9,
+          "initial_noise_sha256": "75fdf82e7f30bda5f901ac7cb0c9ce1e226007ee7bb78364a4ea9845941425e2",
+          "sampling_rng_after_sha256": "89f33c53c7eabc98c9c483c27fd8da6083ddf04b5b6f2b381776abd71a96d7f2",
+          "sampling_cuda_rng_after_sha256": "89d251ce91472d80d27bab00521dfc6c87673005d6b1e7996aebb8d5ed1661e9",
+          "teacher_noise_sha256": "9034ef8e11fb640c2a44426a3e82b51664ad40bf9c9a9efce427cb0ca1a8fa8b"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 10,
+          "initial_noise_sha256": "bd8c5e3d09e9442d6513fe9fa74ea7ead9a0694517512049552ba268149e75ab",
+          "sampling_rng_after_sha256": "122c420b2e6579d47ec13ed8c65c4061686ba7aba6a3a828d93aa172a060d05b",
+          "sampling_cuda_rng_after_sha256": "45392069b6bcd08db56b1a04b191d42ef1b5880a7eabe4a7b3505f52efe6da80",
+          "teacher_noise_sha256": "3e88629de5ec679fa708f83a1d97c3e2ba194f50b93f870897cd741c6a0a8d40"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 11,
+          "initial_noise_sha256": "a1d3c28459c878faddca59efc01831fc327978e90a8669b0b5506d919f049977",
+          "sampling_rng_after_sha256": "1d7c5ca53b19b636286e5e231c9329ee315e623d17edad355cba6e0ed8ca999d",
+          "sampling_cuda_rng_after_sha256": "9021e82557a645382e6293b5c7ac28cb3f52a47e1f3017b50f68a9e286d53afb",
+          "teacher_noise_sha256": "9a7e1b824bf99172a77ada511dbdbb8b59c8be376a82af18cdefb38d481ca040"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 12,
+          "initial_noise_sha256": "92e1128f9e650086eac256f7bff5bb21db368c1225dc4bc752251f5dd72278c1",
+          "sampling_rng_after_sha256": "0877758eb399f0600088c429610eb10e6020493ed62a2b6e5ab1be440d6be149",
+          "sampling_cuda_rng_after_sha256": "7977faeb8bec46b617ad20ba8ef3c462e97e067aeb9a96b6d2bd42a04bfed4c0",
+          "teacher_noise_sha256": "52ec95add7bc53bcac65ea2ff02676f1e36077499162c3a8674d9580f6d70703"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 13,
+          "initial_noise_sha256": "116f2a16f10134b1c39d659b4e5c2258057953573804284de59c800a7436bd00",
+          "sampling_rng_after_sha256": "24f45b34075b174cf2019f8b00be0d9b4088a40a7d29d0688cd6bfabab994a1e",
+          "sampling_cuda_rng_after_sha256": "69a547e5480546b27ca3e4edf4efb37371f01833c78f16979fa3a3d03186bd34",
+          "teacher_noise_sha256": "3a781d1344317f2adf077adb84092c51b5d143a3c932f9e945f70e270b496833"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 14,
+          "initial_noise_sha256": "ec15644b8ad9ac19e4830a725996f00bb85eeb1a7a73646dbeb983155f918523",
+          "sampling_rng_after_sha256": "68119818f620f1fea05bddeda1b5ef3fb2379f5cb64ec706ed41242f07cca475",
+          "sampling_cuda_rng_after_sha256": "53c1bd1e926b6e317636e7b4046ff127627aaae5822a25ddc8a3006d526fd83d",
+          "teacher_noise_sha256": "fb07a0b2726cae8f44b2cb4c92c4a7a872e6c947b3d62e8c963365090713df11"
+        },
+        {
+          "sampling_seed": 1001,
+          "batch_index": 15,
+          "initial_noise_sha256": "376f93cb3ce523af8363ad420015d6104a88ef8290cf6ef92656f5d3568ce618",
+          "sampling_rng_after_sha256": "5f5f46f6da1e39a13c43676fba393a5aaea42b5baa1bf32520a3aa1186b1f0bb",
+          "sampling_cuda_rng_after_sha256": "dea348747d4e3768e6ff249ebe2406548dd17fbeaa195eb4a0fef3cad3876ed7",
+          "teacher_noise_sha256": "0d91d49c96169376eabc3372810bd9fee5e1c056911d9f2c92acce3a18b68bd4"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 0,
+          "initial_noise_sha256": "18888cbb03ecece1bb2be12eb4a3f7ed648149637e5e24b6bca8923d4eec731c",
+          "sampling_rng_after_sha256": "b07f4adb6299325879f159695b7b2430352f13de973a8676215c9b50bcb70445",
+          "sampling_cuda_rng_after_sha256": "ccbaa9a77a60419851068e54215f3e671e743c3ec677144f73bad9b798d780a7",
+          "teacher_noise_sha256": "12e203d6ce292965e6870e3b20d6d3d60951c7007b8802709ff6084481010822"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 1,
+          "initial_noise_sha256": "7f917472c65f59af09ee43977cae6638b2f8854b2494dada73d2221c332411cb",
+          "sampling_rng_after_sha256": "a58e19e4d08f4b4dc6a499c873ff33b88c96c09d7ec1379659539522bb36a7c5",
+          "sampling_cuda_rng_after_sha256": "224d42731507af829d2825a1639fe3243a4a4a5cb885d7f7df864412c30cbaf4",
+          "teacher_noise_sha256": "bd65e30a3b7e97bfa1d4437f93cc1ced0fe7defc76a9db93089824652b3954d4"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 2,
+          "initial_noise_sha256": "750187f05158be26b849724add145ebe5d663158e9c30b7f093c20d7825f4821",
+          "sampling_rng_after_sha256": "50910af7717d7eacb70270c4099f1e409e9eda17484d7ff9cb2e73ee2dc0afa6",
+          "sampling_cuda_rng_after_sha256": "e594ec71120e34fdd28d3b9548a9477572efdb2ae7850616c7e784d31d87cb97",
+          "teacher_noise_sha256": "ee1af9ac6b5ae3d40ac825a8e317d665f7710a29d8de49f845ea93dffdb290d1"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 3,
+          "initial_noise_sha256": "a6b5e9c5c4583ea8adb1b5f874ca340409b66d02106496f5dcc292fd5825904d",
+          "sampling_rng_after_sha256": "604a695640a433ceba7777cfe9c5a5910bb7921ee8247bf8b060eaabe4dcd183",
+          "sampling_cuda_rng_after_sha256": "cdacdee1c881d3c6bf55712dbc8c9de6c0d7ef44d2016a878c63ce2558576e63",
+          "teacher_noise_sha256": "08618b27ee4b8899027a0e1f919e054301b9913f79dbecad26edc43394a67c45"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 4,
+          "initial_noise_sha256": "a45bc960eaf55b8131b71bb3651a62843e1ad3c3e16d77f07331736f6f8505e7",
+          "sampling_rng_after_sha256": "e45b11666c22882aea48807743ba2b5fe3a6169e007bd1c7bb963fbfa7e7da7f",
+          "sampling_cuda_rng_after_sha256": "6124badc2e2f7de38af8b3053ad914fcae6a28edcfeb8f93db05460d746d42c3",
+          "teacher_noise_sha256": "5aa404ab8a44dfb9043ca94dfe4f2939f6b3ff66ab50286ee1eedf8c1cafe044"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 5,
+          "initial_noise_sha256": "a5f845dadbccb2188e21e58961d3b80ab5805c8ed6410cc51e444310182001cc",
+          "sampling_rng_after_sha256": "a0ef1788c3759a14c4db0d8f4d1424a8bce4a80336d1b3844cc386c716f96460",
+          "sampling_cuda_rng_after_sha256": "1752a2f2efa7c43fc19039cec53ee284eb8808518581d067e8b92627c9b8e5c3",
+          "teacher_noise_sha256": "7cde9a99e76f63eef04a89028c791637e729cd86f2813c5a3bd6147f6e2a0206"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 6,
+          "initial_noise_sha256": "5af3ef6aa1734bdf7f66caa339210946c895cde6ca8621f9f80bf96034644c7e",
+          "sampling_rng_after_sha256": "dd691f2add9d54138f0013a7d59cccee826d11562df798c243ecccf9f872c1ea",
+          "sampling_cuda_rng_after_sha256": "f61632c141c5daf36e8fbe0f132f8679487771ba9483c78e3e57dc50fa485aca",
+          "teacher_noise_sha256": "83e3dfdcbcaa3a091128a1314d9574f44273e79762daa37ab2c877cf583f2cf3"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 7,
+          "initial_noise_sha256": "43c3f418fab47c8fd29feef40841329a75cc34fb79b8a9d396ad4b48b7e45014",
+          "sampling_rng_after_sha256": "0ff0ee358eea809fb6a5cedbfbad0ea4a4c3456fb1fb4ce73826532401775c9e",
+          "sampling_cuda_rng_after_sha256": "68cec9062d2cf60f1a30efef734b14dfebd17560f78da28a3bd00c9ee6f765ba",
+          "teacher_noise_sha256": "3885a5313dfaa7a64ae45da6f135a24711437fb158f0df0ef18fe89246170dfc"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 8,
+          "initial_noise_sha256": "d0981eb54d4a9a00633c7518675bddb7b6a6a32f332b3f9799ca0c187dd79edb",
+          "sampling_rng_after_sha256": "c6a39337f879a17714f0544190297c81b0c64090c1a73785983c2436baf4609f",
+          "sampling_cuda_rng_after_sha256": "eb054890afcc24f254b5606dfbeea548f01a1f893b204431d4fa7d19d0dd8330",
+          "teacher_noise_sha256": "3e8ba472acfc65b6863e340719960d209dff61b81ffd951fd51441212412d0fc"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 9,
+          "initial_noise_sha256": "50b5da39f842ad1d02bd67963a48cea9731ad26e6e66f9b9be2c400962893dbc",
+          "sampling_rng_after_sha256": "0282e8313b9d7cd9e8bc5026691a01fa93fbf8fe37959eb46d8ad2fab9f2951f",
+          "sampling_cuda_rng_after_sha256": "dc0ea1f552f273043635b1549fcc99191268c77621afbacca686ef8cd3adc387",
+          "teacher_noise_sha256": "5be7b9fc649a7baaaed2deb9e022e89a6254cea4a09c36f8461ccc00769bf327"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 10,
+          "initial_noise_sha256": "e8c5e460cc08ab9b54d12ebfd8679d79c80c1499235670bd013592ad7a613b8a",
+          "sampling_rng_after_sha256": "a99a40297b5dc2f25392cea4c3153115c8b657037bf9bf065c1b7f9d8c55b518",
+          "sampling_cuda_rng_after_sha256": "9a14d40bf6609d6daefb3f36aaa25443f0ddb3bd1942576669a43ffd141f5a12",
+          "teacher_noise_sha256": "8f8e0681084d60d29648b7bf493a9e019372105f96cb5fe8aec1c4a0d4a7abca"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 11,
+          "initial_noise_sha256": "14918701ae538c2a356f04bf6bf281eda5f3acc5b2a1b3bfe588036b2a850179",
+          "sampling_rng_after_sha256": "1220d8c7620ee39433b5a3b935384a01135777bedb1ad2d8374bec270ff8b120",
+          "sampling_cuda_rng_after_sha256": "b63fe58468b8fd0c24f51b7d5dc7eb4a33415afa9edb2841146b435a900869a3",
+          "teacher_noise_sha256": "e49de3e1e13f251f2a2be8137110dc763b97bbc926a88cc889c4fdea6b961c4c"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 12,
+          "initial_noise_sha256": "b94694493edbd05a7aa461b94fadfb4995a422ae1f5aee4ff23ccee79400a5bf",
+          "sampling_rng_after_sha256": "b7ee8bee780d5f3c37d95efa0226ff85d49ddcfdc90b50c407061b3c51b5ff16",
+          "sampling_cuda_rng_after_sha256": "df9c352c60ae566b36a93249744b541bd6f7b61c5bf2cab45c8632a52e1e62fa",
+          "teacher_noise_sha256": "ade469c13fd67ddf8e74e78634fb86ea01bff1f2c6aee316f0369edc993828c7"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 13,
+          "initial_noise_sha256": "52a9afcfc90d8b18aa19d8862ade04c65ea5882ce5d05ed941d0303d8a6ae65b",
+          "sampling_rng_after_sha256": "9be1a2d85fa7621dd755a559f7bd645f5006952827070d26ca5f63a4702f64e2",
+          "sampling_cuda_rng_after_sha256": "906b00d2f9bdf621bf6c5d36904b2976a7a7d3be4f98b7ecf3b978b77ccd1f66",
+          "teacher_noise_sha256": "173c7a4712a992aa98a9a9e105b8934dd6575c56716b33acadd154da1a85250c"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 14,
+          "initial_noise_sha256": "99af9dfe670c100cdde446274eae46b57524f8952cbc8d73d7bb8f5e93d53e55",
+          "sampling_rng_after_sha256": "d20f04279bcd01b6898ee784e732436355b023bffaeee8e47ed99a5c58618e90",
+          "sampling_cuda_rng_after_sha256": "ef97c39418bc6e7a5cb4209829d95d685547b8e079f777bb3d772e69610fe5f7",
+          "teacher_noise_sha256": "3ccf4529d580415e41a23b34ad37a1374e6bd109c5bc872fbbddd526c8007e08"
+        },
+        {
+          "sampling_seed": 1002,
+          "batch_index": 15,
+          "initial_noise_sha256": "a09d5f4ec4787a4683a1a8140d92086633fc19560d3047ed8e26d7f065a78707",
+          "sampling_rng_after_sha256": "26b8902a7fd976fd7405e3f2f1aee4500ea867f56c56530b8fcada4e7d2399f9",
+          "sampling_cuda_rng_after_sha256": "b2cbbbc246b835509fe497d939a36d1a42328aa47f4c68dfa14b74fff57f417f",
+          "teacher_noise_sha256": "3e3b4a094a20310e05533b18a44ac32a088542b96051ce2758e4abceb530c777"
+        }
+      ],
+      "predictions_sha256": "e7f07957e9e282ff1cc0f14f0d727173b2eee65f58f064cbba84d7c5621cf19b",
+      "action_metrics": {
+        "train": {
+          "full16": {
+            "episode_equal_mean_pixels": 5.8052411558724115,
+            "per_sampling_seed": [
+              5.430745837853325,
+              6.179736473891497
+            ],
+            "per_episode": [
+              {
+                "episode_id": 16,
+                "per_sampling_seed": [
+                  5.564630629851052,
+                  7.53006119298757
+                ],
+                "mean": 6.5473459114193115
+              },
+              {
+                "episode_id": 27,
+                "per_sampling_seed": [
+                  3.1749018070946255,
+                  3.1024610619800397
+                ],
+                "mean": 3.138681434537333
+              },
+              {
+                "episode_id": 42,
+                "per_sampling_seed": [
+                  4.4664308613803865,
+                  6.7520908821012116
+                ],
+                "mean": 5.6092608717407995
+              },
+              {
+                "episode_id": 56,
+                "per_sampling_seed": [
+                  4.3963423891918865,
+                  3.665751950227295
+                ],
+                "mean": 4.031047169709591
+              },
+              {
+                "episode_id": 65,
+                "per_sampling_seed": [
+                  7.902855160643757,
+                  5.879465658180278
+                ],
+                "mean": 6.8911604094120165
+              },
+              {
+                "episode_id": 81,
+                "per_sampling_seed": [
+                  6.163971262404011,
+                  10.641747912505409
+                ],
+                "mean": 8.40285958745471
+              },
+              {
+                "episode_id": 84,
+                "per_sampling_seed": [
+                  4.801627234872669,
+                  3.8468718493089304
+                ],
+                "mean": 4.3242495420908
+              },
+              {
+                "episode_id": 128,
+                "per_sampling_seed": [
+                  7.409707195707629,
+                  9.684177980519962
+                ],
+                "mean": 8.546942588113795
+              },
+              {
+                "episode_id": 131,
+                "per_sampling_seed": [
+                  4.491577305417363,
+                  3.9042964867767225
+                ],
+                "mean": 4.197936896097042
+              },
+              {
+                "episode_id": 156,
+                "per_sampling_seed": [
+                  4.645477951170357,
+                  7.3067982664081095
+                ],
+                "mean": 5.976138108789233
+              },
+              {
+                "episode_id": 166,
+                "per_sampling_seed": [
+                  8.883115709700927,
+                  7.2540542800451995
+                ],
+                "mean": 8.068584994873063
+              },
+              {
+                "episode_id": 170,
+                "per_sampling_seed": [
+                  3.919475952033634,
+                  5.665678812023092
+                ],
+                "mean": 4.792577382028362
+              },
+              {
+                "episode_id": 174,
+                "per_sampling_seed": [
+                  3.185162259544757,
+                  5.2507943335881775
+                ],
+                "mean": 4.217978296566467
+              },
+              {
+                "episode_id": 179,
+                "per_sampling_seed": [
+                  5.016024719531224,
+                  5.119940288076275
+                ],
+                "mean": 5.06798250380375
+              },
+              {
+                "episode_id": 184,
+                "per_sampling_seed": [
+                  5.26578970226375,
+                  5.818723645768101
+                ],
+                "mean": 5.542256674015925
+              },
+              {
+                "episode_id": 194,
+                "per_sampling_seed": [
+                  7.604843264845178,
+                  7.452868981767588
+                ],
+                "mean": 7.528856123306381
+              }
+            ]
+          },
+          "executed8": {
+            "episode_equal_mean_pixels": 5.3917289562839485,
+            "per_sampling_seed": [
+              4.956800832915801,
+              5.826657079652096
+            ],
+            "per_episode": [
+              {
+                "episode_id": 16,
+                "per_sampling_seed": [
+                  6.039728309316738,
+                  8.034945823568906
+                ],
+                "mean": 7.037337066442822
+              },
+              {
+                "episode_id": 27,
+                "per_sampling_seed": [
+                  2.4321101500321793,
+                  2.682731034527814
+                ],
+                "mean": 2.557420592279996
+              },
+              {
+                "episode_id": 42,
+                "per_sampling_seed": [
+                  4.058038075119509,
+                  6.485183379649923
+                ],
+                "mean": 5.271610727384717
+              },
+              {
+                "episode_id": 56,
+                "per_sampling_seed": [
+                  4.683914380625042,
+                  2.540631977855882
+                ],
+                "mean": 3.6122731792404625
+              },
+              {
+                "episode_id": 65,
+                "per_sampling_seed": [
+                  5.873151207283975,
+                  7.233394332661677
+                ],
+                "mean": 6.553272769972827
+              },
+              {
+                "episode_id": 81,
+                "per_sampling_seed": [
+                  5.214497245476166,
+                  10.28122269667098
+                ],
+                "mean": 7.747859971073573
+              },
+              {
+                "episode_id": 84,
+                "per_sampling_seed": [
+                  5.272769695581305,
+                  3.634132681507756
+                ],
+                "mean": 4.4534511885445305
+              },
+              {
+                "episode_id": 128,
+                "per_sampling_seed": [
+                  7.483752748691925,
+                  9.030374507033445
+                ],
+                "mean": 8.257063627862685
+              },
+              {
+                "episode_id": 131,
+                "per_sampling_seed": [
+                  3.8031957222287405,
+                  2.4722841133764306
+                ],
+                "mean": 3.1377399178025853
+              },
+              {
+                "episode_id": 156,
+                "per_sampling_seed": [
+                  3.533328768184151,
+                  4.7317343601009725
+                ],
+                "mean": 4.132531564142562
+              },
+              {
+                "episode_id": 166,
+                "per_sampling_seed": [
+                  7.060525687185565,
+                  8.183688786646112
+                ],
+                "mean": 7.62210723691584
+              },
+              {
+                "episode_id": 170,
+                "per_sampling_seed": [
+                  4.00386748224256,
+                  5.7245079478255265
+                ],
+                "mean": 4.864187715034044
+              },
+              {
+                "episode_id": 174,
+                "per_sampling_seed": [
+                  2.218416294606616,
+                  4.203068035260074
+                ],
+                "mean": 3.210742164933345
+              },
+              {
+                "episode_id": 179,
+                "per_sampling_seed": [
+                  4.880109741620985,
+                  4.307359300436514
+                ],
+                "mean": 4.5937345210287495
+              },
+              {
+                "episode_id": 184,
+                "per_sampling_seed": [
+                  4.136442337630016,
+                  5.9925549903962505
+                ],
+                "mean": 5.064498664013133
+              },
+              {
+                "episode_id": 194,
+                "per_sampling_seed": [
+                  8.614965480827337,
+                  7.688699306915275
+                ],
+                "mean": 8.151832393871306
+              }
+            ]
+          }
+        },
+        "unseen_demo": {
+          "full16": {
+            "episode_equal_mean_pixels": 45.67071411817148,
+            "per_sampling_seed": [
+              45.86576228323045,
+              45.47566595311251
+            ],
+            "per_episode": [
+              {
+                "episode_id": 15,
+                "per_sampling_seed": [
+                  38.7688386125557,
+                  37.16067840623684
+                ],
+                "mean": 37.96475850939627
+              },
+              {
+                "episode_id": 23,
+                "per_sampling_seed": [
+                  45.440646053730305,
+                  45.594633860097886
+                ],
+                "mean": 45.5176399569141
+              },
+              {
+                "episode_id": 39,
+                "per_sampling_seed": [
+                  24.42347187885524,
+                  23.079072998577786
+                ],
+                "mean": 23.75127243871651
+              },
+              {
+                "episode_id": 45,
+                "per_sampling_seed": [
+                  35.04585211001929,
+                  30.683005774598364
+                ],
+                "mean": 32.86442894230882
+              },
+              {
+                "episode_id": 62,
+                "per_sampling_seed": [
+                  41.60164621018754,
+                  39.3122651534129
+                ],
+                "mean": 40.45695568180022
+              },
+              {
+                "episode_id": 64,
+                "per_sampling_seed": [
+                  39.44007306714606,
+                  37.065804180550714
+                ],
+                "mean": 38.25293862384839
+              },
+              {
+                "episode_id": 87,
+                "per_sampling_seed": [
+                  27.953565388564574,
+                  25.13721442140188
+                ],
+                "mean": 26.545389904983228
+              },
+              {
+                "episode_id": 88,
+                "per_sampling_seed": [
+                  62.97481806507266,
+                  59.956303192562956
+                ],
+                "mean": 61.46556062881781
+              },
+              {
+                "episode_id": 92,
+                "per_sampling_seed": [
+                  62.749559185577475,
+                  59.04117628731047
+                ],
+                "mean": 60.89536773644397
+              },
+              {
+                "episode_id": 107,
+                "per_sampling_seed": [
+                  63.82137181256894,
+                  65.6686155679973
+                ],
+                "mean": 64.74499369028312
+              },
+              {
+                "episode_id": 127,
+                "per_sampling_seed": [
+                  44.890389888472484,
+                  63.87102898669472
+                ],
+                "mean": 54.3807094375836
+              },
+              {
+                "episode_id": 152,
+                "per_sampling_seed": [
+                  22.154484842392677,
+                  22.361068636689453
+                ],
+                "mean": 22.257776739541065
+              },
+              {
+                "episode_id": 164,
+                "per_sampling_seed": [
+                  65.89441681527987,
+                  66.15147650274278
+                ],
+                "mean": 66.02294665901132
+              },
+              {
+                "episode_id": 180,
+                "per_sampling_seed": [
+                  51.86586755715023,
+                  47.58733647768767
+                ],
+                "mean": 49.726602017418955
+              },
+              {
+                "episode_id": 204,
+                "per_sampling_seed": [
+                  23.99261568838051,
+                  23.58156436065142
+                ],
+                "mean": 23.787090024515965
+              },
+              {
+                "episode_id": 205,
+                "per_sampling_seed": [
+                  82.8345793557338,
+                  81.35941044258698
+                ],
+                "mean": 82.09699489916039
+              }
+            ]
+          },
+          "executed8": {
+            "episode_equal_mean_pixels": 39.507990325244656,
+            "per_sampling_seed": [
+              40.004175686440576,
+              39.011804964048736
+            ],
+            "per_episode": [
+              {
+                "episode_id": 15,
+                "per_sampling_seed": [
+                  22.73179880955758,
+                  20.64905498970775
+                ],
+                "mean": 21.690426899632666
+              },
+              {
+                "episode_id": 23,
+                "per_sampling_seed": [
+                  38.057459782384065,
+                  38.210948973615196
+                ],
+                "mean": 38.13420437799962
+              },
+              {
+                "episode_id": 39,
+                "per_sampling_seed": [
+                  26.06592745719957,
+                  24.687785482031728
+                ],
+                "mean": 25.376856469615646
+              },
+              {
+                "episode_id": 45,
+                "per_sampling_seed": [
+                  22.563140852977728,
+                  16.566803595933017
+                ],
+                "mean": 19.56497222445537
+              },
+              {
+                "episode_id": 62,
+                "per_sampling_seed": [
+                  30.495084846452123,
+                  24.629871706474795
+                ],
+                "mean": 27.56247827646346
+              },
+              {
+                "episode_id": 64,
+                "per_sampling_seed": [
+                  31.92242405350862,
+                  31.03886812507447
+                ],
+                "mean": 31.480646089291543
+              },
+              {
+                "episode_id": 87,
+                "per_sampling_seed": [
+                  21.94127973093091,
+                  18.24674797126938
+                ],
+                "mean": 20.094013851100144
+              },
+              {
+                "episode_id": 88,
+                "per_sampling_seed": [
+                  62.743729833368846,
+                  61.35876818506709
+                ],
+                "mean": 62.05124900921797
+              },
+              {
+                "episode_id": 92,
+                "per_sampling_seed": [
+                  65.96436281471415,
+                  63.405974709756634
+                ],
+                "mean": 64.68516876223539
+              },
+              {
+                "episode_id": 107,
+                "per_sampling_seed": [
+                  81.64319237122042,
+                  83.55494237599231
+                ],
+                "mean": 82.59906737360637
+              },
+              {
+                "episode_id": 127,
+                "per_sampling_seed": [
+                  38.20610657175769,
+                  55.631111442134284
+                ],
+                "mean": 46.918609006945985
+              },
+              {
+                "episode_id": 152,
+                "per_sampling_seed": [
+                  20.959996844908133,
+                  20.36227361567938
+                ],
+                "mean": 20.66113523029376
+              },
+              {
+                "episode_id": 164,
+                "per_sampling_seed": [
+                  52.20570183044082,
+                  49.86998963416087
+                ],
+                "mean": 51.03784573230085
+              },
+              {
+                "episode_id": 180,
+                "per_sampling_seed": [
+                  61.65733528017931,
+                  56.90820956700918
+                ],
+                "mean": 59.28277242359424
+              },
+              {
+                "episode_id": 204,
+                "per_sampling_seed": [
+                  19.072237349800346,
+                  17.724633492112268
+                ],
+                "mean": 18.398435420956307
+              },
+              {
+                "episode_id": 205,
+                "per_sampling_seed": [
+                  43.83703255364887,
+                  41.34289555876141
+                ],
+                "mean": 42.58996405620513
+              }
+            ]
+          }
+        }
+      },
+      "epsilon_mse_all16": {
+        "train": {
+          "0": 0.1552487015724182,
+          "49": 0.0002689713437575847,
+          "99": 5.0849477702286094e-05
+        },
+        "unseen_demo": {
+          "0": 1.7452888488769531,
+          "49": 0.02881382778286934,
+          "99": 3.4795702958945185e-05
+        }
+      }
+    }
+  },
+  "scope": "Expert-window action diagnostic, reused episode roles, not policy improvement or task success",
+  "protocol_sha256": "201eb0c22cdf266d83c845dc414f771f4df2ba96017fd2d0a8bc8c588beabffd",
+  "input_sha256": "f326a399b567fe298367d43cdc19481f0cfb8fe1f947cc60d3d2df3d5f684db1",
+  "manifest_sha256": "88349ce07d4718ecd955cc6c4f0c27bf69b205c9cea22b7148a3c8bbcc20780d",
+  "clip": {
+    "worker": {
+      "request_id": 10,
+      "status": "closed",
+      "requests": 9,
+      "weights_unchanged": true,
+      "all_frozen": true
+    },
+    "selected_reference_max_abs": 0.0,
+    "selected_tokens_sha256": "0443089f8c38b8cd42408f3790327b8fdf23aa479df8d55b00c1d14a11b8c306",
+    "cache_revalidation_scope": "Pinned qualified report, sizes, exact frame-id hash and four selected live references; no full11GiB rehash"
+  },
+  "baselines": {
+    "no_motion": {
+      "train": {
+        "full16": {
+          "episode_equal_mean_pixels": 70.61386837635587,
+          "per_sampling_seed": [
+            70.61386837635587
+          ],
+          "per_episode": [
+            {
+              "episode_id": 16,
+              "per_sampling_seed": [
+                133.96900552541283
+              ],
+              "mean": 133.96900552541283
+            },
+            {
+              "episode_id": 27,
+              "per_sampling_seed": [
+                41.35900643683395
+              ],
+              "mean": 41.35900643683395
+            },
+            {
+              "episode_id": 42,
+              "per_sampling_seed": [
+                48.282714969964104
+              ],
+              "mean": 48.282714969964104
+            },
+            {
+              "episode_id": 56,
+              "per_sampling_seed": [
+                37.699572596576004
+              ],
+              "mean": 37.699572596576004
+            },
+            {
+              "episode_id": 65,
+              "per_sampling_seed": [
+                90.49887248642554
+              ],
+              "mean": 90.49887248642554
+            },
+            {
+              "episode_id": 81,
+              "per_sampling_seed": [
+                48.19118283391068
+              ],
+              "mean": 48.19118283391068
+            },
+            {
+              "episode_id": 84,
+              "per_sampling_seed": [
+                76.51366248012897
+              ],
+              "mean": 76.51366248012897
+            },
+            {
+              "episode_id": 128,
+              "per_sampling_seed": [
+                112.55982202432736
+              ],
+              "mean": 112.55982202432736
+            },
+            {
+              "episode_id": 131,
+              "per_sampling_seed": [
+                86.08354359374385
+              ],
+              "mean": 86.08354359374385
+            },
+            {
+              "episode_id": 156,
+              "per_sampling_seed": [
+                64.06139348323295
+              ],
+              "mean": 64.06139348323295
+            },
+            {
+              "episode_id": 166,
+              "per_sampling_seed": [
+                96.01355059551418
+              ],
+              "mean": 96.01355059551418
+            },
+            {
+              "episode_id": 170,
+              "per_sampling_seed": [
+                24.922243511088777
+              ],
+              "mean": 24.922243511088777
+            },
+            {
+              "episode_id": 174,
+              "per_sampling_seed": [
+                32.66529783119956
+              ],
+              "mean": 32.66529783119956
+            },
+            {
+              "episode_id": 179,
+              "per_sampling_seed": [
+                60.09923981303112
+              ],
+              "mean": 60.09923981303112
+            },
+            {
+              "episode_id": 184,
+              "per_sampling_seed": [
+                103.74794697210389
+              ],
+              "mean": 103.74794697210389
+            },
+            {
+              "episode_id": 194,
+              "per_sampling_seed": [
+                73.15483886820013
+              ],
+              "mean": 73.15483886820013
+            }
+          ]
+        },
+        "executed8": {
+          "episode_equal_mean_pixels": 50.85472277651172,
+          "per_sampling_seed": [
+            50.85472277651172
+          ],
+          "per_episode": [
+            {
+              "episode_id": 16,
+              "per_sampling_seed": [
+                96.65525886410609
+              ],
+              "mean": 96.65525886410609
+            },
+            {
+              "episode_id": 27,
+              "per_sampling_seed": [
+                28.909738480892887
+              ],
+              "mean": 28.909738480892887
+            },
+            {
+              "episode_id": 42,
+              "per_sampling_seed": [
+                32.458155075652826
+              ],
+              "mean": 32.458155075652826
+            },
+            {
+              "episode_id": 56,
+              "per_sampling_seed": [
+                26.54289564151345
+              ],
+              "mean": 26.54289564151345
+            },
+            {
+              "episode_id": 65,
+              "per_sampling_seed": [
+                72.91904112599741
+              ],
+              "mean": 72.91904112599741
+            },
+            {
+              "episode_id": 81,
+              "per_sampling_seed": [
+                25.120799821792733
+              ],
+              "mean": 25.120799821792733
+            },
+            {
+              "episode_id": 84,
+              "per_sampling_seed": [
+                65.02061618948684
+              ],
+              "mean": 65.02061618948684
+            },
+            {
+              "episode_id": 128,
+              "per_sampling_seed": [
+                72.2542682964258
+              ],
+              "mean": 72.2542682964258
+            },
+            {
+              "episode_id": 131,
+              "per_sampling_seed": [
+                71.51040537184409
+              ],
+              "mean": 71.51040537184409
+            },
+            {
+              "episode_id": 156,
+              "per_sampling_seed": [
+                39.974022609571364
+              ],
+              "mean": 39.974022609571364
+            },
+            {
+              "episode_id": 166,
+              "per_sampling_seed": [
+                80.72710280404883
+              ],
+              "mean": 80.72710280404883
+            },
+            {
+              "episode_id": 170,
+              "per_sampling_seed": [
+                19.628342707186004
+              ],
+              "mean": 19.628342707186004
+            },
+            {
+              "episode_id": 174,
+              "per_sampling_seed": [
+                20.346455313292324
+              ],
+              "mean": 20.346455313292324
+            },
+            {
+              "episode_id": 179,
+              "per_sampling_seed": [
+                33.94818729231682
+              ],
+              "mean": 33.94818729231682
+            },
+            {
+              "episode_id": 184,
+              "per_sampling_seed": [
+                78.43307725769863
+              ],
+              "mean": 78.43307725769863
+            },
+            {
+              "episode_id": 194,
+              "per_sampling_seed": [
+                49.22719757236146
+              ],
+              "mean": 49.22719757236146
+            }
+          ]
+        }
+      },
+      "unseen_demo": {
+        "full16": {
+          "episode_equal_mean_pixels": 64.46034558328708,
+          "per_sampling_seed": [
+            64.46034558328708
+          ],
+          "per_episode": [
+            {
+              "episode_id": 15,
+              "per_sampling_seed": [
+                78.84567933687552
+              ],
+              "mean": 78.84567933687552
+            },
+            {
+              "episode_id": 23,
+              "per_sampling_seed": [
+                62.86168444825624
+              ],
+              "mean": 62.86168444825624
+            },
+            {
+              "episode_id": 39,
+              "per_sampling_seed": [
+                40.73743405121963
+              ],
+              "mean": 40.73743405121963
+            },
+            {
+              "episode_id": 45,
+              "per_sampling_seed": [
+                71.15086342536702
+              ],
+              "mean": 71.15086342536702
+            },
+            {
+              "episode_id": 62,
+              "per_sampling_seed": [
+                52.144333059017
+              ],
+              "mean": 52.144333059017
+            },
+            {
+              "episode_id": 64,
+              "per_sampling_seed": [
+                45.04255918714087
+              ],
+              "mean": 45.04255918714087
+            },
+            {
+              "episode_id": 87,
+              "per_sampling_seed": [
+                37.14684982580836
+              ],
+              "mean": 37.14684982580836
+            },
+            {
+              "episode_id": 88,
+              "per_sampling_seed": [
+                80.5640559784178
+              ],
+              "mean": 80.5640559784178
+            },
+            {
+              "episode_id": 92,
+              "per_sampling_seed": [
+                64.37868539115246
+              ],
+              "mean": 64.37868539115246
+            },
+            {
+              "episode_id": 107,
+              "per_sampling_seed": [
+                80.41208906110404
+              ],
+              "mean": 80.41208906110404
+            },
+            {
+              "episode_id": 127,
+              "per_sampling_seed": [
+                68.20055318316189
+              ],
+              "mean": 68.20055318316189
+            },
+            {
+              "episode_id": 152,
+              "per_sampling_seed": [
+                60.08810831585633
+              ],
+              "mean": 60.08810831585633
+            },
+            {
+              "episode_id": 164,
+              "per_sampling_seed": [
+                92.99317857248866
+              ],
+              "mean": 92.99317857248866
+            },
+            {
+              "episode_id": 180,
+              "per_sampling_seed": [
+                52.84075372005036
+              ],
+              "mean": 52.84075372005036
+            },
+            {
+              "episode_id": 204,
+              "per_sampling_seed": [
+                70.64684493290406
+              ],
+              "mean": 70.64684493290406
+            },
+            {
+              "episode_id": 205,
+              "per_sampling_seed": [
+                73.31185684377289
+              ],
+              "mean": 73.31185684377289
+            }
+          ]
+        },
+        "executed8": {
+          "episode_equal_mean_pixels": 47.75822908370478,
+          "per_sampling_seed": [
+            47.75822908370478
+          ],
+          "per_episode": [
+            {
+              "episode_id": 15,
+              "per_sampling_seed": [
+                48.090763240645586
+              ],
+              "mean": 48.090763240645586
+            },
+            {
+              "episode_id": 23,
+              "per_sampling_seed": [
+                48.36007954175095
+              ],
+              "mean": 48.36007954175095
+            },
+            {
+              "episode_id": 39,
+              "per_sampling_seed": [
+                36.34274755146716
+              ],
+              "mean": 36.34274755146716
+            },
+            {
+              "episode_id": 45,
+              "per_sampling_seed": [
+                54.774353180589515
+              ],
+              "mean": 54.774353180589515
+            },
+            {
+              "episode_id": 62,
+              "per_sampling_seed": [
+                44.82312827562994
+              ],
+              "mean": 44.82312827562994
+            },
+            {
+              "episode_id": 64,
+              "per_sampling_seed": [
+                24.601475862888325
+              ],
+              "mean": 24.601475862888325
+            },
+            {
+              "episode_id": 87,
+              "per_sampling_seed": [
+                26.376921949546166
+              ],
+              "mean": 26.376921949546166
+            },
+            {
+              "episode_id": 88,
+              "per_sampling_seed": [
+                58.44908683919249
+              ],
+              "mean": 58.44908683919249
+            },
+            {
+              "episode_id": 92,
+              "per_sampling_seed": [
+                56.13520927999399
+              ],
+              "mean": 56.13520927999399
+            },
+            {
+              "episode_id": 107,
+              "per_sampling_seed": [
+                76.85755694540339
+              ],
+              "mean": 76.85755694540339
+            },
+            {
+              "episode_id": 127,
+              "per_sampling_seed": [
+                49.99894385966793
+              ],
+              "mean": 49.99894385966793
+            },
+            {
+              "episode_id": 152,
+              "per_sampling_seed": [
+                40.37248526673646
+              ],
+              "mean": 40.37248526673646
+            },
+            {
+              "episode_id": 164,
+              "per_sampling_seed": [
+                59.12839088853626
+              ],
+              "mean": 59.12839088853626
+            },
+            {
+              "episode_id": 180,
+              "per_sampling_seed": [
+                49.31239316502615
+              ],
+              "mean": 49.31239316502615
+            },
+            {
+              "episode_id": 204,
+              "per_sampling_seed": [
+                46.122611743748
+              ],
+              "mean": 46.122611743748
+            },
+            {
+              "episode_id": 205,
+              "per_sampling_seed": [
+                44.385517748454085
+              ],
+              "mean": 44.385517748454085
+            }
+          ]
+        }
+      }
+    },
+    "train_mean": {
+      "train": {
+        "full16": {
+          "episode_equal_mean_pixels": 120.4486227096046,
+          "per_sampling_seed": [
+            120.4486227096046
+          ],
+          "per_episode": [
+            {
+              "episode_id": 16,
+              "per_sampling_seed": [
+                152.05966686881067
+              ],
+              "mean": 152.05966686881067
+            },
+            {
+              "episode_id": 27,
+              "per_sampling_seed": [
+                134.34519123049148
+              ],
+              "mean": 134.34519123049148
+            },
+            {
+              "episode_id": 42,
+              "per_sampling_seed": [
+                74.99271667185674
+              ],
+              "mean": 74.99271667185674
+            },
+            {
+              "episode_id": 56,
+              "per_sampling_seed": [
+                84.72190806368425
+              ],
+              "mean": 84.72190806368425
+            },
+            {
+              "episode_id": 65,
+              "per_sampling_seed": [
+                157.34716181417494
+              ],
+              "mean": 157.34716181417494
+            },
+            {
+              "episode_id": 81,
+              "per_sampling_seed": [
+                181.54652891437826
+              ],
+              "mean": 181.54652891437826
+            },
+            {
+              "episode_id": 84,
+              "per_sampling_seed": [
+                87.57719229019627
+              ],
+              "mean": 87.57719229019627
+            },
+            {
+              "episode_id": 128,
+              "per_sampling_seed": [
+                141.00121270093877
+              ],
+              "mean": 141.00121270093877
+            },
+            {
+              "episode_id": 131,
+              "per_sampling_seed": [
+                96.87690646555316
+              ],
+              "mean": 96.87690646555316
+            },
+            {
+              "episode_id": 156,
+              "per_sampling_seed": [
+                138.07783951556073
+              ],
+              "mean": 138.07783951556073
+            },
+            {
+              "episode_id": 166,
+              "per_sampling_seed": [
+                124.27920406020655
+              ],
+              "mean": 124.27920406020655
+            },
+            {
+              "episode_id": 170,
+              "per_sampling_seed": [
+                132.1263738271219
+              ],
+              "mean": 132.1263738271219
+            },
+            {
+              "episode_id": 174,
+              "per_sampling_seed": [
+                71.06818717115812
+              ],
+              "mean": 71.06818717115812
+            },
+            {
+              "episode_id": 179,
+              "per_sampling_seed": [
+                124.56081206685596
+              ],
+              "mean": 124.56081206685596
+            },
+            {
+              "episode_id": 184,
+              "per_sampling_seed": [
+                107.50666296975766
+              ],
+              "mean": 107.50666296975766
+            },
+            {
+              "episode_id": 194,
+              "per_sampling_seed": [
+                119.09039872292828
+              ],
+              "mean": 119.09039872292828
+            }
+          ]
+        },
+        "executed8": {
+          "episode_equal_mean_pixels": 121.78975338974658,
+          "per_sampling_seed": [
+            121.78975338974658
+          ],
+          "per_episode": [
+            {
+              "episode_id": 16,
+              "per_sampling_seed": [
+                141.59139070318633
+              ],
+              "mean": 141.59139070318633
+            },
+            {
+              "episode_id": 27,
+              "per_sampling_seed": [
+                148.66269940129962
+              ],
+              "mean": 148.66269940129962
+            },
+            {
+              "episode_id": 42,
+              "per_sampling_seed": [
+                73.43945476189162
+              ],
+              "mean": 73.43945476189162
+            },
+            {
+              "episode_id": 56,
+              "per_sampling_seed": [
+                81.31403543890606
+              ],
+              "mean": 81.31403543890606
+            },
+            {
+              "episode_id": 65,
+              "per_sampling_seed": [
+                152.64564309377542
+              ],
+              "mean": 152.64564309377542
+            },
+            {
+              "episode_id": 81,
+              "per_sampling_seed": [
+                159.115283472692
+              ],
+              "mean": 159.115283472692
+            },
+            {
+              "episode_id": 84,
+              "per_sampling_seed": [
+                101.97884779597591
+              ],
+              "mean": 101.97884779597591
+            },
+            {
+              "episode_id": 128,
+              "per_sampling_seed": [
+                118.2748627383604
+              ],
+              "mean": 118.2748627383604
+            },
+            {
+              "episode_id": 131,
+              "per_sampling_seed": [
+                114.58901535052783
+              ],
+              "mean": 114.58901535052783
+            },
+            {
+              "episode_id": 156,
+              "per_sampling_seed": [
+                130.54023225250918
+              ],
+              "mean": 130.54023225250918
+            },
+            {
+              "episode_id": 166,
+              "per_sampling_seed": [
+                132.06669192334877
+              ],
+              "mean": 132.06669192334877
+            },
+            {
+              "episode_id": 170,
+              "per_sampling_seed": [
+                138.520494823809
+              ],
+              "mean": 138.520494823809
+            },
+            {
+              "episode_id": 174,
+              "per_sampling_seed": [
+                77.33920291682203
+              ],
+              "mean": 77.33920291682203
+            },
+            {
+              "episode_id": 179,
+              "per_sampling_seed": [
+                119.74762124444614
+              ],
+              "mean": 119.74762124444614
+            },
+            {
+              "episode_id": 184,
+              "per_sampling_seed": [
+                118.27037800145656
+              ],
+              "mean": 118.27037800145656
+            },
+            {
+              "episode_id": 194,
+              "per_sampling_seed": [
+                140.54020031693852
+              ],
+              "mean": 140.54020031693852
+            }
+          ]
+        }
+      },
+      "unseen_demo": {
+        "full16": {
+          "episode_equal_mean_pixels": 125.223926056458,
+          "per_sampling_seed": [
+            125.223926056458
+          ],
+          "per_episode": [
+            {
+              "episode_id": 15,
+              "per_sampling_seed": [
+                164.68920468782048
+              ],
+              "mean": 164.68920468782048
+            },
+            {
+              "episode_id": 23,
+              "per_sampling_seed": [
+                102.86179050725457
+              ],
+              "mean": 102.86179050725457
+            },
+            {
+              "episode_id": 39,
+              "per_sampling_seed": [
+                116.82546628754578
+              ],
+              "mean": 116.82546628754578
+            },
+            {
+              "episode_id": 45,
+              "per_sampling_seed": [
+                94.11504097641006
+              ],
+              "mean": 94.11504097641006
+            },
+            {
+              "episode_id": 62,
+              "per_sampling_seed": [
+                130.04048310548453
+              ],
+              "mean": 130.04048310548453
+            },
+            {
+              "episode_id": 64,
+              "per_sampling_seed": [
+                145.15867605469143
+              ],
+              "mean": 145.15867605469143
+            },
+            {
+              "episode_id": 87,
+              "per_sampling_seed": [
+                113.52129945004656
+              ],
+              "mean": 113.52129945004656
+            },
+            {
+              "episode_id": 88,
+              "per_sampling_seed": [
+                153.61549624568897
+              ],
+              "mean": 153.61549624568897
+            },
+            {
+              "episode_id": 92,
+              "per_sampling_seed": [
+                168.6886109695274
+              ],
+              "mean": 168.6886109695274
+            },
+            {
+              "episode_id": 107,
+              "per_sampling_seed": [
+                110.57463293707252
+              ],
+              "mean": 110.57463293707252
+            },
+            {
+              "episode_id": 127,
+              "per_sampling_seed": [
+                112.8612191377747
+              ],
+              "mean": 112.8612191377747
+            },
+            {
+              "episode_id": 152,
+              "per_sampling_seed": [
+                75.20882724374246
+              ],
+              "mean": 75.20882724374246
+            },
+            {
+              "episode_id": 164,
+              "per_sampling_seed": [
+                154.57378302915097
+              ],
+              "mean": 154.57378302915097
+            },
+            {
+              "episode_id": 180,
+              "per_sampling_seed": [
+                113.47795492216369
+              ],
+              "mean": 113.47795492216369
+            },
+            {
+              "episode_id": 204,
+              "per_sampling_seed": [
+                130.22740957457734
+              ],
+              "mean": 130.22740957457734
+            },
+            {
+              "episode_id": 205,
+              "per_sampling_seed": [
+                117.14292177437632
+              ],
+              "mean": 117.14292177437632
+            }
+          ]
+        },
+        "executed8": {
+          "episode_equal_mean_pixels": 126.56899282810534,
+          "per_sampling_seed": [
+            126.56899282810534
+          ],
+          "per_episode": [
+            {
+              "episode_id": 15,
+              "per_sampling_seed": [
+                151.8452859971166
+              ],
+              "mean": 151.8452859971166
+            },
+            {
+              "episode_id": 23,
+              "per_sampling_seed": [
+                117.75713561928805
+              ],
+              "mean": 117.75713561928805
+            },
+            {
+              "episode_id": 39,
+              "per_sampling_seed": [
+                126.65058537546915
+              ],
+              "mean": 126.65058537546915
+            },
+            {
+              "episode_id": 45,
+              "per_sampling_seed": [
+                89.92336020046042
+              ],
+              "mean": 89.92336020046042
+            },
+            {
+              "episode_id": 62,
+              "per_sampling_seed": [
+                138.3841744408762
+              ],
+              "mean": 138.3841744408762
+            },
+            {
+              "episode_id": 64,
+              "per_sampling_seed": [
+                137.11468642318863
+              ],
+              "mean": 137.11468642318863
+            },
+            {
+              "episode_id": 87,
+              "per_sampling_seed": [
+                112.2423799376041
+              ],
+              "mean": 112.2423799376041
+            },
+            {
+              "episode_id": 88,
+              "per_sampling_seed": [
+                134.43289347317446
+              ],
+              "mean": 134.43289347317446
+            },
+            {
+              "episode_id": 92,
+              "per_sampling_seed": [
+                173.80630896682925
+              ],
+              "mean": 173.80630896682925
+            },
+            {
+              "episode_id": 107,
+              "per_sampling_seed": [
+                117.68368678282226
+              ],
+              "mean": 117.68368678282226
+            },
+            {
+              "episode_id": 127,
+              "per_sampling_seed": [
+                118.67869110653398
+              ],
+              "mean": 118.67869110653398
+            },
+            {
+              "episode_id": 152,
+              "per_sampling_seed": [
+                82.91577800719801
+              ],
+              "mean": 82.91577800719801
+            },
+            {
+              "episode_id": 164,
+              "per_sampling_seed": [
+                141.97979169835378
+              ],
+              "mean": 141.97979169835378
+            },
+            {
+              "episode_id": 180,
+              "per_sampling_seed": [
+                125.99772755426433
+              ],
+              "mean": 125.99772755426433
+            },
+            {
+              "episode_id": 204,
+              "per_sampling_seed": [
+                140.05770079368324
+              ],
+              "mean": 140.05770079368324
+            },
+            {
+              "episode_id": 205,
+              "per_sampling_seed": [
+                115.63369887282276
+              ],
+              "mean": 115.63369887282276
+            }
+          ]
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 131.00831399206072
+}

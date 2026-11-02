@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-16",
+  "stage": "preregistered_plan_and_CPU_input_contract_only",
+  "question": "Does variation in visual conditioning harm same-DDPM independent-episode generalization, while task and real observed-state inputs remain available?",
+  "evidence_gap": "State-only ridge6.2798cm is a different readout; frozen inference image swaps do not test a network trained with image-independent conditioning. No matched train-time no-visual-variation DDPM arm found in the evidence index and relevant source inventory.",
+  "control": {
+    "job": "202278",
+    "arm": "real",
+    "report_sha256": "69dd96d24241f3cef8733c4cbc8a985157b06e62616da32aefd8332268302ed1",
+    "reuse_existing_without_retraining": true,
+    "path_position_cm": 8.349126815795898,
+    "path_rotation_deg": 15.255946159362793
+  },
+  "manifest_sha256": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+  "source_sha256": {
+    "dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+    "check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+    "fit_bridge_growth128.py": "6ea46533ae91b77926288f7e994aba05a223d7c59b5e086d034a7208c58a1e70",
+    "growth128_input_contract.py": "bde3fd9da5d0ae8f67c1511418600121ae19729b368c732c0982e282c67b14d1"
+  },
+  "state_contract_sha256": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+  "state_protocol_sha256": "dacc9a6260389bd777fc4507920b2bda51a5a812663a2df37ec492a65a3efe82",
+  "windows": {
+    "train": 128,
+    "development": 40
+  },
+  "episodes": {
+    "train": 64,
+    "development": 10
+  },
+  "input_intervention": "Replace every visual token sequence in training and evaluation by the SAME per-token mean of128 original training visual token sequences. This removes query image variation. Preserve original language tokens/masks and true current-state features; no future inputs.",
+  "statistics": "Constant visual tokens from128 train rows only; preserve original128-row observed-state scaling and original0.1m action units. No new readout/prior fitted.",
+  "model": "Same frozenCLIP/8layerAdapter/multiscale x0-DDPM100/repeated-current history/real-state port. All neural parameter counts and trainable prefix sets unchanged.",
+  "recipe": {
+    "initialization_seed": 43,
+    "updates": 8192,
+    "batch_size": 8,
+    "exposures_per_window": 512,
+    "learning_rates": [
+      0.0001,
+      1e-05
+    ],
+    "switch_after_update": 4096,
+    "sampling_steps": 100,
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "optimizer": "Adam",
+    "weight_decay": 0,
+    "gradient_clip": 1.0
+  },
+  "formal": "One new image-independent conditioning arm; final weights only. No inner selection and no retraining old control.",
+  "preflight": "Verify frozen inherited sources,original128/40 raw identity,train-only constant tokens and equal query inputs; verify original-mode first losses against retained logs where applicable; bounded execution/reload checks only. No millimetre memorization target.",
+  "primary": "Original40-window path position and rotation; compare reused202278 raw control,static and state-only6.2798cm position reference. Preserve all10 episodes and5 tasks; report full training error without requiring millimetre fit.",
+  "screen": {
+    "position_at_most_cm": 7.391093466501333,
+    "rotation_at_most_deg": 15.1185004321,
+    "position_and_rotation_below_reused_control": true,
+    "episodes_position_better_than_reused_control_at_least": 6
+  },
+  "interpretation_if_better": "Supports a harmful net effect of visual-input variation under this recipe; does not uniquely identify CLIP or Adapter, prove spurious semantics, or justify a final robot policy without vision.",
+  "interpretation_if_not_better": "No support for this fixed removal intervention. Does not certify visual features or localize a unique bug. Close this arm without extensions.",
+  "preserve_project_goal": "Final intended system still uses CLIP+Adapter+diffusion and visual grounding. This is a localization control, not the final proposed vision-free solution.",
+  "stopping": "One budget/one initialization/final-only/no extra normalization,visual-mask strength,seeds orupdates. Do not reopen residual-prior,inner-selection orPanda fitting candidates.",
+  "resources": "Reuse existing full frozen token cache, no re-encoding or downloads. At most one final nonCLIP checkpoint<1GiB, small predictions; no local formal neural training.",
+  "limits": [
+    "Exploratory reused40-window development set,not untouched test.",
+    "Matched original128 control; do not use205997 smaller96 optimization pool as a causal control.",
+    "Frozen gripper,offline pose only,no grasp or unseen-task claim."
+  ],
+  "neural_updates_executed": 0,
+  "cluster_jobs_submitted": false,
+  "entry_implemented": false
+}

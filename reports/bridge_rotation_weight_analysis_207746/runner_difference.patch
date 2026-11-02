@@ -1,0 +1,65 @@
+--- coverage207558
++++ rotation_weight207746
+@@ -21,6 +21,7 @@
+ from fit_state_arm import PREFIXES,trainable_copy,gradient_norms,cpu_copy,state_sha
+ from state_input_contract import add_zero_port
+ from coverage_inputs import load_inputs,tokens
++from rotation_loss import rotation_pose_loss,training_statistics,verify_loss_math
+ 
+ 
+ def main():
+@@ -42,6 +43,13 @@
+         (args.output/'report.json').write_text(json.dumps(r,indent=2)+'\n')
+     (args.output/'runner_snapshot.py').write_bytes(Path(__file__).read_bytes())
+     try:
++        assert sha(CODE/'rotation_loss.py')==p['rotation_loss']['helper_sha256']
++        assert sha(CODE/'training_loss_scale.json')==p['rotation_loss']['statistics_sha256']
++        r['rotation_loss_weight']=p['rotation_loss']['weight']
++        r['loss_helper_sha256']=sha(CODE/'rotation_loss.py')
++        r['loss_math']=verify_loss_math(r['rotation_loss_weight'])
++        (args.output/'rotation_loss_snapshot.py').write_bytes((CODE/'rotation_loss.py').read_bytes())
++        (args.output/'protocol_snapshot.json').write_bytes((CODE/'protocol.json').read_bytes())
+         for path,h in p['inherited_sha256'].items(): assert sha(CODE.parent/path)==h,path
+         for name,expected in [('rows.json',p['rows_sha256']),('schedule.npz',p['schedule_file_sha256']),
+                               ('episode_reference.json',p['episode_reference_sha256'])]:assert sha(CODE/name)==expected
+@@ -91,11 +99,20 @@
+         optimizer=torch.optim.Adam(trainables,lr=1e-4)
+         targets=torch.zeros((1876,16,8),device='cuda');current=torch.zeros((1876,1),device='cuda')
+         for i in r['verified_row_indices']:targets[i]=items[i][3].cuda();current[i]=items[i][2].cuda()
++        frozen_stats=json.loads((CODE/'training_loss_scale.json').read_text())
++        if not args.local_bounded:
++            actual_stats=training_statistics(targets[:1836].cpu().numpy())
++            assert all(actual_stats[k]==frozen_stats[k] for k in actual_stats), 'Training scale changed'
++        r['complete_training_loss_scale_verified']=not args.local_bounded
+         state=torch.from_numpy(features).cuda();valid=set(r['verified_row_indices'])
++        token_ids=torch.arange(1876,device='cuda')
++        if args.local_bounded:
++            token_ids=torch.full((1876,),-1,device='cuda',dtype=torch.long)
++            token_ids[r['verified_row_indices']]=torch.arange(len(r['verified_row_indices']),device='cuda')
+         def context(indices):
+             assert set(indices.detach().cpu().tolist())<=valid
+-            now=model.adapter(visual[indices],language[indices],mask[indices])
+-            repeated=model.adapter(visual[indices],language[indices],mask[indices])
++            now=model.adapter(visual[token_ids[indices]],language[token_ids[indices]],mask[token_ids[indices]])
++            repeated=model.adapter(visual[token_ids[indices]],language[token_ids[indices]],mask[token_ids[indices]])
+             return now+model.history_projection(repeated-now)+model.state_projection(state[indices])
+         check_seconds=[];step_seconds=[]
+         def check(arm,update,split):
+@@ -118,7 +135,7 @@
+                     begin=time.monotonic();model.train();ids=batches[update-1].cuda()
+                     seed(430000+update);ctx=context(ids);seed(420000+update)
+                     guess,truth,_=model.diffusion_loss(targets[ids],ctx,current[ids])
+-                    loss=torch.nn.functional.mse_loss(guess,truth);assert torch.isfinite(loss)
++                    loss,loss_parts=rotation_pose_loss(guess,truth,p['rotation_loss']['weight']);assert torch.isfinite(loss)
+                     optimizer.zero_grad(set_to_none=True);loss.backward();grads=gradient_norms(model)
+                     assert all(v.grad is None for v in model.vision_encoder.parameters())
+                     assert all(v.grad is None for v in model.text_encoder.parameters())
+@@ -126,7 +143,7 @@
+                     optimizer.step();torch.cuda.synchronize();step_seconds.append(time.monotonic()-begin)
+                     value=float(loss);losses.append(value)
+                     log.write(json.dumps(dict(update=update,learning_rate=optimizer.param_groups[0]['lr'],loss=value,
+-                        global_unclipped_gradient_norm=float(norm),unclipped_module_gradient_norms=grads))+'\n')
++                        global_unclipped_gradient_norm=float(norm),unclipped_module_gradient_norms=grads,**loss_parts))+'\n')
+                     if update==first or update%256==0:
+                         log.flush();print('COVERAGE_UPDATE',arm,update,'/',last,'loss',value,flush=True)
+             return losses

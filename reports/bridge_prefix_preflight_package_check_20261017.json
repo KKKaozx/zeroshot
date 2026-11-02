@@ -1,0 +1,27 @@
+{
+  "kind": "Final preflight staging check before upload",
+  "Python_files_AST_checked": true,
+  "CLI_imports_passed": true,
+  "packaged_CPU_input_smoke_passed": true,
+  "bash_n_passed": true,
+  "CUDA_root_schedule_buffers_explicitly_moved": true,
+  "archive_bytes": 25977868,
+  "archive_sha256": "57929bd4d141871cb33214b7ec114eedd6d6c01f6a19dcc1fa7e2787aa2975be",
+  "GPU_preflight_executed": false,
+  "new_development_scored": false,
+  "final25_payloads_read": false,
+  "script_sources": {
+    "bridge_partial_future_contract_v1.py": "4c22738deeaa2a845d1e914d6444150d8bf386249d4e3b31a2167e3f0ecf1eb1",
+    "bridge_prefix_input_contract_v1.py": "ea55cacb04b60642e041ad28433ff90035b0f674f2895c3eec86ebbf7b7b91fb",
+    "bridge_prefix_model_interface_v1.py": "a8939757f2b1dc34efe7e9d779f2ed4900d2a4c1b6ea43803b9653fd3305cd10",
+    "bridge_prefix_preflight_inputs_v1.py": "6a1261409fd022953e192900a553c901ef121690667ea91bd3fee161546fa9dd",
+    "bridge_requested_prefix_diffusion_v1.py": "b84770cc9fdece2b86c66fb34b3c7e907bbf8d8681c4a8ca8021919393c172d6",
+    "frozen/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "frozen/dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "frozen/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "frozen/models.py": "cc029cebf8ff2d8d4fb464adb22680548b648442b2f99d4867a1ba32df9af8e4",
+    "frozen/state_input_contract.py": "4050bdb3ce8c32ba2b4af3781d17e4fc99f497d1cb235356728787412c256493",
+    "run_preflight.py": "3f3cf24f84a013993d448f0517e8617ce1d48e134228cc73ed482d30cc52ca4a",
+    "verify_prefix_preflight.py": "92e25762350b8bdc5da3eeebd9a7163f8cc564d811189def38cdfb91741b7a98"
+  }
+}

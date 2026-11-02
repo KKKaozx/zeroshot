@@ -1,0 +1,16 @@
+root ::= "{\"paraphrases\":[" "\"" slot-0 "\"" "," "\"" slot-1 "\"" "," "\"" slot-2 "\"" "," "\"" slot-3 "\"" "," "\"" slot-4 "\"" "]}" | "{\"abstain_reason\":\"cannot_preserve_reviewed_frame\"}"
+r-0 ::= "near" | "close to" | "nearby" | "in proximity to"
+r-1 ::= "bull can" | " bull can"
+slot-0 ::= "move the apple " r-0 " the red" r-1
+r-2 ::= "near" | "close to" | "nearby" | "in proximity to"
+r-3 ::= "bull can" | " bull can"
+slot-1 ::= "shift the apple " r-2 " the red" r-3
+r-4 ::= "near" | "close to" | "nearby" | "in proximity to"
+r-5 ::= "bull can" | " bull can"
+slot-2 ::= "reposition the apple " r-4 " the red" r-5
+r-6 ::= "near" | "close to" | "nearby" | "in proximity to"
+r-7 ::= "bull can" | " bull can"
+slot-3 ::= "position the apple " r-6 " the red" r-7
+r-8 ::= "near" | "close to" | "nearby" | "in proximity to"
+r-9 ::= "bull can" | " bull can"
+slot-4 ::= r-8 " the red" r-9 ", place the apple"

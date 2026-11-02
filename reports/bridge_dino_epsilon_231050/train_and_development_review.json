@@ -1,0 +1,89 @@
+{
+  "job_id": 231050,
+  "reported_date": "2026-10-28",
+  "evidence_source": "User pasted existing final_train metrics for both policies",
+  "train_metrics": {
+    "x0": {
+      "path_position_cm": 3.6548352241516113,
+      "path_rotation_deg": 10.080744743347168,
+      "endpoint_position_cm": 5.106147289276123,
+      "endpoint_rotation_deg": 14.145498275756836
+    },
+    "epsilon": {
+      "path_position_cm": 7.994229316711426,
+      "path_rotation_deg": 15.16187572479248,
+      "endpoint_position_cm": 10.76012897491455,
+      "endpoint_rotation_deg": 20.74004364013672
+    }
+  },
+  "paired_development_metrics": {
+    "x0": {
+      "path_position_cm": 5.64326286315918,
+      "path_rotation_deg": 12.849230766296387,
+      "endpoint_position_cm": 7.430886268615723,
+      "endpoint_rotation_deg": 16.268421173095703,
+      "episode_mean_path_position_cm": 5.4992966771125795,
+      "episode_mean_path_rotation_deg": 12.991049671173096
+    },
+    "epsilon": {
+      "path_position_cm": 9.001360893249512,
+      "path_rotation_deg": 17.02611541748047,
+      "endpoint_position_cm": 11.017834663391113,
+      "endpoint_rotation_deg": 22.588407516479492,
+      "episode_mean_path_position_cm": 8.457422876358033,
+      "episode_mean_path_rotation_deg": 16.78368854522705
+    },
+    "static": {
+      "path_position_cm": 8.212326049804688,
+      "path_rotation_deg": 15.098398208618164,
+      "endpoint_position_cm": 10.56533432006836,
+      "endpoint_rotation_deg": 19.98635482788086
+    }
+  },
+  "train_relative_comparison": {
+    "path_position_cm": {
+      "epsilon_over_x0_ratio": 2.1873022520644847,
+      "epsilon_increase_percent": 118.73022520644848,
+      "x0_train": 3.6548352241516113,
+      "epsilon_train": 7.994229316711426,
+      "x0_development": 5.64326286315918,
+      "epsilon_development": 9.001360893249512
+    },
+    "path_rotation_deg": {
+      "epsilon_over_x0_ratio": 1.5040432141483027,
+      "epsilon_increase_percent": 50.404321414830264,
+      "x0_train": 10.080744743347168,
+      "epsilon_train": 15.16187572479248,
+      "x0_development": 12.849230766296387,
+      "epsilon_development": 17.02611541748047
+    },
+    "endpoint_position_cm": {
+      "epsilon_over_x0_ratio": 2.1072891879779614,
+      "epsilon_increase_percent": 110.72891879779615,
+      "x0_train": 5.106147289276123,
+      "epsilon_train": 10.76012897491455,
+      "x0_development": 7.430886268615723,
+      "epsilon_development": 11.017834663391113
+    },
+    "endpoint_rotation_deg": {
+      "epsilon_over_x0_ratio": 1.4661939251501588,
+      "epsilon_increase_percent": 46.61939251501588,
+      "x0_train": 14.145498275756836,
+      "epsilon_train": 20.74004364013672,
+      "x0_development": 16.268421173095703,
+      "epsilon_development": 22.588407516479492
+    }
+  },
+  "x0_train_means_match_locally_verified_baseline_report": true,
+  "existing_training_static_metrics": {
+    "static_path_position_cm": 8.226703643798828,
+    "static_path_rotation_deg": 14.0304594039917,
+    "static_endpoint_position_cm": 11.8787202835083,
+    "static_endpoint_rotation_deg": 20.230451583862305
+  },
+  "epsilon_raw_train_report_downloaded": false,
+  "actual_new_inference_or_training": false,
+  "interpretation": "At this fixed budget epsilon degrades full generated pose errors on training windows as well as development; failure is not confined to heldout-only generalization. It does not prove failure to optimize epsilon denoising loss or universal algorithm invalidity.",
+  "no_extra_budget_or_seeds": true,
+  "main_oxe_model_repaired": false
+}

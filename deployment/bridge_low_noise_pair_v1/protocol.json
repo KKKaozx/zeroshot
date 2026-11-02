@@ -1,0 +1,41 @@
+{
+  "format": "bridge234100-t0teacher-input-response-pair-v1",
+  "source_job": 234100,
+  "source_trace_job": 235002,
+  "trace_package_sha256": {
+    "job.sh": "2599f58ca248c9c145e31ac641fb1e94be0f034cc14e4f7d4f2c028a80733a27",
+    "protocol.json": "8253d4eb9f8085b8b5289a81aff4e50efea6401db282ab2a3b4cd1ae4c475a11",
+    "README.md": "9d383eca42c19df0d0fd8203a05a2231cb1e8958278ea72edf6b4757bf76c110",
+    "rtrace_engine.py": "e3ff0080c1a287ffa8ab307a20782d967bf55c16f685a2f53288d1f86c0c4ead",
+    "run_trace.py": "a933b241b59c09a78e0be39f35430efdd864153520427781aa8042e45caca78e",
+    "submit_once.sh": "67dd7c59d01bff19e40d4d9a78b2b15befc6ef4dcd817d7d4af24a91186c0b90",
+    "verify_trace.py": "2e06a36cf0775aa3022b5d5a0f86f6a5d83593dfa10e32823509a51363583415",
+    "SHA256SUMS": "b3045bf60b73c9e2eaaba74eb7b810ddcf745c84db8b65c78a9711b9df6ad7fc"
+  },
+  "trace_results_sha256": {
+    "effective_sample.py": "61c824a0413386bb514e792638fa972af384169142f14d13b8b9cd2248cc8a0a",
+    "report.json": "0f2a98d2a027fb085725d8557ac0a555d165b44050e3502b21f0ab921b43f4ce",
+    "trace.npz": "2627ee0dbecdb6f5a7654a6ebedc42ed8c2c62f5b9f6c7a538fb24af2f82c7ac"
+  },
+  "source_final_identity": {
+    "base": "b9422d1a18928fbcb00221fb0199161925f9319ede2525323c39353c939efee2",
+    "pose_port": "14f419c0bc30333ec4ca5188add17649e5b62b9decaf7e8a28aff61d68db2b9c"
+  },
+  "alpha_bar_t0": 0.9993687272071838,
+  "t": 0,
+  "direct_denoiser_forwards": 6,
+  "new_full_sampling_runs": 0,
+  "optimizer_updates": 0,
+  "original_sampling_seeds_for_initial_gaussian": [
+    1101,
+    1102,
+    1103
+  ],
+  "new_timestep_sweep": false,
+  "context_permutation": false,
+  "job_cap_seconds": 300,
+  "direct_forward_cap_seconds": 120,
+  "reserve_mib": 256,
+  "original_gates_changed": false,
+  "automatic_following_action": false
+}

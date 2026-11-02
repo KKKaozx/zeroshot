@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-17",
+  "purpose": "Diagnose new evaluation entry mismatch on old4windows only; no new test inference.",
+  "original_protocol_sha256": "ca9cebf05244ea8193e5ff5450a080e21175135f1f57b75ae2ed8b7290641858",
+  "failed_entry_sha256": "d74489a827a6ae497d53001a22b17d1f36ee5654249759c4f35c1de09df1714a",
+  "failure_job": "208005",
+  "observed_terminal_max_abs_difference": 0.00011682510375976562,
+  "terminal_threshold": 0.0001,
+  "tolerance_changed": false,
+  "original_test_protocol_changed": false,
+  "original_models_or_weights_changed": false,
+  "cases": [
+    {
+      "name": "saved_context_sampler",
+      "tokens": "saved_context",
+      "context_style": "original",
+      "state_style": "original"
+    },
+    {
+      "name": "cached_original_state",
+      "tokens": "cached",
+      "context_style": "original",
+      "state_style": "original"
+    },
+    {
+      "name": "cached_failed_state",
+      "tokens": "cached",
+      "context_style": "original",
+      "state_style": "failed"
+    },
+    {
+      "name": "cached_failed_mode",
+      "tokens": "cached",
+      "context_style": "failed",
+      "state_style": "failed"
+    },
+    {
+      "name": "fresh_original_encoder_original_context",
+      "tokens": "original",
+      "context_style": "original",
+      "state_style": "failed"
+    },
+    {
+      "name": "fresh_original_encoder_failed_context",
+      "tokens": "original",
+      "context_style": "failed",
+      "state_style": "failed"
+    },
+    {
+      "name": "fresh_failed_encoder_original_context",
+      "tokens": "failed",
+      "context_style": "original",
+      "state_style": "failed"
+    },
+    {
+      "name": "fresh_failed_encoder_failed_context",
+      "tokens": "failed",
+      "context_style": "failed",
+      "state_style": "failed"
+    }
+  ],
+  "case_definitions": {
+    "original": "Context under torch.no_grad; original requires_grad flags on Adapter/decoder/history/state only.",
+    "failed": "Context under torch.inference_mode; all parameter requires_grad=False, matching failed new entry.",
+    "encoder_original": "CLIP encoding under torch.no_grad, same image2/text16 shapes.",
+    "encoder_failed": "CLIP encoding under torch.inference_mode, same image2/text16 shapes."
+  },
+  "sampling": {
+    "steps": 100,
+    "seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "batch_size": 2
+  },
+  "optimizer": false,
+  "training": false,
+  "exact_duplicate_sampling": "Reuse only when exact context tensor hash AND original/failed parameter-flag mode match; all other inputs/weights/seeds held fixed.",
+  "output": "Save each case before comparing to unchanged old thresholds, even on mismatch; no automatic continuation or threshold relaxation.",
+  "limits": "Sources establish two entry differences, not a proven root cause. Cached tokens, context computation mode, and state array shape are isolated here. This cannot explain the historical centimetre-scale generalization error by itself."
+}

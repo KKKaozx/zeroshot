@@ -1,0 +1,44 @@
+{
+  "experiment": "bridge_backbone_pair_a40_v1",
+  "complete": true,
+  "arms_completed": [
+    "clip",
+    "dino"
+  ],
+  "total_updates_per_arm": 8192,
+  "scope": "User-authorized matched A40 pair; no new optimization search",
+  "contract_sha256": "4c53e826ce353ecf66e33c7ce39059842553b6e660b813e77a5900362c977c50",
+  "cluster_job": "229116",
+  "asset_check": {
+    "passed": true,
+    "missing": [],
+    "changed_bundle_inputs": [],
+    "raw_shards": 211,
+    "storage": {
+      "project_allocated_bytes": 180984458240,
+      "filesystem_free_bytes": 202967923818496,
+      "required_reserve_bytes": 10737418240,
+      "conservative_project_budget_bytes": 200000000000,
+      "passed": true,
+      "scope": "Project du and filesystem free space; not an authoritative account quota query"
+    },
+    "model_loaded": false,
+    "training_updates": 0,
+    "submissions": 0
+  },
+  "cache_checks": {
+    "clip": {
+      "key_sha256": "66264a3d74d14709839f82978268302c90fb467fbd67a45719b11d9e1ffdfa6e",
+      "visual_sha256": "240f0695dfcf61031e301c5f38c9bbdb010ac92bb25d752d63ffa2fa7b01126a",
+      "language_sha256": "b3ce1a9c6a1e943bf5c3205fb23d7b4b928d71dbc45317819d622fb489c1b9db",
+      "payload_hashes_checked": true
+    },
+    "dino": {
+      "key_sha256": "48b6be8b6f4d27d7b019e138e0ac2b28335e9b0a84077b1741beebc70c9315f7",
+      "visual_sha256": "e0ed0490f729191e9a58fe29957ed2e45679adc7b948e9e783a7e72fae3be0cf",
+      "language_sha256": "b3ce1a9c6a1e943bf5c3205fb23d7b4b928d71dbc45317819d622fb489c1b9db",
+      "payload_hashes_checked": true
+    }
+  },
+  "elapsed_seconds": 6167.551321468782
+}

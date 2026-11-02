@@ -1,0 +1,48 @@
+{
+  "format": "libero-pose8-native7-interface-fix-v1",
+  "date": "2026-10-31",
+  "implementation_complete": true,
+  "existing_geometry_conversion_reimplemented": false,
+  "training_output_dimensions_unchanged": 8,
+  "native_controller_command_dimensions": 7,
+  "new_code": [
+    "code/libero_execution_binding.py"
+  ],
+  "modified_code": [
+    "code/libero_waypoint_execution.py"
+  ],
+  "change": "Require simulator state binding across policy prediction and before native command dispatch; reject stale state and wrong command dimension before executor env.step. No new control algorithm.",
+  "reproduction": "training_cache/libero_native_env_v1/Scripts/python.exe -B tests/test_libero_execution_binding.py",
+  "checks": {
+    "new_cpu_synthetic_interface_cases": 4,
+    "existing_cpu_pose_policy_regression_cases": 4,
+    "all_passed": true
+  },
+  "checks_are_real_robot_or_physics_evidence": false,
+  "new_training_updates": 0,
+  "new_model_inference": 0,
+  "new_simulation_episodes": 0,
+  "cluster_access_or_submission": false,
+  "frozen_deployment_snapshots_changed": false,
+  "source_or_successful_native_policy_weights_changed": false,
+  "known_past_failure_caused_by_stale_state": null,
+  "incoming_observation_freshness_certified": false,
+  "asynchronous_thread_safety_established": false,
+  "mainline_source_competence_block_resolved": false,
+  "mainline_physical_execution_block_resolved": false,
+  "semantic_limit": "Future observed reached poses are not controller desired setpoints. Geometry conversion exists; its task-success limitation remains. No supported new geometric error was found in this review.",
+  "file_sha256": {
+    "code/libero_execution_binding.py": "46fbb56fb50cc69d9a170efbd245d088ef650c72b26e60565c30c0bca314c152",
+    "code/libero_waypoint_execution.py": "837879bf8dad10f2d830535ae6fd1b30c9e02f83e3c4d660e0594fbdc8b9d667",
+    "code/libero_action_interface.py": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+    "code/cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "tests/test_libero_execution_binding.py": "a6340d84642ce487ad43fbf6a6a7a8d6989536111059bd486976aaae3ebccacd"
+  },
+  "stop": "Local interface patch complete. No extra diagnostics, training, gain/interpolation sweeps or rollout automatically follows.",
+  "package": {
+    "path": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\libero_pose8_native7_local_interface_20261031.zip",
+    "sha256": "159bba92cb9377d5d1f051aa53dc29986bf576a013ffadde6b2ea9c7cc761594",
+    "bytes": 11982,
+    "all_members_readback_verified": true
+  }
+}

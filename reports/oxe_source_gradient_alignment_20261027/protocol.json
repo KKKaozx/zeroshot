@@ -1,0 +1,32 @@
+{
+  "scope": "Shared pose decoder gradient alignment at one final checkpoint; fixed cached dev32, not a causal mixed-training ablation",
+  "sample_selection_unchanged": true,
+  "cached_contexts_sha256": "4699fcec20e33d7c8712c666da081baeba5f4f45d0d210c4db6c7df81cc5dd4c",
+  "targets_and_masks_sha256": "50b9ed4c398c5cb0bd19cb431f9e8f147299e5456f7afd4c44dba5c0b5ec20e8",
+  "cached_source_protocol_sha256": "fc910aa5e7c5291e2a488ccc3bbda1f7a482b364d78dcffaffb6dbb54c4e1d69",
+  "timesteps": [
+    6,
+    18,
+    31,
+    43,
+    56,
+    68,
+    81,
+    93
+  ],
+  "noise_seeds": [
+    8401,
+    8402,
+    8403
+  ],
+  "noise_rule": "Independent standard Gaussian noise by source using seed+1000*source_index; matched stratified timesteps across sources",
+  "gradient_scope": "Shared diffusion_decoder pose epsilon loss only; detached actual cached context, no Adapter/gripper gradient claim",
+  "mixture_rule": "Four groups of8, pose valid-element-normalized loss; report exact gradient sum weights for these32 windows",
+  "gradients_are_not_optimizer_steps": true,
+  "optimizer_updates": 0,
+  "sampler_calls": 0,
+  "encoders_reconstructed": false,
+  "simulation_steps": 0,
+  "wall_cap_seconds": 600,
+  "script_sha256": "c690de5709e3f70762ef990f280b24448907ce784a9e096f55057d333e54bfbb"
+}

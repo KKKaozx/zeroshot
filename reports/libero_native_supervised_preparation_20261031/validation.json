@@ -1,0 +1,34 @@
+{
+  "runtime_imports": {
+    "numpy": "1.26.4",
+    "torch": "2.11.0+cu128",
+    "all_training_imports_checked_on_cpu": true
+  },
+  "real_frozen_text_weights_restored_exact": true,
+  "real_frozen_dino_forward_cpu": true,
+  "real_frozen_text_forward_cpu": true,
+  "real_full_size_native_denoiser_forward_cpu": true,
+  "visual_shape": [
+    1,
+    257,
+    1024
+  ],
+  "language_shape": [
+    1,
+    9,
+    768
+  ],
+  "context_shape": [
+    1,
+    1024
+  ],
+  "full_size_policy_parameters": 131261063,
+  "cpu_scientific_cases_passed": 6,
+  "synthetic_cpu_optimizer_updates": 2,
+  "actual_training_updates": 0,
+  "simulation_started": false,
+  "gpu_used": false,
+  "new_training_images_encoded_in_cpu_validation": 1,
+  "elapsed_seconds": 7.14100000000326,
+  "not_a_policy_performance_result": true
+}

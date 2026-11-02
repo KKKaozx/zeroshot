@@ -1,0 +1,27 @@
+{
+  "tests_passed": 3,
+  "test_source": "tests/test_oxe_target_eval_repair.py",
+  "test_source_sha256": "52ccfd9750fc2521e1adc4a5bbd7f4f998784129084ffd308cf7206d046b9898",
+  "actual_main_entry_old_KeyError_reproduced": true,
+  "actual_main_entry_repaired_completed_with_cpu_standins": true,
+  "selection": {
+    "real_frozen_numeric_targets": true,
+    "windows": 120,
+    "native_target_roles": 2,
+    "sampling_draws_per_role": 3,
+    "batch_sampler_calls_in_fixture": 90,
+    "shared_vision_batches_in_fixture": 30,
+    "shared_text_batches_in_fixture": 30
+  },
+  "saved_predictions_metrics_independently_recomputed": true,
+  "old_empty_output_and_checkpoint_fixture_bytes_retained": true,
+  "strict_schema_mismatch_rejected": true,
+  "original_48_bundle_files_and_archive_intact": true,
+  "real_encoder_calls": 0,
+  "gpu_initializations": 0,
+  "optimization_updates": 0,
+  "cluster_jobs_submitted": 0,
+  "package_sha256": "4ac92b12f9896bfd559b17b5bab24015d049444fd022f102247985975a907075",
+  "scope": "CPU stand-ins at real evaluator entry, not real trained-model inference/performance",
+  "fixture_setup_error_corrected": "Module stubs needed __spec__ for local Torch2.11 deterministic-mode import; deployment code unchanged by fixture fix"
+}

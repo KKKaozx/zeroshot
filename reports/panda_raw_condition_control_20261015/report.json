@@ -1,0 +1,61 @@
+{
+  "complete": true,
+  "updates": 1024,
+  "raw_metrics": {
+    "position_cm": 1.046492576599121,
+    "rotation_deg": 1.2952903509140015,
+    "endpoint_position_cm": 1.5419028997421265,
+    "endpoint_rotation_deg": 1.3813881874084473,
+    "seed_position_cm": [
+      1.087845802307129,
+      1.0626672506332397,
+      0.988964319229126
+    ],
+    "seed_rotation_deg": [
+      1.321535587310791,
+      1.2872438430786133,
+      1.2770917415618896
+    ],
+    "windows_all_three_seeds_pass": 2,
+    "windows": 16,
+    "static_position_cm": 5.519538879394531,
+    "static_rotation_deg": 0.0,
+    "pose_fit_passed": false
+  },
+  "processed_reference_metrics": {
+    "position_cm": 0.3831577003002167,
+    "rotation_deg": 0.9507784247398376,
+    "endpoint_position_cm": 0.5393849015235901,
+    "endpoint_rotation_deg": 1.0084562301635742,
+    "seed_position_cm": [
+      0.34941646456718445,
+      0.39361196756362915,
+      0.4064446985721588
+    ],
+    "seed_rotation_deg": [
+      0.9588266611099243,
+      0.9457122087478638,
+      0.9477964043617249
+    ],
+    "windows_all_three_seeds_pass": 14,
+    "windows": 16,
+    "static_position_cm": 5.519538879394531,
+    "static_rotation_deg": 0.0,
+    "pose_fit_passed": false
+  },
+  "identical_initial_decoder": true,
+  "initial_decoder_sha256": "08f88b538377bf854ca001495748fb39466c576265992629d7ec26c960f1a175",
+  "final_decoder_sha256": "0f5ad879cb707dc345465d4d2f530fd47f480935443aad994c79dbb7be7160d1",
+  "all1024_noise_inputs_and_timesteps_exact": true,
+  "processed_arm_reexecuted": false,
+  "frozen_gripper_unchanged": true,
+  "checkpoint_bytes": 311907039,
+  "checkpoint_sha256": "06669927266c068820cd5bf5799f63bc634be6e8d5763ac193b78e3665176cb4",
+  "saved_tensors_exact": true,
+  "reload_first_batch_prediction_difference": 0.0,
+  "peak_reserved_gib": 1.59765625,
+  "elapsed_seconds": 78.79700000002049,
+  "development_used": false,
+  "test_used": false,
+  "physical_rollout": false
+}

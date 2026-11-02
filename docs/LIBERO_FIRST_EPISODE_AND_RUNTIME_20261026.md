@@ -1,0 +1,15 @@
+# First counted LIBERO episode and continuation constraints
+
+User output from228153 reports one completed valid600tick timeout failure on canonicalSpatial task0/slot0,148.38s in rollout,185.337s segment elapsed. Completed1/planned4000; overall remains null. This is not a crashed episode or a benchmark-wide success rate. Gym maintenance and extra CLIP visual-key load messages did not prevent actual policy execution. Do not change the pinned NumPy/Gym/model/control settings in response to those messages.
+
+Before continuation use the existing read-only `verify_output.py` against runs/libero-original-dino-noaug-s42. The original slot must remain stored and skipped on resume. Native EGL/context, frozen trained-policy loading and actual feedback steps have now executed; do not repeat old engineering tests or reinstall dependencies.
+
+Conditional cost from one full timeout:100 rollout-only cases4.122h;4000 cases164.867h/model,6.869days;13 model endpoints2143.267 GPUh if all repeat this timeout timing. Reset/load/queue overhead and task heterogeneity are excluded. Earlier successful stopping may shorten execution. These are conditional arithmetic, not a measured full-suite forecast. Budget decisions must be visible to the user before long segments. No automatic job chain or change from user-selected100/task.
+
+## Operational continuation issue to handle before offering bulk resubmission
+
+The frozen evaluator's runtime binding stores `nvidia-smi --query-gpu=driver_version --format=csv,noheader` as one unnormalized string. Depending on node visibility this can include all physical GPUs. Existing supplied inventory hasA40-1 with10 GPUs andA40-2 with8, so even matching drivers may yield different repeated-line strings and cause an exact resume-identity rejection. This is a source-inspected operational concern, not an observed new failure. Do not weaken or silently rewrite the original run binding, remove episode0, or change frozen evaluator code/package identity after a scored episode.
+
+A simple continuation is to obtain228153's actual NodeList from Slurm accounting and request the same node with the official sbatch `--nodelist` option while keeping the original evaluate.sh bytes and4000/600/100step diffusion settings. Use a separate submission helper that respects the existing job marker, checks no active evaluation, verifies the original ledger, and updates job_id.txt after successful submission. Do not invent unsupported SBATCH_NODELIST environment variables (not listed in the inspected official sbatch manual). Pinning can increase queue time and should be disclosed. If later allowing other nodes is necessary, treat any runtime-binding normalization/migration as an explicit reviewed provenance change, with the original episode and identities retained; it is not an algorithm or performance improvement.
+
+Reference for node request semantics: https://slurm.schedmd.com/sbatch.html . No new job, actual driver change, runtime migration or scoring method change was made in this turn.

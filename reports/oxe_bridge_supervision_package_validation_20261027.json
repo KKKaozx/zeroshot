@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    "all-kept objective and gradients exactly match archived policy_loss; loss RNG unchanged",
+    "mixed keep matches independent numerator oracle; other-row direct gradients zero",
+    "zero-Bridge graph and original missing-gripper None behavior preserved",
+    "zero gradients still apply original AdamW momentum/decay and global step",
+    "all archived contract source bytes exact; only training loss call replaced, validation unmodified",
+    "original parser and all nonoperational recipe arguments preserved (asset root remapped only)",
+    "full65536 schedule/exposure counters and restore exact; changed schedule/counters refused",
+    "CPU dropout/AdamW/sampler/RNG/intervention save-restore continuation exact",
+    "toy binding exact-reference/initial-digest/preflight-protocol gates and refusals (not actual encoder replay)",
+    "paired evaluation draw/window axes, variable valid tails and quaternion sign fixture",
+    "26 Python sources compile; shell LF/resource/embedded Python static checks (bash NOT executed)"
+  ],
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "numpy": "1.26.4"
+  },
+  "scope": "CPU synthetic fixtures/source provenance only; no real policy, CUDA, encoders, cluster or scientific result",
+  "real_cluster_preflight_passed": false,
+  "cluster_submitted": false,
+  "development_repairs": [
+    "Initial full-schedule CPU fixture exposed per-step NPZ decompression; stopped the slow fixture, materialized arrays once and full65536 checks then passed.",
+    "AST-only parser fixture initially omitted Path and __file__ globals; corrected test harness, no change to archived parser or training source."
+  ]
+}

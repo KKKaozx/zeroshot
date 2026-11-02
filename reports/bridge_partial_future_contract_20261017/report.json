@@ -1,0 +1,106 @@
+{
+  "data_contract_verified": true,
+  "training_integration_ready": false,
+  "reason": "Temporal loss mask does not isolate invalid noisy input slots. No accepted reverse-process/mask-conditioning/execution-length contract yet.",
+  "GPU_or_training_authorized": false,
+  "cuda_visible_devices": "-1",
+  "project_model_loaded": false,
+  "checkpoints_loaded": false,
+  "neural_training_updates": 0,
+  "policy_predictions_generated": false,
+  "images_decoded": false,
+  "raw_training_records_parsed": 2,
+  "evaluation_or_test_numeric_records_read": 0,
+  "baseline_207558_unchanged": true,
+  "counts": {
+    "retained_full_windows": 1836,
+    "added_partial_windows": 1558,
+    "candidate_total": 3394
+  },
+  "partial_length_histogram": {
+    "1": 151,
+    "2": 122,
+    "3": 70,
+    "4": 62,
+    "5": 151,
+    "6": 122,
+    "7": 70,
+    "8": 62,
+    "9": 151,
+    "10": 122,
+    "11": 70,
+    "12": 62,
+    "13": 151,
+    "14": 122,
+    "15": 70
+  },
+  "checks": {
+    "all_candidate_index_boundaries": true,
+    "retained1836_index_rows_unchanged": true,
+    "no_evaluation_episode_overlap": true,
+    "synthetic_hand_calculation": true,
+    "future_numeric_values_do_not_enter_current_state_fields": true,
+    "final_state_without_next_observation_rejected": true,
+    "dummy_last_command_excluded": true,
+    "unresolved_gripper_not_silently_thresholded": true,
+    "masked_loss_equal_window_weighting": true,
+    "invalid_output_gradient_zero": true,
+    "full_mask_mse_max_difference": 0.0,
+    "full_mask_forward_noise_exact": true,
+    "canonical_auxiliary_fill_ignores_invalid_sentinels": true,
+    "cross_slot_counterexample_invalid_input_gradient": 1.0
+  },
+  "real_training_records": [
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00124-of-01024",
+      "record_index": 5,
+      "steps": 17,
+      "payload_sha256": "8bb942d70ec08470529bae80290738142aa4916c9dfdf2349dbffa7fdb2c3c04",
+      "windows_checked": 4,
+      "valid_lengths": [
+        4,
+        8,
+        12,
+        16
+      ],
+      "old_full_target_max_difference": 1.2014061212539673e-07,
+      "final_dummy_action_never_used": true
+    },
+    {
+      "shard": "bridge_data_v2-train.tfrecord-00242-of-01024",
+      "record_index": 49,
+      "steps": 48,
+      "payload_sha256": "3f9e9748309c66db6c6b8a1c5df22a627c98497c90df16986fd1cf64addc08ed",
+      "windows_checked": 12,
+      "valid_lengths": [
+        3,
+        7,
+        11,
+        15,
+        16
+      ],
+      "old_full_target_max_difference": 1.1920928955078125e-07,
+      "final_dummy_action_never_used": true
+    }
+  ],
+  "loss_definition": "mean over windows of sum(valid pose squared errors)/(7*valid length). Separate gripper loss not implemented/integrated.",
+  "storage_definition": "NaN in non-observed target slots; valid prefix only. Finite canonical zeroXYZ/identityQuaternion auxiliary values used ONLY in candidate forward-noise numerical probe.",
+  "nonclaims": [
+    "No tail values are claimed to be physical holding observations.",
+    "Two-record checks do not validate all1558 new real samples or their image/language loading.",
+    "Full-mask arithmetic identity does not establish checkpoint replay of a new training implementation.",
+    "Counterexample is a mathematical coupling check, not a measured defect/performance result of207558.",
+    "No demonstrated generalization or grasp improvement; no GPU launcher provided."
+  ],
+  "source_sha256": {
+    "scripts\\check_bridge_partial_future_contract_20261017.py": "a8734b74248390c27624310f5f5dd9a05b65862311d9744fbf6e1fbccd29c824",
+    "scripts\\bridge_partial_future_contract_v1.py": "4c22738deeaa2a845d1e914d6444150d8bf386249d4e3b31a2167e3f0ecf1eb1",
+    "cluster_packages\\bridge_growth128_v1\\dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "cluster_packages\\bridge_growth128_v1\\diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "training_cache\\exports\\bridge_expansion_training_v1\\manifest.json": "bcd80954a895580068485f7f665d58b07e179341c8c07c161ec2bc6c0caec0b2",
+    "cluster_packages\\bridge_coverage_replication_v1\\rows.json": "910174741b0464a472e27c542ece929c874b9edabf13a99d76d52a50d1055ada",
+    "scripts\\inventory_bridge_additional_demonstrations_20261017.py": "8a34c798dd19eecfa13e813791daa51d0619854d2bd97a7d97f3eb2f9201820c"
+  },
+  "elapsed_seconds": 0.26600000000325963,
+  "candidate_rows_sha256": "f592bff26aff611c8ad428e69e22e6ac354152a3e9c1cf4890cd36cd3240960c"
+}

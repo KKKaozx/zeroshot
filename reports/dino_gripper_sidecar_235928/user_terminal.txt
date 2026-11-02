@@ -1,0 +1,39 @@
+code/cartesian_action_contract.py: OK
+code/dino_gripper_sidecar.py: OK
+code/frozen_visual_backbone.py: OK
+code/legacy_dino_gripper_execution.py: OK
+code/libero_action_interface.py: OK
+code/libero_pose_transfer.py: OK
+code/libero_waypoint_execution.py: OK
+engineering_execution.json: OK
+engineering_mapping.json: OK
+inputs.npz: OK
+inputs_receipt.json: OK
+job.sh: OK
+load_policy.py: OK
+plan.npz: OK
+protocol.json: OK
+README.md: OK
+run_engineering.py: OK
+source_config.json: OK
+source_state_protocol.json: OK
+submit_once.sh: OK
+tests/test_dino_gripper_sidecar.py: OK
+train_head.py: OK
+vendor/bridge_growth128_v1/adapter.py: OK
+vendor/bridge_growth128_v1/dataset.py: OK
+vendor/bridge_growth128_v1/diffusion_decoder.py: OK
+vendor/bridge_growth128_v1/models.py: OK
+verify_head.py: OK
+DINO_GRIPPER_UPDATE 1 /2048 loss 0.7030490040779114
+DINO_GRIPPER_UPDATE 2 /2048 loss 0.6667821407318115
+DINO_GRIPPER_UPDATE 256 /2048 loss 0.32465898990631104
+DINO_GRIPPER_UPDATE 512 /2048 loss 0.3337310254573822
+DINO_GRIPPER_UPDATE 768 /2048 loss 0.23183929920196533
+DINO_GRIPPER_UPDATE 1024 /2048 loss 0.23335061967372894
+DINO_GRIPPER_UPDATE 1280 /2048 loss 0.2135249227285385
+DINO_GRIPPER_UPDATE 1536 /2048 loss 0.19098441302776337
+DINO_GRIPPER_UPDATE 1792 /2048 loss 0.19079053401947021
+DINO_GRIPPER_UPDATE 2048 /2048 loss 0.17033785581588745
+DINO_GRIPPER_COMPLETE {"roles": {"train": {"candidate": {"accuracy": 0.9237132352941176, "class_recall": {"open": 0.946511479997456, "closed": 0.8668964970676811}, "balanced_accuracy": 0.9067039885325685, "whole_window_exact_rate": 0.570079883805374, "transitions": {"opening": {"true_positive": 126, "false_positive": 772, "false_negative": 846, "true_events": 972, "f1": 0.13475935828877006}, "closing": {"true_positive": 429, "false_positive": 1585, "false_negative": 1638, "true_events": 2067, "f1": 0.21024258760107817}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}, "baselines": {"always_open": {"accuracy": 0.7136437908496732, "class_recall": {"open": 1.0, "closed": 0.0}, "balanced_accuracy": 0.5, "whole_window_exact_rate": 0.4918300653594771, "transitions": {"opening": {"true_positive": 0, "false_positive": 0, "false_negative": 972, "true_events": 972, "f1": 0.0}, "closing": {"true_positive": 0, "false_positive": 0, "false_negative": 2067, "true_events": 2067, "f1": 0.0}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}, "always_closed": {"accuracy": 0.2863562091503268, "class_recall": {"open": 0.0, "closed": 1.0}, "balanced_accuracy": 0.5, "whole_window_exact_rate": 0.023965141612200435, "transitions": {"opening": {"true_positive": 0, "false_positive": 0, "false_negative": 972, "true_events": 972, "f1": 0.0}, "closing": {"true_positive": 0, "false_positive": 0, "false_negative": 2067, "true_events": 2067, "f1": 0.0}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}, "threshold_current_measurement_held": {"accuracy": 0.738630174291939, "class_recall": {"open": 0.9709502003434459, "closed": 0.1596528768426058}, "balanced_accuracy": 0.5653015385930259, "whole_window_exact_rate": 0.5049019607843137, "transitions": {"opening": {"true_positive": 0, "false_positive": 0, "false_negative": 972, "true_events": 972, "f1": 0.0}, "closing": {"true_positive": 0, "false_positive": 0, "false_negative": 2067, "true_events": 2067, "f1": 0.0}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}}}, "development": {"candidate": {"accuracy": 0.8901041666666667, "class_recall": {"open": 0.9212410501193318, "closed": 0.8310708898944194}, "balanced_accuracy": 0.8761559700068755, "whole_window_exact_rate": 0.475, "transitions": {"opening": {"true_positive": 5, "false_positive": 10, "false_negative": 19, "true_events": 24, "f1": 0.2564102564102564}, "closing": {"true_positive": 11, "false_positive": 54, "false_negative": 49, "true_events": 60, "f1": 0.176}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}, "baselines": {"always_open": {"accuracy": 0.6546875, "class_recall": {"open": 1.0, "closed": 0.0}, "balanced_accuracy": 0.5, "whole_window_exact_rate": 0.375, "transitions": {"opening": {"true_positive": 0, "false_positive": 0, "false_negative": 24, "true_events": 24, "f1": 0.0}, "closing": {"true_positive": 0, "false_positive": 0, "false_negative": 60, "true_events": 60, "f1": 0.0}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}, "always_closed": {"accuracy": 0.3453125, "class_recall": {"open": 0.0, "closed": 1.0}, "balanced_accuracy": 0.5, "whole_window_exact_rate": 0.025, "transitions": {"opening": {"true_positive": 0, "false_positive": 0, "false_negative": 24, "true_events": 24, "f1": 0.0}, "closing": {"true_positive": 0, "false_positive": 0, "false_negative": 60, "true_events": 60, "f1": 0.0}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}, "threshold_current_measurement_held": {"accuracy": 0.6765625, "class_recall": {"open": 0.9785202863961814, "closed": 0.10407239819004525}, "balanced_accuracy": 0.5412963422931133, "whole_window_exact_rate": 0.375, "transitions": {"opening": {"true_positive": 0, "false_positive": 0, "false_negative": 24, "true_events": 24, "f1": 0.0}, "closing": {"true_positive": 0, "false_positive": 0, "false_negative": 60, "true_events": 60, "f1": 0.0}}, "scope": "Within16 future commands only; no measured-width-to-prior-command substitution; not grasp success"}}}}, "offline_gripper_admitted": false, "closed_loop_success_proven": false, "formal_matrix_admitted": false, "measurement_threshold_baseline_is_not_a_past_command": true, "execution_complete": true, "updates": 2048, "source_pose_checkpoint_unchanged": true, "source_pose_network_loaded": false, "source_pose_optimizer_updates": 0, "equal_input_pose_preservation": "Separate head only; native sampler composition has exact CPU regression check; not closed-loop observation invariance", "elapsed_seconds": 13.291297529824078, "peak_reserved_gib": 0.08984375, "gripper_file_sha256": "61bfbe190185892901fdc6c808a0531e2d0499b285ee01243753920a24c9117d", "automatic_following_action": false}
+^C

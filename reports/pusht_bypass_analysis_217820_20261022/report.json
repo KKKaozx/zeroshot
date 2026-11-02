@@ -1,0 +1,257 @@
+{
+  "received_small_artifacts_verified": true,
+  "missing_required_small_files": [],
+  "source_and_preflight_binding_verified": true,
+  "reward_series_and_predeclared_gates_recomputed": true,
+  "update_logs_and_lr_traces_verified": true,
+  "checkpoint_metadata_agrees": true,
+  "large_checkpoint_bytes_verified_locally": false,
+  "full_checkpoint_verification": "Original server verifier passed, as reported by user; weights not downloaded",
+  "archive_sha256": "7bde70ff91cfd71dca9c32e91162f39155da9c94923693cd49147d94ed10113a",
+  "input_sha256": {
+    "admission.json": "227465f41760da5966fdb5f55bb92fa1fa7e4353e8843e830015517c27cf88db",
+    "bypass_statistics.npz": "cb91353dc27bd7ad0f512c70ca0a2728c79ca2c5eb12078dca049de0a274e54b",
+    "preflight_binding.json": "fb0d58fe56cb380b739444a9751dd0c44d8d32cc9c36f8b52cef4def2fe4dac8",
+    "report.json": "0fc936f66c29c86650246001be914fefa03f2133bf4bd529a42402868013c8b8",
+    "training_data.json": "b74faf184a087f3884e62703346b4d66b601b6310ece2d3dfd53885382c4f025",
+    "global_control\\development.json": "3f2f8902ac480c49e60531bb0e985f20d82c4db4e6fcaed579ceb046c068c806",
+    "global_control\\development_seed_5000000.mp4": "d4f1188123d9915b0e57e15d5279eaead7c28c4417b4c565f26abbd3ee8363e0",
+    "global_control\\development_seed_5000001.mp4": "e0a010acc7d183a34108062caec90827da02eb3dcf3a751453d96a44e84e522d",
+    "global_control\\latest.json": "9c77a6810fcec70d8f990159a02deb06849c7ddfef2e1cab31f76d3090e29d67",
+    "global_control\\report.json": "158cf68883415043a0805e45c7ea0e7f7db72e2bbeee8c7f0cc6adf9c88b151b",
+    "global_control\\updates.jsonl": "2083b7df05b159bf1c68f4cd768e108fc5c43e45f9f0519b5f42905b7129f085",
+    "spatial_candidate\\development.json": "b50242e90d71f053d01abdffd67b3646a4236a509719a1fc47e4832711f5f515",
+    "spatial_candidate\\development_seed_5000000.mp4": "f4a0475aeb81fd646296e7e3b024ca38bee7217918e236204f81110be47f906e",
+    "spatial_candidate\\development_seed_5000001.mp4": "aa7da3101fba780b2d270b8bf535be4ba35f3cb09fef7bb2949f0cbd9f673c0b",
+    "spatial_candidate\\latest.json": "9b825b343a49c74a5e8bdfb374adf6f29e4e78f965222dcdf79721a7e0e5fc7c",
+    "spatial_candidate\\report.json": "23bafc04c9de8b2fbefff5f3e6a70ef10f47215654f75c8a0a0fcec0715739f3",
+    "spatial_candidate\\updates.jsonl": "bc741f9a4decaa7403fe3c9baf1bc2c00b0c742d5cfe8f5a249fd33840c6c086"
+  },
+  "summaries": {
+    "original215999": {
+      "mean_score": 0.4454884148126766,
+      "full_reward_count": 5,
+      "episodes_max_reward_at_most_0_1": 8,
+      "mean_final_reward": 0.3021269988444758
+    },
+    "global_control": {
+      "mean_score": 0.28180136259665395,
+      "full_reward_count": 1,
+      "episodes_max_reward_at_most_0_1": 9,
+      "mean_final_reward": 0.07728787832168042
+    },
+    "spatial_candidate": {
+      "mean_score": 0.39077456633648944,
+      "full_reward_count": 3,
+      "episodes_max_reward_at_most_0_1": 9,
+      "mean_final_reward": 0.31403763404550167
+    }
+  },
+  "admission": {
+    "scores": {
+      "global_control": {
+        "mean_score": 0.28180136259665395,
+        "full_reward_fraction": 0.05,
+        "reference_competence_gate_passed": false
+      },
+      "spatial_candidate": {
+        "mean_score": 0.39077456633648944,
+        "full_reward_fraction": 0.15,
+        "reference_competence_gate_passed": false
+      },
+      "unchanged215999": {
+        "mean_score": 0.44548841481267654,
+        "full_reward_fraction": 0.25,
+        "reference_competence_gate_passed": false
+      }
+    },
+    "paired_mean_gain": 0.10897320373983552,
+    "paired_mean_gain_episode_bootstrap95": [
+      -0.00408811189466344,
+      0.24210061259152352
+    ],
+    "paired_candidate_better_worse_equal": [
+      10,
+      5,
+      5
+    ],
+    "per_seed_gain": [
+      {
+        "environment_seed": 5000000,
+        "candidate_minus_control": -0.002403647397745845
+      },
+      {
+        "environment_seed": 5000001,
+        "candidate_minus_control": 0.017735263943180923
+      },
+      {
+        "environment_seed": 5000002,
+        "candidate_minus_control": 0.0
+      },
+      {
+        "environment_seed": 5000003,
+        "candidate_minus_control": 0.025463667188939887
+      },
+      {
+        "environment_seed": 5000004,
+        "candidate_minus_control": -0.0007747968970466257
+      },
+      {
+        "environment_seed": 5000005,
+        "candidate_minus_control": 0.001130437312905526
+      },
+      {
+        "environment_seed": 5000006,
+        "candidate_minus_control": 0.0
+      },
+      {
+        "environment_seed": 5000007,
+        "candidate_minus_control": 0.12924100671618188
+      },
+      {
+        "environment_seed": 5000008,
+        "candidate_minus_control": 0.2812241379273907
+      },
+      {
+        "environment_seed": 5000009,
+        "candidate_minus_control": 0.0
+      },
+      {
+        "environment_seed": 5000010,
+        "candidate_minus_control": 0.7871230886488221
+      },
+      {
+        "environment_seed": 5000011,
+        "candidate_minus_control": 2.718179231532558e-05
+      },
+      {
+        "environment_seed": 5000012,
+        "candidate_minus_control": -0.3937379981888284
+      },
+      {
+        "environment_seed": 5000013,
+        "candidate_minus_control": 0.0
+      },
+      {
+        "environment_seed": 5000014,
+        "candidate_minus_control": 0.7831447728901553
+      },
+      {
+        "environment_seed": 5000015,
+        "candidate_minus_control": 0.03003232859856597
+      },
+      {
+        "environment_seed": 5000016,
+        "candidate_minus_control": -0.0038731949487223988
+      },
+      {
+        "environment_seed": 5000017,
+        "candidate_minus_control": 0.5543397188056058
+      },
+      {
+        "environment_seed": 5000018,
+        "candidate_minus_control": -0.029207891595009767
+      },
+      {
+        "environment_seed": 5000019,
+        "candidate_minus_control": 0.0
+      }
+    ],
+    "gates": {
+      "mean_gain_at_least0_05_vs_global_control": true,
+      "mean_gain_at_least0_05_vs_unchanged215999": false,
+      "paired_mean_gain_bootstrap95_lower_positive": false,
+      "full_reward_fraction_no_worse_than_both": false
+    },
+    "development_admission_passed": false,
+    "decision": "Close this bounded bypass variant; no extra budget/seeds/variants or final50 access",
+    "scope": "Reused dev20, one source training seed, fixed endpoint. Not independent final confirmation or robot grasp success.",
+    "automatic_following_action": false
+  },
+  "paired_vs_unchanged": {
+    "global_control": {
+      "mean_gain": -0.16368705221602262,
+      "better_worse_equal": [
+        2,
+        12,
+        6
+      ]
+    },
+    "spatial_candidate": {
+      "mean_gain": -0.0547138484761871,
+      "better_worse_equal": [
+        6,
+        7,
+        7
+      ]
+    }
+  },
+  "videos": [
+    {
+      "group": "original215999",
+      "seed": 5000000,
+      "decoded_frames": 300,
+      "fps": 10.0,
+      "sha256": "6e0a6213999fa7a1e7a1fc87e562d1156ed49b6ca38f5f49b84d25a44e0a5053",
+      "peak_reward": 0.3637322550695917,
+      "first_peak_step": 67,
+      "final_reward": 0.0
+    },
+    {
+      "group": "global_control",
+      "seed": 5000000,
+      "decoded_frames": 300,
+      "fps": 10.0,
+      "sha256": "d4f1188123d9915b0e57e15d5279eaead7c28c4417b4c565f26abbd3ee8363e0",
+      "peak_reward": 0.3016367646417691,
+      "first_peak_step": 64,
+      "final_reward": 0.0
+    },
+    {
+      "group": "spatial_candidate",
+      "seed": 5000000,
+      "decoded_frames": 300,
+      "fps": 10.0,
+      "sha256": "f4a0475aeb81fd646296e7e3b024ca38bee7217918e236204f81110be47f906e",
+      "peak_reward": 0.29923311724402324,
+      "first_peak_step": 64,
+      "final_reward": 0.0
+    },
+    {
+      "group": "original215999",
+      "seed": 5000001,
+      "decoded_frames": 97,
+      "fps": 10.0,
+      "sha256": "810476041a44d43cf37e040654b8c5a63c09fe154478e75dbc19cf9c7aebf173",
+      "peak_reward": 1.0,
+      "first_peak_step": 97,
+      "final_reward": 1.0
+    },
+    {
+      "group": "global_control",
+      "seed": 5000001,
+      "decoded_frames": 300,
+      "fps": 10.0,
+      "sha256": "e0a010acc7d183a34108062caec90827da02eb3dcf3a751453d96a44e84e522d",
+      "peak_reward": 0.9822647360568191,
+      "first_peak_step": 66,
+      "final_reward": 0.0
+    },
+    {
+      "group": "spatial_candidate",
+      "seed": 5000001,
+      "decoded_frames": 289,
+      "fps": 10.0,
+      "sha256": "aa7da3101fba780b2d270b8bf535be4ba35f3cb09fef7bb2949f0cbd9f673c0b",
+      "peak_reward": 1.0,
+      "first_peak_step": 289,
+      "final_reward": 1.0
+    }
+  ],
+  "actual_elapsed_hours": 6.3276228675241715,
+  "policy_execution": false,
+  "new_training": false,
+  "new_rollouts": false,
+  "scope": "Reused dev20 and fixed first2 videos; one source training seed; no final50 access",
+  "conclusion": "Close bounded bypass variant, retain original215999; spatial-information hypothesis not ruled out"
+}

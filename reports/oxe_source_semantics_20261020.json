@@ -1,0 +1,97 @@
+{
+  "checks_passed": true,
+  "new_command_feature_contract": "[last_open_positive_command, known]",
+  "causal_history_only_no_future_initialization": true,
+  "unknown_and_no_gripper_not_imputed_as_open": true,
+  "source_prefix_results": {
+    "Bridge": {
+      "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+      "record_index": 0,
+      "raw_payload_sha256": "e01760fef81af0b6498a5da53a1d8defc304b6103949b6916ae1fcf31c0d9f24",
+      "canonical_example_sha256": "d0963961dfc14d6b41f3674a74582aae4032d9eff9eff041dd3526cf742e1bd6",
+      "rows": 49,
+      "known_last_command_rows": 9,
+      "unknown_rows": 40,
+      "first_row_features": [
+        0.0,
+        0.0
+      ],
+      "raw_past_command_range": [
+        -0.00908490177243948,
+        1.0
+      ]
+    },
+    "Language Table": {
+      "shard": "language_table-train.tfrecord-00000-of-01024",
+      "record_index": 0,
+      "raw_payload_sha256": "dcf3125e413b2473580fbfee1ace7ff0e68d8e880abf4542f5394fcd21fe9190",
+      "canonical_example_sha256": "66bfee26317fed9c17631ea670d6dbbd8d41de3bf3f95498d80912bfa5947cd4",
+      "rows": 27,
+      "known_last_command_rows": 0,
+      "unknown_rows": 27,
+      "first_row_features": [
+        0.0,
+        0.0
+      ],
+      "raw_past_command_range": null
+    },
+    "BC-Z": {
+      "shard": "bc_z-train.tfrecord-00000-of-00512",
+      "record_index": 2,
+      "raw_payload_sha256": "4f14de726b47497e2f3ec865564da40916ba46b1d0ac6055d89c40bb4273bc25",
+      "canonical_example_sha256": "8b004ce81c1c925dad9ac853af6ee57d7d450aa81956eecffe25a95f996c9115",
+      "rows": 201,
+      "known_last_command_rows": 200,
+      "unknown_rows": 1,
+      "first_row_features": [
+        0.0,
+        0.0
+      ],
+      "raw_past_command_range": [
+        0.0,
+        1.0
+      ]
+    },
+    "Fractal": {
+      "shard": "fractal20220817_data-train.tfrecord-00000-of-01024",
+      "record_index": 0,
+      "raw_payload_sha256": "c203de87445319728ad162ce4e2333067d139f3dda8167c8f14d7e337d5f36c6",
+      "canonical_example_sha256": "4ce9288ba3e89e27e9578be9d4897b48c68ca94c09da8db92ce0a95dda0f7907",
+      "rows": 115,
+      "known_last_command_rows": 80,
+      "unknown_rows": 35,
+      "first_row_features": [
+        0.0,
+        0.0
+      ],
+      "raw_past_command_range": [
+        -1.0,
+        1.0
+      ]
+    }
+  },
+  "prior_fixed_record_identity_reused": [
+    "Language Table record 0",
+    "Fractal record 0"
+  ],
+  "planar_projection_and_nullspace_gradient_checked": true,
+  "planar_calibration_test_scope": "Synthetic rotations only; no real orientation calibration obtained",
+  "language_table_observation_fields": [
+    "effector_target_translation",
+    "effector_translation",
+    "instruction",
+    "rgb"
+  ],
+  "language_table_orientation_available_in_local_feature_schema": false,
+  "language_table_features_sha256": "aab4b382f0f235a6327006a8f47c13fa3169f4e2cbf71674b0519649af2d95bd",
+  "existing_main_training_or_loader_modified": false,
+  "images_decoded": false,
+  "numeric_pose_rechecks": false,
+  "training_updates": 0,
+  "model_loaded": false,
+  "mixed_training_ready": false,
+  "source_sha256": {
+    "code/oxe_source_semantics.py": "5010a3b187ed6f9d090b3acb930d9eddd425eb555a3e396cb511848dd995f682",
+    "scripts/check_oxe_source_semantics_20261020.py": "186d1430d5bd95248b75fd3abcde848f43372163d479163d2de92f915f34e27f"
+  }
+}

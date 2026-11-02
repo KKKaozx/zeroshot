@@ -1,0 +1,450 @@
+{
+  "verified": true,
+  "job_id": "206915",
+  "archive_sha256": "948ee7ba244d93e72cfdd35839301c0ee2db9590ab675a8e0900e260ac272f98",
+  "inventory": [
+    {
+      "path": "bridge-aug-fit-206915/reduced_u7680_train.npz",
+      "bytes": 708598,
+      "sha256": "f8241f8e2d17664b89161600afcde2c65313bf5d8b34724a2788907a387a7cb0"
+    },
+    {
+      "path": "bridge-aug-fit-206915/common_u2048_train.npz",
+      "bytes": 708028,
+      "sha256": "7a7d4025b7df78b4d54782a4aecda17bef0efc2a2bafc622ec94a1ae4f3c0bc5"
+    },
+    {
+      "path": "bridge-aug-fit-206915/effective_runner.py",
+      "bytes": 21787,
+      "sha256": "597e9cd17a6734f47aedcababb376980a5f19369246bf8313d01028dc348687f"
+    },
+    {
+      "path": "bridge-aug-fit-206915/report.json",
+      "bytes": 996003,
+      "sha256": "c9c6e3fcebf9c019a90a24c8ad1b11e702be036f9f3d9c9a47821f55880df23d"
+    },
+    {
+      "path": "bridge-aug-fit-206915/plan.json",
+      "bytes": 56814,
+      "sha256": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928"
+    },
+    {
+      "path": "bridge-aug-fit-206915/augmentation_views.jsonl",
+      "bytes": 1320331,
+      "sha256": "8dbd6724f20eb1a6f7569224506c0419cb3a596238bba1496c57773e4d43924f"
+    },
+    {
+      "path": "bridge-aug-fit-206915/runner_snapshot.py",
+      "bytes": 19821,
+      "sha256": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa"
+    },
+    {
+      "path": "bridge-aug-fit-206915/reduced_u7168_train.npz",
+      "bytes": 708444,
+      "sha256": "3967e885bc73ffe740845a0b8f3988a9884016b8691879f3d08d9d4c8e64fb1c"
+    },
+    {
+      "path": "bridge-aug-fit-206915/common_updates.jsonl",
+      "bytes": 1335530,
+      "sha256": "37a5b88ef0eca6ef5ff5ceb5b70c1fd47aee81ef035b59e6d2401af39ccae452"
+    },
+    {
+      "path": "bridge-aug-fit-206915/reduced_updates.jsonl",
+      "bytes": 1348420,
+      "sha256": "95060230b3b60693059c44bf5bfc84b089acd26ca3211a200092664f975225de"
+    },
+    {
+      "path": "bridge-aug-fit-206915/common_u0000_train.npz",
+      "bytes": 709230,
+      "sha256": "bc1a032ee5495a8c2cb04a41381941c6046a26bc616cf8f8555cbe1821a42274"
+    },
+    {
+      "path": "bridge-aug-fit-206915/common_u4096_train.npz",
+      "bytes": 708609,
+      "sha256": "0f15d7607c5d17d473524f2fe5d166adfba1af9b0a20191d17db88f1709ee710"
+    },
+    {
+      "path": "bridge-aug-fit-206915/reduced_u8192_train.npz",
+      "bytes": 708412,
+      "sha256": "d310cc164d234df827c8214ec71f48568541e0983399dfa5d585c4820f63f111"
+    },
+    {
+      "path": "bridge-aug-fit-206915/reduced_u6144_train.npz",
+      "bytes": 708394,
+      "sha256": "d07fc23e0e0eb5ca58bc3b575bc1e95479f7e91a4a76a71bd2f89b8bd7f8accd"
+    },
+    {
+      "path": "bridge-aug-fit-206915/reduced_u8192_development.npz",
+      "bytes": 221965,
+      "sha256": "ff177aa48e99134140ac19a4919b69719e04ae574e5dc7599b1ee92140d21cfb"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/restore_same_lr_u0008_train.npz",
+      "bytes": 22836,
+      "sha256": "617031039e84c42d0f84a7f9161c1326dd0cecfa3d24d735a38d7b533ccb6afa"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/effective_runner.py",
+      "bytes": 21787,
+      "sha256": "597e9cd17a6734f47aedcababb376980a5f19369246bf8313d01028dc348687f"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/report.json",
+      "bytes": 350792,
+      "sha256": "ff407bb0388c1735f4ce8d855e231f51f893c6e64154970eb1d1b92d65c7605a"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/plan.json",
+      "bytes": 56814,
+      "sha256": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/restore_same_lr_updates.jsonl",
+      "bytes": 1278,
+      "sha256": "270b0d0a47704d949570f7c50d4f11d9105516ecd98479e893d0499eeb4ecc0a"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/augmentation_views.jsonl",
+      "bytes": 2620,
+      "sha256": "25322e51a1aa63fc667b21a8adc26834d0f0e89239c96cec14f72ac282bc65c6"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/runner_snapshot.py",
+      "bytes": 19821,
+      "sha256": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/common_updates.jsonl",
+      "bytes": 1259,
+      "sha256": "7d921bfdf8e0ccbba16356977cb3efb30190122cc4d739ff31d66a8e9dd72f07"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/reduced_updates.jsonl",
+      "bytes": 1267,
+      "sha256": "09ef4105f652c9663f48384c61af5379e8ceabb2008ef7856d7684228d585c2e"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/common_u0000_train.npz",
+      "bytes": 23035,
+      "sha256": "72ff7f0f4a6b793689025275c89c8281f404faa657035e20a60229e0bcd25bdf"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/constant_updates.jsonl",
+      "bytes": 1278,
+      "sha256": "270b0d0a47704d949570f7c50d4f11d9105516ecd98479e893d0499eeb4ecc0a"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/constant_u0008_train.npz",
+      "bytes": 22836,
+      "sha256": "617031039e84c42d0f84a7f9161c1326dd0cecfa3d24d735a38d7b533ccb6afa"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/common_u0004_train.npz",
+      "bytes": 22887,
+      "sha256": "8c5f1a8bfa41d8732217b7cff7a14a333ddff0ac9af0aaee44abb59987e23c07"
+    },
+    {
+      "path": "bridge-aug-preflight-206895/reduced_u0008_train.npz",
+      "bytes": 22855,
+      "sha256": "701235dfbe323590855661f8d87b5338797d8eccd41013717644874726a5d8a6"
+    }
+  ],
+  "snapshots": [
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "common",
+      "update": 0,
+      "split": "train",
+      "sha256": "bc1a032ee5495a8c2cb04a41381941c6046a26bc616cf8f8555cbe1821a42274",
+      "path_position_cm": 12.63204397561033,
+      "path_rotation_deg": 140.07202818894987,
+      "endpoint_position_cm": 13.209640417230744,
+      "endpoint_rotation_deg": 127.3784102284622,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "common",
+      "update": 2048,
+      "split": "train",
+      "sha256": "7a7d4025b7df78b4d54782a4aecda17bef0efc2a2bafc622ec94a1ae4f3c0bc5",
+      "path_position_cm": 6.689092320456929,
+      "path_rotation_deg": 12.234820395986754,
+      "endpoint_position_cm": 8.858806098441486,
+      "endpoint_rotation_deg": 15.65597637265527,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "common",
+      "update": 4096,
+      "split": "train",
+      "sha256": "0f15d7607c5d17d473524f2fe5d166adfba1af9b0a20191d17db88f1709ee710",
+      "path_position_cm": 2.322311254012948,
+      "path_rotation_deg": 5.722905420351087,
+      "endpoint_position_cm": 2.93119484828202,
+      "endpoint_rotation_deg": 7.343427152828004,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "reduced",
+      "update": 6144,
+      "split": "train",
+      "sha256": "d07fc23e0e0eb5ca58bc3b575bc1e95479f7e91a4a76a71bd2f89b8bd7f8accd",
+      "path_position_cm": 0.8943528869652666,
+      "path_rotation_deg": 3.1073881483767045,
+      "endpoint_position_cm": 1.24007872090459,
+      "endpoint_rotation_deg": 4.4773113699039016,
+      "passing_windows": 38,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "reduced",
+      "update": 7168,
+      "split": "train",
+      "sha256": "3967e885bc73ffe740845a0b8f3988a9884016b8691879f3d08d9d4c8e64fb1c",
+      "path_position_cm": 0.7771010147799896,
+      "path_rotation_deg": 2.74495925832982,
+      "endpoint_position_cm": 1.0503942332987064,
+      "endpoint_rotation_deg": 3.737264773735692,
+      "passing_windows": 50,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "reduced",
+      "update": 7680,
+      "split": "train",
+      "sha256": "f8241f8e2d17664b89161600afcde2c65313bf5d8b34724a2788907a387a7cb0",
+      "path_position_cm": 0.7607497266656945,
+      "path_rotation_deg": 2.6297436321098,
+      "endpoint_position_cm": 1.0389638887830277,
+      "endpoint_rotation_deg": 3.6472579573548285,
+      "passing_windows": 52,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "reduced",
+      "update": 8192,
+      "split": "train",
+      "sha256": "d310cc164d234df827c8214ec71f48568541e0983399dfa5d585c4820f63f111",
+      "path_position_cm": 0.7296445163984466,
+      "path_rotation_deg": 2.5487849961913684,
+      "endpoint_position_cm": 0.9909141871002966,
+      "endpoint_rotation_deg": 3.4112383974303473,
+      "passing_windows": 63,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-fit-206915",
+      "arm": "reduced",
+      "update": 8192,
+      "split": "development",
+      "sha256": "ff177aa48e99134140ac19a4919b69719e04ae574e5dc7599b1ee92140d21cfb",
+      "path_position_cm": 8.499732887862963,
+      "path_rotation_deg": 15.764688920725566,
+      "endpoint_position_cm": 11.121974502816332,
+      "endpoint_rotation_deg": 21.299665126538866,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-preflight-206895",
+      "arm": "common",
+      "update": 0,
+      "split": "train",
+      "sha256": "72ff7f0f4a6b793689025275c89c8281f404faa657035e20a60229e0bcd25bdf",
+      "path_position_cm": 17.47809247960541,
+      "path_rotation_deg": 132.91613021999035,
+      "endpoint_position_cm": 18.037556631460518,
+      "endpoint_rotation_deg": 91.92717175544836,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-preflight-206895",
+      "arm": "common",
+      "update": 4,
+      "split": "train",
+      "sha256": "8c5f1a8bfa41d8732217b7cff7a14a333ddff0ac9af0aaee44abb59987e23c07",
+      "path_position_cm": 13.420527219599643,
+      "path_rotation_deg": 36.63862023599669,
+      "endpoint_position_cm": 17.626832453691232,
+      "endpoint_rotation_deg": 40.4983297491218,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-preflight-206895",
+      "arm": "constant",
+      "update": 8,
+      "split": "train",
+      "sha256": "617031039e84c42d0f84a7f9161c1326dd0cecfa3d24d735a38d7b533ccb6afa",
+      "path_position_cm": 12.697201851856832,
+      "path_rotation_deg": 32.625620081039976,
+      "endpoint_position_cm": 17.749397386343336,
+      "endpoint_rotation_deg": 35.817416687018984,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-preflight-206895",
+      "arm": "restore_same_lr",
+      "update": 8,
+      "split": "train",
+      "sha256": "617031039e84c42d0f84a7f9161c1326dd0cecfa3d24d735a38d7b533ccb6afa",
+      "path_position_cm": 12.697201851856832,
+      "path_rotation_deg": 32.625620081039976,
+      "endpoint_position_cm": 17.749397386343336,
+      "endpoint_rotation_deg": 35.817416687018984,
+      "passing_windows": 0,
+      "fit_gate": false
+    },
+    {
+      "stage": "bridge-aug-preflight-206895",
+      "arm": "reduced",
+      "update": 8,
+      "split": "train",
+      "sha256": "701235dfbe323590855661f8d87b5338797d8eccd41013717644874726a5d8a6",
+      "path_position_cm": 12.647297835459918,
+      "path_rotation_deg": 22.206766277577998,
+      "endpoint_position_cm": 17.677418419852014,
+      "endpoint_rotation_deg": 38.42093145499194,
+      "passing_windows": 0,
+      "fit_gate": false
+    }
+  ],
+  "saved_prediction_snapshots": 13,
+  "metrics": {
+    "train": {
+      "original": {
+        "path_position_cm": 0.16881285789340109,
+        "path_rotation_deg": 0.5986484606004089,
+        "endpoint_position_cm": 0.21749852922249083,
+        "endpoint_rotation_deg": 0.6885199204769008
+      },
+      "augmented": {
+        "path_position_cm": 0.7296445163984466,
+        "path_rotation_deg": 2.5487849961913684,
+        "endpoint_position_cm": 0.9909141871002966,
+        "endpoint_rotation_deg": 3.4112383974303473
+      },
+      "static": {
+        "path_position_cm": 8.960284924153353,
+        "path_rotation_deg": 13.88273475795172,
+        "endpoint_position_cm": 12.615988871210611,
+        "endpoint_rotation_deg": 20.33054352452782
+      },
+      "passing_windows": 63,
+      "fit_gate": false,
+      "episode_equal": {
+        "original": {
+          "position_cm": 0.1688128578934011,
+          "rotation_deg": 0.598648460600409
+        },
+        "augmented": {
+          "position_cm": 0.7296445163984466,
+          "rotation_deg": 2.5487849961913684
+        },
+        "static": {
+          "position_cm": 8.960284924153353,
+          "rotation_deg": 13.88273475795172
+        }
+      }
+    },
+    "development": {
+      "original": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593287,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554033
+      },
+      "augmented": {
+        "path_position_cm": 8.499732887862963,
+        "path_rotation_deg": 15.764688920725566,
+        "endpoint_position_cm": 11.121974502816332,
+        "endpoint_rotation_deg": 21.299665126538866
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "passing_windows": 0,
+      "fit_gate": false,
+      "episode_equal": {
+        "original": {
+          "position_cm": 7.692468140144546,
+          "rotation_deg": 14.825867044893112
+        },
+        "augmented": {
+          "position_cm": 7.854421758423934,
+          "rotation_deg": 14.98766792766979
+        },
+        "static": {
+          "position_cm": 7.9601175966494155,
+          "rotation_deg": 15.066972166771839
+        }
+      }
+    }
+  },
+  "episode_counts": {
+    "train": {
+      "position_better_original": 1,
+      "rotation_better_original": 0,
+      "position_better_static": 64
+    },
+    "development": {
+      "position_better_original": 4,
+      "rotation_better_original": 6,
+      "position_better_static": 4
+    }
+  },
+  "max_report_metric_difference": {
+    "position_cm": 2.844229072707094e-06,
+    "rotation_deg": 0.0006356261339135472
+  },
+  "candidate_passed": false,
+  "old_control_retrained": false,
+  "first4_preflight_and_formal_losses_gradients_and_view_traces_exact": true,
+  "augmentation_calls_verified": {
+    "formal": 8192,
+    "preflight": 16
+  },
+  "all_training_view_rows_exposed512_times": true,
+  "development_augmented_for_training": false,
+  "original_evaluation_cache_preserved_runtime_assertion": true,
+  "checkpoint_metadata": [
+    {
+      "path": "reduced_u8192_trainable.pt",
+      "sha256": "880c0d2c5cbd3c99a50b572c4703505c70253990f19aeddca352526d1449ae56",
+      "bytes": 529383042,
+      "includes_optimizer": false,
+      "roundtrip_exact": true
+    }
+  ],
+  "checkpoint_downloaded": false,
+  "peak_reserved_gib": 5.07421875,
+  "elapsed_seconds": 3368.53900623112,
+  "center_view_token_max_absolute_difference": 0.0,
+  "resources_preflight": {
+    "peak_reserved_gib": 5.07421875,
+    "warm_update_seconds": 0.26769852861762045,
+    "conservative_formal_seconds": 3392.9863464355467
+  },
+  "new_neural_training_encoding_sampling_simulation": false,
+  "limits": [
+    "One training initialization; three sampling seeds; reused development set.",
+    "Offsets/ranges/repeated branch and first4 traces audited; every offset was not regenerated under clusterTorch2.5 locally.",
+    "Actual augmented encoder tensors and full checkpoint not downloaded; source, trace and runtime guards define verified scope.",
+    "Frozen gripper; no object localization, grasp or unseen-task claim."
+  ],
+  "stopping": "Fixed augmentation trial closed without strength,seed or training extensions."
+}

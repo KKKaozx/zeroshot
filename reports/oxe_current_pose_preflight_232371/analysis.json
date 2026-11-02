@@ -1,0 +1,168 @@
+{
+  "job_id": 232371,
+  "source_training_job": 231297,
+  "source_update": 8192,
+  "status": "engineering_and_resource_verified_formal_short_pair_code_ready_not_submitted",
+  "slurm_state_observed": null,
+  "terminal_sha256": "42b213d52ceeb14ecf29da5841b65220c97a0627ef41ef3a8df0eea56e408e70",
+  "zero_endpoint_120windows_3seeds_exact_observed": true,
+  "physical_engineering_optimizer_calls_observed": 6,
+  "logical_updates_per_role": 2,
+  "first_native_loss_and_original_core_gradient_digest_exact": true,
+  "mask_control_pose_value_gradients_zero": true,
+  "real_pose_value_gradients_positive": true,
+  "repeated_second_loss_and_gradient_tuple_exact": true,
+  "full_core_port_adam_plan_schedule_rng_restore_passed_inferred_from_pinned_code": true,
+  "native_batch_indices_match_frozen8193_8194_suffix": true,
+  "engineering_update_rows": {
+    "mask_control": [
+      {
+        "update": 8193,
+        "indices": [
+          135922,
+          119084,
+          19142,
+          54213,
+          14391,
+          38211,
+          10187,
+          11415
+        ],
+        "loss": 0.09311489760875702,
+        "pose_loss": 0.04803570732474327,
+        "gripper_loss": 0.1803167462348938,
+        "gradient_norm": 0.3303057551383972,
+        "pose_value_grad_norm": 0.0,
+        "mask_grad_norm": 0.009706246666610241,
+        "base_gradient_sha256_before_clipping": "c3fb670a5817024cdf87da1af1c4b40e8d7f84d791452f3ae64d1fb19b4c43bd",
+        "measured_update_seconds": 0.9745820467360318
+      },
+      {
+        "update": 8194,
+        "indices": [
+          126232,
+          46803,
+          69332,
+          17378,
+          140659,
+          64287,
+          80579,
+          18379
+        ],
+        "loss": 0.4048926830291748,
+        "pose_loss": 0.21271327137947083,
+        "gripper_loss": 0.7687175869941711,
+        "gradient_norm": 1.2564852237701416,
+        "pose_value_grad_norm": 0.0,
+        "mask_grad_norm": 0.05438536778092384,
+        "base_gradient_sha256_before_clipping": null,
+        "measured_update_seconds": 0.36433875001966953
+      },
+      {
+        "update": 8194,
+        "indices": [
+          126232,
+          46803,
+          69332,
+          17378,
+          140659,
+          64287,
+          80579,
+          18379
+        ],
+        "loss": 0.4048926830291748,
+        "pose_loss": 0.21271327137947083,
+        "gripper_loss": 0.7687175869941711,
+        "gradient_norm": 1.2564852237701416,
+        "pose_value_grad_norm": 0.0,
+        "mask_grad_norm": 0.05438536778092384,
+        "base_gradient_sha256_before_clipping": null,
+        "measured_update_seconds": 0.3624597927555442
+      }
+    ],
+    "real_pose": [
+      {
+        "update": 8193,
+        "indices": [
+          135922,
+          119084,
+          19142,
+          54213,
+          14391,
+          38211,
+          10187,
+          11415
+        ],
+        "loss": 0.09311489760875702,
+        "pose_loss": 0.04803570732474327,
+        "gripper_loss": 0.1803167462348938,
+        "gradient_norm": 0.33038732409477234,
+        "pose_value_grad_norm": 0.007341539952903986,
+        "mask_grad_norm": 0.009706246666610241,
+        "base_gradient_sha256_before_clipping": "c3fb670a5817024cdf87da1af1c4b40e8d7f84d791452f3ae64d1fb19b4c43bd",
+        "measured_update_seconds": 1.2711092056706548
+      },
+      {
+        "update": 8194,
+        "indices": [
+          126232,
+          46803,
+          69332,
+          17378,
+          140659,
+          64287,
+          80579,
+          18379
+        ],
+        "loss": 0.40476709604263306,
+        "pose_loss": 0.2127411663532257,
+        "gripper_loss": 0.7681037187576294,
+        "gradient_norm": 1.2567110061645508,
+        "pose_value_grad_norm": 0.03524085134267807,
+        "mask_grad_norm": 0.054342374205589294,
+        "base_gradient_sha256_before_clipping": null,
+        "measured_update_seconds": 0.27182696713134646
+      },
+      {
+        "update": 8194,
+        "indices": [
+          126232,
+          46803,
+          69332,
+          17378,
+          140659,
+          64287,
+          80579,
+          18379
+        ],
+        "loss": 0.40476709604263306,
+        "pose_loss": 0.2127411663532257,
+        "gripper_loss": 0.7681037187576294,
+        "gradient_norm": 1.2567110061645508,
+        "pose_value_grad_norm": 0.03524085134267807,
+        "mask_grad_norm": 0.054342374205589294,
+        "base_gradient_sha256_before_clipping": null,
+        "measured_update_seconds": 0.2740762340836227
+      }
+    ]
+  },
+  "warm_update_seconds": {
+    "mask_control": 0.36433875001966953,
+    "real_pose": 0.27182696713134646
+  },
+  "estimated_pair2048_update_seconds_excluding_replay_eval_io": 1302.8673887252808,
+  "estimated_pair2048_update_minutes_excluding_replay_eval_io": 21.71445647875468,
+  "peak_reserved_gib": {
+    "mask_control": 4.6953125,
+    "real_pose": 4.734375
+  },
+  "original_report_downloaded": false,
+  "receipt_verifier_output_received": true,
+  "formal_training_submitted": false,
+  "formal_training_package_released": true,
+  "generalization_verdict": null,
+  "scope": "Real engineering flow passed, not state-conditioning benefit or a new main model",
+  "next_action": "User manually upload/submit bounded2048-per-arm formal continuation package; do not repeat preflight or startLIBERO",
+  "resource_receipt": "reports/oxe_current_pose_preflight_232371/verified_resource_receipt.json",
+  "formal_validation": "reports/oxe_current_pose_formal_validation_20261029.json"
+}

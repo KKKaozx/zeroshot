@@ -1,0 +1,80 @@
+{
+  "job_id": 222758,
+  "submission_date": "2026-10-24",
+  "segment": 2,
+  "status": "full_server_verifier_passed_and_local_small_outputs_verified",
+  "basis": "User-pasted original segment1 verifier success, formal cache identity/space check and Slurm job number",
+  "bundle": "pusht_dino_training_v1",
+  "archive_sha256": "8e50239b2667f8256107116623cd2d4effa7e1e965d692999590559e60cb14bb",
+  "package_checksums_passed_reported_by_user": true,
+  "source_segment_verified": true,
+  "source_job_id": 221186,
+  "source_completed_updates": 42084,
+  "source_checkpoint": "/projects/_ssd/Zeroshot/runs/pusht-dino-part1-221186/latest.pt",
+  "segment_target_updates": 84168,
+  "total_target_updates": 84168,
+  "cache_identity_bound_reported_by_user": true,
+  "submit_time_storage": {
+    "project_allocated_bytes": 152091529216,
+    "filesystem_free_bytes": 204168182628352,
+    "reserved_bytes": 19327352832,
+    "conservative_project_budget_bytes": 200000000000,
+    "passed": true
+  },
+  "gpu_request": "a40:1",
+  "memory_request_gib": 40,
+  "wall_time_limit_hours": 20,
+  "running_verified": true,
+  "complete_resume_state_exact_verified": true,
+  "completion_verified": true,
+  "development_evaluation_complete": true,
+  "local_artifacts_received": true,
+  "final50_access_allowed": false,
+  "frozen_clip_main_model_modified": false,
+  "generalization_verdict": "Verified substantial reward improvement on reused dev20 versus original CLIP frontend; single-seed diagnostic, no final50 confirmation or unique-root-cause proof",
+  "server_output": "/projects/Zeroshot/runs/pusht-dino-part2-222758",
+  "server_log": "/projects/Zeroshot/logs/pusht-dino-part2-222758.out",
+  "automatic_following_action": false,
+  "terminal_completion_reported_by_user": true,
+  "terminal_completion_date": "2026-10-25",
+  "completed_updates_reported_by_user": 84168,
+  "development_evaluation_complete_reported_by_user": true,
+  "full_checkpoint_output_verifier_passed": true,
+  "slurm_accounting_received": false,
+  "terminal_scores": {
+    "dino8": {
+      "mean_score": 0.8298577066775905,
+      "full_reward_count": 7,
+      "full_reward_fraction": 0.35,
+      "reference_competence_gate_passed": false
+    },
+    "clip8_215999": {
+      "mean_score": 0.4454884148126766,
+      "full_reward_count": 5,
+      "full_reward_fraction": 0.25,
+      "reference_competence_gate_passed": false
+    },
+    "native212158": {
+      "mean_score": 0.8458782546929152,
+      "full_reward_count": 10,
+      "full_reward_fraction": 0.5,
+      "reference_competence_gate_passed": true
+    }
+  },
+  "terminal_paired_gain": 0.3843692918649141,
+  "terminal_paired_scene_bootstrap95": [
+    0.2006358682271091,
+    0.5753083376846504
+  ],
+  "verification_basis": "User-pasted original verify_dino segment2 success:84168 update endpoint, checkpoint SHA/sidecar/trace/LR/startup and complete resume identity, frozen evaluation worker/EMA and paired reward comparison. Large checkpoint remains on cluster; local output files not yet verified.",
+  "full_output_verification_date": "2026-10-25",
+  "local_artifacts_directory": "reports/pusht_dino_222758",
+  "local_small_output_verified": true,
+  "local_video_samples_decoded": true,
+  "checkpoint_bytes_locally_received": false,
+  "actual_node": "gpu-a40-2",
+  "actual_gpu": "NVIDIA A40",
+  "training_seconds": 51631.453560465015,
+  "elapsed_seconds": 52342.3573707873,
+  "checkpoint_sha256": "787e51bd7b8bd0d9c648da3abef1c17ada0605d5152afff67d26805ea5861789"
+}

@@ -1,0 +1,329 @@
+{
+  "complete": true,
+  "scope": "Existing cached TFRecord headers and source TFDS metadata only",
+  "sources": {
+    "Bridge": {
+      "dataset_name": "bridge_data_v2",
+      "version": "0.0.1",
+      "source_root": "E:\\dataset\\bridge_v2_0.0.1",
+      "metadata_path": "E:\\dataset\\bridge_v2_0.0.1\\0.0.1\\dataset_info.json",
+      "metadata_sha256": "075e2ee1896bee3aa07397149960864c16a27b5ca83b97d2fc9eab0f624975ff",
+      "full_train_episodes_from_metadata": 53191,
+      "cached_files": [
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00000-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00000-of-01024",
+          "bytes": 107991791,
+          "episodes": 50,
+          "header_stream_sha256": "5e975e3fdde1e73c1d0f7a68f6fd17664d7cf6138ef33a31b3fa0935517ea756",
+          "source_shard_index": 0
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00001-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00001-of-01024",
+          "bytes": 94725173,
+          "episodes": 42,
+          "header_stream_sha256": "773d1ffb809b2287151a0308be11cce8d884eca449d02bb6ad6b9beac7c376b6",
+          "source_shard_index": 1
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00002-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00002-of-01024",
+          "bytes": 126132877,
+          "episodes": 49,
+          "header_stream_sha256": "f4e465244d0bee91facefea4267e082a47375ff536c7c39456f1fc1c06e62fab",
+          "source_shard_index": 2
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00003-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00003-of-01024",
+          "bytes": 151026046,
+          "episodes": 62,
+          "header_stream_sha256": "ffba75f1fb7c89d2b175a6b6b5786cca991fc0839e694b479d7fcd083976830a",
+          "source_shard_index": 3
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00004-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00004-of-01024",
+          "bytes": 146243253,
+          "episodes": 61,
+          "header_stream_sha256": "2d606e6c7a3ee95304fd5fc625e78b63271495218eda5a818642bb1d29ec39df",
+          "source_shard_index": 4
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00005-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00005-of-01024",
+          "bytes": 98855358,
+          "episodes": 44,
+          "header_stream_sha256": "2934421b8f05e8626ca82370104661bb5c33fc4dd5c7b00dff612de99fcf265a",
+          "source_shard_index": 5
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00006-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00006-of-01024",
+          "bytes": 107706689,
+          "episodes": 46,
+          "header_stream_sha256": "3592eace3c4e738646f2e7ecdfd18fe0da9aa4eb9f4920b2197dc7cc241a76ff",
+          "source_shard_index": 6
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bridge_v2\\bridge_data_v2-train.tfrecord-00007-of-01024",
+          "shard": "bridge_data_v2-train.tfrecord-00007-of-01024",
+          "bytes": 116250867,
+          "episodes": 49,
+          "header_stream_sha256": "95907efe0105934b5bf63b643b537d7d6d632ddd9ebb09b114495318681f4e5c",
+          "source_shard_index": 7
+        }
+      ],
+      "cached_bytes": 948932054,
+      "cached_episodes": 403,
+      "candidate_episodes": 399
+    },
+    "Language Table": {
+      "dataset_name": "language_table",
+      "version": "0.1.0",
+      "source_root": "E:\\dataset\\language_table_0.1.0",
+      "metadata_path": "E:\\dataset\\language_table_0.1.0\\0.1.0\\dataset_info.json",
+      "metadata_sha256": "f9c24bb59cc3dd66bc655d78762ed2a4c47b6628d187d684c29c8c886f7dd938",
+      "full_train_episodes_from_metadata": 442226,
+      "cached_files": [
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00000-of-01024",
+          "shard": "language_table-train.tfrecord-00000-of-01024",
+          "bytes": 427927916,
+          "episodes": 445,
+          "header_stream_sha256": "375d971b92593b3fc738478a264045e53486a52f3d58e472c8c7c83204bc5f58",
+          "source_shard_index": 0
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00001-of-01024",
+          "shard": "language_table-train.tfrecord-00001-of-01024",
+          "bytes": 404510480,
+          "episodes": 413,
+          "header_stream_sha256": "e54529640856d3a7ec4097eb703553a1a8ad0d252db48f59b66bda1058d520b8",
+          "source_shard_index": 1
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00002-of-01024",
+          "shard": "language_table-train.tfrecord-00002-of-01024",
+          "bytes": 435798510,
+          "episodes": 433,
+          "header_stream_sha256": "b42f7ff64a22f15073d1932a18a25d03743b014ecaf59adde613a9df37f42566",
+          "source_shard_index": 2
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00003-of-01024",
+          "shard": "language_table-train.tfrecord-00003-of-01024",
+          "bytes": 412052488,
+          "episodes": 434,
+          "header_stream_sha256": "6bfce0cbd2c3a40baa034e3fee90d3e225ca19c3ce179fd74f9855f765598df6",
+          "source_shard_index": 3
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00004-of-01024",
+          "shard": "language_table-train.tfrecord-00004-of-01024",
+          "bytes": 449292586,
+          "episodes": 442,
+          "header_stream_sha256": "4ed918df23c6a91f09914c64bc41d702e51ac7a3cafefaf82fd4f706b3696766",
+          "source_shard_index": 4
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00005-of-01024",
+          "shard": "language_table-train.tfrecord-00005-of-01024",
+          "bytes": 391381540,
+          "episodes": 420,
+          "header_stream_sha256": "d7ff8b2927c342e2a18e12382835422aec5f2adb7e6c0ff58a848d2aeabec1f1",
+          "source_shard_index": 5
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00006-of-01024",
+          "shard": "language_table-train.tfrecord-00006-of-01024",
+          "bytes": 411234581,
+          "episodes": 416,
+          "header_stream_sha256": "751c59def223072893a4cb5b3c233b888ca4d6ee6de7a639e97acc0283aa6a26",
+          "source_shard_index": 6
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\language_table_real\\language_table-train.tfrecord-00007-of-01024",
+          "shard": "language_table-train.tfrecord-00007-of-01024",
+          "bytes": 426338465,
+          "episodes": 433,
+          "header_stream_sha256": "fe68d94585e600b2f70ea3646c56ec4026f0caebee38978be3c4dfea5fe5b020",
+          "source_shard_index": 7
+        }
+      ],
+      "cached_bytes": 3358536566,
+      "cached_episodes": 3436,
+      "candidate_episodes": 3436
+    },
+    "BC-Z": {
+      "dataset_name": "bc_z",
+      "version": "1.0.0",
+      "source_root": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0",
+      "metadata_path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\bc_z_1.0.0\\1.0.0\\dataset_info.json",
+      "metadata_sha256": "2dd37a932985e555619a55c1985f17cfcc8a4f3da0ac67430451f79d629a03b9",
+      "full_train_episodes_from_metadata": 39350,
+      "cached_files": [
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00000-of-00512",
+          "shard": "bc_z-train.tfrecord-00000-of-00512",
+          "bytes": 88297915,
+          "episodes": 75,
+          "header_stream_sha256": "c4f4cc0a7cef81a676a12bfd0c6a3573763133718ee28a3a8b3b2cc7442db550",
+          "source_shard_index": 0
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00001-of-00512",
+          "shard": "bc_z-train.tfrecord-00001-of-00512",
+          "bytes": 90990138,
+          "episodes": 69,
+          "header_stream_sha256": "7ef38181357b44ddb83a56fb106c5c23ae87c1068fe75139fba18f70818c104c",
+          "source_shard_index": 1
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00002-of-00512",
+          "shard": "bc_z-train.tfrecord-00002-of-00512",
+          "bytes": 123394733,
+          "episodes": 100,
+          "header_stream_sha256": "80d16fe1d4d8a77492e8376c33a92b5dd7a412560daa94f2c9d19582fd50301c",
+          "source_shard_index": 2
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00003-of-00512",
+          "shard": "bc_z-train.tfrecord-00003-of-00512",
+          "bytes": 114316862,
+          "episodes": 85,
+          "header_stream_sha256": "79b85ef5793b7984a672729d659c642f0cee578f08777aec47883fc415bf043e",
+          "source_shard_index": 3
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00004-of-00512",
+          "shard": "bc_z-train.tfrecord-00004-of-00512",
+          "bytes": 111058085,
+          "episodes": 84,
+          "header_stream_sha256": "85473fa7cac2704a8219931133bc04f1d52f2377ee17d1e06168e7d0174dc584",
+          "source_shard_index": 4
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00005-of-00512",
+          "shard": "bc_z-train.tfrecord-00005-of-00512",
+          "bytes": 101477641,
+          "episodes": 83,
+          "header_stream_sha256": "c39e404ea230fdc0e3aacddd9ed81d597857ef96cb47e7812e7303dc7e557385",
+          "source_shard_index": 5
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00006-of-00512",
+          "shard": "bc_z-train.tfrecord-00006-of-00512",
+          "bytes": 79857346,
+          "episodes": 66,
+          "header_stream_sha256": "b6378429b7a06a8bd5fe3e72e20f1c384900810ea51cdfb1db04a09d19e89345",
+          "source_shard_index": 6
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\bc_z\\bc_z-train.tfrecord-00007-of-00512",
+          "shard": "bc_z-train.tfrecord-00007-of-00512",
+          "bytes": 96147824,
+          "episodes": 81,
+          "header_stream_sha256": "c98925ef8c2d88b4abcdfe11754493ba629c01b87bc90ee595cc14c4dc7d0c50",
+          "source_shard_index": 7
+        }
+      ],
+      "cached_bytes": 805540544,
+      "cached_episodes": 643,
+      "candidate_episodes": 643
+    },
+    "Fractal": {
+      "dataset_name": "fractal20220817_data",
+      "version": "0.1.0",
+      "source_root": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0",
+      "metadata_path": "D:\\ntu_related\\dissertation\\dataset\\OpenX\\fractal20220817_0.1.0\\0.1.0\\dataset_info.json",
+      "metadata_sha256": "1c6770c91636a1f765e474f0b9cd3d44f93b031473a0356903ff32a6675c7bd3",
+      "full_train_episodes_from_metadata": 87212,
+      "cached_files": [
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00000-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00000-of-01024",
+          "bytes": 106467095,
+          "episodes": 80,
+          "header_stream_sha256": "32c1e2139bcfb8cda86b1661c317b17dfd4914ef7410e8e484488f990cad825c",
+          "source_shard_index": 0
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00001-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00001-of-01024",
+          "bytes": 135423031,
+          "episodes": 87,
+          "header_stream_sha256": "f2c8d64942dc42b90d38fb2daaa2b4400584c145f893d7d09356b6ce3ce8bfc5",
+          "source_shard_index": 1
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00002-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00002-of-01024",
+          "bytes": 90558445,
+          "episodes": 71,
+          "header_stream_sha256": "c0461ec9e13d1555123d4dd4786e5052c66a237c08cf74a11f2dfedd648d1bec",
+          "source_shard_index": 2
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00003-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00003-of-01024",
+          "bytes": 120619016,
+          "episodes": 87,
+          "header_stream_sha256": "47b6abdfca44a327db0dcd7072c41911937c99f6c60ffc0d0e567fd38a79c0cd",
+          "source_shard_index": 3
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00004-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00004-of-01024",
+          "bytes": 110883013,
+          "episodes": 83,
+          "header_stream_sha256": "a910b979122d514a952cc56787e62d151525ddc7a1cc93599ba45e6653ff3d78",
+          "source_shard_index": 4
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00005-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00005-of-01024",
+          "bytes": 129373685,
+          "episodes": 97,
+          "header_stream_sha256": "750dd99ed7b5da88c159a29dbb3244e5279c7b63cfaa5c3e6aff6c6940d3000d",
+          "source_shard_index": 5
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00006-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00006-of-01024",
+          "bytes": 104285684,
+          "episodes": 84,
+          "header_stream_sha256": "829a19b305731c1425b8791106ca145fed4d6a9b6a76de42ab4e51543fe6ddd5",
+          "source_shard_index": 6
+        },
+        {
+          "path": "D:\\ntu_related\\dissertation\\Zero_shot\\training_cache\\oxe_core\\rt1_fractal\\fractal20220817_data-train.tfrecord-00007-of-01024",
+          "shard": "fractal20220817_data-train.tfrecord-00007-of-01024",
+          "bytes": 139816125,
+          "episodes": 91,
+          "header_stream_sha256": "da971abb7e77e2a28c8f244484b792aecd12cd9b78f48dbd735b36c12bc0fe28",
+          "source_shard_index": 7
+        }
+      ],
+      "cached_bytes": 937426094,
+      "cached_episodes": 680,
+      "candidate_episodes": 680
+    }
+  },
+  "total_candidate_episodes": 5158,
+  "excluded_by_reason": {
+    "consumed_test_identity_only": 3,
+    "development": 1
+  },
+  "total_cached_bytes": 6050435258,
+  "candidate_manifest_sha256": "ae7c906d3717648435c6e9434305b8ab2815bf769dc634832b2fe7377e0fb324",
+  "prior_inventory_sha256": "5f96663d5ac782fed52da5028c6b062e775b51edfb9e2e0d12dfb17f90a1cee5",
+  "protected_plan_sha256": "36f86aa9720777bc99ab0f9184b175e871df155c94b763168bc3a08ba31c362a",
+  "payloads_read": false,
+  "crc_or_numeric_integrity_verified": false,
+  "final_targets_read": false,
+  "new_data_copied_or_downloaded": false,
+  "training_updates": 0,
+  "training_ready": false
+}

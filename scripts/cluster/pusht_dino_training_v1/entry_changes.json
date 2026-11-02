@@ -1,0 +1,75 @@
+{
+  "original_entry_sha256": "4c727f1be2158e99772d5f37862836bf9c8e533a5be92670cd4cab5fd2d36c6c",
+  "new_entry_sha256": "dcfd6ef63215c1b81884c6cd832d13b5c71012a271642929f76771110f97ef65",
+  "changes": [
+    {
+      "label": "Description",
+      "sites": 1
+    },
+    {
+      "label": "Identity helpers",
+      "sites": 1
+    },
+    {
+      "label": "Resume sidecar binding argument",
+      "sites": 1
+    },
+    {
+      "label": "Complete DINO checkpoint format",
+      "sites": 1
+    },
+    {
+      "label": "Quota and atomic-checkpoint headroom",
+      "sites": 1
+    },
+    {
+      "label": "Qualified cache binding before loading data",
+      "sites": 1
+    },
+    {
+      "label": "Bind complete snapshot",
+      "sites": 1
+    },
+    {
+      "label": "Bind checkpoint sidecar",
+      "sites": 1
+    },
+    {
+      "label": "Validate resume sidecar binding",
+      "sites": 1
+    },
+    {
+      "label": "Validate DINO complete restore before modifying models",
+      "sites": 2
+    },
+    {
+      "label": "Correct cache label",
+      "sites": 1
+    },
+    {
+      "label": "Record independent visual control scope",
+      "sites": 1
+    },
+    {
+      "label": "Use qualified DINO live worker",
+      "sites": 1
+    },
+    {
+      "label": "Instantiate DINO worker",
+      "sites": 1
+    },
+    {
+      "label": "Read-only fixed endpoint EMA",
+      "sites": 1
+    },
+    {
+      "label": "Check endpoint backbone and paired comparison",
+      "sites": 1
+    },
+    {
+      "label": "DINO log labels only",
+      "sites": "all original project labels"
+    }
+  ],
+  "unchanged": "Original loss/update/microbatch/RNG/optimizer/LR/EMA/sample-plan and first disk replay execution"
+}

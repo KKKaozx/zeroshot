@@ -1,0 +1,23 @@
+{
+  "package_sha256": "157cdebd020f19aebee79e1963dcc9d280545be6c698569447c6575639bf0e90",
+  "protocol_sha256": "0f695639fe421a60344794de32129fa6f881b1e3c23bfe7b26423b7b5f826795",
+  "tests_passed": 8,
+  "test_source_sha256": "d2aa29e4fca5c6949709a9fc0e696a118d1cb803343e466061b790dfc2e614fc",
+  "coverage": [
+    "Actual check-only CLI entry with bound metadata and no CUDA initialization",
+    "Actual replay entry120rows/three seeds/45sampler batches with CPU encoder and sampler stand-ins",
+    "Actual continuation driver for two CPU toy arms, nonempty originalAdam restore, added port group,6engineering optimizer calls",
+    "Full learned core/port/Adam/plan/schedule/RNG serialization and restored second step exact",
+    "Current row causality and train-only statistics; LT missing dimensions ignored and identical masks in control",
+    "Quaternion sign invariance and concatenated rotation6D geometry",
+    "Real145812row stats, selected120 feature arrays and future batch/mask references",
+    "Zero port creation leaves RNG and original context unchanged"
+  ],
+  "real_frozen_models_loaded": 0,
+  "actual_cuda_engineering_passed": false,
+  "jobs_submitted": 0,
+  "source_old_bundle_files_preserved": true,
+  "new_large_disk_checkpoints_written": 0,
+  "scope": "CPU toy/integration/metadata checks only; cluster native replay and gradients remain pending",
+  "fixture_error_corrected": "Initial toyconfig omitted model.name; fixture completed, deployed native source already contains this field"
+}

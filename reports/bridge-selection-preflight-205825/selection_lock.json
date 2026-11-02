@@ -1,0 +1,14 @@
+{
+  "selected_update": 8,
+  "checkpoint_sha256": "d0cd417e7fd9881100f0c4573823b207dcfd3cde708cd847e2b038511bb2133d",
+  "criterion": {
+    "value": 1.436431184694661,
+    "position_ratio": 0.9995963665717124,
+    "rotation_ratio": 1.436431184694661,
+    "episode_position_cm": 8.75157618522644,
+    "episode_rotation_deg": 22.3873507976532,
+    "episode_static_position_cm": 8.755110040307045,
+    "episode_static_rotation_deg": 15.585397362709045
+  },
+  "rule": "Minimize max(inner_episode_equal_position/inner_episode_equal_static_position,inner_episode_equal_rotation/inner_episode_equal_static_rotation),nativeDDPM100 with fixed3 sampling seeds; ties choose earlier step"
+}

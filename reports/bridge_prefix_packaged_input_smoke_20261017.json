@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "kind": "NEW packaged runtime input integration, not rerun training/performance",
+  "checks": {
+    "counts": {
+      "train_delta": 1558,
+      "validation": 50,
+      "train_episodes": 405,
+      "validation_episodes": 10
+    },
+    "max_numeric_deltas": {
+      "targets": 0.0,
+      "state_features": 0.0,
+      "normalized_image_grid": 0.0,
+      "current": 0.0
+    },
+    "final25_payloads_read": false,
+    "validation_scored": false,
+    "old1836_images_redecoded": false
+  },
+  "raw_model_loaded": false,
+  "GPU_used": false,
+  "elapsed_seconds": 11.28100000001723
+}

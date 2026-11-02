@@ -1,0 +1,20 @@
+{
+  "scope": "One bounded causal follow-up to an observed oracle execution failure; excluded engineering demo only",
+  "reference": "attempt1 baseline5hz oracle failure, native197action reference success reused",
+  "conditions_in_order": [
+    {
+      "attempt": "exactgrip5hz",
+      "only_change_from_attempt1": "Execute original native20Hz gripper schedule; same5Hz pose requests/feedback and200tick budget"
+    },
+    {
+      "attempt": "exactgrip20hz",
+      "run_only_if_previous_fails": true,
+      "only_change_from_exactgrip5hz": "Request future reached poses every1 rather than4 native ticks; gripper schedule and200tick budget unchanged",
+      "diagnostic_only_clock": "Not a change to trained model or final evaluator"
+    }
+  ],
+  "stop": "One execution each at most; stop on native success; no extra budget, gains, variants or model training",
+  "formal40_task_or_initial_state_access": 0,
+  "maximum_new_control_ticks": 400,
+  "learning_model_forwards": 0
+}

@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-16",
+  "job_id": "207334",
+  "stage": "complete_cluster_preflight",
+  "source": "user_reported_submission_id",
+  "slurm_state_verified": true,
+  "slurm_evidence_source": "user_pasted_sacct_and_terminal_log",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:04:15",
+  "node": "gpu-a6000-1",
+  "report_verified": true,
+  "formal_job_submitted": true,
+  "formal_job_id": "207348",
+  "validator_passed_user_pasted_output": true,
+  "validator_resources": {
+    "peak_reserved_gib": 5.630859375,
+    "warm_update_seconds": 0.1343344915037354,
+    "estimated_formal_hours": 1.11490414775997,
+    "cache_gib": 1.8767607063055038
+  },
+  "protocol_sha256": "59470883cba32d0b973ae0eda16230c606e6a2e80ad70d73ba269d010a77d0d6",
+  "entry_sha256": "4646af9511be97c5e79159dbe5cf150215cfb47feda23b9e110222a95eb8f4d3",
+  "archive_sha256": "445540f0f8a849ede9fcf0af30cd41dfd4eaf1297e5d2c711d164bdc80e6a6bd",
+  "cluster_output": "/projects/Zeroshot/runs/bridge-coverage-preflight-207334",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-coverage-preflight-207334.out",
+  "complete_input_scope": "415episodes,1876windows;1836training+40development",
+  "development_scored": false,
+  "terminal_evidence": {
+    "constant_and_restore_same_lr_first_loss": 0.21419747173786163,
+    "constant_and_restore_same_lr_train_position_cm": 11.9034423828125,
+    "constant_and_restore_same_lr_train_rotation_deg": 29.954086303710938,
+    "reduced_train_position_cm": 11.481059074401855,
+    "reduced_train_rotation_deg": 22.190750122070312,
+    "scope": "Four training-window probes after bounded preflight updates; not development or generalization metrics. Matching terminal values alone do not independently verify all report and resource checks."
+  },
+  "next_step": "Validator passed on cluster per user output; complete artifact independent audit pending. Track sole formal207348; do not repeat preflight or encoding.",
+  "independent_audit": "reports/bridge_training_coverage_analysis_207348/analysis.json",
+  "result_archive_sha256": "aa0491cb937bfa9de166e8e5bab8e09b093d9d9d025db1552a876c014af25f57"
+}

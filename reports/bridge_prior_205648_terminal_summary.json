@@ -1,0 +1,32 @@
+{
+  "source": "User-pasted Slurm accounting and final stdout; not independently audited result files",
+  "job_id": 205648,
+  "preflight_job_id": 205618,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:37:00",
+  "node": "gpu-a6000-1",
+  "updates": 8192,
+  "reported_train": {
+    "path_position_mm": 1.4186139404773712,
+    "path_rotation_deg": 0.6321845650672913,
+    "pose_fit_gate": true
+  },
+  "reported_development": {
+    "path_position_mm": 71.84571266174316,
+    "path_position_cm": 7.184571266174316,
+    "path_rotation_deg": 16.697120666503906
+  },
+  "existing_references": {
+    "static_position_cm": 8.21232607389037,
+    "static_rotation_deg": 15.098500432102608,
+    "original_202278_position_cm": 8.349126682028293,
+    "original_202278_rotation_deg": 15.256048338593287,
+    "state_only_position_cm": 6.279815835014465
+  },
+  "reported_rotation_meets_frozen_candidate_screen": false,
+  "full_artifacts_downloaded": false,
+  "independently_recomputed": false,
+  "per_episode_improvement_known": false,
+  "provisional_verdict": "Position improves against static and old DDPM; rotation worsens, and position remains worse than fixed state prior. Frozen overall candidate screen is not satisfied by reported means. No extra training; retrieve small artifacts for audit."
+}

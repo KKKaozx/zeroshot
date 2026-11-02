@@ -1,0 +1,32 @@
+{
+  "status": "draft_not_a_training_entry_or_final_protocol",
+  "goal": "Same-task Push-T unseen-initial-condition closed-loop frontend comparison; CLIP frozen",
+  "resource_reference": "210763",
+  "formal_training_authorized_by_this_file": false,
+  "train_pool": {"episodes": 90, "windows": 10726, "reference": "210690 author_recipe_counts train_episode_ids"},
+  "common_initial_backend": "fresh author initialization, no pretrained backend loaded",
+  "normalizer": "train90 frames only in both groups",
+  "proposed_budget": {
+    "native_first_checkpoint_updates": 20000,
+    "native_upper_cap_updates": 84168,
+    "project_updates": "match the predeclared native competence checkpoint, independent of project scores",
+    "resume": "continue saved optimizer/scheduler/RNG, no reinitialization or duplicate completed updates",
+    "reference_training_gpu_hours_max_combined": 36.18943650231542,
+    "cost_exclusions": "cache creation, I/O/logging/checkpointing, evaluation, queue time"
+  },
+  "proposed_reference_competence_gate": {
+    "development_mean_score_at_least": 0.8,
+    "development_full_reward_episode_fraction_at_least": 0.5,
+    "full_reward_definition": "episode max normalized overlap reward equals1, not robot grasp success",
+    "if_native_cap_fails": "stop module attribution; do not run/tune a project family against an unestablished reference"
+  },
+  "proposed_development_env_seeds": {"start": 5000000, "count": 20},
+  "proposed_final_env_seeds": {"start": 5100000, "count": 50, "access": "once after locking both models and the budget"},
+  "separate_wiring_seed": 20261018,
+  "not_yet_locked": [
+    "exact common sample/noise plans and verification against native loss",
+    "learning-rate schedule horizon and complete resume/EMA semantics",
+    "paired evaluation random seeds, checkpoint criterion and uncertainty reporting"
+  ],
+  "zero_shot_or_grasp_claim_allowed": false
+}

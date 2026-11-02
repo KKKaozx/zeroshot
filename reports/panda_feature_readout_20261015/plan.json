@@ -1,0 +1,111 @@
+{
+  "stage": "train_feature_linear_readout",
+  "source_sha256": {
+    "reports\\panda_initial_approach_probe_20261015\\outputs.npz": "4fd413806b667a4cf06edf85a53616eb73ba28970811e89f5de7cd8f1cc5e8b9",
+    "reports\\panda_initial_approach_probe_20261015\\plan.json": "922a8071f38e6d71d4745d1433d1ee1b8d3c3624ae0858bec678777abe42e519",
+    "reports\\panda_initial_only_fit_20261015\\final_train_predictions.npz": "3455ae1e4c543f95488de815549534f3146a147f2bf695c35a33c435f4f63f5c",
+    "reports\\panda_initial_only_fit_20261015\\plan.json": "c2ede788db32ec5fbe1f7b956768ddee57c2c4b44006ac86655b203c92d7c40c",
+    "reports\\panda_initial_only_fit_20261015\\reload_report.json": "e02782b40d4bddb1df01dccd97b51aaafe351e0614b6b8c613ff3c4bbe4403ea"
+  },
+  "entry_sha256": "9843eefb28977cd257f1b4efe02d88f694d33e5edb811e6647ddfe6ec7a7170e",
+  "selection": [
+    {
+      "episode": "xy_0_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_0_3",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_1_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_3",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_2_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_0",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_3_4",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_1",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_2",
+      "start": 0,
+      "split": "train"
+    },
+    {
+      "episode": "xy_4_3",
+      "start": 0,
+      "split": "train"
+    }
+  ],
+  "ridge_lambda": 0.001,
+  "target": "16 future tool-relative XYZ values in meters; target data never enters input features",
+  "feature_definitions": {
+    "clip_pooled": ".5*(saved frozen CLIP CLS + saved patch-token mean), before Adapter",
+    "adapter_mixed": "Saved1024D output from original8192-update model",
+    "adapter_initial_only": "Saved1024D output from1024-update initial-stage capacity check"
+  },
+  "algorithm": "Centered ridge, scalar total-variance normalization on training fold, fixed lambda1e-3, no search",
+  "validation": "Leave1 of16 original training positions out from the auxiliary readout fit; not untouched policy generalization",
+  "negative_control": "Within each training fold rotate feature rows by7 while preserving label order; omitted label stays excluded",
+  "duplicate_review": "Prior Bridge cosine nearest-neighbor and Panda image swaps do not compare these3 representations with the same linear readout",
+  "stop": "One fixed readout, no lambda/model/feature search after results",
+  "neural_training_updates": 0,
+  "model_inference": false,
+  "images_reencoded": false,
+  "development_used": false,
+  "test_used": false,
+  "storage": "Small numerical predictions/plots only; no checkpoints or downloads"
+}

@@ -1,0 +1,428 @@
+ (https://raw.githubusercontent.com/rail-berkeley/bridge_data_robot/main/widowx_envs/widowx_envs/base/robot_base_env.py)
+citeturn19view0 [wordlim: 200] Crawled: yesterday; Content type: text/plain; Source: open({"ref_id":"https://raw.githubusercontent.com/rail-berkeley/bridge_data_robot/main/widowx_envs/widowx_envs/base/robot_base_env.py","lineno":null}); Total lines: 425
+L0: #! /usr/bin/python3
+L1: 
+L2: from widowx_envs.control_loops import Environment_Exception
+L3: import time
+L4: from widowx_envs.base.base_env import BaseEnv
+L5: from widowx_envs.utils import transformation_utils as tr
+L6: import numpy as np
+L7: from widowx_envs.utils.exceptions import Image_Exception
+L8: import copy
+L9: from widowx_envs.utils import AttrDict
+L10: # Rospkg lib
+L11: import rospy
+L12: from multicam_server.topic_utils import IMTopic
+L13: from multicam_server.camera_recorder import CameraRecorder
+L14: from widowx_controller.widowx_controller import WidowX_Controller
+L15: from widowx_controller.widowx_controller import publish_transform
+L16: 
+L17: import logging
+L18: import json
+L19: from gym import spaces
+L20: 
+L21: from widowx_envs.utils import read_yaml_file
+L22: import os
+L23: from widowx_envs.utils.exceptions import Environment_Exception
+L24: def pix_resize(pix, target_width, original_width):
+L25:     return np.round((copy.deepcopy(pix).astype(np.float32) *
+L26:               target_width / float(original_width))).astype(np.int64)
+L27: 
+L28: class RobotBaseEnv(BaseEnv):
+L29:     """
+L30:     Inherited from abstract class BaseEnv
+L31:     """
+L32:     def __init__(self, env_params):
+L33:         self._hp = self._default_hparams()
+L34:         self._override_defaults(env_params)
+L35:         self.savedir = None
+L36:         logging.info('initializing environment for {}'.format(self._hp.robot_name))
+L37:         self._robot_name = self._hp.robot_name
+L38:         self._setup_robot()
+L39: 
+L40:         self._obs_tol = self._hp.OFFSET_TOL
+L41:         assert (self._hp.gripper_attached == 'default' and not self._hp.continuous_gripper) or self._hp.gripper_attached != 'default', 'If gripper_attached == \'default\', continuous_gripper has to be False'
+L42:         self._controller = self._hp.robot_controller(
+L43:             self._robot_name,
+L44:             self._hp.print_debug,
+L45:             gripper_attached=self._hp.gripper_attached,
+L46:             gripper_params=self._hp.gripper_params,
+L47:             normal_base_angle=self._hp.workspace_rotation_angle_z)
+L48:         logging.getLogger('robot_logger').info('---------------------------------------------------------------------------')
+L49:         for name, value in self._hp.items():
+L50:             logging.getLogger('robot_logger').info('{}= {}'.format(name, value))
+L51:         logging.getLogger('robot_logger').info('---------------------------------------------------------------------------')
+L52:         self._cameras = [CameraRecorder(t, False, False) for t in self._hp.camera_topics]
+L53:         self._camera_info = [c.camera_info for c in self._cameras]
+L54:         if "depth_camera_topics" in self._hp:
+L55:             print("depth camera topics", self._hp.depth_camera_topics)
+L56:             self._depth_cameras = [CameraRecorder(t, False, False) for t in self._hp.depth_camera_topics]
+L57:             self._depth_camera_info = [c.camera_info for c in self._depth_cameras]
+L58:         else:
+L59:             self._depth_cameras = []
+L60:             self._depth_camera_info = []
+L61: 
+L62:         self._controller.open_gripper(True)
+L63:         if len(self._cameras) > 1:
+L64:             first_cam_dim = (self._cameras[0].img_height, self._cameras[1].img_width)
+L65:             assert all([(c.img_height, c.img_width) == first_cam_dim for c in self._cameras[1:]]), \
+L66:                 'Camera image streams do not match)'
+L67:         if self._cameras:
+L68:             self._height, self._width = self._cameras[0].img_height, self._cameras[0].img_width
+L69:         if len(self._cameras) == 1:
+L70:             self._cam_names = ['front']
+L71:         elif len(self._cameras) == 2:
+L72:             self._cam_names = ['front', 'left']
+L73:         else:
+L74:             self._cam_names = ['cam{}'.format(i) for i in range(len(self._cameras))]
+L75: 
+L76:         self._reset_counter, self._previous_target_qpos = 0, None
+L77: 
+L78:         if not self._hp.start_at_current_pos:
+L79:             self._controller.move_to_neutral(duration=3)
+L80:         self.action_space = spaces.Box(
+L81:             np.asarray([-0.05, -0.05, -0.05, -0.25, -0.25, -0.25, 0.]),
+L82:             np.asarray([0.05, 0.05, 0.05, 0.25, 0.25, 0.25, 1.0]),
+L83:             dtype=np.float32)
+L84:         if self._hp.action_mode == '3trans':
+L85:             self._adim = self._base_adim = 4
+L86:             self._sdim = self._base_sdim = 4
+L87:             self.action_space.low = np.concatenate([self.action_space.low[:3], np.array([self.action_space.low[-1]])])
+L88:             self.action_space.high = np.concatenate([self.action_space.high[:3], np.array([self.action_space.high[-1]])])
+L89:         elif self._hp.action_mode == '3trans1rot':
+L90:             self._adim = self._base_adim = 5
+L91:             self._sdim = self._base_sdim = 5
+L92:             self.action_space.low = np.concatenate([self.action_space.low[:3], self.action_space.low[-2:]])
+L93:             self.action_space.high = np.concatenate([self.action_space.high[:3], self.action_space.high[-2:]])
+L94:         elif self._hp.action_mode == '3trans3rot':
+L95:             self._adim = self._base_adim = 7
+L96:             self._sdim = self._base_sdim = 7
+L97:         else:
+L98:             raise NotImplementedError('action mode {} not supported!'.format(self._hp.action_mode))
+L99:         self.time_for_get_obs = 0.08  # measured empirically, might need to be adjusted.
+L100: 
+L101:     def controller(self):
+L102:         """Public method to access the controller"""
+L103:         if self._controller is None:
+L104:             raise NotImplementedError('controller not implemented')
+L105:         # self._reset_previous_qpos()  # TODO (YL) check if this is necessary
+L106:         return self._controller
+L107:     def _default_hparams(self):
+L108:         default_dict = {'robot_name': None,
+L109:                         'robot_controller': WidowX_Controller,
+L110:                         'gripper_attached': 'default',
+L111:                         'camera_topics': [IMTopic('/cam0/image_raw', flip=True)],
+L112:                         'start_at_neutral': False,
+L113:                         'start_at_current_pos': False,
+L114:                         'OFFSET_TOL': 0.1,
+L115:                         'lower_bound_delta': [0., 0., 0., 0., 0.],
+L116:                         'upper_bound_delta': [0., 0., 0., 0., 0.],
+L117:                         'print_debug': False,
+L118:                         'move_duration': 0.3,
+L119:                         'action_clipping': 'xyz',
+L120:                         'override_workspace_boundaries': None,
+L121:                         'resetqpos_after_every_step': False,
+L122:                         'absolute_grasp_action': True,
+L123:                         'continuous_gripper': True,
+L124:                         'action_mode': '3trans3rot',
+L125:                         'start_state': [],
+L126:                         'wait_time': 0,
+L127:                         'adaptive_wait': True,
+L128:                         'workspace_rotation_angle_z': 0,
+L129:                         'wait_until_gripper_pose_reached': False,
+L130:                         'catch_environment_except': False,
+L131:                         'gripper_params': AttrDict(
+L132:                             des_pos_max=1,
+L133:                             des_pos_min=0,
+L134:                         )
+L135:         }
+L136:         parent_params = super(RobotBaseEnv, self)._default_hparams()
+L137:         parent_params.update(default_dict)
+L138:         return parent_params
+L139:     def _setup_robot(self):
+L140:         if self._hp.override_workspace_boundaries is not None:
+L141:             self._low_bound = np.array(self._hp.override_workspace_boundaries[0])
+L142:             self._high_bound = np.array(self._hp.override_workspace_boundaries[1])
+L143:         else:
+L144:             config_file_path = '/'.join(__file__.split('/')[:-1]) + '/robot_configs.json'
+L145:             error = False
+L146:             try:
+L147:                 robot_configs = json.load(open(config_file_path, 'r'))
+L148:                 self._high_bound = np.array(robot_configs[self._robot_name]['bound'][1])
+L149:                 self._low_bound = np.array(robot_configs[self._robot_name]['bound'][0])
+L150:             except ValueError:
+L151:                 logging.error("Did you fill out the config file (stored at {})?".format(config_file_path))
+L152:             except KeyError:
+L153:                 logging.error("Robot {} not valid! Is it in the config file (stored at{})? It may be not supported yet.".format(self._robot_name, config_file_path))
+L154:             if error:
+L155:                 exit(1)
+L156:         self._high_bound += np.array(self._hp.upper_bound_delta, dtype=np.float64)
+L157:         self._low_bound += np.array(self._hp.lower_bound_delta, dtype=np.float64)
+L158:         self.rotate_workspace()
+L159:     def rotate_workspace(self):
+L160:         points = np.c_[np.array([self._low_bound[:3], self._high_bound[:3]]), [1, 1]]
+L161:         transf_matrix = tr.RpToTrans(tr.eulerAnglesToRotationMatrix([0, 0, self._hp.workspace_rotation_angle_z]), [0, 0, 0])
+L162:         rotated_points = np.dot(transf_matrix, points.T).T[..., :3]
+L163:         self._low_bound[:3] = rotated_points.min(axis=0)
+L164:         self._high_bound[:3] = rotated_points.max(axis=0)
+L165:     def _next_qpos(self, action):
+L166:         prev_transform, prev_gripperstate = self.get_target_state()
+L167:         delta_transform, grasp_action = tr.action2transform_local(action, self._controller.get_cartesian_pose()[:3])
+L168:         next_transform = delta_transform.dot(prev_transform)
+L169:         if self._hp.absolute_grasp_action:
+L170:             new_gripperstate = np.array(grasp_action)[None]
+L171:         else:
+L172:             new_gripperstate = np.clip(prev_gripperstate + grasp_action, self.action_space.low[-1], self.action_space.high[-1])
+L173:         if self._hp.action_clipping == 'xyz':
+L174:             new_next_transform = copy.deepcopy(next_transform)
+L175:             new_next_transform[:3, 3] = np.clip(next_transform[:3, 3], self._low_bound[:3], self._high_bound[:3])
+L176:             if not np.all(new_next_transform == next_transform):
+L177:                 logger = logging.getLogger('robot_logger')
+L178:                 logger.info("action clipped!")
+L179:                 logger.info('delta {}'.format(next_transform[:3, 3] - new_next_transform[:3, 3]))
+L180:                 print("action clipped!")
+L181:             # print(f"transform: ", next_transform[:3, 3])
+L182:             # print(f"new_transform: ", new_next_transform[:3, 3])
+L183:             next_transform = new_next_transform
+L184:         return next_transform, new_gripperstate
+L185:     def get_target_state(self):
+L186:         return tr.state2transform(self._previous_target_qpos, self._controller.default_rot)
+L187:     def step(self, action, tstamp_return_obs=None, blocking=True):
+L188:         """
+L189:         Applies the action and steps simulation
+L190:         :param action: action at time-step
+L191:         :param tstamp_return_obs: time-step when to return oberservations
+L192:         :return: obs dict where:
+L193:                   -each key is an observation at that step
+L194:                   -keys are constant across entire datastep (e.x. every-timestep has 'state' key)
+L195:                   -keys corresponding to numpy arrays should have constant shape every timestep (for caching)
+L196:                   -images should be placed in the 'images' key in a (ncam, ...) array
+L197:         """
+L198:         assert action.shape[0] == self._base_adim, "Action should have shape ({},) but has shape {}".format(self._base_adim, action.shape)
+L199:         action = np.clip(action, self.action_space.low, self.action_space.high)
+L200:         if self._hp.action_mode == '3trans1rot':
+L201:             action = np.concatenate([action[:3], np.zeros(2), action[-2:]])  # insert zeros for pitch and roll
+L202:         if self._hp.action_mode == '3trans':
+L203:             action = np.concatenate([action[:3], np.zeros(3), np.array([action[-1]])])  # insert zeros for pitch, roll, yaw
+L204:         new_transform, new_gripperstate = self._next_qpos(action)
+L205: 
+L206:         # assume that the gripper open state is 1. and the close state is 0.
+L207: 
+L208:         if self._hp.continuous_gripper:
+L209:             self._controller.set_continuous_gripper_position(new_gripperstate)
+L210:         else:
+L211:             gripper_midpoint = 0.5
+L212:             if new_gripperstate < gripper_midpoint:
+L213:                 self._controller.close_gripper()
+L214:             else:
+L215:                 self._controller.open_gripper()
+L216:         t0 = time.time()
+L217:         publish_transform(new_transform, 'commanded_transform')
+L218: 
+L219:         self.move_except = False
+L220:         if self._hp.catch_environment_except:
+L221:             try:
+L222:                 self._controller.move_to_eep(new_transform, duration=self._hp.move_duration, blocking=blocking)
+L223:             except:
+L224:                 self.move_except = True
+L225:         else:
+L226:             self._controller.move_to_eep(new_transform, duration=self._hp.move_duration, blocking=blocking)
+L227:         if self._hp.wait_until_gripper_pose_reached:
+L228:             self._controller.wait_until_gripper_position_reached()
+L229:         logging.getLogger('robot_logger').info('time to set pos'.format(time.time() - t0))
+L230:         self._previous_target_qpos = tr.transform2state(new_transform, new_gripperstate, self._controller.default_rot)
+L231:         if self._hp.resetqpos_after_every_step:
+L232:             self._reset_previous_qpos()  # this can cause accumulating errors
+L233:         time.sleep(self._hp.wait_time)
+L234: 
+L235:         if tstamp_return_obs is None:
+L236:             return self.current_obs() # or None?
+L237:         if self._hp.adaptive_wait:
+L238:             t1 = time.time()
+L239:             self.adaptive_wait(tstamp_return_obs - self.time_for_get_obs * 1.1)
+L240:             # print('adaptive wait for ', time.time() - t1)
+L241:         obs = self.current_obs()
+L242:         return obs
+L243: 
+L244:     def adaptive_wait(self, time_stamp):
+L245:         """
+L246:         Args:
+L247:             time_stamp:  wait until timestamp
+L248:         """
+L249:         while time.time() < time_stamp:
+L250:             time.sleep(0.001)
+L251:     def get_full_state(self):
+L252:         eep = self._controller.get_cartesian_pose(matrix=True)
+L253:         return tr.transform2state(eep, self._controller.get_gripper_position(), self._controller.default_rot)
+L254: 
+L255:     def current_obs(self):
+L256:         obs = {}
+L257:         t0 = time.time()
+L258:         j_angles, j_vel, eep = self._controller.get_state()
+L259:         obs['joint_effort'] = self._controller.get_joint_effort()
+L260: 
+L261:         obs['qpos'] = j_angles
+L262:         if j_vel is not None:
+L263:             obs['qvel'] = j_vel
+L264:         full_state = self.get_full_state()
+L265:         obs['full_state'] = full_state
+L266:         if self._hp.action_mode == '3trans3rot':
+L267:             obs['state'] = full_state
+L268:         elif self._hp.action_mode == '3trans':
+L269:             if not (abs(full_state[3]) < 0.2 and abs(full_state[4]) < 0.2):
+L270:                 print("out of plane rotation detected!")
+L271:                 raise Environment_Exception
+L272:             obs['state'] = np.concatenate([full_state[:3], np.array(full_state[6:])])  # remove roll and pitch since they are (close to) zero
+L273:         elif self._hp.action_mode == '3trans1rot':
+L274:             if not (abs(full_state[3]) < 0.2 and abs(full_state[4]) < 0.2):
+L275:                 print("out of plane rotation detected!")
+L276:                 raise Environment_Exception
+L277:             obs['state'] = np.concatenate([full_state[:3], full_state[5:]])  # remove roll and pitch since they are (close to) zero
+L278:         obs['desired_state'] = self._previous_target_qpos
+L279:         obs['time_stamp'] = rospy.get_time()
+L280:         obs['eef_transform'] = self._controller.get_cartesian_pose(matrix=True)
+L281:         self._last_obs = copy.deepcopy(obs)
+L282: 
+L283:         obs['images'] = self.render()
+L284:         if self._depth_cameras:
+L285:             obs['depth_images'] = self.depth_render()
+L286:         logging.getLogger('robot_logger').info('time for rendering {}'.format(time.time() - t0))
+L287:         obs['high_bound'], obs['low_bound'] = copy.deepcopy(self._high_bound), copy.deepcopy(self._low_bound)
+L288: 
+L289:         obs['env_done'] = False
+L290:         obs['t_get_obs'] = time.time() - t0
+L291:         return obs
+L292: 
+L293:     def _move_to_state(self, target_xyz, target_zangle, duration=1.5):
+L294:         self._controller.move_to_state(target_xyz, target_zangle, duration=duration)
+L295:     def _reset_previous_qpos(self):
+L296:         rospy.sleep(0.2)  # TODO (YL) check if this is necessary
+L297:         self._previous_target_qpos = self.get_full_state()
+L298:         # don't track orientation of axes which are not controlled
+L299:         if self._hp.action_mode == '3trans1rot':
+L300:             self._previous_target_qpos[3:5] = np.zeros(2)
+L301:         elif self._hp.action_mode == '3trans':
+L302:             self._previous_target_qpos[3:6] = np.zeros(3)
+L303:     def _end_reset(self):
+L304:         self._reset_previous_qpos()
+L305:         obs = self.current_obs()
+L306:         return obs
+L307: 
+L308:     def move_to_neutral(self, duration=2.):
+L309:         self._controller.move_to_neutral(duration)
+L310:         self._reset_previous_qpos()
+L311:     def reset(self, itraj=None, reset_state=None):
+L312:         """
+L313:         Resets the environment and returns initial observation
+L314:         :return: obs dict (look at step(self, action) for documentation)
+L315:         """
+L316:         self._controller.open_gripper(True)
+L317:         if self._hp.start_at_current_pos:
+L318:             return self._end_reset()
+L319: 
+L320:         self.move_to_neutral()
+L321:         if self._hp.start_at_neutral:
+L322:             return self._end_reset()
+L323:         if self._hp.start_state:
+L324:             start_state = np.array(self._hp.start_state)
+L325:             xyz = np.array(start_state[:3])
+L326:             theta = start_state[3]
+L327:             self._move_to_state(xyz, theta, 2.)
+L328:         else:
+L329:             rand_xyz = np.random.uniform(self._low_bound[:3], self._high_bound[:3])
+L330:             rand_zangle = np.random.uniform(self._low_bound[3], self._high_bound[3])
+L331:             self._move_to_state(rand_xyz, rand_zangle, 2.)
+L332:         time.sleep(self._hp.wait_time)
+L333:         return self._end_reset()
+L334:     def valid_rollout(self):
+L335:         """
+L336:         Checks if the environment is currently in a valid state
+L337:         Common invalid states include:
+L338:             - object falling out of bin
+L339:             - mujoco error during rollout
+L340:         :return: bool value that is False if rollout isn't valid
+L341:         """
+L342:         return True
+L343: 
+L344:     def render(self):
+L345:         """ Grabs images form cameras.
+L346:         If returning multiple images asserts timestamps are w/in OBS_TOLERANCE, and raises Image_Exception otherwise
+L347:         - dual: renders both left and main cameras
+L348:         - left: renders only left camera
+L349:         - main: renders only main (front) camera
+L350:         :param mode: Mode to render with (dual by default)
+L351:         :return: uint8 numpy array with rendering from sim
+L352:         """
+L353:         if not self._cameras:
+L354:             return []
+L355:         cam_imgs = self._render_from_camera(self._cameras)
+L356:         images = np.zeros((self.ncam, self._height, self._width, 3), dtype=np.uint8)
+L357:         for c, img in enumerate(cam_imgs):
+L358:             images[c] = img[:, :, ::-1]
+L359: 
+L360:         return images
+L361: 
+L362:     def depth_render(self):
+L363:         if not self._depth_cameras:
+L364:             return []
+L365:         cam_imgs = self._render_from_camera(self._depth_cameras)
+L366:         images = np.zeros((len(cam_imgs), cam_imgs[0].shape[0], cam_imgs[0].shape[1]), dtype=np.uint16)
+L367:         for c, img in enumerate(cam_imgs):
+L368:             images[c] = img
+L369: 
+L370:         return images
+L371: 
+L372: 
+L373:     def _render_from_camera(self, cameras):
+L374:         time_stamps = []
+L375:         cam_imgs = []
+L376:         # cur_time = rospy.get_time()
+L377:         cur_time = rospy.Time.now()
+L378:         for recorder in cameras:
+L379:             stamp, image = recorder.get_image()
+L380:             time_diff = (cur_time - stamp).to_sec()
+L381:             logging.getLogger('robot_logger').info("Current-Camera time difference {}".format(time_diff))
+L382:             if abs(time_diff) > 10 * self._obs_tol:    # no camera ping in half second => camera failure
+L383:                 logging.getLogger('robot_logger').error("DeSYNC - no ping in more than {} seconds!".format(10 * self._obs_tol))
+L384:                 # import pdb; pdb.set_trace()
+L385:                 raise Image_Exception
+L386:             time_stamps.append(stamp)
+L387:             cam_imgs.append(image)
+L388: 
+L389:         return cam_imgs
+L390:     @property
+L391:     def adim(self):
+L392:         """
+L393:         :return: Environment's action dimension
+L394:         """
+L395:         return self._adim
+L396: 
+L397:     @property
+L398:     def sdim(self):
+L399:         """
+L400:         :return: Environment's state dimension
+L401:         """
+L402:         return self._sdim
+L403: 
+L404:     @property
+L405:     def ncam(self):
+L406:         """
+L407:         Sawyer environment has ncam cameras
+L408:         """
+L409:         return len(self._cameras)
+L410:     @property
+L411:     def camera_info(self):
+L412:         return self._camera_info
+L413: 
+L414:     @property
+L415:     def depth_camera_info(self):
+L416:         return self._depth_camera_info
+L417: 
+L418: 
+L419:     @property
+L420:     def num_objects(self):
+L421:         """
+L422:         :return: Dummy value for num_objects (used in general_agent logic)
+L423:         """
+L424:         return 0
+

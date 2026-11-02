@@ -1,0 +1,36 @@
+{
+  "tests_passed": 4,
+  "test_source_sha256": "b63a8d3e39108f84a751793d9b7c7d844f314e6dcd84866f28c6b408d7311624",
+  "coverage": [
+    "Actual check-only admission entry with exact source metadata/byte binding, altered learned identity rejected; no CUDA init",
+    "Actual main/prepare/run/saved-verifier with real8Bridge numeric labels, CPU toy frozen encoders/adapter/decoder,512updates and actual original100step sampler",
+    "Native versus cached loss/all learned gradients/actual diffusion noise/RNG exact before any optimizer call; first actual update matches probe",
+    "Altered cached feature rejected before optimizer state changes",
+    "Original AdamW groups nonempty, pose port learned, frozen encoder gradients absent, same fixed8batch each update and65536LR horizon",
+    "One diagnostic policy saved and reloaded on CPU, all512history/noise steps and output metrics independently recomputed; wrong completed count rejected",
+    "Predeclared four-metric/per-window fit gate accepts exact numeric targets and rejects static"
+  ],
+  "package": {
+    "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\oxe_fixed8_learnability_v1.zip",
+    "bytes": 25859,
+    "sha256": "79fe529afe994d7b3b0671a13725b82a23f8116e930110a56eea28b9f82e0c2b",
+    "members": 14,
+    "source_models_or_images_included": false,
+    "python_sources_compiled": true,
+    "shell_checks": "Static LF/header only, Bash not executed locally",
+    "new_cluster_submissions": 0,
+    "actual_cuda_diagnostic_executed": false,
+    "tests": "Recorded separately after execution"
+  },
+  "actual_frozen_model_loaded": false,
+  "actual_cuda_diagnostic_run": false,
+  "new_cluster_submissions": 0,
+  "python_sources_compiled": true,
+  "shell_execution": "Static LF/header only, no local Bash execution",
+  "large_real_models_or_dataset_files_added": false,
+  "prior_bundles_preserved": true,
+  "scope": "CPU toy integration qualifies control flow, not real CUDA cache identity or physical/generalization performance",
+  "subsequent_cluster_failure": "reports/oxe_fixed8_failure_233339/analysis.json",
+  "actual_loading_guard_coverage_gap_identified": true,
+  "followup_regression": "reports/oxe_fixed8_lr_repair_validation_20261029.json"
+}

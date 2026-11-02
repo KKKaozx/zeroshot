@@ -1,0 +1,137 @@
+{
+  "scope": "CPU suffix planning only; not performance or full-pool completion",
+  "start_update": 10240,
+  "updates_each": 4096,
+  "cycle_reset_at_intervention": true,
+  "coverage": {
+    "replacement": {
+      "Bridge": {
+        "windows": 10352,
+        "presentations": 8287,
+        "mean_presentations": 0.8005216383307573,
+        "never_sampled": 4603,
+        "sampled_fraction": 0.5553516228748068,
+        "min": 0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 2.0,
+        "max": 5,
+        "cumulative_unseen_after_intervention": 635
+      },
+      "Language Table": {
+        "windows": 12214,
+        "presentations": 8091,
+        "mean_presentations": 0.6624365482233503,
+        "never_sampled": 6328,
+        "sampled_fraction": 0.48190600949729817,
+        "min": 0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "p95": 2.0,
+        "max": 5,
+        "cumulative_unseen_after_intervention": 1168
+      },
+      "BC-Z": {
+        "windows": 95796,
+        "presentations": 8081,
+        "mean_presentations": 0.08435634055701699,
+        "never_sampled": 88036,
+        "sampled_fraction": 0.08100546995699194,
+        "min": 0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "max": 3,
+        "cumulative_unseen_after_intervention": 71061
+      },
+      "Fractal": {
+        "windows": 27450,
+        "presentations": 8309,
+        "mean_presentations": 0.30269581056466305,
+        "never_sampled": 20290,
+        "sampled_fraction": 0.26083788706739525,
+        "min": 0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 4,
+        "cumulative_unseen_after_intervention": 9506
+      }
+    },
+    "cycle": {
+      "Bridge": {
+        "windows": 10352,
+        "presentations": 8287,
+        "mean_presentations": 0.8005216383307573,
+        "never_sampled": 2065,
+        "sampled_fraction": 0.8005216383307573,
+        "min": 0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1,
+        "cumulative_unseen_after_intervention": 302
+      },
+      "Language Table": {
+        "windows": 12214,
+        "presentations": 8091,
+        "mean_presentations": 0.6624365482233503,
+        "never_sampled": 4123,
+        "sampled_fraction": 0.6624365482233503,
+        "min": 0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1,
+        "cumulative_unseen_after_intervention": 790
+      },
+      "BC-Z": {
+        "windows": 95796,
+        "presentations": 8081,
+        "mean_presentations": 0.08435634055701699,
+        "never_sampled": 87715,
+        "sampled_fraction": 0.08435634055701699,
+        "min": 0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "max": 1,
+        "cumulative_unseen_after_intervention": 70876
+      },
+      "Fractal": {
+        "windows": 27450,
+        "presentations": 8309,
+        "mean_presentations": 0.30269581056466305,
+        "never_sampled": 19141,
+        "sampled_fraction": 0.30269581056466305,
+        "min": 0,
+        "p25": 0.0,
+        "median": 0.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "max": 1,
+        "cumulative_unseen_after_intervention": 9019
+      }
+    }
+  },
+  "source_cycle_metadata": {
+    "seed": 42,
+    "source_rng_seed_sequence": "[seed,20261029,source_index]",
+    "cycles_started": {
+      "Bridge": 1,
+      "Language Table": 1,
+      "BC-Z": 1,
+      "Fractal": 1
+    },
+    "uses_labels_or_predictions_for_selection": false,
+    "model_rng_stream_identity_claimed": false,
+    "rng_warning": "Different text batch lengths may change dropout/noise RNG consumption in a future actual run; no forward or RNG equivalence tested here"
+  }
+}

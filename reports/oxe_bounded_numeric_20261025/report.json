@@ -1,0 +1,78 @@
+{
+  "complete": true,
+  "frozen_train_records": 10340,
+  "eligible_train_records": 8918,
+  "eligible_train_windows": 146287,
+  "by_source": {
+    "Bridge": {
+      "records": 1151,
+      "windows": 10352,
+      "valid_future_targets": 130668,
+      "unknown_current_gripper_windows": 1376,
+      "position_components": 392004,
+      "position_components_outside_normalized3": 127
+    },
+    "Language Table": {
+      "records": 2565,
+      "windows": 12214,
+      "valid_future_targets": 122976,
+      "unknown_current_gripper_windows": 12214,
+      "position_components": 245952,
+      "position_components_outside_normalized3": 3185
+    },
+    "BC-Z": {
+      "records": 2739,
+      "windows": 96271,
+      "valid_future_targets": 1463661,
+      "unknown_current_gripper_windows": 2739,
+      "position_components": 4390983,
+      "position_components_outside_normalized3": 942
+    },
+    "Fractal": {
+      "records": 2463,
+      "windows": 27450,
+      "valid_future_targets": 365295,
+      "unknown_current_gripper_windows": 11040,
+      "position_components": 1095885,
+      "position_components_outside_normalized3": 36008
+    }
+  },
+  "excluded_reasons": {
+    "Bridge": {
+      "ValueError:prior_structure:empty_candidate_instruction": 429,
+      "ValueError:bridge_unresolved_nonbinary_reverse_scan": 9,
+      "ValueError:trajectory_too_short": 7
+    },
+    "Language Table": {
+      "ValueError:trajectory_too_short": 907
+    },
+    "BC-Z": {
+      "ValueError:trajectory_too_short": 54
+    },
+    "Fractal": {
+      "ValueError:trajectory_too_short": 16
+    }
+  },
+  "actual_first_tail_loader_probes": 17836,
+  "train_payload_bytes_read": 12190607015,
+  "source_validation_test_or_quarantine_numeric_records_read": 0,
+  "protected_bridge_records_interpreted": 0,
+  "pixels_decoded": false,
+  "model_loaded": false,
+  "training_updates": 0,
+  "physics_steps": 0,
+  "new_cluster_jobs": 0,
+  "numeric_eligibility_is_not_physical_unit_or_execution_qualification": true,
+  "roles_unchanged": true,
+  "frozen_role_manifest_sha256": "720682b2c28c5a2edd10c85f6ab12f32810564c7405a8ee9dbf3d76e42aa7595",
+  "formal_training_ready": false,
+  "elapsed_seconds": 125.93699999997625,
+  "script_sha256": "3c61a8e6f1b101caadd0a149dce4118ea687f4105b17f2eb4162b46196a078e9",
+  "parser_sha256": {
+    "dataset.py": "424e5d0610cf4822a96416d98cc5b655c580bdfc73047f3c815fa9c70c69c4dd",
+    "oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981",
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230"
+  },
+  "episode_eligibility_sha256": "2b5c74cbf9266f402b3b84f3e20d1eae3843a6b90db86231080f5468f5416b91",
+  "training_original_instructions_sha256": "9ce0a8e1c82c64324a4a3698fcb9c0add0fc4712f242c9bd4b56df9ef38a5034"
+}

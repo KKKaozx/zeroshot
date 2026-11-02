@@ -1,0 +1,12 @@
+{
+  "repair": "CPU-loaded normalizer tensors returned to destination device",
+  "original_protocol_unchanged": true,
+  "repair_contract_sha256": "84e7e7d4567006e0c10ceb751113bda6b012353bb0db4df03a51e2bc7b569cdb",
+  "restored_device_checks": [
+    {
+      "destination": "cuda:0",
+      "raw_and_ema_all_tensors_on_destination": true
+    }
+  ],
+  "failed_job_resumed": false
+}

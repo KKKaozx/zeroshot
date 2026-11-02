@@ -1,0 +1,27 @@
+{
+  "failed_job": 229016,
+  "preflight_job": 228978,
+  "script": "scripts\\cluster\\retry_bridge_dino_only_cuda_229016.sh",
+  "script_sha256": "895f56491fd0d48c5ae7f6e3ac90e5a51482ade10e3eebf7f7a2a554df2beabd",
+  "excludes_node_from_failed_job_accounting": true,
+  "pins_node_from_successful_preflight_accounting": true,
+  "requires_distinct_nodes": true,
+  "requires_old_failed_state": true,
+  "preserves_failed_job_marker": true,
+  "requires_no_failed_output_directory": true,
+  "requires_cuda_failure_log_before_progress": true,
+  "gpu_type_unchanged": "a6000",
+  "training_code_protocol_cache_unchanged": true,
+  "reexecutes_engineering_preflight": false,
+  "actual_retry_submitted": false,
+  "bash_execution_checked_locally": false,
+  "source_scope_checks_passed": true,
+  "user_reported_guard_message": "No distinct previously successful node confirmed; refusing to guess or change GPU model",
+  "retry_submitted": false,
+  "actual_node_names_not_yet_provided": true,
+  "next_required_read_only_evidence": [
+    "sacct exact job states and NodeList for228978 and229016",
+    "sinfo per-node GRES in cluster02"
+  ],
+  "interpretation": "Distinct-node guard stopped submission; does not establish all A6000 nodes are unusable or expose exact node names"
+}

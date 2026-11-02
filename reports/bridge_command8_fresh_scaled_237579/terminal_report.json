@@ -1,0 +1,45 @@
+{
+  "execution_complete": true,
+  "target_supervised": false,
+  "formal_matrix_admitted": false,
+  "zero_shot_transfer_proven": false,
+  "completed_updates": 8192,
+  "encoder_updates": 0,
+  "source_checkpoint_sha256": null,
+  "effective_action_representation": "bridge_controller_increment_pose8_candidate_v1",
+  "source_semantics_status": "Public collector-family hypothesis; exact cached0.0.1 exporter/config not recovered",
+  "automatic_rollout": false,
+  "automatic_following_action": false,
+  "initial_identity": {
+    "base": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+    "pose_port": "7948a6aa3df4da34f2147fa89554b4df5faac1842f7eb518422a179efaf21458"
+  },
+  "final_identity": {
+    "base": "2feb926fb2f381e5aa6e4c8b35f88af131f6754fe606030fd50c00652d61679a",
+    "pose_port": "33b1d49d2f09b621b7e56edd6e910bc717e6f0d48c79a3f6c66ada35ad7b8045"
+  },
+  "source_engineering_review_gate_passed": false,
+  "training_seconds": 2690.320553466212,
+  "policy_sha256": "ed06b14ba92cd54ba318ad9072933d71692f515e87f604a1d5c43f4a12166a45",
+  "source_learned_checkpoint_loaded": false,
+  "fresh_learned_initialization": true,
+  "max_current_pose_feature_abs_delta": 0.0,
+  "current_pose_feature_tolerance": 1e-06,
+  "peak_reserved_gib": 4.533203125,
+  "peak_scope": "After construction, includes zero guard/training/evaluation",
+  "program_elapsed_seconds": 2780.4273461811244,
+  "elapsed_scope": "After CPU admission, includes construction/guard/train/sample/policy save, before final verification/ZIP",
+  "constructor_config_scope": "Fresh architecture/frozen restoration template only; effective labels/scaling bound in explicit new contract",
+  "metrics": {
+    "train": {
+      "first_position_normalized": 0.21564401335296546,
+      "first_rotation_deg": 3.446082134563466,
+      "gate": false
+    },
+    "validation": {
+      "first_position_normalized": 0.2620962215304547,
+      "first_rotation_deg": 3.5454271599719736,
+      "gate": false
+    }
+  }
+}

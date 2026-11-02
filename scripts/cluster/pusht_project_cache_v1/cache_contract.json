@@ -1,0 +1,39 @@
+{
+  "stage": "once_only_frozen_train_feature_preparation",
+  "native_reference_job": 212158,
+  "matched_future_budget_updates": 84168,
+  "required_reference_files_sha256": {
+    "runs/pusht-float-data-210690/report.json": "c6f4f8f2e1e2de7118c92f497f3ad49d2a51031d5ec52895cb6031104bc49879",
+    "runs/pusht-front-resource-210763/report.json": "8abf8b546590b8b33ed8190c2381e8b919d987199808b69add0c6a6f0f9b44bb",
+    "runs/pusht-online-211193/report.json": "9030306a0e10c498659322ad3203336aeebce5555c5817dece0be58acca82942",
+    "runs/pusht-native84k-212158/development.json": "42a83f5c0afa24137f0f9598975e7ce7e60786fe777ff60dd17e7db39415a89d",
+    "runs/pusht-native84k-212158/extension_provenance.json": "54f620fa95792c82ecee0d98e8f848d1866362a8272ebeef6c30127033c26dff",
+    "runs/pusht-native84k-212158/latest.json": "9dfd8a0cf172ba192330327ae8268b1457d6e9d3ae2be0886786ea6007a8bdf5",
+    "runs/pusht-native84k-212158/startup_checks.json": "125803f6555468ec53b882f2d5847b469187dcf861bf6e60179f9528c53d4b2f"
+  },
+  "resource_tokens_sha256": "7082cba2b5c13548911acb93a57fe0427a3d167670c13b8ca582602a7283013a",
+  "raw_training_images_sha256": "7b05b0ca91d161bad12b2ac5eefe5b58ea7a98f1dfb730d404ed0ba02b842293",
+  "train_episodes": 90,
+  "windows": 10726,
+  "frames": 11356,
+  "visual_shape": [
+    11356,
+    257,
+    1024
+  ],
+  "visual_dtype": "float32",
+  "visual_data_bytes": 11954143232,
+  "minimum_free_bytes": 34359738368,
+  "feature_reference_tolerance": {
+    "atol": 0.0001,
+    "rtol": 1e-05
+  },
+  "frozen_clip": "existing211193 worker unchanged; both vision/text frozen, full model hash unchanged",
+  "data_reader": "Exact native TrainingData class, same raw-pixel hash and windows/normalizer input checks",
+  "train_features_only": true,
+  "training_updates": 0,
+  "new_data_download_or_package_install": false,
+  "development_or_final_scoring": false,
+  "automatic_training_submission": false,
+  "formal_training_entry_included": false
+}

@@ -1,0 +1,274 @@
+{
+  "job_id": 235095,
+  "source_job": 234100,
+  "source_trace_job": 235002,
+  "download_verified": true,
+  "archive_bytes": 82023,
+  "archive_sha256": "3607b528c45e6af2f68ee9ca14859902ffbd9a1cdf0099434c1c109b3fe6bc87",
+  "files_sha256": {
+    "report.json": "89e9da3bce55478c91578b065ae362037e49bdc310774969abbfb60bf7f5f83f",
+    "paired_inputs_outputs.npz": "04f3b90275457e1cac904ec1eb60ef4edc8f79630acb0a3360d88e2176514a04"
+  },
+  "original_verifier": {
+    "verified": true,
+    "source_native_t0_targets_masks_and_initial_gaussians_exact": true,
+    "teacher_input_formula_and_metrics_recomputed": true,
+    "optimizer_updates_reported": 0,
+    "weights_scope": "Source parameter identity and unchanged status are cluster-reported; weights not downloaded",
+    "automatic_following_action": false
+  },
+  "independent_scipy_angles_all_window_metrics_bootstraps_mse_agree": true,
+  "roles": {
+    "train": {
+      "windows": 8,
+      "rotation": {
+        "teacher_noisy_input": {
+          "mean_angle_deg": 4.576119111284692,
+          "per_window_angle_deg": [
+            4.406052130267381,
+            4.475666714293565,
+            5.166566995128407,
+            4.511142242469132,
+            4.6013534975227754,
+            4.413528492874526,
+            4.441479947351721,
+            4.593162870370024
+          ]
+        },
+        "teacher_denoised_output": {
+          "mean_angle_deg": 4.734010015333416,
+          "per_window_angle_deg": [
+            3.181444107114834,
+            8.422019352297141,
+            0.2526282948050598,
+            4.729595279454173,
+            7.178952146580446,
+            5.191875213751619,
+            4.451754932757558,
+            4.463810795906498
+          ]
+        },
+        "existing_native_raw_t0": {
+          "mean_angle_deg": 13.910977129429764,
+          "per_window_angle_deg": [
+            13.405592251170868,
+            45.85110146002373,
+            5.50069778236012,
+            6.304193527571468,
+            16.746075214965977,
+            8.70778886660039,
+            7.157670878436689,
+            7.614697054308869
+          ]
+        },
+        "identity": {
+          "mean_angle_deg": 11.093464322922266,
+          "per_window_angle_deg": [
+            8.492037110069052,
+            35.61835650736255,
+            0.062148157766721245,
+            6.805729142479972,
+            13.067057375475963,
+            10.470160413957668,
+            7.220862567915777,
+            7.011363308350428
+          ]
+        }
+      },
+      "comparisons": {
+        "teacher_noisy_input": {
+          "output_minus_reference_deg": 0.1578909040487247,
+          "paired8group_bootstrap95": [
+            -1.6396262028627884,
+            1.7667254118132678
+          ],
+          "windows_improved": 3,
+          "windows_worsened": 5,
+          "median_difference_deg": 0.11436401119543893
+        },
+        "existing_native_raw_t0": {
+          "output_minus_reference_deg": -9.176967114096346,
+          "paired8group_bootstrap95": [
+            -17.78349382605385,
+            -3.5944794166001923
+          ],
+          "windows_improved": 8,
+          "windows_worsened": 0,
+          "median_difference_deg": -4.381991570201916
+        },
+        "identity": {
+          "output_minus_reference_deg": -6.359454307588851,
+          "paired8group_bootstrap95": [
+            -12.626063082043093,
+            -2.286698786621139
+          ],
+          "windows_improved": 7,
+          "windows_worsened": 1,
+          "median_difference_deg": -4.023696417682134
+        }
+      },
+      "finite_three_draw_decomposition": {
+        "teacher_noisy_input": {
+          "raw_quaternion_component_mse": 0.0005901015463405934,
+          "three_draw_mean_residual_component_mse": 0.00022440639786627063,
+          "within_three_draw_variation_mse": 0.00036569514847432276,
+          "variation_fraction": 0.6197156247803691,
+          "mean_pairwise_sample_angle_deg": 6.26679779878587,
+          "scope": "Exact finite3-draw raw-component squared-error identity, not angular-error or gradient decomposition and not across-training-seed bias/variance"
+        },
+        "teacher_denoised_output": {
+          "raw_quaternion_component_mse": 0.0006142131594080061,
+          "three_draw_mean_residual_component_mse": 0.0006103072833548336,
+          "within_three_draw_variation_mse": 3.905876053172623e-06,
+          "variation_fraction": 0.006359153973414057,
+          "mean_pairwise_sample_angle_deg": 0.6060532046502844,
+          "scope": "Exact finite3-draw raw-component squared-error identity, not angular-error or gradient decomposition and not across-training-seed bias/variance"
+        }
+      },
+      "positions": {
+        "teacher_noisy_input": {
+          "window_equal_position_error_normalized": 0.03980904362689188
+        },
+        "teacher_denoised_output": {
+          "window_equal_position_error_normalized": 0.0609128259849925
+        }
+      },
+      "teacher_eval_pose_mse": {
+        "pose_mse_three_draw_mean_same_batch_denominator": 0.001246802156180743,
+        "xyz_contribution": 0.0008192752949591824,
+        "quaternion_contribution": 0.00042752686122156055
+      }
+    },
+    "validation": {
+      "windows": 8,
+      "rotation": {
+        "teacher_noisy_input": {
+          "mean_angle_deg": 4.563644140711425,
+          "per_window_angle_deg": [
+            4.581361240880639,
+            4.385103914379724,
+            4.51655173531092,
+            5.265924213659837,
+            4.2373825699352095,
+            4.012039446620918,
+            4.973368909876687,
+            4.537421095027458
+          ]
+        },
+        "teacher_denoised_output": {
+          "mean_angle_deg": 9.943482422795771,
+          "per_window_angle_deg": [
+            12.969828708447023,
+            11.418317062210088,
+            4.901190010507223,
+            10.005210649701498,
+            3.433264785762359,
+            7.430027797646015,
+            12.807847716219955,
+            16.582172651872
+          ]
+        },
+        "existing_native_raw_t0": {
+          "mean_angle_deg": 14.536831681472842,
+          "per_window_angle_deg": [
+            15.841244124149185,
+            13.840608911535652,
+            19.593482323730825,
+            14.807047776471771,
+            6.687577147610891,
+            8.310355402232764,
+            18.701369533454656,
+            18.512968232597
+          ]
+        },
+        "identity": {
+          "mean_angle_deg": 12.447422819369702,
+          "per_window_angle_deg": [
+            13.801145442421634,
+            11.139280067353498,
+            10.94196728127284,
+            14.76087040024585,
+            5.657108067454257,
+            7.268213340906342,
+            15.66417016464419,
+            20.34662779065901
+          ]
+        }
+      },
+      "comparisons": {
+        "teacher_noisy_input": {
+          "output_minus_reference_deg": 5.3798382820843464,
+          "paired8group_bootstrap95": [
+            2.4840089903434897,
+            8.15158785938485
+          ],
+          "windows_improved": 1,
+          "windows_worsened": 7,
+          "median_difference_deg": 5.886249791936012
+        },
+        "existing_native_raw_t0": {
+          "output_minus_reference_deg": -4.593349258677073,
+          "paired8group_bootstrap95": [
+            -7.834711798308026,
+            -2.349503545359839
+          ],
+          "windows_improved": 8,
+          "windows_worsened": 0,
+          "median_difference_deg": -3.0628638887753468
+        },
+        "identity": {
+          "output_minus_reference_deg": -2.5039403965739324,
+          "paired8group_bootstrap95": [
+            -3.9902322898916918,
+            -1.0493488972760376
+          ],
+          "windows_improved": 6,
+          "windows_worsened": 2,
+          "median_difference_deg": -2.540082865058067
+        }
+      },
+      "finite_three_draw_decomposition": {
+        "teacher_noisy_input": {
+          "raw_quaternion_component_mse": 0.0006380436384558467,
+          "three_draw_mean_residual_component_mse": 0.00019611188976253788,
+          "within_three_draw_variation_mse": 0.00044193174869330885,
+          "variation_fraction": 0.6926356162140327,
+          "mean_pairwise_sample_angle_deg": 6.562872593354805,
+          "scope": "Exact finite3-draw raw-component squared-error identity, not angular-error or gradient decomposition and not across-training-seed bias/variance"
+        },
+        "teacher_denoised_output": {
+          "raw_quaternion_component_mse": 0.0026240711827197087,
+          "three_draw_mean_residual_component_mse": 0.0026206554503794806,
+          "within_three_draw_variation_mse": 3.4157323402283344e-06,
+          "variation_fraction": 0.001301691952078873,
+          "mean_pairwise_sample_angle_deg": 0.5386467509280591,
+          "scope": "Exact finite3-draw raw-component squared-error identity, not angular-error or gradient decomposition and not across-training-seed bias/variance"
+        }
+      },
+      "positions": {
+        "teacher_noisy_input": {
+          "window_equal_position_error_normalized": 0.04109897434426114
+        },
+        "teacher_denoised_output": {
+          "window_equal_position_error_normalized": 0.06650351369539581
+        }
+      },
+      "teacher_eval_pose_mse": {
+        "pose_mse_three_draw_mean_same_batch_denominator": 0.0023165612480549108,
+        "xyz_contribution": 0.0008448674606529036,
+        "quaternion_contribution": 0.0014716937874020071
+      }
+    }
+  },
+  "reported_body_elapsed_seconds": 48.78387625608593,
+  "reported_peak_reserved_gib": 2.291015625,
+  "source_weights_downloaded": false,
+  "slurm_final_state_received": false,
+  "scope": "16fixed reused windows,one trained model,3original Gaussian draws; teacher input contains expert future pose. No new policy score or evidence of3training seeds.",
+  "new_model_calls": 0,
+  "new_sampling_calls": 0,
+  "new_optimizer_updates": 0,
+  "gpu_used": false,
+  "original_model_results_gates_and_source_arrays_unchanged": true,
+  "automatic_following_action": false
+}

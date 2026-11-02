@@ -1,0 +1,406 @@
+shard,record_index,task,source_group,observations,valid_current_inputs,complete_future_inputs,selected_inputs,complete_future_inputs_skipped_by_stride,late_inputs_excluded_by_horizon,future_observations_seen_as_targets,final_observation_seen_as_target,last_selected_start,last_selected_start_fraction,hypothetical_stride4_inputs_with_partial_future,optimizer_draws
+bridge_data_v2-train.tfrecord-00027-of-01024,36,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,47
+bridge_data_v2-train.tfrecord-00005-of-01024,36,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,118
+bridge_data_v2-train.tfrecord-00016-of-01024,23,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00009-of-01024,21,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00009-of-01024,25,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,43,42,27,7,20,15,40,False,24,0.5714285714285714,11,165
+bridge_data_v2-train.tfrecord-00027-of-01024,41,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,189
+bridge_data_v2-train.tfrecord-00019-of-01024,41,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,70
+bridge_data_v2-train.tfrecord-00012-of-01024,54,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00011-of-01024,44,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,40,39,24,6,18,15,36,False,20,0.5128205128205128,10,142
+bridge_data_v2-train.tfrecord-00027-of-01024,26,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,29,28,13,4,9,15,28,True,12,0.42857142857142855,7,93
+bridge_data_v2-train.tfrecord-00010-of-01024,2,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,140
+bridge_data_v2-train.tfrecord-00017-of-01024,13,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00023-of-01024,29,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00023-of-01024,11,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00011-of-01024,35,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00006-of-01024,2,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00012-of-01024,33,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00016-of-01024,7,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,19,18,3,1,2,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00007-of-01024,7,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00000-of-01024,45,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00015-of-01024,43,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen2_room8052,19,18,3,1,2,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00028-of-01024,2,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00010-of-01024,40,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,237
+bridge_data_v2-train.tfrecord-00006-of-01024,10,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00008-of-01024,37,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,25,24,9,3,6,15,24,True,8,0.3333333333333333,6,120
+bridge_data_v2-train.tfrecord-00014-of-01024,33,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00002-of-01024,21,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00009-of-01024,33,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00014-of-01024,6,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00019-of-01024,29,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00010-of-01024,17,close microwave,bridge_data_v2/deepthought_toykitchen1/close_microwave,29,28,13,4,9,15,28,True,12,0.42857142857142855,7,192
+bridge_data_v2-train.tfrecord-00011-of-01024,31,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00008-of-01024,25,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00029-of-01024,40,close microwave,bridge_data_v1/berkeley/toykitchen6,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,239
+bridge_data_v2-train.tfrecord-00009-of-01024,20,close microwave,bridge_data_v2/deepthought_toykitchen1/close_microwave,29,28,13,4,9,15,28,True,12,0.42857142857142855,7,192
+bridge_data_v2-train.tfrecord-00023-of-01024,4,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00003-of-01024,8,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00002-of-01024,39,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00025-of-01024,15,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,32,31,16,4,12,15,28,False,12,0.3870967741935484,8,100
+bridge_data_v2-train.tfrecord-00023-of-01024,20,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,125
+bridge_data_v2-train.tfrecord-00004-of-01024,3,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00015-of-01024,26,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,125
+bridge_data_v2-train.tfrecord-00006-of-01024,26,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,201
+bridge_data_v2-train.tfrecord-00017-of-01024,22,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,32,31,16,4,12,15,28,False,12,0.3870967741935484,8,101
+bridge_data_v2-train.tfrecord-00031-of-01024,17,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,125
+bridge_data_v2-train.tfrecord-00033-of-01024,11,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,71
+bridge_data_v2-train.tfrecord-00035-of-01024,8,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00035-of-01024,13,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,118
+bridge_data_v2-train.tfrecord-00035-of-01024,14,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,22,21,6,2,4,15,20,False,4,0.19047619047619047,6,48
+bridge_data_v2-train.tfrecord-00035-of-01024,18,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00035-of-01024,25,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00036-of-01024,15,close microwave,bridge_data_v1/berkeley/toykitchen6,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,287
+bridge_data_v2-train.tfrecord-00036-of-01024,49,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00037-of-01024,33,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00038-of-01024,16,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,185
+bridge_data_v2-train.tfrecord-00040-of-01024,37,close microwave,bridge_data_v1/berkeley/toykitchen5,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,238
+bridge_data_v2-train.tfrecord-00041-of-01024,41,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,32,31,16,4,12,15,28,False,12,0.3870967741935484,8,100
+bridge_data_v2-train.tfrecord-00042-of-01024,9,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00043-of-01024,34,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00044-of-01024,17,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,167
+bridge_data_v2-train.tfrecord-00044-of-01024,26,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00045-of-01024,16,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00045-of-01024,38,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,286
+bridge_data_v2-train.tfrecord-00046-of-01024,27,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,71
+bridge_data_v2-train.tfrecord-00046-of-01024,53,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,118
+bridge_data_v2-train.tfrecord-00046-of-01024,73,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,20,19,4,1,3,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00047-of-01024,37,close microwave,bridge_data_v1/berkeley/toykitchen6,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00048-of-01024,2,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen2_room8052,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00048-of-01024,7,close microwave,bridge_data_v1/berkeley/toykitchen6,31,30,15,4,11,15,28,False,12,0.4,8,192
+bridge_data_v2-train.tfrecord-00048-of-01024,9,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,125
+bridge_data_v2-train.tfrecord-00048-of-01024,11,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,150
+bridge_data_v2-train.tfrecord-00050-of-01024,14,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,141
+bridge_data_v2-train.tfrecord-00050-of-01024,33,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,126
+bridge_data_v2-train.tfrecord-00050-of-01024,51,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,150
+bridge_data_v2-train.tfrecord-00051-of-01024,46,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,125
+bridge_data_v2-train.tfrecord-00052-of-01024,17,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00052-of-01024,22,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,75
+bridge_data_v2-train.tfrecord-00053-of-01024,28,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00054-of-01024,24,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,40,39,24,6,18,15,36,False,20,0.5128205128205128,10,150
+bridge_data_v2-train.tfrecord-00054-of-01024,28,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,100
+bridge_data_v2-train.tfrecord-00054-of-01024,36,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,43,42,27,7,20,15,40,False,24,0.5714285714285714,11,175
+bridge_data_v2-train.tfrecord-00054-of-01024,37,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00055-of-01024,2,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,165
+bridge_data_v2-train.tfrecord-00055-of-01024,8,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00055-of-01024,23,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00056-of-01024,9,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,45,44,29,8,21,15,44,True,28,0.6363636363636364,11,190
+bridge_data_v2-train.tfrecord-00056-of-01024,29,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,191
+bridge_data_v2-train.tfrecord-00057-of-01024,20,close the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,125
+bridge_data_v2-train.tfrecord-00057-of-01024,23,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,125
+bridge_data_v2-train.tfrecord-00057-of-01024,48,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00058-of-01024,40,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00060-of-01024,28,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00060-of-01024,35,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,22,21,6,2,4,15,20,False,4,0.19047619047619047,6,142
+bridge_data_v2-train.tfrecord-00061-of-01024,25,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,26,25,10,3,7,15,24,False,8,0.32,7,119
+bridge_data_v2-train.tfrecord-00062-of-01024,6,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00063-of-01024,7,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,201
+bridge_data_v2-train.tfrecord-00063-of-01024,8,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,24,23,8,2,6,15,20,False,4,0.17391304347826086,6,48
+bridge_data_v2-train.tfrecord-00064-of-01024,27,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00065-of-01024,13,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,125
+bridge_data_v2-train.tfrecord-00065-of-01024,60,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00066-of-01024,44,close the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,150
+bridge_data_v2-train.tfrecord-00067-of-01024,22,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00068-of-01024,2,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,24,23,8,2,6,15,20,False,4,0.17391304347826086,6,47
+bridge_data_v2-train.tfrecord-00068-of-01024,3,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,120
+bridge_data_v2-train.tfrecord-00068-of-01024,11,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,29,28,13,4,9,15,28,True,12,0.42857142857142855,7,96
+bridge_data_v2-train.tfrecord-00068-of-01024,33,close microwave,bridge_data_v1/berkeley/toykitchen6,31,30,15,4,11,15,28,False,12,0.4,8,192
+bridge_data_v2-train.tfrecord-00068-of-01024,38,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,142
+bridge_data_v2-train.tfrecord-00069-of-01024,46,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00069-of-01024,49,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,125
+bridge_data_v2-train.tfrecord-00070-of-01024,2,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,20,19,4,1,3,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00071-of-01024,21,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00074-of-01024,35,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,139
+bridge_data_v2-train.tfrecord-00075-of-01024,15,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,43,42,27,7,20,15,40,False,24,0.5714285714285714,11,163
+bridge_data_v2-train.tfrecord-00075-of-01024,36,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00077-of-01024,26,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,125
+bridge_data_v2-train.tfrecord-00078-of-01024,2,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00078-of-01024,51,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,43,42,27,7,20,15,40,False,24,0.5714285714285714,11,165
+bridge_data_v2-train.tfrecord-00079-of-01024,19,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,95
+bridge_data_v2-train.tfrecord-00080-of-01024,12,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00080-of-01024,42,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,201
+bridge_data_v2-train.tfrecord-00080-of-01024,44,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,175
+bridge_data_v2-train.tfrecord-00080-of-01024,48,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,118
+bridge_data_v2-train.tfrecord-00082-of-01024,13,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00082-of-01024,37,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00083-of-01024,5,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,100
+bridge_data_v2-train.tfrecord-00083-of-01024,17,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,100
+bridge_data_v2-train.tfrecord-00083-of-01024,19,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00083-of-01024,41,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00083-of-01024,48,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,117
+bridge_data_v2-train.tfrecord-00084-of-01024,11,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,29,28,13,4,9,15,28,True,12,0.42857142857142855,7,95
+bridge_data_v2-train.tfrecord-00084-of-01024,20,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00085-of-01024,50,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00087-of-01024,3,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00087-of-01024,20,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,100
+bridge_data_v2-train.tfrecord-00088-of-01024,15,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,20,19,4,1,3,15,16,False,0,0.0,5,72
+bridge_data_v2-train.tfrecord-00088-of-01024,44,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00088-of-01024,47,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00089-of-01024,8,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,42,41,26,7,19,15,40,False,24,0.5853658536585366,11,164
+bridge_data_v2-train.tfrecord-00089-of-01024,14,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00089-of-01024,24,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00090-of-01024,0,close microwave,bridge_data_v1/berkeley/toykitchen5,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,288
+bridge_data_v2-train.tfrecord-00090-of-01024,51,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00091-of-01024,49,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,44,43,28,7,21,15,40,False,24,0.5581395348837209,11,164
+bridge_data_v2-train.tfrecord-00093-of-01024,31,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00094-of-01024,3,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,70
+bridge_data_v2-train.tfrecord-00095-of-01024,9,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00095-of-01024,32,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00096-of-01024,33,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,75
+bridge_data_v2-train.tfrecord-00096-of-01024,38,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00096-of-01024,43,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,189
+bridge_data_v2-train.tfrecord-00096-of-01024,52,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,238
+bridge_data_v2-train.tfrecord-00097-of-01024,17,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,20,19,4,1,3,15,16,False,0,0.0,5,25
+bridge_data_v2-train.tfrecord-00097-of-01024,26,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,120
+bridge_data_v2-train.tfrecord-00098-of-01024,42,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,95
+bridge_data_v2-train.tfrecord-00099-of-01024,16,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00100-of-01024,4,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00100-of-01024,18,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,69
+bridge_data_v2-train.tfrecord-00101-of-01024,17,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00101-of-01024,22,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,42,41,26,7,19,15,40,False,24,0.5853658536585366,11,162
+bridge_data_v2-train.tfrecord-00102-of-01024,23,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00103-of-01024,2,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00103-of-01024,15,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00104-of-01024,23,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00104-of-01024,42,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00104-of-01024,52,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,22,21,6,2,4,15,20,False,4,0.19047619047619047,6,142
+bridge_data_v2-train.tfrecord-00105-of-01024,22,close microwave,bridge_data_v1/berkeley/toykitchen6,21,20,5,2,3,15,20,True,4,0.2,5,96
+bridge_data_v2-train.tfrecord-00108-of-01024,17,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,72
+bridge_data_v2-train.tfrecord-00108-of-01024,37,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00108-of-01024,43,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,71
+bridge_data_v2-train.tfrecord-00109-of-01024,14,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,39,38,23,6,17,15,36,False,20,0.5263157894736842,10,140
+bridge_data_v2-train.tfrecord-00109-of-01024,18,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00109-of-01024,23,close microwave,bridge_data_v1/berkeley/toykitchen5,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,238
+bridge_data_v2-train.tfrecord-00110-of-01024,15,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00111-of-01024,35,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,20,19,4,1,3,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00112-of-01024,4,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,237
+bridge_data_v2-train.tfrecord-00112-of-01024,18,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00112-of-01024,33,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,95
+bridge_data_v2-train.tfrecord-00113-of-01024,7,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,238
+bridge_data_v2-train.tfrecord-00114-of-01024,30,close microwave,bridge_data_v2/deepthought_toykitchen1/close_microwave,26,25,10,3,7,15,24,False,8,0.32,7,144
+bridge_data_v2-train.tfrecord-00115-of-01024,9,close the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,42,41,26,7,19,15,40,False,24,0.5853658536585366,11,175
+bridge_data_v2-train.tfrecord-00115-of-01024,17,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,125
+bridge_data_v2-train.tfrecord-00116-of-01024,8,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,94
+bridge_data_v2-train.tfrecord-00116-of-01024,22,close microwave,bridge_data_v1/berkeley/toykitchen6,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,240
+bridge_data_v2-train.tfrecord-00119-of-01024,25,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,24,23,8,2,6,15,20,False,4,0.17391304347826086,6,50
+bridge_data_v2-train.tfrecord-00120-of-01024,32,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,118
+bridge_data_v2-train.tfrecord-00121-of-01024,11,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00121-of-01024,47,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00122-of-01024,41,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,20,19,4,1,3,15,16,False,0,0.0,5,25
+bridge_data_v2-train.tfrecord-00123-of-01024,1,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,39,38,23,6,17,15,36,False,20,0.5263157894736842,10,139
+bridge_data_v2-train.tfrecord-00124-of-01024,5,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,17,16,1,1,0,15,16,True,0,0.0,4,25
+bridge_data_v2-train.tfrecord-00124-of-01024,10,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,47,46,31,8,23,15,44,False,28,0.6086956521739131,12,200
+bridge_data_v2-train.tfrecord-00124-of-01024,31,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,76
+bridge_data_v2-train.tfrecord-00124-of-01024,48,close microwave,bridge_data_v1/berkeley/toykitchen6,33,32,17,5,12,15,32,True,16,0.5,8,240
+bridge_data_v2-train.tfrecord-00126-of-01024,3,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,40,39,24,6,18,15,36,False,20,0.5128205128205128,10,140
+bridge_data_v2-train.tfrecord-00127-of-01024,2,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,175
+bridge_data_v2-train.tfrecord-00128-of-01024,50,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,119
+bridge_data_v2-train.tfrecord-00131-of-01024,33,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00131-of-01024,51,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00132-of-01024,40,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00133-of-01024,25,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00134-of-01024,16,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,18,17,2,1,1,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00134-of-01024,42,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00134-of-01024,43,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00134-of-01024,49,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00135-of-01024,19,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,116
+bridge_data_v2-train.tfrecord-00135-of-01024,44,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,119
+bridge_data_v2-train.tfrecord-00137-of-01024,24,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,188
+bridge_data_v2-train.tfrecord-00137-of-01024,42,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,70
+bridge_data_v2-train.tfrecord-00138-of-01024,33,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,22,21,6,2,4,15,20,False,4,0.19047619047619047,6,142
+bridge_data_v2-train.tfrecord-00139-of-01024,45,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,39,38,23,6,17,15,36,False,20,0.5263157894736842,10,142
+bridge_data_v2-train.tfrecord-00140-of-01024,25,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,125
+bridge_data_v2-train.tfrecord-00141-of-01024,26,close microwave,bridge_data_v1/berkeley/toykitchen6,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,192
+bridge_data_v2-train.tfrecord-00142-of-01024,1,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,238
+bridge_data_v2-train.tfrecord-00142-of-01024,3,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,117
+bridge_data_v2-train.tfrecord-00142-of-01024,33,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,22,21,6,2,4,15,20,False,4,0.19047619047619047,6,142
+bridge_data_v2-train.tfrecord-00144-of-01024,2,close microwave,bridge_data_v1/berkeley/toykitchen6,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00144-of-01024,7,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00145-of-01024,10,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,143
+bridge_data_v2-train.tfrecord-00146-of-01024,1,close microwave,bridge_data_v1/berkeley/toykitchen5,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,240
+bridge_data_v2-train.tfrecord-00146-of-01024,33,close microwave,bridge_data_v1/berkeley/toykitchen5,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,144
+bridge_data_v2-train.tfrecord-00146-of-01024,53,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,143
+bridge_data_v2-train.tfrecord-00146-of-01024,68,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,175
+bridge_data_v2-train.tfrecord-00147-of-01024,1,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,42,41,26,7,19,15,40,False,24,0.5853658536585366,11,165
+bridge_data_v2-train.tfrecord-00148-of-01024,9,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00148-of-01024,24,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00149-of-01024,26,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,71
+bridge_data_v2-train.tfrecord-00150-of-01024,58,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,119
+bridge_data_v2-train.tfrecord-00151-of-01024,30,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,140
+bridge_data_v2-train.tfrecord-00151-of-01024,34,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,143
+bridge_data_v2-train.tfrecord-00152-of-01024,10,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00152-of-01024,16,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,191
+bridge_data_v2-train.tfrecord-00152-of-01024,20,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00152-of-01024,39,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,75
+bridge_data_v2-train.tfrecord-00152-of-01024,40,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,150
+bridge_data_v2-train.tfrecord-00152-of-01024,54,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,126
+bridge_data_v2-train.tfrecord-00154-of-01024,7,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,125
+bridge_data_v2-train.tfrecord-00154-of-01024,26,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,20,19,4,1,3,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00154-of-01024,37,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00155-of-01024,13,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00155-of-01024,21,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,143
+bridge_data_v2-train.tfrecord-00155-of-01024,23,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,25,24,9,3,6,15,24,True,8,0.3333333333333333,6,70
+bridge_data_v2-train.tfrecord-00155-of-01024,37,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,44,43,28,7,21,15,40,False,24,0.5581395348837209,11,166
+bridge_data_v2-train.tfrecord-00155-of-01024,45,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,238
+bridge_data_v2-train.tfrecord-00155-of-01024,46,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00156-of-01024,4,close microwave,bridge_data_v1/berkeley/toykitchen5,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,288
+bridge_data_v2-train.tfrecord-00156-of-01024,16,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,100
+bridge_data_v2-train.tfrecord-00156-of-01024,21,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,118
+bridge_data_v2-train.tfrecord-00156-of-01024,33,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00157-of-01024,21,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,42,41,26,7,19,15,40,False,24,0.5853658536585366,11,163
+bridge_data_v2-train.tfrecord-00158-of-01024,9,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00158-of-01024,41,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00159-of-01024,1,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00159-of-01024,5,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00159-of-01024,16,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,100
+bridge_data_v2-train.tfrecord-00159-of-01024,24,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,125
+bridge_data_v2-train.tfrecord-00160-of-01024,36,close microwave,bridge_data_v1/berkeley/toykitchen5,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,238
+bridge_data_v2-train.tfrecord-00160-of-01024,56,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00161-of-01024,16,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00162-of-01024,27,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00162-of-01024,31,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,47
+bridge_data_v2-train.tfrecord-00165-of-01024,36,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00166-of-01024,11,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,75
+bridge_data_v2-train.tfrecord-00166-of-01024,21,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00167-of-01024,48,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,25,24,9,3,6,15,24,True,8,0.3333333333333333,6,71
+bridge_data_v2-train.tfrecord-00168-of-01024,11,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,150
+bridge_data_v2-train.tfrecord-00169-of-01024,4,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,190
+bridge_data_v2-train.tfrecord-00170-of-01024,3,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00170-of-01024,35,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00170-of-01024,38,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,143
+bridge_data_v2-train.tfrecord-00171-of-01024,5,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,25,24,9,3,6,15,24,True,8,0.3333333333333333,6,75
+bridge_data_v2-train.tfrecord-00171-of-01024,6,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,100
+bridge_data_v2-train.tfrecord-00171-of-01024,30,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00171-of-01024,41,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00172-of-01024,9,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00172-of-01024,22,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00173-of-01024,7,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00173-of-01024,25,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,45,44,29,8,21,15,44,True,28,0.6363636363636364,11,187
+bridge_data_v2-train.tfrecord-00173-of-01024,41,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,142
+bridge_data_v2-train.tfrecord-00174-of-01024,2,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,125
+bridge_data_v2-train.tfrecord-00174-of-01024,21,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,100
+bridge_data_v2-train.tfrecord-00174-of-01024,34,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00175-of-01024,1,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00175-of-01024,10,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00175-of-01024,24,close microwave,bridge_data_v1/berkeley/toykitchen6,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00175-of-01024,45,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00175-of-01024,46,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,70
+bridge_data_v2-train.tfrecord-00175-of-01024,48,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00176-of-01024,40,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00177-of-01024,3,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00177-of-01024,25,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00177-of-01024,27,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00178-of-01024,8,close microwave,bridge_data_v1/berkeley/toykitchen5,32,31,16,4,12,15,28,False,12,0.3870967741935484,8,192
+bridge_data_v2-train.tfrecord-00178-of-01024,22,close microwave,bridge_data_v1/berkeley/toykitchen6,33,32,17,5,12,15,32,True,16,0.5,8,240
+bridge_data_v2-train.tfrecord-00179-of-01024,15,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00181-of-01024,28,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,117
+bridge_data_v2-train.tfrecord-00181-of-01024,44,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00182-of-01024,1,turn lever vertical to front,bridge_data_v1/berkeley/toysink2_bww,20,19,4,1,3,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00182-of-01024,12,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,140
+bridge_data_v2-train.tfrecord-00183-of-01024,3,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,284
+bridge_data_v2-train.tfrecord-00186-of-01024,35,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00186-of-01024,39,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,32,31,16,4,12,15,28,False,12,0.3870967741935484,8,95
+bridge_data_v2-train.tfrecord-00186-of-01024,43,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00187-of-01024,49,close microwave,bridge_data_v1/berkeley/toykitchen6,26,25,10,3,7,15,24,False,8,0.32,7,144
+bridge_data_v2-train.tfrecord-00188-of-01024,14,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00189-of-01024,33,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,42,41,26,7,19,15,40,False,24,0.5853658536585366,11,165
+bridge_data_v2-train.tfrecord-00190-of-01024,40,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,24,23,8,2,6,15,20,False,4,0.17391304347826086,6,51
+bridge_data_v2-train.tfrecord-00191-of-01024,14,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,19,18,3,1,2,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00191-of-01024,18,close microwave,bridge_data_v2/deepthought_toykitchen1/close_microwave,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,239
+bridge_data_v2-train.tfrecord-00191-of-01024,41,open the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,117
+bridge_data_v2-train.tfrecord-00192-of-01024,21,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,25,24,9,3,6,15,24,True,8,0.3333333333333333,6,71
+bridge_data_v2-train.tfrecord-00193-of-01024,26,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00193-of-01024,50,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00194-of-01024,1,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00194-of-01024,45,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen2_room8052,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00195-of-01024,50,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,40,39,24,6,18,15,36,False,20,0.5128205128205128,10,144
+bridge_data_v2-train.tfrecord-00196-of-01024,6,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,21,20,5,2,3,15,20,True,4,0.2,5,142
+bridge_data_v2-train.tfrecord-00196-of-01024,31,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,22,21,6,2,4,15,20,False,4,0.19047619047619047,6,142
+bridge_data_v2-train.tfrecord-00196-of-01024,51,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00196-of-01024,55,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00197-of-01024,45,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,165
+bridge_data_v2-train.tfrecord-00198-of-01024,22,turn lever vertical to front,bridge_data_v1/upenn/toysink5,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00199-of-01024,6,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,75
+bridge_data_v2-train.tfrecord-00199-of-01024,25,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,69
+bridge_data_v2-train.tfrecord-00201-of-01024,27,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,120
+bridge_data_v2-train.tfrecord-00202-of-01024,0,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,125
+bridge_data_v2-train.tfrecord-00202-of-01024,1,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,150
+bridge_data_v2-train.tfrecord-00202-of-01024,20,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,19,18,3,1,2,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00202-of-01024,34,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,30,29,14,4,10,15,28,False,12,0.41379310344827586,8,100
+bridge_data_v2-train.tfrecord-00202-of-01024,39,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,34,33,18,5,13,15,32,False,16,0.48484848484848486,9,116
+bridge_data_v2-train.tfrecord-00203-of-01024,14,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,25,24,9,3,6,15,24,True,8,0.3333333333333333,6,75
+bridge_data_v2-train.tfrecord-00203-of-01024,21,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,100
+bridge_data_v2-train.tfrecord-00203-of-01024,28,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,50
+bridge_data_v2-train.tfrecord-00203-of-01024,35,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00203-of-01024,47,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00203-of-01024,50,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,164
+bridge_data_v2-train.tfrecord-00203-of-01024,54,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,75
+bridge_data_v2-train.tfrecord-00204-of-01024,41,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,18,17,2,1,1,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00204-of-01024,48,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,33,32,17,5,12,15,32,True,16,0.5,8,118
+bridge_data_v2-train.tfrecord-00204-of-01024,60,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00207-of-01024,36,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,143
+bridge_data_v2-train.tfrecord-00210-of-01024,21,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,71
+bridge_data_v2-train.tfrecord-00212-of-01024,2,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,47,46,31,8,23,15,44,False,28,0.6086956521739131,12,200
+bridge_data_v2-train.tfrecord-00212-of-01024,24,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,76
+bridge_data_v2-train.tfrecord-00212-of-01024,43,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,120
+bridge_data_v2-train.tfrecord-00213-of-01024,7,close microwave,bridge_data_v1/berkeley/toykitchen6,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00214-of-01024,42,close the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,125
+bridge_data_v2-train.tfrecord-00215-of-01024,20,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00215-of-01024,41,close the drawer,bridge_data_v2/datacol2_folding_table/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,150
+bridge_data_v2-train.tfrecord-00217-of-01024,5,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,126
+bridge_data_v2-train.tfrecord-00217-of-01024,15,close microwave,bridge_data_v1/berkeley/toykitchen6,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,287
+bridge_data_v2-train.tfrecord-00217-of-01024,20,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,29,28,13,4,9,15,28,True,12,0.42857142857142855,7,100
+bridge_data_v2-train.tfrecord-00217-of-01024,23,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,117
+bridge_data_v2-train.tfrecord-00217-of-01024,47,close microwave,bridge_data_v1/berkeley/toykitchen6,33,32,17,5,12,15,32,True,16,0.5,8,239
+bridge_data_v2-train.tfrecord-00220-of-01024,6,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00220-of-01024,33,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00220-of-01024,35,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,125
+bridge_data_v2-train.tfrecord-00220-of-01024,39,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00222-of-01024,14,turn lever vertical to front,bridge_data_v1/berkeley/toysink3_bww,19,18,3,1,2,15,16,False,0,0.0,5,71
+bridge_data_v2-train.tfrecord-00222-of-01024,33,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,47,46,31,8,23,15,44,False,28,0.6086956521739131,12,200
+bridge_data_v2-train.tfrecord-00223-of-01024,16,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,116
+bridge_data_v2-train.tfrecord-00223-of-01024,44,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00225-of-01024,13,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00225-of-01024,22,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00226-of-01024,15,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00226-of-01024,34,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00227-of-01024,30,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,120
+bridge_data_v2-train.tfrecord-00228-of-01024,5,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,40,39,24,6,18,15,36,False,20,0.5128205128205128,10,151
+bridge_data_v2-train.tfrecord-00228-of-01024,8,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,76
+bridge_data_v2-train.tfrecord-00229-of-01024,10,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00229-of-01024,15,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00230-of-01024,30,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00231-of-01024,4,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00231-of-01024,17,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00231-of-01024,41,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00232-of-01024,28,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,24,23,8,2,6,15,20,False,4,0.17391304347826086,6,50
+bridge_data_v2-train.tfrecord-00233-of-01024,20,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,31,30,15,4,11,15,28,False,12,0.4,8,93
+bridge_data_v2-train.tfrecord-00234-of-01024,1,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,116
+bridge_data_v2-train.tfrecord-00235-of-01024,38,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00236-of-01024,17,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,189
+bridge_data_v2-train.tfrecord-00237-of-01024,13,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,238
+bridge_data_v2-train.tfrecord-00237-of-01024,16,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,80
+bridge_data_v2-train.tfrecord-00238-of-01024,13,close microwave,bridge_data_v1/berkeley/toykitchen6,28,27,12,3,9,15,24,False,8,0.2962962962962963,7,144
+bridge_data_v2-train.tfrecord-00238-of-01024,32,open the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,143
+bridge_data_v2-train.tfrecord-00239-of-01024,43,close microwave,bridge_data_v2/deepthought_toykitchen1/close_microwave,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,240
+bridge_data_v2-train.tfrecord-00240-of-01024,25,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,119
+bridge_data_v2-train.tfrecord-00241-of-01024,9,turn lever vertical to front,bridge_data_v1/berkeley/toykitchen1,23,22,7,2,5,15,20,False,4,0.18181818181818182,6,142
+bridge_data_v2-train.tfrecord-00242-of-01024,12,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00242-of-01024,16,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,200
+bridge_data_v2-train.tfrecord-00242-of-01024,49,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,48,47,32,8,24,15,44,False,28,0.5957446808510638,12,201
+bridge_data_v2-train.tfrecord-00243-of-01024,22,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,26,25,10,3,7,15,24,False,8,0.32,7,71
+bridge_data_v2-train.tfrecord-00244-of-01024,19,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00245-of-01024,21,close microwave,bridge_data_v2/deepthought_toykitchen1/close_microwave,27,26,11,3,8,15,24,False,8,0.3076923076923077,7,144
+bridge_data_v2-train.tfrecord-00245-of-01024,29,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00245-of-01024,52,close the drawer,bridge_data_v2/deepthought_robot_desk/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,150
+bridge_data_v2-train.tfrecord-00246-of-01024,15,open the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,139
+bridge_data_v2-train.tfrecord-00248-of-01024,7,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,36,35,20,5,15,15,32,False,16,0.45714285714285713,9,125
+bridge_data_v2-train.tfrecord-00248-of-01024,35,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,35,34,19,5,14,15,32,False,16,0.47058823529411764,9,125
+bridge_data_v2-train.tfrecord-00248-of-01024,45,open the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,45,44,29,8,21,15,44,True,28,0.6363636363636364,11,191
+bridge_data_v2-train.tfrecord-00249-of-01024,44,close microwave,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00250-of-01024,11,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,239
+bridge_data_v2-train.tfrecord-00252-of-01024,21,close microwave,bridge_data_v1/berkeley/toykitchen5,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,288
+bridge_data_v2-train.tfrecord-00253-of-01024,37,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,238
+bridge_data_v2-train.tfrecord-00253-of-01024,39,close the drawer,bridge_data_v2/datacol2_toykitchen7/drawer_pnp,37,36,21,6,15,15,36,True,20,0.5555555555555556,9,150
+bridge_data_v2-train.tfrecord-00254-of-01024,1,take broccoli out of pan,bridge_data_v1/berkeley/toykitchen1,38,37,22,6,16,15,36,False,20,0.5405405405405406,10,240
+bridge_data_v2-train.tfrecord-00255-of-01024,7,close the drawer,bridge_data_v2/datacol2_tabletop_dark_wood/drawer_pnp,41,40,25,7,18,15,40,True,24,0.6,10,175

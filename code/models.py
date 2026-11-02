@@ -1,4 +1,4 @@
-"""Frozen CLIP backbone, trainable adapter, and DDPM action decoder."""
+"""Frozen visual/text encoders, trainable adapter, and DDPM action decoder."""
 
 import math
 from typing import Any, Dict, Optional, Tuple
@@ -43,7 +43,7 @@ def build_gripper_readout(hidden_dim: int, head_type: str) -> nn.Sequential:
 
 
 class RobotAdapterModel(nn.Module):
-    """冻结 CLIP，只训练跨模态 Adapter 和扩散动作头。"""
+    """冻结视觉骨干与CLIP文本，只训练跨模态Adapter和动作头。"""
     def __init__(self, config: Dict[str, Any], cache_dir: Optional[str] = None) -> None:
         super().__init__()
         model_config = config["model"]
@@ -82,6 +82,8 @@ class RobotAdapterModel(nn.Module):
         self.condition_on_current_gripper = bool(
             model_config.get("condition_on_current_gripper", False)
         )
+        self.current_gripper_feature_dim = (2 if model_config.get("current_gripper_encoding")
+                                            == "last_command_with_availability_v1" else 1)
         self.gripper_target_mode = str(
             model_config.get("gripper_target_mode", "state")
         )
@@ -105,6 +107,12 @@ class RobotAdapterModel(nn.Module):
             model_config.get("gripper_switch_threshold", 0.0)
         )
         self.gripper_loss_weight = float(model_config.get("gripper_loss_weight", 0.25))
+        if self.current_gripper_feature_dim == 2 and (
+                not self.condition_on_current_gripper or not self.trajectory_conditioned_gripper
+                or not self.separate_gripper_head or self.gripper_target_mode != "state"
+                or float(model_config.get("gripper_change_weight", 1.0)) != 1.0
+                or model_config.get("current_gripper_semantics") != "last_command_open_positive_with_availability_v1"):
+            raise ValueError("命令/可用性输入必须显式声明语义，使用绝对state夹爪目标且不启用切换加权")
         self.regression_rotation_weight = float(model_config.get("regression_rotation_weight", 1.0))
         if not math.isfinite(self.regression_rotation_weight) or self.regression_rotation_weight <= 0:
             raise ValueError("Regression rotation weight must be finite and positive")
@@ -116,11 +124,31 @@ class RobotAdapterModel(nn.Module):
         )
         action_config = config.get("action", {})
         self.max_normalized_position = action_config.get("max_normalized_position")
+        if self.max_normalized_position is not None and (
+                isinstance(self.max_normalized_position, bool)
+                or not isinstance(self.max_normalized_position, (int, float))
+                or not math.isfinite(self.max_normalized_position)
+                or self.max_normalized_position <= 0):
+            raise ValueError("Position output bound must be a finite positive normalized value")
 
-        # CLIP 负责提取通用视觉/语言特征，其参数在本项目中保持冻结。
-        clip_model = CLIPModel.from_pretrained(model_name, cache_dir=cache_dir)
-        self.vision_encoder = clip_model.vision_model
-        self.text_encoder = clip_model.text_model
+        self.visual_backbone = str(model_config.get("visual_backbone", "clip"))
+        if self.visual_backbone == "clip":
+            # Preserve the default CLIP module names and loading path.
+            clip_model = CLIPModel.from_pretrained(model_name, cache_dir=cache_dir)
+            self.vision_encoder = clip_model.vision_model
+            self.text_encoder = clip_model.text_model
+        elif self.visual_backbone == "dinov2":
+            from transformers import CLIPTextModel
+            from frozen_visual_backbone import FrozenDinoVision
+            self.vision_encoder = FrozenDinoVision(model_config)
+            # The language branch remains frozen CLIP, not DINO or a local LLM.
+            text_model, loading_info = CLIPTextModel.from_pretrained(model_name, cache_dir=cache_dir,
+                local_files_only=True, trust_remote_code=False, output_loading_info=True)
+            if any(loading_info.get(key) for key in ("missing_keys", "mismatched_keys", "error_msgs")):
+                raise ValueError("Frozen CLIP text weights were not completely loaded")
+            self.text_encoder = text_model
+        else:
+            raise ValueError("visual_backbone must be clip or dinov2")
         for parameter in self.vision_encoder.parameters():
             parameter.requires_grad = False
         for parameter in self.text_encoder.parameters():
@@ -206,7 +234,7 @@ class RobotAdapterModel(nn.Module):
                 self.gripper_pose_projection = nn.Linear(7, decoder_hidden_dim)
                 if self.condition_on_current_gripper:
                     self.current_gripper_projection = nn.Linear(
-                        1, decoder_hidden_dim
+                        self.current_gripper_feature_dim, decoder_hidden_dim
                     )
                 self.gripper_time_embedding = nn.Embedding(
                     self.chunk_size, decoder_hidden_dim
@@ -328,7 +356,10 @@ class RobotAdapterModel(nn.Module):
                     raise ValueError(
                         "Current gripper state is required by this checkpoint"
                     )
-                current_gripper = current_gripper.reshape(context.shape[0], 1)
+                if self.current_gripper_feature_dim == 2:
+                    from oxe_source_semantics import validate_command_feature_tensor
+                    validate_command_feature_tensor(current_gripper, context.shape[0])
+                current_gripper = current_gripper.reshape(context.shape[0], self.current_gripper_feature_dim)
                 features = features + self.current_gripper_projection(
                     current_gripper
                 ).unsqueeze(1)

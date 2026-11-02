@@ -1,0 +1,54 @@
+{
+  "format": "gripper-event-repair-pair-v1",
+  "status": "prepared_for_review_not_submitted",
+  "date": "2026-10-31",
+  "frozen_base_manifest_sha256": "26f3f71973a907f2c23c2a443e4204fe5963641fa2b218656f3ea5dc96ac57e9",
+  "source_pose_checkpoint": "runs/bridge-backbone-pair-a40-229116/dino/final_trainable.pt",
+  "source_pose_sha256": "730f06ecb417ff98d7e5270c114c2b062ce38347f0987c136b9d0359e8c4a6f5",
+  "source_gripper_checkpoint": "runs/dino-gripper-sidecar-235928/gripper.pt",
+  "source_gripper_sha256": "61bfbe190185892901fdc6c808a0531e2d0499b285ee01243753920a24c9117d",
+  "source_head_updates": 2048,
+  "additional_updates_per_arm": 2048,
+  "total_new_head_updates": 4096,
+  "arms": [
+    "state_control",
+    "event_aware"
+  ],
+  "batch_size": 64,
+  "seed": 42,
+  "optimizer": "fresh Adam in both arms",
+  "learning_rate": 0.0001,
+  "weight_decay": 0,
+  "gradient_clip": 1.0,
+  "plan": "reuse original v1 plan, same indices and generated draw IDs for both arms",
+  "only_intervention": "state BCE vs state BCE + fixed balanced adjacent-event surrogate",
+  "event_coefficient": 1.0,
+  "event_frequencies": {
+    "fit_partition": "train",
+    "windows": 1836,
+    "edges_per_window": 15,
+    "rates": {
+      "opening": 0.011764705882352941,
+      "closing": 0.025018155410312274
+    }
+  },
+  "decision_threshold": 0,
+  "source_pose_updates": 0,
+  "source_pose_model_loaded": false,
+  "source_checkpoints_overwritten": false,
+  "state_protection": "each role BA >= max(.8, corresponding235928 BA-.02)",
+  "event_guard": "both train and development opening and closing exact-step F1 >= .5",
+  "selection": "candidate if all absolute guards and both dev-event F1>control; else control if absolute guards; else none",
+  "estimated_gpu_minutes": [
+    1,
+    4
+  ],
+  "slurm_cap_seconds": 600,
+  "process_cap_seconds": 480,
+  "checkpoint_every": 512,
+  "output_reserve_mib": 256,
+  "automatic_training_or_submission": false,
+  "automatic_rollout": false,
+  "formal_models_completed": 0,
+  "stop": "fixed2048 per arm; no extension, threshold/tolerance/weight/seed sweeps"
+}

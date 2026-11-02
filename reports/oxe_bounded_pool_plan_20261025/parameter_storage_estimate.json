@@ -1,0 +1,23 @@
+{
+  "scope": "Planning estimate only, actual main module constructor on meta tensors with empty encoders; no weights, optimizer or inference",
+  "context_width": 1024,
+  "text_width": 768,
+  "adapter_layers": 8,
+  "attention_dim": 512,
+  "decoder": "multiscale existing defaults",
+  "trainable_parameter_counts": {
+    "adapter": 53581824,
+    "diffusion_decoder": 77670023,
+    "gripper_context_projection": 262400,
+    "gripper_pose_projection": 2048,
+    "current_gripper_projection": 768,
+    "gripper_time_embedding": 4096,
+    "gripper_head": 769
+  },
+  "trainable_parameters": 131521928,
+  "fp32_weight_bytes": 526087712,
+  "fp32_weights_plus_two_adam_moments_bytes": 1578263136,
+  "thirteen_latest_plus_two_temporary_checkpoint_tensor_bytes": 23673947040,
+  "pickle_history_and_other_overhead_included": false,
+  "formal_configuration_frozen": false
+}

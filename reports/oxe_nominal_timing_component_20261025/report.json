@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "integer-exact nominal row and right-closed command mapping",
+    "shortest-path xyzw SLERP, sign equivalence and missing-orientation rejection",
+    "5Hz Bridge preserves old fixed-row target and causal unknown input",
+    "10Hz BC-Z uses future reached even rows and matching preceding first command",
+    "3Hz Fractal interpolates positions/rotations but never binary gripper values",
+    "planar missing dimensions, partial tails, zero-target windows and no extrapolation",
+    "relative rotation remains target times inverse-reference in the recorded frame"
+  ],
+  "protocol_sha256": "4e7c4165590c7b7872aed5bc0c43184e2c6c61f2b8ebaf506f42a1f7c7c59d78",
+  "nominal_not_measured_clock": true,
+  "real_source_data_read": false,
+  "images_generated": false,
+  "models_loaded": false,
+  "training_updates": 0
+}

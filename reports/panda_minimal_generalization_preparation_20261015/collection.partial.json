@@ -1,0 +1,580 @@
+{
+  "protocol_sha256": "3fa0132396d9ff53ab2d71390e343a158f2402f5a1cc61d8a1a40b0ab078f0b1",
+  "passed": false,
+  "trained": false,
+  "model_loaded": false,
+  "test_episodes_collected": false,
+  "expert": [
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496901015096984,
+      "lift_m": 0.20470152967462796,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_0_1",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "f67b44934c05d7699532c4033bd1b697d9fa877e2289540c07d0992028e50fd9",
+      "bytes": 5286132
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496895913983333,
+      "lift_m": 0.20470101956326292,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_1_4",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "7bf957017e852bef3c7627edc1b15428bfb9cea3a2f905f9e1d1bdbf059d7cbf",
+      "bytes": 5330480
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496891471531491,
+      "lift_m": 0.20470057531807873,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_3_0",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "b138c8318e304400a03e774ae9e6120e0c70edd46a82cafbe2472e150c702e01",
+      "bytes": 5278061
+    },
+    {
+      "initial_height_m": 0.6449885718350705,
+      "final_height_m": 0.8496916376392242,
+      "lift_m": 0.20470306580415365,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_4_3",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "2cf935f2bff2633628fa0ff1693d9e26fe93b7544e5349b4d646a77ea19ac693",
+      "bytes": 5331933
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.849693203971336,
+      "lift_m": 0.20470463213626555,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_0_2",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "b41110b6a425ccc3c8cbc098fa332adce5181e298d165e9fb3ad37f3016e9a9f",
+      "bytes": 5298329
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496909282109065,
+      "lift_m": 0.20470235637583611,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_0_3",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "66738128c63c00467c50735f5aa64231b2b80710376e041a63e2e451495911f2",
+      "bytes": 5307619
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496898211716825,
+      "lift_m": 0.20470124933661205,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_1_0",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "7e0bb8e7c4ef5026ecbb16853433a64d40c18f27b94a1fd3d10551ccbb638224",
+      "bytes": 5278569
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496912387886479,
+      "lift_m": 0.20470266695357753,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_1_1",
+      "split": "development",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "7a31155773dd429cb907d8dd05479aa64cf3807a14dafed6e737d312f4831e49",
+      "bytes": 5290512
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496926059204104,
+      "lift_m": 0.20470403408534,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_1_2",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "ad56f30a43a4044857bf574219a3068b2dbe9a986954978b01f02395e16d01bd",
+      "bytes": 5299826
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496911727061478,
+      "lift_m": 0.2047026008710774,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_1_3",
+      "split": "development",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "888a84d2f60c7abd99e9c2e89854178d2f178ad096de0ccb350368786a40f52a",
+      "bytes": 5310269
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.849690123240536,
+      "lift_m": 0.20470155140546564,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_2_0",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "e8f8293df15744e03900a4424dfa02bf000f093a384d57c6b2edf0ae0829af1b",
+      "bytes": 5277803
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496935185587654,
+      "lift_m": 0.204704946723695,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_2_1",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "b7b2aa487b39868956d47bf8cd69cfb2b6ad74af88c91cb17f23a700cf571400",
+      "bytes": 5292929
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.849691359669134,
+      "lift_m": 0.2047027878340636,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_2_3",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "1be6fd56c8740dcd11646061361af9c69c5d53d8887b373aee470e4632f7d990",
+      "bytes": 5315353
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496889991148256,
+      "lift_m": 0.20470042727975524,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_2_4",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "82f4193e82864ff67c173c8bd1dd3edf7cf187a04070cab07adf35ec11e6e23f",
+      "bytes": 5333722
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496917363613408,
+      "lift_m": 0.20470316452627035,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_3_1",
+      "split": "development",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "8af3932b9dff96b2fa2b056f2e185267bae6b508f78fb49657965db0bf0ad87b",
+      "bytes": 5299425
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.849691642535572,
+      "lift_m": 0.20470307070050153,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_3_2",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "677ec894ce4a3245161ff1bf2ae417cd5a2f6aa02498b1527ee1a07bb1a84e41",
+      "bytes": 5307413
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496900060428231,
+      "lift_m": 0.20470143420775266,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_3_3",
+      "split": "development",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "74335e554521cbbc007ca035f152081369d9362b05e399d61e7c3c226de8f4d7",
+      "bytes": 5323311
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496883896036015,
+      "lift_m": 0.20469981776853108,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_3_4",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "af1c88a42008bccc75a67f536bd02a6a44d4deba4f82164f5c3f71ca5342b6fe",
+      "bytes": 5340770
+    },
+    {
+      "initial_height_m": 0.6449885718350705,
+      "final_height_m": 0.8496915824294059,
+      "lift_m": 0.20470301059433538,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_4_1",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "df1459bc85fcfe96cf34d6b6599e3be43e361f1d4958c115e43adb7133e6ca89",
+      "bytes": 5303279
+    },
+    {
+      "initial_height_m": 0.6449885718350704,
+      "final_height_m": 0.8496938714359106,
+      "lift_m": 0.20470529960084016,
+      "final_finger_contacts": [
+        9,
+        10
+      ],
+      "last_ten_steps_held_above_10cm": true,
+      "two_finger_hold_steps": 10,
+      "success": true,
+      "artificial_attachment": false,
+      "episode": "xy_4_2",
+      "split": "train",
+      "requested_commands": 102,
+      "learned_policy_used": false,
+      "object_reset_after_initial_observation": false,
+      "npz_sha256": "68055b73874665428b013c386a54889d0880798f44d2c05900e21b10703749c8",
+      "bytes": 5315151
+    }
+  ],
+  "replays": [
+    {
+      "episode": "xy_0_1",
+      "native": {
+        "initial_height_m": 0.6449885718350704,
+        "final_height_m": 0.8496901015096984,
+        "lift_m": 0.20470152967462796,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_0_1",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "native_replay_max_position_difference_m": 0.0,
+      "reached_pose_replay": {
+        "initial_height_m": 0.6449885718350704,
+        "final_height_m": 0.8493655634332609,
+        "lift_m": 0.20437699159819045,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_0_1",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "label_roundtrip_max_position_difference_m": 0.0
+    },
+    {
+      "episode": "xy_1_4",
+      "native": {
+        "initial_height_m": 0.6449885718350704,
+        "final_height_m": 0.8496895913983333,
+        "lift_m": 0.20470101956326292,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_1_4",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "native_replay_max_position_difference_m": 0.0,
+      "reached_pose_replay": {
+        "initial_height_m": 0.6449885718350704,
+        "final_height_m": 0.8493646421699623,
+        "lift_m": 0.2043760703348919,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_1_4",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "label_roundtrip_max_position_difference_m": 0.0
+    },
+    {
+      "episode": "xy_3_0",
+      "native": {
+        "initial_height_m": 0.6449885718350704,
+        "final_height_m": 0.8496891471531491,
+        "lift_m": 0.20470057531807873,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_3_0",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "native_replay_max_position_difference_m": 0.0,
+      "reached_pose_replay": {
+        "initial_height_m": 0.6449885718350704,
+        "final_height_m": 0.8493645923505196,
+        "lift_m": 0.20437602051544923,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_3_0",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "label_roundtrip_max_position_difference_m": 0.0
+    },
+    {
+      "episode": "xy_4_3",
+      "native": {
+        "initial_height_m": 0.6449885718350705,
+        "final_height_m": 0.8496916376392242,
+        "lift_m": 0.20470306580415365,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_4_3",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "native_replay_max_position_difference_m": 0.0,
+      "reached_pose_replay": {
+        "initial_height_m": 0.6449885718350705,
+        "final_height_m": 0.8493672213759629,
+        "lift_m": 0.20437864954089235,
+        "final_finger_contacts": [
+          9,
+          10
+        ],
+        "last_ten_steps_held_above_10cm": true,
+        "two_finger_hold_steps": 10,
+        "success": true,
+        "artificial_attachment": false,
+        "episode": "xy_4_3",
+        "split": "train",
+        "requested_commands": 102,
+        "learned_policy_used": false,
+        "object_reset_after_initial_observation": false
+      },
+      "label_roundtrip_max_position_difference_m": 2.3283064365386963e-10
+    }
+  ],
+  "error": null,
+  "versions": {
+    "pybullet": "3.2.7",
+    "numpy": "2.2.6"
+  }
+}

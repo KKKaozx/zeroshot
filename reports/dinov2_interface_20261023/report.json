@@ -1,0 +1,40 @@
+{
+  "actual_pretrained_dinov2_loaded": true,
+  "backbone_state_before": "ea7bdd68230559e97a6ba37e1b53944cb649649b2d8492cfa664a8794269aafc",
+  "backbone_state_after": "ea7bdd68230559e97a6ba37e1b53944cb649649b2d8492cfa664a8794269aafc",
+  "backbone_frozen_and_unchanged": true,
+  "token_shape": [
+    2,
+    257,
+    1024
+  ],
+  "token_dtype": "float32",
+  "geometry": "96 square raw float RGB -> bicubic224 shortest edge and224 center crop; no added field-of-view crop",
+  "normalization": "DINO ImageNet mean/std; rescale once",
+  "native_dino_last_hidden_final_layernorm": true,
+  "explicit_deviation_from_published_dino_processor": "Resize224 instead of256, to preserve original CLIP camera field of view",
+  "raw_online_roundtrip_exact": true,
+  "fixed_pad8_exact": true,
+  "constant_image_normalization_passed": true,
+  "constant_normalized_image_max_difference": 1.1920928955078125e-06,
+  "constant_normalization_atol": 3e-06,
+  "actual_eight_layer_adapter_gradients_valid": true,
+  "extra_trainable_width_mapping": false,
+  "original_agent_state_columns_exact": true,
+  "text_scope": "Synthetic12-token text for interface check; original fixed CLIP text must be bound from qualified server cache before real training",
+  "source_raw_inputs_sha256": "f326a399b567fe298367d43cdc19481f0cfb8fe1f947cc60d3d2df3d5f684db1",
+  "peak_reserved_gib": 1.623046875,
+  "elapsed_seconds": 11.438000000023749,
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.17.0",
+    "numpy": "2.2.6",
+    "Pillow": "12.3.0"
+  },
+  "actual_gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "policy_training_updates": 0,
+  "rollouts": 0,
+  "closed_loop_generalization_verdict": null,
+  "formal_training_ready": false,
+  "new_jobs_submitted": false
+}

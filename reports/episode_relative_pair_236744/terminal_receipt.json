@@ -1,0 +1,51 @@
+{
+  "execution_complete": true,
+  "source_pose_updates_to_original": 0,
+  "completed_updates": {
+    "absolute": 2048,
+    "relative": 2048
+  },
+  "new_gripper_updates": 0,
+  "new_encoder_updates": 0,
+  "new_frames_encoded": 0,
+  "formal_matrix_admitted": false,
+  "adapter_updates": 0,
+  "history_updates": 0,
+  "training_revision": "frozen_adapter_context_delta_v2",
+  "runtime_fix": "v2r1_no_scipy_import_preflight",
+  "replaces_preupdate_failed_job": 236711,
+  "automatic_rollout": false,
+  "automatic_following_action": false,
+  "hypothesis": "World-frame-independent current-state inputs can retain source pose ability",
+  "state_change_is_new_representation_not_proven_unique_root_cause": true,
+  "native_restore_guard": {
+    "rows": 2,
+    "draws": 1,
+    "max_context_delta": 0.0,
+    "max_pose_delta": 6.902217864990234e-05
+  },
+  "source_pose_protected_within5percent": {
+    "absolute": false,
+    "relative": false
+  },
+  "relative_not_worse_than_control_by5percent": false,
+  "candidate_for_review_of_one_engineering_trial": false,
+  "selected_for_formal_training_or_scoring": null,
+  "interpretation": "Relative state removes dependence on world origin algebraically; saved source metrics only assess retained pose ability. No task-success claim.",
+  "total_new_pose_updates": 4096,
+  "original_files_unchanged": true,
+  "elapsed_seconds": 901.4114813129418,
+  "frozen_adapter_history_unchanged": true,
+  "peak_reserved_gib": 1.791015625,
+  "elapsed_scope": "After CPU artifact/cache admission, before final CPU endpoint verification and ZIP;3300s alarm still covers verification/packing",
+  "development": {
+    "absolute": {
+      "episode_position_cm": 5.422218227386475,
+      "episode_rotation_deg": 12.830987739562989
+    },
+    "relative": {
+      "episode_position_cm": 7.096347808837891,
+      "episode_rotation_deg": 14.161350297927857
+    }
+  }
+}

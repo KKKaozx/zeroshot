@@ -1,0 +1,29 @@
+{
+  "checks_passed": 20,
+  "checks": [
+    "Exactly six predeclared targets",
+    "No retained final checkpoint is a target",
+    "No recursive deletion or glob expansion",
+    "Read-only plan sees six fixture candidates",
+    "Preview did not create receipt or delete files",
+    "Missing failed-launch sidecar is skipped without deleting file",
+    "Reject parent path escape",
+    "Reject absolute target",
+    "Reject directory where checkpoint expected",
+    "Active job prevents deletion",
+    "Busy rejection leaves all candidates",
+    "Changed candidate prevents every deletion",
+    "Candidate rejection leaves all files",
+    "Corrupt retained endpoint prevents every deletion",
+    "Retained failure leaves candidates intact",
+    "Successful fixture removes only six named candidates",
+    "All retained endpoint bytes unchanged",
+    "All original metadata remains byte-identical",
+    "Durable ledger records six deletions and hashes",
+    "Repeated plan is idempotent"
+  ],
+  "scope": "Only tiny synthetic files in an owned workspace temporary directory; production expected hashes replaced in memory for fixture execution",
+  "real_cluster_files_deleted": false,
+  "cluster_accessed": false,
+  "script_sha256": "214cc24bd91529d57cb70a0f3f698808114d6efaa714a08ced2a3fca43510055"
+}

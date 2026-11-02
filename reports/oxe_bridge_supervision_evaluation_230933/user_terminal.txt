@@ -1,0 +1,64 @@
+2026-10-28 02:31:14.774825: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-10-28 02:31:14.774908: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-10-28 02:31:14.781142: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-10-28 02:31:14.844437: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-10-28 02:31:18.029892: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-10-28 02:31:21.538317: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:901] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2026-10-28 02:31:21.546025: W tensorflow/core/common_runtime/gpu/gpu_device.cc:2256] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+BRIDGE SUPERVISION RECEIPT VERIFIED; diagnostic only, no generalization verdict or automatic submission
+{
+  "mode": "fit",
+  "stage": 2,
+  "completed_updates": 65536,
+  "bridge_presentations": 131244,
+  "all_presentations": 524276,
+  "zero_bridge_steps_retained": 6617,
+  "initial_learned_sha256": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+  "first_reference_replay_exact": true,
+  "peak_reserved_gib": 4.626953125
+}
+Loading weights: 100%|██████████| 439/439 [00:00<00:00, 2291.84it/s]
+Loading weights: 100%|██████████| 196/196 [00:00<00:00, 363.21it/s]
+[transformers] CLIPTextModel LOAD REPORT from: /projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1
+Key                                                            | Status     |  | 
+---------------------------------------------------------------+------------+--+-
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.weight | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm2.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.weight            | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.weight        | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc2.bias              | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.layer_norm1.bias          | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+vision_model.encoder.layers.{0...23}.mlp.fc1.weight            | UNEXPECTED |  | 
+vision_model.post_layernorm.weight                             | UNEXPECTED |  | 
+vision_model.pre_layrnorm.weight                               | UNEXPECTED |  | 
+visual_projection.weight                                       | UNEXPECTED |  | 
+vision_model.pre_layrnorm.bias                                 | UNEXPECTED |  | 
+vision_model.embeddings.class_embedding                        | UNEXPECTED |  | 
+text_projection.weight                                         | UNEXPECTED |  | 
+vision_model.embeddings.patch_embedding.weight                 | UNEXPECTED |  | 
+vision_model.post_layernorm.bias                               | UNEXPECTED |  | 
+vision_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+logit_scale                                                    | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+EXACT_ORIGINAL_CONSTANTS_RESTORED {"profile_path": "/projects/_ssd/Zeroshot/oxe_bridge_supervision_frozen_repair_v1/training_frozen_profile.json", "profile_file_sha256": "0ad6ce3e3681a5f97fd31c805bd2e4f24458eb13c5651a69df7079c998b3a1bf", "frozen_sha256_before": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999", "frozen_sha256_after": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999", "restored_buffer_names": [], "differences": {}, "encoder_parameters_written": false, "learned_parameters_written": false, "exact_original_training_digest_verified": true, "identity_tolerance_used": false}
+BRIDGE_SUPERVISION_EVAL_DRAW mixed 1101 64/64
+BRIDGE_SUPERVISION_EVAL_DRAW mixed 1102 64/64
+BRIDGE_SUPERVISION_EVAL_DRAW mixed 1103 64/64
+BRIDGE_SUPERVISION_EVAL_DRAW bridge_supervision 1101 64/64
+BRIDGE_SUPERVISION_EVAL_DRAW bridge_supervision 1102 64/64
+BRIDGE_SUPERVISION_EVAL_DRAW bridge_supervision 1103 64/64
+BRIDGE_SUPERVISION_EVALUATION_REPORT /projects/_ssd/Zeroshot/runs/oxe-bridge-supervision-eval-230933/report.json
+^C

@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-16",
+  "job_id": "206915",
+  "stage": "cluster_formal",
+  "source": "user_reported_submission_id_after_validation_gated_command",
+  "preflight_job_id": "206895",
+  "preflight_validator_success_inferred_from_conditional_submission": true,
+  "preflight_report_independently_downloaded_and_verified": true,
+  "slurm_state_verified": true,
+  "slurm_evidence_source": "user_pasted_sacct_and_terminal_log",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:56:43",
+  "node": "gpu-a6000-1",
+  "report_verified": true,
+  "objective": "Independent-episode generalization; training fitting is secondary only",
+  "protocol_sha256": "1e566a650097d1a78571c531eabbd50c9877ee5aa994b85c912c98082539a0ea",
+  "entry_sha256": "10a451db84183c32dd117c3fb3d7d98b4e96d8a2ccbfdd975240455810c96c42",
+  "archive_sha256": "12d8aff48bb7e2ea1b2a93a4e1189cf5e680fbf7e6f0c1672e04fef0b2fbf640",
+  "cluster_output": "/projects/Zeroshot/runs/bridge-aug-fit-206915",
+  "cluster_log": "/projects/Zeroshot/logs/bridge-aug-fit-206915.out",
+  "fixed_updates": 8192,
+  "train_windows": 128,
+  "development_windows": 40,
+  "control_reused_job": "202278",
+  "generalization_result_available": true,
+  "generalization_evidence_level": "saved_prediction_float64_and_source_input_trace_audit",
+  "terminal_metrics": {
+    "train_path_position_mm": 7.296444773674011,
+    "train_path_rotation_deg": 2.5483033657073975,
+    "training_fit_gate": false,
+    "development_path_position_cm": 8.499732971191406,
+    "development_path_rotation_deg": 15.764585494995117,
+    "final_update": 8192
+  },
+  "candidate_passed_terminal_screen": false,
+  "candidate_status": "closed_after_independent_audit",
+  "next_step": "No repeated augmentation trial. Fixed context-only CPU readout ended below localization gate; prepare same-recipe training-coverage comparison, no new cluster job yet.",
+  "independent_analysis": "reports/bridge_image_augmentation_analysis_206915/analysis.json",
+  "candidate_passed": false,
+  "verified_metrics": {
+    "train": {
+      "original": {
+        "path_position_cm": 0.16881285789340109,
+        "path_rotation_deg": 0.5986484606004089,
+        "endpoint_position_cm": 0.21749852922249083,
+        "endpoint_rotation_deg": 0.6885199204769008
+      },
+      "augmented": {
+        "path_position_cm": 0.7296445163984466,
+        "path_rotation_deg": 2.5487849961913684,
+        "endpoint_position_cm": 0.9909141871002966,
+        "endpoint_rotation_deg": 3.4112383974303473
+      },
+      "static": {
+        "path_position_cm": 8.960284924153353,
+        "path_rotation_deg": 13.88273475795172,
+        "endpoint_position_cm": 12.615988871210611,
+        "endpoint_rotation_deg": 20.33054352452782
+      },
+      "passing_windows": 63,
+      "fit_gate": false,
+      "episode_equal": {
+        "original": {
+          "position_cm": 0.1688128578934011,
+          "rotation_deg": 0.598648460600409
+        },
+        "augmented": {
+          "position_cm": 0.7296445163984466,
+          "rotation_deg": 2.5487849961913684
+        },
+        "static": {
+          "position_cm": 8.960284924153353,
+          "rotation_deg": 13.88273475795172
+        }
+      }
+    },
+    "development": {
+      "original": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593287,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554033
+      },
+      "augmented": {
+        "path_position_cm": 8.499732887862963,
+        "path_rotation_deg": 15.764688920725566,
+        "endpoint_position_cm": 11.121974502816332,
+        "endpoint_rotation_deg": 21.299665126538866
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "passing_windows": 0,
+      "fit_gate": false,
+      "episode_equal": {
+        "original": {
+          "position_cm": 7.692468140144546,
+          "rotation_deg": 14.825867044893112
+        },
+        "augmented": {
+          "position_cm": 7.854421758423934,
+          "rotation_deg": 14.98766792766979
+        },
+        "static": {
+          "position_cm": 7.9601175966494155,
+          "rotation_deg": 15.066972166771839
+        }
+      }
+    }
+  },
+  "downloaded_result_archive_sha256": "948ee7ba244d93e72cfdd35839301c0ee2db9590ab675a8e0900e260ac272f98"
+}

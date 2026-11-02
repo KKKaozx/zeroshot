@@ -1,0 +1,77 @@
+{
+  "complete": true,
+  "scope": "CPU inventory and review task preparation; no semantic approvals added",
+  "source_paths": {
+    "catalog": "reports/nominal_validation_entry_20261025/instruction_catalog.json",
+    "training_rows": "reports/oxe_nominal_targets_20261025/training_original_instructions.jsonl",
+    "pilot_review": "reports/local_paraphrase_pilot_20261025_v2/text_review.json",
+    "pilot_generation": "reports/local_paraphrase_pilot_20261025_v2/report.json",
+    "exposure_design": "configs/augmentation_exposure_design_20261025.json",
+    "training_pool_report": "reports/oxe_nominal_targets_20261025/report.json"
+  },
+  "source_sha256": {
+    "catalog": "b05a2a84cdb548139ac31ceba26b8ee0bf168a08db4f2fdd3d3d011adc423e56",
+    "training_rows": "ca5a7ef713f933e2b11f318b0045beef758fdd4ac4629ca74907f104f3d55b17",
+    "pilot_review": "69b3b4c536130d3397263843ef749f77a726f03c31754a0af275d70405fcd240",
+    "pilot_generation": "9d0d0c70039342ddf7324d2036862238d11123581fa584e2118691a2b95b536d",
+    "exposure_design": "78189b482f694da768cb8648edae312e820529b168dbe7eccf1e5e077185b08e",
+    "training_pool_report": "fa7057c839edc3a677dd1c8b11f2501c7b4b1a102c908254c34c56e94ed8c221"
+  },
+  "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+  "training_partition_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac",
+  "training_instructions": 3686,
+  "training_windows": 145812,
+  "instructions_per_source_nonexclusive": {
+    "Fractal": 422,
+    "Bridge": 834,
+    "Language Table": 2326,
+    "BC-Z": 104
+  },
+  "source_window_counts": {
+    "Fractal": 27450,
+    "Bridge": 10352,
+    "Language Table": 12214,
+    "BC-Z": 95796
+  },
+  "matched_prior_pilot_instructions": 3,
+  "prior_pilot_not_in_current_pool": [
+    "0038d818d1b5798ba536039f75cc559a25ad14513d34ce914ed8d8b24f4d5372",
+    "004aac2cd87d4ca0d83c8501ed0ec5b03b36806671b7b9ae9bcf9286f167b235",
+    "012b1057affa6af2bc68b838c7ba54a7843d9a8a906edb0228283fc5dc5be47e",
+    "01512104c9189af61035a89c8895ee621c82ff63e39941d931b499ec66659026",
+    "01e79c8c50abeb888cb23f819bf66d13fcd38e9b4d31411fd66b74996c0a0536"
+  ],
+  "prior_text_review_decisions_on_matched_instructions": {
+    "reject": 7,
+    "accept_text": 8
+  },
+  "matched_prior_complete_five_text_accepted": 0,
+  "no_prior_pilot_instructions": 3683,
+  "required_paraphrase_slots_for_current_catalog": 18430,
+  "new_semantic_approvals": 0,
+  "admitted_paraphrase_instructions": 0,
+  "unknown_current_gripper_windows_from_existing_target_report": {
+    "Bridge": 1376,
+    "Language Table": 12214,
+    "BC-Z": 2739,
+    "Fractal": 11040
+  },
+  "unknown_current_gripper_windows_in_3d_sources": 15155,
+  "unknown_gripper_limit": "Counts reused from the frozen target report, not recomputed from sensor data. Language Table has XY-only supervision and needs no fabricated gripper hold.",
+  "implementation_gap": "Exposure design allows positive fallback for ineligible counterfactual windows. Existing LanguageAugmentor requires counterfactual choices for every window and has no eligibility fallback. Not changed or executed here.",
+  "bank_created": false,
+  "augmented_training_released": false,
+  "review_queue": "reports\\project_goal_audit_20261030\\training_language_review_queue.jsonl",
+  "review_queue_sha256": "ed72adb185fc7b1213b441fb26f240d3be8d4e81d1c99c30251ea73e235b75fc",
+  "models_loaded": 0,
+  "new_training_updates": 0,
+  "new_generation_calls": 0,
+  "new_cluster_jobs": 0,
+  "heldout_instruction_content_used": false,
+  "source_files_unchanged": true,
+  "limits": [
+    "Text review is not scene validation.",
+    "Earlier pilot is preserved as provenance, not reclassified as a current training bank.",
+    "This inventory does not resolve source-to-LIBERO execution, decoder capability or final data scale."
+  ]
+}

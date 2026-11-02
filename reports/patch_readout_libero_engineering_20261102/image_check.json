@@ -1,0 +1,53 @@
+{
+  "bridge_images": 10,
+  "bridge_files": [
+    "bridge_data_v2-train.tfrecord-00000-of-01024",
+    "bridge_data_v2-train.tfrecord-00001-of-01024",
+    "bridge_data_v2-train.tfrecord-00002-of-01024",
+    "bridge_data_v2-train.tfrecord-00003-of-01024",
+    "bridge_data_v2-train.tfrecord-00004-of-01024",
+    "bridge_data_v2-train.tfrecord-00005-of-01024",
+    "bridge_data_v2-train.tfrecord-00006-of-01024",
+    "bridge_data_v2-train.tfrecord-00007-of-01024",
+    "bridge_data_v2-train.tfrecord-00090-of-01024",
+    "bridge_data_v2-train.tfrecord-00202-of-01024"
+  ],
+  "libero_images": 50,
+  "numeric_anchor_slot": 10352,
+  "shared_instruction": "",
+  "dino_cls_cosine": {
+    "bridge_bridge_mean": 0.37675347924232483,
+    "libero_libero_mean": 0.8815726637840271,
+    "bridge_libero_mean": 0.20027197897434235,
+    "bridge_nearest_other_bridge_mean": 0.5410391688346863,
+    "libero_nearest_bridge_mean": 0.2717888355255127
+  },
+  "policy_context_spread": {
+    "bridge": 16.503925323486328,
+    "libero": 4.125019073486328,
+    "distance_between_means": 18.929079055786133
+  },
+  "first_waypoint_spread_m": {
+    "bridge": 0.008707399480044842,
+    "libero": 0.001992955571040511,
+    "libero_task_instruction": 0.0019184835255146027
+  },
+  "mean_first_waypoint_m": {
+    "bridge": [
+      -0.003100000089034438,
+      -0.0019000000320374966,
+      -9.999999747378752e-05
+    ],
+    "libero": [
+      -0.008500000461935997,
+      0.0017999999690800905,
+      -0.0008999999845400453
+    ],
+    "libero_task_instruction": [
+      -0.003000000026077032,
+      0.007400000002235174,
+      -0.00019999999494757503
+    ]
+  },
+  "note": "Numeric inputs fixed to one Bridge dev window, history masked; only the image changes."
+}

@@ -1,0 +1,55 @@
+{
+  "status": "bounded_generator_qualification_not_robot_training",
+  "model_repository": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+  "model_revision": "bb5d59e06d9551d752d08b292a50eb208b07ab1f",
+  "quantization": "Q4_K_M",
+  "runtime_tag": "b11960",
+  "runtime_backend": "Vulkan",
+  "runtime_device": "Vulkan1",
+  "runtime_device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "input_requests": "reports/language_candidate_requests_20261030/generation_requests.jsonl",
+  "input_requests_sha256": "b83ecfdf634cba11082bd12d94865020e8ee98e6887659b3510498f094a8d997",
+  "request_count": 8,
+  "input_role": "Previously failed training-instruction cases used for qualification of a different model/runtime/structured generation mechanism; the closed 1.5B run is not restarted.",
+  "system_and_user_messages": "Keep the saved v3 messages unchanged",
+  "generation": {
+    "temperature": 0,
+    "seed": 42,
+    "repeat_penalty": 1.05,
+    "max_tokens": 384,
+    "json_schema": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "paraphrases": {"type": "array", "items": {"type": "string"}, "minItems": 5, "maxItems": 5}
+          },
+          "required": ["paraphrases"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {"abstain_reason": {"type": "string"}},
+          "required": ["abstain_reason"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "limits": {
+    "model_load_seconds": 180,
+    "seconds_per_completion": 60,
+    "generation_loop_seconds": 480,
+    "context_tokens": 2048,
+    "parallel_slots": 1,
+    "download_bytes": 4720436459,
+    "disk_footprint_max_bytes": 6442450944
+  },
+  "acceptance": "All eight groups structurally valid without original reuse, five manually text-equivalent grammatical variants each, no changed object/action/relation or ungrounded resolution of ambiguity. Abstentions and failures retained; no automatic retries or filling.",
+  "qualification_success_is_not": "A full reviewed language bank, scene validation, proof of generalization, or an isolated estimate of model capacity effects",
+  "semantic_approval_automatic": false,
+  "automatic_bulk_generation": false,
+  "robot_training_updates": 0,
+  "new_cluster_jobs": 0,
+  "server_binding": "127.0.0.1 only; offline; no web UI; stopped after the bounded run"
+}

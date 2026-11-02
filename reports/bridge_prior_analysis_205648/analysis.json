@@ -1,0 +1,195 @@
+{
+  "verified": true,
+  "final_job": 205648,
+  "preflight_job": 205618,
+  "formal_updates_verified": 8192,
+  "snapshots_verified": 13,
+  "all_original_targets_and_split_verified": true,
+  "all_residual_plus_prior_reconstructions_exact": true,
+  "preflight_same_lr_restore_exact": true,
+  "original_control_retrained": false,
+  "token_cache_reuse_reported": true,
+  "token_cache_contents_downloaded": false,
+  "checkpoint_metadata": {
+    "path": "reduced_u8192_trainable.pt",
+    "sha256": "8c4e99e0950cf77dbf7bdfe288bc163d110abf5f28ab83de33cd51bb467a472d",
+    "bytes": 529410946,
+    "includes_optimizer": false,
+    "roundtrip_exact": true
+  },
+  "checkpoint_downloaded": false,
+  "checkpoint_tensors_independently_verified": false,
+  "summaries": {
+    "train": {
+      "original_ddpm": {
+        "path_position_cm": 0.16881285789340109,
+        "path_rotation_deg": 0.5986484606004089,
+        "endpoint_position_cm": 0.21749852922249083,
+        "endpoint_rotation_deg": 0.6885199204769008
+      },
+      "new_prior_ddpm": {
+        "path_position_cm": 0.1418614077211503,
+        "path_rotation_deg": 0.6337017351787878,
+        "endpoint_position_cm": 0.15543444723445152,
+        "endpoint_rotation_deg": 0.7864630060629038
+      },
+      "static": {
+        "path_position_cm": 8.960284924153353,
+        "path_rotation_deg": 13.88273475795172,
+        "endpoint_position_cm": 12.615988871210611,
+        "endpoint_rotation_deg": 20.33054352452782
+      },
+      "state_prior_only": {
+        "path_position_cm": 5.4600138761718595,
+        "endpoint_position_cm": 7.108811240895218
+      },
+      "train_fit_passed": true,
+      "passing_windows": 128,
+      "clipped_xyz_components": 0
+    },
+    "development": {
+      "original_ddpm": {
+        "path_position_cm": 8.349126682028293,
+        "path_rotation_deg": 15.256048338593287,
+        "endpoint_position_cm": 10.72835144137335,
+        "endpoint_rotation_deg": 20.784512578554033
+      },
+      "new_prior_ddpm": {
+        "path_position_cm": 7.18457126519011,
+        "path_rotation_deg": 16.697221748237663,
+        "endpoint_position_cm": 9.323184291064251,
+        "endpoint_rotation_deg": 22.91953266886782
+      },
+      "static": {
+        "path_position_cm": 8.21232607389037,
+        "path_rotation_deg": 15.098500432102608,
+        "endpoint_position_cm": 10.565334249436834,
+        "endpoint_rotation_deg": 19.986393321428388
+      },
+      "state_prior_only": {
+        "path_position_cm": 6.279815834368369,
+        "endpoint_position_cm": 7.9083330647316785
+      },
+      "train_fit_passed": null,
+      "passing_windows": 0,
+      "clipped_xyz_components": 0
+    }
+  },
+  "development_episode_counts": {
+    "position_better_than_old": 8,
+    "rotation_better_than_old": 4,
+    "position_better_than_static": 7,
+    "rotation_better_than_static": 5,
+    "position_better_than_prior": 4
+  },
+  "episode_equal_development": {
+    "original_ddpm": {
+      "position_cm": 7.692468140144546,
+      "rotation_deg": 14.825867044893112
+    },
+    "new_prior_ddpm": {
+      "position_cm": 6.85148843586893,
+      "rotation_deg": 16.056069211095444
+    },
+    "static": {
+      "position_cm": 7.9601175966494155,
+      "rotation_deg": 15.066972166771839
+    },
+    "state_prior_only": {
+      "position_cm": 6.1240637774647535
+    }
+  },
+  "candidate_checks": {
+    "train_fit": true,
+    "position_better_than_static": true,
+    "position_better_than_old": true,
+    "rotation_no_worse_than_old": false,
+    "at_least6_episodes_position_better_than_old": true
+  },
+  "candidate_passed": false,
+  "residual_error_decomposition": {
+    "train": {
+      "prior_mean_squared_distance_cm2": 44.034443073144914,
+      "correction_mean_squared_distance_cm2": 44.15664763802841,
+      "cross_term_cm2": -88.16309610801166,
+      "final_mean_squared_distance_cm2": 0.02799460316167232,
+      "correction_mean_length_cm": 5.476126264936689
+    },
+    "development": {
+      "prior_mean_squared_distance_cm2": 54.47631663068741,
+      "correction_mean_squared_distance_cm2": 26.825380080117043,
+      "cross_term_cm2": -7.837548773245526,
+      "final_mean_squared_distance_cm2": 73.46414793755892,
+      "correction_mean_length_cm": 4.480710920730256
+    }
+  },
+  "descriptive_episode_uncertainty": {
+    "original_ddpm": {
+      "episode_equal_position_improvement_cm": 0.8409797042756167,
+      "descriptive_paired_episode_bootstrap95_cm": [
+        0.02511237759756386,
+        1.7171423088439268
+      ]
+    },
+    "static": {
+      "episode_equal_position_improvement_cm": 1.1086291607804857,
+      "descriptive_paired_episode_bootstrap95_cm": [
+        -0.5935894132650882,
+        2.731735162615387
+      ]
+    },
+    "state_prior_only": {
+      "episode_equal_position_improvement_cm": -0.7274246584041769,
+      "descriptive_paired_episode_bootstrap95_cm": [
+        -1.9534703990728177,
+        0.41209242893200865
+      ]
+    }
+  },
+  "max_recorded_metric_difference": {
+    "position_cm": 1.2313718684708874e-06,
+    "rotation_deg": 0.0015171701114965463,
+    "reconstruction": 0.0
+  },
+  "peak_reserved_gib": 3.923828125,
+  "elapsed_seconds": 2193.208309375914,
+  "artifact_sha256": {
+    "reports\\bridge-prior-fit-205648\\common_u0000_train.npz": "1da4f0e54c828afcb3f0c2968daf3a7ce2c27fe7bf2d8f5925e855eab570a76b",
+    "reports\\bridge-prior-fit-205648\\common_u2048_train.npz": "a20218bf493643dfeb07eb067924a13e3bcbffcba348f0072d1dee2d115c4003",
+    "reports\\bridge-prior-fit-205648\\common_u4096_train.npz": "e2490e82e7231e4a773fefca30c42b4943afb40b34e08c530cae38249a268326",
+    "reports\\bridge-prior-fit-205648\\common_updates.jsonl": "428bdf19715c4987f62784a01a519d1901098a4db1eb295062a43b5ba94a9322",
+    "reports\\bridge-prior-fit-205648\\effective_runner.py": "8465964f8dd97fb7f15439d7b2a6b2daca04f7de0c8ed90771badaa3d2611f3e",
+    "reports\\bridge-prior-fit-205648\\plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928",
+    "reports\\bridge-prior-fit-205648\\reduced_u6144_train.npz": "bdb721db52ca63780a2252e442012dff6b8abda8a2a51d531fb5e0a04e60540b",
+    "reports\\bridge-prior-fit-205648\\reduced_u7168_train.npz": "6dfb6d6217547af4b67c14d357704f0aed1ea0b3733deded8c1f255f8f3bfe7c",
+    "reports\\bridge-prior-fit-205648\\reduced_u7680_train.npz": "bab63d0d6e0b3887d1cdc1a86cfb6c6cc77ee1dcb8585d0141a67dffdd3d552a",
+    "reports\\bridge-prior-fit-205648\\reduced_u8192_development.npz": "30a48f5af95afee1735977c44e3e25d39a22296a831d9a7afdca29c9926b0164",
+    "reports\\bridge-prior-fit-205648\\reduced_u8192_train.npz": "a8eb10dc34282ebb579bc0c7660d3bfd7db8be7e3591d378c30f8a7e5093693b",
+    "reports\\bridge-prior-fit-205648\\reduced_updates.jsonl": "2d71a1dfc02ba44767acd8b5588ec03ad5400ccc1fa55c9d335fc9f072eae6f4",
+    "reports\\bridge-prior-fit-205648\\report.json": "926235c3cb0d2cc69dd2f0a143ce08f10c2cd5788a04fdb25085127735b74526",
+    "reports\\bridge-prior-fit-205648\\runner_snapshot.py": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa",
+    "reports\\bridge-prior-preflight-205618\\common_u0000_train.npz": "785c2874ab247dea687ebe57da5d14ec9bf1d1084ca8b5ef044b0e98335afa51",
+    "reports\\bridge-prior-preflight-205618\\common_u0004_train.npz": "183dd0b276de40be2711bf6064c98751ee497687791e229d0814de3e7baba479",
+    "reports\\bridge-prior-preflight-205618\\common_updates.jsonl": "159f5541c50b8ac52f67cd57f5d71d55bdcce9bacde86dd3d49f09ff17006e88",
+    "reports\\bridge-prior-preflight-205618\\constant_u0008_train.npz": "f0a4aab88b17ac34d78c561b36428d58d6864a945fc48eb5fd05146361082399",
+    "reports\\bridge-prior-preflight-205618\\constant_updates.jsonl": "52196ba818cd7b6eeb9706e142de21de3a919ef6e25a129a7dc32a5b006e1c43",
+    "reports\\bridge-prior-preflight-205618\\effective_runner.py": "8465964f8dd97fb7f15439d7b2a6b2daca04f7de0c8ed90771badaa3d2611f3e",
+    "reports\\bridge-prior-preflight-205618\\plan.json": "e4910b61a0181c5e1a00ff0c8f7a1167c8954ac38c54cf6719948881928e0928",
+    "reports\\bridge-prior-preflight-205618\\reduced_u0008_train.npz": "ed11ecb22c517d9fa7e3798564ff83301c8227b63711a81cc24f9bc3882e1cbb",
+    "reports\\bridge-prior-preflight-205618\\reduced_updates.jsonl": "4d850585867c60a97ca44aa85fdd6668777ec9502d5895862e4972adac27ff06",
+    "reports\\bridge-prior-preflight-205618\\report.json": "59cf1c296249fce642c92e87752b52df70c6f05a0d52a80c357f71a9298cf883",
+    "reports\\bridge-prior-preflight-205618\\restore_same_lr_u0008_train.npz": "f0a4aab88b17ac34d78c561b36428d58d6864a945fc48eb5fd05146361082399",
+    "reports\\bridge-prior-preflight-205618\\restore_same_lr_updates.jsonl": "52196ba818cd7b6eeb9706e142de21de3a919ef6e25a129a7dc32a5b006e1c43",
+    "reports\\bridge-prior-preflight-205618\\runner_snapshot.py": "801b6127a8feda8d210b8a28b8f52546f5e375bdf58cfcf1fcf1f5ce51fdc0aa"
+  },
+  "archive_sha256": "01ce9d96b3d1fef6c8e699b7cc214fb50d50569f1f31b21280b9fad69a51a67b",
+  "entry_sha256": "795fbaf0d995db2acdbcba2ed50d236746822e839295fcbee5e7a1955ab3a503",
+  "limits": [
+    "Same10 development demonstrations repeatedly used; exploratory, not fresh final test.",
+    "Three sampling seeds are not independent neural training replications.",
+    "Position/rotation offline only; gripper frozen; no physical grasp result.",
+    "Checkpoint and token-cache identities are reported by runner; those tensors were not downloaded.",
+    "Clipping reference and noisy-action origin follow declared residual parameterization; no unique module-causality proof."
+  ],
+  "decision": "Partial position benefit only; candidate fails frozen screen. Stop without extra training, seeds or mixture tuning."
+}

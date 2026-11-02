@@ -1,0 +1,163 @@
+{
+  "source_command_index": 1,
+  "raw_source_action7": [
+    -0.0005976991960778832,
+    -0.014494451694190502,
+    -0.012538752518594265,
+    0.013551382347941399,
+    0.010566345416009426,
+    -0.0757758840918541,
+    1.0
+  ],
+  "candidate_source_command8": {
+    "format": "bridge_controller_increment_pose8_candidate_v1",
+    "values": [
+      -0.0059769919607788324,
+      -0.14494451694190502,
+      -0.12538752518594265,
+      0.006970797345893657,
+      0.005022585393960215,
+      -0.037913250918219815,
+      0.9992440978185134,
+      1.0
+    ],
+    "supervision_mask": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "position_divisor": 0.1,
+    "gripper_projection": "Explicit binary command; unknown masked, continuous source grip is not reproduced",
+    "formal_training_admitted": false
+  },
+  "mapped_command8": {
+    "format": "bridge_controller_increment_pose8_candidate_v1",
+    "values": [
+      -0.0059769919607788324,
+      -0.14494451694190502,
+      -0.12538752518594265,
+      0.006970797345893658,
+      0.0050225853939602156,
+      -0.03791325091821982,
+      0.9992440978185135,
+      1.0
+    ],
+    "supervision_mask": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "position_divisor": 0.1,
+    "gripper_projection": "Explicit binary command; unknown masked, continuous source grip is not reproduced",
+    "formal_training_admitted": false,
+    "common_control_point_convention": "User-approved limited engineering trial, following configs/libero_nominal_execution_candidate_20261025.json: assume raw source XYZ meters, coincident world axes/origins and EEF frames/points. These are deliberately uncalibrated assumptions, not measured registrations. Includes absolute-state input as well as relative-action output; may give out-of-distribution source pose features.",
+    "physical_calibration_verified": false
+  },
+  "current_recorded_position": [
+    0.35477781295776367,
+    0.005979559849947691,
+    0.14678353071212769
+  ],
+  "current_recorded_frame_quaternion": [
+    0.042062286622489536,
+    -0.04643771098082502,
+    -0.0020556362967965145,
+    0.9980331043619566
+  ],
+  "target_pose_values_are_source_numeric_fixture_not_a_real_libero_observation": true,
+  "scenarios": [
+    {
+      "scenario": "A_explicit_goal_reset_to_measured",
+      "previous_goal_position": [
+        0.35477781295776367,
+        0.005979559849947691,
+        0.14678353071212769
+      ],
+      "goal": {
+        "position": [
+          0.3541801137616858,
+          -0.008514891844242811,
+          0.13424477819353342
+        ],
+        "quaternion_xyzw": [
+          0.04721664896595025,
+          -0.04297029072400494,
+          -0.04042773124608135,
+          0.9971407827994077
+        ],
+        "open_positive_command": 1.0,
+        "workspace_clipped": false,
+        "unclipped_position": [
+          0.3541801137616858,
+          -0.008514891844242811,
+          0.13424477819353342
+        ],
+        "formal_training_admitted": false
+      },
+      "native_action": [
+        -0.011953983921557665,
+        -0.28988903388381004,
+        -0.2507750503718853,
+        0.027890217163106672,
+        0.02009540521792915,
+        -0.1516912268424216,
+        -1.0
+      ],
+      "this_is_actual_source_desired_target": false,
+      "simulation_executed": false
+    },
+    {
+      "scenario": "B_hypothetical_previous_goal_x_plus1cm",
+      "previous_goal_position": [
+        0.3647778129577637,
+        0.005979559849947691,
+        0.14678353071212769
+      ],
+      "goal": {
+        "position": [
+          0.36415086094250126,
+          -0.009271883459927008,
+          0.13413911670554185
+        ],
+        "quaternion_xyzw": [
+          0.04721664896595025,
+          -0.04297029072400494,
+          -0.04042773124608135,
+          0.9971407827994077
+        ],
+        "open_positive_command": 1.0,
+        "workspace_clipped": false,
+        "unclipped_position": [
+          0.36415086094250126,
+          -0.009271883459927008,
+          0.13413911670554185
+        ],
+        "formal_training_admitted": false
+      },
+      "native_action": [
+        0.18746095969475185,
+        -0.305028866197494,
+        -0.2528882801317167,
+        0.027890217163106672,
+        0.02009540521792915,
+        -0.1516912268424216,
+        -1.0
+      ],
+      "this_is_actual_source_desired_target": false,
+      "simulation_executed": false
+    }
+  ],
+  "same_state_and_action_goal_difference_m": 0.010000000000000026,
+  "source_to_target_mapping_is_existing_uncalibrated_convention": true,
+  "hand_tool_alignment_not_established_by_this_fixture": true
+}

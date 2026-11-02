@@ -1,0 +1,41 @@
+{
+  "source": "User complete terminal output; raw reports/predictions/checkpoints not yet downloaded",
+  "job_id": 229116,
+  "pair_terminal_verification_passed": true,
+  "development_windows": 40,
+  "development_episodes": 10,
+  "training_seed_count": 1,
+  "sampling_seed_count": 3,
+  "position_reduction_vs_clip_percent": 17.110886333975028,
+  "rotation_reduction_vs_clip_percent": 15.123777502935742,
+  "position_reduction_vs_static_percent": 31.283014959039622,
+  "rotation_reduction_vs_static_percent": 14.89672885324983,
+  "position_improved_episodes": 6,
+  "rotation_improved_episodes": 7,
+  "jointly_improved_episodes": 5,
+  "fresh_a40_clip_vs_historical_a6000": {
+    "metric_differences": {
+      "path_position_cm": 0.0,
+      "path_rotation_deg": 0.0,
+      "endpoint_position_cm": 0.0,
+      "endpoint_rotation_deg": 0.0,
+      "episode_mean_path_position_cm": 0.0,
+      "episode_mean_path_rotation_deg": 0.0
+    },
+    "logged_update_points_checked": 34,
+    "logged_loss_max_abs_difference": 0.0,
+    "all_update_history_or_weight_identity_proven": false
+  },
+  "terminal_sha256": "ab21fd802314ff2c63b6d4f8a7cf021b1c2e1e037fc51d985c5a4959e8187798",
+  "conclusion": "DINO improves the original Bridge recipe on this reused dev40 and one training seed. Backbone replacement alone does not explain current mixed-source failure.",
+  "generalization_across_other_tasks_or_sources_proven": false,
+  "libero_success_proven": false,
+  "main_model_replaced": false,
+  "new_training_submitted": false,
+  "raw_artifact_local_verification_complete": true,
+  "raw_artifact_verification": "reports/bridge_backbone_pair_a40_229116/download_verification.json",
+  "both_histories_complete8192_locally_verified": true,
+  "train_development_metrics_recomputed_from_downloaded_predictions": true,
+  "model_weight_files_downloaded": false,
+  "local_raw_archive_sha256": "0b11d4c6a542dcfdcbca1cb4a75725a3dd773f280a85a84b7f7677d59f12d2b3"
+}

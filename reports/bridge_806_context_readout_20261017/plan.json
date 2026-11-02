@@ -1,0 +1,32 @@
+{
+  "question": "Do the saved decoder contexts of the 806-episode models permit lower held-out XYZ error under one fixed global linear readout, and how does this change after extra training?",
+  "difference_from_prior": "Prior context-only readout used 128 training windows of model202278. This uses the current3624 training windows/806 episodes and both8192/16170 archived training stages; no prior128 fit is rerun.",
+  "sources": {
+    "scripts\\check_bridge_806_context_readout_20261017.py": "ab1216e83215a9bdd1c0803cc2cf1e9ca1bb666af014964cb128e0491ab43501",
+    "cluster_packages\\bridge_demonstration_expansion_v1\\rows.json": "4dbcb6b7e89110950a2d301d6ce9f9250004fe916ffdf23db5dc067121b6ce59",
+    "scripts\\check_bridge_context_only_readout_20261016.py": "c23e17ea5a219ca85e78614e769bc2aa9de16098069c0362c98c19cae3c6adf1",
+    "reports\\bridge_context_only_readout_20261016\\report.json": "f71123a70b982677e5a580eb14f52f26e4a310dd38ff3937f6673455c2c083fd",
+    "reports\\bridge_demo806_analysis_208207\\analysis.json": "3fc886606212449e0de1bfbaa4f4cbd9398b57a025c4d8d524f8f1d258a2b335",
+    "reports\\bridge-demo806-fit-208207\\reduced_u8192_train.npz": "f401f785578bd6f7683b8604100d5c60449c403f70d1001cbd2d86b28bbbad85",
+    "reports\\bridge-demo806-fit-208207\\reduced_u8192_development.npz": "6c358676202b88cfe28ccc76030805a7f61beed83778ab0ae13dc9f290f1b820",
+    "reports\\bridge_budget_analysis_208586\\analysis.json": "4703356e4db061188932946b23bc698576bffb72f6749b2b782431e170e6e058",
+    "reports\\bridge-budget-fit-208586\\reduced_u16170_train.npz": "be792512173d5229ecff342d8cdaa4ae423ef5e03db11549eec8b78044edf618",
+    "reports\\bridge-budget-fit-208586\\reduced_u16170_development.npz": "219b1adf260fd6a848cfcd8787383c7d927b2978237c8fbff41c76d22427f197"
+  },
+  "algorithm": "Exactly the prior global ridge objective: lambda1.0, train-only feature centering, ONE scalar sqrt(mean squared centered row norm), train-only target centering. Primal1024x1024 solve; independently reconstruct with symmetric eigenvectors. No per-axis feature scaling, task-specific map, extra raw inputs, or sweep.",
+  "targets": "16 future XYZ targets (48 outputs), centimeters = saved target XYZ *10. Same3624 train and40 development windows for both stages.",
+  "context_scope": "1024D actual decoder conditioning, including Adapter/history/state projection; not isolated Adapter output.",
+  "evaluation": "Position only. Window-weighted and episode-equal path/endpoint errors. Native DDPM comparator is mean error of3 saved samples, not error of averaged predictions. Retain all5 tasks and10 development episodes.",
+  "positive_gate_per_stage": "Both window-weighted AND episode-equal path position error below static AND corresponding native DDPM; at least6/10 episodes below static. Endpoint is descriptive, not an additional chosen gate.",
+  "interpretation": [
+    "Positive: a usable XYZ mapping exists under a different capacity/objective; no unique causal verdict about a faulty module.",
+    "Negative: this fixed linear map is insufficient; does not prove information is absent or Adapter is broken.",
+    "Two stages have different learned contexts; representation and readout changes are descriptive, not an isolated architecture intervention."
+  ],
+  "limitations": [
+    "Reused development set, not a new final test or nested cross-validation.",
+    "No rotation, gripper, object localization, closed-loop simulation or grasp-success evaluation.",
+    "No deployment claim or selection between a linear policy and diffusion. Diffusion remains the project method."
+  ],
+  "stopping": "Exactly two fixed fits, one per saved stage. No new neural model loads, image encoding, GPU/cluster work, additional datasets, parameter search or reserved-test reads."
+}

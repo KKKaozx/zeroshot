@@ -1,0 +1,88 @@
+STATE_PAIR_START preflight legacy
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791902227.147202   54936 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791902229.537658   54936 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]
+Loading weights:  11%|█         | 63/590 [00:00<00:00, 572.78it/s]
+Loading weights:  21%|██        | 121/590 [00:00<00:01, 328.31it/s]
+Loading weights:  27%|██▋       | 160/590 [00:00<00:01, 319.56it/s]
+Loading weights:  33%|███▎      | 195/590 [00:00<00:01, 270.68it/s]
+Loading weights:  38%|███▊      | 224/590 [00:00<00:01, 235.77it/s]
+Loading weights: 100%|██████████| 590/590 [00:00<00:00, 674.29it/s]
+LATE_LR_MONITOR common 0 train position_mm 114.79031562805176 rotation 135.90225219726562
+D:\miniconda\envs\zeroshot-gpu\lib\site-packages\torch\autograd\graph.py:869: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:902.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+LATE_LR_UPDATE common 1 / 16 loss 0.43878644704818726
+LATE_LR_MONITOR common 16 train position_mm 99.60356712341309 rotation 17.89029312133789
+LATE_LR_UPDATE constant 17 / 32 loss 0.22637411952018738
+LATE_LR_MONITOR constant 32 train position_mm 103.79995346069336 rotation 29.98323631286621
+LATE_LR_FINAL constant train_mm 103.79995346069336 gate False
+LATE_LR_UPDATE restore_same_lr 17 / 32 loss 0.22637411952018738
+LATE_LR_MONITOR restore_same_lr 32 train position_mm 103.79995346069336 rotation 29.98323631286621
+LATE_LR_FINAL restore_same_lr train_mm 103.79995346069336 gate False
+LATE_LR_UPDATE reduced 17 / 32 loss 0.22637411952018738
+LATE_LR_MONITOR reduced 32 train position_mm 95.58795928955078 rotation 14.631011009216309
+LATE_LR_FINAL reduced train_mm 95.58795928955078 gate False
+LATE_LR_REPORT reports\bridge_state_replication_local_preflight_20261013\legacy\report.json
+STATE_PAIR_START preflight zero
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791902500.828211   43544 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791902503.187510   43544 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]
+Loading weights:   8%|▊         | 45/590 [00:00<00:01, 436.86it/s]
+Loading weights:  15%|█▌        | 89/590 [00:00<00:01, 295.97it/s]
+Loading weights:  21%|██        | 122/590 [00:00<00:01, 294.44it/s]
+Loading weights:  28%|██▊       | 167/590 [00:00<00:01, 334.59it/s]
+Loading weights:  34%|███▍      | 202/590 [00:00<00:01, 277.05it/s]
+Loading weights:  39%|███▉      | 232/590 [00:00<00:01, 253.39it/s]
+Loading weights: 100%|██████████| 590/590 [00:00<00:00, 694.12it/s]
+LATE_LR_MONITOR common 0 train position_mm 114.79031562805176 rotation 135.90225219726562
+D:\miniconda\envs\zeroshot-gpu\lib\site-packages\torch\autograd\graph.py:869: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:902.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+LATE_LR_UPDATE common 1 / 16 loss 0.43878644704818726
+LATE_LR_MONITOR common 16 train position_mm 99.60356712341309 rotation 17.89029312133789
+LATE_LR_UPDATE constant 17 / 32 loss 0.22637411952018738
+LATE_LR_MONITOR constant 32 train position_mm 103.79995346069336 rotation 29.98323631286621
+LATE_LR_FINAL constant train_mm 103.79995346069336 gate False
+LATE_LR_UPDATE restore_same_lr 17 / 32 loss 0.22637411952018738
+LATE_LR_MONITOR restore_same_lr 32 train position_mm 103.79995346069336 rotation 29.98323631286621
+LATE_LR_FINAL restore_same_lr train_mm 103.79995346069336 gate False
+LATE_LR_UPDATE reduced 17 / 32 loss 0.22637411952018738
+LATE_LR_MONITOR reduced 32 train position_mm 95.58795928955078 rotation 14.631011009216309
+LATE_LR_FINAL reduced train_mm 95.58795928955078 gate False
+LATE_LR_REPORT reports\bridge_state_replication_local_preflight_20261013\zero\report.json
+STATE_PAIR_START preflight real
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791902783.729790   53732 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791902786.112994   53732 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+
+Loading weights:   0%|          | 0/590 [00:00<?, ?it/s]
+Loading weights:   5%|▌         | 32/590 [00:00<00:01, 310.68it/s]
+Loading weights:  11%|█         | 65/590 [00:00<00:01, 309.33it/s]
+Loading weights:  16%|█▋        | 96/590 [00:00<00:01, 252.49it/s]
+Loading weights:  21%|██        | 123/590 [00:00<00:02, 226.77it/s]
+Loading weights:  25%|██▍       | 147/590 [00:00<00:02, 207.73it/s]
+Loading weights:  34%|███▍      | 200/590 [00:00<00:01, 297.30it/s]
+Loading weights:  84%|████████▎ | 494/590 [00:00<00:00, 1045.42it/s]
+Loading weights: 100%|██████████| 590/590 [00:00<00:00, 698.23it/s] 
+LATE_LR_MONITOR common 0 train position_mm 114.79031562805176 rotation 135.90225219726562
+D:\miniconda\envs\zeroshot-gpu\lib\site-packages\torch\autograd\graph.py:869: UserWarning: Memory Efficient attention defaults to a non-deterministic algorithm. To explicitly enable determinism call torch.use_deterministic_algorithms(True, warn_only=False). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\transformers\cuda\attention_backward.cu:902.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+LATE_LR_UPDATE common 1 / 16 loss 0.43878644704818726
+LATE_LR_MONITOR common 16 train position_mm 99.5976734161377 rotation 17.904874801635742
+LATE_LR_UPDATE constant 17 / 32 loss 0.22632277011871338
+LATE_LR_MONITOR constant 32 train position_mm 103.85088920593262 rotation 30.044265747070312
+LATE_LR_FINAL constant train_mm 103.85088920593262 gate False
+LATE_LR_UPDATE restore_same_lr 17 / 32 loss 0.22632277011871338
+LATE_LR_MONITOR restore_same_lr 32 train position_mm 103.85088920593262 rotation 30.044265747070312
+LATE_LR_FINAL restore_same_lr train_mm 103.85088920593262 gate False
+LATE_LR_UPDATE reduced 17 / 32 loss 0.22632277011871338
+LATE_LR_MONITOR reduced 32 train position_mm 95.5623722076416 rotation 14.632887840270996
+LATE_LR_FINAL reduced train_mm 95.5623722076416 gate False
+LATE_LR_REPORT reports\bridge_state_replication_local_preflight_20261013\real\report.json
+STATE_PAIR_REPORT reports\bridge_state_replication_local_preflight_20261013\report.json

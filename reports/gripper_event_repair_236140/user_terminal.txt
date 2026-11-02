@@ -1,0 +1,32 @@
+zixiao005@login-3:/projects/Zeroshot$ tail -n 80 -F /projects/Zeroshot/logs/gripper-event-repair-236140.out
+code/gripper_event_objective.py: OK
+event_frequencies.json: OK
+job.sh: OK
+protocol.json: OK
+README.md: OK
+source_report.json: OK
+submit_once.sh: OK
+tests/test_gripper_event_objective.py: OK
+train_event_pair.py: OK
+verify_pair.py: OK
+GRIPPER_EVENT_UPDATE state_control 1 /2048 {'update': 1, 'loss': 0.1759980320930481, 'state_loss': 0.1759980320930481, 'event_loss': 0.7495312690734863, 'gradient_norm': 0.21877077221870422}
+GRIPPER_EVENT_UPDATE state_control 2 /2048 {'update': 2, 'loss': 0.18652671575546265, 'state_loss': 0.18652671575546265, 'event_loss': 0.8767328858375549, 'gradient_norm': 0.3231442868709564}
+GRIPPER_EVENT_UPDATE state_control 256 /2048 {'update': 256, 'loss': 0.15983322262763977, 'state_loss': 0.15983322262763977, 'event_loss': 0.723982572555542, 'gradient_norm': 0.5251555442810059}
+GRIPPER_EVENT_UPDATE state_control 512 /2048 {'update': 512, 'loss': 0.21617764234542847, 'state_loss': 0.21617764234542847, 'event_loss': 0.9288232326507568, 'gradient_norm': 0.6005170345306396}
+GRIPPER_EVENT_UPDATE state_control 768 /2048 {'update': 768, 'loss': 0.1464279294013977, 'state_loss': 0.1464279294013977, 'event_loss': 0.6180946826934814, 'gradient_norm': 0.34769687056541443}
+GRIPPER_EVENT_UPDATE state_control 1024 /2048 {'update': 1024, 'loss': 0.17219513654708862, 'state_loss': 0.17219513654708862, 'event_loss': 0.6894826889038086, 'gradient_norm': 0.4320428967475891}
+GRIPPER_EVENT_UPDATE state_control 1280 /2048 {'update': 1280, 'loss': 0.1604965776205063, 'state_loss': 0.1604965776205063, 'event_loss': 0.8651721477508545, 'gradient_norm': 0.2964206039905548}
+GRIPPER_EVENT_UPDATE state_control 1536 /2048 {'update': 1536, 'loss': 0.14527015388011932, 'state_loss': 0.14527015388011932, 'event_loss': 0.6853921413421631, 'gradient_norm': 0.4572044014930725}
+GRIPPER_EVENT_UPDATE state_control 1792 /2048 {'update': 1792, 'loss': 0.14004135131835938, 'state_loss': 0.14004135131835938, 'event_loss': 0.6074434518814087, 'gradient_norm': 0.8460811376571655}
+GRIPPER_EVENT_UPDATE state_control 2048 /2048 {'update': 2048, 'loss': 0.13478073477745056, 'state_loss': 0.13478073477745056, 'event_loss': 0.8045814037322998, 'gradient_norm': 0.27613094449043274}
+GRIPPER_EVENT_UPDATE event_aware 1 /2048 {'update': 1, 'loss': 0.9255293011665344, 'state_loss': 0.1759980320930481, 'event_loss': 0.7495312690734863, 'gradient_norm': 1.619223952293396}
+GRIPPER_EVENT_UPDATE event_aware 2 /2048 {'update': 2, 'loss': 1.0342828035354614, 'state_loss': 0.18964090943336487, 'event_loss': 0.8446418642997742, 'gradient_norm': 1.4901217222213745}
+GRIPPER_EVENT_UPDATE event_aware 256 /2048 {'update': 256, 'loss': 0.8451714515686035, 'state_loss': 0.1860155463218689, 'event_loss': 0.6591559052467346, 'gradient_norm': 1.5704790353775024}
+GRIPPER_EVENT_UPDATE event_aware 512 /2048 {'update': 512, 'loss': 0.9705016016960144, 'state_loss': 0.23277108371257782, 'event_loss': 0.7377305030822754, 'gradient_norm': 2.0391433238983154}
+GRIPPER_EVENT_UPDATE event_aware 768 /2048 {'update': 768, 'loss': 0.7401715517044067, 'state_loss': 0.18526563048362732, 'event_loss': 0.554905891418457, 'gradient_norm': 1.203456163406372}
+GRIPPER_EVENT_UPDATE event_aware 1024 /2048 {'update': 1024, 'loss': 0.8266153335571289, 'state_loss': 0.20987454056739807, 'event_loss': 0.6167408227920532, 'gradient_norm': 2.1362881660461426}
+GRIPPER_EVENT_UPDATE event_aware 1280 /2048 {'update': 1280, 'loss': 0.8270436525344849, 'state_loss': 0.18711119890213013, 'event_loss': 0.6399324536323547, 'gradient_norm': 1.6971886157989502}
+GRIPPER_EVENT_UPDATE event_aware 1536 /2048 {'update': 1536, 'loss': 0.7757467031478882, 'state_loss': 0.18938925862312317, 'event_loss': 0.5863574743270874, 'gradient_norm': 2.1047136783599854}
+GRIPPER_EVENT_UPDATE event_aware 1792 /2048 {'update': 1792, 'loss': 0.664566159248352, 'state_loss': 0.17777517437934875, 'event_loss': 0.4867909550666809, 'gradient_norm': 3.401858329772949}
+GRIPPER_EVENT_UPDATE event_aware 2048 /2048 {'update': 2048, 'loss': 0.7314751148223877, 'state_loss': 0.16295048594474792, 'event_loss': 0.5685245990753174, 'gradient_norm': 1.204968810081482}
+GRIPPER_EVENT_COMPLETE {"absolute_guards": {"state_control": {"criteria": {"train": {"balanced_accuracy_protected": true, "opening_event_gate": false, "closing_event_gate": false}, "development": {"balanced_accuracy_protected": true, "opening_event_gate": false, "closing_event_gate": false}}, "passed": false}, "event_aware": {"criteria": {"train": {"balanced_accuracy_protected": true, "opening_event_gate": false, "closing_event_gate": false}, "development": {"balanced_accuracy_protected": true, "opening_event_gate": false, "closing_event_gate": false}}, "passed": false}}, "candidate_beats_control_both_development_events": true, "selected_head_for_further_engineering": null, "automatic_rollout": false, "formal_matrix_admitted": false, "execution_complete": true, "total_new_head_updates": 4096, "source_pose_updates": 0, "original_pose_and_head_files_unchanged": true, "elapsed_seconds": 22.58993073599413, "peak_reserved_gib": 0.08984375, "automatic_following_action": false}

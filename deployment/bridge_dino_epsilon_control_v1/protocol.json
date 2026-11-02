@@ -1,0 +1,90 @@
+{
+  "format": "bridge-positive-dino-epsilon-control-v1",
+  "seed": 42,
+  "updates": 8192,
+  "switch_update": 4096,
+  "baseline_job": 229116,
+  "source_preflight_job": 228978,
+  "new_training_runs_allowed": 1,
+  "new_x0_training_allowed": false,
+  "candidate_target": "epsilon",
+  "baseline_target": "sample",
+  "baseline_initial_shared_sha256": "68040cd1af445c08abcf29c092df21aaa5bd61c1629c3af864ead08102ee9181",
+  "baseline_augmented_initial_sha256": "176e4fe2eaf7d14dd5f7ccc0877c3f8655d3aa08aeb5e468c6fa3d0c1de511c6",
+  "baseline_checkpoint_sha256": "730f06ecb417ff98d7e5270c114c2b062ce38347f0987c136b9d0359e8c4a6f5",
+  "baseline_effective_source_sha256": "80141b8c076a99a9b2dbabab6548c6ab8bcbb036364c6cc9a7cb324567232f22",
+  "base_contract_sha256": "4c53e826ce353ecf66e33c7ce39059842553b6e660b813e77a5900362c977c50",
+  "baseline_files": {
+    "clip/common_updates.jsonl": "f65b0770a70a68e1c47db12ad6ec91e8ac689d2708a376e0b77923ec93e955c2",
+    "clip/effective_runner.py": "80141b8c076a99a9b2dbabab6548c6ab8bcbb036364c6cc9a7cb324567232f22",
+    "clip/entry_binding.json": "835c45b298c2cf442a9075cee46461dc41b4a8277b11f74abbae02829ebebd56",
+    "clip/reduced_u8192_development.npz": "07d64957f885243dadf32a5769f22301558872678bd20aec4f77525ac0f4ee38",
+    "clip/reduced_u8192_train.npz": "61ff5b41bd4102b470db230cae60aad9c0a7d19178d66e9339b7005d0929a7ca",
+    "clip/reduced_updates.jsonl": "198ce6c5f85ab2b0a65944cff8ecea1eff17bd31f978d8448b7e0a22fd88c754",
+    "clip/report.json": "b2c6fd8742ce72a43e2bc0a35e48b88ce4662f46e0405e551da4ca61f7a91891",
+    "clip/runner_snapshot.py": "9f1ae8751bac9fea32c4c72fa3b6d5267efe003a8f4b354b704e7695e241ab3a",
+    "dino/common_updates.jsonl": "0a2ea59487bb6b429f31aed432fc58cc088ecec3e49d1265a66cd2fd18ef0205",
+    "dino/effective_runner.py": "80141b8c076a99a9b2dbabab6548c6ab8bcbb036364c6cc9a7cb324567232f22",
+    "dino/entry_binding.json": "c29d17a862cf7e5d5e91e77b1d54a198cd42598d4a9477453416407ad54ca067",
+    "dino/reduced_u8192_development.npz": "8db8d9c05c5ffdb7d8fa5bedaf52c98d5acc4e5664f0ae9c23d5c651a6536bf6",
+    "dino/reduced_u8192_train.npz": "796b4fd0f4f08702a8f6d5a4f8242ae068fa7dbd1c46eaa0faa4cb7867c89593",
+    "dino/reduced_updates.jsonl": "8328d4cac08812a678faad120616aa1efeee6a5c7bc2e1c6b8acd81dd5582393",
+    "dino/report.json": "31065a83ef429065a72e979e7ef6f2eb81a9f16a4acf2cd1216dbd2babaa0718",
+    "dino/runner_snapshot.py": "9f1ae8751bac9fea32c4c72fa3b6d5267efe003a8f4b354b704e7695e241ab3a",
+    "pair_comparison.json": "c38b42e856ee60b3ce5e0820c6b8ada1deddfce4516c984bdc4b342ecd22d66f",
+    "pair_report.json": "75caf3d2bed6c141c6d40213cabcdfd4a1e7311cb27c0e2ecf82ff5201639a6a",
+    "weights.sha256": "585f1c66760130282163e3851b1d926f5ee256754f2cfad39645b46e5dd0fcff"
+  },
+  "baseline_replay_windows": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "sampling_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "context_replay_atol": 0.0,
+  "prediction_replay_atol": 0.0,
+  "loss_and_gradient_first_reference": "Exact old first-batch x0 loss, module and global gradient norms before epsilon optimizer step",
+  "fixed": [
+    "DINO/cache/text",
+    "observed9Dpose",
+    "CLS+patch readout",
+    "1836train40dev",
+    "initial params and buffers",
+    "batch8/noise/order",
+    "Adam4096@1e-4+4096@1e-5",
+    "frozen gripper"
+  ],
+  "known_variant_profile_relative": "runs/oxe-id-failure-229597/actual_profile.json",
+  "known_variant_profile_sha256": "890f6c62696e45917490bfa8f665ee53e6c055ce65618375fb1707ae4f2676a8",
+  "mutable_constant_names": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "reference_runtime_seconds": 3019.897904386744,
+  "estimated_seconds_excluding_queue": [
+    3000,
+    3900
+  ],
+  "execution_wall_cap_seconds": 7200,
+  "separate_new_training_preflight": false,
+  "scope": "One conditional target control under already-positive DINO+state recipe; reuseddev40, one trainingseed, not main OXE/LIBERO confirmation",
+  "automatic_following_action": false,
+  "main_model_replaced": false,
+  "stop_policy": "No retry/seed/budget/variant extension; metadata/replay mismatch stops before first optimizer update",
+  "bundle_inputs": {
+    "canonical_constants.json": "6215b40a786deb460ad6374d6ed14d0157635848331575165bb89f6ab565a800",
+    "checks.py": "102df5bc2c359ffb2d4c99eced6e2c57d6fefd775f2fe377801dc5877543aeb6",
+    "control.py": "71562bdfced494672f2b12002d7820c10fe88933f1b85590582fd231f72baa02",
+    "job.sh": "8b914b86a331047ac3f56f6a8be4b1f762b376002442b79f58cd2df5a9b87a14",
+    "README.md": "fb4883b18591d1da3c80139304125d13be17284767b4bcf6558b550b75cd4f1f",
+    "reference_first_update.json": "b8548f5b98fe8b069060f14ef8ae218b16da5adda489a623684f7af51b20731d",
+    "run.py": "f1557be6b57398ae5dd90d8dcd2b29920be7be136442eb40258b1bf4997b8ab3",
+    "submit_once.sh": "9a46f652d2559337193fdb074f849d200e9ec49d6a939261c9ab3283437e54fe",
+    "verify.py": "601f34ff120cad6de3ef81a52179ae8a9bba23c38cd21be4e095328135af2c40"
+  }
+}

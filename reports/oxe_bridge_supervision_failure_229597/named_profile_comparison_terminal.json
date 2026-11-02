@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "same_named_encoder_tensors": true,
+  "same_key_order": true,
+  "changed_keys": [
+    "posterior_mean_x0",
+    "posterior_mean_xt"
+  ],
+  "schedule_numeric_differences": {
+    "posterior_mean_x0": {
+      "max_abs": 7.450580596923828e-09,
+      "unequal_values": 15
+    },
+    "posterior_mean_xt": {
+      "max_abs": 1.1920928955078125e-07,
+      "unequal_values": 14
+    }
+  },
+  "classification": "Exact same known two-buffer initialization variant; archived constants may restore original full identity",
+  "models_constructed": 0,
+  "optimizer_updates": 0,
+  "guard_bypassed": false,
+  "failed_job": 229597,
+  "failure_profile_sha256": "890f6c62696e45917490bfa8f665ee53e6c055ce65618375fb1707ae4f2676a8",
+  "failure_report_sha256": "8a84e90d768583a548007bf0ac35eb6330b177e808cb86893f4272fd40bb47a4",
+  "original_guard_unchanged": true,
+  "evidence_source": "User pasted existing saved-profile comparison at evaluation submission",
+  "local_raw_profiles_downloaded": false,
+  "reported_date": "2026-10-28"
+}

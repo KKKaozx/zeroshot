@@ -1,0 +1,27 @@
+{
+  "job_id": 211193,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:01:28",
+  "node": "gpu-a6000-1",
+  "evidence": "User terminal output; full report not yet downloaded or independently reviewed locally",
+  "terminal_bridge_passed": true,
+  "identity_max_absolute_differences": {
+    "text": 0.0,
+    "original_batch8": 0.0,
+    "normalized_roundtrip_batch4_padded8": 0.0,
+    "adapter_context": 0.0,
+    "ddpm100_action_pixels": 0.0
+  },
+  "simulation_wiring": {
+    "decisions": 2,
+    "environment_steps": 16,
+    "task_score_recorded": false,
+    "policy_trained": false
+  },
+  "training_updates": 0,
+  "generalization_verdict": null,
+  "remote_report": "/projects/Zeroshot/runs/pusht-online-211193/report.json",
+  "next_action": "Review full report, then finalize matched training and resume protocol; do not repeat this preflight or the resource probe",
+  "formal_training_submitted": false
+}

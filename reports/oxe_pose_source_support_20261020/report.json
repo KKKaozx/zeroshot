@@ -1,0 +1,81 @@
+{
+  "review_complete": true,
+  "scope": "Independent published implementation support; no source payloads or neural execution",
+  "previous_conversion_review_sha256": "ad4199d5bd8a0ec4140f9e182de2f017abab832d9a5c194bd011d7056a573818",
+  "fractal_quaternion_order": {
+    "status": "supported_by_same_named_release_system_identification_implementation",
+    "cached_dataset_name": "fractal20220817_data",
+    "cached_version": "0.1.0",
+    "cached_features_sha256": "7e02025e596cabd8d4e4afd6f2486b2110f22c0e42a9aa259d441cf5d538a684",
+    "reference_dataset_path": "gs://gresearch/robotics/fractal20220817_data/0.1.0",
+    "reference": "https://github.com/simpler-env/SimplerEnv/blob/main/tools/sysid/prepare_sysid_dataset.py",
+    "reference_sections": [
+      "dataset2path",
+      "fractal20220817_data branch when exporting base_pose_tool_reached"
+    ],
+    "reference_operation": "[xyz, last quaternion component, first three quaternion components] -> [xyz, wxyz]",
+    "supported_original_order": "xyz,qx,qy,qz,qw",
+    "matches_existing_parser": true,
+    "raw_exporter_definition_recovered": false,
+    "remote_metadata_and_local_cache_byte_identity_established": false,
+    "production_labels_changed": false
+  },
+  "bridge_units": {
+    "status": "documented_collector_dependency_units_and_conversion_family_support",
+    "dependency_reference": "https://github.com/Interbotix/interbotix_ros_toolboxes/blob/main/interbotix_xs_toolbox/interbotix_xs_modules/src/interbotix_xs_modules/arm.py",
+    "dependency_section": "set_ee_pose_components and set_relative_ee_position_wrt_to_base_frame",
+    "documented_translation_unit": "meters",
+    "documented_angle_unit": "radians",
+    "collector_reference": "https://github.com/rail-berkeley/bridge_data_robot/blob/main/widowx_envs/widowx_controller/src/widowx_controller/widowx_controller.py",
+    "collector_section": "get_cartesian_pose: FKinSpace with the Interbotix robot description",
+    "data_chain": "Controller matrix translation -> transform2state full_state -> numpy state -> inspected RLDS direct state copy",
+    "exact_historical_export_commit_binding_complete": false,
+    "normalization_scale_changed": false
+  },
+  "fractal_position_support": {
+    "status": "independent_system_identification_usage_not_explicit_raw_unit_specification",
+    "reference": "https://github.com/simpler-env/SimplerEnv/blob/main/tools/sysid/sysid.py",
+    "finding": "Reached XYZ copied directly into SAPIEN Pose and compared to simulated base-relative TCP; no position rescaling in this path.",
+    "interpretation": "Supports SI usage in that implementation; does not replace an explicit raw export unit declaration.",
+    "raw_unit_to_meters_signoff": false
+  },
+  "observation_timing": {
+    "reference": "https://github.com/simpler-env/SimplerEnv/blob/main/ADDING_NEW_ENVS_ROBOTS.md",
+    "section": "Appendix / More notes",
+    "finding": "Real Google Robot control is non-blocking; 3Hz is a simplifying simulation choice following RT-1.",
+    "sysid_reference": "https://github.com/simpler-env/SimplerEnv/blob/main/tools/sysid/sysid.py",
+    "sysid_simulation_hz": {
+      "Google Robot": 3,
+      "WidowX": 5
+    },
+    "fixed_real_export_observation_interval_proven": false,
+    "resampling_added": false
+  },
+  "reference_branch_commits_pinned": false,
+  "local_original_raw_timestamps_found": false,
+  "local_search_scope": [
+    "Original OpenX directory filename search for obs_dict.pkl, out.npy and timestamp-named files; only TFDS metadata found among matches",
+    "E:/dataset top-level has Bridge and Language Table TFDS export directories; no claim of an exhaustive content search there"
+  ],
+  "remaining_evidence": [
+    "Language Table real export XY units and observation timing",
+    "BC-Z 1.0.0 export XYZ units and observation timing",
+    "Fractal explicit position units and real observation timing",
+    "Bridge exact export lineage and matching original timestamps when required"
+  ],
+  "production_source_sha256": {
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "dataset.py": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445",
+    "train.py": "1714a88c18c90a4962a82cf48d08057bc5f5ac62007d6e0981d2d1637f5a68bb",
+    "libero_action_interface.py": "6302101e77efb3d3c8ac76d5e2086fe86f72e0b12e625e59ffe414d69d9b8c50",
+    "libero_waypoint_execution.py": "5d183a6720f1a8303d4766b2cad139e24d33367a51b1675cf279cad18892acb8",
+    "libero_project_policy.py": "1ea0657d200b55224b4a1231d8208cf4e0837a91187a9a7333b31a686501b4d8"
+  },
+  "production_sources_unchanged": true,
+  "frozen_episode_roles_sha256": "149c5dece84ad636760acf8a06cc69c367323bdac5a99c7859e4dc08540ea079",
+  "source_payloads_read": false,
+  "training_or_inference_run": false,
+  "window_manifest_created": false,
+  "training_ready": false,
+  "generalization_verdict": null
+}

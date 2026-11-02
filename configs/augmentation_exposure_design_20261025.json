@@ -1,0 +1,24 @@
+{
+  "status": "preregistered_design_before_formal_scores_not_yet_implemented_or_admitted_for_augmented_runs",
+  "common_training_protocol_sha256": "297e03087cf4efaf61b476b84b046404565014984d32c0d777a03b62fada51be",
+  "training_dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+  "update_budget": 65536,
+  "batch_size": 8,
+  "source_window_plan_shared_by_training_seed": true,
+  "extra_batches_for_augmentation": false,
+  "data_removed_between_conditions": false,
+  "paraphrase_sampling": "Uniform original plus five verified equivalent alternatives on positive draws",
+  "counterfactual_probability_on_reviewed_eligible_windows": 0.25,
+  "counterfactual_eligibility": [
+    "At least one training-only donor with verified actual scene mismatch, not merely a different valid goal",
+    "If gripper is supervised, current command is causally known so a hold label is defined",
+    "Language Table retains XY-only supervision, never a fabricated gripper/orientation"
+  ],
+  "ineligible_negative_draw_rule": "Keep the positive expert target and original/paraphrase rule; never drop the window or fabricate a current gripper command",
+  "counterfactual_target": "Zero relative translation, identity relative quaternion where observed, hold known current command; retain source capability/tail masks",
+  "effective_negative_fraction": "Report actual negative draws and eligible coverage;0.25 is conditional, not a promise of25percent of all windows",
+  "review_may_use_validation_test_or_libero_training_examples": false,
+  "original_positive_instruction_may_be_silently_replaced_by_unreviewed_text": false,
+  "reviewed_bank_available": false,
+  "current_release_admits_augmented_training": false
+}

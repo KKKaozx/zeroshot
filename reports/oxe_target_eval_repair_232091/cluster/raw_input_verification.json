@@ -1,0 +1,91 @@
+{
+  "all120_target_rows_and_masks_exact_local_immutable_store_match": true,
+  "source_roles_groups_payloads_input_rows_match": true,
+  "repair_contract_and_effective_evaluator_digest_match": true,
+  "cross_axis_readout": {
+    "train": {
+      "epsilon": {
+        "cross_axis_normalized_inner_products": [
+          [
+            -0.35871803414028636,
+            0.274103605983161,
+            0.2103896577124343
+          ],
+          [
+            0.29072529789097873,
+            -0.2019826957635663,
+            -0.1291372332637533
+          ],
+          [
+            0.20930417144837013,
+            0.2187489143020156,
+            -0.1214571981026305
+          ]
+        ]
+      },
+      "sample": {
+        "cross_axis_normalized_inner_products": [
+          [
+            0.24689075771124014,
+            0.18122371586579042,
+            -0.21069022662949366
+          ],
+          [
+            0.36113593242305475,
+            -0.1128122672699217,
+            -0.19121461201385728
+          ],
+          [
+            0.4646297008866666,
+            -0.1702483883388217,
+            -0.22632979423717287
+          ]
+        ]
+      }
+    },
+    "validation": {
+      "epsilon": {
+        "cross_axis_normalized_inner_products": [
+          [
+            -0.14318267633612444,
+            0.015432283969108776,
+            0.05653012213377878
+          ],
+          [
+            0.061768705293723844,
+            0.02220000476394661,
+            -0.03418040875725029
+          ],
+          [
+            -0.03630320502207614,
+            -0.09396739708295546,
+            -0.26704497271021205
+          ]
+        ]
+      },
+      "sample": {
+        "cross_axis_normalized_inner_products": [
+          [
+            -0.006362933067788755,
+            -0.07910168006366983,
+            -0.22048742958991918
+          ],
+          [
+            0.06623125555975698,
+            -0.023440143440586366,
+            -0.156310795504911
+          ],
+          [
+            0.053173540728843185,
+            -0.1107564109212765,
+            -0.2832918315063903
+          ]
+        ]
+      }
+    }
+  },
+  "interpretation": "Descriptive original-axis inner products only, not a fitted coordinate repair or proof of input bottleneck",
+  "real_model_calls": 0,
+  "new_sampling_calls": 0,
+  "training_updates": 0
+}

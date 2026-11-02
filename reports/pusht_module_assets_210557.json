@@ -1,0 +1,430 @@
+{
+  "stage": "read_only_cpu_asset_inventory",
+  "training_updates": 0,
+  "gpu_requested": false,
+  "installs_or_downloads": false,
+  "errors": [],
+  "unresolved": [
+    "CLIP/Adapter runtime compatibility (metadata is not an import/forward test)",
+    "Matched training protocol and actual GPU memory/speed/total budget",
+    "Training dataset frame-chunk completeness/content integrity"
+  ],
+  "environments": {
+    "official-pusht-v1": {
+      "python": "3.9.18 | packaged by conda-forge | (main, Aug 30 2023, 03:49:32) \n[GCC 12.3.0]",
+      "executable": "/projects/_ssd/Zeroshot/envs/official-pusht-v1/bin/python",
+      "packages": {
+        "torch": "1.12.1",
+        "torchvision": "0.13.1",
+        "numpy": "1.23.3",
+        "zarr": "2.12.0",
+        "numcodecs": "0.10.2",
+        "dill": "0.3.5.1",
+        "omegaconf": "2.2.3",
+        "diffusers": "0.11.1",
+        "transformers": null,
+        "huggingface-hub": "0.14.1",
+        "Pillow": "9.2.0"
+      }
+    },
+    "bridge-diffusion": {
+      "python": "3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]",
+      "executable": "/projects/_ssd/Zeroshot/envs/bridge-diffusion/bin/python",
+      "packages": {
+        "torch": "2.5.1+cu118",
+        "torchvision": null,
+        "numpy": "1.26.4",
+        "zarr": null,
+        "numcodecs": null,
+        "dill": null,
+        "omegaconf": null,
+        "diffusers": null,
+        "transformers": null,
+        "huggingface-hub": null,
+        "Pillow": null
+      }
+    }
+  },
+  "source": {
+    "path": "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/source",
+    "expected_commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+    "head": {
+      "returncode": 0,
+      "stdout": "5ba07ac6661db573af695b419a7947ecb704690f",
+      "stderr": ""
+    },
+    "tracked_changes": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "file_sha256": {
+      "diffusion_policy/policy/diffusion_unet_hybrid_image_policy.py": "d8ead767ed3b1501c358aa3dd97ab479ebdf77a62ec9ab7081d6a2211c2d2e76",
+      "diffusion_policy/workspace/train_diffusion_unet_hybrid_workspace.py": "1d69542bdb37906c899f25465e0c178b0581cbf4760de326a78899d67b0cd029",
+      "diffusion_policy/model/diffusion/conditional_unet1d.py": "8a95014f8aa52ade086f967c9018a66bf0c68f2133969c8f7a8522da01b472ac",
+      "diffusion_policy/dataset/pusht_image_dataset.py": "1c3cc71f10cdf71d0bfbea411068a62ef876ee7508dfd7c1d1cfbe770650b0f5",
+      "diffusion_policy/common/sampler.py": "3dc7afb686a418abf4ceee4648dafb7e1be901bb70b1539530f9f9964cad1688"
+    }
+  },
+  "checkpoint_file": {
+    "path": "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/pusht_image.ckpt",
+    "exists": true,
+    "bytes": 4293295813,
+    "previous_sha_record": "bac7221f7e34cd51162dc1972e1a39ffcddc87de1dc1780c44ffa61b88c4ff76  /projects/Zeroshot/paper_reproduction/official_pusht_v1/pusht_image.ckpt",
+    "sha_freshly_verified": false
+  },
+  "checkpoint": {
+    "config": {
+      "training.num_epochs": 3050,
+      "training.seed": 42,
+      "training.gradient_accumulate_every": 1,
+      "training.max_train_steps": null,
+      "training.use_ema": true,
+      "dataloader.batch_size": 64,
+      "policy.horizon": 16,
+      "policy.n_obs_steps": 2,
+      "policy.n_action_steps": 8,
+      "policy.obs_as_global_cond": true,
+      "policy.diffusion_step_embed_dim": 128,
+      "policy.down_dims": [
+        512,
+        1024,
+        2048
+      ],
+      "policy.shape_meta": {
+        "obs": {
+          "image": {
+            "shape": [
+              3,
+              96,
+              96
+            ],
+            "type": "rgb"
+          },
+          "agent_pos": {
+            "shape": [
+              2
+            ],
+            "type": "low_dim"
+          }
+        },
+        "action": {
+          "shape": [
+            2
+          ]
+        }
+      },
+      "policy.noise_scheduler": {
+        "_target_": "diffusers.schedulers.scheduling_ddpm.DDPMScheduler",
+        "num_train_timesteps": 100,
+        "beta_start": 0.0001,
+        "beta_end": 0.02,
+        "beta_schedule": "squaredcos_cap_v2",
+        "variance_type": "fixed_small",
+        "clip_sample": true,
+        "prediction_type": "epsilon"
+      },
+      "task.dataset.zarr_path": "data/pusht/pusht_cchi_v7_replay.zarr",
+      "task.dataset.horizon": 16,
+      "task.dataset.pad_before": 1,
+      "task.dataset.pad_after": 7,
+      "task.dataset.seed": 42,
+      "task.dataset.val_ratio": 0.02,
+      "task.dataset.max_train_episodes": 90
+    },
+    "saved_progress": {
+      "global_step": 84167,
+      "epoch": 500
+    },
+    "interface": {
+      "weight_key": "model.down_modules.0.0.cond_encoder.1.weight",
+      "resolved": true,
+      "weight_shape": [
+        1024,
+        260
+      ],
+      "global_condition_dim": 132,
+      "per_observation_feature_dim": 66,
+      "rgb_feature_dim": 64,
+      "preserved_agent_pos_dim": 2
+    },
+    "optimizer_step_summary": {
+      "parameters_with_counter": 212,
+      "min": 84168,
+      "max": 84183
+    },
+    "progress_caveat": "Saved counters, not proof every planned epoch ran; exact update semantics require workspace review.",
+    "device": "cpu",
+    "model_instantiated": false,
+    "model_forward_executed": false
+  },
+  "datasets": [
+    {
+      "path": "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/source/data/pusht/pusht_cchi_v7_replay.zarr",
+      "exists": false,
+      "frames_read": false
+    },
+    {
+      "path": "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/data/pusht/pusht_cchi_v7_replay.zarr",
+      "exists": false,
+      "frames_read": false
+    },
+    {
+      "path": "/projects/_ssd/Zeroshot/data/pusht/pusht_cchi_v7_replay.zarr",
+      "exists": false,
+      "frames_read": false
+    },
+    {
+      "path": "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/source/data/pusht/pusht_cchi_v7_replay.zarr.zip",
+      "exists": false,
+      "frames_read": false
+    },
+    {
+      "path": "/projects/_ssd/Zeroshot/paper_reproduction/official_pusht_v1/data/pusht/pusht_cchi_v7_replay.zarr.zip",
+      "exists": false,
+      "frames_read": false
+    },
+    {
+      "path": "/projects/_ssd/Zeroshot/data/pusht/pusht_cchi_v7_replay.zarr.zip",
+      "exists": false,
+      "frames_read": false
+    }
+  ],
+  "dataset_search_scope": "Only listed paths; absence here does not establish absence elsewhere. No downloads.",
+  "clip_files": {
+    "path": "/projects/_ssd/Zeroshot/baseline_setup/clip-vit-large-patch14-v1",
+    "exists": true,
+    "top_level_files": [
+      {
+        "name": "config.json",
+        "bytes": 4519
+      },
+      {
+        "name": "merges.txt",
+        "bytes": 524619
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 1710540580
+      },
+      {
+        "name": "preprocessor_config.json",
+        "bytes": 316
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 389
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 2224003
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 905
+      },
+      {
+        "name": "vocab.json",
+        "bytes": 961143
+      }
+    ],
+    "config.json": {
+      "sha256": "8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a",
+      "content": {
+        "_name_or_path": "clip-vit-large-patch14/",
+        "architectures": [
+          "CLIPModel"
+        ],
+        "initializer_factor": 1.0,
+        "logit_scale_init_value": 2.6592,
+        "model_type": "clip",
+        "projection_dim": 768,
+        "text_config": {
+          "_name_or_path": "",
+          "add_cross_attention": false,
+          "architectures": null,
+          "attention_dropout": 0.0,
+          "bad_words_ids": null,
+          "bos_token_id": 0,
+          "chunk_size_feed_forward": 0,
+          "cross_attention_hidden_size": null,
+          "decoder_start_token_id": null,
+          "diversity_penalty": 0.0,
+          "do_sample": false,
+          "dropout": 0.0,
+          "early_stopping": false,
+          "encoder_no_repeat_ngram_size": 0,
+          "eos_token_id": 2,
+          "finetuning_task": null,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "hidden_act": "quick_gelu",
+          "hidden_size": 768,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "initializer_factor": 1.0,
+          "initializer_range": 0.02,
+          "intermediate_size": 3072,
+          "is_decoder": false,
+          "is_encoder_decoder": false,
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "layer_norm_eps": 1e-05,
+          "length_penalty": 1.0,
+          "max_length": 20,
+          "max_position_embeddings": 77,
+          "min_length": 0,
+          "model_type": "clip_text_model",
+          "no_repeat_ngram_size": 0,
+          "num_attention_heads": 12,
+          "num_beam_groups": 1,
+          "num_beams": 1,
+          "num_hidden_layers": 12,
+          "num_return_sequences": 1,
+          "output_attentions": false,
+          "output_hidden_states": false,
+          "output_scores": false,
+          "pad_token_id": 1,
+          "prefix": null,
+          "problem_type": null,
+          "projection_dim": 768,
+          "pruned_heads": {},
+          "remove_invalid_values": false,
+          "repetition_penalty": 1.0,
+          "return_dict": true,
+          "return_dict_in_generate": false,
+          "sep_token_id": null,
+          "task_specific_params": null,
+          "temperature": 1.0,
+          "tie_encoder_decoder": false,
+          "tie_word_embeddings": true,
+          "tokenizer_class": null,
+          "top_k": 50,
+          "top_p": 1.0,
+          "torch_dtype": null,
+          "torchscript": false,
+          "transformers_version": "4.16.0.dev0",
+          "use_bfloat16": false,
+          "vocab_size": 49408
+        },
+        "text_config_dict": {
+          "hidden_size": 768,
+          "intermediate_size": 3072,
+          "num_attention_heads": 12,
+          "num_hidden_layers": 12,
+          "projection_dim": 768
+        },
+        "torch_dtype": "float32",
+        "transformers_version": null,
+        "vision_config": {
+          "_name_or_path": "",
+          "add_cross_attention": false,
+          "architectures": null,
+          "attention_dropout": 0.0,
+          "bad_words_ids": null,
+          "bos_token_id": null,
+          "chunk_size_feed_forward": 0,
+          "cross_attention_hidden_size": null,
+          "decoder_start_token_id": null,
+          "diversity_penalty": 0.0,
+          "do_sample": false,
+          "dropout": 0.0,
+          "early_stopping": false,
+          "encoder_no_repeat_ngram_size": 0,
+          "eos_token_id": null,
+          "finetuning_task": null,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "hidden_act": "quick_gelu",
+          "hidden_size": 1024,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "image_size": 224,
+          "initializer_factor": 1.0,
+          "initializer_range": 0.02,
+          "intermediate_size": 4096,
+          "is_decoder": false,
+          "is_encoder_decoder": false,
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "layer_norm_eps": 1e-05,
+          "length_penalty": 1.0,
+          "max_length": 20,
+          "min_length": 0,
+          "model_type": "clip_vision_model",
+          "no_repeat_ngram_size": 0,
+          "num_attention_heads": 16,
+          "num_beam_groups": 1,
+          "num_beams": 1,
+          "num_hidden_layers": 24,
+          "num_return_sequences": 1,
+          "output_attentions": false,
+          "output_hidden_states": false,
+          "output_scores": false,
+          "pad_token_id": null,
+          "patch_size": 14,
+          "prefix": null,
+          "problem_type": null,
+          "projection_dim": 768,
+          "pruned_heads": {},
+          "remove_invalid_values": false,
+          "repetition_penalty": 1.0,
+          "return_dict": true,
+          "return_dict_in_generate": false,
+          "sep_token_id": null,
+          "task_specific_params": null,
+          "temperature": 1.0,
+          "tie_encoder_decoder": false,
+          "tie_word_embeddings": true,
+          "tokenizer_class": null,
+          "top_k": 50,
+          "top_p": 1.0,
+          "torch_dtype": null,
+          "torchscript": false,
+          "transformers_version": "4.16.0.dev0",
+          "use_bfloat16": false
+        },
+        "vision_config_dict": {
+          "hidden_size": 1024,
+          "intermediate_size": 4096,
+          "num_attention_heads": 16,
+          "num_hidden_layers": 24,
+          "patch_size": 14,
+          "projection_dim": 768
+        }
+      }
+    },
+    "preprocessor_config.json": {
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "content": {
+        "crop_size": 224,
+        "do_center_crop": true,
+        "do_normalize": true,
+        "do_resize": true,
+        "feature_extractor_type": "CLIPFeatureExtractor",
+        "image_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "image_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "resample": 3,
+        "size": 224
+      }
+    }
+  },
+  "elapsed_seconds": 8.810821496183053,
+  "inventory_execution_complete": true
+}

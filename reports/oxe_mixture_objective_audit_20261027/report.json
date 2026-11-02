@@ -1,0 +1,198 @@
+{
+  "scope": "All existing bound train labels and exact seed42 update indices only; no model or raw-source rerun",
+  "sources": {
+    "Bridge": {
+      "windows": 10352,
+      "window_presentations": 131244,
+      "presentation_fraction": 0.25033379365067254,
+      "previously_verified_coverage": {
+        "training_windows": 10352,
+        "actual_window_presentations": 131244,
+        "mean_presentations_per_window": 12.678129829984544,
+        "windows_never_sampled": 0,
+        "sampled_window_fraction": 1.0,
+        "max_presentations": 28
+      },
+      "mean_pose_loss_denominator_mass_fraction": 0.2851779749955025,
+      "mean_gripper_loss_denominator_mass_fraction": 0.30830720673008866,
+      "valid_future_targets_per_window": {
+        "min": 1.0,
+        "p25": 9.0,
+        "median": 16.0,
+        "p75": 16.0,
+        "p95": 16.0,
+        "p99": 16.0,
+        "max": 16.0
+      },
+      "valid_target_position_norm_normalized": {
+        "min": 0.0,
+        "p25": 0.34702242671851485,
+        "median": 0.744322861874608,
+        "p75": 1.2629258810695898,
+        "p95": 2.078489343232356,
+        "p99": 2.662716800630241,
+        "max": 4.155918260591534
+      },
+      "valid_target_max_absolute_position_normalized": 3.7031636238098145,
+      "target_components_outside_sampler_axis_limit8": 0,
+      "target_fraction_outside_sampler_axis_limit8": 0.0,
+      "source_position_units_verified": false,
+      "position_report_units": "Normalized recorded units; divisor0.1, not a newly verified meter/cm conversion",
+      "rotation_degrees": {
+        "min": 0.0,
+        "p25": 4.95026565058034,
+        "median": 9.605433010981947,
+        "p75": 17.031993400869982,
+        "p95": 37.31857503681124,
+        "p99": 62.95413853302686,
+        "max": 159.10562114709901
+      }
+    },
+    "Language Table": {
+      "windows": 12214,
+      "window_presentations": 131033,
+      "presentation_fraction": 0.24993133387757593,
+      "previously_verified_coverage": {
+        "training_windows": 12214,
+        "actual_window_presentations": 131033,
+        "mean_presentations_per_window": 10.728098902898314,
+        "windows_never_sampled": 1,
+        "sampled_window_fraction": 0.9999181267398067,
+        "max_presentations": 27
+      },
+      "mean_pose_loss_denominator_mass_fraction": 0.07419974710337443,
+      "mean_gripper_loss_denominator_mass_fraction": 0.0,
+      "valid_future_targets_per_window": {
+        "min": 1.0,
+        "p25": 6.0,
+        "median": 11.0,
+        "p75": 16.0,
+        "p95": 16.0,
+        "p99": 16.0,
+        "max": 16.0
+      },
+      "valid_target_position_norm_normalized": {
+        "min": 0.0,
+        "p25": 0.4618315769894593,
+        "median": 0.8758193834603876,
+        "p75": 1.5109558649710613,
+        "p95": 2.788156206193051,
+        "p99": 3.8480118950020907,
+        "max": 6.542921172625072
+      },
+      "valid_target_max_absolute_position_normalized": 6.037961483001709,
+      "target_components_outside_sampler_axis_limit8": 0,
+      "target_fraction_outside_sampler_axis_limit8": 0.0,
+      "source_position_units_verified": false,
+      "position_report_units": "Normalized recorded units; divisor0.1, not a newly verified meter/cm conversion"
+    },
+    "BC-Z": {
+      "windows": 95796,
+      "window_presentations": 131204,
+      "presentation_fraction": 0.25025749795909025,
+      "previously_verified_coverage": {
+        "training_windows": 95796,
+        "actual_window_presentations": 131204,
+        "mean_presentations_per_window": 1.3696187732264395,
+        "windows_never_sampled": 24389,
+        "sampled_window_fraction": 0.7454069063426448,
+        "max_presentations": 9
+      },
+      "mean_pose_loss_denominator_mass_fraction": 0.3203184752909041,
+      "mean_gripper_loss_denominator_mass_fraction": 0.34581844499398257,
+      "valid_future_targets_per_window": {
+        "min": 1.0,
+        "p25": 16.0,
+        "median": 16.0,
+        "p75": 16.0,
+        "p95": 16.0,
+        "p99": 16.0,
+        "max": 16.0
+      },
+      "valid_target_position_norm_normalized": {
+        "min": 0.0,
+        "p25": 0.1364636007916859,
+        "median": 0.4531870962689551,
+        "p75": 1.001846722568355,
+        "p95": 2.148347750455455,
+        "p99": 3.1277022157714023,
+        "max": 6.409581000739787
+      },
+      "valid_target_max_absolute_position_normalized": 5.568922996520996,
+      "target_components_outside_sampler_axis_limit8": 0,
+      "target_fraction_outside_sampler_axis_limit8": 0.0,
+      "source_position_units_verified": false,
+      "position_report_units": "Normalized recorded units; divisor0.1, not a newly verified meter/cm conversion",
+      "rotation_degrees": {
+        "min": 0.0,
+        "p25": 2.057971345535545,
+        "median": 5.778907311010897,
+        "p75": 12.341816891091888,
+        "p95": 28.8182163291998,
+        "p99": 46.87046312910663,
+        "max": 136.34412194949724
+      }
+    },
+    "Fractal": {
+      "windows": 27450,
+      "window_presentations": 130795,
+      "presentation_fraction": 0.24947737451266128,
+      "previously_verified_coverage": {
+        "training_windows": 27450,
+        "actual_window_presentations": 130795,
+        "mean_presentations_per_window": 4.764845173041894,
+        "windows_never_sampled": 231,
+        "sampled_window_fraction": 0.9915846994535519,
+        "max_presentations": 16
+      },
+      "mean_pose_loss_denominator_mass_fraction": 0.32030380261021885,
+      "mean_gripper_loss_denominator_mass_fraction": 0.3458590894868664,
+      "valid_future_targets_per_window": {
+        "min": 1.0,
+        "p25": 16.0,
+        "median": 16.0,
+        "p75": 16.0,
+        "p95": 16.0,
+        "p99": 16.0,
+        "max": 16.0
+      },
+      "valid_target_position_norm_normalized": {
+        "min": 0.0,
+        "p25": 0.3169609860391537,
+        "median": 0.7917432861108006,
+        "p75": 1.545834119970758,
+        "p95": 2.894483500660775,
+        "p99": 3.9455622581802965,
+        "max": 7.793550784528754
+      },
+      "valid_target_max_absolute_position_normalized": 7.660009384155273,
+      "target_components_outside_sampler_axis_limit8": 0,
+      "target_fraction_outside_sampler_axis_limit8": 0.0,
+      "source_position_units_verified": false,
+      "position_report_units": "Normalized recorded units; divisor0.1, not a newly verified meter/cm conversion",
+      "rotation_degrees": {
+        "min": 0.0,
+        "p25": 3.742102844105418,
+        "median": 8.876257577790774,
+        "p75": 16.937287001969906,
+        "p95": 35.56154214335553,
+        "p99": 52.91941601217207,
+        "max": 125.71207736950123
+      }
+    }
+  },
+  "total_window_presentations": 524276,
+  "updates_without_bridge": 6617,
+  "missing_pose_channels_enter_noisy_denoiser_input": true,
+  "mask_given_to_denoiser": false,
+  "missing_dimension_loss_masked": true,
+  "pose_objective": "Sum squared epsilon errors over valid pose entries divided by total valid pose entries in each batch",
+  "denominator_shares_are_not_measured_loss_or_gradient_shares": true,
+  "cross_source_scale_or_coordinate_registration_proven": false,
+  "causal_negative_transfer_established": false,
+  "optimizer_updates": 0,
+  "new_inference_calls": 0,
+  "raw_source_records_read": 0,
+  "training_history_sha256": "528aeba5a4c2d69169d9915bf50f240b1ed87e1fcb460edc0dccb66ff2628eac",
+  "target_dataset_identity": "7c68e7c83e1e2b87501759008eadb5e3e5c6862f0c1e0689f5929f173dea21ac"
+}

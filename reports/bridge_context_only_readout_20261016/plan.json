@@ -1,0 +1,23 @@
+{
+  "question": "Does the ACTUAL1024D saved DDPM context alone support a lower held-out XYZ error via one fixed linear map?",
+  "difference_from_existing": "Earlier learned_condition_state ridge used separate raw current-state features AND task-specific coefficients. This control removes both additions; no per-task fits, task ID, raw state or separate CLIP descriptor.",
+  "sources": {
+    "reports\\bridge-state-fit-202278\\real\\reduced_u8192_train.npz": "6219cfb072371f6efc6781c9dfed662a6a0659f34ee03a1ee774cc0a90ed37bf",
+    "reports\\bridge-state-fit-202278\\real\\reduced_u8192_development.npz": "b822c904ba1dca3fd71b002e685e5398af6788964610a885c56d5090ced1136f",
+    "cluster_packages\\bridge_growth128_v1\\manifest.json": "e2f7003ca2ce3c057282851e5a507d81e345c5d85253688bcf58938875000595",
+    "scripts\\check_bridge_context_only_readout_20261016.py": "c23e17ea5a219ca85e78614e769bc2aa9de16098069c0362c98c19cae3c6adf1"
+  },
+  "algorithm": "One global ridge lambda1.0. Center1024features using128 training rows, divide by sqrt(mean squared centered row norm); center training XYZ. No block weighting or fitted feature projection. Solve128x128 dual system; independently reconstruct using eigenvectors.",
+  "inputs": "Only saved contexts of202278 real-state final8192; includes learned Adapter/history/state port. No extra input added.",
+  "targets": "Same16 future XYZ in centimeters,48outputs; original128training/40development;64/10episodes.",
+  "gating": "Position-only localization evidence if original40-window error is below static AND original DDPM, with at least6/10episodes better than static. Not an overall policy candidate.",
+  "interpretation_positive": "The exact decoder input has a position mapping that generalizes under another fixed readout. Next possible neural experiment is fixed-context DDPM, not a proof that DDPM formula or Adapter code is faulty.",
+  "interpretation_negative": "This fixed map does not establish that input boundary as a positive control. Do not automatically run a frozen-context head or conclude information is absent.",
+  "limits": [
+    "OnlyXYZ; no rotation/gripper/task success.",
+    "Reused development set; no end-to-end CV.",
+    "Frozen context encoder was supervised on128training rows; these are legal train features, not independent pretraining.",
+    "Readout has different capacity/objective/regularization; success is not a single-module causal verdict."
+  ],
+  "stopping": "One global fixed fit, no per-task alternative,lambda sweep,training update,encoding,noise sampling or cluster job."
+}

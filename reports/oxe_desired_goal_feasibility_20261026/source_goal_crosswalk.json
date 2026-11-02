@@ -1,0 +1,42 @@
+{
+  "review_completed_local_date": "2026-10-27",
+  "scope": "Source-specific desired-goal feasibility; not new target generation or policy verdict",
+  "sources": {
+    "Bridge": {
+      "candidate": "Recover original desired transform from previous desired transform, native delta transform, pivot and clipping/reset rules",
+      "observed_state_plus_action_admitted": false,
+      "raw_desired_state_in_cached_schema": false,
+      "exact_collector_config_and_export_bound": false,
+      "source_controller_family_url": "https://github.com/rail-berkeley/bridge_data_robot/blob/main/widowx_envs/widowx_envs/base/robot_base_env.py"
+    },
+    "Language Table": {
+      "candidate": "Only planar desired target, with an export-qualified action/observation phase",
+      "dimensions_observed": 2,
+      "new_record_count": 3,
+      "new_common_interior_action_rows": 60,
+      "simple_pre_or_post_target_action_relation_passed": false,
+      "paper_reference": "https://arxiv.org/html/2210.06407v1",
+      "paper_asynchronous_pairing_proves_exact_cache_phase": false
+    },
+    "BC-Z": {
+      "candidate": "Same-row native10-slot position=current+xyz_residual, orientation=rotvec(current_axis_angle+residual), same-slot target_close",
+      "candidate_spatial_formula_supported": true,
+      "native10_slots_are_fixed_uniform_future_row_times": false,
+      "reused_existing_numeric_check": true,
+      "new_full_pool_command_qualification_performed": false
+    },
+    "Fractal": {
+      "candidate": "Commanded base-frame translation displacement and RPY orientation displacement",
+      "rotation_delta_description": "rpy commanded orientation displacement, in base-relative frame",
+      "rotation_delta_is_documented_axis_angle": false,
+      "rotation_composition_and_command_clock_qualified": false
+    }
+  },
+  "all_four_sources_new_goal_training_ready": false,
+  "main_data_roles_or_sampling_changed": false,
+  "new_models_or_simulator_runs": 0,
+  "new_training_updates": 0,
+  "new_labels": 0,
+  "external_source_version_limit": "Live public Bridge collector branch is not established as the exact historical cached exporter",
+  "decision": "Keep old labels/weights and batch pause. Do not perform blanket action conversion. Resolve exact target-reference/time semantics, and complete independently planned fixed source-validation decoding without training."
+}

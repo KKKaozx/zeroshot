@@ -1,0 +1,174 @@
+{
+  "job_id": 222758,
+  "source": "User-pasted original endpoint training/evaluation log on2026-10-25",
+  "terminal_completed_updates": 84168,
+  "endpoint_checkpoint_saved_reported": true,
+  "scores": {
+    "dino8": {
+      "mean_score": 0.8298577066775905,
+      "full_reward_count": 7,
+      "full_reward_fraction": 0.35,
+      "reference_competence_gate_passed": false
+    },
+    "clip8_215999": {
+      "mean_score": 0.4454884148126766,
+      "full_reward_count": 5,
+      "full_reward_fraction": 0.25,
+      "reference_competence_gate_passed": false
+    },
+    "native212158": {
+      "mean_score": 0.8458782546929152,
+      "full_reward_count": 10,
+      "full_reward_fraction": 0.5,
+      "reference_competence_gate_passed": true
+    }
+  },
+  "dino_minus_clip_mean": 0.3843692918649141,
+  "paired_scene_bootstrap95": [
+    0.2006358682271091,
+    0.5753083376846504
+  ],
+  "dino_better_worse_equal": [
+    12,
+    2,
+    6
+  ],
+  "native_gap_closed_fraction": 0.9599876260094,
+  "native_minus_dino_mean": 0.01602054801532471,
+  "per_scene": [
+    {
+      "environment_seed": 5000000,
+      "dino_max_overlap_reward": 0.407650848333758,
+      "clip_max_overlap_reward": 0.3637322550695917,
+      "dino_minus_clip": 0.04391859326416625
+    },
+    {
+      "environment_seed": 5000001,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 1.0,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000002,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 0.0,
+      "dino_minus_clip": 1.0
+    },
+    {
+      "environment_seed": 5000003,
+      "dino_max_overlap_reward": 0.9697221933338216,
+      "clip_max_overlap_reward": 0.9874557207637781,
+      "dino_minus_clip": -0.017733527429956486
+    },
+    {
+      "environment_seed": 5000004,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 1.0,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000005,
+      "dino_max_overlap_reward": 0.7455044161799671,
+      "clip_max_overlap_reward": 0.02879175888484829,
+      "dino_minus_clip": 0.7167126572951188
+    },
+    {
+      "environment_seed": 5000006,
+      "dino_max_overlap_reward": 0.0,
+      "clip_max_overlap_reward": 0.0,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000007,
+      "dino_max_overlap_reward": 0.5991986001626066,
+      "clip_max_overlap_reward": 0.42546546465641466,
+      "dino_minus_clip": 0.17373313550619196
+    },
+    {
+      "environment_seed": 5000008,
+      "dino_max_overlap_reward": 0.9925067244437095,
+      "clip_max_overlap_reward": 0.9871157088135433,
+      "dino_minus_clip": 0.005391015630166196
+    },
+    {
+      "environment_seed": 5000009,
+      "dino_max_overlap_reward": 0.0027810690949989832,
+      "clip_max_overlap_reward": 0.0027810690949989832,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000010,
+      "dino_max_overlap_reward": 0.9502154851558066,
+      "clip_max_overlap_reward": 1.0,
+      "dino_minus_clip": -0.04978451484419344
+    },
+    {
+      "environment_seed": 5000011,
+      "dino_max_overlap_reward": 0.9887206421342855,
+      "clip_max_overlap_reward": 0.04688149302566976,
+      "dino_minus_clip": 0.9418391491086157
+    },
+    {
+      "environment_seed": 5000012,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 0.5341460756519678,
+      "dino_minus_clip": 0.4658539243480322
+    },
+    {
+      "environment_seed": 5000013,
+      "dino_max_overlap_reward": 0.9961369913941329,
+      "clip_max_overlap_reward": 0.05340065111143002,
+      "dino_minus_clip": 0.9427363402827029
+    },
+    {
+      "environment_seed": 5000014,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 0.29364770282660235,
+      "dino_minus_clip": 0.7063522971733976
+    },
+    {
+      "environment_seed": 5000015,
+      "dino_max_overlap_reward": 0.9889551365627871,
+      "clip_max_overlap_reward": 0.16046960640743033,
+      "dino_minus_clip": 0.8284855301553568
+    },
+    {
+      "environment_seed": 5000016,
+      "dino_max_overlap_reward": 0.9560527844446693,
+      "clip_max_overlap_reward": 0.02588078994725578,
+      "dino_minus_clip": 0.9301719944974136
+    },
+    {
+      "environment_seed": 5000017,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 1.0,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000018,
+      "dino_max_overlap_reward": 1.0,
+      "clip_max_overlap_reward": 1.0,
+      "dino_minus_clip": 0.0
+    },
+    {
+      "environment_seed": 5000019,
+      "dino_max_overlap_reward": 0.9997092423112691,
+      "clip_max_overlap_reward": 0.0,
+      "dino_minus_clip": 0.9997092423112691
+    }
+  ],
+  "reference_files_sha256": {
+    "clip_development_reference.json": "72ffd94fd571c586c00729e2c4e113f3abe23282125959f913d88598b0f33b09",
+    "native_development_reference.json": "42a83f5c0afa24137f0f9598975e7ce7e60786fe777ff60dd17e7db39415a89d"
+  },
+  "arithmetic_independently_recomputed": true,
+  "full_output_verifier_passed": true,
+  "local_artifacts_received": true,
+  "scope": "Reused development20, one training seed; newDINO A40/oldCLIP A6000; visual backbone plus native representation normalization differ. Scene interval excludes training-seed uncertainty. No final50 evaluation, robot-grasp verdict, unique-root-cause proof or equivalence claim.",
+  "interpretation": "Substantial observed development reward gain supports the frozen visual representation/front-end interface as a major bottleneck candidate; full checkpoint/trace verification still pending.",
+  "new_training_or_evaluation_executed": false,
+  "automatic_following_action": false,
+  "verification_basis": "Original server verify_dino success pasted by user on2026-10-25; local large checkpoint not received",
+  "local_small_output_verified": true,
+  "local_analysis_directory": "reports/pusht_dino_analysis_222758_20261025"
+}

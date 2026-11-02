@@ -1,0 +1,20 @@
+{
+  "job_id": 219129,
+  "evidence": "Original server verification reported by user and original small-output verifier independently rerun locally on all5 received artifacts",
+  "server_output_verified_reported_by_user": true,
+  "local_artifacts_received": true,
+  "local_verification_passed": true,
+  "local_analysis_report": "reports/pusht_action_analysis_219129_20261022/report.json",
+  "training_updates": 0,
+  "action_errors_pixels": {
+    "native212158": {"train": {"full16": 6.4711496776935835, "executed8": 6.201808273101118}, "unseen_demo": {"full16": 32.45595458098976, "executed8": 27.927998201146757}},
+    "project215999": {"train": {"full16": 5.8052411558724115, "executed8": 5.3917289562839485}, "unseen_demo": {"full16": 45.67071411817148, "executed8": 39.507990325244656}},
+    "no_motion": {"train": {"full16": 70.61386837635587, "executed8": 50.85472277651172}, "unseen_demo": {"full16": 64.46034558328708, "executed8": 47.75822908370478}},
+    "train_mean": {"train": {"full16": 120.4486227096046, "executed8": 121.78975338974658}, "unseen_demo": {"full16": 125.223926056458, "executed8": 126.56899282810534}}
+  },
+  "scope": "Frozen original endpoint EMA;32 sampled train windows/16 episodes and32 unseen-demo windows/16 episodes;2 sampling seeds; repeated diagnostic roles, not independent final or task success",
+  "interpretation": "Project is slightly better on sampled train expert-action windows but worse on unseen-demo expert windows; both beat no-motion on unseen mean. Prioritize generalization gap over repeating small-sample fitting or claiming diffusion chain is broken. This does not establish unique causality or all-training-set fitting; per-episode uncertainty and auxiliary epsilon data remain to review.",
+  "next_action": "Completed paired episode, seed and saved epsilon analysis; archive this diagnostic, no repeated model execution or automatic long training",
+  "policy_improvement_verdict": null,
+  "automatic_following_action": false
+}

@@ -1,0 +1,45 @@
+{
+  "absolute_guards": {
+    "state_control": {
+      "criteria": {
+        "train": {
+          "balanced_accuracy_protected": true,
+          "opening_event_gate": false,
+          "closing_event_gate": false
+        },
+        "development": {
+          "balanced_accuracy_protected": true,
+          "opening_event_gate": false,
+          "closing_event_gate": false
+        }
+      },
+      "passed": false
+    },
+    "event_aware": {
+      "criteria": {
+        "train": {
+          "balanced_accuracy_protected": true,
+          "opening_event_gate": false,
+          "closing_event_gate": false
+        },
+        "development": {
+          "balanced_accuracy_protected": true,
+          "opening_event_gate": false,
+          "closing_event_gate": false
+        }
+      },
+      "passed": false
+    }
+  },
+  "candidate_beats_control_both_development_events": true,
+  "selected_head_for_further_engineering": null,
+  "automatic_rollout": false,
+  "formal_matrix_admitted": false,
+  "execution_complete": true,
+  "total_new_head_updates": 4096,
+  "source_pose_updates": 0,
+  "original_pose_and_head_files_unchanged": true,
+  "elapsed_seconds": 22.58993073599413,
+  "peak_reserved_gib": 0.08984375,
+  "automatic_following_action": false
+}

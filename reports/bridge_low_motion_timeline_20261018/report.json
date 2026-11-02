@@ -1,0 +1,2587 @@
+{
+  "date": "2026-10-18",
+  "cases": [
+    {
+      "domain": "train",
+      "kind": "low",
+      "array_index": 78,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00058-of-01024",
+        "record_index": 40,
+        "start_index": 0,
+        "task": "close microwave",
+        "partition": "train"
+      },
+      "true_next_displacement_cm": 0.059576735564804875,
+      "same_episode_control": true,
+      "steps": 38,
+      "timeline": [
+        {
+          "step": 0,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.3675522804260254,
+            -0.09442105144262314,
+            0.02768237516283989
+          ],
+          "rpy_raw": [
+            0.030369238927960396,
+            -0.09677636623382568,
+            -0.1213349774479866
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.0,
+            1.3877787807814457e-17,
+            -3.469446951953614e-18,
+            -6.501132929770392e-07,
+            -2.854559113529831e-07,
+            5.57199832940114e-08,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 1.4304896245381992e-17,
+          "image_rgb_sha256": "5c3380edffd22d4a3d645e5b6dc88e7dcfe25bad8e6cfbb561bb88cf5c0fb6c6",
+          "observed_next_xyz_delta_cm": [
+            -0.012308359146118164,
+            0.0034064054489135742,
+            -0.058191828429698944
+          ],
+          "observed_next_displacement_cm": 0.05957674209743041,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.021764119466146
+        },
+        {
+          "step": 1,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.3674291968345642,
+            -0.094386987388134,
+            0.0271004568785429
+          ],
+          "rpy_raw": [
+            0.030597450211644173,
+            -0.09525932371616364,
+            -0.12135685235261917
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            -0.004382190760225058,
+            0.009127621538937092,
+            0.027171539142727852,
+            0.018261728808283806,
+            -0.028851842507719994,
+            -0.08342479914426804,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.028996717231470567,
+          "image_rgb_sha256": "bde88e675055b81d3b6e6dcd1dd7d2efac62a81a799562d85237914cda896029",
+          "observed_next_xyz_delta_cm": [
+            -0.6918042898178101,
+            0.19310414791107178,
+            -1.2650417163968086
+          ],
+          "observed_next_displacement_cm": 1.4547209119191795,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 7.714467366536458
+        },
+        {
+          "step": 2,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.3605111539363861,
+            -0.09245594590902328,
+            0.014450039714574814
+          ],
+          "rpy_raw": [
+            0.03746119514107704,
+            -0.052512552589178085,
+            -0.12936727702617645
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            -0.004852661397308111,
+            0.00937971007078886,
+            0.025938376784324646,
+            0.033540867269039154,
+            -0.002884984714910388,
+            -0.01786160096526146,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.02800583285414976,
+          "image_rgb_sha256": "36d2a018b26cada3806289a345b7a5dbfff021c1dbd83c7fc1106f3cad55f3f8",
+          "observed_next_xyz_delta_cm": [
+            -0.6769537925720215,
+            0.8276909589767456,
+            1.4462534338235855
+          ],
+          "observed_next_displacement_cm": 1.7986071710342981,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 5.753997802734375
+        },
+        {
+          "step": 3,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.3537416160106659,
+            -0.08417903631925583,
+            0.02891257405281067
+          ],
+          "rpy_raw": [
+            0.05719399079680443,
+            -0.033186789602041245,
+            -0.20939825475215912
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            -0.0070404415018856525,
+            0.011670295149087906,
+            0.03688570857048035,
+            0.0298538189381361,
+            -0.023696204647421837,
+            -0.0045145596377551556,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.0393232641340302,
+          "image_rgb_sha256": "43a9f18d06e7240cdf76960ba6845a6d9e1b2df0f83e7d7da1bf3b1277ab0b59",
+          "observed_next_xyz_delta_cm": [
+            -0.40636658668518066,
+            0.7813528180122375,
+            3.038470819592476
+          ],
+          "observed_next_displacement_cm": 3.1635345660360343,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 14.388621012369791
+        }
+      ],
+      "payload_sha256": "f9bca3cd7fc664c2c56a340bc4a1e4e477224521d6e35b09ba1faa4972c945ba",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        0.3324346940980471,
+        0.5792753916655977,
+        0.34857217756945913
+      ],
+      "first_target_position_errors_cm": [
+        0.33920989585693323,
+        0.6156756591118978,
+        0.3337491288933849
+      ],
+      "previous_frame_available": false,
+      "previous_observed_displacement_cm": null
+    },
+    {
+      "domain": "train",
+      "kind": "large_control",
+      "array_index": 425,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00058-of-01024",
+        "record_index": 40,
+        "start_index": 16,
+        "task": "close microwave",
+        "partition": "train"
+      },
+      "true_next_displacement_cm": 2.07834054452584,
+      "same_episode_control": true,
+      "steps": 38,
+      "timeline": [
+        {
+          "step": 14,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.2526947557926178,
+            0.06446536630392075,
+            0.18175436556339264
+          ],
+          "rpy_raw": [
+            0.10210950672626495,
+            0.1463441252708435,
+            -0.40780287981033325
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.00019858041196130216,
+            0.0024284396786242723,
+            -0.015920355916023254,
+            -0.01749657280743122,
+            -0.026919394731521606,
+            0.0004265595052856952,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.01610572835812116,
+          "image_rgb_sha256": "ffedf08723746df64a4b6faca05e650b1ddb3732ca159dc8dc63a2402b3ca0ea",
+          "observed_next_xyz_delta_cm": [
+            -0.4803299903869629,
+            0.4883602261543274,
+            -1.1285319924354553
+          ],
+          "observed_next_displacement_cm": 1.3201503960174328,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.6770477294921875
+        },
+        {
+          "step": 15,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.24789145588874817,
+            0.06934896856546402,
+            0.17046904563903809
+          ],
+          "rpy_raw": [
+            0.10407210886478424,
+            0.13659821450710297,
+            -0.40731170773506165
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            -0.0017216737614944577,
+            0.001160894287750125,
+            -0.02401658520102501,
+            -0.08809325098991394,
+            -0.10185757279396057,
+            0.0005641009192913771,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.024106185944824263,
+          "image_rgb_sha256": "21fd34d34ce3d452887c6cbacddb15b8cad91d7b2fc91e50379e589d6f8a4c6c",
+          "observed_next_xyz_delta_cm": [
+            -0.09249448776245117,
+            0.14545470476150513,
+            -1.7803221940994263
+          ],
+          "observed_next_displacement_cm": 1.7886473705587387,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.880406697591146
+        },
+        {
+          "step": 16,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.24696651101112366,
+            0.07080351561307907,
+            0.15266582369804382
+          ],
+          "rpy_raw": [
+            0.08973769098520279,
+            0.09787438064813614,
+            -0.4077967405319214
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.007922123186290264,
+            -0.007313072215765715,
+            -0.014043287374079227,
+            -0.04347728192806244,
+            -0.08134490996599197,
+            0.0169789157807827,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.017704659874810794,
+          "image_rgb_sha256": "e7da1a47b5696c523d0de056634137514f512c1b59798c6d97192f6cccf72624",
+          "observed_next_xyz_delta_cm": [
+            -0.3494545817375183,
+            0.14776363968849182,
+            -2.043415606021881
+          ],
+          "observed_next_displacement_cm": 2.0783406691024227,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 5.5645192464192705
+        },
+        {
+          "step": 17,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.24347196519374847,
+            0.07228115200996399,
+            0.132231667637825
+          ],
+          "rpy_raw": [
+            0.0598904974758625,
+            -0.0424729660153389,
+            -0.4026830792427063
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.010632561519742012,
+            -0.008435542695224285,
+            -0.004857481457293034,
+            -0.03234642744064331,
+            -0.07440479099750519,
+            -0.0025000623427331448,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.01441543863855679,
+          "image_rgb_sha256": "a5ce75708c6db0c6c1fd38aceb27cf5c1bbf6a6f0c16c7039a564d412daee72a",
+          "observed_next_xyz_delta_cm": [
+            0.6636455655097961,
+            -0.619981437921524,
+            -1.3400599360466003
+          ],
+          "observed_next_displacement_cm": 1.6188153236812644,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.857411702473958
+        },
+        {
+          "step": 18,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.25010842084884644,
+            0.06608133763074875,
+            0.11883106827735901
+          ],
+          "rpy_raw": [
+            0.051125675439834595,
+            -0.12818434834480286,
+            -0.3864927291870117
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.015514357946813107,
+            -0.011755239218473434,
+            -0.00277013354934752,
+            -0.05198235064744949,
+            -0.035627227276563644,
+            0.019719524309039116,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.01966099161961572,
+          "image_rgb_sha256": "1008f85b04a78794422598905f01082891c1e50b51ab69114735ba6c88fd361e",
+          "observed_next_xyz_delta_cm": [
+            1.2381583452224731,
+            -0.9179938584566116,
+            -0.18227025866508484
+          ],
+          "observed_next_displacement_cm": 1.5520860991587895,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 10.539937337239584
+        },
+        {
+          "step": 19,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.26249000430107117,
+            0.05690139904618263,
+            0.11700836569070816
+          ],
+          "rpy_raw": [
+            0.049982950091362,
+            -0.21852436661720276,
+            -0.37919697165489197
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.020314795896410942,
+            -0.01698746159672737,
+            -0.0034556996542960405,
+            -0.03299363702535629,
+            -0.034643203020095825,
+            -0.02170468680560589,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.026705929003010245,
+          "image_rgb_sha256": "45a48d989efac1c02d72e3c355eb771f725648773a4a52e47697c687baaff179",
+          "observed_next_xyz_delta_cm": [
+            1.1663466691970825,
+            -1.2632094323635101,
+            -0.39883479475975037
+          ],
+          "observed_next_displacement_cm": 1.7649736021454605,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 11.339365641276041
+        }
+      ],
+      "payload_sha256": "f9bca3cd7fc664c2c56a340bc4a1e4e477224521d6e35b09ba1faa4972c945ba",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        1.4784216871538844,
+        1.1121297573725974,
+        1.000266795907003
+      ],
+      "first_target_position_errors_cm": [
+        1.5662102286135366,
+        1.0906200838947886,
+        1.2855012386481446
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 1.7886473705587387
+    },
+    {
+      "domain": "train",
+      "kind": "low",
+      "array_index": 1412,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00199-of-01024",
+        "record_index": 6,
+        "start_index": 0,
+        "task": "close the drawer",
+        "partition": "train"
+      },
+      "true_next_displacement_cm": 0.0,
+      "same_episode_control": false,
+      "steps": 28,
+      "timeline": [
+        {
+          "step": 0,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.22686441242694855,
+            0.2265193611383438,
+            0.10114680975675583
+          ],
+          "rpy_raw": [
+            0.10545121133327484,
+            -0.06292684376239777,
+            0.23666313290596008
+          ],
+          "measured_gripper": 1.0008161067962646,
+          "native_action_raw": [
+            1.4042642049183485e-10,
+            -1.1714507142102093e-10,
+            -2.7834803906223726e-11,
+            5.616100295924298e-08,
+            -2.520461066524149e-07,
+            5.167322001398134e-07,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 1.8497925191459619e-10,
+          "image_rgb_sha256": "fbe8b9d35676d1f853e6ce4f3b043f5682dff0e8f562e349cffd98541e850302",
+          "observed_next_xyz_delta_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "observed_next_displacement_cm": 0.0,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 1.786346435546875
+        },
+        {
+          "step": 1,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.22686441242694855,
+            0.2265193611383438,
+            0.10114680975675583
+          ],
+          "rpy_raw": [
+            0.10535496473312378,
+            -0.06308823078870773,
+            0.2381916344165802
+          ],
+          "measured_gripper": 1.0008161067962646,
+          "native_action_raw": [
+            0.005326779093593359,
+            -0.006714166142046452,
+            -0.008387117646634579,
+            0.053950726985931396,
+            0.009222985245287418,
+            -0.21841439604759216,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.01199159476105807,
+          "image_rgb_sha256": "c9e28fd39921b0e5aea0c259345a1f2b91dadf189da1c398613a518ae64c3b60",
+          "observed_next_xyz_delta_cm": [
+            -0.07745921611785889,
+            -0.17351806163787842,
+            -1.0011881589889526
+          ],
+          "observed_next_displacement_cm": 1.0190614199231802,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.0453033447265625
+        },
+        {
+          "step": 2,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.22608982026576996,
+            0.22478418052196503,
+            0.0911349281668663
+          ],
+          "rpy_raw": [
+            0.09075682610273361,
+            -0.0388643778860569,
+            0.2269599735736847
+          ],
+          "measured_gripper": 1.0008161067962646,
+          "native_action_raw": [
+            0.006018985994160175,
+            -0.002602645196020603,
+            -0.0062322551384568214,
+            -0.007483998313546181,
+            0.00901240948587656,
+            -0.24670448899269104,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.009046709817667798,
+          "image_rgb_sha256": "0ef653d6b40b9ae30172ba44bb420a159f4d0ec164f2169852d426c3b29dc5d2",
+          "observed_next_xyz_delta_cm": [
+            0.34520477056503296,
+            -0.8412927389144897,
+            -1.3137668371200562
+          ],
+          "observed_next_displacement_cm": 1.597786940892789,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.667912801106771
+        },
+        {
+          "step": 3,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.2295418679714203,
+            0.21637125313282013,
+            0.07799725979566574
+          ],
+          "rpy_raw": [
+            0.1220993846654892,
+            -0.03081892989575863,
+            0.009727845899760723
+          ],
+          "measured_gripper": 1.0008161067962646,
+          "native_action_raw": [
+            0.004411159083247185,
+            0.0010369218653067946,
+            -0.003849304746836424,
+            -0.02973971702158451,
+            0.019771147519350052,
+            -0.21700796484947205,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.005945643652833803,
+          "image_rgb_sha256": "4b3aac1dba0c4ed29670bd44c89e54b52e267a699eab68c770f42118a9b5418d",
+          "observed_next_xyz_delta_cm": [
+            0.7955104112625122,
+            -0.44385790824890137,
+            -0.10993331670761108
+          ],
+          "observed_next_displacement_cm": 0.917568521291177,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.795811971028646
+        }
+      ],
+      "payload_sha256": "7e0fcdbf1cd1954b6dc6d90a38c345b5a79fc763ca13ba91e15bf93b5ed576a9",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        1.0304355883143983,
+        1.0441776817688109,
+        0.9195492275217667
+      ],
+      "first_target_position_errors_cm": [
+        1.0304355883143983,
+        1.0441776817688109,
+        0.9195492275217667
+      ],
+      "previous_frame_available": false,
+      "previous_observed_displacement_cm": null
+    },
+    {
+      "domain": "train",
+      "kind": "large_control",
+      "array_index": 1766,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00245-of-01024",
+        "record_index": 52,
+        "start_index": 12,
+        "task": "close the drawer",
+        "partition": "train"
+      },
+      "true_next_displacement_cm": 2.1268965235119612,
+      "same_episode_control": false,
+      "steps": 38,
+      "timeline": [
+        {
+          "step": 10,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.12605442106723785,
+            0.0004987040301784873,
+            0.03517580032348633
+          ],
+          "rpy_raw": [
+            0.11835312098264694,
+            0.09033659100532532,
+            -0.6649124026298523
+          ],
+          "measured_gripper": 0.9961419701576233,
+          "native_action_raw": [
+            0.014673194848001003,
+            -0.010754751041531563,
+            -0.0005310995038598776,
+            -0.028060926124453545,
+            0.0064707547426223755,
+            0.01194151770323515,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.018200257792012935,
+          "image_rgb_sha256": "aa74a3f9c833b8a373e7db045503a860bf6ad545ca482f170847daa68ebcf022",
+          "observed_next_xyz_delta_cm": [
+            0.40564239025115967,
+            -1.1872960603795946,
+            -0.5694791674613953
+          ],
+          "observed_next_displacement_cm": 1.377869444444612,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 18.126820882161457
+        },
+        {
+          "step": 11,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.13011084496974945,
+            -0.011374256573617458,
+            0.029481008648872375
+          ],
+          "rpy_raw": [
+            0.1038094088435173,
+            0.1073223128914833,
+            -0.7098769545555115
+          ],
+          "measured_gripper": 0.9961419701576233,
+          "native_action_raw": [
+            0.017365021631121635,
+            -0.00821447279304266,
+            0.0071486253291368484,
+            -0.017572036013007164,
+            -0.006138966418802738,
+            0.031466610729694366,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.020496935956706732,
+          "image_rgb_sha256": "b6a2fc9929b79c9f8e7485126357c73213f87e77762d42b6eda754fe0975438a",
+          "observed_next_xyz_delta_cm": [
+            1.391129195690155,
+            -0.9943191893398762,
+            -0.06088912487030029
+          ],
+          "observed_next_displacement_cm": 1.7110285137654828,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 22.007278442382812
+        },
+        {
+          "step": 12,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.144022136926651,
+            -0.02131744846701622,
+            0.028872117400169373
+          ],
+          "rpy_raw": [
+            0.07873601466417313,
+            0.09667053818702698,
+            -0.6924493312835693
+          ],
+          "measured_gripper": 0.9961419701576233,
+          "native_action_raw": [
+            0.013443781062960625,
+            0.0013569853035733104,
+            -0.0007762378663755953,
+            -0.007434985600411892,
+            -0.0003395804960746318,
+            0.0350324809551239,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.013534371193673091,
+          "image_rgb_sha256": "9c3fd9a9a399f619de8e8a01a6530c4f99e8d5a40402adc436cad06969770dd0",
+          "observed_next_xyz_delta_cm": [
+            1.867249608039856,
+            -0.7886521518230438,
+            0.644279271364212
+          ],
+          "observed_next_displacement_cm": 2.1268965877093584,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 24.505457560221355
+        },
+        {
+          "step": 13,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.16269463300704956,
+            -0.02920396998524666,
+            0.03531491011381149
+          ],
+          "rpy_raw": [
+            0.07137340307235718,
+            0.07882926613092422,
+            -0.6672232151031494
+          ],
+          "measured_gripper": 0.9961419701576233,
+          "native_action_raw": [
+            0.007943605072796345,
+            0.0008341622888110578,
+            -0.0020906419958919287,
+            -0.003898872993886471,
+            0.005757064558565617,
+            0.025473497807979584,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.008256359502324092,
+          "image_rgb_sha256": "36598cf6f4a9e4cbe0db636af5a8dfe4a7f119c6c9c895a52be67c05bcf3b3e7",
+          "observed_next_xyz_delta_cm": [
+            1.152503490447998,
+            -0.18604174256324768,
+            -0.21481066942214966
+          ],
+          "observed_next_displacement_cm": 1.187021250512551,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 16.961146036783855
+        },
+        {
+          "step": 14,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.17421966791152954,
+            -0.031064387410879135,
+            0.033166803419589996
+          ],
+          "rpy_raw": [
+            0.06151798367500305,
+            0.08352717757225037,
+            -0.6528116464614868
+          ],
+          "measured_gripper": 0.9961419701576233,
+          "native_action_raw": [
+            0.002334360498934984,
+            -0.004125919193029404,
+            0.0015135169960558414,
+            -0.009032562375068665,
+            0.003481541760265827,
+            0.000497573462780565,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.004976261832314121,
+          "image_rgb_sha256": "62ad27b3da44492d9628f79ac875517f3d61d93d40fa4803245860c772b4a970",
+          "observed_next_xyz_delta_cm": [
+            0.9279131889343262,
+            -0.09208843111991882,
+            -0.13277754187583923
+          ],
+          "observed_next_displacement_cm": 0.9418774023040307,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 12.978556315104166
+        },
+        {
+          "step": 15,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.1834987998008728,
+            -0.03198527172207832,
+            0.031839028000831604
+          ],
+          "rpy_raw": [
+            0.05793313682079315,
+            0.07890801876783371,
+            -0.6386903524398804
+          ],
+          "measured_gripper": 0.9961419701576233,
+          "native_action_raw": [
+            0.0005746733513660729,
+            -0.006278684362769127,
+            0.0008643876644782722,
+            -0.011590510606765747,
+            0.002817620988935232,
+            -0.002085295971482992,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.006363905469328883,
+          "image_rgb_sha256": "e0086bad7272f36a15b3faa25fa9ae06cafdb282ac36de9becb2cb4336d72c9c",
+          "observed_next_xyz_delta_cm": [
+            0.3186255693435669,
+            -0.2249632030725479,
+            0.25656893849372864
+          ],
+          "observed_next_displacement_cm": 0.46686006080620274,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.6756134033203125
+        }
+      ],
+      "payload_sha256": "befcd4fceeaa80fdab8f6e45e9b895e7381e5d65dad12eecf68d54c5ce45a53e",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        0.37242970002163,
+        0.3782642975540549,
+        0.47468293019659763
+      ],
+      "first_target_position_errors_cm": [
+        1.9583628399284743,
+        1.949125533676914,
+        1.933137643388451
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 1.7110285137654828
+    },
+    {
+      "domain": "train",
+      "kind": "low",
+      "array_index": 1277,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00175-of-01024",
+        "record_index": 46,
+        "start_index": 0,
+        "task": "open the drawer",
+        "partition": "train"
+      },
+      "true_next_displacement_cm": 0.0,
+      "same_episode_control": true,
+      "steps": 27,
+      "timeline": [
+        {
+          "step": 0,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.2806539833545685,
+            -0.037918753921985626,
+            0.1303921788930893
+          ],
+          "rpy_raw": [
+            0.03572544455528259,
+            -0.08661051094532013,
+            -0.5690599083900452
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            5.541028746947063e-11,
+            -6.28447294204193e-11,
+            2.6099913896793225e-10,
+            3.148694247556705e-07,
+            2.815959589952399e-07,
+            -1.664299809078784e-08,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 2.741173298341006e-10,
+          "image_rgb_sha256": "36f72b1bc9640d6de1e5b8426a75bdcf27df191519f224daada6234eb1f144cd",
+          "observed_next_xyz_delta_cm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "observed_next_displacement_cm": 0.0,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.0456339518229165
+        },
+        {
+          "step": 1,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.2806539833545685,
+            -0.037918753921985626,
+            0.1303921788930893
+          ],
+          "rpy_raw": [
+            0.03559229522943497,
+            -0.08666519820690155,
+            -0.5675210952758789
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.019380157813429832,
+            0.013585642911493778,
+            -0.0037075583823025227,
+            0.009476606734097004,
+            -0.010319718159735203,
+            0.10619141161441803,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.023956339439702556,
+          "image_rgb_sha256": "91a6dc7206724aef3207a317779ebba8b2a55051f82c2ff80c27b9ae34ad371f",
+          "observed_next_xyz_delta_cm": [
+            0.039571523666381836,
+            -0.005251169204711914,
+            -0.6956107914447784
+          ],
+          "observed_next_displacement_cm": 0.6967552320849313,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.0905609130859375
+        },
+        {
+          "step": 2,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.2810496985912323,
+            -0.037971265614032745,
+            0.12343607097864151
+          ],
+          "rpy_raw": [
+            0.024720054119825363,
+            -0.06460068374872208,
+            -0.5590544939041138
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.019255666062235832,
+            0.013787651434540749,
+            -0.006813311018049717,
+            0.04068957269191742,
+            -0.008071862161159515,
+            0.1716178059577942,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.024643482193257755,
+          "image_rgb_sha256": "c6f749f32366bda5958f22c72d6f74cac55e89cc8690552ce7551dea0104e610",
+          "observed_next_xyz_delta_cm": [
+            1.523888111114502,
+            1.1942282319068909,
+            -1.123972237110138
+          ],
+          "observed_next_displacement_cm": 2.2386892671547676,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.613896687825521
+        },
+        {
+          "step": 3,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.2962885797023773,
+            -0.026028983294963837,
+            0.11219634860754013
+          ],
+          "rpy_raw": [
+            0.03155479207634926,
+            -0.04389073699712753,
+            -0.4559779167175293
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.01586698740720749,
+            0.011269912123680115,
+            -0.008432683534920216,
+            0.06274838745594025,
+            -0.00013539171777665615,
+            0.17318254709243774,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.021210430458999827,
+          "image_rgb_sha256": "96479ee885a1e0ce57013352931ce1f39ec0212b3ae2abee76908fad1aa32869",
+          "observed_next_xyz_delta_cm": [
+            1.7947733402252197,
+            1.5146086923778057,
+            -0.676901638507843
+          ],
+          "observed_next_displacement_cm": 2.4440635552342336,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.672251383463542
+        }
+      ],
+      "payload_sha256": "bcdad4bed1310f7002efb143491307b1cae83c994707f9b459be4d45f8638823",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        1.3372785443360808,
+        0.9130441823185006,
+        0.8354278236911091
+      ],
+      "first_target_position_errors_cm": [
+        1.3372785443360808,
+        0.9130441823185006,
+        0.8354278236911091
+      ],
+      "previous_frame_available": false,
+      "previous_observed_displacement_cm": null
+    },
+    {
+      "domain": "train",
+      "kind": "large_control",
+      "array_index": 1278,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00175-of-01024",
+        "record_index": 46,
+        "start_index": 4,
+        "task": "open the drawer",
+        "partition": "train"
+      },
+      "true_next_displacement_cm": 2.0333856004136193,
+      "same_episode_control": true,
+      "steps": 27,
+      "timeline": [
+        {
+          "step": 2,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.2810496985912323,
+            -0.037971265614032745,
+            0.12343607097864151
+          ],
+          "rpy_raw": [
+            0.024720054119825363,
+            -0.06460068374872208,
+            -0.5590544939041138
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.019255666062235832,
+            0.013787651434540749,
+            -0.006813311018049717,
+            0.04068957269191742,
+            -0.008071862161159515,
+            0.1716178059577942,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.024643482193257755,
+          "image_rgb_sha256": "c6f749f32366bda5958f22c72d6f74cac55e89cc8690552ce7551dea0104e610",
+          "observed_next_xyz_delta_cm": [
+            1.523888111114502,
+            1.1942282319068909,
+            -1.123972237110138
+          ],
+          "observed_next_displacement_cm": 2.2386892671547676,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.613896687825521
+        },
+        {
+          "step": 3,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.2962885797023773,
+            -0.026028983294963837,
+            0.11219634860754013
+          ],
+          "rpy_raw": [
+            0.03155479207634926,
+            -0.04389073699712753,
+            -0.4559779167175293
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.01586698740720749,
+            0.011269912123680115,
+            -0.008432683534920216,
+            0.06274838745594025,
+            -0.00013539171777665615,
+            0.17318254709243774,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.021210430458999827,
+          "image_rgb_sha256": "96479ee885a1e0ce57013352931ce1f39ec0212b3ae2abee76908fad1aa32869",
+          "observed_next_xyz_delta_cm": [
+            1.7947733402252197,
+            1.5146086923778057,
+            -0.676901638507843
+          ],
+          "observed_next_displacement_cm": 2.4440635552342336,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.672251383463542
+        },
+        {
+          "step": 4,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.3142363131046295,
+            -0.01088289637118578,
+            0.1054273322224617
+          ],
+          "rpy_raw": [
+            0.08181571215391159,
+            -0.02802981436252594,
+            -0.27783387899398804
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.010458477772772312,
+            0.011643842794001102,
+            -0.007845757529139519,
+            0.06871640682220459,
+            -0.018144069239497185,
+            0.17194409668445587,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.0175075624671464,
+          "image_rgb_sha256": "e10c7703c655eebd9200cd69415e471cea8b5f59dc463738b3e80eec499d896d",
+          "observed_next_xyz_delta_cm": [
+            1.397290825843811,
+            1.1827994487248361,
+            -0.8849978446960449
+          ],
+          "observed_next_displacement_cm": 2.0333856921419753,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.5879669189453125
+        },
+        {
+          "step": 5,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.3282092213630676,
+            0.0009450981160625815,
+            0.09657735377550125
+          ],
+          "rpy_raw": [
+            0.15306155383586884,
+            -0.010608399286866188,
+            -0.11366023868322372
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.007699971552938223,
+            0.01359756849706173,
+            -0.012050963006913662,
+            -0.012543834745883942,
+            -0.015763090923428535,
+            0.10787588357925415,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.01973345231687413,
+          "image_rgb_sha256": "3627b5166db2b6a8535309cd4090dc89f86fe8decabba3df0b599ee8327fa753",
+          "observed_next_xyz_delta_cm": [
+            0.7845252752304077,
+            1.0704723768867552,
+            -0.7535792887210846
+          ],
+          "observed_next_displacement_cm": 1.5261955187793934,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.7720794677734375
+        },
+        {
+          "step": 6,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.3360544741153717,
+            0.011649821884930134,
+            0.0890415608882904
+          ],
+          "rpy_raw": [
+            0.2169686257839203,
+            -0.021137353032827377,
+            0.04501669853925705
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.0103840883821249,
+            0.006550001911818981,
+            -0.008824534714221954,
+            -0.006173000205308199,
+            -0.0468660444021225,
+            0.08977717161178589,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.01511966367003982,
+          "image_rgb_sha256": "ab6975f5513066eb3584be39eeeb8a412c56d21b0aa360f765d23a5c71f7874d",
+          "observed_next_xyz_delta_cm": [
+            0.5884349346160889,
+            1.7065596766769886,
+            -1.303160935640335
+          ],
+          "observed_next_displacement_cm": 2.226393951329257,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.2927093505859375
+        },
+        {
+          "step": 7,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.3419388234615326,
+            0.02871541865170002,
+            0.07600995153188705
+          ],
+          "rpy_raw": [
+            0.21288125216960907,
+            -0.03573370724916458,
+            0.15469463169574738
+          ],
+          "measured_gripper": 1.0001531839370728,
+          "native_action_raw": [
+            0.009241494350135326,
+            0.0010593249462544918,
+            -0.009719381108880043,
+            -0.03791304677724838,
+            -0.06966855376958847,
+            0.06935977935791016,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.013453391999975117,
+          "image_rgb_sha256": "186d5c35d9a72ed2f65c3911301d153c5b8bc5f4f5bd14627a5fbdc5934181e9",
+          "observed_next_xyz_delta_cm": [
+            0.8816242218017578,
+            0.397566519677639,
+            -0.7446587085723877
+          ],
+          "observed_next_displacement_cm": 1.2205887916447709,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.7160135904947915
+        }
+      ],
+      "payload_sha256": "bcdad4bed1310f7002efb143491307b1cae83c994707f9b459be4d45f8638823",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        0.729919966100975,
+        0.6941737769784786,
+        1.1365415010823137
+      ],
+      "first_target_position_errors_cm": [
+        1.551901859224635,
+        1.5964554957533894,
+        1.711080319833638
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 2.4440635552342336
+    },
+    {
+      "domain": "new_development",
+      "kind": "low",
+      "array_index": 0,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00870-of-01024",
+        "record_index": 56,
+        "start_index": 0,
+        "task": "close microwave",
+        "partition": "new_development"
+      },
+      "true_next_displacement_cm": 0.06820136606173424,
+      "same_episode_control": true,
+      "steps": 34,
+      "timeline": [
+        {
+          "step": 0,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.1945764422416687,
+            0.13383638858795166,
+            0.050763681530952454
+          ],
+          "rpy_raw": [
+            0.07836165279150009,
+            -0.15250885486602783,
+            0.388133704662323
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            4.3364034585380296e-10,
+            2.202674154183626e-11,
+            4.0574238413526587e-10,
+            2.0367990316572104e-07,
+            -4.5340564724938304e-07,
+            -1.7869105306544952e-07,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 5.942693069467128e-10,
+          "image_rgb_sha256": "c49d3050e484f32b515da6b755eba5e39a8d033fbfffefb9e6b74bcae381afd5",
+          "observed_next_xyz_delta_cm": [
+            -0.020159780979156494,
+            -0.055792927742004395,
+            -0.0336475670337677
+          ],
+          "observed_next_displacement_cm": 0.06820136598664263,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 1.664703369140625
+        },
+        {
+          "step": 1,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.19437484443187714,
+            0.13327845931053162,
+            0.05042720586061478
+          ],
+          "rpy_raw": [
+            0.0776166096329689,
+            -0.1512385755777359,
+            0.3897358477115631
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.005304319784045219,
+            -0.022206557914614677,
+            0.023095421493053436,
+            -0.03616234287619591,
+            -0.032444581389427185,
+            0.010539445094764233,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.03247561418554457,
+          "image_rgb_sha256": "7a1da9f50e370a4354c9fe53b0427d28775e01cdbf3b17c903533a2d0993201a",
+          "observed_next_xyz_delta_cm": [
+            -0.3158852458000183,
+            -0.38840025663375854,
+            -0.3424067050218582
+          ],
+          "observed_next_displacement_cm": 0.6065316146016078,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.081171671549479
+        },
+        {
+          "step": 2,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.19121599197387695,
+            0.12939445674419403,
+            0.047003138810396194
+          ],
+          "rpy_raw": [
+            0.0657925084233284,
+            -0.12711885571479797,
+            0.4009132385253906
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.005473770201206207,
+            -0.02542123757302761,
+            0.02232738770544529,
+            -0.04531777650117874,
+            -0.028200821951031685,
+            -0.022048383951187134,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.034274096949579766,
+          "image_rgb_sha256": "d84fad96e3aacf8befebf6341653d1796a02061e8adc4c7b84a69f411b59b711",
+          "observed_next_xyz_delta_cm": [
+            0.18348842859268188,
+            -2.5526776909828186,
+            1.870405301451683
+          ],
+          "observed_next_displacement_cm": 3.1698970628661347,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.0208485921223955
+        },
+        {
+          "step": 3,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.19305087625980377,
+            0.10386767983436584,
+            0.06570719182491302
+          ],
+          "rpy_raw": [
+            0.01763720065355301,
+            -0.12019602209329605,
+            0.40799659490585327
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.005888288374990225,
+            -0.03152605891227722,
+            0.024465683847665787,
+            -0.03541428968310356,
+            -0.03172346204519272,
+            -0.04397532716393471,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.04033774927609811,
+          "image_rgb_sha256": "cc0b37f9c5aa29a1c86178230e0761f36948a8223e535677c0e2326763ffc8b9",
+          "observed_next_xyz_delta_cm": [
+            0.5439415574073792,
+            -2.4584315717220306,
+            2.3060202598571777
+          ],
+          "observed_next_displacement_cm": 3.414306320409196,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.952606201171875
+        }
+      ],
+      "payload_sha256": "7c70896086a41ff36dcf17eec895b5c9fe050ff0a3fa56e5b74a33f309768eb3",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        2.628131655468603,
+        0.5800237370704678,
+        1.8822878690655263
+      ],
+      "first_target_position_errors_cm": [
+        2.6485465128081276,
+        0.6179313055109182,
+        1.9100282659094991
+      ],
+      "previous_frame_available": false,
+      "previous_observed_displacement_cm": null
+    },
+    {
+      "domain": "new_development",
+      "kind": "large_control",
+      "array_index": 3,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00870-of-01024",
+        "record_index": 56,
+        "start_index": 12,
+        "task": "close microwave",
+        "partition": "new_development"
+      },
+      "true_next_displacement_cm": 3.2825785951727413,
+      "same_episode_control": true,
+      "steps": 34,
+      "timeline": [
+        {
+          "step": 10,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.23376233875751495,
+            -0.08507510274648666,
+            0.14906010031700134
+          ],
+          "rpy_raw": [
+            -0.1543595790863037,
+            -0.12947317957878113,
+            0.21081562340259552
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.0035345503129065037,
+            -0.016240820288658142,
+            -0.013865804299712181,
+            0.013834989629685879,
+            0.027459127828478813,
+            -0.012623894028365612,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.02164527242704222,
+          "image_rgb_sha256": "98ee5ce88b59a10e6ccd32d110f219827c71e5aa4fbf432e0f08f950aa940526",
+          "observed_next_xyz_delta_cm": [
+            -0.08786916732788086,
+            -2.5275960564613342,
+            -0.5826771259307861
+          ],
+          "observed_next_displacement_cm": 2.5953757817103758,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 13.94024658203125
+        },
+        {
+          "step": 11,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.23288364708423615,
+            -0.1103510633111,
+            0.14323332905769348
+          ],
+          "rpy_raw": [
+            -0.15244582295417786,
+            -0.16379228234291077,
+            0.1914394348859787
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.0024588629603385925,
+            -0.004606411326676607,
+            -0.03389289230108261,
+            0.021045206114649773,
+            0.017927998676896095,
+            0.030301332473754883,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.03429275697433854,
+          "image_rgb_sha256": "707f3fbbcd4b4d1358d456ee1c5b93e5e30871f33b66b576961f4ef694022bb6",
+          "observed_next_xyz_delta_cm": [
+            0.10854601860046387,
+            -1.4588341116905212,
+            -2.0568348467350006
+          ],
+          "observed_next_displacement_cm": 2.523994609805908,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 17.856770833333332
+        },
+        {
+          "step": 12,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.23396910727024078,
+            -0.12493940442800522,
+            0.12266498059034348
+          ],
+          "rpy_raw": [
+            -0.12140588462352753,
+            -0.12787799537181854,
+            0.17105676233768463
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.002877705730497837,
+            0.01848503388464451,
+            -0.03606749698519707,
+            -0.00570335378870368,
+            0.016785992309451103,
+            0.0851162001490593,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.04063055508807374,
+          "image_rgb_sha256": "e9bc6c9d6efed6c02fa9ba0c24b376c09b0d648d79a4f797d3a84d0ebdf7806b",
+          "observed_next_xyz_delta_cm": [
+            0.33652782440185547,
+            -0.3269769251346588,
+            -3.248870372772217
+          ],
+          "observed_next_displacement_cm": 3.282578801071536,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 12.977956136067709
+        },
+        {
+          "step": 13,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.23733438551425934,
+            -0.1282091736793518,
+            0.09017627686262131
+          ],
+          "rpy_raw": [
+            -0.10312670469284058,
+            -0.11594495922327042,
+            0.2056446075439453
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.0011530211195349693,
+            0.016509978100657463,
+            -0.018551839515566826,
+            0.006211247760802507,
+            -0.0030621818732470274,
+            0.04448451101779938,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.02486120640672189,
+          "image_rgb_sha256": "c7c652a244fb9150852a6a0f1dfbbb3d65ff0cf94f9f2af9c731c24b5a04d71c",
+          "observed_next_xyz_delta_cm": [
+            0.08810460567474365,
+            1.8720254302024841,
+            -3.4578654915094376
+          ],
+          "observed_next_displacement_cm": 3.933074546743006,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 19.806070963541668
+        },
+        {
+          "step": 14,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.23821543157100677,
+            -0.10948891937732697,
+            0.05559762194752693
+          ],
+          "rpy_raw": [
+            -0.09918583929538727,
+            -0.10109765082597733,
+            0.28405895829200745
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.0046654678881168365,
+            0.02090432122349739,
+            -0.010372284799814224,
+            0.036873821169137955,
+            -0.02982158027589321,
+            0.014728590846061707,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.023797931178963224,
+          "image_rgb_sha256": "5068891460639667b189c95246feed88fe4913cd4d95d250a9c5a5c5518281b7",
+          "observed_next_xyz_delta_cm": [
+            0.22870302200317383,
+            1.731584221124649,
+            -1.5632584691047668
+          ],
+          "observed_next_displacement_cm": 2.344027736258473,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 23.1578369140625
+        },
+        {
+          "step": 15,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.2405024617910385,
+            -0.09217307716608047,
+            0.03996503725647926
+          ],
+          "rpy_raw": [
+            -0.10000323504209518,
+            -0.11456078290939331,
+            0.3307357430458069
+          ],
+          "measured_gripper": 0.9886419177055359,
+          "native_action_raw": [
+            0.011395380832254887,
+            0.024466069415211678,
+            0.006052460055798292,
+            0.010803350247442722,
+            -0.044115085154771805,
+            0.02205035276710987,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.027659998728653483,
+          "image_rgb_sha256": "3471412d1225f75183ef4204af5e1bedb6607f3c6d0797916a5faf5a56001df3",
+          "observed_next_xyz_delta_cm": [
+            0.5566105246543884,
+            1.850619912147522,
+            -0.7127214223146439
+          ],
+          "observed_next_displacement_cm": 2.059752694189073,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 14.549982706705729
+        }
+      ],
+      "payload_sha256": "7c70896086a41ff36dcf17eec895b5c9fe050ff0a3fa56e5b74a33f309768eb3",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        2.9102781711167864,
+        2.1920564058525214,
+        3.134226279648876
+      ],
+      "first_target_position_errors_cm": [
+        5.431387085967032,
+        4.531748305864385,
+        5.080154170889628
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 2.523994609805908
+    },
+    {
+      "domain": "new_development",
+      "kind": "low",
+      "array_index": 11,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00352-of-01024",
+        "record_index": 18,
+        "start_index": 0,
+        "task": "close the drawer",
+        "partition": "new_development"
+      },
+      "true_next_displacement_cm": 0.024241995763235963,
+      "same_episode_control": true,
+      "steps": 30,
+      "timeline": [
+        {
+          "step": 0,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.2818734049797058,
+            0.06971033662557602,
+            0.17208167910575867
+          ],
+          "rpy_raw": [
+            0.15813753008842468,
+            -0.0625799223780632,
+            0.8012781143188477
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.0,
+            -1.3877787807814457e-17,
+            -2.7755575615628914e-17,
+            2.286418521180167e-08,
+            1.1031391267124491e-07,
+            -1.7469993451868504e-08,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 3.1031676915590914e-17,
+          "image_rgb_sha256": "563bf0dfe85b63d999c161badf544b46159fce8d1b4720b0c74f428e66ea36f7",
+          "observed_next_xyz_delta_cm": [
+            0.003147125244140625,
+            -0.02371668815612793,
+            -0.003910064697265625
+          ],
+          "observed_next_displacement_cm": 0.02424199456179563,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.188257853190104
+        },
+        {
+          "step": 1,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.2819048762321472,
+            0.06947316974401474,
+            0.172042578458786
+          ],
+          "rpy_raw": [
+            0.15692254900932312,
+            -0.06166185438632965,
+            0.8015530109405518
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.005690945778042078,
+            -0.008533007465302944,
+            -0.013830593787133694,
+            0.022395910695195198,
+            0.04099557548761368,
+            -0.137464702129364,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.0172187225065111,
+          "image_rgb_sha256": "835031fe38fdd98dd566c8518205b60bfbf2245e69e509c37137b106b9f4b8a1",
+          "observed_next_xyz_delta_cm": [
+            0.06329715251922607,
+            -0.03244653344154358,
+            -0.9324416518211365
+          ],
+          "observed_next_displacement_cm": 0.9351506515531842,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.748479207356771
+        },
+        {
+          "step": 2,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.2825378477573395,
+            0.0691487044095993,
+            0.16271816194057465
+          ],
+          "rpy_raw": [
+            0.17812222242355347,
+            -0.037579480558633804,
+            0.7889331579208374
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.008915144950151443,
+            -0.011307762004435062,
+            -0.0014420321676880121,
+            0.014839651063084602,
+            0.0010208486346527934,
+            -0.21008065342903137,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.014471515048667262,
+          "image_rgb_sha256": "d4f5042f625401ea7b1597be88786d4571138dd68387af33f405dd2f6a335590",
+          "observed_next_xyz_delta_cm": [
+            0.6516605615615845,
+            -1.094534993171692,
+            -1.453128457069397
+          ],
+          "observed_next_displacement_cm": 1.932420930210859,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.458577473958333
+        },
+        {
+          "step": 3,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.2890544533729553,
+            0.058203354477882385,
+            0.14818687736988068
+          ],
+          "rpy_raw": [
+            0.21636921167373657,
+            -0.022793740034103394,
+            0.638648271560669
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.00843028724193573,
+            -0.017392035573720932,
+            0.0072412434965372086,
+            0.018163327127695084,
+            0.005642962176352739,
+            -0.2579754590988159,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.020639482836429336,
+          "image_rgb_sha256": "edd144325d8316108a033b8b8c2722d5bc77c7646424c28d1f807673ae43d025",
+          "observed_next_xyz_delta_cm": [
+            0.7621884346008301,
+            -1.1359252035617828,
+            -0.0705227255821228
+          ],
+          "observed_next_displacement_cm": 1.3697557201010964,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.090850830078125
+        }
+      ],
+      "payload_sha256": "3e6123b48f2add88ffbff18a0a2a2a1ee5bc6c9513a6a2d6cea70d06e25b2172",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        1.0429068309528926,
+        1.1068670959892193,
+        1.1274065585070918
+      ],
+      "first_target_position_errors_cm": [
+        1.0300242152582326,
+        1.1190201116169065,
+        1.1431218839348638
+      ],
+      "previous_frame_available": false,
+      "previous_observed_displacement_cm": null
+    },
+    {
+      "domain": "new_development",
+      "kind": "large_control",
+      "array_index": 12,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00352-of-01024",
+        "record_index": 18,
+        "start_index": 4,
+        "task": "close the drawer",
+        "partition": "new_development"
+      },
+      "true_next_displacement_cm": 2.036047686237117,
+      "same_episode_control": true,
+      "steps": 30,
+      "timeline": [
+        {
+          "step": 2,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.2825378477573395,
+            0.0691487044095993,
+            0.16271816194057465
+          ],
+          "rpy_raw": [
+            0.17812222242355347,
+            -0.037579480558633804,
+            0.7889331579208374
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.008915144950151443,
+            -0.011307762004435062,
+            -0.0014420321676880121,
+            0.014839651063084602,
+            0.0010208486346527934,
+            -0.21008065342903137,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.014471515048667262,
+          "image_rgb_sha256": "d4f5042f625401ea7b1597be88786d4571138dd68387af33f405dd2f6a335590",
+          "observed_next_xyz_delta_cm": [
+            0.6516605615615845,
+            -1.094534993171692,
+            -1.453128457069397
+          ],
+          "observed_next_displacement_cm": 1.932420930210859,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.458577473958333
+        },
+        {
+          "step": 3,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.2890544533729553,
+            0.058203354477882385,
+            0.14818687736988068
+          ],
+          "rpy_raw": [
+            0.21636921167373657,
+            -0.022793740034103394,
+            0.638648271560669
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.00843028724193573,
+            -0.017392035573720932,
+            0.0072412434965372086,
+            0.018163327127695084,
+            0.005642962176352739,
+            -0.2579754590988159,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.020639482836429336,
+          "image_rgb_sha256": "edd144325d8316108a033b8b8c2722d5bc77c7646424c28d1f807673ae43d025",
+          "observed_next_xyz_delta_cm": [
+            0.7621884346008301,
+            -1.1359252035617828,
+            -0.0705227255821228
+          ],
+          "observed_next_displacement_cm": 1.3697557201010964,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.090850830078125
+        },
+        {
+          "step": 4,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.2966763377189636,
+            0.04684410244226456,
+            0.14748165011405945
+          ],
+          "rpy_raw": [
+            0.2246490865945816,
+            -0.03062933124601841,
+            0.4260963201522827
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.013409951701760292,
+            -0.027326352894306183,
+            -0.003076286753639579,
+            0.03167974203824997,
+            0.04294748604297638,
+            -0.26028549671173096,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.03059444242568114,
+          "image_rgb_sha256": "5ca41bf3c6860558e6b1aee37f2be08d3aaf0b0c842604fae65293af921e96ed",
+          "observed_next_xyz_delta_cm": [
+            0.48560798168182373,
+            -1.972276158630848,
+            0.14072060585021973
+          ],
+          "observed_next_displacement_cm": 2.0360478006882845,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 5.4324188232421875
+        },
+        {
+          "step": 5,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.30153241753578186,
+            0.027121340855956078,
+            0.14888885617256165
+          ],
+          "rpy_raw": [
+            0.24441757798194885,
+            -0.006391951348632574,
+            0.17399992048740387
+          ],
+          "measured_gripper": 1.0008161067962646,
+          "native_action_raw": [
+            0.00791163556277752,
+            -0.021417589858174324,
+            -0.003964997828006744,
+            0.018109047785401344,
+            0.030172552913427353,
+            -0.20746572315692902,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.023173871933435633,
+          "image_rgb_sha256": "f90ed605d43c3a0fc1857eccc7135ab97c8162ff64cd4db0ee0b1db180781cee",
+          "observed_next_xyz_delta_cm": [
+            1.0696351528167725,
+            -2.9031873447820544,
+            -0.1060590147972107
+          ],
+          "observed_next_displacement_cm": 3.0957817483898618,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.440622965494792
+        },
+        {
+          "step": 6,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.3122287690639496,
+            -0.0019105325918644667,
+            0.14782826602458954
+          ],
+          "rpy_raw": [
+            0.272800087928772,
+            0.01262739859521389,
+            -0.07583075761795044
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.00636428315192461,
+            -0.021281711757183075,
+            -0.010029233992099762,
+            -0.014572237618267536,
+            0.02806953527033329,
+            -0.20430496335029602,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.024372133468820188,
+          "image_rgb_sha256": "51fe1f6d0be70bf5fb1771dcfbcf9531ba4ab021a6b7d36b328b6f197d9e682c",
+          "observed_next_xyz_delta_cm": [
+            0.25959312915802,
+            -2.053271164186299,
+            -0.5320504307746887
+          ],
+          "observed_next_displacement_cm": 2.1369110246504284,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.5798085530598955
+        },
+        {
+          "step": 7,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.3148247003555298,
+            -0.022443244233727455,
+            0.14250776171684265
+          ],
+          "rpy_raw": [
+            0.2797395884990692,
+            0.05191369354724884,
+            -0.2769855856895447
+          ],
+          "measured_gripper": 1.0014774799346924,
+          "native_action_raw": [
+            0.006902284920215607,
+            -0.014793016947805882,
+            -0.014933421276509762,
+            -0.002499400405213237,
+            -0.011065134778618813,
+            -0.17828510701656342,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.022124239163406778,
+          "image_rgb_sha256": "2d37e4bc090a9679d577a0a01f2f1c7c34ff98c4d9a4177a2d0754f6cef1880c",
+          "observed_next_xyz_delta_cm": [
+            0.6255656480789185,
+            -2.1903885528445244,
+            -1.1670202016830444
+          ],
+          "observed_next_displacement_cm": 2.559505917872639,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 6.832224527994792
+        }
+      ],
+      "payload_sha256": "3e6123b48f2add88ffbff18a0a2a2a1ee5bc6c9513a6a2d6cea70d06e25b2172",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        0.9495508085491207,
+        1.2349338938441112,
+        0.465758653296826
+      ],
+      "first_target_position_errors_cm": [
+        2.70486112470496,
+        1.452448213789602,
+        2.274930678461925
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 1.3697557201010964
+    },
+    {
+      "domain": "new_development",
+      "kind": "low",
+      "array_index": 38,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00844-of-01024",
+        "record_index": 16,
+        "start_index": 16,
+        "task": "take broccoli out of pan",
+        "partition": "new_development"
+      },
+      "true_next_displacement_cm": 0.49096564899622197,
+      "same_episode_control": true,
+      "steps": 38,
+      "timeline": [
+        {
+          "step": 14,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.3581370711326599,
+            0.06918495893478394,
+            0.029087364673614502
+          ],
+          "rpy_raw": [
+            -0.1395646333694458,
+            -0.31831246614456177,
+            -0.034684084355831146
+          ],
+          "measured_gripper": 1.0112061500549316,
+          "native_action_raw": [
+            -0.001489558955654502,
+            -0.0013557065976783633,
+            0.0007127575809136033,
+            0.055619969964027405,
+            -0.0025110666174441576,
+            0.01473344024270773,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.002136527470103997,
+          "image_rgb_sha256": "750cb4fa7a0e0a68f52779afae34d73a2dd399b0ca426fec301389a97c01941c",
+          "observed_next_xyz_delta_cm": [
+            0.1140594482421875,
+            -0.1487642526626587,
+            -0.1945575699210167
+          ],
+          "observed_next_displacement_cm": 0.2701721832779291,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 2.9185282389322915
+        },
+        {
+          "step": 15,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.3592776656150818,
+            0.06769731640815735,
+            0.027141788974404335
+          ],
+          "rpy_raw": [
+            -0.09049835056066513,
+            -0.3036439120769501,
+            -0.053316447883844376
+          ],
+          "measured_gripper": 1.0112061500549316,
+          "native_action_raw": [
+            -0.0014608801575377584,
+            0.0003258179931435734,
+            6.15661556366831e-05,
+            0.03637474775314331,
+            -0.013857862912118435,
+            0.01003686711192131,
+            1.0
+          ],
+          "native_xyz_command_raw_norm": 0.0014980382474635058,
+          "image_rgb_sha256": "e90701f634f65723b50aac8eaf50b1ef7357f33ac596aa4f9dac15329ae263ec",
+          "observed_next_xyz_delta_cm": [
+            0.08263587951660156,
+            -0.13969019055366516,
+            -0.2590382471680641
+          ],
+          "observed_next_displacement_cm": 0.30568423481806295,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.7097676595052085
+        },
+        {
+          "step": 16,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.3601040244102478,
+            0.0663004145026207,
+            0.024551406502723694
+          ],
+          "rpy_raw": [
+            -0.03498314321041107,
+            -0.29818716645240784,
+            -0.058468982577323914
+          ],
+          "measured_gripper": 1.0105689764022827,
+          "native_action_raw": [
+            -0.0016675704391673207,
+            -0.0005897809751331806,
+            -0.0018182516796514392,
+            0.04327506572008133,
+            -0.01590915024280548,
+            0.0152360200881958,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.002536665515744836,
+          "image_rgb_sha256": "473e742f5d5bebd59a252d73a46ad48b86ebd4bb15e73d005b7a7f3c7aed5673",
+          "observed_next_xyz_delta_cm": [
+            -0.21785199642181396,
+            0.18881931900978088,
+            -0.39741043001413345
+          ],
+          "observed_next_displacement_cm": 0.49096565812723186,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.384613037109375
+        },
+        {
+          "step": 17,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.35792550444602966,
+            0.0681886076927185,
+            0.02057730220258236
+          ],
+          "rpy_raw": [
+            0.002265171380713582,
+            -0.3001016080379486,
+            -0.054011959582567215
+          ],
+          "measured_gripper": 0.9575772881507874,
+          "native_action_raw": [
+            -0.00408706022426486,
+            -0.0017538797110319138,
+            0.003398710861802101,
+            0.03739598020911217,
+            -0.0047295656986534595,
+            0.027076274156570435,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.005597445027838049,
+          "image_rgb_sha256": "ef833da34366df8a50ffb64f1939706f0edc6cdbcfb8bf174498438cb0cd6b20",
+          "observed_next_xyz_delta_cm": [
+            -0.28094053268432617,
+            -0.317557156085968,
+            -0.35882461816072464
+          ],
+          "observed_next_displacement_cm": 0.5554504810372844,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.889251708984375
+        },
+        {
+          "step": 18,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.3551160991191864,
+            0.06501303613185883,
+            0.016989056020975113
+          ],
+          "rpy_raw": [
+            0.049219533801078796,
+            -0.30482402443885803,
+            -0.061041541397571564
+          ],
+          "measured_gripper": 0.657115638256073,
+          "native_action_raw": [
+            -0.0015694546746090055,
+            -0.0006336394581012428,
+            0.008167065680027008,
+            0.015581726096570492,
+            0.006539198569953442,
+            0.0002659050514921546,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.008340602421911135,
+          "image_rgb_sha256": "78ff3899cf03cb6811b240a5721d86921b1392a45a5e92cb82da8f3410f5b423",
+          "observed_next_xyz_delta_cm": [
+            -0.41176676750183105,
+            -0.18110796809196472,
+            0.3335244953632355
+          ],
+          "observed_next_displacement_cm": 0.5599915677334865,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.7745361328125
+        },
+        {
+          "step": 19,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.3509984314441681,
+            0.06320195645093918,
+            0.020324300974607468
+          ],
+          "rpy_raw": [
+            0.08710256218910217,
+            -0.3036571145057678,
+            -0.04710286855697632
+          ],
+          "measured_gripper": 0.4737623631954193,
+          "native_action_raw": [
+            -0.0020468670409172773,
+            -0.0006062053143978119,
+            0.021823693066835403,
+            0.03968309238553047,
+            0.007143237628042698,
+            0.013005695305764675,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.02192785280509328,
+          "image_rgb_sha256": "5440f79bba37b6fd9c7ee1124f5f464bedf94112089dde7307f9eaf179f12ec6",
+          "observed_next_xyz_delta_cm": [
+            -0.3333568572998047,
+            -0.18112361431121826,
+            0.6491290405392647
+          ],
+          "observed_next_displacement_cm": 0.7518650605270787,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.345637003580729
+        }
+      ],
+      "payload_sha256": "de6c36c0fe191957546b429568460fd34c00e570e828441946a12c9786312341",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        0.2342025641733879,
+        2.7651056261392775,
+        0.8255153429831935
+      ],
+      "first_target_position_errors_cm": [
+        0.4840618255186358,
+        3.0893703839922426,
+        1.1178888458680794
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 0.30568423481806295
+    },
+    {
+      "domain": "new_development",
+      "kind": "large_control",
+      "array_index": 39,
+      "row": {
+        "shard": "bridge_data_v2-train.tfrecord-00844-of-01024",
+        "record_index": 16,
+        "start_index": 20,
+        "task": "take broccoli out of pan",
+        "partition": "new_development"
+      },
+      "true_next_displacement_cm": 2.5270359663428286,
+      "same_episode_control": true,
+      "steps": 38,
+      "timeline": [
+        {
+          "step": 18,
+          "offset_from_input": -2,
+          "xyz_m": [
+            0.3551160991191864,
+            0.06501303613185883,
+            0.016989056020975113
+          ],
+          "rpy_raw": [
+            0.049219533801078796,
+            -0.30482402443885803,
+            -0.061041541397571564
+          ],
+          "measured_gripper": 0.657115638256073,
+          "native_action_raw": [
+            -0.0015694546746090055,
+            -0.0006336394581012428,
+            0.008167065680027008,
+            0.015581726096570492,
+            0.006539198569953442,
+            0.0002659050514921546,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.008340602421911135,
+          "image_rgb_sha256": "78ff3899cf03cb6811b240a5721d86921b1392a45a5e92cb82da8f3410f5b423",
+          "observed_next_xyz_delta_cm": [
+            -0.41176676750183105,
+            -0.18110796809196472,
+            0.3335244953632355
+          ],
+          "observed_next_displacement_cm": 0.5599915677334865,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.7745361328125
+        },
+        {
+          "step": 19,
+          "offset_from_input": -1,
+          "xyz_m": [
+            0.3509984314441681,
+            0.06320195645093918,
+            0.020324300974607468
+          ],
+          "rpy_raw": [
+            0.08710256218910217,
+            -0.3036571145057678,
+            -0.04710286855697632
+          ],
+          "measured_gripper": 0.4737623631954193,
+          "native_action_raw": [
+            -0.0020468670409172773,
+            -0.0006062053143978119,
+            0.021823693066835403,
+            0.03968309238553047,
+            0.007143237628042698,
+            0.013005695305764675,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.02192785280509328,
+          "image_rgb_sha256": "5440f79bba37b6fd9c7ee1124f5f464bedf94112089dde7307f9eaf179f12ec6",
+          "observed_next_xyz_delta_cm": [
+            -0.3333568572998047,
+            -0.18112361431121826,
+            0.6491290405392647
+          ],
+          "observed_next_displacement_cm": 0.7518650605270787,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 3.345637003580729
+        },
+        {
+          "step": 20,
+          "offset_from_input": 0,
+          "xyz_m": [
+            0.34766486287117004,
+            0.061390720307826996,
+            0.026815591380000114
+          ],
+          "rpy_raw": [
+            0.10556382685899734,
+            -0.28537073731422424,
+            -0.056803349405527115
+          ],
+          "measured_gripper": 0.48038846254348755,
+          "native_action_raw": [
+            -0.006909094750881195,
+            0.0011604322353377938,
+            0.02216518111526966,
+            0.05569888651371002,
+            0.0036112945526838303,
+            0.03231021389365196,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.023246020027569706,
+          "image_rgb_sha256": "2a7f922fa7ea5d5169a60340e94f13b46b5067d10fbf63153712e73a70f79cc8",
+          "observed_next_xyz_delta_cm": [
+            -0.21869540214538574,
+            -0.1509297639131546,
+            2.5130266323685646
+          ],
+          "observed_next_displacement_cm": 2.5270358777722373,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 5.1434885660807295
+        },
+        {
+          "step": 21,
+          "offset_from_input": 1,
+          "xyz_m": [
+            0.3454779088497162,
+            0.05988142266869545,
+            0.05194585770368576
+          ],
+          "rpy_raw": [
+            0.15362854301929474,
+            -0.27700895071029663,
+            -0.057113561779260635
+          ],
+          "measured_gripper": 0.4985305666923523,
+          "native_action_raw": [
+            -0.01833403669297695,
+            -0.010666302405297756,
+            0.022079460322856903,
+            -0.0014113669749349356,
+            0.027484264224767685,
+            0.07683471590280533,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.030617143508323865,
+          "image_rgb_sha256": "e01874132508574a2e704d2e9f7adb3d7cffe5904105833128bfb3d2efb24bd8",
+          "observed_next_xyz_delta_cm": [
+            -0.7393330335617065,
+            -0.11978372931480408,
+            2.0677007734775543
+          ],
+          "observed_next_displacement_cm": 2.1991698354069418,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 4.5753733317057295
+        },
+        {
+          "step": 22,
+          "offset_from_input": 2,
+          "xyz_m": [
+            0.3380845785140991,
+            0.05868358537554741,
+            0.0726228654384613
+          ],
+          "rpy_raw": [
+            0.20630303025245667,
+            -0.2661633789539337,
+            -0.03819277137517929
+          ],
+          "measured_gripper": 0.4985305666923523,
+          "native_action_raw": [
+            -0.018706170842051506,
+            -0.02167319878935814,
+            -0.0015879441052675247,
+            -0.03470761701464653,
+            -0.03955048322677612,
+            0.10308682173490524,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.02867350588638416,
+          "image_rgb_sha256": "5bb4db73887836fd8456586b45f2ebcab42974f039c6283dba9a38c7788f8923",
+          "observed_next_xyz_delta_cm": [
+            -1.3839274644851685,
+            -1.0279130190610886,
+            2.78133824467659
+          ],
+          "observed_next_displacement_cm": 3.272262647314895,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 5.714894612630208
+        },
+        {
+          "step": 23,
+          "offset_from_input": 3,
+          "xyz_m": [
+            0.32424530386924744,
+            0.04840445518493652,
+            0.1004362478852272
+          ],
+          "rpy_raw": [
+            0.2124452143907547,
+            -0.269559770822525,
+            0.046049315482378006
+          ],
+          "measured_gripper": 0.4985305666923523,
+          "native_action_raw": [
+            -0.019221076741814613,
+            -0.022072063758969307,
+            -0.011136502958834171,
+            0.0018194494768977165,
+            -0.05004969239234924,
+            0.0960608422756195,
+            0.0
+          ],
+          "native_xyz_command_raw_norm": 0.03131529159766607,
+          "image_rgb_sha256": "658e59ca5a460c9d674535d986f9959ef719b06d3cad173ef2c3490666be4ce9",
+          "observed_next_xyz_delta_cm": [
+            -1.9677042961120605,
+            -2.1365536376833916,
+            -0.20709186792373657
+          ],
+          "observed_next_displacement_cm": 2.9119767659437352,
+          "exact_pose_repeat": false,
+          "exact_RGB_repeat": false,
+          "RGB_mean_abs_change": 5.697784423828125
+        }
+      ],
+      "payload_sha256": "de6c36c0fe191957546b429568460fd34c00e570e828441946a12c9786312341",
+      "timestamp_feature_names": [],
+      "first_target_predicted_displacement_cm": [
+        0.6039733302365248,
+        0.9082084017834047,
+        0.7985907823283837
+      ],
+      "first_target_position_errors_cm": [
+        2.2737420709463003,
+        3.4265428590210583,
+        3.323675970545234
+      ],
+      "previous_frame_available": true,
+      "previous_observed_displacement_cm": 0.7518650605270787
+    }
+  ],
+  "records_read": 7,
+  "windows": 12,
+  "selection": "first3 alphabetically eligible tasks per split; low<0.5cm and high>=2cm, identitySHA order; prefer same-episode control",
+  "selection_used_prediction_errors": false,
+  "selection_frozen_before_raw_read": true,
+  "historical_audit_reused": "20261015 label indices/geometry; no re-run of prior fixed-time-shift search",
+  "native_action_units_and_coordinate_conversion_assumed": false,
+  "time_offset_search": false,
+  "labels_modified": false,
+  "GPU_used": false,
+  "model_loaded": false,
+  "trained": false,
+  "final25_payloads_read": false,
+  "simulation_executed": false,
+  "native_action_is_not_reached_pose": true,
+  "low_cases_summary": {
+    "windows": 6,
+    "exact_pose_repeats": 0,
+    "exact_RGB_repeats": 0,
+    "command_raw_nonzero": 1
+  },
+  "physical_delay_identified": false,
+  "official_sources": [
+    {
+      "url": "https://github.com/rail-berkeley/bridge_data_v2/blob/main/jaxrl_m/data/bridge_dataset.py",
+      "accessed": "2026-10-18",
+      "finding": "Default relabel_actions=True computes movement from next observed proprio minus current observed proprio."
+    },
+    {
+      "url": "https://github.com/octo-models/octo/blob/main/octo/data/utils/data_utils.py",
+      "accessed": "2026-10-18",
+      "finding": "relabel_actions uses adjacent observed state differences and drops the final no-next-state row."
+    }
+  ],
+  "limits": [
+    "Only6 low and6 larger-motion controls; not a representative estimate for all520+13 low windows.",
+    "Measured micro-motion does not prove intentional holding, sensor failure or control lag.",
+    "No timestamps found would prevent physical-delay identification from record indices.",
+    "Original native commands are RAW numbers; no claim that their norms are centimeters."
+  ]
+}

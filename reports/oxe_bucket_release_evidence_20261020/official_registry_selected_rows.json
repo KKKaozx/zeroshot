@@ -1,0 +1,78 @@
+{
+  "url": "https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/export?format=csv&gid=0",
+  "original_csv_sha256": "37d55ec44b12a21e16db8eaa7ab5c659e7eb24730bfe9dcfe0b18ad968d8e876",
+  "original_bytes": 79346,
+  "header_rows": [
+    {
+      "csv_row_one_based": 15,
+      "cells": [
+        "",
+        "Dataset",
+        "Robot",
+        "# Episodes",
+        "File Size (GB)",
+        "Robot Morphology",
+        "Gripper",
+        "Action Space",
+        "# RGB Cams",
+        "# Depth Cams",
+        "# Wrist Cams",
+        "Language Annotations",
+        "Data Collect Method",
+        "Has Suboptimal?",
+        "Has Camera Calibration?",
+        "Has Proprioception?",
+        "Scene Type",
+        "Control Frequency",
+        "Registered Dataset Name"
+      ]
+    }
+  ],
+  "selected_rows": [
+    {
+      "csv_row_one_based": 16,
+      "dataset_name": "fractal20220817_data",
+      "dataset_label": "RT-1 Robot Action",
+      "robot": "Google Robot",
+      "episode_count": "73,499",
+      "end_effector": "Default",
+      "action_space": "EEF Position",
+      "frequency_column_value": "3",
+      "frequency_column_zero_based": 17
+    },
+    {
+      "csv_row_one_based": 18,
+      "dataset_name": "bridge",
+      "dataset_label": "Berkeley Bridge",
+      "robot": "WidowX",
+      "episode_count": "25,460",
+      "end_effector": "Default",
+      "action_space": "EEF Position",
+      "frequency_column_value": "5",
+      "frequency_column_zero_based": 17
+    },
+    {
+      "csv_row_one_based": 27,
+      "dataset_name": "language_table",
+      "dataset_label": "Language Table",
+      "robot": "xArm",
+      "episode_count": "442,226",
+      "end_effector": "Stick for pushing",
+      "action_space": "EEF Position",
+      "frequency_column_value": "10",
+      "frequency_column_zero_based": 17
+    },
+    {
+      "csv_row_one_based": 41,
+      "dataset_name": "bc_z",
+      "dataset_label": "BC-Z",
+      "robot": "Google Robot",
+      "episode_count": "39,350",
+      "end_effector": "Default",
+      "action_space": "EEF Position",
+      "frequency_column_value": "10",
+      "frequency_column_zero_based": 17
+    }
+  ],
+  "contacts_omitted": true
+}

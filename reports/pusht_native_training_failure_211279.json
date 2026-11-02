@@ -1,0 +1,17 @@
+{
+  "job_id": 211279,
+  "state": "FAILED",
+  "exit_code": "1:0",
+  "elapsed": "00:01:13",
+  "node": "gpu-a6000-1",
+  "evidence": "User terminal traceback; original full report not yet downloaded locally",
+  "error": "Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same",
+  "diagnosis": "The new restore helper loads a CPU state; author normalizer rebuilds CPU parameters and sends normalized observations back to CPU while the encoder remains CUDA",
+  "local_real_cuda_same_error_reproduced": true,
+  "completed_update_count_from_remote_report": null,
+  "long_training_completed": false,
+  "generalization_verdict": null,
+  "repair_scope": "Restore raw and EMA device placement after state_dict rebuilding; no training protocol change",
+  "failed_checkpoint_to_be_resumed": false,
+  "original_bundle_and_outputs_preserved": true
+}

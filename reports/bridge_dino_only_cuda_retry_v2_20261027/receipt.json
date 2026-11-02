@@ -1,0 +1,21 @@
+{
+  "script": "scripts\\cluster\\retry_bridge_dino_only_cuda_229016_v2.sh",
+  "sha256": "eb1e3d1e471a0d4585b5032567bc1651a1b2cc7c5900f6cd9ee33eb6c493bccb",
+  "node_inventory_user_reported": {
+    "a6000_nodes": 1,
+    "node": "gpu-a6000-1",
+    "gpu_count": 10
+  },
+  "successful_preflight_and_failed_formal_share_node": true,
+  "original_sbatch_resource_headers_exact": true,
+  "inline_python_compiled": true,
+  "respects_slurm_allocated_gpus": true,
+  "health_check_before_training": true,
+  "original_training_bundle_unchanged": true,
+  "automatic_retry_loop": false,
+  "shell_runtime_not_executed_locally": true,
+  "health_check_not_run_locally": true,
+  "validation_note": "First local extraction regex mistook a PY variable prefix for a heredoc terminator; fixed to full-line terminators. Operational script unchanged.",
+  "actual_retry_submitted": false,
+  "scope": "Prepared one operational retry; no training/inference or cluster access"
+}

@@ -1,0 +1,55 @@
+{
+  "format": "bridge-dino-target-conditional-control-candidate-v1",
+  "status": "complete_closed_epsilon_degrades_both_train_and_development_generation",
+  "review": "reports/prediction_target_reuse_review_20261028/report.json",
+  "question": "Conditional on the known positive DINO+observed-pose recipe, does changing only sample/x0 to epsilon remove its benefit?",
+  "generic_target_comparison_already_done": [
+    186009,
+    193195,
+    197783,
+    197845
+  ],
+  "reuse_baseline_job": 229116,
+  "new_x0_training_runs_allowed": 0,
+  "candidate_arms_if_admitted": [
+    "epsilon"
+  ],
+  "candidate_seed": 42,
+  "candidate_updates_if_admitted": 8192,
+  "fixed_recipe": [
+    "DINO/cache",
+    "observed9Dpose",
+    "CLS+patch readout",
+    "original data/window split",
+    "initial weights and buffers",
+    "batch8/order/noise",
+    "Adam/LR",
+    "frozen gripper"
+  ],
+  "admission_pending": [
+    "Runtime exact old-prefix replay and first-x0-batch loss/gradient checks before any update"
+  ],
+  "source_collection_script": "scripts/cluster/package_bridge_pair_229116_results.sh",
+  "training_package_implemented": true,
+  "cluster_submitted": true,
+  "optimizer_updates": 8192,
+  "main_oxe_policy_replaced": false,
+  "main_libero_batch_released": false,
+  "baseline_raw_reports_verified": true,
+  "baseline_verification": "reports/bridge_backbone_pair_a40_229116/download_verification.json",
+  "training_package": "cluster_packages/bridge_dino_epsilon_control_v1.zip",
+  "package_sha256": "6297058b9e4455228cffd5d733369ce69223c79cb07888d1f7d016cbfd80f1b4",
+  "protocol": "deployment/bridge_dino_epsilon_control_v1/protocol.json",
+  "cpu_validation": "reports/bridge_dino_epsilon_control_validation_20261028.json",
+  "actual_positive_replay_passed": true,
+  "estimated_runtime_minutes": [
+    50,
+    65
+  ],
+  "job_id": 231050,
+  "submission_receipt": "reports/bridge_dino_epsilon_submission_231050.json",
+  "result": "reports/bridge_dino_epsilon_231050/analysis.json",
+  "extra_training_or_seeds": false,
+  "train_metrics_received": true,
+  "training_review": "reports/bridge_dino_epsilon_231050/train_and_development_review.json"
+}

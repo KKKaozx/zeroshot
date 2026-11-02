@@ -1,0 +1,39 @@
+{
+  "verified_smoke_only": true,
+  "local_complete_preflight_passed": false,
+  "entry_sha256": "d0a40e1c359ce3315acf2d2766f96b832e896c867f3474feb2e29fbba66b6e2b",
+  "protocol_sha256": "5a5fb791966a1b67be95d95644d577ce2434de3e619d2a3d019ac4465919e862",
+  "loss_helper_sha256": "62b02972cf766b2d2cbe42f545da08d64b77532161641479594bf8e822b3888e",
+  "completed_logged_updates": 5,
+  "common_four_updates_finite_and_loss_formula_verified": true,
+  "pretraining_predictions_targets_contexts_exact": true,
+  "source_snapshots_exact": true,
+  "cpu_verification": {
+    "math": {
+      "weight1_forward_and_gradient_exact": true,
+      "xyz_loss_gradient_coefficient_preserved": true,
+      "quaternion_gradient_multiplied_by_fixed_weight": true,
+      "maximum_xyz_gradient_difference": 0.0,
+      "note": "Shared global gradient clipping may still affect both parameter groups; no separate-gradient claim."
+    },
+    "complete_training_statistics_cpu_exact": true
+  },
+  "training_probe_snapshots": [
+    {
+      "update": 0,
+      "position_cm": 14.023074551871558,
+      "rotation_deg": 128.16631400787034
+    },
+    {
+      "update": 4,
+      "position_cm": 14.587608978370065,
+      "rotation_deg": 37.896607426878866
+    }
+  ],
+  "full_cluster_preflight_required": true,
+  "restore_check_completed": false,
+  "full_cluster_input_cache_memory_not_yet_verified": true,
+  "development_scored": false,
+  "local_interrupted_for_user_gpu_contention": true,
+  "no_new_neural_execution_by_audit": true
+}

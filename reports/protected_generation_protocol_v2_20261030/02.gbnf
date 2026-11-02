@@ -1,0 +1,11 @@
+root ::= "{\"paraphrases\":[" "\"" slot-0 "\"" "," "\"" slot-1 "\"" "," "\"" slot-2 "\"" "," "\"" slot-3 "\"" "," "\"" slot-4 "\"" "]}" | "{\"abstain_reason\":\"cannot_preserve_reviewed_frame\"}"
+r-0 ::= "yellow hexagon and the blue triangle" | "blue triangle and the yellow hexagon"
+slot-0 ::= "push the green circle nearer to the " r-0
+r-1 ::= "yellow hexagon and the blue triangle" | "blue triangle and the yellow hexagon"
+slot-1 ::= "push the green circle so it is closer to the " r-1
+r-2 ::= "yellow hexagon and the blue triangle" | "blue triangle and the yellow hexagon"
+slot-2 ::= "push the green circle so that it is nearer to the " r-2
+r-3 ::= "yellow hexagon and the blue triangle" | "blue triangle and the yellow hexagon"
+slot-3 ::= "by pushing the green circle, move it closer to the " r-3
+r-4 ::= "yellow hexagon and the blue triangle" | "blue triangle and the yellow hexagon"
+slot-4 ::= "make the green circle nearer to the " r-4 " by pushing it"

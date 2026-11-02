@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-17",
+  "status": "code_only_package_prepared_not_submitted",
+  "archive": "cluster_packages\\bridge_demo806_budget_v1.zip",
+  "bytes": 304221,
+  "sha256": "47ab0620f5cb532a8da7f9f393b94abdfd34d5196d63826ad699eb7a476e055a",
+  "protocol_sha256": "a58405241141a0a8d3f35d47dc3cb9df8eed699ff10bdc353008519ea4d29500",
+  "files": {
+    "budget_hooks.py": "66b423cfc79e343fbb29ba0649e564fe865eec78f457948d7320b31070a0f2b4",
+    "fit.sh": "bf44ebd6b98de6f107b617d0beb338c8381171fa61a84086163c09ff168abd31",
+    "local_validation.json": "785df7664576f242043b0c0387f9ba6228a55765c227355df14e14be33142ddf",
+    "preflight.sh": "54e5556dbdc2897e66d5afa48fe15fa3817452ed8e34853973c15018db389499",
+    "protocol.json": "a58405241141a0a8d3f35d47dc3cb9df8eed699ff10bdc353008519ea4d29500",
+    "README.md": "633590785f9e5b6220bd24305fad8926ac7fb915851efb5df531d0901615f2e6",
+    "run_budget.py": "6f8fbf1e598e9b2c10050041cb3604eeb0bc644e11f972484aea4e94a481f95a",
+    "schedule.npz": "5047e6630ebe3d442b19550ff91bee5a04d767ec8e74920863fb12bc1cfd259c",
+    "validate_preflight.py": "cec0a7c1631beec318a53992ef043a8fa1b2f877fa384d7c99949609b6cd4628",
+    "SHA256SUMS": "8a26a5f07d1c61f8a6ceb1d62e74feec3ff2c4743c33a1e7f8baebfc9c34e7b9"
+  },
+  "local_validation": {
+    "passed": true,
+    "schedule_shape": [
+      16170,
+      8
+    ],
+    "prefix8192_exact": true,
+    "all_task_labels_match_predeclared_schedule": true,
+    "no_duplicate_window_in_batch": true,
+    "unchanged_function_asts": [
+      "advance",
+      "context",
+      "check"
+    ],
+    "executable_source_compiles": true,
+    "actual_project_model_executed": false,
+    "actual_gpu_executed": false,
+    "requires_cluster_optimizer_and_replay_preflight": true,
+    "mean_window_exposure": 35.6953642384106,
+    "task_draw_counts": {
+      "close microwave": 32339,
+      "turn lever vertical to front": 24252,
+      "open the drawer": 24257,
+      "close the drawer": 24255,
+      "take broccoli out of pan": 24257
+    },
+    "local_free_bytes": 79694143488,
+    "launcher_arguments_exact": true,
+    "no_stray_plus_argument": true,
+    "all_python_sources_compile": true,
+    "bash_syntax_checked": true,
+    "bash_syntax_evidence": "Two separate Git Bash -n calls returned exit0; scripts not executed.",
+    "cpu_micro_optimizer_roundtrip_verified": true,
+    "cpu_probe_project_model_executed": false,
+    "cpu_probe_path": "reports/bridge_budget_optimizer_cpu_20261017/validation.json",
+    "final_endpoint": 16170
+  },
+  "cluster_preflight_passed": false,
+  "formal_job_submitted": false,
+  "data_upload_required": false,
+  "new_clip_cache_required": false,
+  "purpose": "One extra-low-LR-budget experiment on unchanged806 pool; original8192 comparison remains closed."
+}

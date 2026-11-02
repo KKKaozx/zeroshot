@@ -1,0 +1,773 @@
+{
+  "complete": true,
+  "contract": {
+    "format": "protected-training-language-frames-v1",
+    "dataset_identity": "5f18dd7bb0d05826d06ad7db259ce14246edd515e21124ad5bc13b7078aab012",
+    "profile_sha256": "b7dfc993656ba754a1b7ec66a8395ed829f897a6f8719d699387ad698f9519dc",
+    "profiled_instructions": 8,
+    "scope": "Controlled-form recognition for reviewed training frames; not open-language semantic verification",
+    "automatic_training_approval": false
+  },
+  "saved_candidates_checked": 40,
+  "development_regression_counts": {
+    "accept_text:protected_form_matches": 25,
+    "reject_text:unrecognized_or_changed_form": 15
+  },
+  "development_examples_used_in_rule_design": true,
+  "independent_generalization_evaluated": false,
+  "current_training_instructions": 3686,
+  "profiled_training_instructions": 8,
+  "unprofiled_training_instructions": 3678,
+  "automatic_semantic_or_training_approval": false,
+  "new_training_labels": 0,
+  "new_model_calls": 0,
+  "new_training_updates": 0,
+  "new_cluster_jobs": 0,
+  "source_review_sha256": "004eb10472063cbc112cd486caa72b92a924fe60b3bb19c28ba9db824ea0e8ac",
+  "implementation_sha256": "75f008ddd89d5ea77192a3039c5a4f384ddfc97eb40e754d30a17b862f3d7d50",
+  "limits": [
+    "Recognized controlled forms do not prove arbitrary English or real-scene semantics.",
+    "Unrecognized text requires review; it is not automatically classified as semantically wrong.",
+    "The eight frames and these 40 examples are development material, not a held-out evaluation.",
+    "No native constrained decoding has been integrated or run by this CPU checker."
+  ],
+  "rows": [
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "candidate": "place the silver pot in the lower right position relative to the burner",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "lower_right_of",
+          "roles": {
+            "object": "silver pot",
+            "reference": "burner"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "candidate": "move the silver pot to the lower right side of the burner",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "lower_right_of",
+          "roles": {
+            "object": "silver pot",
+            "reference": "burner"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "candidate": "set the silver pot to the lower right of the burner",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "lower_right_of",
+          "roles": {
+            "object": "silver pot",
+            "reference": "burner"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "candidate": "position the silver pot to the lower right of the burner",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "lower_right_of",
+          "roles": {
+            "object": "silver pot",
+            "reference": "burner"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0025f40fc186332c637aa3cfc0ff20875f0235cae65e5a064db00be6151a4943",
+      "candidate": "put the silver pot at the lower right of the burner",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "lower_right_of",
+          "roles": {
+            "object": "silver pot",
+            "reference": "burner"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "candidate": "transfer the yellow item from the table to the upper part of the drawer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "candidate": "slide the yellow object from the table to the highest level of the drawer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "candidate": "move the yellow thing from the table to the topmost section of the drawer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "candidate": "carry the yellow object from the table to the peak of the drawer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "00507ba434e5ddda5f44b743719d93135d83a1f0a063f6dc104150f9bec150b2",
+      "candidate": "shift the yellow item from the table to the very top of the drawer",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_from_top_of",
+          "relation": null,
+          "roles": {
+            "object": "yellow object",
+            "source": "table",
+            "reference": "drawer"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "candidate": "move the green circle nearer to the yellow hexagon and the blue triangle",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "candidate": "push the green circle so it is closer to the yellow hexagon and the blue triangle",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "push_closer_to_both",
+          "relation": null,
+          "roles": {
+            "object": "green circle",
+            "reference_a": "yellow hexagon",
+            "reference_b": "blue triangle"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "candidate": "slide the green circle toward the yellow hexagon and the blue triangle to make it closer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "candidate": "advance the green circle towards the yellow hexagon and the blue triangle to bring it nearer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "004207422f7d953edb153f821e4cc5d80021195c624e3c94c61b75fca3d3ca9e",
+      "candidate": "nudge the green circle so that it is positioned closer to the yellow hexagon and the blue triangle",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "candidate": "shift the blue triangle to the left side of the blue cube",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "left_of",
+          "roles": {
+            "object": "blue triangle",
+            "reference": "blue cube"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "candidate": "slide the blue triangle so it's beside the blue cube on the left side",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "candidate": "transfer the blue triangle to the left side relative to the blue cube",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "left_of",
+          "roles": {
+            "object": "blue triangle",
+            "reference": "blue cube"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "candidate": "move the blue triangle to the left of the blue cube",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "left_of",
+          "roles": {
+            "object": "blue triangle",
+            "reference": "blue cube"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0055263bfefacebce708a9efd1f1e16dfb0f14d7bfc36d0bae39547e26826fb9",
+      "candidate": "reposition the blue triangle to the left side of the blue cube",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "left_of",
+          "roles": {
+            "object": "blue triangle",
+            "reference": "blue cube"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "candidate": "put the grapes inside the purple bowl",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "grapes",
+            "destination": "purple bowl"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "candidate": "insert the grapes into the purple bowl",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "grapes",
+            "destination": "purple bowl"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "candidate": "move the grapes into the purple bowl",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "grapes",
+            "destination": "purple bowl"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "candidate": "deposit the grapes in the purple bowl",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "grapes",
+            "destination": "purple bowl"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "0b18fc23bbce9206d9dcc7f7fbd2c1ef6b60e1a653c4907b2bf0312984a0baee",
+      "candidate": "transfer the grapes to the purple bowl",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "candidate": "use a towel to wipe the purple bowl",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "wipe_with",
+          "relation": null,
+          "roles": {
+            "object": "purple bowl",
+            "tool": "towel"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "candidate": "clean the purple bowl using a towel",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "candidate": "take a towel and wipe the purple bowl",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "candidate": "with a towel, wipe the purple bowl",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "wipe_with",
+          "relation": null,
+          "roles": {
+            "object": "purple bowl",
+            "tool": "towel"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "135222a9bc6f29b13e64b62f11ea1a57d13a3e09a6a7dcb2df8d32e036498616",
+      "candidate": "wipe the purple bowl by using a towel",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "wipe_with",
+          "relation": null,
+          "roles": {
+            "object": "purple bowl",
+            "tool": "towel"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "candidate": "move the apple close to the red bull can",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "near",
+          "roles": {
+            "object": "apple",
+            "reference": "redbull can"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "candidate": "place the apple nearby the red bull can",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "near",
+          "roles": {
+            "object": "apple",
+            "reference": "redbull can"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "candidate": "slide the apple next to the red bull can",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "candidate": "put the apple in proximity to the red bull can",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "near",
+          "roles": {
+            "object": "apple",
+            "reference": "redbull can"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "00040b6fc565e387fc2f0f376e404a3f9067056ee68f76a689536705bf75686b",
+      "candidate": "shift the apple so it is near the red bull can",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "relocate_relation",
+          "relation": "near",
+          "roles": {
+            "object": "apple",
+            "reference": "redbull can"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "candidate": "put the rxbar blueberry inside the top drawer",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "rxbar blueberry",
+            "destination": "top drawer"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "candidate": "insert the blueberry rxbar into the upper drawer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "candidate": "move the blueberry rxbar into the topmost drawer",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "rxbar blueberry",
+            "destination": "top drawer"
+          }
+        }
+      }
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "candidate": "slide the blueberry rxbar into the top drawer",
+      "prior_text_review": "reject_text",
+      "protection_check": {
+        "status": "unrecognized_or_changed_form",
+        "protected_form_matches": false,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": null
+      }
+    },
+    {
+      "instruction_id": "01ef0197c93653b235bfdc52b1873d3e3d0e80ac872c0ea9e68f951bb6fd57f6",
+      "candidate": "deposit the blueberry rxbar into the highest drawer",
+      "prior_text_review": "accept_text",
+      "protection_check": {
+        "status": "protected_form_matches",
+        "protected_form_matches": true,
+        "original_reuse": false,
+        "needs_text_review": true,
+        "semantic_review_status": "pending",
+        "usable_for_training": false,
+        "frame": {
+          "family": "place_inside",
+          "relation": null,
+          "roles": {
+            "object": "rxbar blueberry",
+            "destination": "top drawer"
+          }
+        }
+      }
+    }
+  ]
+}

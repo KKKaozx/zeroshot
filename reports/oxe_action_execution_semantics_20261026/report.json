@@ -1,0 +1,197 @@
+{
+  "format": "oxe-action-execution-semantics-review-v1",
+  "review_complete": true,
+  "scope": "Static current-code and archived evidence review; not data re-audit or policy validation",
+  "upstream_webpages_revisited": false,
+  "source_rows": {
+    "Bridge": {
+      "cached_version": "0.0.1",
+      "position_field": "/steps/observation/state",
+      "orientation_field": "/steps/observation/state",
+      "nominal_hz": 5,
+      "measured_timestamp_fields": [],
+      "exact_export_units_bound": false,
+      "exact_record_spacing_verified": false,
+      "source_to_libero_registration_verified": false
+    },
+    "Language Table": {
+      "cached_version": "0.1.0",
+      "position_field": "/steps/observation/effector_translation",
+      "orientation_field": null,
+      "nominal_hz": 5,
+      "measured_timestamp_fields": [],
+      "exact_export_units_bound": false,
+      "exact_record_spacing_verified": false,
+      "source_to_libero_registration_verified": false
+    },
+    "BC-Z": {
+      "cached_version": "1.0.0",
+      "position_field": "/steps/observation/present/xyz",
+      "orientation_field": "/steps/observation/present/axis_angle",
+      "nominal_hz": 10,
+      "measured_timestamp_fields": [],
+      "exact_export_units_bound": false,
+      "exact_record_spacing_verified": false,
+      "source_to_libero_registration_verified": false
+    },
+    "Fractal": {
+      "cached_version": "0.1.0",
+      "position_field": "/steps/observation/base_pose_tool_reached",
+      "orientation_field": "/steps/observation/base_pose_tool_reached",
+      "nominal_hz": 3,
+      "measured_timestamp_fields": [],
+      "exact_export_units_bound": false,
+      "exact_record_spacing_verified": false,
+      "source_to_libero_registration_verified": false
+    }
+  },
+  "current_training_assumptions": {
+    "clock": "Published nominal5/5/10/3Hz mapped to5Hz; no measured timestamps",
+    "raw_source_xyz_treated_as_meters_for_shared_scale": true,
+    "exact_export_units_verified_for_all_sources": false,
+    "source_cartesian_frames_preserved": true,
+    "cross_robot_base_or_tcp_registration_proven": false,
+    "libero_execution": "Separate uncalibrated shared-Cartesian convention; no physical target evaluation in this training entry"
+  },
+  "established": [
+    "Motion targets use observed future reached poses, not native motion commands",
+    "All sixteen pose targets use a fixed input reference; they are not cumulative increments",
+    "Native LIBERO OSC desired setpoint and observed reached pose are different quantities",
+    "Source-Cartesian displacement is decoded directly in LIBERO world axes under unverified unit/frame assumptions",
+    "Existing one-task oracle failed to preserve native success with the current5Hz execution rule"
+  ],
+  "not_established": [
+    "That reached-pose prediction is intrinsically invalid",
+    "That every source actually has incorrect units or axes",
+    "That source quaternion encodings are all independently verified",
+    "That the first formal failure or all generalization errors have one known cause",
+    "That20Hz model training or raw native-command supervision would solve transfer"
+  ],
+  "existing_bridge_constant_right_rotation_cancellation": {
+    "passed": true,
+    "synthetic_cases": 64,
+    "public_code_relationship": "R_recorded = R_tool @ D.T; R_tool = R_recorded @ D",
+    "new_source_cartesian_rotation": "R_future @ R_current.T; constant right D cancels",
+    "max_left_rotation_matrix_difference": 2.220446049250313e-16,
+    "legacy_tool_position": "R_recorded.T @ dp = D @ (R_tool.T @ dp)",
+    "max_legacy_vs_physical_tool_component_difference_source_units": 0.04045793665398149,
+    "default_rotation_constant_across_each_case": true,
+    "exact_cached_episode_D_recovered": false,
+    "physical_unit_or_timestamp_verified_by_this_check": false,
+    "old_bridge_generalization_root_cause_established": false,
+    "production_code_changed": false
+  },
+  "source_code": [
+    {
+      "file": "scripts/prepare_oxe_nominal_targets_20261025.py",
+      "sha256": "94a899213b8ad944de737cf13f5a3a5d9c6b246e30cdce3ca0e170629c84aa02",
+      "symbol": "extract",
+      "line": 34,
+      "end_line": 55,
+      "excerpt": "def extract(example,row):\n    import numpy as np\n    # Reuse the complete previously qualified source checks and causal inputs.\n    from audit_bounded_oxe_train_targets_20261025 import source_arrays, values\n    from dataset import (bridge_reverse_scan_gripper,rt1_relative_gripper_commands,\n        euler_xyz_to_quaternion,rotation_vector_to_quaternion)\n    from oxe_nominal_timing import normalize_quaternions\n    p,features=source_arrays(example,row)\n    f=example.features.feature;n=row['steps'];source=row['source']\n    if source=='Bridge':\n        state=values(f,'steps/observation/state',7,n)\n        q=np.asarray([euler_xyz_to_quaternion(x) for x in state[:,3:6]])\n        commands=2*bridge_reverse_scan_gripper(values(f,'steps/action',7,n)[:-1,6])-1\n    elif source=='BC-Z':\n        angles=values(f,'steps/observation/present/axis_angle',3,n)\n        q=np.asarray([rotation_vector_to_quaternion(x) for x in angles])\n        commands=np.where(values(f,'steps/action/future/target_close',10,n)[:-1,0]<.5,1.,-1.)\n    elif source=='Fractal':\n        q=values(f,'steps/observation/base_pose_tool_reached',7,n)[:,3:7]\n        commands=rt1_relative_gripper_commands(values(f,'steps/action/gripper_closedness_action',1,n)[:,0])[:-1]\n    else:return p,None,None,features\n    return p,normalize_quaternions(q),np.asarray(commands,np.float32),features"
+    },
+    {
+      "file": "scripts/audit_bounded_oxe_train_targets_20261025.py",
+      "sha256": "3c61a8e6f1b101caadd0a149dce4118ea687f4105b17f2eb4162b46196a078e9",
+      "symbol": "source_arrays",
+      "line": 36,
+      "end_line": 81,
+      "excerpt": "def source_arrays(example,row):\n    import numpy as np\n    from dataset import bridge_reverse_scan_gripper,rt1_relative_gripper_commands,euler_xyz_to_quaternion,rotation_vector_to_quaternion\n    from oxe_source_semantics import command_features_before_rows\n    f=example.features.feature;n=row['steps'];source=row['source']\n    if source=='Bridge':\n        state=values(f,'steps/observation/state',7,n)\n        action=values(f,'steps/action',7,n)\n        pos=state[:,:3];orientation=state[:,3:6]\n        if not np.isfinite(pos).all() or not np.isfinite(orientation).all():raise ValueError('nonfinite_used_pose')\n        for name,index in (('is_first',0),('is_last',n-1)):\n            flags=list(f['steps/'+name].int64_list.value)\n            if len(flags)!=n or any(x not in (0,1) for x in flags) or [i for i,x in enumerate(flags) if x]!=[index]:\n                raise ValueError('bridge_invalid_RLDS_boundary')\n        commands=action[:,6]\n        if not np.isfinite(commands[:-1]).all():raise ValueError('nonfinite_used_command')\n        labels=bridge_reverse_scan_gripper(commands[:-1])\n        if not np.isin(labels,[0,1]).all():raise ValueError('bridge_unresolved_nonbinary_reverse_scan')\n        features=command_features_before_rows('bridge',commands)\n        quats=np.asarray([euler_xyz_to_quaternion(v) for v in orientation])\n    elif source=='BC-Z':\n        pos=values(f,'steps/observation/present/xyz',3,n)\n        angles=values(f,'steps/observation/present/axis_angle',3,n)\n        commands=values(f,'steps/action/future/target_close',10,n)\n        # The current production parser validates the complete command table.\n        if not np.isfinite(commands).all():raise ValueError('nonfinite_production_command_table')\n        features=command_features_before_rows('bc_z',commands[:,0])\n        if not np.isfinite(pos).all() or not np.isfinite(angles).all():raise ValueError('nonfinite_used_pose')\n        quats=np.asarray([rotation_vector_to_quaternion(v) for v in angles])\n    elif source=='Fractal':\n        poses=values(f,'steps/observation/base_pose_tool_reached',7,n)\n        commands=values(f,'steps/action/gripper_closedness_action',1,n)[:,0]\n        pos=poses[:,:3];quats=poses[:,3:7]\n        if not np.isfinite(poses).all():raise ValueError('nonfinite_used_pose')\n        if np.any(np.linalg.norm(quats.astype(np.float64),axis=1)<1e-8):raise ValueError('missing_orientation_no_identity_substitution')\n        rt1_relative_gripper_commands(commands) # Actual production target conversion.\n        features=command_features_before_rows('fractal',commands)\n    else:\n        pos=values(f,'steps/observation/effector_translation',2,n)\n        if not np.isfinite(pos).all():raise ValueError('nonfinite_used_planar_pose')\n        features=np.zeros((n,2),np.float32);quats=None\n    if quats is not None and (not np.isfinite(quats).all() or np.any(np.linalg.norm(quats.astype(np.float64),axis=1)<1e-8)):\n        raise ValueError('invalid_converted_orientation')\n    span=(pos.astype(np.float64).max(axis=0)-pos.astype(np.float64).min(axis=0))/.1\n    if not np.isfinite(span).all() or np.any(span>np.finfo(np.float32).max):raise ValueError('position_target_float32_overflow')\n    return pos,features"
+    },
+    {
+      "file": "code/oxe_nominal_timing.py",
+      "sha256": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+      "symbol": "protocol",
+      "line": 19,
+      "end_line": 37,
+      "excerpt": "def protocol():\n    return {'format':FORMAT,'label_family':'nominal_resampled_observed_reached_pose',\n        'clock_basis':'user_selected_published_nominal_frequency_assumption',\n        'source_hz':dict(SOURCE_HZ),'output_hz':OUTPUT_HZ,'horizon':HORIZON,\n        'target_times_seconds':[j/OUTPUT_HZ for j in range(1,HORIZON+1)],\n        'timestamp_origin':'relative to the actual input observation row',\n        'measured_timestamps_used':False,'exact_export_row_spacing_verified':False,\n        'position_interpolation':'linear in recorded source Cartesian frame',\n        'orientation_interpolation':'shortest-path unit xyzw SLERP',\n        'gripper_rule':'right-closed source interval command: ceil(source_row_time)-1; zero-order hold, no interpolation',\n        'current_gripper_rule':'original causal history strictly before the input row',\n        'tail_rule':'no extrapolation; repeat last valid target for storage and zero all padded supervision',\n        'zero_valid_target_rule':'omit window; never supervise a fabricated target',\n        'reference':'fixed_input_observation','action_representation':'source_cartesian_delta_pose_open_positive_v1',\n        'position_divisor_in_recorded_units':POSITION_DIVISOR,\n        'source_position_to_meters':{source:None for source in SOURCE_HZ},\n        'missing_dimensions':'Language Table observes XY only; z,orientation,gripper masked',\n        'input_images_or_observation_rows_resampled':False,\n        'physical_calibration_or_formal_training_admission_granted':False}"
+    },
+    {
+      "file": "code/oxe_nominal_timing.py",
+      "sha256": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+      "symbol": "layout",
+      "line": 45,
+      "end_line": 60,
+      "excerpt": "def layout(source,start,steps):\n    if source not in SOURCE_HZ or type(start) is not int or type(steps) is not int or not 0<=start<steps-1:\n        raise ValueError('Known source and a real input row with future observations required')\n    # Integer rational arithmetic avoids endpoint drift at .2s and1/3s.\n    absolute=start*OUTPUT_HZ+np.arange(1,HORIZON+1,dtype=np.int64)*SOURCE_HZ[source]\n    valid=absolute<=(steps-1)*OUTPUT_HZ\n    left=absolute//OUTPUT_HZ;remainder=absolute%OUTPUT_HZ\n    right=left+(remainder>0)\n    command=(absolute+OUTPUT_HZ-1)//OUTPUT_HZ-1\n    return {'source':source,'input_row':start,'steps':steps,'valid_targets':int(valid.sum()),\n        'left_rows':[int(x) if v else None for x,v in zip(left,valid)],\n        'right_rows':[int(x) if v else None for x,v in zip(right,valid)],\n        'right_weights':[int(x)/OUTPUT_HZ if v else None for x,v in zip(remainder,valid)],\n        'command_rows':[int(x) if v and source!='Language Table' else None for x,v in zip(command,valid)],\n        'target_times_seconds':[j/OUTPUT_HZ if v else None for j,v in enumerate(valid,1)],\n        'measured_timestamps_used':False}"
+    },
+    {
+      "file": "code/oxe_nominal_timing.py",
+      "sha256": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+      "symbol": "chunk",
+      "line": 97,
+      "end_line": 132,
+      "excerpt": "def chunk(source,positions,quaternions,interval_open_commands,current_features,start,\n          position_divisor=POSITION_DIVISOR):\n    p=np.asarray(positions,dtype=np.float64)\n    planar=source=='Language Table';width=2 if planar else 3\n    if p.ndim!=2 or p.shape[1]!=width or not np.isfinite(p).all():\n        raise ValueError('Finite recorded positions with explicit observed dimensions required')\n    if not math.isfinite(position_divisor) or position_divisor<=0:raise ValueError('Positive recorded-unit divisor required')\n    meta=layout(source,start,len(p));count=meta['valid_targets']\n    if not count:raise ValueError('No valid common-grid future target')\n    features=np.asarray(current_features,dtype=np.float32)\n    if features.shape!=(len(p),2) or not np.isfinite(features).all():raise ValueError('Finite per-row command/availability features required')\n    allowed=((features[:,1]==0)&(features[:,0]==0))|((features[:,1]==1)&np.isin(features[:,0],[-1.,1.]))\n    if not allowed.all():raise ValueError('Invalid current command/availability features')\n    left=np.asarray(meta['left_rows'][:count]);right=np.asarray(meta['right_rows'][:count])\n    alpha=np.asarray(meta['right_weights'][:count])\n    target_position=(1-alpha[:,None])*p[left]+alpha[:,None]*p[right]\n    target=np.zeros((HORIZON,8),np.float32);target[:,6]=1.;target[:,7]=1.\n    mask=np.zeros((HORIZON,8),np.float32)\n    target[:count,:width]=((target_position-p[start])/position_divisor).astype(np.float32)\n    if planar:\n        if quaternions is not None or interval_open_commands is not None or np.any(features):\n            raise ValueError('Planar source has no measured quaternion/gripper; do not invent them')\n        mask[:count,:2]=1.\n    else:\n        q=np.asarray(quaternions,dtype=np.float64)\n        if q.shape!=(len(p),4):raise ValueError('Aligned recorded orientations required')\n        command=np.asarray(interval_open_commands,dtype=np.float32)\n        if command.shape!=(len(p)-1,) or not np.isin(command,[-1.,1.]).all():\n            raise ValueError('One binary absolute open-positive command per valid source interval required')\n        target_q=slerp(q[left],q[right],alpha)\n        target[:count,3:7]=relative_left(target_q,q[start]).astype(np.float32)\n        target[:count,7]=command[np.asarray(meta['command_rows'][:count])]\n        mask[:count]=1.\n    target[count:]=target[count-1]\n    if not np.isfinite(target).all():raise ValueError('Nonfinite resampled target; no repair or clipping')\n    return {'actions':target,'supervision_mask':mask,'current_features':features[start].copy(),'layout':meta}"
+    },
+    {
+      "file": "code/oxe_nominal_dataset.py",
+      "sha256": "49339af5575dfd719848342c5c762b158ce87e5890d66471e42b71274e948923",
+      "symbol": "NominalOXEDataset",
+      "line": 22,
+      "end_line": 109,
+      "excerpt": "class NominalOXEDataset(Dataset):\n    def __init__(self,data_dir,target_directory,source_map=None,*,partition='train'):\n        self.data_dir=Path(data_dir).resolve()\n        self.store=NominalTargetStore(target_directory,partition=partition)\n        self.partition=partition\n        self.nominal_target_binding=dict(self.store.binding)\n        self.target_manifest_sha256=file_sha(self.store.root/'manifest.json')\n        self.chunk_size=16;self.stride=4;self.min_trajectory_steps=10\n        self.bcz_target='reached';self.bcz_current_gripper=self.bridge_current_gripper='binary'\n        self.bridge_gripper_policy='reverse_scan_valid_steps_v2';self.rt1_gripper_policy='relative_scan_v2'\n        self.bcz_reached_gripper_policy='preceding_command_v2';self.oxe_command_input=True\n        self.action_frame='source_cartesian';self.action_representation=SOURCE_REPRESENTATION\n        self.language_table_groups_sha256=None;self.bridge_episode_selection=[]\n        self.oxe_window_manifest=None\n        self.frozen_nominal_splits={key:list(range(len(self.store))) if key==partition else [] for key in ('train','validation','test')}\n        paths={};sizes={}\n        if source_map is not None:\n            mapping=json.loads(Path(source_map).read_text(encoding='utf-8'))\n            if mapping.get('format')!='oxe-nominal-source-locations-v1':raise ValueError('Explicit nominal source location map required')\n            for r in mapping['files']:\n                if r['relative_file'] in paths:raise ValueError('Duplicate nominal source location')\n                paths[r['relative_file']]=Path(r['path']).resolve();sizes[r['relative_file']]=r['bytes']\n        used={e['stage_relative_path'] for e in self.store.episodes}\n        self.files={}\n        for relative in sorted(used):\n            logical=PurePosixPath(relative)\n            if logical.is_absolute() or '..' in logical.parts or ':' in relative:\n                raise ValueError('Source location escapes its logical root')\n            path=paths.get(relative) if source_map is not None else (self.data_dir/relative).resolve()\n            if path is None or (source_map is None and self.data_dir not in path.parents):\n                raise ValueError('Source file absent from explicit map/root: '+relative)\n            if not path.is_file() or (relative in sizes and path.stat().st_size!=sizes[relative]):\n                raise ValueError('Source file missing or size changed: '+str(path))\n            self.files[relative]=path\n        self.samples=[];self.source_counts=Counter();self.tfrecord_episode_counts=Counter()\n        for e in self.store.episodes:self.tfrecord_episode_counts[SOURCE_SCHEMAS[e['source']]]+=1\n        for wi,(ei,start,_) in enumerate(self.store.windows):\n            e=self.store.episodes[int(ei)];schema=SOURCE_SCHEMAS[e['source']]\n            self.samples.append({'source':schema,'file_path':str(self.files[e['stage_relative_path']]),\n                'record_index':e['record_index'],'start_index':int(start),'trajectory_steps':e['steps'],\n                'payload_sha256':e['payload_sha256'],'nominal_window_index':wi})\n            self.source_counts[schema]+=1\n        self.original_text={}\n        text_file='training_original_instructions.jsonl' if partition=='train' else 'validation_original_instructions.jsonl'\n        with (self.store.root/text_file).open(encoding='utf-8') as stream:\n            for line in stream:\n                row=json.loads(line);wi=row['window_index']\n                if wi in self.original_text or not 0<=wi<len(self.store):raise ValueError('Duplicate/invalid original text row')\n                self.original_text[wi]=row['instruction']\n        if set(self.original_text)!=set(range(len(self.store))):raise ValueError('Original text coverage differs')\n        self.record_integrity_contract={'kind':'every_used_record_payload_sha256_before_decode',\n            'expected_all_role_payload_identities_bound_by_manifest':True,'partition':partition,\n            'target_manifest_sha256':self.target_manifest_sha256,\n            'whole_container_sha256_claimed':False,\n            'source_files':{relative:path.stat().st_size for relative,path in self.files.items()}}\n\n    def __len__(self):return len(self.store)\n\n    def group_key(self,index):return self.store.group_key(index)\n\n    def __getitem__(self,index):\n        import tensorflow as tf\n        ei,start,_,e,_=self.store._row(index)\n        with self.files[e['stage_relative_path']].open('rb') as f:\n            f.seek(e['payload_offset']);raw=f.read(e['payload_bytes'])\n        if len(raw)!=e['payload_bytes'] or hashlib.sha256(raw).hexdigest()!=e['payload_sha256']:\n            raise ValueError('Nominal image/instruction source payload changed: '+e['episode_key'])\n        feature=tf.train.Example.FromString(raw).features.feature\n        source=e['source']\n        image_key={'Bridge':'steps/observation/image_0','Language Table':'steps/observation/rgb',\n                   'BC-Z':'steps/observation/image','Fractal':'steps/observation/image'}[source]\n        images=feature[image_key].bytes_list.value\n        if len(images)!=e['steps']:raise ValueError('Nominal input image phase/count differs')\n        if source=='Language Table':\n            tokens=np.asarray(feature['steps/observation/instruction'].int64_list.value,dtype=np.int64).reshape(e['steps'],-1)[start]\n            if np.any((tokens<0)|(tokens>255)):raise ValueError('Invalid original instruction bytes')\n            instruction=bytes(int(x) for x in tokens if x).decode('utf-8').strip()\n        else:\n            key='steps/language_instruction' if source=='Bridge' else 'steps/observation/natural_language_instruction'\n            texts=feature[key].bytes_list.value\n            if len(texts)!=e['steps']:raise ValueError('Nominal input language phase/count differs')\n            instruction=texts[start].decode('utf-8')\n        if not instruction.strip() or instruction!=self.original_text[index]:\n            raise ValueError('Actual source instruction differs from frozen original text')\n        with Image.open(io.BytesIO(images[start])) as image:rgb=np.asarray(image.convert('RGB'))\n        targets=self.store.get(index)\n        return (instruction,prepare_image(rgb),torch.from_numpy(targets['current_features']),\n            torch.from_numpy(targets['actions']),torch.from_numpy(targets['supervision_mask']))"
+    },
+    {
+      "file": "code/libero_action_interface.py",
+      "sha256": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+      "symbol": "waypoint_to_native_osc",
+      "line": 28,
+      "end_line": 73,
+      "excerpt": "def waypoint_to_native_osc(waypoint, reference_position, reference_quaternion,\n                           current_position, current_quaternion,\n                           position_scale_meters=0.1,\n                           output_scales=(0.05, 0.05, 0.05, 0.5, 0.5, 0.5),\n                           action_representation=TOOL_REPRESENTATION,\n                           saturation_policy='reject'):\n    if saturation_policy not in ('reject','bounded_feedback'):\n        raise ValueError('Explicit reject or bounded_feedback saturation policy required')\n    waypoint = _vector(waypoint, 8, 'waypoint')\n    reference_position = _vector(reference_position, 3, 'reference position')\n    current_position = _vector(current_position, 3, 'current position')\n    reference_rotation = _rotation(reference_quaternion, 'reference orientation')\n    relative_rotation = _rotation(waypoint[3:7], 'waypoint orientation')\n    current_rotation = _rotation(current_quaternion, 'current orientation')\n    scales = _vector(output_scales, 6, 'native output scales')\n    if not np.isfinite(position_scale_meters) or position_scale_meters <= 0 or (scales <= 0).any():\n        raise ValueError('Positive position scale and native output scales required')\n    if waypoint[-1] not in (-1.0, 1.0):\n        raise ValueError('Explicit binary open-positive gripper command required')\n    if action_representation == TOOL_REPRESENTATION:\n        target_position = reference_position + reference_rotation.apply(waypoint[:3] * position_scale_meters)\n        target_rotation = reference_rotation * relative_rotation\n    elif action_representation == SOURCE_REPRESENTATION:\n        target_position, target_quaternion = decode_source_pose(\n            waypoint, reference_position, reference_quaternion, position_scale_meters)\n        target_rotation = Rotation.from_quat(target_quaternion)\n    else:\n        raise ValueError('Unknown action coordinate representation; no automatic conversion')\n    # Robosuite set_goal_orientation pre-multiplies current world orientation.\n    world_delta_rotation = target_rotation * current_rotation.inv()\n    delta = np.concatenate((target_position - current_position, world_delta_rotation.as_rotvec()))\n    normalized = delta / scales\n    if (np.abs(normalized) > 1.0 + 1e-7).any() and saturation_policy=='reject':\n        raise ValueError('Target exceeds native one-control-step bounds; scheduling must be defined explicitly')\n    # The goal remains unchanged. Bounded feedback reproduces native\n    # robosuite scale_action clipping for the command sent on this tick.\n    command=np.clip(normalized,-1.,1.) if saturation_policy=='bounded_feedback' else normalized\n    action = np.concatenate((command, [-waypoint[-1]]))\n    return {'native_action': action,\n            'target_world_position': target_position,\n            'target_world_quaternion_xyzw': target_rotation.as_quat(),\n            'reference_pose_is_fixed_for_chunk': True,\n            'target_was_clipped': False,\n            'saturation_policy':saturation_policy,\n            'native_command_saturated':bool(np.any(command!=normalized)),\n            'saturated_components':np.flatnonzero(command!=normalized).tolist()}"
+    },
+    {
+      "file": "code/libero_waypoint_execution.py",
+      "sha256": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986",
+      "symbol": "execute_policy_chunk",
+      "line": 63,
+      "end_line": 150,
+      "excerpt": "def execute_policy_chunk(env, policy, observation, instruction, current_open_command,\n                         contract, *, native_step_budget):\n    \"\"\"Call policy once, execute a fixed-reference prefix with measured feedback.\n\n    policy receives an upright RGB image, language, reference EEF pose and the\n    last explicit open-positive command. That command is not a measured opening.\n    None represents unknown history and requires a policy that supports missing\n    command input; a command is known after the first actual env.step call.\n    For each declared interval, send its target and gripper command from interval\n    start, recomputing OSC deltas each tick. No intermediate poses are invented.\n    Stops on native done; leaves scoring/replanning to the caller.\n    \"\"\"\n    ticks = contract.ticks()\n    required = int(ticks[contract.execute_waypoints - 1])\n    if type(native_step_budget) is not int or native_step_budget < required:\n        raise ValueError('Budget must cover the declared execution prefix before inference')\n    if current_open_command is not None and (type(current_open_command) not in (int, float)\n                                           or current_open_command not in (-1, 1)):\n        raise ValueError('Last explicit binary gripper command required; no sensed-opening threshold')\n    if not isinstance(instruction, str) or not instruction.strip():\n        raise ValueError('Nonempty instruction required')\n    native = env.env\n    controller = env.robots[0].controller\n    scales = np.asarray(contract.output_scales, dtype=np.float64)\n    if (scales.shape != (6,) or not np.isfinite(scales).all() or (scales <= 0).any()\n            or native.control_freq != contract.native_control_hz\n            or controller.control_dim != 6 or not controller.use_delta\n            or not np.array_equal(controller.output_max, scales)\n            or not np.array_equal(controller.output_min, -scales)\n            or not np.array_equal(np.broadcast_to(controller.input_max, (6,)), np.ones(6))\n            or not np.array_equal(np.broadcast_to(controller.input_min, (6,)), -np.ones(6))):\n        raise ValueError('Actual native timing/OSC bounds differ from execution contract')\n    reference_position, reference_quaternion = _pose(observation)\n    request = {\n        'rgb_upright': camera_rgb_for_policy(observation[contract.camera_key], contract.image_convention),\n        'instruction': instruction, 'reference_position_m': reference_position.copy(),\n        'reference_quaternion_xyzw': reference_quaternion.copy(),\n        'current_open_command': None if current_open_command is None else float(current_open_command),\n        'action_representation': contract.action_representation,\n    }\n    waypoints = np.array(policy(request), dtype=np.float64, copy=True)\n    if (waypoints.shape != (len(ticks), 8) or not np.isfinite(waypoints).all()\n            or not np.allclose(np.linalg.norm(waypoints[:, 3:7], axis=1), 1, rtol=0, atol=1e-3)\n            or not np.isin(waypoints[:, 7], [-1., 1.]).all()):\n        raise ValueError('Policy must decode finite [H,8] targets with unit xyzw and binary commands')\n    trace = []\n    obs, done = observation, False\n    last_command = None if current_open_command is None else float(current_open_command)\n    previous_tick = 0\n    for index in range(contract.execute_waypoints):\n        interval_ticks = int(ticks[index]) - previous_tick\n        for _ in range(interval_ticks):\n            current_position, current_quaternion = _pose(obs)\n            converted = waypoint_to_native_osc(\n                waypoints[index], reference_position, reference_quaternion,\n                current_position, current_quaternion, contract.position_scale_meters, scales,\n                action_representation=contract.action_representation,\n                saturation_policy=contract.saturation_policy)\n            action = converted['native_action']\n            obs, _, done, _ = env.step(action.copy())\n            last_command = float(waypoints[index, 7])\n            measured_position, _ = _pose(obs)\n            trace.append({'native_tick': len(trace) + 1, 'waypoint_index': index,\n                          'simulated_seconds': (len(trace) + 1) / contract.native_control_hz,\n                          'native_action': action.tolist(),\n                          'native_command_saturated':converted['native_command_saturated'],\n                          'saturated_components':converted['saturated_components'],\n                          'target_world_position_m': converted['target_world_position'].tolist(),\n                          'target_world_quaternion_xyzw': converted['target_world_quaternion_xyzw'].tolist(),\n                          'measured_position_m': measured_position.tolist(),\n                          'target_position_error_m': float(np.linalg.norm(\n                              measured_position - converted['target_world_position']))})\n            if done:\n                break\n        previous_tick = int(ticks[index])\n        if done:\n            break\n    return {'observation': obs, 'last_open_command': last_command, 'native_done': bool(done),\n            'native_steps': len(trace), 'trace': trace, 'policy_calls': 1,\n            'reference_position_m': reference_position.tolist(),\n            'reference_quaternion_xyzw': reference_quaternion.tolist(),\n            'predicted_waypoints': waypoints.tolist(),\n            'target_times_seconds': list(contract.target_times_seconds),\n            'timing_evidence': contract.timing_evidence, 'tcp_mapping_evidence': contract.tcp_mapping_evidence,\n            'execution_rule': 'Fixed world target with measured feedback during each declared interval',\n            'saturation_policy':contract.saturation_policy,\n            'source_timing_or_tcp_calibration_automatically_proven': False,\n            'task_success_scored': False}"
+    }
+  ],
+  "released_core_comparison": {
+    "oxe_nominal_timing.py": {
+      "current_sha256": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+      "frozen_sha256": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+      "identical": true
+    },
+    "oxe_nominal_dataset.py": {
+      "current_sha256": "49339af5575dfd719848342c5c762b158ce87e5890d66471e42b71274e948923",
+      "frozen_sha256": "49339af5575dfd719848342c5c762b158ce87e5890d66471e42b71274e948923",
+      "identical": true
+    },
+    "cartesian_action_contract.py": {
+      "current_sha256": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+      "frozen_sha256": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+      "identical": true
+    },
+    "libero_action_interface.py": {
+      "current_sha256": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+      "frozen_sha256": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+      "identical": true
+    },
+    "libero_waypoint_execution.py": {
+      "current_sha256": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986",
+      "frozen_sha256": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986",
+      "identical": true
+    }
+  },
+  "evidence_files": {
+    "configs/oxe_common_training_protocol_20261025.json": "297e03087cf4efaf61b476b84b046404565014984d32c0d777a03b62fada51be",
+    "reports/oxe_units_time_evidence_20261020/report.json": "30d5b5c109b78525b09f49503ca8a08a6ffe646b4aaa6ca058c17d9f84538702",
+    "reports/oxe_conversion_lineage_20261020/report.json": "ad4199d5bd8a0ec4140f9e182de2f017abab832d9a5c194bd011d7056a573818",
+    "reports/oxe_nominal_targets_20261025/report.json": "fa7057c839edc3a677dd1c8b11f2501c7b4b1a102c908254c34c56e94ed8c221",
+    "reports/libero_oracle_execution_20261026/summary.json": "c9e0a48cddc726875b943861ed23e7d583af9c4327ea2683ef719858e1373431",
+    "reports/libero_oracle_interpolation_20261026/result.json": "69d3e8e7aecef991d18aaec7e1ff04048671a6e21d238d189892205c36b5b06d",
+    "reports/libero_oracle_interpolation_20261026/action_semantics_audit.json": "600e8fa1202c680230dcea0ae4e337ee8f901a5a5b40f3ce6fc1040219355377"
+  },
+  "new_data_payload_reads": 0,
+  "models_loaded": 0,
+  "training_updates": 0,
+  "simulator_steps": 0,
+  "new_jobs_submitted": 0,
+  "labels_weights_or_execution_parameters_modified": false,
+  "source_validation_model_decode_performed": false,
+  "bulk_benchmark_ready": false,
+  "primary_behavior_qualified": false,
+  "next_work": "Establish executable source/target unit-frame-time and reached-trajectory/control-goal contracts before a repair; no parameter search or retraining",
+  "teacher_scope_question": "Which cross-embodiment calibration/control adaptation is permitted within the intended zero-shot LIBERO setup?"
+}

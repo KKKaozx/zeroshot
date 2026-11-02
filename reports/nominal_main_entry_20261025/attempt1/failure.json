@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "real_four_source_first_tail_inputs_checked_before_failure": 8,
+  "optimizer_updates_completed": 0,
+  "stage": "first backward with the optional legacy compact decoder",
+  "cause": "CUDA upsample_linear1d_backward_out has no deterministic implementation under strict deterministic algorithms",
+  "next_check": "Use the planned full multiscale backend, whose ConvTranspose1d upsampling does not use this interpolation branch",
+  "legacy_decoder_or_replay_guards_modified": false,
+  "formal_training_submitted": false
+}

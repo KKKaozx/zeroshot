@@ -1,0 +1,53 @@
+{
+  "status": "mainline_reset_complete_technical_blockers_still_open",
+  "closed_language_archive": "archives\\language_generation_closed_20261030.zip",
+  "language_work_continues": false,
+  "formal_libero_training_released": false,
+  "formal_libero_scoring_released": false,
+  "five_conditions_distinct_training_models": 13,
+  "blockers": [
+    {
+      "id": "B1",
+      "name": "Source joint action capability under final shared recipe",
+      "resolved": false
+    },
+    {
+      "id": "B2",
+      "name": "Joint input/output action and target execution contract",
+      "resolved": false
+    },
+    {
+      "id": "B3",
+      "name": "Complete real augmentation data and eligibility",
+      "resolved": false
+    },
+    {
+      "id": "B4",
+      "name": "Executable common formal protocol and intended data scale",
+      "resolved": false
+    }
+  ],
+  "selected_next": {
+    "id": "B2_contract_decision",
+    "local_artifact": "docs/OXE_LIBERO_ACTION_CONTRACT_DECISION_20261030.md",
+    "state": "Reviewable contract decision package prepared; not a physical execution fix",
+    "why_before_training": "Input/output definition may change labels, pose normalization and checkpoint compatibility",
+    "budget": {
+      "local_minutes_max": 45,
+      "model_calls": 0,
+      "simulator_episodes": 0,
+      "training_updates": 0,
+      "new_cluster_jobs": 0,
+      "new_downloads": 0
+    },
+    "stop": "Stop at missing mapping facts or unresolved label definition; no identity calibration substitution, closed-experiment repetition or scope expansion"
+  },
+  "latest_static_contract_gap": "18D source-normalized current pose and independent pose-port in234100 are not consumed by the existing LIBERO policy callback; output shape8 is insufficient",
+  "teacher_draft": "docs/TEACHER_MAINLINE_UPDATE_DRAFT_20261030.md",
+  "teacher_draft_sent": false,
+  "technical_main_blockers_resolved_this_turn": 0,
+  "new_training_proposal_prepared_or_submitted": false,
+  "archive_integrity_checked": true,
+  "old_metrics_recomputed": false,
+  "closed_experiments_repeated": false
+}

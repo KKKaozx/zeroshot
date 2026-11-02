@@ -1,0 +1,66 @@
+{
+  "format": "source-timestep-repair-review-20261031",
+  "status": "prepared_for_budget_review_not_submitted",
+  "source_job": 234100,
+  "source_checkpoint_sha256": "03682dc1760973bcc55b2baee1de2762561129d97c86fe495ad5f30734b1c554",
+  "original_v1_and_vendor_unchanged": true,
+  "loss_plan_archived_source_arrays_unchanged": true,
+  "training_arm_ast_unchanged_except_output_format_names": true,
+  "runtime_changes": [
+    "Full actual dependency imports before sbatch",
+    "Frozen numeric label/stat/selection/raw-image presence qualification before sbatch",
+    "Fresh dedicated v1r1 submission and output names"
+  ],
+  "cpu_checks": {
+    "unique_cases": 3,
+    "root_and_isolated_package_passed": true,
+    "repeat_runs_not_counted_as_additional_tests": true,
+    "uses_tiny_substitute_model": true,
+    "synthetic_optimizer_steps_per_invocation": 6,
+    "real_policy_training_updates": 0
+  },
+  "local_dependency_check": {
+    "passed": true,
+    "torch": "2.11.0+cu128",
+    "tensorflow": "2.21.0",
+    "numpy": "1.26.4",
+    "PIL": "12.3.0",
+    "models_constructed": 0,
+    "torch_cuda_initialized": false
+  },
+  "full_cluster_torch251_input_asset_quota_admission_run": false,
+  "new_real_model_inference": 0,
+  "new_real_training_updates": 0,
+  "new_simulation_episodes": 0,
+  "cluster_operations": 0,
+  "output_action_dim": 8,
+  "native_command_dim_only_at_execution_boundary": 7,
+  "target_supervised": false,
+  "transfer_success_proven": false,
+  "formal_matrix_admitted": false,
+  "source_competence_block_resolved": false,
+  "physical_execution_block_resolved": false,
+  "budget": {
+    "a40_count": 1,
+    "estimated_minutes": [
+      95,
+      110
+    ],
+    "hard_minutes": 120,
+    "updates_each_arm": 8192,
+    "total_updates": 16384,
+    "batch_size": 8,
+    "disk_reserve_gib": 8
+  },
+  "automatic_submission": false,
+  "automatic_rollout": false,
+  "on_failure": "Stop this fixed candidate; no automatic extra updates, sweeps or return to closed diagnostics",
+  "package": {
+    "path": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\bridge_timestep_repair_v1r1_20261031.zip",
+    "bytes": 2418975,
+    "sha256": "6b8f48da44598ba6f5ebd99b308de0f548cb5501c0b4c1903aeef17f3c587797",
+    "members": 56,
+    "all_members_readback_verified": true
+  },
+  "review_source": "deployment/bridge_timestep_repair_v1r1/README.md"
+}

@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "policy_bytes": 526910896,
+  "policy_file_sha256": "33df7eb93ff0d0f7d4ed470643f45ccabb3c8d2c001dc81396f4b66f2c6516d3",
+  "all_learned_tensors_sha256": "2295d8add3e735a7340eb8e244fbc1d4b6abc09d95692120fde1573303abd66d",
+  "learned_tensor_count": 321,
+  "learned_values": 131521928,
+  "training_contract_sha256": "b3b59ab65e0c422d5de774630749bc27afb943edf4fdfd854a2a3cd96daf76fc",
+  "completed_updates": 65536,
+  "all_update_counters_losses_indices_lr_checked": true,
+  "sample_exposures": 524276,
+  "cross_platform_lr_recompute": {
+    "nonexact_values": 2650,
+    "max_absolute_difference": 2.710505431213761e-20,
+    "absolute_rounding_bound": 1.7763568394002505e-19,
+    "training_or_resume_guards_changed": false
+  },
+  "validation": [
+    {
+      "update": 32768,
+      "loss": 0.13009128723594024
+    },
+    {
+      "update": 65536,
+      "loss": 0.12549483276108436
+    }
+  ],
+  "source_split_counts": {
+    "train": 145812,
+    "validation": 17949,
+    "test": 0
+  },
+  "frozen_state_sha256": "91175b04414f975342ce82f50aeefebdcfdd936d29e939224c8cafd0fab81999",
+  "runtime_source_code": {
+    "models.py": {
+      "training": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+      "local": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409"
+    },
+    "adapter.py": {
+      "training": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+      "local": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa"
+    },
+    "diffusion_decoder.py": {
+      "training": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+      "local": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c"
+    },
+    "cartesian_action_contract.py": {
+      "training": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+      "local": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230"
+    }
+  },
+  "visual_backbone": "dinov2",
+  "optimizer_resume_state_included": false,
+  "frozen_encoder_reconstruction_performed": false,
+  "model_forward_calls": 0,
+  "training_updates_executed": 0,
+  "libero_physics_steps": 0,
+  "libero_task_scoring_performed": false,
+  "generalization_verdict": null
+}

@@ -1,0 +1,180 @@
+{
+  "format": "bridge-command8-fresh-scaled-terminal-audit-v1",
+  "result_received_date": "2026-11-01",
+  "job_id": 237579,
+  "terminal_paste_sha256": "3a147d27fe280e3649b28a0b79ea7de8a8638292fa5e57a30143d8ad1be94f3b",
+  "terminal_complete": {
+    "execution_complete": true,
+    "target_supervised": false,
+    "formal_matrix_admitted": false,
+    "zero_shot_transfer_proven": false,
+    "completed_updates": 8192,
+    "encoder_updates": 0,
+    "source_checkpoint_sha256": null,
+    "effective_action_representation": "bridge_controller_increment_pose8_candidate_v1",
+    "source_semantics_status": "Public collector-family hypothesis; exact cached0.0.1 exporter/config not recovered",
+    "automatic_rollout": false,
+    "automatic_following_action": false,
+    "initial_identity": {
+      "base": "9d33270488d294ad9df5aa207fe6b39a8cebcb936849d13790df328d41839e1b",
+      "pose_port": "7948a6aa3df4da34f2147fa89554b4df5faac1842f7eb518422a179efaf21458"
+    },
+    "final_identity": {
+      "base": "2feb926fb2f381e5aa6e4c8b35f88af131f6754fe606030fd50c00652d61679a",
+      "pose_port": "33b1d49d2f09b621b7e56edd6e910bc717e6f0d48c79a3f6c66ada35ad7b8045"
+    },
+    "source_engineering_review_gate_passed": false,
+    "training_seconds": 2690.320553466212,
+    "policy_sha256": "ed06b14ba92cd54ba318ad9072933d71692f515e87f604a1d5c43f4a12166a45",
+    "source_learned_checkpoint_loaded": false,
+    "fresh_learned_initialization": true,
+    "max_current_pose_feature_abs_delta": 0.0,
+    "current_pose_feature_tolerance": 1e-06,
+    "peak_reserved_gib": 4.533203125,
+    "peak_scope": "After construction, includes zero guard/training/evaluation",
+    "program_elapsed_seconds": 2780.4273461811244,
+    "elapsed_scope": "After CPU admission, includes construction/guard/train/sample/policy save, before final verification/ZIP",
+    "constructor_config_scope": "Fresh architecture/frozen restoration template only; effective labels/scaling bound in explicit new contract",
+    "metrics": {
+      "train": {
+        "first_position_normalized": 0.21564401335296546,
+        "first_rotation_deg": 3.446082134563466,
+        "gate": false
+      },
+      "validation": {
+        "first_position_normalized": 0.2620962215304547,
+        "first_rotation_deg": 3.5454271599719736,
+        "gate": false
+      }
+    }
+  },
+  "visible_update_records_checked": 34,
+  "visible_update_plan_lr_finite_objective_checked": true,
+  "maximum_visible_loss_arithmetic_delta": 4.470348358154297e-08,
+  "fixed_generation_counts_checked": true,
+  "all8192_saved_history_records_received_or_checked": false,
+  "physical_input_and_selection_plan_byte_equal_closed237424": true,
+  "comparisons_to_existing_audited_references": {
+    "train": {
+      "zero_command": {
+        "first_position_normalized": {
+          "reported237579": 0.21564401335296546,
+          "reference": 0.15675371334780447,
+          "difference": 0.05889030000516099,
+          "worse_percent": 37.568679393575465,
+          "new_mean_better": false
+        },
+        "first_rotation_deg": {
+          "reported237579": 3.446082134563466,
+          "reference": 2.65970663250525,
+          "difference": 0.7863755020582159,
+          "worse_percent": 29.566249617443987,
+          "new_mean_better": false
+        }
+      },
+      "train_mean_command": {
+        "first_position_normalized": {
+          "reported237579": 0.21564401335296546,
+          "reference": 0.1576697710179777,
+          "difference": 0.05797424233498777,
+          "worse_percent": 36.7694085941036,
+          "new_mean_better": false
+        },
+        "first_rotation_deg": {
+          "reported237579": 3.446082134563466,
+          "reference": 2.67320492090769,
+          "difference": 0.772877213655776,
+          "worse_percent": 28.912007740631584,
+          "new_mean_better": false
+        }
+      },
+      "closed237424_model": {
+        "first_position_normalized": {
+          "reported237579": 0.21564401335296546,
+          "reference": 0.17733944040958413,
+          "difference": 0.038304572943381326,
+          "worse_percent": 21.59957923342539,
+          "new_mean_better": false
+        },
+        "first_rotation_deg": {
+          "reported237579": 3.446082134563466,
+          "reference": 2.8379481574237477,
+          "difference": 0.6081339771397181,
+          "worse_percent": 21.428649975472915,
+          "new_mean_better": false
+        }
+      }
+    },
+    "validation": {
+      "zero_command": {
+        "first_position_normalized": {
+          "reported237579": 0.2620962215304547,
+          "reference": 0.2240043341132637,
+          "difference": 0.038091887417190995,
+          "worse_percent": 17.004977858120608,
+          "new_mean_better": false
+        },
+        "first_rotation_deg": {
+          "reported237579": 3.5454271599719736,
+          "reference": 2.8753412679503683,
+          "difference": 0.6700858920216053,
+          "worse_percent": 23.304569078134605,
+          "new_mean_better": false
+        }
+      },
+      "train_mean_command": {
+        "first_position_normalized": {
+          "reported237579": 0.2620962215304547,
+          "reference": 0.22369903923729298,
+          "difference": 0.03839718229316172,
+          "worse_percent": 17.164661244893043,
+          "new_mean_better": false
+        },
+        "first_rotation_deg": {
+          "reported237579": 3.5454271599719736,
+          "reference": 2.869783469485631,
+          "difference": 0.6756436904863428,
+          "worse_percent": 23.543368260025655,
+          "new_mean_better": false
+        }
+      },
+      "closed237424_model": {
+        "first_position_normalized": {
+          "reported237579": 0.2620962215304547,
+          "reference": 0.23517144522727068,
+          "difference": 0.026924776303184017,
+          "worse_percent": 11.448998953577805,
+          "new_mean_better": false
+        },
+        "first_rotation_deg": {
+          "reported237579": 3.5454271599719736,
+          "reference": 3.0270965947493083,
+          "difference": 0.5183305652226653,
+          "worse_percent": 17.123026933522457,
+          "new_mean_better": false
+        }
+      }
+    }
+  },
+  "comparison_scope": "New model means from terminal; prior model and baseline means from already independently audited237424 on identical intended labels. New saved arrays/labels not yet received.",
+  "new_bootstrap_intervals_received": false,
+  "raw_result_zip_downloaded": false,
+  "saved_new_predictions_independently_recomputed": false,
+  "new_policy_or_adam_locally_inspected": false,
+  "cluster_full_verification_and_zip_completion_inferred_from_print_order": true,
+  "verification_json_independently_received": false,
+  "slurm_final_state_independently_observed": null,
+  "training_minutes_reported": 44.838675891103534,
+  "program_minutes_reported": 46.340455769685406,
+  "timing_scope": "After CPU admission, includes construction/guard/train/sample/policy save, before final verification/ZIP",
+  "peak_reserved_gib_reported": 4.533203125,
+  "trailing_ctrl_c_after_complete": true,
+  "local_repair_training_chain_stopped": true,
+  "candidate_admitted": false,
+  "selected_replacement": null,
+  "source_ability_block_resolved": false,
+  "physical_transfer_block_resolved": false,
+  "zero_shot_objective_changed": false,
+  "single_root_cause_proven": false,
+  "next_action": "Obtain original small_results.zip for final saved-result audit only. Local repair training chain ends per protocol; then overall technical review, no automatic new training package, initialization/scale/LR variant or rollout."
+}

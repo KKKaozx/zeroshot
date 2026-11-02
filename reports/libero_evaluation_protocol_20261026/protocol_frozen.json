@@ -1,0 +1,331 @@
+{
+  "format": "libero-original-instruction-evaluation-v1",
+  "status": "frozen_user_selected100_per_task",
+  "formal_task_scoring_admitted": true,
+  "score_generated": false,
+  "teacher_basis": {
+    "training_conditions": "Teacher seventh email:four DINO augmentation conditions x3 training seeds, CLIP combined x1",
+    "episode_quote": "100 episodes per task split",
+    "count_ambiguity_not_hidden": true,
+    "primary_suite_scope_is_implementation_proposal_not_teacher_quote": true
+  },
+  "official_author_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "primary_suites": [
+    "libero_spatial",
+    "libero_object",
+    "libero_goal",
+    "libero_10"
+  ],
+  "primary_tasks": 40,
+  "primary_suite_basis": "Pinned official lifelong/evaluate.py accepts exactly spatial/object/goal/10",
+  "libero90_role": "Not part of the proposed primary40; no claim of evaluating all130 tasks. Existing single engineering task stays excluded.",
+  "engineering_task_excluded_from_final_scores": "libero_90/KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+  "task_roster_sha256": "50e8c70fc54f6372410b8a85652590542af5edd0225e5c15cc6d3c00dacc1120",
+  "candidate100_slots_sha256": "025286211e8e1b8c31ef24240bcaddb3afd216a9e30bcf7bf584b38fd3c7590b",
+  "rollouts": {
+    "selection": "per_task100",
+    "episodes_per_task": 100,
+    "episodes_per_suite": 1000,
+    "original_instruction_episodes_per_model": 4000,
+    "models_planned": 13,
+    "original_instruction_model_episodes_planned": 52000,
+    "separate_baseline_episodes": 4000,
+    "counts_apply_to_original_instruction_only": true,
+    "authorization": "User explicit answer on2026-10-26:100 per individual task,4000 per model"
+  },
+  "initial_state_rule": {
+    "source": "Pinned official .pruned_init assets; no demonstrations or synthesized states",
+    "index": "episode_slot % number_of_official_pruned_initial_states",
+    "duplicates": "Repeat counts/unique initial-state indices must be reported;100 trials need not mean100 distinct physical states",
+    "seeds": "SHA256([20261026,task_key,episode_slot,channel]), first64 bits mod2^31-1 for environment or2^63-1 for sampler",
+    "paired_across": "Same task/slot/seeds for all model conditions and training seeds; seeds exclude condition, training seed and phrasing",
+    "reset_policy_per_episode": "Reset callback call counter and use fixed per-episode sampler seed; never reload/train the model between trials"
+  },
+  "language": {
+    "primary": "Official benchmark task.language from grab_language_from_filename; never substitute BDDL wording silently",
+    "evaluation_paraphrases": "Five semantically reviewed phrasings, retained outside training; freeze text before scoring those variants",
+    "evaluation_paraphrase_bank_ready": false,
+    "paraphrase_rollout_budget": null,
+    "training_languages": "No LIBERO task language/demo/init is added to OXE training or augmentation banks"
+  },
+  "execution": {
+    "native_control_hz": 20,
+    "image_height": 128,
+    "image_width": 128,
+    "camera": "agentview_image",
+    "image_convention": "opengl",
+    "settle_native_steps": 5,
+    "settle_action": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "settle_gripper_history": "Zero native gripper is neutral; keep command history unknown, not falsely known open/closed",
+    "policy_native_step_budget": 600,
+    "policy_simulated_seconds": 30,
+    "policy_decisions_max": 150,
+    "native_ticks_per_decision": 4,
+    "checkpoint": "Immutable final65536 endpoint; no intermediate/best/target-outcome checkpoint selection",
+    "ddpm_steps": 100,
+    "prediction_type": "epsilon",
+    "schedule": "squaredcos_cap_v2",
+    "frozen_state": "Exact training digest; use explicit verified original coefficient profile on a different runtime",
+    "control": {
+      "target_times_seconds": [
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0,
+        1.2,
+        1.4,
+        1.6,
+        1.8,
+        2.0,
+        2.2,
+        2.4,
+        2.6,
+        2.8,
+        3.0,
+        3.2
+      ],
+      "execute_waypoints": 1,
+      "position_scale_meters": 0.1,
+      "timing_evidence": "User-selected published nominal Bridge/LT5Hz, BC-Z10Hz, Fractal3Hz resampled to5Hz; no measured export timestamps. Actual native20Hz checked at execution.",
+      "tcp_mapping_evidence": "Engineering transfer convention: interpret model source-Cartesian deltas at measured LIBERO EEF world pose; source-specific units/base/TCP alignment is not calibrated or proven by this file.",
+      "native_control_hz": 20.0,
+      "image_convention": "opengl",
+      "camera_key": "agentview_image",
+      "output_scales": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "action_representation": "source_cartesian_delta_pose_open_positive_v1",
+      "saturation_policy": "bounded_feedback"
+    },
+    "source_units_and_tcp_calibrated": false,
+    "transfer_assumption": "Evaluate the already-declared uncalibrated shared-Cartesian convention as an explicit experimental setting, not as proven calibration",
+    "policy_inputs": {
+      "rgb": "Only upright agentview RGB through the training prepare_image path",
+      "language": "Frozen CLIP text encoding of official benchmark language",
+      "proprioception": "Last explicit gripper command plus availability; no joint/EEF/object coordinates passed to the learned network",
+      "eef_reference": "Measured EEF pose is used only by the fixed native OSC conversion, not as an added learned feature"
+    }
+  },
+  "success": {
+    "predicate": "Official native BDDL goal predicate as returned by LIBERO step done, with goal status recorded",
+    "decision": "At least one success during at most600 actual policy control ticks; stop at first success",
+    "no_surrogates": "Position loss, reward proxies, arm motion and8-decision engineering connection do not count as task success"
+  },
+  "baseline": {
+    "kind": "Native seven-dimensional zero-action policy",
+    "initial_states_seeds_and_step_budget": "Identical to learned policies",
+    "reuse": "One fixed baseline result per task/slot; reuse across model/training seeds and language variants rather than rerun identical trials"
+  },
+  "statistics": {
+    "per_task": "Success count/planned completed trials; never silently omit technical errors",
+    "per_suite": "Equal-weight mean over10 task success rates",
+    "overall": "Equal-weight mean over4 suite means; also publish each suite separately",
+    "training_seeds": "Report mean and sample SD(ddof1) over42/43/44 when all three available; single-seed results have no invented training-seed SD",
+    "paired_comparisons": "Match task/slot and training seed; scene resampling clusters by official initial-state index",
+    "clip_ablation": "Single training seed; do not treat episode bootstrap as three-seed evidence"
+  },
+  "errors_and_resume": {
+    "technical_errors": "Report evaluation incomplete; retry the identical task/slot/seeds only, no resampled easier episodes",
+    "native_horizon_failure": "A valid rollout with no goal by600 ticks is a task failure",
+    "resume": "Completed episode identities are immutable, skipped only after checkpoint/protocol/asset hashes match",
+    "selection": "No algorithm/control/data/budget/checkpoint changes based on final scores; a changed method gets a new exploratory protocol"
+  },
+  "storage": {
+    "episode_reports": "Compact per-episode results and trace digests, not per-episode full simulator dumps",
+    "videos": "If enabled, choose task/episode identifiers before outcomes, never select successes only"
+  },
+  "remaining_before_scoring": [
+    "Cluster isolated simulator install and first actual Linux episode; no automatic job submission"
+  ],
+  "metadata_only": true,
+  "initial_state_vectors_decoded": 0,
+  "model_forwards": 0,
+  "physics_steps": 0,
+  "source_sha256": {
+    "libero\\libero\\benchmark\\__init__.py": "4ce6edbb00b3280692f2e2b2e8a14bf6e2d5878965b0484a386c0355a867ecc5",
+    "libero\\libero\\benchmark\\libero_suite_task_map.py": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d",
+    "libero\\lifelong\\evaluate.py": "84dea8f168406884e460acd5df9d2dcab5802e297b9a7b4333a5c17fcb24b50f",
+    "libero\\lifelong\\metric.py": "4fe37407f23cd9c1ceb4c93670f308d2fed6d34b2c2139d86123702c849cabcb",
+    "libero\\configs\\eval\\default.yaml": "e9775e56a15317666ee8248f7e9d59072b9469c0f7346dc3ed496484657c6bcd",
+    "libero\\libero\\envs\\env_wrapper.py": "a782fb76c9792268d28979474fe72849e1e98ada49c8e997a65359a8d6b6acd0",
+    "libero\\libero\\envs\\bddl_base_domain.py": "055836670ac5fcac7e033fc86404718fd53854996e5776b1ff68b646f7bbcc9d"
+  },
+  "candidate_parent_identity": "dba8b406cba994ae5a1797299bfeabb0dd4a810276b5970f116155d8089260d3",
+  "conditions": {
+    "no_augmentation": {
+      "visual_backbone": "dinov2",
+      "training_seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "paraphrase_only": {
+      "visual_backbone": "dinov2",
+      "training_seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "counterfactual_only": {
+      "visual_backbone": "dinov2",
+      "training_seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "combined": {
+      "visual_backbone": "dinov2",
+      "training_seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "clip_combined": {
+      "visual_backbone": "clip",
+      "training_seeds": [
+        42
+      ]
+    }
+  },
+  "runtime_strategy": {
+    "primary": "Cluster Linux EGL; isolated simulator venv inherits existing training torch",
+    "first_segment": "One complete fixed slot counts toward4000; checks native Linux backend and measures full rollout time",
+    "segmentation": "Operational max-new-episodes/wallclock do not alter per-episode600tick budget",
+    "exact_runtime_binding": "Refuse resume across changed packages/GPU class/driver/software/renderer; no silent mixed-runtime results",
+    "local_engineering": "Existing32tick excluded engineering result retained; not repeated or counted",
+    "batching": "Unchanged verified B1 sampler; no unverified fast/batched/DDIM path",
+    "cross_platform_physics_qualified": false
+  },
+  "evaluator_files_sha256": {
+    "evaluation_core.py": "0bc0d08657080f3d4983a08baf41bc60c1d8e93a6d5ce21365e9daedf7da8cde",
+    "prepare_runtime.py": "b86b7e70e8758757587791da6f1a7bf0798496b3a2ce2efdd720c2f5e54bc3ce",
+    "run_evaluation.py": "8c06e2a4b97578436a16ec5321b4b0d5f6d949383e4dcfbf91a3d69f9d733f1e",
+    "verify_output.py": "74825ca0cf82d334c021dd3d3d5fb5a7073efe0f66ff3907e95af2875be22350"
+  },
+  "policy_source_sha256": {
+    "adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "audit_bcz.py": "b4bb6c45b9bec9cc49c6683b5270d55b50aa550981a85ea7dc7bdf4e57e13fdb",
+    "audit_bridge_batch_inputs.py": "32e8feeab346f7dd4aae137c8b291a1af69fb63a526b387db3fc18e7fb5ad7cf",
+    "audit_bridge_diffusion.py": "e29a4ce56861536229279fae5672740ed389ddfe7f089eb1411ba1c001ee5450",
+    "audit_bridge_input_neighbors.py": "4838a17138011519893f93c2d468127e9064dd7c9e084b208c81de7f80df4f55",
+    "audit_bridge_multitask_pilot.py": "04d016c898e82048e040f14873868e8f86a960e8583452b90dffb69371da43cc",
+    "audit_bridge_patch_features.py": "b4f575a8ac69c491e657bd5028a48ecd5757bd9456d45615f67a153c8fa3b1da",
+    "audit_bridge_repeated_failure.py": "13a77bf464c4e93d75f0941da81c326b0b56fcf09eeca28bc09641b8d425626b",
+    "audit_bridge_xyz_distribution.py": "f0bf454e7211606c08c7815a1ec5bbf27125cc3a62645666c538f4b53906347c",
+    "audit_core_source_records.py": "35c59d886809a0c71c841e7494802eba3f00099b2b9b0143a6e9d4f3e136b99a",
+    "audit_dataset.py": "8d3c71e02a27347e70016a821f7a4d9363d1522dcd2e7b85c36d4aeab1f48cc7",
+    "audit_teacher_training_eval_contract.py": "b6873b27260a894db4860d474f2279886b3859e1e38a4a60fc7d60e0737e7145",
+    "bridge_input_contract.py": "6ee9ea12d69f267f4d83a2b6e5c5bc261419e6d237a7594fe41033206d975595",
+    "bridge_xyz_normalization.py": "9ed9b8798761fbb7c3d6d1babb123d189bf292348d2b2b7f3c38757d6891b2ae",
+    "cartesian_action_contract.py": "8015599a660b25fd52638d46eee46e120aabe732711f7c4d5d0fd7353764f230",
+    "check_bridge_batch_control.py": "bbb6a8c92daa59254ddfbfe1ef6d9293fd49777215b846d6b55bbdb10aa8db32",
+    "check_bridge_history_pair.py": "0052bed0e4fe0486a5701aa1e781c642bf35773916647512c1205a31138c275a",
+    "check_bridge_late_lr_pair.py": "ade3490671678b05358d6a31783faa0c3cbcb44ae27704f457d2257ebc0c804e",
+    "check_bridge_minimal_pair.py": "80ce1d694539143a93dc5491979bffb09a1edd98da7239313349a95fef3dad04",
+    "check_bridge_prediction_targets.py": "f03e116174c2e4b19a9ceef827bbacb7bcd90f58eee4d7c2d7e3f1d12d3bc746",
+    "check_bridge_xyz_normalization.py": "d26f01a601ee0e8c1b4d37b78e3b4f154b07a06b8113b1b8eaced7b69fb82754",
+    "cliport_controller.py": "374c0f0a53a04464779ea158ec1387020f3c4732c730ab0dd5c06b24a65ed114",
+    "compare_bridge_adapter_training.py": "fae0e3c62c27f6f45c1b4e15dfc8830537b98c9d468adcf25e2d477858935858",
+    "compare_bridge_current_pose.py": "87f4ad4a405ce60cd4e621540853fbaffe458ad6a072ef32ab604735ba2f26a4",
+    "compare_bridge_pooling.py": "1e6f9aab983b0861a486e22b72acd54f9be5fb0da6203f1717d56d574d4125d8",
+    "compare_bridge_saved_checkpoints.py": "f5a091ccff824a1d5b6a888ff7a0396a4bd708cfa0ccb581454ee5da995fee46",
+    "compare_official_ddpm.py": "63ce7212db8f48a505e5398f21ca9173cd8f42d4dc257b1cd098a9ead2a610bd",
+    "compare_official_unet_and_loss.py": "9eecffc412e2bc51cc979667a931dd88bbe0f406f935ee9fde3921cbeb6cf596",
+    "completed_policy_export.py": "175e66a87f865d569e952e7051c376de60f8905e66d374ec019d398b371532e1",
+    "dataset.py": "424e5d0610cf4822a96416d98cc5b655c580bdfc73047f3c815fa9c70c69c4dd",
+    "diagnose_bridge_diffusion_fit.py": "c1dfcd0a400f190cb756e7f91921605874775da32a2e8dc795582fbba9612ab7",
+    "diagnose_bridge_modules.py": "d34d538c0e3593226589dee9c6e8b8089074f00ba1bb0430ef7284830666da8a",
+    "diagnose_multiscale_noise.py": "2773f0553d01a17dd61499b554e176cadf22218243065324dbea98eca123d340",
+    "diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "evaluate_bridge_ddim_steps.py": "19c938e093fa2536302cfd6c0c03f41041b00250d0e6f2ab853cddab949a50b4",
+    "evaluate_bridge_ema_pair.py": "7b4d86036a3affa1d0faf75d6683ee26843d8cd390613d9afc8f45abbbbeaa7f",
+    "evaluate_bridge_endpoint_metrics.py": "af476a165564a1a6937b19d18c18454d159c1c9c0c43517592664a16cfc05722",
+    "evaluate_bridge_epsilon_steps.py": "02d0cb077e407f581ac7cda3cded08ad6fa5806879f86c5792d08486b56f3119",
+    "evaluate_bridge_official_unet_one_step.py": "aaafbe98f60426366677951d93faa2e8e9d4c8bee796f1be6b9645f8353bda2d",
+    "evaluate_bridge_one_step_sampler.py": "e49df63dca4c612bd967d04ea48c1d207028356b33ff084e93edcefdb6ac6ffe",
+    "evaluate_bridge_probe.py": "836312ae30951c513f2ac5d10ed640a002c38ed88e022705cb8115e5375de42c",
+    "evaluate_bridge_target_pair.py": "d983430a71daa8cf0298a7339d8e2ac83c015453f81063e464aa11199af2df00",
+    "evaluate_bridge_task_mean.py": "65f9a7ef8d46b42f1f4df1d56697bfc118d8e1166eee6dd8cfbadf7057c0093b",
+    "evaluate_bridge_xyz_pair.py": "98507503ac379acf8c978a292aeb980ca9f2e67c574fa9a174bd4dc8b9633a50",
+    "evaluate_multitask_pilot.py": "feba3e735f319ac4440a88cef6ab021609f2392dd0a15c07696512ff78c9d092",
+    "evaluate_offline.py": "d065e62aa878d89dd0390d702a6aa8cd7a32decaf6959b792eaf78e4fb674f05",
+    "eval_closed_loop.py": "254635cb09332191c8c9c8836237d748c8a83bff6d8bd062f0fe8c3dd960f933",
+    "export_bridge_official_subset.py": "1c6bcb1c4a2907c45b80d23754254e56f36e4317d040d3c5fbc823df7c3760cb",
+    "finalize_bridge_adapter_comparison.py": "9b7630de6a53300c3b39f44cc11977e503b38c6472f6e46378a6e41d7799d2c0",
+    "fit_bridge_adapter_pair.py": "a2798c873783e7b1adbb3573876c96c3ceda45c23b53f28a28a4989526f64914",
+    "fit_pybullet_fixed_grasp.py": "1b656b27765839af20548003ee27f472f15a35eaba30bd6fdb25d5c2c3495af7",
+    "frozen_identity_failure.py": "f19803f58d59221ac0eefba02463875d939bb3a2a64e85b4fbd59b910caa5b91",
+    "frozen_profile_restore.py": "73f6b18e96d8a926e33f8120e5a130c9e3f798feac638f4957e2b54f489a5453",
+    "frozen_visual_backbone.py": "11750ee52a018495256a11c4971bc9ba48f060a02973343170bab77da62fa317",
+    "language_training_conditions.py": "e4f115bdae73c51b567b1e2225c797ebb901f04fb0359273d3f6e76c9c455fa2",
+    "libero_action_interface.py": "feedd6cce4c6d76a0e749f2f8b200b952470800e1f6c0dc95f0ef3e415e6d1cf",
+    "libero_project_policy.py": "d8246b6eeb5eb86734a4121a75266c8950c78ba79421afa19c1c60f790f3b935",
+    "libero_waypoint_execution.py": "54d16a3a3c3686cd63a0b9fe234ba707a5767d4d68cb4fbb4338165ff92d3986",
+    "local_paraphrase_candidates.py": "58d1fb7c9c50ff4b69626cf6ffb2599f4a03cf8f743f126c4889f9c712d8093b",
+    "models.py": "3f2cf60ea920edcf1a6a154c11e96dc60c08e8792cb3196b1d0646f0d2721409",
+    "multitask_resource_preflight.py": "5a708c714874e053c4f00b74e5e3dcf14fab0478e03134b9627bdb1d0a8ea4be",
+    "oxe_candidate_groups.py": "f9d23511784ba096b57099086b64833952e65586c9f57b2f80486dba5af3f8fc",
+    "oxe_formal_protocol.py": "2515130954b72146089696bfb5df49abba8f609c53ac6612c980b58126ff3387",
+    "oxe_nominal_dataset.py": "49339af5575dfd719848342c5c762b158ce87e5890d66471e42b71274e948923",
+    "oxe_nominal_target_store.py": "a4d3691244b054f4f7f3a4ec789567a2f1c30cdb5bfb7ccb969a549a2f20b7ff",
+    "oxe_nominal_timing.py": "99b30ba23c37c5ad20a06addffcd0d5997a51a5974df6f2af404d0168f2d33d6",
+    "oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981",
+    "oxe_window_index.py": "00c13a24ba33bc1299a6634e688194ac45a815744d228faf5263dc6431112aaf",
+    "population_condition_transform.py": "38d773de23f3f290751f12aecd0cfe82adfb9b5c552b7c1a33eb711202e55980",
+    "preflight_official_unet.py": "13e228b8e031195fea53c0c160c9a4b486a6078eadcafc70b21e868ca13d873e",
+    "prepare_bridge_diffusion_fit.py": "e56be4fd1eab6a6fa88065dc4df2521757289bd569446a665aca562f64afdc53",
+    "prepare_bridge_diffusion_full_fit.py": "dc4a36feeaa1939e971682c7874806b9e69b1e5643c32f46c8fef323442c6034",
+    "prepare_bridge_expansion_plan.py": "898727a74691c82d1514ceab2267b9e5be249e03355e7f7a5d92edbfc50ab34c",
+    "prepare_multitask_preflight.py": "541f2f6afad45e8fe82fedd50970cda0876895e771ac3e19c272be3de4100d2e",
+    "prepare_multitask_training.py": "1130d30315b24a10f671ffed25ccddc137401cafd946edbbba28cbeaa70e7787",
+    "probe_bridge_conditioning.py": "be29b8df26e936aa98896e0674429c7e20b20694a5265e9b446039075f599295",
+    "probe_bridge_heads.py": "b778b6b2c435710e3838b20986a55670dd4937a7c5b2b92c1a536d837fc73e5a",
+    "probe_pybullet_gripper_conditioning.py": "3c47eaa3ea223291bcdcab57b503ae06a96ca277bf56b36684855ae7ecad8c62",
+    "pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "render_bridge_diagnosis.py": "526462017c2ac98bc635b0640c8f3047b10f7ad5ed7b9909608e9329fac1b108",
+    "render_bridge_positive_control.py": "83f2f7643b46bfc86d0bf485b15ed0f39bb4874a977d4d9becfa86f7f1d40112",
+    "replay_and_fit_bridge_positive.py": "d792ed886aac11f9572653038953f8d2179bc803b03f60b6e7c5024de849bbc6",
+    "run_bridge_epsilon_control.py": "61240e41c3743e9ffd8983fda2a926aeb0264e141320eec6f662b1c007d0f8ea",
+    "run_bridge_head_control.py": "70e57f748c691ee029c3cd7a903a19afd9faadf65cbdbc34ddc43de9d17dfa58",
+    "run_bridge_official_unet_real_preflight.py": "dc5dc20e3824f81255c3d833d8169462d720e82822e52172cc939a393bf61023",
+    "run_bridge_official_unet_training.py": "3dcc6603461c1403d039a13d872308f4b17aa8854a7a1c27b93a9c3d99c7f3a2",
+    "run_bridge_prediction_target.py": "bbc56172eb40367d6086cecc9bca709ae639d61d6d7b1725eefe34cb1795aee8",
+    "run_bridge_target_pair.py": "080a80e907f9af7246a886a0b8cf430a8eeeeb4edaf985b6a2fbaa6fa9ad9f90",
+    "run_bridge_xyz_normalization.py": "3f5fa02701440552a183693e55b8b673da4063907ed54e549df9dfde510d2ce9",
+    "run_bridge_xyz_pair.py": "57d1b93b1054708a7365ad2ee512fc5a91015a51b1ba2c1cd0f57e47dc0f363c",
+    "setup_clip_assets.py": "81d71dd65cabe4585d2abd7b87dac8960b8ac571810626b9a7bb0e994be2d91a",
+    "stage_training_shards.py": "a11026528ab33d8934de6583d65f8ebe9e1aa21a76c7ddacb19a1715f5854ddd",
+    "step_training_runner.py": "7dda16ccb466160cd82f6983b98064475f43aba394da439a06f69488b56e7d10",
+    "step_training_state.py": "e2029456c3840e63879de5eecaa75f869989ee419b168916d1888f5d362f0e6d",
+    "test.py": "2f4343dfbe91f3646d1897db655aefb0b0c6344f083ee0e705a500a03c5ecc21",
+    "test_loader.py": "956ea0c8165072944c49ad40ca65418f9bed875ba98c21ce3a67dd27e15d6a89",
+    "trace_bridge_batch_training.py": "a9a252608171607451f8bcc5374224c9cb450c97846ac7a8a52d932ef536485f",
+    "train.py": "4d1893073fd1f9696e1ded0ad02cc50d8f47fd5db20cf308cdbd90e7d9acb28a",
+    "window_target_protocol.py": "b9a3b12dad9d37de585c90ba3caccfd3c537267797440a161c5cd048b9cb29f9"
+  },
+  "simulator_files_sha256": "64b90d7b0114fb4f66a712766a437830dacbb16e21ca19f410fa27bc03864a30",
+  "episode_slots_sha256": "025286211e8e1b8c31ef24240bcaddb3afd216a9e30bcf7bf584b38fd3c7590b",
+  "separate_future_work": [
+    "Reviewed evaluation paraphrases and separate rollout budget; no paraphrase score claim yet",
+    "Three independently trained checkpoints for each main condition; no invented seed variation"
+  ],
+  "protocol_identity": "5156ea881351f156b9d95ba756e6b61434f3fe8a44e199bb52dde9b4c40c3381"
+}

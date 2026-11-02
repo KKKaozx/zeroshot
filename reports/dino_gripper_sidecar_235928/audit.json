@@ -1,0 +1,29 @@
+{
+  "terminal_receipt_checked": true,
+  "terminal_sha256": "3f34bfb75230b5dc370aeea60ba8fafab51fbb6405b8eb817150a568b4244f17",
+  "package_file_list_matches": true,
+  "reported_recall_f1_and_target_event_counts_checked": true,
+  "simple_baselines_independently_recomputed": true,
+  "criteria": {
+    "balanced_accuracy_min": true,
+    "beats_best_baseline": true,
+    "opening_event_f1": false,
+    "closing_event_f1": false
+  },
+  "offline_gripper_admitted": false,
+  "source_pose_preservation": "Cluster code reported unchanged checkpoint and zero pose updates; not locally rehashed source weights",
+  "raw_small_results_downloaded": true,
+  "candidate_predictions_independently_recomputed": true,
+  "head_loaded_or_forwarded": false,
+  "adam_locally_inspected": false,
+  "slurm_final_state_received": false,
+  "program_elapsed_seconds": 13.291297529824078,
+  "elapsed_scope": "Program timer excludes queue, some admission/startup and subsequent verification/packing",
+  "next_action": "This fixed head candidate is closed: absolute command learning improved; event timing gate failed; retain source and head, no automatic training or rollout",
+  "automatic_following_action": false,
+  "main_model_replaced": false,
+  "small_archive_bytes": 1338384,
+  "small_archive_sha256": "9e536e541c9f010b41a1d944e73ae6b60c0a72f0094cc7321647cc803f0b2234",
+  "head_bytes_match_terminal_sha256": true,
+  "cluster_full_head_adam_verification_received": true
+}

@@ -1,0 +1,193 @@
+{
+  "format": "bcz-paper-live-target-crosswalk-v1",
+  "review_complete": true,
+  "scope": "Existing reports, local metadata and live source AST; no raw records or checkpoints loaded",
+  "paper": {
+    "url": "https://arxiv.org/html/2202.02005v1",
+    "version": "v1",
+    "sections": [
+      "5.2",
+      "Appendix C",
+      "Appendix L"
+    ],
+    "claims_paraphrased": {
+      "adaptive_state_difference": "Training target selection depends on arm/gripper motion, not a universal next-row interval",
+      "inference": "Predict ten targets but execute only the first, then condition on new observation",
+      "metric_limit": "Similar future-pose validation errors need not imply similar manipulation success"
+    },
+    "not_a_diffusion_policy": true,
+    "not_proof_of_local_export_units_or_seconds": true
+  },
+  "local_release": {
+    "name": "bc_z",
+    "version": "1.0.0",
+    "native_fields": {
+      "future/target_close": {
+        "shape": [
+          10
+        ],
+        "dtype": "int64"
+      },
+      "future/axis_angle_residual": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      },
+      "future/xyz_residual": {
+        "shape": [
+          30
+        ],
+        "dtype": "float32"
+      }
+    },
+    "bucket_metadata_identity_reused": true,
+    "public_catalog_version": "0.1.0",
+    "exact_exporter_recovered": false
+  },
+  "anchors": {
+    "native_single_target": {
+      "path": "code/dataset.py",
+      "first_line": 151,
+      "last_line": 167,
+      "sha256": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445"
+    },
+    "native_ten_targets": {
+      "path": "code/dataset.py",
+      "first_line": 170,
+      "last_line": 184,
+      "sha256": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445"
+    },
+    "live_bcz_parser": {
+      "path": "code/dataset.py",
+      "first_line": 1762,
+      "last_line": 1869,
+      "sha256": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445"
+    },
+    "live_frame_encoding": {
+      "path": "code/dataset.py",
+      "first_line": 1086,
+      "last_line": 1090,
+      "sha256": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445"
+    },
+    "native_execution": {
+      "path": "code/libero_waypoint_execution.py",
+      "first_line": 61,
+      "last_line": 144,
+      "sha256": "5d183a6720f1a8303d4766b2cad139e24d33367a51b1675cf279cad18892acb8"
+    },
+    "policy_config_boundary": {
+      "path": "code/libero_project_policy.py",
+      "first_line": 20,
+      "last_line": 54,
+      "sha256": "1ea0657d200b55224b4a1231d8208cf4e0837a91187a9a7333b31a686501b4d8"
+    }
+  },
+  "target_crosswalk": {
+    "native_commands_diagnostic": {
+      "indices": "For image row t, use the ten native slots k=0..9 from that SAME row",
+      "position": "p_t + xyz_residual[t,k]",
+      "orientation": "Convert rotation vector a_t + axis_angle_residual[t,k] to an absolute quaternion; then encode relative pose",
+      "gripper": "1 - 2 * target_close[t,k] (binary local command)",
+      "reference": "All slots share p_t and a_t; residuals are not accumulated",
+      "physical_times": null,
+      "executable": false
+    },
+    "current_reached_with_preceding_command_v2": {
+      "indices": "For image row t, j=1..H uses observation row t+j",
+      "position": "p[t+j] encoded relative to fixed p[t]",
+      "orientation": "q[t+j] encoded relative to fixed q[t]",
+      "gripper": "1 - 2 * target_close[t+j-1,0]",
+      "input_command": "Strictly past first-slot commands, ending at row t-1; not sensed_close",
+      "native_pose_future_fields_used": false,
+      "pose_command_same_native_slot": false,
+      "pose_command_physical_time_association_verified": false,
+      "note": "A deliberate reached-state label policy; not evidence of an off-by-one bug or guaranteed physical synchronization",
+      "physical_times": null
+    },
+    "legacy_reached": {
+      "gripper": "Threshold future sensed_close at the target observation",
+      "kept_for_legacy_weights": true,
+      "not_official_binary_sensor_calibration": true
+    },
+    "frame_is_a_separate_axis": {
+      "tool": "Local displacement and right relative quaternion",
+      "source_cartesian": "Recorded-source displacement and left relative quaternion",
+      "changing_frame_does_not_restore_native_target_indices_or_time": true
+    }
+  },
+  "reused_evidence": {
+    "native_roundtrip": {
+      "checked_input_steps": 3332,
+      "checked_8d_targets": 33320,
+      "max_position_roundtrip_error_native_units": 3.199631864109483e-07,
+      "min_quaternion_abs_dot": 0.9999998807907104,
+      "gripper_mismatches": 0,
+      "continuous_input_roundtrip_max_error": 1.4901161193847656e-08,
+      "target_switches_between_waypoints": 1332,
+      "activation": "diagnostic_only_not_connected_to_training_or_control"
+    },
+    "coverage_limit": "23 selected historical training episodes, not the current 643-episode BC-Z candidate pool",
+    "missing_timestep_in_historical_episodes": 23,
+    "first_native_vs_next_observation_mean_difference_native_units": 0.036663572623032034,
+    "mean_difference_source": "Old audit multiplied raw Euclidean differences by 100 under the project meter convention; divided back here",
+    "difference_does_not_determine_delay_or_error": true,
+    "fit": {
+      "windows": 32,
+      "native_targets_per_window": 10,
+      "independent_episodes": 23,
+      "final_gripper_correct": 316,
+      "final_gripper_targets": 320,
+      "seen_training_only": true,
+      "timing": "unknown_not_executable"
+    },
+    "source_units_proven": false,
+    "actual_record_timing_proven": false
+  },
+  "execution_gap": {
+    "current_executor_requires_explicit_times_and_feedback": true,
+    "current_policy_checks_geometry_representation_and_horizon_length": true,
+    "checkpoint_target_semantic_id_and_per_source_times_bound_to_executor": false,
+    "evidence_strings_are_not_physical_calibration": true,
+    "issue": "Shape Hx8 and quaternion decoding do not distinguish native command slots from observed reached states or prove their deadlines",
+    "remedy_before_formal_execution": "Bind label family, reference pose, frame, per-source target-time rule and pose/gripper association to window manifest/checkpoint; executor must match this qualified contract"
+  },
+  "decision": {
+    "unique_root_cause_identified": false,
+    "explains_historical_bridge_only_generalization": false,
+    "bcz_native_sequence_fit_or_roundtrip_to_repeat": false,
+    "blind_adaptive_subsampling_to_add": false,
+    "new_training_ablation_admitted": false,
+    "keep_push_t_frontend_comparison_as_planned": true,
+    "next_bounded_item": "Extend the planned formal window/target protocol with label family and time/command-pose binding; qualify with source evidence before selecting target times or training",
+    "training_ready": false
+  },
+  "input_evidence_sha256": {
+    "results/bcz_native_sequence_contract_v1/summary.json": "f46ce043f8bc3ce7c4006c98c2837242ac0b0102ee1aca33545ff91e918d9dce",
+    "results/bcz_gripper_contract_v2/summary.json": "77baad0400b87a2059b14a6114048ada715eca8b40357ca436b5fcd1715ee81c",
+    "results/bcz_native_sequence_fit_v1/native_fit_contract.json": "c0ea02aa4be3f10d3d199da29f7b541b1582c2497de0a8dbce18f710dd8b6180",
+    "results/bcz_native_sequence_fit_v1/history.json": "975291ae57b555bfd52b9ebe756f4b7679e15739e833e437c8fbdfc2f176e5a7",
+    "reports/oxe_units_time_evidence_20261020/report.json": "30d5b5c109b78525b09f49503ca8a08a6ffe646b4aaa6ca058c17d9f84538702",
+    "reports/oxe_bucket_release_evidence_20261020/verification.json": "64d23c77c55dea584578b038bb400a9d08434eaf574b87eaa07cab8509c0d185",
+    "training_cache/oxe_core/bc_z/features.json": "298f944d5a3322b5d9eae86f3f88406c4146e9600fe3f097b97ed7413514ef4b",
+    "training_cache/oxe_core/bc_z/dataset_info.json": "2dd37a932985e555619a55c1985f17cfcc8a4f3da0ac67430451f79d629a03b9"
+  },
+  "protected_source_sha256": {
+    "code/dataset.py": "aa862944167fdf6e38e2711f92e2b9fbf454f79a5c633b06bf0830707ed91445",
+    "code/models.py": "36ebcea308786eb8bd0ea1df97655d4ca8aaa8bd25b810c2aa17e33fa7c69083",
+    "code/adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "code/diffusion_decoder.py": "bf0991b3c4c051986d271346434e2d6b18cd88faeba7f71cc9a0b87f8d7f504c",
+    "code/train.py": "e4baddb33efec7ef864f6be5adfab3b7825f5f80aecd29379b892240b9fb0833",
+    "code/step_training_runner.py": "37916a469126800d8b543e779e616f8551421c6514ae57899a0559497778f9aa",
+    "code/libero_project_policy.py": "1ea0657d200b55224b4a1231d8208cf4e0837a91187a9a7333b31a686501b4d8",
+    "code/libero_waypoint_execution.py": "5d183a6720f1a8303d4766b2cad139e24d33367a51b1675cf279cad18892acb8",
+    "code/libero_action_interface.py": "6302101e77efb3d3c8ac76d5e2086fe86f72e0b12e625e59ffe414d69d9b8c50",
+    "code/oxe_source_semantics.py": "7d27c87c6301f00ab352b3aceefadb4fd7c4f60715412306a204f84e01552981"
+  },
+  "raw_tfrecords_read": false,
+  "model_loaded": false,
+  "new_jobs_submitted": false,
+  "new_generalization_verdict": null,
+  "protected_sources_unchanged": true,
+  "script_sha256": "70d099956645275c9d81ced6f852d94620c04b8beb5ca88aed80f4de59696109"
+}

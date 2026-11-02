@@ -1,0 +1,20 @@
+{
+  "repair_contract_sha256": "0b21623cb841c1ed32a47e8a296d97fa7edb9fd4395999576b63e635be59c43c",
+  "repair_runner_sha256": "a2a9ee50ec57237de1fdcb8a4543484de2e09d21f100e42ec89693e52c156f90",
+  "failed_job": "208926",
+  "failed_job_no_new_training_updates_verified": true,
+  "reused_preflight_job": "208897",
+  "original_preflight_validator_passed": true,
+  "validator_absolute_path": "/projects/_ssd/Zeroshot/bridge_fixed_context_v1/validate_preflight.py",
+  "original_files_sha256": {
+    "run_fixed_context.py": "e5c52661baa0c2dc1dc390681bde4399706f301979c29a38d760bb9a1ad4d714",
+    "fixed_hooks.py": "5635418bf02f470a5556b216a9d9916157b26d75328d61724b089b5cf1a83cd3",
+    "validate_preflight.py": "2a06b82afbe035d64a31e0ce239bdc1eeeed530f2604c737a45c0fbedcdc318f",
+    "protocol.json": "ff909f9eae31c92c11ef1ab5fd3c7167215ed03680d0a8997639879fa2635d6c",
+    "fit.sh": "164b4f05af3c63829ffef3219a3304a84989652f8e45486701889f6867b79c53"
+  },
+  "experiment_protocol_unchanged": true,
+  "training_and_evaluation_functions_unchanged": true,
+  "execution_checks_passed_before_formal": false,
+  "generalization_verdict": false
+}

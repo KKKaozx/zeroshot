@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-29",
+  "status": "prepared_cpu_checked_not_submitted",
+  "package": {
+    "package": "D:\\ntu_related\\dissertation\\Zero_shot\\cluster_packages\\oxe_competence_pool_v1.zip",
+    "bytes": 286502,
+    "sha256": "e59faf350536d6baeefbd1b6c90b4e2fc2090d0efc7ab86ff243bd9924a331e3",
+    "members": 13,
+    "pool_windows": 512,
+    "new_updates": 4096,
+    "control_retrained": false,
+    "expected_minutes_excluding_queue_startup": 26,
+    "job_cap_minutes": 35,
+    "python_sources_compiled": true,
+    "shell_validation": "Static headers/LF only; no local Bash execution",
+    "weights_images_or_data_payloads_included": false,
+    "real_cuda_execution": false,
+    "training_submitted": false
+  },
+  "new_tests": 5,
+  "reused_engine_loader_regression_tests": 8,
+  "total_tests_passed": 13,
+  "commands": [
+    "training_cache/libero_native_env_v1/Scripts/python.exe -B tests/test_oxe_competence_pool.py",
+    "training_cache/libero_native_env_v1/Scripts/python.exe -B tests/test_oxe_sampling_pair.py",
+    "training_cache/libero_native_env_v1/Scripts/python.exe -B tests/test_oxe_fixed8_lr_repair.py"
+  ],
+  "observed_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "coverage": [
+    "Actual512training rows, distinct groups, original32anchors, validation exclusion, source slots and numeric masks",
+    "Actual complete-control mmap metadata verifier and CPU check-only admission with4096row synthetic metadata fixture; no CUDA or model construction in admission",
+    "Actual single-arm driver, original120evaluation preparation, native losses/100DDPM sampler and saved endpoint verifier using CPU toy encoders/decoder and4updates",
+    "Zero-optimizer first original-control loss/gradient/noise/RNG replay; reject changed control first loss before stepping",
+    "Exact committed half-resume core/port/three-group Adam/RNG/primitive-noise equality versus uninterrupted new arm; reject different pool contract",
+    "Completed control checkpoint unchanged across candidate and completed-endpoint resume; corrupt prediction receipt rejected",
+    "Real source masks and training-anchor metrics; LT XY only, static-tie fails, perfect anchor amplitude/direction checks",
+    "Prior8regressions exercise actual qualified source-loader repair and saved training engine, all4096LR/source-order metadata, real512CPU training fixture"
+  ],
+  "fixture_limits": "CPU toy models,4step new integration;4096row control metadata is synthetic, not4096model updates; no real DINO/CUDA qualification",
+  "test_file_sha256": "2d14b3abf30c748b48b70d81707111195e62d89dd6a21a1c7354030885f5a4ff",
+  "cluster_actual_source_control_cpu_admission_executed": false,
+  "cluster_exact_old_control_loss_gradient_replay_executed": false,
+  "cluster_all4096_actual_stochastic_matching_executed": false,
+  "training_submitted": false,
+  "old_models_or_closed_branches_modified": false,
+  "automatic_following_action": false
+}

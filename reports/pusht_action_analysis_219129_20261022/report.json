@@ -1,0 +1,1269 @@
+{
+  "available_small_artifacts_verified_locally": true,
+  "original_small_output_verifier_passed_locally": {
+    "output_verified": true,
+    "action_errors_pixels": {
+      "native212158": {
+        "train": {
+          "full16": 6.4711496776935835,
+          "executed8": 6.201808273101118
+        },
+        "unseen_demo": {
+          "full16": 32.45595458098976,
+          "executed8": 27.927998201146757
+        }
+      },
+      "project215999": {
+        "train": {
+          "full16": 5.8052411558724115,
+          "executed8": 5.3917289562839485
+        },
+        "unseen_demo": {
+          "full16": 45.67071411817148,
+          "executed8": 39.507990325244656
+        }
+      },
+      "no_motion": {
+        "train": {
+          "full16": 70.61386837635587,
+          "executed8": 50.85472277651172
+        },
+        "unseen_demo": {
+          "full16": 64.46034558328708,
+          "executed8": 47.75822908370478
+        }
+      },
+      "train_mean": {
+        "train": {
+          "full16": 120.4486227096046,
+          "executed8": 121.78975338974658
+        },
+        "unseen_demo": {
+          "full16": 125.223926056458,
+          "executed8": 126.56899282810534
+        }
+      }
+    },
+    "scope": "Expert-window action diagnostic, reused episode roles, not policy improvement or task success",
+    "training_updates": 0,
+    "policy_improvement_verdict": null,
+    "automatic_following_action": false
+  },
+  "archive_sha256": "8d0125dc27a55cdfce149a410a60caf68baaae0c9487ed4caec01fe5ab9ea5d6",
+  "input_sha256": {
+    "inputs.npz": "f326a399b567fe298367d43cdc19481f0cfb8fe1f947cc60d3d2df3d5f684db1",
+    "native212158_predictions.npz": "6af8564e3ad9a8f10225113bb2805d9b55b8f50f086bead86eff3adb5c485239",
+    "project215999_predictions.npz": "e7f07957e9e282ff1cc0f14f0d727173b2eee65f58f064cbba84d7c5621cf19b",
+    "report.json": "d7a49ce1ccc75e0eca5e4446b3650e36079cb0c562ea06ce7a1d35910171e529",
+    "window_manifest.json": "88349ce07d4718ecd955cc6c4f0c27bf69b205c9cea22b7148a3c8bbcc20780d"
+  },
+  "paired_action_differences": {
+    "train": {
+      "full16": {
+        "mean_difference": -0.6659085218211721,
+        "episode_bootstrap95": [
+          -1.2249587802648325,
+          -0.11365821909715916
+        ],
+        "first_better_second_worse_equal": [
+          11,
+          5,
+          0
+        ],
+        "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference",
+        "difference": "project minus native; negative favors project",
+        "native_mean": 6.4711496776935835,
+        "project_mean": 5.8052411558724115,
+        "static_mean": 70.61386837635587,
+        "project_better_than_static_episode_count": 16,
+        "native_better_than_static_episode_count": 16,
+        "per_episode": [
+          {
+            "episode_id": 16,
+            "native": 9.015218026656992,
+            "project": 6.5473459114193115,
+            "static": 133.96900552541283,
+            "difference": -2.4678721152376806
+          },
+          {
+            "episode_id": 27,
+            "native": 3.333700779692684,
+            "project": 3.138681434537333,
+            "static": 41.35900643683395,
+            "difference": -0.19501934515535124
+          },
+          {
+            "episode_id": 42,
+            "native": 5.350947490296179,
+            "project": 5.6092608717407995,
+            "static": 48.282714969964104,
+            "difference": 0.2583133814446201
+          },
+          {
+            "episode_id": 56,
+            "native": 4.504932793033481,
+            "project": 4.031047169709591,
+            "static": 37.699572596576004,
+            "difference": -0.4738856233238895
+          },
+          {
+            "episode_id": 65,
+            "native": 8.089668544842795,
+            "project": 6.8911604094120165,
+            "static": 90.49887248642554,
+            "difference": -1.198508135430778
+          },
+          {
+            "episode_id": 81,
+            "native": 9.819886302682358,
+            "project": 8.40285958745471,
+            "static": 48.19118283391068,
+            "difference": -1.4170267152276477
+          },
+          {
+            "episode_id": 84,
+            "native": 3.1336779831229395,
+            "project": 4.3242495420908,
+            "static": 76.51366248012897,
+            "difference": 1.1905715589678603
+          },
+          {
+            "episode_id": 128,
+            "native": 9.664010673762618,
+            "project": 8.546942588113795,
+            "static": 112.55982202432736,
+            "difference": -1.1170680856488229
+          },
+          {
+            "episode_id": 131,
+            "native": 3.8745458424116737,
+            "project": 4.197936896097042,
+            "static": 86.08354359374385,
+            "difference": 0.3233910536853686
+          },
+          {
+            "episode_id": 156,
+            "native": 6.729495902832285,
+            "project": 5.976138108789233,
+            "static": 64.06139348323295,
+            "difference": -0.753357794043052
+          },
+          {
+            "episode_id": 166,
+            "native": 10.8266705031984,
+            "project": 8.068584994873063,
+            "static": 96.01355059551418,
+            "difference": -2.758085508325337
+          },
+          {
+            "episode_id": 170,
+            "native": 5.263131615760016,
+            "project": 4.792577382028362,
+            "static": 24.922243511088777,
+            "difference": -0.4705542337316535
+          },
+          {
+            "episode_id": 174,
+            "native": 5.092559524408044,
+            "project": 4.217978296566467,
+            "static": 32.66529783119956,
+            "difference": -0.8745812278415768
+          },
+          {
+            "episode_id": 179,
+            "native": 7.229491404687835,
+            "project": 5.06798250380375,
+            "static": 60.09923981303112,
+            "difference": -2.161508900884085
+          },
+          {
+            "episode_id": 184,
+            "native": 4.967472029657831,
+            "project": 5.542256674015925,
+            "static": 103.74794697210389,
+            "difference": 0.5747846443580942
+          },
+          {
+            "episode_id": 194,
+            "native": 6.6429854260512045,
+            "project": 7.528856123306381,
+            "static": 73.15483886820013,
+            "difference": 0.8858706972551769
+          }
+        ],
+        "leave_one_episode_out_difference_range": [
+          -0.789673860540441,
+          -0.5264300560542278
+        ]
+      },
+      "executed8": {
+        "mean_difference": -0.8100793168171705,
+        "episode_bootstrap95": [
+          -1.5532773536719833,
+          -0.13974045335075755
+        ],
+        "first_better_second_worse_equal": [
+          12,
+          4,
+          0
+        ],
+        "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference",
+        "difference": "project minus native; negative favors project",
+        "native_mean": 6.201808273101118,
+        "project_mean": 5.3917289562839485,
+        "static_mean": 50.85472277651172,
+        "project_better_than_static_episode_count": 16,
+        "native_better_than_static_episode_count": 16,
+        "per_episode": [
+          {
+            "episode_id": 16,
+            "native": 9.490319734533186,
+            "project": 7.037337066442822,
+            "static": 96.65525886410609,
+            "difference": -2.452982668090364
+          },
+          {
+            "episode_id": 27,
+            "native": 2.855065373163537,
+            "project": 2.557420592279996,
+            "static": 28.909738480892887,
+            "difference": -0.29764478088354096
+          },
+          {
+            "episode_id": 42,
+            "native": 4.4972235242339424,
+            "project": 5.271610727384717,
+            "static": 32.458155075652826,
+            "difference": 0.7743872031507744
+          },
+          {
+            "episode_id": 56,
+            "native": 3.815060302193662,
+            "project": 3.6122731792404625,
+            "static": 26.54289564151345,
+            "difference": -0.20278712295319945
+          },
+          {
+            "episode_id": 65,
+            "native": 8.342300612583946,
+            "project": 6.553272769972827,
+            "static": 72.91904112599741,
+            "difference": -1.7890278426111195
+          },
+          {
+            "episode_id": 81,
+            "native": 8.741639259529581,
+            "project": 7.747859971073573,
+            "static": 25.120799821792733,
+            "difference": -0.9937792884560084
+          },
+          {
+            "episode_id": 84,
+            "native": 3.7439928488335994,
+            "project": 4.4534511885445305,
+            "static": 65.02061618948684,
+            "difference": 0.7094583397109311
+          },
+          {
+            "episode_id": 128,
+            "native": 9.844368132873623,
+            "project": 8.257063627862685,
+            "static": 72.2542682964258,
+            "difference": -1.5873045050109376
+          },
+          {
+            "episode_id": 131,
+            "native": 3.1503784556495456,
+            "project": 3.1377399178025853,
+            "static": 71.51040537184409,
+            "difference": -0.01263853784696023
+          },
+          {
+            "episode_id": 156,
+            "native": 5.213013748502524,
+            "project": 4.132531564142562,
+            "static": 39.974022609571364,
+            "difference": -1.080482184359962
+          },
+          {
+            "episode_id": 166,
+            "native": 12.369295020628883,
+            "project": 7.62210723691584,
+            "static": 80.72710280404883,
+            "difference": -4.747187783713043
+          },
+          {
+            "episode_id": 170,
+            "native": 5.0052306917998,
+            "project": 4.864187715034044,
+            "static": 19.628342707186004,
+            "difference": -0.14104297676575595
+          },
+          {
+            "episode_id": 174,
+            "native": 3.6179210104748205,
+            "project": 3.210742164933345,
+            "static": 20.346455313292324,
+            "difference": -0.40717884554147554
+          },
+          {
+            "episode_id": 179,
+            "native": 6.704944901091916,
+            "project": 4.5937345210287495,
+            "static": 33.94818729231682,
+            "difference": -2.1112103800631665
+          },
+          {
+            "episode_id": 184,
+            "native": 4.928043066676633,
+            "project": 5.064498664013133,
+            "static": 78.43307725769863,
+            "difference": 0.13645559733650003
+          },
+          {
+            "episode_id": 194,
+            "native": 6.910135686848706,
+            "project": 8.151832393871306,
+            "static": 49.22719757236146,
+            "difference": 1.2416967070225997
+          }
+        ],
+        "leave_one_episode_out_difference_range": [
+          -0.9468643850731552,
+          -0.5476054190241123
+        ]
+      }
+    },
+    "unseen_demo": {
+      "full16": {
+        "mean_difference": 13.214759537181724,
+        "episode_bootstrap95": [
+          6.368908487215803,
+          20.77037265425138
+        ],
+        "first_better_second_worse_equal": [
+          2,
+          14,
+          0
+        ],
+        "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference",
+        "difference": "project minus native; negative favors project",
+        "native_mean": 32.45595458098976,
+        "project_mean": 45.67071411817148,
+        "static_mean": 64.46034558328708,
+        "project_better_than_static_episode_count": 15,
+        "native_better_than_static_episode_count": 15,
+        "per_episode": [
+          {
+            "episode_id": 15,
+            "native": 41.99026557937456,
+            "project": 37.96475850939627,
+            "static": 78.84567933687552,
+            "difference": -4.025507069978289
+          },
+          {
+            "episode_id": 23,
+            "native": 29.338977718923754,
+            "project": 45.5176399569141,
+            "static": 62.86168444825624,
+            "difference": 16.17866223799035
+          },
+          {
+            "episode_id": 39,
+            "native": 19.186435518598735,
+            "project": 23.75127243871651,
+            "static": 40.73743405121963,
+            "difference": 4.564836920117774
+          },
+          {
+            "episode_id": 45,
+            "native": 25.032620217815506,
+            "project": 32.86442894230882,
+            "static": 71.15086342536702,
+            "difference": 7.831808724493314
+          },
+          {
+            "episode_id": 62,
+            "native": 12.316354687735242,
+            "project": 40.45695568180022,
+            "static": 52.144333059017,
+            "difference": 28.140600994064975
+          },
+          {
+            "episode_id": 64,
+            "native": 50.4509180435636,
+            "project": 38.25293862384839,
+            "static": 45.04255918714087,
+            "difference": -12.19797941971521
+          },
+          {
+            "episode_id": 87,
+            "native": 19.19698914629989,
+            "project": 26.545389904983228,
+            "static": 37.14684982580836,
+            "difference": 7.348400758683336
+          },
+          {
+            "episode_id": 88,
+            "native": 58.79465269476077,
+            "project": 61.46556062881781,
+            "static": 80.5640559784178,
+            "difference": 2.670907934057041
+          },
+          {
+            "episode_id": 92,
+            "native": 29.100094914378275,
+            "project": 60.89536773644397,
+            "static": 64.37868539115246,
+            "difference": 31.795272822065698
+          },
+          {
+            "episode_id": 107,
+            "native": 55.1998018121533,
+            "project": 64.74499369028312,
+            "static": 80.41208906110404,
+            "difference": 9.545191878129828
+          },
+          {
+            "episode_id": 127,
+            "native": 33.31185647275967,
+            "project": 54.3807094375836,
+            "static": 68.20055318316189,
+            "difference": 21.068852964823925
+          },
+          {
+            "episode_id": 152,
+            "native": 20.386900046491455,
+            "project": 22.257776739541065,
+            "static": 60.08810831585633,
+            "difference": 1.8708766930496097
+          },
+          {
+            "episode_id": 164,
+            "native": 52.50274712922689,
+            "project": 66.02294665901132,
+            "static": 92.99317857248866,
+            "difference": 13.520199529784435
+          },
+          {
+            "episode_id": 180,
+            "native": 25.931276485190583,
+            "project": 49.726602017418955,
+            "static": 52.84075372005036,
+            "difference": 23.79532553222837
+          },
+          {
+            "episode_id": 204,
+            "native": 14.944913168111857,
+            "project": 23.787090024515965,
+            "static": 70.64684493290406,
+            "difference": 8.842176856404109
+          },
+          {
+            "episode_id": 205,
+            "native": 31.61046966045208,
+            "project": 82.09699489916039,
+            "static": 73.31185684377289,
+            "difference": 50.48652523870831
+          }
+        ],
+        "leave_one_episode_out_difference_range": [
+          10.72997515707995,
+          14.908942134308184
+        ]
+      },
+      "executed8": {
+        "mean_difference": 11.579992124097902,
+        "episode_bootstrap95": [
+          5.236083281305276,
+          17.894500002944728
+        ],
+        "first_better_second_worse_equal": [
+          2,
+          14,
+          0
+        ],
+        "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference",
+        "difference": "project minus native; negative favors project",
+        "native_mean": 27.927998201146757,
+        "project_mean": 39.507990325244656,
+        "static_mean": 47.75822908370478,
+        "project_better_than_static_episode_count": 11,
+        "native_better_than_static_episode_count": 15,
+        "per_episode": [
+          {
+            "episode_id": 15,
+            "native": 22.676833482444884,
+            "project": 21.690426899632666,
+            "static": 48.090763240645586,
+            "difference": -0.9864065828122186
+          },
+          {
+            "episode_id": 23,
+            "native": 28.97440923482978,
+            "project": 38.13420437799962,
+            "static": 48.36007954175095,
+            "difference": 9.159795143169845
+          },
+          {
+            "episode_id": 39,
+            "native": 21.52006390077598,
+            "project": 25.376856469615646,
+            "static": 36.34274755146716,
+            "difference": 3.8567925688396656
+          },
+          {
+            "episode_id": 45,
+            "native": 8.008472190210185,
+            "project": 19.56497222445537,
+            "static": 54.774353180589515,
+            "difference": 11.556500034245186
+          },
+          {
+            "episode_id": 62,
+            "native": 13.223456506315733,
+            "project": 27.56247827646346,
+            "static": 44.82312827562994,
+            "difference": 14.339021770147726
+          },
+          {
+            "episode_id": 64,
+            "native": 49.995577256113286,
+            "project": 31.480646089291543,
+            "static": 24.601475862888325,
+            "difference": -18.514931166821743
+          },
+          {
+            "episode_id": 87,
+            "native": 11.40001049987131,
+            "project": 20.094013851100144,
+            "static": 26.376921949546166,
+            "difference": 8.694003351228833
+          },
+          {
+            "episode_id": 88,
+            "native": 36.900506963290894,
+            "project": 62.05124900921797,
+            "static": 58.44908683919249,
+            "difference": 25.150742045927075
+          },
+          {
+            "episode_id": 92,
+            "native": 24.96404024128187,
+            "project": 64.68516876223539,
+            "static": 56.13520927999399,
+            "difference": 39.72112852095352
+          },
+          {
+            "episode_id": 107,
+            "native": 63.706305278944086,
+            "project": 82.59906737360637,
+            "static": 76.85755694540339,
+            "difference": 18.892762094662288
+          },
+          {
+            "episode_id": 127,
+            "native": 37.76360140106645,
+            "project": 46.918609006945985,
+            "static": 49.99894385966793,
+            "difference": 9.155007605879533
+          },
+          {
+            "episode_id": 152,
+            "native": 17.559796433071025,
+            "project": 20.66113523029376,
+            "static": 40.37248526673646,
+            "difference": 3.101338797222734
+          },
+          {
+            "episode_id": 164,
+            "native": 46.10315213834859,
+            "project": 51.03784573230085,
+            "static": 59.12839088853626,
+            "difference": 4.934693593952261
+          },
+          {
+            "episode_id": 180,
+            "native": 28.968136622061095,
+            "project": 59.28277242359424,
+            "static": 49.31239316502615,
+            "difference": 30.314635801533143
+          },
+          {
+            "episode_id": 204,
+            "native": 9.944836225894086,
+            "project": 18.398435420956307,
+            "static": 46.122611743748,
+            "difference": 8.453599195062221
+          },
+          {
+            "episode_id": 205,
+            "native": 25.138772843828768,
+            "project": 42.58996405620513,
+            "static": 44.385517748454085,
+            "difference": 17.451191212376365
+          }
+        ],
+        "leave_one_episode_out_difference_range": [
+          9.703916364307528,
+          13.586320343492543
+        ]
+      }
+    }
+  },
+  "per_sampling_seed_executed8": {
+    "train": {
+      "native212158": [
+        5.211916311143943,
+        7.1917002350582955
+      ],
+      "project215999": [
+        4.956800832915801,
+        5.826657079652096
+      ],
+      "project_minus_native": [
+        -0.2551154782281424,
+        -1.3650431554062
+      ]
+    },
+    "unseen_demo": {
+      "native212158": [
+        27.708016663647683,
+        28.14797973864582
+      ],
+      "project215999": [
+        40.004175686440576,
+        39.011804964048736
+      ],
+      "project_minus_native": [
+        12.296159022792892,
+        10.863825225402916
+      ]
+    }
+  },
+  "auxiliary_epsilon": {
+    "train": [
+      {
+        "t": 0,
+        "native_mse": 0.1568050980567932,
+        "project_mse": 0.1552487015724182,
+        "project_to_native_ratio": 0.9900743365287781,
+        "paired": {
+          "mean_difference": -0.001556403934955597,
+          "episode_bootstrap95": [
+            -0.012148164631798863,
+            0.007285165973007673
+          ],
+          "first_better_second_worse_equal": [
+            9,
+            7,
+            0
+          ],
+          "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference"
+        },
+        "per_episode": [
+          {
+            "episode_id": 16,
+            "native_mse": 0.2187378704547882,
+            "project_mse": 0.2317221313714981
+          },
+          {
+            "episode_id": 27,
+            "native_mse": 0.17011429369449615,
+            "project_mse": 0.15066125988960266
+          },
+          {
+            "episode_id": 42,
+            "native_mse": 0.23938114941120148,
+            "project_mse": 0.17947980761528015
+          },
+          {
+            "episode_id": 56,
+            "native_mse": 0.14431613683700562,
+            "project_mse": 0.1372990906238556
+          },
+          {
+            "episode_id": 65,
+            "native_mse": 0.20034410059452057,
+            "project_mse": 0.19846132397651672
+          },
+          {
+            "episode_id": 81,
+            "native_mse": 0.2046946883201599,
+            "project_mse": 0.19459758698940277
+          },
+          {
+            "episode_id": 84,
+            "native_mse": 0.09760954976081848,
+            "project_mse": 0.11231599748134613
+          },
+          {
+            "episode_id": 128,
+            "native_mse": 0.23319277167320251,
+            "project_mse": 0.2483118772506714
+          },
+          {
+            "episode_id": 131,
+            "native_mse": 0.105109304189682,
+            "project_mse": 0.10323765873908997
+          },
+          {
+            "episode_id": 156,
+            "native_mse": 0.17756497859954834,
+            "project_mse": 0.19813597202301025
+          },
+          {
+            "episode_id": 166,
+            "native_mse": 0.15743282437324524,
+            "project_mse": 0.1687658727169037
+          },
+          {
+            "episode_id": 170,
+            "native_mse": 0.1657375991344452,
+            "project_mse": 0.14230898022651672
+          },
+          {
+            "episode_id": 174,
+            "native_mse": 0.07556866109371185,
+            "project_mse": 0.09204017370939255
+          },
+          {
+            "episode_id": 179,
+            "native_mse": 0.10861144959926605,
+            "project_mse": 0.10269799083471298
+          },
+          {
+            "episode_id": 184,
+            "native_mse": 0.11895884573459625,
+            "project_mse": 0.11764585971832275
+          },
+          {
+            "episode_id": 194,
+            "native_mse": 0.09150749444961548,
+            "project_mse": 0.10629767179489136
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "native_mse": 0.0005511763738468289,
+        "project_mse": 0.0002689713437575847,
+        "project_to_native_ratio": 0.48799505829811096,
+        "paired": {
+          "mean_difference": -0.0002822050405484333,
+          "episode_bootstrap95": [
+            -0.0004882101787529791,
+            -0.00011339424262359913
+          ],
+          "first_better_second_worse_equal": [
+            14,
+            2,
+            0
+          ],
+          "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference"
+        },
+        "per_episode": [
+          {
+            "episode_id": 16,
+            "native_mse": 0.0015192918945103884,
+            "project_mse": 0.0005290268454700708
+          },
+          {
+            "episode_id": 27,
+            "native_mse": 0.000335822522174567,
+            "project_mse": 0.00021219972404651344
+          },
+          {
+            "episode_id": 42,
+            "native_mse": 0.0005221091560088098,
+            "project_mse": 0.00019910873379558325
+          },
+          {
+            "episode_id": 56,
+            "native_mse": 0.00019148920546285808,
+            "project_mse": 0.00012810515181627125
+          },
+          {
+            "episode_id": 65,
+            "native_mse": 0.0008445899002254009,
+            "project_mse": 0.00028397500864230096
+          },
+          {
+            "episode_id": 81,
+            "native_mse": 0.00022415276907850057,
+            "project_mse": 0.0003817130927927792
+          },
+          {
+            "episode_id": 84,
+            "native_mse": 0.00011911128967767581,
+            "project_mse": 0.00011054961942136288
+          },
+          {
+            "episode_id": 128,
+            "native_mse": 0.0009069372899830341,
+            "project_mse": 0.0007211138145066798
+          },
+          {
+            "episode_id": 131,
+            "native_mse": 0.0001963944232556969,
+            "project_mse": 0.00019728540792129934
+          },
+          {
+            "episode_id": 156,
+            "native_mse": 0.0006971273687668145,
+            "project_mse": 0.0003953774576075375
+          },
+          {
+            "episode_id": 166,
+            "native_mse": 0.0016502630896866322,
+            "project_mse": 0.00028215552447363734
+          },
+          {
+            "episode_id": 170,
+            "native_mse": 0.0002973034279420972,
+            "project_mse": 7.871183333918452e-05
+          },
+          {
+            "episode_id": 174,
+            "native_mse": 0.0001769687223713845,
+            "project_mse": 9.735852654557675e-05
+          },
+          {
+            "episode_id": 179,
+            "native_mse": 0.0006101322360336781,
+            "project_mse": 0.000222289701923728
+          },
+          {
+            "episode_id": 184,
+            "native_mse": 0.0003743754932656884,
+            "project_mse": 0.00037063966738060117
+          },
+          {
+            "episode_id": 194,
+            "native_mse": 0.00015275341866072267,
+            "project_mse": 9.393136133439839e-05
+          }
+        ]
+      },
+      {
+        "t": 99,
+        "native_mse": 4.390254252939485e-05,
+        "project_mse": 5.0849477702286094e-05,
+        "project_to_native_ratio": 1.1582354307174683,
+        "paired": {
+          "mean_difference": 6.9469363097596215e-06,
+          "episode_bootstrap95": [
+            -2.232717861261335e-06,
+            1.8365917281926154e-05
+          ],
+          "first_better_second_worse_equal": [
+            7,
+            9,
+            0
+          ],
+          "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference"
+        },
+        "per_episode": [
+          {
+            "episode_id": 16,
+            "native_mse": 6.878802378196269e-05,
+            "project_mse": 4.26318401878234e-05
+          },
+          {
+            "episode_id": 27,
+            "native_mse": 3.203973392373882e-05,
+            "project_mse": 2.9192306101322174e-05
+          },
+          {
+            "episode_id": 42,
+            "native_mse": 7.992085011210293e-05,
+            "project_mse": 9.726480493554845e-05
+          },
+          {
+            "episode_id": 56,
+            "native_mse": 3.087093500653282e-05,
+            "project_mse": 2.1003881556680426e-05
+          },
+          {
+            "episode_id": 65,
+            "native_mse": 4.930875729769468e-05,
+            "project_mse": 4.780359085998498e-05
+          },
+          {
+            "episode_id": 81,
+            "native_mse": 5.628800863632932e-05,
+            "project_mse": 7.113724132068455e-05
+          },
+          {
+            "episode_id": 84,
+            "native_mse": 2.9626753530465066e-05,
+            "project_mse": 3.948842640966177e-05
+          },
+          {
+            "episode_id": 128,
+            "native_mse": 4.473175067687407e-05,
+            "project_mse": 0.00011949267354793847
+          },
+          {
+            "episode_id": 131,
+            "native_mse": 2.1916552213951945e-05,
+            "project_mse": 2.9716906283283606e-05
+          },
+          {
+            "episode_id": 156,
+            "native_mse": 7.944535900605842e-05,
+            "project_mse": 9.52702685026452e-05
+          },
+          {
+            "episode_id": 166,
+            "native_mse": 2.9913877369835973e-05,
+            "project_mse": 3.522057886584662e-05
+          },
+          {
+            "episode_id": 170,
+            "native_mse": 2.514868538128212e-05,
+            "project_mse": 1.8913680833065882e-05
+          },
+          {
+            "episode_id": 174,
+            "native_mse": 2.228675839432981e-05,
+            "project_mse": 2.1575660866801627e-05
+          },
+          {
+            "episode_id": 179,
+            "native_mse": 2.6849767891690135e-05,
+            "project_mse": 3.3289692510152236e-05
+          },
+          {
+            "episode_id": 184,
+            "native_mse": 7.295752584468573e-05,
+            "project_mse": 6.060613304725848e-05
+          },
+          {
+            "episode_id": 194,
+            "native_mse": 3.234734322177246e-05,
+            "project_mse": 5.098397741676308e-05
+          }
+        ]
+      }
+    ],
+    "unseen_demo": [
+      {
+        "t": 0,
+        "native_mse": 1.1408748626708984,
+        "project_mse": 1.7452888488769531,
+        "project_to_native_ratio": 1.5297811031341553,
+        "paired": {
+          "mean_difference": 0.604414027184248,
+          "episode_bootstrap95": [
+            0.39156497893854975,
+            0.8685258978046476
+          ],
+          "first_better_second_worse_equal": [
+            1,
+            15,
+            0
+          ],
+          "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference"
+        },
+        "per_episode": [
+          {
+            "episode_id": 15,
+            "native_mse": 2.146080255508423,
+            "project_mse": 2.8772172927856445
+          },
+          {
+            "episode_id": 23,
+            "native_mse": 0.9966698288917542,
+            "project_mse": 1.737343192100525
+          },
+          {
+            "episode_id": 39,
+            "native_mse": 0.4520060420036316,
+            "project_mse": 0.7473195791244507
+          },
+          {
+            "episode_id": 45,
+            "native_mse": 1.2943978309631348,
+            "project_mse": 1.9594006538391113
+          },
+          {
+            "episode_id": 62,
+            "native_mse": 0.32364585995674133,
+            "project_mse": 1.1505886316299438
+          },
+          {
+            "episode_id": 64,
+            "native_mse": 0.7588520050048828,
+            "project_mse": 0.9573653340339661
+          },
+          {
+            "episode_id": 87,
+            "native_mse": 1.1604104042053223,
+            "project_mse": 1.4940191507339478
+          },
+          {
+            "episode_id": 88,
+            "native_mse": 2.5393857955932617,
+            "project_mse": 2.530949831008911
+          },
+          {
+            "episode_id": 92,
+            "native_mse": 0.5212641954421997,
+            "project_mse": 1.4230329990386963
+          },
+          {
+            "episode_id": 107,
+            "native_mse": 1.5733510255813599,
+            "project_mse": 1.9156421422958374
+          },
+          {
+            "episode_id": 127,
+            "native_mse": 0.724090576171875,
+            "project_mse": 0.8588136434555054
+          },
+          {
+            "episode_id": 152,
+            "native_mse": 1.1504995822906494,
+            "project_mse": 1.3827900886535645
+          },
+          {
+            "episode_id": 164,
+            "native_mse": 1.802765130996704,
+            "project_mse": 2.294311285018921
+          },
+          {
+            "episode_id": 180,
+            "native_mse": 0.755484402179718,
+            "project_mse": 1.858421802520752
+          },
+          {
+            "episode_id": 204,
+            "native_mse": 0.6025098562240601,
+            "project_mse": 1.1595144271850586
+          },
+          {
+            "episode_id": 205,
+            "native_mse": 1.4525843858718872,
+            "project_mse": 3.5778915882110596
+          }
+        ]
+      },
+      {
+        "t": 49,
+        "native_mse": 0.014384427107870579,
+        "project_mse": 0.02881382778286934,
+        "project_to_native_ratio": 2.003126621246338,
+        "paired": {
+          "mean_difference": 0.014429400762310252,
+          "episode_bootstrap95": [
+            0.004711698007304222,
+            0.027488389852078365
+          ],
+          "first_better_second_worse_equal": [
+            3,
+            13,
+            0
+          ],
+          "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference"
+        },
+        "per_episode": [
+          {
+            "episode_id": 15,
+            "native_mse": 0.02888418734073639,
+            "project_mse": 0.02346070483326912
+          },
+          {
+            "episode_id": 23,
+            "native_mse": 0.00992421992123127,
+            "project_mse": 0.02833499386906624
+          },
+          {
+            "episode_id": 39,
+            "native_mse": 0.004697240423411131,
+            "project_mse": 0.007745758164674044
+          },
+          {
+            "episode_id": 45,
+            "native_mse": 0.014071150682866573,
+            "project_mse": 0.016400961205363274
+          },
+          {
+            "episode_id": 62,
+            "native_mse": 0.002003239467740059,
+            "project_mse": 0.01592014543712139
+          },
+          {
+            "episode_id": 64,
+            "native_mse": 0.03303524851799011,
+            "project_mse": 0.01863565482199192
+          },
+          {
+            "episode_id": 87,
+            "native_mse": 0.005021074321120977,
+            "project_mse": 0.008376195095479488
+          },
+          {
+            "episode_id": 88,
+            "native_mse": 0.03600059822201729,
+            "project_mse": 0.033572807908058167
+          },
+          {
+            "episode_id": 92,
+            "native_mse": 0.005866988096386194,
+            "project_mse": 0.025485513731837273
+          },
+          {
+            "episode_id": 107,
+            "native_mse": 0.020472396165132523,
+            "project_mse": 0.0509723499417305
+          },
+          {
+            "episode_id": 127,
+            "native_mse": 0.01373014971613884,
+            "project_mse": 0.03846755251288414
+          },
+          {
+            "episode_id": 152,
+            "native_mse": 0.0043455990962684155,
+            "project_mse": 0.005984398070722818
+          },
+          {
+            "episode_id": 164,
+            "native_mse": 0.023897942155599594,
+            "project_mse": 0.047809354960918427
+          },
+          {
+            "episode_id": 180,
+            "native_mse": 0.009929514490067959,
+            "project_mse": 0.022093158215284348
+          },
+          {
+            "episode_id": 204,
+            "native_mse": 0.003512586699798703,
+            "project_mse": 0.008396732620894909
+          },
+          {
+            "episode_id": 205,
+            "native_mse": 0.014758693054318428,
+            "project_mse": 0.10936495661735535
+          }
+        ]
+      },
+      {
+        "t": 99,
+        "native_mse": 3.433736856095493e-05,
+        "project_mse": 3.4795702958945185e-05,
+        "project_to_native_ratio": 1.0133479833602905,
+        "paired": {
+          "mean_difference": 4.583299642035854e-07,
+          "episode_bootstrap95": [
+            -5.3982326022605776e-06,
+            5.683884126028713e-06
+          ],
+          "first_better_second_worse_equal": [
+            6,
+            10,
+            0
+          ],
+          "interval_scope": "Descriptive paired episode interval;2 windows/episode and2 sampling seeds averaged, not independent training seeds or multiplicity-adjusted inference"
+        },
+        "per_episode": [
+          {
+            "episode_id": 15,
+            "native_mse": 3.3587493817321956e-05,
+            "project_mse": 3.4948301617987454e-05
+          },
+          {
+            "episode_id": 23,
+            "native_mse": 3.0435148801188916e-05,
+            "project_mse": 3.581505734473467e-05
+          },
+          {
+            "episode_id": 39,
+            "native_mse": 2.0836529074585997e-05,
+            "project_mse": 2.5015811843331903e-05
+          },
+          {
+            "episode_id": 45,
+            "native_mse": 1.9951097783632576e-05,
+            "project_mse": 3.889924846589565e-05
+          },
+          {
+            "episode_id": 62,
+            "native_mse": 3.533831477398053e-05,
+            "project_mse": 2.5701168851810507e-05
+          },
+          {
+            "episode_id": 64,
+            "native_mse": 2.45225182879949e-05,
+            "project_mse": 3.025489604624454e-05
+          },
+          {
+            "episode_id": 87,
+            "native_mse": 3.0081990189501084e-05,
+            "project_mse": 4.6688866859767586e-05
+          },
+          {
+            "episode_id": 88,
+            "native_mse": 2.5753204681677744e-05,
+            "project_mse": 1.9898296159226447e-05
+          },
+          {
+            "episode_id": 92,
+            "native_mse": 4.981007077731192e-05,
+            "project_mse": 4.9173031584359705e-05
+          },
+          {
+            "episode_id": 107,
+            "native_mse": 4.848255412071012e-05,
+            "project_mse": 5.00394708069507e-05
+          },
+          {
+            "episode_id": 127,
+            "native_mse": 4.6191471483325586e-05,
+            "project_mse": 3.4723601856967434e-05
+          },
+          {
+            "episode_id": 152,
+            "native_mse": 1.5689620340708643e-05,
+            "project_mse": 1.6810015949886292e-05
+          },
+          {
+            "episode_id": 164,
+            "native_mse": 5.654534470522776e-05,
+            "project_mse": 2.5271927370340563e-05
+          },
+          {
+            "episode_id": 180,
+            "native_mse": 4.321419692132622e-05,
+            "project_mse": 5.324889571056701e-05
+          },
+          {
+            "episode_id": 204,
+            "native_mse": 3.968501550843939e-05,
+            "project_mse": 3.685860792757012e-05
+          },
+          {
+            "episode_id": 205,
+            "native_mse": 2.9273374821059406e-05,
+            "project_mse": 3.338402893859893e-05
+          }
+        ]
+      }
+    ]
+  },
+  "padding_slots_in_selected_inputs": 0,
+  "actual_server_elapsed_seconds": 131.00831399206072,
+  "new_policy_execution": false,
+  "new_training": false,
+  "new_gpu_job": false,
+  "final50_accessed": false,
+  "interpretation": "Project is competitive on sampled train expert windows but worse on14/16 unseen episodes in executed8. Same direction in both sampling seeds and mid-noise supervised denoising, so neither training-action inability nor only rollout error accumulation explains the frontend gap. Unique module/cause remains unisolated.",
+  "limits": [
+    "Expert actions may be multimodal; distance is not task success.",
+    "Small fixed32+32 windows, reused diagnostic episode roles, one training seed per policy.",
+    "At t99 cosineDDPM action signal is near zero; small epsilon MSE alone is weak conditioning evidence.",
+    "No formal change or added training authorized by these results."
+  ]
+}

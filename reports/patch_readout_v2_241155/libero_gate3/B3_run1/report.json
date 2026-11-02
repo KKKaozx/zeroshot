@@ -1,0 +1,115 @@
+{
+  "execution_complete": true,
+  "training_updates": 0,
+  "policy_calls": 50,
+  "native_steps": 200,
+  "physical_calibration_verified": false,
+  "formal_scoring_admitted": false,
+  "errors": [],
+  "checkpoint_metadata": {
+    "checkpoint": "D:\\ntu_related\\dissertation\\Zero_shot\\reports\\patch_readout_v2_241155\\B3_policy\\policy.pt",
+    "checkpoint_sha256": "f86f03d28302936d6d4f53afea300204b00da51adcd268df0f8109c3c8594973",
+    "completed_steps": 10000,
+    "seed": 42,
+    "ema_weights": true,
+    "feature_stats_from_checkpoint": true,
+    "physical_calibration_verified": false,
+    "formal_libero_scoring_admitted": false
+  },
+  "native_goal_initial": false,
+  "initial_state_restores": 1,
+  "initial_eef_position_m": [
+    -0.21948676000062342,
+    0.010772288510524454,
+    1.1660739459034577
+  ],
+  "stop_reason": "200ticks_or50calls",
+  "native_goal_final": false,
+  "native_goal_any_chunk_end": false,
+  "saturated_native_ticks": 0,
+  "calls_with_history": 49,
+  "mean_eef_motion_per_call_m": 0.007443851578400749,
+  "gripper_commands": [
+    -1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "native_goal_components_final": [
+    {
+      "predicate": [
+        "close",
+        "wooden_cabinet_1_top_region"
+      ],
+      "value": false
+    },
+    {
+      "predicate": [
+        "on",
+        "akita_black_bowl_1",
+        "wooden_cabinet_1_top_side"
+      ],
+      "value": false
+    }
+  ],
+  "final_eef_position_m": [
+    -0.1521219989332988,
+    -0.2277884007402766,
+    1.0285892183360825
+  ],
+  "net_displacement_m": [
+    0.06736476106732461,
+    -0.23856068925080104,
+    -0.13748472756737518
+  ],
+  "gate3_max_axis_net_m": 0.23856068925080104,
+  "gate3_passed": false,
+  "elapsed_seconds": 64.85999999998603,
+  "cuda_max_reserved_gib": 2.162109375
+}

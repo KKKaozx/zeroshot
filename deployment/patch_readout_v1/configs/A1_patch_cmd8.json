@@ -1,0 +1,11 @@
+{
+  "name": "A1_patch_cmd8",
+  "description": "只换读出：空间softmax关键点读出(spatial；文件名沿用patch)",
+  "target": "command8",
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "spatial",
+    "history": []
+  }
+}

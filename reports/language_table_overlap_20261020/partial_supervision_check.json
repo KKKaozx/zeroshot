@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "synthetic_windows": 3,
+  "changed_dataset_functions": [
+    "_get_tfrecord_language_table_xy"
+  ],
+  "legacy_output_bitwise_unchanged": true,
+  "opt_in_missing_gripper_features": [
+    0,
+    0
+  ],
+  "image_target_mask_unchanged": true,
+  "loss_checks": {
+    "sample": {
+      "masked_output_gradients_zero": true,
+      "no_gripper_gradient_or_adamw_change": true,
+      "fixed_output_loss_ignores_placeholders": true
+    },
+    "epsilon": {
+      "masked_output_gradients_zero": true,
+      "no_gripper_gradient_or_adamw_change": true,
+      "fixed_output_loss_ignores_placeholders": true
+    }
+  },
+  "mixed_batch_gripper_supervision_only_from_valid_source": true,
+  "planar_only_metric_no_fake_rotation_or_gripper_accuracy": true,
+  "constructor_frame_guard_remains_active": true,
+  "source_frame_admitted": false,
+  "actual_denoiser_loaded": false,
+  "optimizer_steps": "two direct synthetic-output AdamW checks, not model training",
+  "generalization_verdict": null,
+  "dataset_before_sha256": "dc6fc3f82669d262c69f637c0be10fbf170abb40e26b220fbba23602efcb5621",
+  "dataset_after_sha256": "32f4854c0c22a268eeee2e4770ae7739a1837f96a369586e68311ef07fe025cc",
+  "main_loss_sha256": "822f9e6bfd812d033bf89bc4397aa087a37721a9c6814cc61c0201ac50efc4ed",
+  "script_sha256": "962cafa49ee44067be1303cd553823c3631a5dd40326d4447a14a231582294f1"
+}

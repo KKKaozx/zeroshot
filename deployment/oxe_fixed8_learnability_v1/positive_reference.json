@@ -1,0 +1,28 @@
+{
+  "old_dino_bridge_job": 229116,
+  "original_download_verified": {
+    "passed": true,
+    "job": 229116,
+    "archive_sha256": "0b11d4c6a542dcfdcbca1cb4a75725a3dd773f280a85a84b7f7677d59f12d2b3",
+    "both_histories_complete8192": true,
+    "all_reported_train_and_development_metrics_recomputed": true,
+    "source_input_and_initial_parameter_identities_match": true,
+    "same_gpu_allocation_verified": true,
+    "remote_weight_byte_hashes_match_saved_reports": true,
+    "weight_files_downloaded": false,
+    "model_loaded": false,
+    "optimizer_updates": 0,
+    "source_outputs_modified": false,
+    "scope": "Local verification of saved paired offline Bridge results; no new experiment"
+  },
+  "old_dino_training_pose_cm_deg": [
+    3.6548352241516113,
+    10.080744743347168
+  ],
+  "old_dino_development_pose_cm_deg": [
+    5.64326286315918,
+    12.849230766296387
+  ],
+  "scope": "Historical successful old recipe; different data/labels, not a matched arm or executable dependency of this diagnostic",
+  "clip_fixed_scene_grasp": "Existing PyBullet single-training-scene3/3 retained; not rerun or new OXE grasp evidence"
+}

@@ -1,0 +1,113 @@
+{
+  "scores": {
+    "zero_blocks": {
+      "mean_score": 0.5267873502795423,
+      "full_reward_fraction": 0.25,
+      "reference_competence_gate_passed": false
+    },
+    "eight_blocks215999": {
+      "mean_score": 0.44548841481267654,
+      "full_reward_fraction": 0.25,
+      "reference_competence_gate_passed": false
+    }
+  },
+  "zero_minus_eight_mean_reward": 0.0812989354668657,
+  "paired_episode_bootstrap95": [
+    -0.09334259925729309,
+    0.2548637028909615
+  ],
+  "zero_better_worse_equal": [
+    9,
+    7,
+    4
+  ],
+  "per_seed_gain": [
+    {
+      "environment_seed": 5000000,
+      "zero_minus_eight": 0.2506538720493542
+    },
+    {
+      "environment_seed": 5000001,
+      "zero_minus_eight": -0.01706549701686788
+    },
+    {
+      "environment_seed": 5000002,
+      "zero_minus_eight": 0.0
+    },
+    {
+      "environment_seed": 5000003,
+      "zero_minus_eight": 0.009006600014092925
+    },
+    {
+      "environment_seed": 5000004,
+      "zero_minus_eight": 0.0
+    },
+    {
+      "environment_seed": 5000005,
+      "zero_minus_eight": -0.004005506975133591
+    },
+    {
+      "environment_seed": 5000006,
+      "zero_minus_eight": 0.21185540793213478
+    },
+    {
+      "environment_seed": 5000007,
+      "zero_minus_eight": 0.5745345353435853
+    },
+    {
+      "environment_seed": 5000008,
+      "zero_minus_eight": -0.6136959471889651
+    },
+    {
+      "environment_seed": 5000009,
+      "zero_minus_eight": 0.0
+    },
+    {
+      "environment_seed": 5000010,
+      "zero_minus_eight": -0.8695297419951185
+    },
+    {
+      "environment_seed": 5000011,
+      "zero_minus_eight": -0.04688149302566976
+    },
+    {
+      "environment_seed": 5000012,
+      "zero_minus_eight": 0.4658539243480322
+    },
+    {
+      "environment_seed": 5000013,
+      "zero_minus_eight": 0.0020033286644006373
+    },
+    {
+      "environment_seed": 5000014,
+      "zero_minus_eight": 0.6555810742627782
+    },
+    {
+      "environment_seed": 5000015,
+      "zero_minus_eight": 0.035273220605945566
+    },
+    {
+      "environment_seed": 5000016,
+      "zero_minus_eight": -0.02588078994725578
+    },
+    {
+      "environment_seed": 5000017,
+      "zero_minus_eight": 0.0
+    },
+    {
+      "environment_seed": 5000018,
+      "zero_minus_eight": -0.001724277733999413
+    },
+    {
+      "environment_seed": 5000019,
+      "zero_minus_eight": 1.0
+    }
+  ],
+  "zero_better_criteria_passed": false,
+  "eight_better_criteria_passed": false,
+  "interpretation": "Inconclusive under the predeclared development criteria; no automatic extra budget or seeds",
+  "scope": "Reused dev20, one training seed, old8 trainedA6000/new0 trainedA40; whole stack includes capacity/dropout. Not final confirmation or a replacement multilingual policy.",
+  "main_eight_block_model_replaced": false,
+  "automatic_following_action": false,
+  "final50_accessed": false
+}

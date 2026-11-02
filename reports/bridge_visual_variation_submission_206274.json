@@ -1,0 +1,32 @@
+{
+  "job_id": "206274",
+  "stage": "formal_visual_variation_control",
+  "evidence": "User returned: \u62a5\u544a\u6821\u9a8c\u901a\u8fc7\uff0c\u89c6\u89c9\u6761\u4ef6\u6b63\u5f0f\u5bf9\u7167\uff1a206274",
+  "preflight_job_id": "206269",
+  "submission_reported_by_user": true,
+  "cluster_report_gate_passed_as_reported_by_user": true,
+  "slurm_state": "COMPLETED",
+  "execution_passed": true,
+  "planned_updates": 8192,
+  "train_windows": 128,
+  "development_windows": 40,
+  "reused_control_job": "202278",
+  "new_generalization_result_available": true,
+  "next_action": "Fixed ablation audited and closed. Retain task/output-dependent visual-conditioning evidence; no repeat downloads,sampling or training,no unique root cause established.",
+  "exit_code": "0:0",
+  "elapsed": "00:37:20",
+  "node": "gpu-a6000-1",
+  "terminal_result_received": true,
+  "terminal_candidate_screen_passed": false,
+  "cluster_artifacts_independently_audited": true,
+  "candidate_closed": true,
+  "independent_analysis_path": "reports/bridge_visual_variation_analysis_206274/analysis.json",
+  "development_position_cm": 6.966390492930758,
+  "development_rotation_deg": 17.396043719376916,
+  "episode_counts": {
+    "position_better_old": 6,
+    "rotation_better_old": 4,
+    "position_better_static": 8,
+    "rotation_better_static": 1
+  }
+}

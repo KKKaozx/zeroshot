@@ -1,0 +1,157 @@
+{
+  "verified": true,
+  "primary_bridge64": {
+    "mask_control": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.993955504701118,
+      "path_rotation_deg": 15.936593106820087,
+      "endpoint_position_normalized": 2.675574765675049,
+      "endpoint_rotation_deg": 21.154878806891688
+    },
+    "real_pose": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.7026795821340763,
+      "path_rotation_deg": 15.178584054151134,
+      "endpoint_position_normalized": 2.3432171994867774,
+      "endpoint_rotation_deg": 20.017150405663845
+    },
+    "unchanged231297": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.5568879102451203,
+      "path_rotation_deg": 13.698360515024278,
+      "endpoint_position_normalized": 1.9936525162469771,
+      "endpoint_rotation_deg": 18.754033075173815
+    },
+    "static": {
+      "windows": 64,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.0241369636028934,
+      "path_rotation_deg": 12.063044075899477,
+      "endpoint_position_normalized": 1.3696822176356824,
+      "endpoint_rotation_deg": 16.297180059569865
+    }
+  },
+  "paired_comparisons": {
+    "real_minus_mask_control": {
+      "path_position_normalized": {
+        "mean_difference": -0.2912759225670415,
+        "paired_group_bootstrap95": [
+          -0.35666964689110625,
+          -0.23498774319027424
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": -0.7580090526689539,
+        "paired_group_bootstrap95": [
+          -1.1752503691751743,
+          -0.35904424565313275
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": -0.3323575661882711,
+        "paired_group_bootstrap95": [
+          -0.43733110253330193,
+          -0.23868256947039443
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": -1.1377284012278444,
+        "paired_group_bootstrap95": [
+          -1.891934929991745,
+          -0.4484163091451491
+        ]
+      }
+    },
+    "real_minus_unchanged231297": {
+      "path_position_normalized": {
+        "mean_difference": 0.14579167188895614,
+        "paired_group_bootstrap95": [
+          0.04838819433897282,
+          0.24194214738918554
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": 1.4802235391268548,
+        "paired_group_bootstrap95": [
+          0.3116722702277722,
+          2.6625653958686697
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": 0.34956468323980006,
+        "paired_group_bootstrap95": [
+          0.23635162884277752,
+          0.46374419215635654
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": 1.2631173304900272,
+        "paired_group_bootstrap95": [
+          -0.048600928270633066,
+          2.584703089700446
+        ]
+      }
+    },
+    "real_minus_static": {
+      "path_position_normalized": {
+        "mean_difference": 0.678542618531183,
+        "paired_group_bootstrap95": [
+          0.5808091879267511,
+          0.7712216682928525
+        ]
+      },
+      "path_rotation_deg": {
+        "mean_difference": 3.1155399782516575,
+        "paired_group_bootstrap95": [
+          2.2073288504482447,
+          4.030782266957662
+        ]
+      },
+      "endpoint_position_normalized": {
+        "mean_difference": 0.9735349818510948,
+        "paired_group_bootstrap95": [
+          0.8226577254564801,
+          1.1204526267672152
+        ]
+      },
+      "endpoint_rotation_deg": {
+        "mean_difference": 3.719970346093978,
+        "paired_group_bootstrap95": [
+          2.3896889226267874,
+          5.101257039425689
+        ]
+      }
+    }
+  },
+  "gates": {
+    "path_position_better_than_mask_control": true,
+    "endpoint_position_better_than_mask_control": true,
+    "rotation_no_worse_than_mask_control": true,
+    "paired_path_position_interval_upper_below_zero": true,
+    "all_four_means_no_worse_than_unchanged_source": false,
+    "all_four_means_better_than_static": false
+  },
+  "candidate_for_next_qualification": false,
+  "decision": "This bounded test did not establish required competence; no automatic extra budget or variant",
+  "scope": "One training seed, reused development groups; equal2048continuation for real/control, source8192only a regression reference; not LIBERO/task success",
+  "automatic_following_action": false
+}

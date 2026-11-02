@@ -1,0 +1,407 @@
+{
+  "date": "2026-10-15",
+  "purpose": "Minimal same-camera/same-robot object-position generalization; not a Bridge root-cause proof",
+  "instruction": "pick up the black cube and hold it above the table",
+  "episodes": [
+    {
+      "episode": "xy_0_0",
+      "split": "test",
+      "cube_xy_m": [
+        0.41000000000000003,
+        -0.09
+      ],
+      "grid_index": [
+        0,
+        0
+      ]
+    },
+    {
+      "episode": "xy_0_1",
+      "split": "train",
+      "cube_xy_m": [
+        0.41000000000000003,
+        -0.045
+      ],
+      "grid_index": [
+        0,
+        1
+      ]
+    },
+    {
+      "episode": "xy_0_2",
+      "split": "train",
+      "cube_xy_m": [
+        0.41000000000000003,
+        0.0
+      ],
+      "grid_index": [
+        0,
+        2
+      ]
+    },
+    {
+      "episode": "xy_0_3",
+      "split": "train",
+      "cube_xy_m": [
+        0.41000000000000003,
+        0.045
+      ],
+      "grid_index": [
+        0,
+        3
+      ]
+    },
+    {
+      "episode": "xy_0_4",
+      "split": "test",
+      "cube_xy_m": [
+        0.41000000000000003,
+        0.09
+      ],
+      "grid_index": [
+        0,
+        4
+      ]
+    },
+    {
+      "episode": "xy_1_0",
+      "split": "train",
+      "cube_xy_m": [
+        0.455,
+        -0.09
+      ],
+      "grid_index": [
+        1,
+        0
+      ]
+    },
+    {
+      "episode": "xy_1_1",
+      "split": "development",
+      "cube_xy_m": [
+        0.455,
+        -0.045
+      ],
+      "grid_index": [
+        1,
+        1
+      ]
+    },
+    {
+      "episode": "xy_1_2",
+      "split": "train",
+      "cube_xy_m": [
+        0.455,
+        0.0
+      ],
+      "grid_index": [
+        1,
+        2
+      ]
+    },
+    {
+      "episode": "xy_1_3",
+      "split": "development",
+      "cube_xy_m": [
+        0.455,
+        0.045
+      ],
+      "grid_index": [
+        1,
+        3
+      ]
+    },
+    {
+      "episode": "xy_1_4",
+      "split": "train",
+      "cube_xy_m": [
+        0.455,
+        0.09
+      ],
+      "grid_index": [
+        1,
+        4
+      ]
+    },
+    {
+      "episode": "xy_2_0",
+      "split": "train",
+      "cube_xy_m": [
+        0.5,
+        -0.09
+      ],
+      "grid_index": [
+        2,
+        0
+      ]
+    },
+    {
+      "episode": "xy_2_1",
+      "split": "train",
+      "cube_xy_m": [
+        0.5,
+        -0.045
+      ],
+      "grid_index": [
+        2,
+        1
+      ]
+    },
+    {
+      "episode": "xy_2_2",
+      "split": "test",
+      "cube_xy_m": [
+        0.5,
+        0.0
+      ],
+      "grid_index": [
+        2,
+        2
+      ]
+    },
+    {
+      "episode": "xy_2_3",
+      "split": "train",
+      "cube_xy_m": [
+        0.5,
+        0.045
+      ],
+      "grid_index": [
+        2,
+        3
+      ]
+    },
+    {
+      "episode": "xy_2_4",
+      "split": "train",
+      "cube_xy_m": [
+        0.5,
+        0.09
+      ],
+      "grid_index": [
+        2,
+        4
+      ]
+    },
+    {
+      "episode": "xy_3_0",
+      "split": "train",
+      "cube_xy_m": [
+        0.545,
+        -0.09
+      ],
+      "grid_index": [
+        3,
+        0
+      ]
+    },
+    {
+      "episode": "xy_3_1",
+      "split": "development",
+      "cube_xy_m": [
+        0.545,
+        -0.045
+      ],
+      "grid_index": [
+        3,
+        1
+      ]
+    },
+    {
+      "episode": "xy_3_2",
+      "split": "train",
+      "cube_xy_m": [
+        0.545,
+        0.0
+      ],
+      "grid_index": [
+        3,
+        2
+      ]
+    },
+    {
+      "episode": "xy_3_3",
+      "split": "development",
+      "cube_xy_m": [
+        0.545,
+        0.045
+      ],
+      "grid_index": [
+        3,
+        3
+      ]
+    },
+    {
+      "episode": "xy_3_4",
+      "split": "train",
+      "cube_xy_m": [
+        0.545,
+        0.09
+      ],
+      "grid_index": [
+        3,
+        4
+      ]
+    },
+    {
+      "episode": "xy_4_0",
+      "split": "test",
+      "cube_xy_m": [
+        0.59,
+        -0.09
+      ],
+      "grid_index": [
+        4,
+        0
+      ]
+    },
+    {
+      "episode": "xy_4_1",
+      "split": "train",
+      "cube_xy_m": [
+        0.59,
+        -0.045
+      ],
+      "grid_index": [
+        4,
+        1
+      ]
+    },
+    {
+      "episode": "xy_4_2",
+      "split": "train",
+      "cube_xy_m": [
+        0.59,
+        0.0
+      ],
+      "grid_index": [
+        4,
+        2
+      ]
+    },
+    {
+      "episode": "xy_4_3",
+      "split": "train",
+      "cube_xy_m": [
+        0.59,
+        0.045
+      ],
+      "grid_index": [
+        4,
+        3
+      ]
+    },
+    {
+      "episode": "xy_4_4",
+      "split": "test",
+      "cube_xy_m": [
+        0.59,
+        0.09
+      ],
+      "grid_index": [
+        4,
+        4
+      ]
+    }
+  ],
+  "split_unit": "Whole physical episode; initial XY positions disjoint",
+  "source_sha256": {
+    "scripts\\prepare_panda_minimal_generalization_20261015.py": "fc374c882925d9d30bee367a3d3be529e20fa50f749a6981281f0dfedaa8f0f4",
+    "code\\pybullet_fixed_grasp.py": "d404c5abede0227df4a0259a15b864b2e6cb95a8047626fe1ce0f33ac159310a",
+    "cluster_packages\\bridge_growth128_v1\\dataset.py": "d398eae41cb3d0da89f7e05ff46b6f4ee84d801c8735a5b393e55f28fbcada5c",
+    "scripts\\prepare_panda_spatial_control_v2_20261015.py": "448a8684b88ca8f80a7107cf2e4cc14478dcc12a2c5b8e996c193604073a3abc"
+  },
+  "environment": {
+    "robot": "franka_panda/panda.urdf",
+    "ee_link": 11,
+    "finger_joints": [
+      9,
+      10
+    ],
+    "simulation_hz": 240,
+    "ticks_per_command": 24,
+    "image_shape": [
+      224,
+      224,
+      3
+    ],
+    "camera": "Exactly existing pybullet_fixed_grasp.rgb; fixed view/projection in hashed source",
+    "object": "Same 4cm black cube, mass0.06kg; XY changed at scene initialization only"
+  },
+  "phases": [
+    {
+      "name": "approach_xy",
+      "commands": 12
+    },
+    {
+      "name": "descend",
+      "commands": 30
+    },
+    {
+      "name": "close",
+      "commands": 10
+    },
+    {
+      "name": "lift",
+      "commands": 35
+    },
+    {
+      "name": "remain_above_table",
+      "commands": 15
+    }
+  ],
+  "starts": [
+    0,
+    12,
+    24,
+    36,
+    44,
+    52,
+    68,
+    86
+  ],
+  "chunk_size": 16,
+  "targets": "state[t+1:t+17] relative to state[t], paired with command_gripper[t:t+16]; fixed0.10m scale,xyzw",
+  "raw_logs": "T+1 observations with timestamps, T requested world poses and gripper commands; no ambiguous final dummy command",
+  "policy_inputs": "Current RGB, instruction, measured finger width; any EE-state port must be declared before model training; object coordinates prohibited",
+  "expert_only": "Actual cube XY is available to the collection expert; never supplied as a learned-policy feature",
+  "physical_gate": "Last10 commands cube >initial+0.10m, final bilateral finger contacts; same existing criterion; not precise-height holding",
+  "training_recipe": {
+    "status": "Planned, not executed; resource preflight required",
+    "fresh_initialization": 43,
+    "backbone": "Frozen CLIP ViT-L/14",
+    "adapter": "Existing eight-layer cross-attention",
+    "decoder": "Existing multiscale x0 DDPM100; no regression replacement",
+    "optimize": "Adapter, pose decoder and gripper together",
+    "batch_size": 8,
+    "updates": 8192,
+    "learning_rate": "4096 at1e-4 then4096 at1e-5",
+    "sampling_seeds": [
+      1101,
+      1102,
+      1103
+    ],
+    "checkpoint": "Final fixed update only; no best-dev selection"
+  },
+  "evaluation_plan": {
+    "offline": "All preregistered windows; report position,rotation,gripper and event metrics against no-motion",
+    "closed_loop": "Learned policy at each held-out XY, three sampling seeds; execute first4 predictions then observe; no expert handoff",
+    "development_success_screen": "At least3/4 positions succeed in >=2/3 draws; report full counts, not a significance claim",
+    "baseline": "Blind center expert trajectory as a stronger spatial control, plus no-motion policy",
+    "interpretation": "If blind-center replay also succeeds everywhere, success alone cannot establish visual localization; do not claim it",
+    "test": "Reserve5 XY positions until recipe/checkpoint frozen; do not collect or execute them in preparation"
+  },
+  "stopping_rule": "One fixed-budget model recipe after interface/resource gates. Failure does not authorize extra epochs, alternate seeds or dropping positions.",
+  "disk_limits": {
+    "preparation_bytes": 167772160,
+    "local_new_weights": false
+  },
+  "current_stage": "Freeze before expert/baseline eligibility; no formal model training",
+  "version": "spatial_control_v2",
+  "parent_protocol_sha256": "3fa0132396d9ff53ab2d71390e343a158f2402f5a1cc61d8a1a40b0ab078f0b1",
+  "reason": "v1 blind-center expert succeeded4/4 development XY; do not train an uninformative localization control",
+  "only_changed_factor": "XY grid spacing0.02m to0.045m; same25-cell indexing and16/4/5 episode split",
+  "eligibility_gate": "All20 train/development experts succeed and blind-center succeeds in at most1/4 development positions",
+  "protected_old_test_xy_not_executed": true,
+  "prior_exposure": "Center position has historical single-demo experiments; reserved test means untouched by this new recipe, not globally unseen"
+}

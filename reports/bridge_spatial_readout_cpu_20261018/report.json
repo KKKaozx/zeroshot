@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "scope": "synthetic CPU post-Adapter readout interface only",
+  "shape": [
+    2,
+    257,
+    1024
+  ],
+  "added_parameters": 1026,
+  "old_readout_max_abs": 0.0,
+  "old_input_gradient_max_abs": 0.0,
+  "old_norm_gradients_exact": true,
+  "new_score_gradient_norms": {
+    "content_score": 100.71111297607422,
+    "position_score": 4.0295186042785645
+  },
+  "no_parameters_updated": true,
+  "active_weighted_reference_max_abs": 6.830416254821614e-08,
+  "active_fixture_output_change": 0.12090075016021729,
+  "joint_token_coordinate_permutation_max_abs": 1.1920928955078125e-07,
+  "fixed_coordinate_token_permutation_output_change": 0.1108294129371643,
+  "state_dict_roundtrip_exact": true,
+  "rejected_inputs": [
+    "missing_patch",
+    "wrong_dimension",
+    "no_batch",
+    "integer_input"
+  ],
+  "CLIP_loaded": false,
+  "real_eight_layer_adapter_executed": false,
+  "old207558_weights_loaded": false,
+  "diffusion_executed": false,
+  "dataset_read": false,
+  "final25_read": false,
+  "optimizer_created": false,
+  "training_updates": 0,
+  "GPU_initialized": false,
+  "limits": [
+    "Does not establish old-checkpoint/DDPM replay or mixed-precision compatibility",
+    "Active fixture is manually assigned, not learned or evaluated on real data",
+    "No object localization, generalization or robot success verdict"
+  ],
+  "source_sha256": {
+    "cluster_packages\\bridge_prefix_pair_v1\\frozen\\adapter.py": "b6b07c9efce33bc8ba7e5e22fefa183d982352f2c6fa8b36c308a574180fa0fa",
+    "scripts\\check_bridge_spatial_readout_cpu_20261018.py": "b8b2d0da998a2a3df81d6ab4294208238d8af8789b356bbb42bf79e369494120",
+    "scripts\\bridge_spatial_readout_prototype_v1.py": "e22463b833febe3094a3b5b34cd180bfe9d5700c28de3f2500e5454e0852c99e"
+  }
+}

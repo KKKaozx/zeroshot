@@ -1,0 +1,366 @@
+{
+  "job_id": 233426,
+  "reported_date": "2026-10-29",
+  "failed_original_job": 233339,
+  "status": "fixed512_training_and_generation_completed_terminal_verified",
+  "slurm_state_observed": null,
+  "terminal_sha256": "884539c2036ba29a1ba487745f3a886ea20f3f418c540a8e393d3eeadb6168d2",
+  "source_update": 10240,
+  "diagnostic_updates": 512,
+  "source_schedule_endpoint": 10752,
+  "training_windows": 8,
+  "extra_presentations_each": 512,
+  "printed_update_rows": [
+    {
+      "loss": 0.24456898868083954,
+      "pose_loss": 0.10573339462280273,
+      "gripper_loss": 0.5553423762321472,
+      "diagnostic_update": 1,
+      "source_schedule_update": 10241,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.0001900968867902419,
+        0.0001900968867902419,
+        0.0001900968867902419
+      ],
+      "gradient_norm": 0.48958930373191833
+    },
+    {
+      "loss": 0.16113083064556122,
+      "pose_loss": 0.023890912532806396,
+      "gripper_loss": 0.5489596724510193,
+      "diagnostic_update": 2,
+      "source_schedule_update": 10242,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.00019009477376493532,
+        0.00019009477376493532,
+        0.00019009477376493532
+      ],
+      "gradient_norm": 0.49353745579719543
+    },
+    {
+      "loss": 0.09436973929405212,
+      "pose_loss": 0.03155810013413429,
+      "gripper_loss": 0.25124654173851013,
+      "diagnostic_update": 64,
+      "source_schedule_update": 10304,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.00018996334912195942,
+        0.00018996334912195942,
+        0.00018996334912195942
+      ],
+      "gradient_norm": 0.4292162358760834
+    },
+    {
+      "loss": 0.06805611401796341,
+      "pose_loss": 0.023828651756048203,
+      "gripper_loss": 0.17690984904766083,
+      "diagnostic_update": 128,
+      "source_schedule_update": 10368,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.00018982682477783965,
+        0.00018982682477783965,
+        0.00018982682477783965
+      ],
+      "gradient_norm": 0.3928675353527069
+    },
+    {
+      "loss": 0.05213594436645508,
+      "pose_loss": 0.01715683564543724,
+      "gripper_loss": 0.13991643488407135,
+      "diagnostic_update": 192,
+      "source_schedule_update": 10432,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.0001896894278956636,
+        0.0001896894278956636,
+        0.0001896894278956636
+      ],
+      "gradient_norm": 0.2237137109041214
+    },
+    {
+      "loss": 0.03478417545557022,
+      "pose_loss": 0.008389294147491455,
+      "gripper_loss": 0.10557953268289566,
+      "diagnostic_update": 256,
+      "source_schedule_update": 10496,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.000189551159810044,
+        0.000189551159810044,
+        0.000189551159810044
+      ],
+      "gradient_norm": 0.10369295626878738
+    },
+    {
+      "loss": 0.026888642460107803,
+      "pose_loss": 0.006286235060542822,
+      "gripper_loss": 0.08240962773561478,
+      "diagnostic_update": 320,
+      "source_schedule_update": 10560,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.00018941202186405578,
+        0.00018941202186405578,
+        0.00018941202186405578
+      ],
+      "gradient_norm": 0.10024481266736984
+    },
+    {
+      "loss": 0.01841863989830017,
+      "pose_loss": 0.0017674991395324469,
+      "gripper_loss": 0.06660456210374832,
+      "diagnostic_update": 384,
+      "source_schedule_update": 10624,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.00018927201540922347,
+        0.00018927201540922347,
+        0.00018927201540922347
+      ],
+      "gradient_norm": 0.05844550579786301
+    },
+    {
+      "loss": 0.017005406320095062,
+      "pose_loss": 0.0027143924962729216,
+      "gripper_loss": 0.05716405436396599,
+      "diagnostic_update": 448,
+      "source_schedule_update": 10688,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.0001891311418055078,
+        0.0001891311418055078,
+        0.0001891311418055078
+      ],
+      "gradient_norm": 0.06017648056149483
+    },
+    {
+      "loss": 0.014527876861393452,
+      "pose_loss": 0.001348439254797995,
+      "gripper_loss": 0.052717749029397964,
+      "diagnostic_update": 512,
+      "source_schedule_update": 10752,
+      "indices": [
+        9759,
+        5333,
+        2514,
+        497,
+        251,
+        3550,
+        2188,
+        4103
+      ],
+      "lr_used": [
+        0.00018898940242129277,
+        0.00018898940242129277,
+        0.00018898940242129277
+      ],
+      "gradient_norm": 0.11705009639263153
+    }
+  ],
+  "printed_native_cluster_lr_rows_exact": 10,
+  "complete_marker_basis": "Pinned driver verifies original prediction replay, native/cached full gradients/noise/RNG, saved512history/noise/LR/metrics/policy and repair binding before final marker",
+  "source_prediction_replay_and_native_cache_guard_passed_inferred_from_code": true,
+  "source_old_file_and_frozen_digest_preserved_inferred_from_code": true,
+  "generation": {
+    "before": {
+      "windows": 8,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 1.6726405329108665,
+      "path_rotation_deg": 16.120382305602796,
+      "endpoint_position_normalized": 2.38945094014149,
+      "endpoint_rotation_deg": 21.15206903508242
+    },
+    "static": {
+      "windows": 8,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 0.8854155122030833,
+      "path_rotation_deg": 9.915310143340463,
+      "endpoint_position_normalized": 1.3268808784454649,
+      "endpoint_rotation_deg": 14.783837884331922
+    },
+    "after": {
+      "windows": 8,
+      "position_axes": [
+        "x",
+        "y",
+        "z"
+      ],
+      "path_position_normalized": 0.0950304187821337,
+      "path_rotation_deg": 4.617203938501046,
+      "endpoint_position_normalized": 0.16441613985135456,
+      "endpoint_rotation_deg": 6.822742191579421
+    }
+  },
+  "fit_decision": {
+    "mean_limits": {
+      "path_position_normalized": 0.08854155122030834,
+      "path_rotation_deg": 0.9915310143340463,
+      "endpoint_position_normalized": 0.1326880878445465,
+      "endpoint_rotation_deg": 1.4783837884331923
+    },
+    "means_pass": false,
+    "windows_passing_all_four": 1,
+    "window_pass_mask": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "fixed8_pose_fit_gate_passed": false,
+    "interpretation": "This fixed512update budget did not establish repeated8window generation fit; not proof of mathematical unlearnability",
+    "new_budget_or_variants_authorized": false,
+    "libero_or_generalization_verdict": null
+  },
+  "relative_change_percent": {
+    "before": {
+      "path_position_normalized": -94.31853904575934,
+      "path_rotation_deg": -71.3579749476767,
+      "endpoint_position_normalized": -93.1190828365943,
+      "endpoint_rotation_deg": -67.7443271376273
+    },
+    "static": {
+      "path_position_normalized": -89.2671387080536,
+      "path_rotation_deg": -53.4335903592269,
+      "endpoint_position_normalized": -87.60882438490034,
+      "endpoint_rotation_deg": -53.84999318201237
+    }
+  },
+  "after_fraction_of_static": {
+    "path_position_normalized": 0.10732861291946401,
+    "path_rotation_deg": 0.46566409640773093,
+    "endpoint_position_normalized": 0.12391175615099656,
+    "endpoint_rotation_deg": 0.4615000681798763
+  },
+  "strict_four_metric_fit_gate_passed": false,
+  "strong_seen_window_generation_improvement_observed": true,
+  "after_all_four_means_better_static": true,
+  "mean_limits_recomputed": true,
+  "before_means_match232587": true,
+  "static_means_match_original_numeric_reference": true,
+  "new_raw_prediction_npz_or_full_report_downloaded": true,
+  "per_window_fit_or_loss_history_independently_recomputed": true,
+  "interpretation": "Current DINO+x0+pose OXE stack can substantially improve full generation on repeated8windows; strict精拟合 gate still fails, especially rotation; not proof that sparse exposure alone explains main failure",
+  "caveats": [
+    "One training seed, fixed repeated training windows; no heldout improvement evaluated",
+    "Fixed batch removes source/task diversity while increasing per-window exposure; cannot isolate these two effects",
+    "Position is normalized recorded units, not newly calibrated centimeters; no new grasp/control success",
+    "Retain original threshold and512budget; no automatic extension, seed, variant or LIBERO"
+  ],
+  "next_action": "Close this bounded512diagnostic with strict fit gate false and strong8window improvement retained; review exposure/optimization design before any new bounded proposal; no automatic training/LIBERO",
+  "main_model_replaced": false,
+  "automatic_following_action": false,
+  "download_verification": "reports/oxe_fixed8_result_233426/download_verification.json",
+  "independent_audit": "reports/oxe_fixed8_result_233426/cluster/independent_audit.json",
+  "per_window_improvement_counts": {
+    "path_position_improved_vs_before": 8,
+    "path_rotation_improved_vs_before": 8,
+    "path_position_better_static": 8,
+    "path_rotation_better_static": 8
+  },
+  "after_path_rotation_range_deg": [
+    2.3644122326342187,
+    8.036309687447309
+  ],
+  "after_between_draw_pairwise_rotation_deg": 0.19703946715945597,
+  "gripper_label_accuracy_after": 1.0,
+  "core_train_evaluate_elapsed_seconds": 73.05496106296778,
+  "peak_reserved_gib": 4.451171875,
+  "elapsed_scope": "Engine run after source model restoration/cache preparation; not whole Slurm wall time"
+}

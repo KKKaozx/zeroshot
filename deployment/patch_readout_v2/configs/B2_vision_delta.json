@@ -1,0 +1,17 @@
+{
+  "name": "B2_vision_delta",
+  "description": "B1+相对位姿差(速度)，丢弃率0.5",
+  "target": "future_pose",
+  "augment": false,
+  "policy": {
+    "grid": 8,
+    "num_adapter_layers": 8,
+    "readout": "spatial",
+    "use_pose18": false,
+    "use_current2": false,
+    "history": [
+      "state_delta"
+    ],
+    "history_dropout": 0.5
+  }
+}
